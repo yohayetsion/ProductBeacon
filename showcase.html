@@ -536,8 +536,9 @@ function escapeHtml(s) {
 
 function highlightSyntax(text) {
     return text
-        .replace(/(@(?:product|plt|pm|pm-dir|pmm-dir|pmm|cpo|vp-product|bizops|bizdev|ci|prod-ops|ux-lead|value-realization))/g, '<span class="agent-ref">$1</span>')
-        .replace(/(\/(?:vision-statement|market-analysis|competitive-landscape|positioning-statement|prd|business-case|pricing-strategy|gtm-strategy|launch-plan|decision-record|strategic-bet|user-story|feature-spec|roadmap-theme|commitment-check|context-recall|feedback-recall|portfolio-status|present|brand-voice|value-proposition))/g, '<span class="skill-ref">$1</span>');
+        .replace(/(^|[\s>])(@(?:product|plt|pm-dir|pmm-dir|pmm|pm|cpo|vp-product|bizops|bizdev|ci|prod-ops|ux-lead|value-realization))\b/g, '$1<span class="agent-ref">$2</span>')
+        .replace(/(^|[\s>])(\/(?:vision-statement|market-analysis|competitive-landscape|positioning-statement|prd|business-case|pricing-strategy|gtm-strategy|launch-plan|decision-record|strategic-bet|user-story|feature-spec|roadmap-theme|commitment-check|context-recall|feedback-recall|portfolio-status|present|brand-voice|value-proposition))\b/g, '$1<span class="skill-ref">$2</span>')
+        .replace(/(https?:\/\/[^\s<]+)/g, '<span style="color:#38BDF8;">$1</span>');
 }
 
 function showInstant(el, html) {
