@@ -211,19 +211,24 @@ const script = [
 // ─── ACT 1: THE REQUEST ─────────────────────────
 
 {type:S.BLANK},
-{type:S.USER, text:`I want to rebuild ProductBeacon — full strategic analysis and planning.`, charSpeed:35, pauseAfter:800},
+{type:S.USER, text:`This one's mine: https://www.productbeacon.agency/ — please review it.`, charSpeed:35, pauseAfter:800},
 {type:S.BLANK},
+{type:S.USER, text:`I want to rebuild ProductBeacon. Full strategic analysis and planning:`, charSpeed:30, pauseAfter:600},
 {type:S.USER, text:`Vision Statement, Market & Competitor Analysis, Positioning, Messaging, USPs, Value Prop, Brand Voice & Design, Business Case, Pricing Strategy, GTM Strategy.`, charSpeed:28, pauseAfter:1000},
 {type:S.BLANK},
-{type:S.USER, text:`Use the Product Org OS agents. Get deliverables in HTML presentations.`, charSpeed:28, pauseAfter:2500},
+{type:S.USER, text:`See examples: https://yohayetsion.github.io/presentations/axia-use-case-v3.html`, charSpeed:25, pauseAfter:400},
+{type:S.USER, text:`And: https://yohayetsion.github.io/legionis-strategy/`, charSpeed:25, pauseAfter:1000},
+{type:S.BLANK},
+{type:S.USER, text:`@product — get deliverables in HTML presentations.`, charSpeed:28, pauseAfter:2500},
 
 // ─── ACT 2: SYSTEM ANALYZES ─────────────────────
 
 {type:S.BLANK},
 {type:S.THINK, duration:2500, pauseAfter:600},
 
-{type:S.HTML, html:`<span class="bullet">● </span><span class="dim">Scraping productbeacon.agency...</span>`, instant:true, pauseAfter:2200},
-{type:S.HTML, html:`<span class="bullet">● </span><span class="dim">Reading AXIA case study and Legionis V2V document map...</span>`, instant:true, pauseAfter:2400},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="dim">Scraping https://www.productbeacon.agency/...</span>`, instant:true, pauseAfter:2200},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="dim">Reading AXIA case study (yohayetsion.github.io/presentations/axia-use-case-v3.html)...</span>`, instant:true, pauseAfter:1800},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="dim">Reading Legionis V2V strategy map (yohayetsion.github.io/legionis-strategy/)...</span>`, instant:true, pauseAfter:2400},
 {type:S.HTML, html:`<span class="bullet">● </span><span class="system-text">Current ProductBeacon: <span class="warning">Wix single-page site, bare-bones presence.</span></span>`, charSpeed:22, pauseAfter:1000},
 {type:S.HTML, html:`<span class="bullet">● </span><span class="system-text">AXIA Case Study: Real <span class="number">8</span>-week engagement, <span class="gold">$106K</span> equivalent value. This is the proof point.</span>`, charSpeed:22, pauseAfter:1200},
 {type:S.BLANK},
@@ -265,7 +270,7 @@ const script = [
 // ─── ACT 4: WAVE 1 LAUNCH ───────────────────────
 
 {type:S.BLANK},
-{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Launching Wave 1.</span> <span class="accent">Spawning 2 agents in parallel...</span>`, charSpeed:25, flash:'pulse', pauseAfter:800},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Launching Wave 1.</span> <span class="accent">Routing 2 agents in parallel...</span>`, charSpeed:25, flash:'pulse', pauseAfter:800},
 {type:S.BLANK},
 {type:S.HTML, html:`<span class="system-text">  ├─ <span class="agent-ref">📈 VP Product</span> creating Vision Statement</span>`, charSpeed:18, pauseAfter:200},
 {type:S.HTML, html:`<span class="dim">  │  ⎿ Running in the background</span>`, instant:true, pauseAfter:500},
@@ -307,7 +312,7 @@ const script = [
 // ─── ACT 6: WAVE 2 LAUNCH + PROGRESS ────────────
 
 {type:S.BLANK},
-{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Spawning 3 agents in parallel...</span>`, charSpeed:25, pauseAfter:600},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Routing 3 agents in parallel...</span>`, charSpeed:25, pauseAfter:600},
 {type:S.BLANK},
 {type:S.HTML, html:`<span class="system-text">  ├─ <span class="agent-ref">📣 Director of Product Marketing</span> creating Positioning & Messaging</span>`, charSpeed:18, pauseAfter:200},
 {type:S.HTML, html:`<span class="dim">  │  ⎿ Running in the background</span>`, instant:true, pauseAfter:400},
@@ -360,7 +365,7 @@ const script = [
 // ─── ACT 8: WAVE 3 LAUNCH + PROGRESS ────────────
 
 {type:S.BLANK},
-{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Spawning 3 agents in parallel...</span>`, charSpeed:25, pauseAfter:600},
+{type:S.HTML, html:`<span class="bullet">● </span><span class="bright">Routing 3 agents in parallel...</span>`, charSpeed:25, pauseAfter:600},
 {type:S.BLANK},
 {type:S.HTML, html:`<span class="system-text">  ├─ <span class="agent-ref">🧮 Business Operations</span> creating Business Case</span>`, charSpeed:18, pauseAfter:200},
 {type:S.HTML, html:`<span class="dim">  │  ⎿ Running in the background</span>`, instant:true, pauseAfter:400},
@@ -614,7 +619,7 @@ async function renderProgressBars(agents, durationMs) {
     container.className = 'line visible';
     let html = '';
     agents.forEach((a, i) => {
-        html += `<div style="margin:4px 0;">  ${a.emoji} <span style="display:inline-block;width:80px;color:#FBBF24;">${escapeHtml(a.name)}</span> <span class="progress-bar-container"><span class="progress-bar-fill" id="pb-${pid}-${i}"></span></span></div>`;
+        html += `<div style="margin:4px 0; display:flex; align-items:center; gap:6px;">  ${a.emoji} <span style="white-space:nowrap;color:#FBBF24;">${escapeHtml(a.name)}</span> <span class="progress-bar-container"><span class="progress-bar-fill" id="pb-${pid}-${i}"></span></span></div>`;
     });
     container.innerHTML = html;
     output.appendChild(container);
