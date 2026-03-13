@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProductBeacon — Strategic Planning</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #0F172A;
+    --surface: #1E293B;
+    --border: #334155;
+    --muted: #64748B;
+    --secondary: #94A3B8;
+    --text: #F1F5F9;
+    --bright: #F8FAFC;
+    --amber: #F59E0B;
+    --amber-dim: rgba(245,158,11,0.15);
+    --emerald: #10B981;
+  }
+  html { background: var(--ink); color: var(--text); font-family: 'Inter', system-ui, sans-serif; }
+  body { min-height: 100vh; }
+
+  .header {
+    padding: 80px 24px 48px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .header .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .header h1 span { color: var(--amber); }
+  .header p {
+    font-size: 18px;
+    color: var(--secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 20px;
+    padding-top: 48px;
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.15s;
+    display: block;
+  }
+  .card:hover {
+    border-color: var(--amber);
+    transform: translateY(-2px);
+  }
+  .card .card-phase {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.5;
+  }
+  .card .badge {
+    display: inline-block;
+    background: var(--amber-dim);
+    color: var(--amber);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .card.featured-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--surface), rgba(245,158,11,0.08));
+    border-color: rgba(245,158,11,0.3);
+  }
+  .card.featured-card h3 { font-size: 22px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .footer a { color: var(--amber); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .header h1 { font-size: 32px; }
+    .featured, .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">Strategic Planning &mdash; March 2026</div>
+  <h1>Product<span>Beacon</span></h1>
+  <p>AI-Augmented Product Leadership. Nine strategic documents, one narrative, and an interactive map charting the path from vision to value.</p>
+</div>
+
+<div class="container">
+
+  <div class="section-label">Start Here</div>
+  <div class="featured">
+    <a href="presentations/productbeacon-strategic-narrative.html" class="card featured-card">
+      <div class="card-phase">Narrative</div>
+      <h3>The Strategic Story</h3>
+      <p>A storytelling walkthrough of the entire analysis: market opportunity, competitive white space, vision, positioning, offering, brand, business case, pricing, and GTM. Start here for the full picture.</p>
+      <span class="badge">16 slides</span>
+    </a>
+    <a href="presentations/vision-to-value-document-map.html" class="card">
+      <div class="card-phase">Document Map</div>
+      <h3>Vision to Value Map</h3>
+      <p>Interactive map of all strategic documents organized by V2V phase. Assumptions, decisions, and active bets.</p>
+      <span class="badge">Interactive</span>
+    </a>
+    <a href="showcase.html" class="card">
+      <div class="card-phase">Showcase</div>
+      <h3>Strategic Rebuild Animation</h3>
+      <p>Watch the Product Org OS in action: 6 agents, 3 waves, 9 strategic documents built in real time.</p>
+      <span class="badge">Interactive</span>
+    </a>
+  </div>
+
+  <div class="section-label">Phase 1 &mdash; Strategic Foundation</div>
+  <div class="grid">
+    <a href="presentations/vision-statement.html" class="card">
+      <div class="card-phase">Foundation</div>
+      <h3>Vision Statement</h3>
+      <p>Vision, mission, values, target segments, and differentiation framework.</p>
+      <span class="badge">9 sections</span>
+    </a>
+    <a href="presentations/market-analysis.html" class="card">
+      <div class="card-phase">Foundation</div>
+      <h3>Market Analysis</h3>
+      <p>$5.7B fractional exec market, AI consulting convergence, demand signals.</p>
+      <span class="badge">8 sections</span>
+    </a>
+    <a href="presentations/competitive-landscape.html" class="card">
+      <div class="card-phase">Foundation</div>
+      <h3>Competitive Landscape</h3>
+      <p>17 competitors across 5 categories. The four-dimension white space.</p>
+      <span class="badge">13 sections</span>
+    </a>
+  </div>
+
+  <div class="section-label">Phase 2 &mdash; Strategic Decisions</div>
+  <div class="grid">
+    <a href="presentations/positioning-messaging.html" class="card">
+      <div class="card-phase">Decisions</div>
+      <h3>Positioning & Messaging</h3>
+      <p>Category creation, tagline, persona messaging, USPs, objection handlers.</p>
+      <span class="badge">28 sections</span>
+    </a>
+    <a href="presentations/pricing-strategy.html" class="card">
+      <div class="card-phase">Decisions</div>
+      <h3>Pricing Strategy</h3>
+      <p>Value-based tiers, segment pricing, discovery entry, discount policy.</p>
+      <span class="badge">17 sections</span>
+    </a>
+    <a href="presentations/business-case.html" class="card">
+      <div class="card-phase">Decisions</div>
+      <h3>Business Case</h3>
+      <p>GO recommendation, 9 risks, 8 assumptions, scalability path.</p>
+      <span class="badge">14 sections</span>
+    </a>
+  </div>
+
+  <div class="section-label">Phase 3 &mdash; Strategic Commitments</div>
+  <div class="grid">
+    <a href="presentations/value-proposition-offering.html" class="card">
+      <div class="card-phase">Commitments</div>
+      <h3>Value Proposition & Offering</h3>
+      <p>Value canvas, 3-tier architecture, engagement models, deliverable catalog.</p>
+      <span class="badge">28 sections</span>
+    </a>
+    <a href="presentations/gtm-strategy.html" class="card">
+      <div class="card-phase">Commitments</div>
+      <h3>GTM Strategy</h3>
+      <p>Founder-led content-to-trust flywheel, 4-phase launch plan, channel ranking.</p>
+      <span class="badge">25 sections</span>
+    </a>
+    <a href="presentations/brand-voice-design.html" class="card">
+      <div class="card-phase">Execution</div>
+      <h3>Brand Voice & Design</h3>
+      <p>Voice principles, color palette, typography, imagery, design system, website direction.</p>
+      <span class="badge">29 sections</span>
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">
+  ProductBeacon &mdash; AI-Augmented Product Leadership &mdash; <a href="https://productbeacon.agency">productbeacon.agency</a>
+</div>
+
+</body>
+</html>
