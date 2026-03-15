@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>qibb — Product Strategy Brief | ProductBeacon</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #613CF1;
+  --purple-light: #7B5CF5;
+  --purple-glow: rgba(97,60,241,0.15);
+  --bg: #11011E;
+  --bg-card: #1A0E2E;
+  --bg-card2: #22133A;
+  --text: #E8E4F0;
+  --muted: #9B8FB8;
+  --white: #FFFFFF;
+  --green: #3DDC84;
+  --amber: #F5A623;
+  --red: #EF4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Figtree', sans-serif; background: var(--bg); color: var(--text); }
+
+/* NAV */
+nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(17,1,30,0.85); backdrop-filter: blur(16px); border-top: 1px solid rgba(97,60,241,0.2); padding: 10px 20px; display: flex; justify-content: center; align-items: center; gap: 8px; }
+nav button { background: var(--bg-card); border: 1px solid rgba(97,60,241,0.3); color: var(--muted); width: 32px; height: 32px; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 12px; transition: all 0.2s; }
+nav button:hover, nav button.active { background: var(--purple); color: white; border-color: var(--purple); }
+nav .counter { color: var(--muted); font-size: 12px; margin: 0 8px; }
+
+/* SLIDES */
+.slide { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 60px 80px 100px; overflow-y: auto; }
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 100px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+  p { font-size: 16px; }
+  .big-number { font-size: 48px; }
+  .card-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; display: block; overflow-x: auto; }
+  th, td { padding: 6px 8px; white-space: nowrap; }
+  .logo-bar { flex-wrap: wrap; gap: 12px; }
+  .logo-bar img { height: 22px; }
+  .reco { flex-direction: column; gap: 8px; }
+  .quote-block { padding: 16px 20px; }
+  .quote-block p { font-size: 16px; }
+  nav button { width: 28px; height: 28px; font-size: 11px; }
+  nav { gap: 4px; padding: 8px 12px; }
+}
+
+/* TYPOGRAPHY */
+h1 { font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+h2 { font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+h3 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 720px; }
+.highlight { color: var(--purple-light); }
+.big-number { font-size: 72px; font-weight: 800; color: var(--purple-light); line-height: 1; }
+.big-label { font-size: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+/* LOGO BAR */
+.logo-bar { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; }
+.logo-bar img { height: 28px; opacity: 0.9; }
+.logo-bar .divider { width: 1px; height: 24px; background: rgba(97,60,241,0.3); }
+.logo-bar span { color: var(--muted); font-size: 13px; letter-spacing: 0.5px; }
+
+/* CARDS */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 24px; }
+.card { background: var(--bg-card); border: 1px solid rgba(97,60,241,0.15); border-radius: 12px; padding: 24px; }
+.card h3 { color: var(--white); }
+.card p { font-size: 15px; }
+.card-accent { border-left: 3px solid var(--purple); }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+th { text-align: left; padding: 10px 12px; color: var(--purple-light); font-weight: 600; border-bottom: 1px solid rgba(97,60,241,0.2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+td { padding: 10px 12px; border-bottom: 1px solid rgba(97,60,241,0.08); color: var(--text); }
+tr:hover td { background: rgba(97,60,241,0.05); }
+
+/* GRADE */
+.grade { display: inline-block; padding: 2px 10px; border-radius: 6px; font-weight: 700; font-size: 14px; }
+.grade-a { background: rgba(61,220,132,0.15); color: var(--green); }
+.grade-b { background: rgba(245,166,35,0.15); color: var(--amber); }
+.grade-c { background: rgba(239,68,68,0.15); color: var(--red); }
+
+/* QUOTE */
+.quote-block { background: var(--bg-card); border-left: 3px solid var(--purple); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 24px 0; max-width: 700px; }
+.quote-block p { font-size: 18px; color: var(--white); font-style: italic; line-height: 1.5; }
+.quote-block .attribution { color: var(--muted); font-style: normal; font-size: 14px; margin-top: 8px; }
+
+/* PILL */
+.pill { display: inline-block; background: var(--purple-glow); color: var(--purple-light); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+
+/* SPLIT */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+@media (max-width: 768px) { .split { grid-template-columns: 1fr; gap: 24px; } }
+
+/* RECO LIST */
+.reco { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; }
+.reco-num { background: var(--purple); color: white; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+.reco-content h3 { margin-bottom: 4px; color: var(--white); font-size: 18px; }
+.reco-content p { font-size: 15px; }
+
+/* CTA */
+.cta-section { text-align: center; padding: 80px 40px; }
+.cta-btn { display: inline-block; background: var(--purple); color: white; padding: 14px 32px; border-radius: 12px; font-family: inherit; font-size: 16px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; box-shadow: rgba(97,60,241,0.3) 0px 8px 32px; transition: transform 0.2s; }
+.cta-btn:hover { transform: translateY(-2px); }
+
+/* FOOTER */
+.pb-footer { color: var(--muted); font-size: 13px; text-align: center; padding: 20px; border-top: 1px solid rgba(97,60,241,0.1); }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide" style="justify-content: center; text-align: center;">
+  <div class="logo-bar" style="justify-content: center;">
+    <img src="https://cdn.prod.website-files.com/6835ab26b3c1bc3af2ea5dbf/6840b1d289a2c8323b245699_Auto%20Layout%20Vertical.svg" alt="qibb logo">
+    <div class="divider"></div>
+    <span>PRODUCT STRATEGY BRIEF</span>
+  </div>
+  <h1>The media workflow<br>orchestration opportunity<br><span class="highlight">is yours to own.</span></h1>
+  <p style="margin: 16px auto 0; text-align: center;">An outside-in analysis of qibb's market position, messaging, and product strategy. Prepared by ProductBeacon, March 2026.</p>
+</div>
+
+<!-- SLIDE 2: THE MARKET IS MOVING -->
+<div class="slide">
+  <span class="pill">THE MARKET</span>
+  <h2>Media companies are rebuilding their infrastructure.<br>The orchestration layer is <span class="highlight">wide open</span>.</h2>
+  <p style="margin-bottom: 32px;">Three forces are reshaping how media organizations build, distribute, and monetize content. Each one creates demand for what qibb does.</p>
+  <div class="card-grid">
+    <div class="card">
+      <div class="big-number">$6B</div>
+      <div class="big-label">Broadcast automation by 2030</div>
+      <p style="margin-top: 12px;">Growing at 18.4% CAGR. The shift from monolithic on-prem to cloud-native toolchains is accelerating.</p>
+    </div>
+    <div class="card">
+      <div class="big-number" style="color: var(--green);">AI</div>
+      <div class="big-label">Every workflow becomes intelligent</div>
+      <p style="margin-top: 12px;">Metadata tagging, highlight generation, content personalization. AI needs an orchestration layer to connect to production systems.</p>
+    </div>
+    <div class="card">
+      <div class="big-number" style="color: var(--amber);">4x</div>
+      <div class="big-label">Content format explosion</div>
+      <p style="margin-top: 12px;">Same content, four screens, twelve formats. Automated multiplatform distribution is no longer optional.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: COMPETITIVE LANDSCAPE -->
+<div class="slide">
+  <span class="pill">COMPETITIVE LANDSCAPE</span>
+  <h2>The incumbents are heavy.<br>The horizontals are shallow.<br><span class="highlight">qibb sits in the gap.</span></h2>
+  <p style="margin-bottom: 24px;">qibb doesn't compete with Dalet or n8n. It competes with the status quo: custom scripts, manual runbooks, and engineering bottlenecks.</p>
+  <table>
+    <tr><th></th><th>Dalet Galaxy five</th><th>Imagine Comms</th><th>n8n / Zapier</th><th style="color:var(--purple-light)">qibb</th></tr>
+    <tr><td style="color:var(--muted)">Core</td><td>MAM + workflow</td><td>Playout + ads</td><td>Generic automation</td><td style="color:var(--white)">Media orchestration</td></tr>
+    <tr><td style="color:var(--muted)">Approach</td><td>Monolithic platform</td><td>End-to-end stack</td><td>Horizontal iPaaS</td><td style="color:var(--white)">Vendor-agnostic layer</td></tr>
+    <tr><td style="color:var(--muted)">Media depth</td><td>Deep (own ecosystem)</td><td>Deep (own stack)</td><td>None</td><td style="color:var(--white)">100+ media connectors</td></tr>
+    <tr><td style="color:var(--muted)">Lock-in risk</td><td style="color:var(--red)">High</td><td style="color:var(--red)">High</td><td style="color:var(--green)">Low</td><td style="color:var(--green)">None (vendor-agnostic)</td></tr>
+    <tr><td style="color:var(--muted)">Deployment</td><td>On-prem + hybrid</td><td>On-prem + cloud</td><td>Cloud only</td><td style="color:var(--white)">Cloud, on-prem, hybrid</td></tr>
+  </table>
+</div>
+
+<!-- SLIDE 4: YOUR MOAT -->
+<div class="slide">
+  <span class="pill">YOUR MOAT</span>
+  <h2>Three things that are <span class="highlight">genuinely hard to replicate.</span></h2>
+  <p style="margin-bottom: 32px;">Not features. Strategic advantages.</p>
+  <div class="card-grid" style="grid-template-columns: 1fr;">
+    <div class="card card-accent">
+      <h3>1. Media-native connectors (the real defensibility)</h3>
+      <p>100+ pre-built connectors for Avid MediaCentral, Frame.io, Iconik, Mimir. A horizontal iPaaS player would need years to build equivalent depth. This is the moat. Invest disproportionately here.</p>
+    </div>
+    <div class="card card-accent">
+      <h3>2. Node-RED ecosystem leverage (smart architectural bet)</h3>
+      <p>5,000+ community nodes for free, with proprietary media nodes layered on top. Massive connector breadth without a 200-person engineering team. The bet is working.</p>
+    </div>
+    <div class="card card-accent">
+      <h3>3. Hybrid deployment in a compliance-sensitive industry</h3>
+      <p>Broadcasters have real on-prem requirements for live production and content security. Cloud-only platforms lose deals. ISO 27001 + Kubernetes-based hybrid is table stakes for enterprise media but differentiating vs. cloud-native competitors.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: POSITIONING SCORECARD -->
+<div class="slide">
+  <span class="pill">POSITIONING</span>
+  <h2>How qibb presents itself to the market.</h2>
+  <p style="margin-bottom: 32px;">An honest assessment of clarity, differentiation, and believability.</p>
+  <div class="split">
+    <div>
+      <div class="quote-block">
+        <p>"Orchestrate media workflows smarter, faster, with less code."</p>
+        <div class="attribution">Current headline, qibb.com</div>
+      </div>
+      <div style="margin-top: 24px;">
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+          <span style="color:var(--muted); font-size:14px; width:140px;">Clarity</span>
+          <span class="grade grade-a">B+</span>
+          <span style="color:var(--muted); font-size:13px;">Communicates the what. "Orchestrate" is engineering jargon.</span>
+        </div>
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+          <span style="color:var(--muted); font-size:14px; width:140px;">Differentiation</span>
+          <span class="grade grade-b">B-</span>
+          <span style="color:var(--muted); font-size:13px;">Best differentiator (vendor-agnostic) is buried below the fold.</span>
+        </div>
+        <div style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+          <span style="color:var(--muted); font-size:14px; width:140px;">Believability</span>
+          <span class="grade grade-a">A-</span>
+          <span style="color:var(--muted); font-size:13px;">"3 of 4 US broadcasters" is powerful and specific.</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="color: var(--white);">What's working</h3>
+      <p style="font-size:15px; margin-bottom:16px;">Social proof placement is excellent. Quantified outcomes (40% cost reduction, 10x faster builds) give sales teams concrete talking points. The 3-step onboarding simplifies a complex product.</p>
+      <h3 style="color: var(--amber); margin-top: 20px;">What's missing</h3>
+      <p style="font-size:15px;">No "why now" urgency tied to streaming fragmentation or AI. AI Copilot is announced as a feature when it could be a positioning shift. No "replace what?" story. No persona-specific messaging paths.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: THE VALUE PROP GAP -->
+<div class="slide">
+  <span class="pill">VALUE PROPOSITION</span>
+  <h2>The headline describes what qibb does.<br>Not what it <span class="highlight">means for the buyer.</span></h2>
+  <div class="split" style="margin-top: 32px;">
+    <div>
+      <h3 style="color: var(--amber);">Current</h3>
+      <div class="quote-block" style="border-left-color: var(--amber);">
+        <p>"Orchestrate media workflows smarter, faster, with less code."</p>
+      </div>
+      <p style="font-size:15px;">Functional. Describes the product category. Could apply to any workflow tool with a media filter.</p>
+    </div>
+    <div>
+      <h3 style="color: var(--green);">Reframed</h3>
+      <div class="quote-block" style="border-left-color: var(--green);">
+        <p>"The only workflow platform that speaks your media stack natively, so your engineering team stops being the bottleneck for every operational change."</p>
+      </div>
+      <p style="font-size:15px;">Buyer-centric. Addresses the real pain: ops teams filing tickets with engineering for every new content pipeline, waiting weeks.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: THE NARRATIVE GAP -->
+<div class="slide">
+  <span class="pill">MESSAGING OPPORTUNITY</span>
+  <h2>Stop selling a tool.<br><span class="highlight">Start selling the standard.</span></h2>
+  <p style="margin-bottom: 32px;">With 3 of 4 US broadcasters already on qibb, you have a credible claim to being the de facto orchestration layer for broadcast. That's not a feature story. That's a category story.</p>
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <h3 style="color: var(--amber);">Today's narrative</h3>
+      <p>"We're a low-code platform for media workflows. Here are our features."</p>
+      <p style="margin-top:8px; font-size:13px; color: var(--amber);">This puts qibb in a category with n8n, Zapier, and every other workflow tool.</p>
+    </div>
+    <div class="card" style="border-color: var(--green);">
+      <h3 style="color: var(--green);">Tomorrow's narrative</h3>
+      <p>"The media industry is converging on a standard for workflow orchestration. 3 of 4 US broadcasters chose qibb. Here's why."</p>
+      <p style="margin-top:8px; font-size:13px; color: var(--green);">This makes qibb the category leader, not a participant.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: FOUR RECOMMENDATIONS -->
+<div class="slide">
+  <span class="pill">RECOMMENDATIONS</span>
+  <h2>Four moves to <span class="highlight">accelerate from here.</span></h2>
+  <p style="margin-bottom: 32px;">Based on the market analysis, competitive positioning, and messaging review.</p>
+  <div class="reco">
+    <div class="reco-num">1</div>
+    <div class="reco-content">
+      <h3>Double down on the connector moat</h3>
+      <p>The 100+ media connectors are the hardest thing to replicate. Every new connector widens the gap with horizontals. Invest disproportionately here over platform features. The AI Copilot is nice-to-have; another 50 media connectors is must-have.</p>
+    </div>
+  </div>
+  <div class="reco">
+    <div class="reco-num">2</div>
+    <div class="reco-content">
+      <h3>Ship named case studies or lose enterprise deals</h3>
+      <p>The customer page has 8 entries, 5 unnamed. For a seed-stage company selling to risk-averse broadcasters, every unnamed case study is a missed trust signal. The "3 of 4 US broadcasters" claim needs to be verifiable.</p>
+    </div>
+  </div>
+  <div class="reco">
+    <div class="reco-num">3</div>
+    <div class="reco-content">
+      <h3>Give the AI Copilot a specific job story</h3>
+      <p>Not "Meet AI Copilot" but "Build media workflows by describing them in plain English" or "Diagnose playout failures before they hit air." Every SaaS company is shipping AI. Yours needs a media-specific angle.</p>
+    </div>
+  </div>
+  <div class="reco">
+    <div class="reco-num">4</div>
+    <div class="reco-content">
+      <h3>Resolve the PLG vs. enterprise sales tension</h3>
+      <p>The website signals "try before you buy" (PLG) and "book a demo" (enterprise) simultaneously. At 27 employees, you can't execute both motions. Given your buyer (enterprise broadcast), commit to consultative sales with a proof-of-concept model.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: WHAT IF -->
+<div class="slide" style="text-align: center;">
+  <span class="pill">THE OPPORTUNITY</span>
+  <h2>What if qibb had a product leader who's<br><span class="highlight">done this before?</span></h2>
+  <p style="margin: 20px auto; text-align: center; max-width: 600px;">Someone who's built product organizations at scale in security and intelligence. Who understands enterprise sales cycles, positioning, and how to turn a feature narrative into a category narrative. Who can embed 2-4 days a week with AI-augmented delivery.</p>
+  <div class="card-grid" style="max-width: 800px; margin: 32px auto 0; grid-template-columns: repeat(3, 1fr);">
+    <div class="card" style="text-align: center;">
+      <div class="big-number" style="font-size: 48px;">17</div>
+      <div class="big-label">Years leading product orgs</div>
+      <p style="font-size:13px; margin-top:8px;">NICE and Cognyte. $200M portfolios. 30-person product organizations.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div class="big-number" style="font-size: 48px; color: var(--green);">$106K</div>
+      <div class="big-label">Value delivered in 8 weeks</div>
+      <p style="font-size:13px; margin-top:8px;">Strategy, PRDs, competitive analysis, interactive demo, production website.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+      <div class="big-number" style="font-size: 48px; color: var(--amber);">82</div>
+      <div class="big-label">AI agents in the toolkit</div>
+      <p style="font-size:13px; margin-top:8px;">Product Org OS: an AI-powered operating system for product work.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: CTA -->
+<div class="slide cta-section">
+  <div class="logo-bar" style="justify-content: center; margin-bottom: 32px;">
+    <img src="https://cdn.prod.website-files.com/6835ab26b3c1bc3af2ea5dbf/6840b1d289a2c8323b245699_Auto%20Layout%20Vertical.svg" alt="qibb logo" style="height: 24px;">
+    <div class="divider"></div>
+    <span>PRODUCTBEACON</span>
+  </div>
+  <h2>Worth a conversation?</h2>
+  <p style="margin: 16px auto; text-align: center;">This brief took 30 minutes. Imagine what 30 days looks like.</p>
+  <a href="mailto:yohay@productbeacon.agency?subject=Re:%20qibb%20Product%20Strategy%20Brief" class="cta-btn" style="margin-top: 24px;">Let's talk</a>
+  <p style="margin-top: 32px; font-size: 14px; text-align: center;">Yohay Etsion | productbeacon.agency</p>
+</div>
+
+<div class="pb-footer">Prepared by ProductBeacon | March 2026 | Based on publicly available information</div>
+
+<nav>
+  <button onclick="window.goTo(0)">1</button>
+  <button onclick="window.goTo(1)">2</button>
+  <button onclick="window.goTo(2)">3</button>
+  <button onclick="window.goTo(3)">4</button>
+  <button onclick="window.goTo(4)">5</button>
+  <button onclick="window.goTo(5)">6</button>
+  <button onclick="window.goTo(6)">7</button>
+  <button onclick="window.goTo(7)">8</button>
+  <button onclick="window.goTo(8)">9</button>
+  <button onclick="window.goTo(9)">10</button>
+  <span class="counter" id="counter">1/10</span>
+</nav>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const buttons = document.querySelectorAll('nav button');
+  const counter = document.getElementById('counter');
+
+  window.goTo = function(i) {
+    slides[i].scrollIntoView({behavior:'smooth'});
+  };
+
+  function updateNav() {
+    let current = 0;
+    slides.forEach((s,i) => {
+      const rect = s.getBoundingClientRect();
+      if (rect.top < window.innerHeight/2) current = i;
+    });
+    buttons.forEach((b,i) => b.classList.toggle('active', i===current));
+    counter.textContent = (current+1)+'/'+slides.length;
+  }
+
+  window.addEventListener('scroll', updateNav);
+  document.addEventListener('keydown', e => {
+    let current = 0;
+    slides.forEach((s,i) => { if (s.getBoundingClientRect().top < window.innerHeight/2) current = i; });
+    if ((e.key==='ArrowRight'||e.key==='ArrowDown') && current<slides.length-1) { e.preventDefault(); window.goTo(current+1); }
+    if ((e.key==='ArrowLeft'||e.key==='ArrowUp') && current>0) { e.preventDefault(); window.goTo(current-1); }
+  });
+  updateNav();
+})();
+</script>
+</body>
+</html>
