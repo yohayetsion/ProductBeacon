@@ -283,6 +283,16 @@ h4 {
   color: var(--bright);
 }
 
+/* Ensure primary button in nav keeps its proper colors */
+.nav__links .btn--primary {
+  color: var(--ink);
+  background: var(--amber);
+}
+.nav__links .btn--primary:hover {
+  color: var(--ink);
+  background: var(--amber-hover);
+}
+
 .nav__hamburger {
   display: none;
   background: none;
