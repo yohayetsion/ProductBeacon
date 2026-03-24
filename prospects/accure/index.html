@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACCURE — Product Strategy Brief | ProductBeacon</title>
+<link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/67f3b2b2af7509d6ee127613/67f3b2b2af7509d6ee12764b_favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Barlow', sans-serif; background: #FFFFFF; color: #000000; line-height: 1.6; }
+
+.slide {
+  min-height: 100vh;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px 100px;
+  position: relative;
+}
+.slide.active { display: flex; }
+
+.slide-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Pills */
+.pill {
+  display: inline-block;
+  background: #14372B;
+  color: #F9C02B;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+h1 { font-size: 48px; font-weight: 800; line-height: 1.15; color: #000; }
+h2 { font-size: 38px; font-weight: 800; line-height: 1.2; color: #000; margin-bottom: 24px; }
+h3 { font-size: 22px; font-weight: 700; color: #14372B; margin-bottom: 8px; }
+
+.subtitle { font-size: 20px; color: #6B7280; font-weight: 500; margin-top: 12px; line-height: 1.5; }
+.body-text { font-size: 17px; color: #333; line-height: 1.7; margin-top: 16px; }
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.logo-square {
+  width: 28px;
+  height: 28px;
+  background: #37C799;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.logo-text {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #14372B;
+}
+.logo-small .logo-square { width: 20px; height: 20px; }
+.logo-small .logo-text { font-size: 20px; }
+
+/* Big number cards */
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+}
+.metric-card {
+  background: #F5F7F6;
+  padding: 36px 28px;
+  border-radius: 0;
+  text-align: center;
+}
+.metric-number {
+  font-size: 72px;
+  font-weight: 800;
+  color: #F9C02B;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.metric-label {
+  font-size: 15px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 24px 0; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th {
+  background: #14372B;
+  color: #FFF;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: top;
+}
+tr:hover td { background: #FAFBFA; }
+.col-highlight { background: rgba(55, 199, 153, 0.08); }
+th.col-highlight { background: #37C799; color: #14372B; }
+
+/* Accent cards */
+.accent-cards { display: flex; flex-direction: column; gap: 20px; margin: 28px 0; }
+.accent-card {
+  background: #F5F7F6;
+  border-left: 5px solid #37C799;
+  padding: 28px 28px;
+  border-radius: 0;
+}
+.accent-card h3 { margin-bottom: 10px; }
+.accent-card p { font-size: 15px; color: #444; line-height: 1.65; }
+
+/* Scorecard */
+.grade { display: inline-block; padding: 4px 14px; font-weight: 700; font-size: 15px; border-radius: 0; margin-left: 8px; }
+.grade-green { background: #D1FAE5; color: #065F46; }
+.grade-amber { background: #FEF3C7; color: #92400E; }
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #E5E7EB;
+  font-size: 16px;
+  font-weight: 600;
+}
+.score-label { min-width: 160px; }
+
+/* Two-col compare */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 28px 0;
+}
+.compare-card {
+  padding: 28px;
+  border-radius: 0;
+}
+.compare-card.current { background: #FEF3C7; border: 2px solid #F9C02B; }
+.compare-card.reframed { background: #D1FAE5; border: 2px solid #37C799; }
+.compare-card .tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.compare-card.current .tag { color: #92400E; }
+.compare-card.reframed .tag { color: #065F46; }
+.compare-card p { font-size: 15px; line-height: 1.65; color: #333; }
+
+/* Narrative blocks */
+.narrative-block {
+  background: #F5F7F6;
+  padding: 28px;
+  border-radius: 0;
+  margin: 16px 0;
+}
+.narrative-block h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #37C799;
+  margin-bottom: 12px;
+}
+.narrative-block p { font-size: 15px; color: #444; line-height: 1.7; }
+
+/* Recommendation cards */
+.rec-cards { display: flex; flex-direction: column; gap: 20px; margin: 24px 0; }
+.rec-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  background: #F5F7F6;
+  padding: 28px;
+  border-radius: 0;
+  align-items: start;
+}
+.rec-num {
+  width: 48px;
+  height: 48px;
+  background: #14372B;
+  color: #F9C02B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.rec-card h3 { color: #14372B; margin-bottom: 8px; }
+.rec-card p { font-size: 15px; color: #444; line-height: 1.65; }
+
+/* Quote */
+.quote-block {
+  border-left: 5px solid #F9C02B;
+  padding: 16px 24px;
+  background: #FFFBEB;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Strengths/Gaps */
+.sg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0;
+}
+.sg-box { padding: 20px; }
+.sg-box h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.sg-box.strengths h4 { color: #065F46; }
+.sg-box.gaps h4 { color: #92400E; }
+.sg-box ul { list-style: none; padding: 0; }
+.sg-box li {
+  font-size: 15px;
+  color: #444;
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+.sg-box.strengths li::before { content: '✓'; position: absolute; left: 0; color: #37C799; font-weight: 700; }
+.sg-box.gaps li::before { content: '—'; position: absolute; left: 0; color: #F9C02B; font-weight: 700; }
+
+/* CTA */
+.cta-center { text-align: center; }
+.cta-button {
+  display: inline-block;
+  background: #F9C02B;
+  color: #14372B;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 48px;
+  text-decoration: none;
+  border-radius: 0;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.cta-button:hover { background: #e0ab1a; }
+.cta-tagline {
+  font-size: 18px;
+  color: #6B7280;
+  margin: 24px 0 32px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pb-mark {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #F9C02B;
+  margin: 16px 0;
+}
+
+/* Opportunity narrative */
+.opp-text { font-size: 16px; color: #333; line-height: 1.75; margin-bottom: 16px; }
+.opp-link { color: #37C799; font-weight: 600; text-decoration: none; font-size: 16px; }
+.opp-link:hover { text-decoration: underline; }
+
+/* Nav bar */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid #E5E7EB;
+  padding: 12px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.nav-left { display: flex; gap: 8px; }
+.nav-center { display: flex; align-items: center; gap: 12px; }
+.nav-right { display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
+.nav-btn {
+  background: #14372B;
+  color: #FFF;
+  border: none;
+  padding: 8px 20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+.nav-btn:hover { background: #1a4a38; }
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
+.nav-dots { display: flex; gap: 6px; }
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  background: #D1D5DB;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  padding: 0;
+}
+.nav-dot.active { background: #F9C02B; }
+.slide-counter {
+  font-size: 13px;
+  color: #6B7280;
+  font-weight: 600;
+  min-width: 48px;
+  text-align: center;
+}
+.nav-jump {
+  background: none;
+  border: 1px solid #D1D5DB;
+  padding: 6px 12px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  color: #6B7280;
+  border-radius: 0;
+}
+
+/* Jump overlay */
+.jump-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+.jump-overlay.open { display: flex; }
+.jump-panel {
+  background: #FFF;
+  padding: 32px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.jump-panel h3 { margin-bottom: 16px; }
+.jump-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 12px 8px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  color: #333;
+}
+.jump-item:hover { background: #F5F7F6; }
+.jump-item span { color: #6B7280; font-size: 13px; margin-right: 8px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 100px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric-number { font-size: 48px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .sg-grid { grid-template-columns: 1fr; }
+  .rec-card { grid-template-columns: 40px 1fr; }
+  table { font-size: 12px; }
+  th, td { padding: 10px 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide active" id="slide-1">
+  <div class="slide-inner" style="text-align: center;">
+    <div class="logo" style="justify-content: center; margin-bottom: 24px;">
+      <span class="logo-square" style="width: 36px; height: 36px;"></span>
+      <span class="logo-text" style="font-size: 36px;">ACCURE</span>
+    </div>
+    <div class="pill" style="margin-bottom: 32px;">PRODUCT STRATEGY BRIEF</div>
+    <h1 style="max-width: 800px; margin: 0 auto;">18 GWh of Trust.<br>Now Build the Enterprise Story Around It.</h1>
+    <p class="subtitle" style="max-width: 700px; margin: 20px auto 0;">A diagnostic analysis of ACCURE's market position, messaging, and product strategy</p>
+    <p style="font-size: 14px; color: #6B7280; margin-top: 40px; letter-spacing: 1px; font-weight: 600;">Prepared by ProductBeacon &nbsp;|&nbsp; March 2026</p>
+  </div>
+</div>
+
+<!-- Slide 2: The Market -->
+<div class="slide" id="slide-2">
+  <div class="slide-inner">
+    <div class="pill">THE MARKET</div>
+    <h2>Battery Analytics Is Becoming Critical Infrastructure</h2>
+    <div class="metric-grid">
+      <div class="metric-card">
+        <div class="metric-number">400+</div>
+        <div class="metric-label" style="font-size: 13px; margin-top: 2px;">GWh</div>
+        <div class="metric-label" style="margin-top: 8px;">Projected annual energy storage deployments by 2030</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">18+</div>
+        <div class="metric-label" style="font-size: 13px; margin-top: 2px;">GWh</div>
+        <div class="metric-label" style="margin-top: 8px;">Battery capacity monitored on ACCURE's platform today</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">$16M</div>
+        <div class="metric-label" style="margin-top: 8px;">Series A raised to scale predictive battery analytics</div>
+      </div>
+    </div>
+    <p class="body-text">The central challenge has shifted from "can we build it?" to "can we trust it?" Battery degradation, thermal runaway risk, and warranty disputes represent material financial exposure. Predictive analytics platforms that sit above the hardware layer are becoming essential infrastructure.</p>
+  </div>
+</div>
+
+<!-- Slide 3: Competitive Landscape -->
+<div class="slide" id="slide-3">
+  <div class="slide-inner">
+    <div class="pill">COMPETITIVE LANDSCAPE</div>
+    <h2>Four Players, Four Lanes</h2>
+    <p class="body-text" style="margin-top: 0; margin-bottom: 24px;">TWAICE owns automotive. Voltaiq owns manufacturing. Modo owns market data. ACCURE's lane — full-lifecycle operations for asset owners — is defensible but the messaging doesn't claim it loudly enough.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 16%;"></th>
+            <th style="width: 21%;">TWAICE</th>
+            <th style="width: 21%;">Voltaiq</th>
+            <th style="width: 21%;">Modo Energy</th>
+            <th class="col-highlight" style="width: 21%;">ACCURE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; color: #14372B;">Focus</td>
+            <td>Automotive + stationary</td>
+            <td>Manufacturing + fleet</td>
+            <td>Market intelligence</td>
+            <td class="col-highlight">BESS operations + EV fleets</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #14372B;">Tech</td>
+            <td>Digital twin simulation</td>
+            <td>Cell-level analytics</td>
+            <td>Revenue data aggregation</td>
+            <td class="col-highlight">Predictive AI + safety monitoring</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #14372B;">Funding</td>
+            <td>$26M Series B</td>
+            <td>$62M total</td>
+            <td>Undisclosed</td>
+            <td class="col-highlight">$16M Series A</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #14372B;">Customers</td>
+            <td>BMW, Mercedes</td>
+            <td>Cell manufacturers</td>
+            <td>BESS investors</td>
+            <td class="col-highlight">RWE, UBS AM, Repsol, HDI Global</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #14372B;">Edge</td>
+            <td>Automotive OEM relationships</td>
+            <td>Manufacturing data scale</td>
+            <td>Market transparency</td>
+            <td class="col-highlight">Full lifecycle + insurance channel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4: Your Moat -->
+<div class="slide" id="slide-4">
+  <div class="slide-inner">
+    <div class="pill">YOUR MOAT</div>
+    <h2>Three Genuine Differentiators</h2>
+    <div class="accent-cards">
+      <div class="accent-card">
+        <h3>Full-Lifecycle Coverage</h3>
+        <p>Procurement through augmentation in one platform. For asset owners managing portfolios worth hundreds of millions, this eliminates stitching point solutions. No competitor covers this breadth.</p>
+      </div>
+      <div class="accent-card">
+        <h3>The Insurance Channel</h3>
+        <p>HDI Global uses ACCURE's safety intelligence to underwrite battery risk. This turns analytics into a financial instrument. If insurers require ACCURE-grade monitoring as a condition of coverage, it creates structural demand no competitor can replicate.</p>
+      </div>
+      <div class="accent-card">
+        <h3>LFP SOC Correction at Scale</h3>
+        <p>State-of-charge correction within 2% accuracy for LFP batteries, across 18+ GWh. LFP's flat voltage curves make this notoriously difficult. Genuine IP that requires both domain expertise and training data competitors don't have.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5: Positioning Scorecard -->
+<div class="slide" id="slide-5">
+  <div class="slide-inner">
+    <div class="pill">POSITIONING</div>
+    <h2>Strong Proof, Safe Messaging</h2>
+    <div class="quote-block">"battery analytics software for what's next"</div>
+    <div style="margin: 24px 0;">
+      <div class="score-row">
+        <span class="score-label">Clarity</span>
+        <span class="grade grade-amber">B+</span>
+      </div>
+      <div class="score-row">
+        <span class="score-label">Differentiation</span>
+        <span class="grade grade-amber">B-</span>
+      </div>
+      <div class="score-row" style="border-bottom: none;">
+        <span class="score-label">Believability</span>
+        <span class="grade grade-green">A-</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="sg-box strengths">
+        <h4>Strengths</h4>
+        <ul>
+          <li>Lifecycle framework effective</li>
+          <li>Logo wall spans energy/finance/insurance</li>
+          <li>White papers demonstrate real expertise</li>
+          <li>18+ GWh verifiable</li>
+        </ul>
+      </div>
+      <div class="sg-box gaps">
+        <h4>Gaps</h4>
+        <ul>
+          <li>"what's next" tagline could be any company</li>
+          <li>Deployment scale buried below fold</li>
+          <li>Insurance angle gets same weight as any testimonial</li>
+          <li>No ownable methodology story</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 6: Value Prop Gap -->
+<div class="slide" id="slide-6">
+  <div class="slide-inner">
+    <div class="pill">VALUE PROPOSITION</div>
+    <h2>Selling Analytics When You Should Be Selling Asset Protection</h2>
+    <div class="compare-grid">
+      <div class="compare-card current">
+        <div class="tag">CURRENT</div>
+        <p>ACCURE's analytics software transform battery data into business intelligence</p>
+      </div>
+      <div class="compare-card reframed">
+        <div class="tag">REFRAMED</div>
+        <p>We protect and maximize the value of your battery investments across their entire life — from the contract you sign to the augmentation decision you make a decade later</p>
+      </div>
+    </div>
+    <p class="body-text">The shift from analytics vendor to asset value partner changes the buying conversation from technical evaluation to strategic investment decision.</p>
+  </div>
+</div>
+
+<!-- Slide 7: Narrative Opportunity -->
+<div class="slide" id="slide-7">
+  <div class="slide-inner">
+    <div class="pill">THE NARRATIVE</div>
+    <h2>From "Battery Analytics Platform" to "The Trust Layer for Energy Storage"</h2>
+    <div class="narrative-block" style="margin-top: 28px;">
+      <h4>Today</h4>
+      <p>ACCURE competes on features and lifecycle stages. The messaging is safe, technical, and category-generic. "What's next" says nothing specific. The strongest assets — 18 GWh, the insurance channel, the PhD-grade domain expertise — are treated as supporting evidence.</p>
+    </div>
+    <div class="narrative-block">
+      <h4>Tomorrow</h4>
+      <p>ACCURE owns the narrative that battery investments are only as good as the intelligence protecting them. The 18+ GWh dataset becomes the headline. The insurance partnership becomes the proof. The lifecycle becomes the architecture. One message: "We've monitored more batteries than anyone. That's why the world's largest insurers trust us."</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 8: Recommendations -->
+<div class="slide" id="slide-8">
+  <div class="slide-inner">
+    <div class="pill">RECOMMENDATIONS</div>
+    <h2>Four Moves to Own the Category</h2>
+    <div class="rec-cards">
+      <div class="rec-card">
+        <div class="rec-num">1</div>
+        <div>
+          <h3>Segment by Buyer, Not by Lifecycle</h3>
+          <p>Utilities, financial investors, insurers, and IPPs have different entry points. Package as Asset Procurement Intelligence, Operational Analytics, Safety & Compliance, Portfolio Risk Management. Enable land-and-expand.</p>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-num">2</div>
+        <div>
+          <h3>Productize the Insurance Layer</h3>
+          <p>The HDI partnership proves demand. Package battery risk scores as an API for insurers and financial institutions. A new revenue stream with fundamentally different sales cycles.</p>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-num">3</div>
+        <div>
+          <h3>Lead with the Data Network Effect</h3>
+          <p>18+ GWh under management is one of the largest independent battery datasets in the world. Anonymized fleet benchmarking transforms raw data into a retention mechanism that deepens with every new customer.</p>
+        </div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-num">4</div>
+        <div>
+          <h3>Build a Commissioning Wedge Product</h3>
+          <p>Isolate commissioning acceleration with concrete ROI: "reduce commissioning time by X weeks, generating Y in earlier revenue." The fastest path to new customer acquisition.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 9: The Bigger Picture -->
+<div class="slide" id="slide-9">
+  <div class="slide-inner">
+    <div class="pill">THE OPPORTUNITY</div>
+    <h2 style="margin-bottom: 32px;">The Bigger Picture</h2>
+    <p class="opp-text">The competitive window is 18-24 months. TWAICE is expanding into stationary storage. Voltaiq is moving downstream from manufacturing into operations. Both have larger war chests. Cloud providers could build native monitoring.</p>
+    <p class="opp-text">But ACCURE has three assets they don't: the largest operational battery dataset, the only insurance underwriting partnership in the category, and full-lifecycle coverage that spans procurement to augmentation. The question is whether these assets get translated into a category-defining narrative before competitors close the gap.</p>
+    <p class="opp-text">A product leader who can segment the platform for different buyer personas, productize the insurance intelligence layer, and build a data network effect strategy would accelerate ACCURE's path from proven platform to category standard.</p>
+    <p class="opp-text">We typically engage companies like ACCURE by embedding a product leader who works alongside the team and takes ownership of deliverables — from strategic positioning and roadmap to product requirements and development guidance.</p>
+    <p style="margin-top: 20px;"><a href="https://productbeacon.agency" target="_blank" class="opp-link">productbeacon.agency</a></p>
+  </div>
+</div>
+
+<!-- Slide 10: CTA -->
+<div class="slide" id="slide-10">
+  <div class="slide-inner cta-center">
+    <div class="logo" style="justify-content: center; margin-bottom: 12px;">
+      <span class="logo-square" style="width: 32px; height: 32px;"></span>
+      <span class="logo-text" style="font-size: 32px;">ACCURE</span>
+    </div>
+    <div class="pb-mark">PRODUCTBEACON</div>
+    <p class="cta-tagline">This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <a href="mailto:contact@productbeacon.agency" class="cta-button">Let's Talk</a>
+  </div>
+</div>
+
+<!-- Nav Bar -->
+<div class="nav-bar">
+  <div class="nav-left">
+    <button class="nav-btn" id="prevBtn" onclick="window.showSlide(window.currentSlide - 1)">&#8592; Prev</button>
+  </div>
+  <div class="nav-center">
+    <div class="nav-dots" id="navDots"></div>
+    <span class="slide-counter" id="slideCounter">1 / 10</span>
+    <button class="nav-jump" onclick="window.promptSlide()">Jump</button>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" id="nextBtn" onclick="window.showSlide(window.currentSlide + 1)">Next &#8594;</button>
+  </div>
+</div>
+
+<!-- Jump overlay -->
+<div class="jump-overlay" id="jumpOverlay" onclick="if(event.target===this)window.closeJump()">
+  <div class="jump-panel">
+    <h3>Jump to Slide</h3>
+    <div id="jumpList"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var slides = document.querySelectorAll('.slide');
+  var totalSlides = slides.length;
+  window.currentSlide = 1;
+
+  var titles = [
+    'Title',
+    'The Market',
+    'Competitive Landscape',
+    'Your Moat',
+    'Positioning Scorecard',
+    'Value Prop Gap',
+    'Narrative Opportunity',
+    'Recommendations',
+    'The Bigger Picture',
+    "Let's Talk"
+  ];
+
+  // Build dots
+  var dotsEl = document.getElementById('navDots');
+  for (var i = 0; i < totalSlides; i++) {
+    var dot = document.createElement('button');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('data-slide', i + 1);
+    dot.onclick = (function(n) { return function() { window.showSlide(n); }; })(i + 1);
+    dotsEl.appendChild(dot);
+  }
+
+  // Build jump list
+  var jumpList = document.getElementById('jumpList');
+  for (var i = 0; i < totalSlides; i++) {
+    var btn = document.createElement('button');
+    btn.className = 'jump-item';
+    btn.innerHTML = '<span>' + (i + 1) + '.</span> ' + titles[i];
+    btn.onclick = (function(n) { return function() { window.showSlide(n); window.closeJump(); }; })(i + 1);
+    jumpList.appendChild(btn);
+  }
+
+  window.showSlide = function(n) {
+    if (n < 1 || n > totalSlides) return;
+    slides[window.currentSlide - 1].classList.remove('active');
+    window.currentSlide = n;
+    slides[n - 1].classList.add('active');
+    document.getElementById('slideCounter').textContent = n + ' / ' + totalSlides;
+    document.getElementById('prevBtn').disabled = (n === 1);
+    document.getElementById('nextBtn').disabled = (n === totalSlides);
+    var dots = dotsEl.querySelectorAll('.nav-dot');
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].classList.toggle('active', i === n - 1);
+    }
+    window.scrollTo(0, 0);
+  };
+
+  window.promptSlide = function() {
+    document.getElementById('jumpOverlay').classList.add('open');
+  };
+
+  window.closeJump = function() {
+    document.getElementById('jumpOverlay').classList.remove('open');
+  };
+
+  // Keyboard nav
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('jumpOverlay').classList.contains('open')) {
+      if (e.key === 'Escape') window.closeJump();
+      return;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      window.showSlide(window.currentSlide + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      window.showSlide(window.currentSlide - 1);
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      window.showSlide(1);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      window.showSlide(totalSlides);
+    } else if (e.key === 'Escape') {
+      window.closeJump();
+    }
+  });
+
+  // Touch swipe
+  var touchStartX = 0;
+  document.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  document.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) window.showSlide(window.currentSlide + 1);
+      else window.showSlide(window.currentSlide - 1);
+    }
+  }, { passive: true });
+
+  // Init
+  window.showSlide(1);
+})();
+</script>
+</body>
+</html>
