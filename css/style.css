@@ -872,3 +872,338 @@ a.card:hover {
   .section { padding: var(--space-12) 0; }
   .stat__value { font-size: 2.25rem; }
 }
+
+/* ============================================
+   20. INSIGHT PAGES
+   ============================================ */
+
+/* -- Hub Page -- */
+.insight-hub__hero {
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-12);
+  text-align: center;
+}
+
+.insight-hub__hero p {
+  color: var(--secondary);
+  font-size: 1.125rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1023px) {
+  .insight-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 639px) {
+  .insight-grid { grid-template-columns: 1fr; }
+}
+
+.insight-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--space-6);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.insight-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+  color: var(--text);
+}
+
+.insight-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.insight-card__favicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--ink);
+  flex-shrink: 0;
+}
+
+.insight-card__company {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--bright);
+}
+
+.insight-card__thesis {
+  color: var(--secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.insight-card__tag {
+  display: inline-block;
+  background: var(--amber-dim);
+  color: var(--amber);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--border-radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+}
+
+/* -- Individual Insight Page -- */
+.insight-hero {
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--border);
+}
+
+.insight-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.insight-hero__favicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.insight-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.insight-hero__thesis {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.insight-body {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6);
+}
+
+.insight-body h2 {
+  font-size: 1.75rem;
+  margin-top: var(--space-12);
+  margin-bottom: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.insight-body h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.insight-body h3 {
+  font-size: 1.25rem;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+.insight-body p {
+  color: var(--secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.insight-body ul, .insight-body ol {
+  color: var(--secondary);
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+}
+
+.insight-body li {
+  margin-bottom: var(--space-2);
+}
+
+.insight-body strong {
+  color: var(--text);
+}
+
+.insight-body .highlight-box {
+  background: var(--amber-dim);
+  border-left: 3px solid var(--amber);
+  padding: var(--space-4) var(--space-6);
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  margin: var(--space-6) 0;
+}
+
+.insight-body .highlight-box p {
+  color: var(--text);
+  margin-bottom: 0;
+}
+
+.insight-body .open-loop {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.insight-body .open-loop p {
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.insight-cta {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--space-8);
+  margin-top: var(--space-12);
+  text-align: center;
+}
+
+.insight-cta h3 {
+  margin-bottom: var(--space-3);
+}
+
+.insight-cta p {
+  color: var(--secondary);
+  margin-bottom: var(--space-6);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insight-brief-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--amber);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-bottom: var(--space-4);
+}
+
+.insight-brief-cta:hover {
+  background: var(--amber-hover);
+  color: var(--ink);
+}
+
+.insight-methodology {
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.insight-methodology p {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* -- Grade badges -- */
+.grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-right: 6px;
+}
+
+.grade--a { background: rgba(16, 185, 129, 0.15); color: #10B981; }
+.grade--b { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+.grade--c { background: rgba(239, 68, 68, 0.15); color: #EF4444; }
+.grade--d { background: rgba(239, 68, 68, 0.2); color: #EF4444; }
+
+/* -- Cluster Pages -- */
+.cluster-intro {
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.cluster-intro p {
+  color: var(--secondary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* -- Diagnostic Form -- */
+.diagnostic-form {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.diagnostic-form .form-group {
+  margin-bottom: var(--space-4);
+}
+
+.diagnostic-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.diagnostic-form input,
+.diagnostic-form textarea {
+  width: 100%;
+  background: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  transition: border-color 0.2s;
+}
+
+.diagnostic-form input:focus,
+.diagnostic-form textarea:focus {
+  outline: none;
+  border-color: var(--amber);
+}
+
+.diagnostic-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.diagnostic-form button[type="submit"] {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 639px) {
+  .insight-hero h1 { font-size: 1.75rem; }
+  .insight-hero__thesis { font-size: 1.0625rem; }
+  .insight-body { padding: var(--space-8) var(--space-6); }
+}

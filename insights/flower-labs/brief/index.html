@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Labs — Product Strategy Brief | ProductBeacon</title>
+<link rel="icon" type="image/png" href="https://flower.ai/static/images/icon/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Montserrat', sans-serif; background: #FFFFFF; color: #222222; line-height: 1.6; }
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 960px; width: 100%; }
+.pill { display: inline-block; background: #F8F7FF; color: #8B5CF6; font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; border: 1px solid rgba(139,92,246,0.2); }
+h1 { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; color: #222; }
+h2 { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #222; }
+h3 { font-family: 'Roboto Mono', monospace; font-size: 16px; font-weight: 600; margin-bottom: 10px; color: #222; }
+p { font-size: 16px; color: #444; margin-bottom: 14px; }
+.muted { color: #6B7280; font-size: 14px; }
+
+/* Title slide */
+.title-slide { text-align: center; }
+.title-slide .flower-logo { width: 80px; height: auto; margin-bottom: 24px; }
+.title-slide .label { font-family: 'Roboto Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #8B5CF6; font-weight: 600; margin-bottom: 12px; }
+.title-slide h1 { font-size: 36px; margin-bottom: 16px; }
+.title-slide .subtitle { font-size: 16px; color: #6B7280; max-width: 600px; margin: 0 auto 12px; }
+.title-slide .prepared { font-family: 'Roboto Mono', monospace; font-size: 13px; color: #8B5CF6; margin-top: 24px; }
+
+/* Big number cards */
+.num-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin: 30px 0; }
+.num-card { background: #F8F7FF; border-radius: 6px; padding: 32px 24px; text-align: center; border: 1px solid rgba(139,92,246,0.1); }
+.num-card .big-num { font-family: 'Roboto Mono', monospace; font-size: 72px; font-weight: 700; color: #8B5CF6; line-height: 1; margin-bottom: 8px; }
+.num-card .num-label { font-size: 14px; color: #6B7280; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 24px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { font-family: 'Roboto Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; background: #F8F7FF; padding: 12px 14px; text-align: left; border-bottom: 2px solid #E5E7EB; color: #6B7280; }
+td { padding: 12px 14px; border-bottom: 1px solid #F3F4F6; vertical-align: top; }
+tr:hover td { background: #FAFAFA; }
+.col-highlight { background: rgba(139,92,246,0.06); }
+th.col-highlight { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+
+/* Accent cards */
+.accent-cards { display: grid; gap: 24px; margin: 24px 0; }
+.accent-card { background: #FFFFFF; border-left: 4px solid #FFC500; border-radius: 6px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.accent-card h3 { color: #8B5CF6; margin-bottom: 10px; }
+.accent-card p { margin-bottom: 0; }
+
+/* Positioning scorecard */
+.quote-block { background: #F8F7FF; border-left: 4px solid #8B5CF6; padding: 20px 24px; border-radius: 0 6px 6px 0; margin: 20px 0; font-size: 18px; font-style: italic; color: #222; }
+.grades { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 20px 0; }
+.grade-item { text-align: center; padding: 16px; background: #F8F7FF; border-radius: 6px; }
+.grade-item .grade-label { font-family: 'Roboto Mono', monospace; font-size: 12px; color: #6B7280; letter-spacing: 1px; margin-bottom: 6px; }
+.grade-item .grade-value { font-size: 28px; font-weight: 800; }
+.grade-green { color: #10B981; }
+.grade-amber { color: #F59E0B; }
+.strengths-gaps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+.strengths-gaps h3 { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+.sg-list { list-style: none; padding: 0; }
+.sg-list li { font-size: 14px; padding: 6px 0; color: #444; position: relative; padding-left: 18px; }
+.sg-list li::before { content: ''; position: absolute; left: 0; top: 13px; width: 8px; height: 8px; border-radius: 50%; }
+.strengths .sg-list li::before { background: #10B981; }
+.gaps .sg-list li::before { background: #F59E0B; }
+
+/* Value prop comparison */
+.vp-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+.vp-box { padding: 28px; border-radius: 6px; }
+.vp-box.current { background: #FFF7ED; border: 1px solid #FDE68A; }
+.vp-box.reframed { background: #F0FDF4; border: 1px solid #BBF7D0; }
+.vp-box .vp-label { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 600; margin-bottom: 10px; }
+.vp-box.current .vp-label { color: #D97706; }
+.vp-box.reframed .vp-label { color: #059669; }
+.vp-box p { font-size: 16px; font-weight: 600; color: #222; margin-bottom: 0; }
+
+/* Narrative blocks */
+.narrative-block { margin: 20px 0; }
+.narrative-block .n-label { font-family: 'Roboto Mono', monospace; font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #8B5CF6; margin-bottom: 8px; }
+.narrative-block p { font-size: 15px; }
+
+/* Recommendations */
+.rec-list { list-style: none; padding: 0; counter-reset: rec; }
+.rec-item { background: #F8F7FF; border-radius: 6px; padding: 24px 24px 24px 70px; margin-bottom: 16px; position: relative; border: 1px solid rgba(139,92,246,0.1); }
+.rec-item::before { counter-increment: rec; content: counter(rec); position: absolute; left: 20px; top: 22px; width: 36px; height: 36px; background: #FFC500; color: #222; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.rec-item h3 { color: #222; font-size: 16px; margin-bottom: 8px; }
+.rec-item p { font-size: 14px; color: #444; margin-bottom: 0; }
+
+/* Opportunity narrative */
+.opp-text p { font-size: 16px; line-height: 1.7; margin-bottom: 18px; color: #333; }
+.opp-text a { color: #8B5CF6; text-decoration: none; font-weight: 600; }
+.opp-text a:hover { text-decoration: underline; }
+
+/* CTA slide */
+.cta-slide { text-align: center; }
+.cta-slide .flower-logo { width: 60px; margin-bottom: 20px; }
+.cta-slide .beacon-label { font-family: 'Roboto Mono', monospace; font-size: 14px; letter-spacing: 4px; color: #8B5CF6; font-weight: 700; margin-bottom: 24px; }
+.cta-slide .cta-text { font-size: 18px; color: #444; max-width: 600px; margin: 0 auto 32px; font-style: italic; }
+.cta-btn { display: inline-block; background: #FFC500; color: #222; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 15px; padding: 16px 40px; border-radius: 6px; text-decoration: none; letter-spacing: 1px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(255,197,0,0.3); }
+.cta-btn:hover { background: #E6B100; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(255,197,0,0.4); }
+
+/* Divider */
+.divider { width: 60px; height: 3px; background: linear-gradient(90deg, #FFC500, #8B5CF6); border-radius: 2px; margin: 20px 0; }
+
+/* Nav bar */
+.nav-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(0,0,0,0.08); padding: 12px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.nav-left { display: flex; align-items: center; gap: 8px; }
+.nav-center { display: flex; align-items: center; gap: 12px; }
+.nav-right { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.nav-btn { background: none; border: 1px solid #E5E7EB; border-radius: 6px; padding: 8px 16px; cursor: pointer; font-family: 'Roboto Mono', monospace; font-size: 12px; color: #222; transition: all 0.15s; }
+.nav-btn:hover { background: #F8F7FF; border-color: #8B5CF6; color: #8B5CF6; }
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
+.nav-btn:disabled:hover { background: none; border-color: #E5E7EB; color: #222; }
+.nav-counter { font-family: 'Roboto Mono', monospace; font-size: 13px; color: #6B7280; min-width: 60px; text-align: center; cursor: pointer; }
+.nav-counter:hover { color: #8B5CF6; }
+.nav-brand { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #8B5CF6; font-weight: 600; }
+
+/* Jump modal */
+.jump-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; align-items: center; justify-content: center; }
+.jump-overlay.active { display: flex; }
+.jump-modal { background: #fff; border-radius: 6px; padding: 32px; max-width: 400px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+.jump-modal h3 { margin-bottom: 16px; }
+.jump-modal input { width: 100%; padding: 12px; border: 1px solid #E5E7EB; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 16px; text-align: center; outline: none; }
+.jump-modal input:focus { border-color: #8B5CF6; }
+.jump-modal .jump-hint { font-size: 12px; color: #6B7280; margin-top: 8px; text-align: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 100px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  .num-card .big-num { font-size: 48px; }
+  .num-cards { grid-template-columns: 1fr; }
+  .vp-compare { grid-template-columns: 1fr; }
+  .strengths-gaps { grid-template-columns: 1fr; }
+  .grades { grid-template-columns: 1fr 1fr 1fr; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 10px; }
+}
+@media (max-width: 480px) {
+  .title-slide h1 { font-size: 24px; }
+  .grades { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide" id="slide-1">
+<div class="slide-inner title-slide">
+  <img class="flower-logo" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2082.02%2072.05%22%20fill%3D%22%23222%22%3E%3Cpath%20d%3D%22M34.87%2C22.13l-6.18%2C6.18v11.14s6.26%2C6.19%2C6.26%2C6.19l17.76-.21%2C6.09-6.01.28-10.93-6.19-6.35h-18.02ZM51.95%2C36.45l-2.11%2C2.09-12.08.15-2.15-2.12v-5.38s2.13-2.13%2C2.13-2.13h12.23s2.11%2C2.17%2C2.11%2C2.17l-.13%2C5.22h0Z%22%2F%3E%3Cpath%20d%3D%22M.3%2C39.91l1.73%2C12.1%2C7.47%2C2.47.07%2C7.76%2C11.56%2C6.66%2C5.42-1.69%2C3.92%2C4.84h14.65s4.51-4.38%2C4.51-4.38l5.01%2C2%2C12.53-4.52%2C1.22-7.37%2C7.56-.77%2C4.95-12.18-3.2-6.95%2C4.33-6.25h0s-3.85-13.47-3.85-13.47l-6.55-1.67-.37-6.61-10.85-6.81-6.18%2C1.63L50.1%2C0h-12.96s-3.7%2C4.7-3.7%2C4.7l-6.25-2.48-10.48%2C4.56-2.3%2C6.45-8.04.4L0%2C27.49l4.06%2C6.7-3.76%2C5.72ZM7.83%2C27.04l3.08-6.7%2C8.47-.42%2C2.85-7.98%2C5.09-2.21%2C8.38%2C3.33%2C4.81-6.12h6.46s4.88%2C5.56%2C4.88%2C5.56l7.42-1.96%2C5.27%2C3.31.46%2C8.1%2C7.61%2C1.94%2C1.85%2C6.5-4.71%2C6.81%2C3.6%2C7.82h0s-2.25%2C5.53-2.25%2C5.53l-8.68.88-1.42%2C8.59-6.23%2C2.25-6.74-2.69-5.75%2C5.58h-8.48s-4.82-5.96-4.82-5.96l-7.02%2C2.19-5.5-3.17-.08-8.76-8.1-2.68-.75-5.25%2C4.73-7.18-4.43-7.3Z%22%2F%3E%3C%2Fsvg%3E" alt="Flower Labs">
+  <div class="label">PRODUCT STRATEGY BRIEF</div>
+  <h1>The Community Is the Moat.<br>The Enterprise Story Isn't Written Yet.</h1>
+  <p class="subtitle">A diagnostic analysis of Flower Labs' market position, messaging, and product strategy</p>
+  <div class="prepared">Prepared by ProductBeacon &nbsp;|&nbsp; March 2026</div>
+</div>
+</div>
+
+<!-- Slide 2: The Market -->
+<div class="slide" id="slide-2">
+<div class="slide-inner">
+  <div class="pill">THE MARKET</div>
+  <h2>Federated AI Is Moving From Research to Enterprise Imperative</h2>
+  <div class="num-cards">
+    <div class="num-card">
+      <div class="big-num">6,800+</div>
+      <div class="num-label">AI researchers and engineers in the Flower community</div>
+    </div>
+    <div class="num-card">
+      <div class="big-num">2,500+</div>
+      <div class="num-label">Dependent projects built on the Flower framework</div>
+    </div>
+    <div class="num-card">
+      <div class="big-num">$180M+</div>
+      <div class="num-label">Raised by Owkin/Substra alone — validating the category</div>
+    </div>
+  </div>
+  <p>The market is fragmented between big-tech frameworks tied to proprietary hardware, research projects with limited production readiness, and vertical tools. No single player has locked in the enterprise standard yet. Flower's bet — framework-agnostic, open-source, horizontally applicable — is a classic platform play.</p>
+</div>
+</div>
+
+<!-- Slide 3: Competitive Landscape -->
+<div class="slide" id="slide-3">
+<div class="slide-inner">
+  <div class="pill">COMPETITIVE LANDSCAPE</div>
+  <h2>Fragmented Market, Clear Lanes</h2>
+  <p>NVIDIA has GPU gravity. PySyft has academic credibility. Apheris has German enterprise pedigree. Where does Flower win? Interoperability and community.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>NVIDIA FLARE</th>
+          <th>PySyft</th>
+          <th>Apheris</th>
+          <th class="col-highlight">Flower</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core</strong></td>
+          <td>GPU ecosystem lock-in</td>
+          <td>Privacy-preserving ML</td>
+          <td>Enterprise data collaboration</td>
+          <td class="col-highlight">Framework-agnostic, largest FL community</td>
+        </tr>
+        <tr>
+          <td><strong>Readiness</strong></td>
+          <td>High (NVIDIA-backed)</td>
+          <td>Low-Medium (research-first)</td>
+          <td>Medium-High</td>
+          <td class="col-highlight">High (Nokia, J.P. Morgan, NHS)</td>
+        </tr>
+        <tr>
+          <td><strong>Lock-in</strong></td>
+          <td>NVIDIA stack</td>
+          <td>None (thin enterprise)</td>
+          <td>Proprietary</td>
+          <td class="col-highlight">None (any ML framework)</td>
+        </tr>
+        <tr>
+          <td><strong>Community</strong></td>
+          <td>Moderate</td>
+          <td>Strong academic</td>
+          <td>Small</td>
+          <td class="col-highlight">6,800+ researchers, 6,600+ stars</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- Slide 4: Your Moat -->
+<div class="slide" id="slide-4">
+<div class="slide-inner">
+  <div class="pill">YOUR MOAT</div>
+  <h2>Two Genuine Differentiators</h2>
+  <div class="accent-cards">
+    <div class="accent-card">
+      <h3>Framework-Agnostic Universality</h3>
+      <p>Works with PyTorch, TensorFlow, JAX, HuggingFace, scikit-learn, XGBoost — any ML framework. This eliminates the single largest adoption barrier in federated learning. The switching cost of leaving Flower is the switching cost of rewriting everything.</p>
+    </div>
+    <div class="accent-card">
+      <h3>Community as Distribution Engine</h3>
+      <p>6,800 researchers, 2,500 dependent projects, Andrew Ng's DeepLearning.AI courses. Every student learns federated AI through Flower. Every researcher who publishes embeds Flower deeper. This is both a distribution channel and an R&D subsidy — 170 contributors writing code the company doesn't pay for.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Slide 5: Positioning Scorecard -->
+<div class="slide" id="slide-5">
+<div class="slide-inner">
+  <div class="pill">POSITIONING</div>
+  <h2>Strong Proof, Missing Business Case</h2>
+  <div class="quote-block">"The Industry Standard for Enterprise-Grade Federated AI"</div>
+  <div class="grades">
+    <div class="grade-item">
+      <div class="grade-label">CLARITY</div>
+      <div class="grade-value grade-amber">B</div>
+    </div>
+    <div class="grade-item">
+      <div class="grade-label">DIFFERENTIATION</div>
+      <div class="grade-value grade-amber">B+</div>
+    </div>
+    <div class="grade-item">
+      <div class="grade-label">BELIEVABILITY</div>
+      <div class="grade-value grade-green">A-</div>
+    </div>
+  </div>
+  <div class="strengths-gaps">
+    <div class="strengths">
+      <h3>Strengths</h3>
+      <ul class="sg-list">
+        <li>Outstanding developer experience (pip install, run in 3 steps)</li>
+        <li>Andrew Ng partnership validates credibility</li>
+        <li>Strong social proof stack (Nokia, J.P. Morgan, NHS)</li>
+      </ul>
+    </div>
+    <div class="gaps">
+      <h3>Gaps</h3>
+      <ul class="sg-list">
+        <li>No outcome-oriented messaging</li>
+        <li>Product name fragmentation (4 products)</li>
+        <li>Missing regulatory narrative (GDPR/HIPAA connection absent)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Slide 6: Value Prop Gap -->
+<div class="slide" id="slide-6">
+<div class="slide-inner">
+  <div class="pill">VALUE PROPOSITION</div>
+  <h2>Selling Infrastructure When You Should Be Selling Outcomes</h2>
+  <div class="vp-compare">
+    <div class="vp-box current">
+      <div class="vp-label">CURRENT</div>
+      <p>"The unified approach to federated learning, analytics, and evaluation"</p>
+    </div>
+    <div class="vp-box reframed">
+      <div class="vp-label">REFRAMED</div>
+      <p>"Unlock AI value from data you cannot move — across jurisdictions, institutions, and devices — without centralization risk"</p>
+    </div>
+  </div>
+  <p>The shift is from infrastructure language to business outcome language. Enterprise buyers don't buy frameworks — they buy the ability to do things they couldn't do before.</p>
+</div>
+</div>
+
+<!-- Slide 7: Narrative Opportunity -->
+<div class="slide" id="slide-7">
+<div class="slide-inner">
+  <div class="pill">THE NARRATIVE</div>
+  <h2>From 'Federated Learning Framework' to 'The AI You Can't Build Without Us'</h2>
+  <div class="narrative-block">
+    <div class="n-label">TODAY</div>
+    <p>Flower competes on framework features and community size. Four product names create confusion. The messaging assumes buyers already understand why federated AI matters.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="narrative-block">
+    <div class="n-label">TOMORROW</div>
+    <p>Flower owns the narrative that centralized AI has hit its ceiling — and the next wave of AI breakthroughs requires training on data that cannot be moved. One platform story (Framework, SuperGrid, Hub, Intelligence) replaces four product names.</p>
+  </div>
+</div>
+</div>
+
+<!-- Slide 8: Recommendations -->
+<div class="slide" id="slide-8">
+<div class="slide-inner">
+  <div class="pill">RECOMMENDATIONS</div>
+  <h2>Four Moves to Own the Enterprise Narrative</h2>
+  <ol class="rec-list">
+    <li class="rec-item">
+      <h3>Install Product Leadership</h3>
+      <p>No PM titles across 4 products serving Nokia and J.P. Morgan is not lean — it's a structural gap. The open-source-to-enterprise conversion funnel needs to be systematically engineered, not left to happen organically.</p>
+    </li>
+    <li class="rec-item">
+      <h3>One Platform, Not Four Products</h3>
+      <p>Collapse Framework, SuperGrid, Hub, and Intelligence into a single platform narrative. The arc: start free (Framework), scale enterprise (SuperGrid), share (Hub), extend to edge (Intelligence). One story.</p>
+    </li>
+    <li class="rec-item">
+      <h3>Lead With the Regulatory Story</h3>
+      <p>Every data sovereignty law is a buying trigger. Connect explicitly to GDPR, HIPAA, EU AI Act. The strongest enterprise use case is "AI on data you're not allowed to centralize." Say it.</p>
+    </li>
+    <li class="rec-item">
+      <h3>Publish Quantified Case Studies</h3>
+      <p>Logos without numbers are wallpaper. How much faster did J.P. Morgan train across jurisdictions? What compliance cost did NHS avoid? Three deep stories with data beat thirty logos.</p>
+    </li>
+  </ol>
+</div>
+</div>
+
+<!-- Slide 9: The Bigger Picture -->
+<div class="slide" id="slide-9">
+<div class="slide-inner">
+  <div class="pill">THE OPPORTUNITY</div>
+  <h2>The Bigger Picture</h2>
+  <div class="opp-text">
+    <p>NVIDIA is the existential risk. If FLARE becomes the default through GPU ecosystem bundling, Flower could be squeezed into a niche. Cloud providers could build native federated capabilities. And Owkin's Substra, with $180M+ raised, could expand horizontally.</p>
+    <p>But the window is open. No one owns "enterprise federated AI" yet. Flower has the community, the academic credibility, and the enterprise logos. What's missing is the product leadership to convert community momentum into enterprise revenue at scale — to build the bridge between "researchers love us" and "procurement teams buy us."</p>
+    <p>A product leader who can collapse four products into one platform story, formalize the services-to-product feedback loop, and build quantified business cases would accelerate Flower's path from beloved open-source project to enterprise category winner.</p>
+    <p>We typically engage companies like Flower by embedding a product leader who works alongside the team and takes ownership of deliverables — from strategic positioning and roadmap to product requirements and development guidance.</p>
+    <p><a href="https://productbeacon.agency" target="_blank">productbeacon.agency</a></p>
+  </div>
+</div>
+</div>
+
+<!-- Slide 10: CTA -->
+<div class="slide" id="slide-10">
+<div class="slide-inner cta-slide">
+  <img class="flower-logo" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2082.02%2072.05%22%20fill%3D%22%23222%22%3E%3Cpath%20d%3D%22M34.87%2C22.13l-6.18%2C6.18v11.14s6.26%2C6.19%2C6.26%2C6.19l17.76-.21%2C6.09-6.01.28-10.93-6.19-6.35h-18.02ZM51.95%2C36.45l-2.11%2C2.09-12.08.15-2.15-2.12v-5.38s2.13-2.13%2C2.13-2.13h12.23s2.11%2C2.17%2C2.11%2C2.17l-.13%2C5.22h0Z%22%2F%3E%3Cpath%20d%3D%22M.3%2C39.91l1.73%2C12.1%2C7.47%2C2.47.07%2C7.76%2C11.56%2C6.66%2C5.42-1.69%2C3.92%2C4.84h14.65s4.51-4.38%2C4.51-4.38l5.01%2C2%2C12.53-4.52%2C1.22-7.37%2C7.56-.77%2C4.95-12.18-3.2-6.95%2C4.33-6.25h0s-3.85-13.47-3.85-13.47l-6.55-1.67-.37-6.61-10.85-6.81-6.18%2C1.63L50.1%2C0h-12.96s-3.7%2C4.7-3.7%2C4.7l-6.25-2.48-10.48%2C4.56-2.3%2C6.45-8.04.4L0%2C27.49l4.06%2C6.7-3.76%2C5.72ZM7.83%2C27.04l3.08-6.7%2C8.47-.42%2C2.85-7.98%2C5.09-2.21%2C8.38%2C3.33%2C4.81-6.12h6.46s4.88%2C5.56%2C4.88%2C5.56l7.42-1.96%2C5.27%2C3.31.46%2C8.1%2C7.61%2C1.94%2C1.85%2C6.5-4.71%2C6.81%2C3.6%2C7.82h0s-2.25%2C5.53-2.25%2C5.53l-8.68.88-1.42%2C8.59-6.23%2C2.25-6.74-2.69-5.75%2C5.58h-8.48s-4.82-5.96-4.82-5.96l-7.02%2C2.19-5.5-3.17-.08-8.76-8.1-2.68-.75-5.25%2C4.73-7.18-4.43-7.3Z%22%2F%3E%3C%2Fsvg%3E" alt="Flower Labs">
+  <div class="beacon-label">PRODUCTBEACON</div>
+  <p class="cta-text">This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+  <a href="mailto:contact@productbeacon.agency" class="cta-btn">Let's Talk</a>
+</div>
+</div>
+
+<!-- Nav Bar -->
+<div class="nav-bar">
+  <div class="nav-left">
+    <span class="nav-brand">PRODUCTBEACON</span>
+  </div>
+  <div class="nav-center">
+    <button class="nav-btn" id="prev-btn" onclick="window.prevSlide()">&larr; Prev</button>
+    <span class="nav-counter" id="nav-counter" onclick="window.promptSlide()">1 / 10</span>
+    <button class="nav-btn" id="next-btn" onclick="window.nextSlide()">Next &rarr;</button>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="window.showSlide(1)">Start</button>
+    <button class="nav-btn" onclick="window.showSlide(10)">End</button>
+  </div>
+</div>
+
+<!-- Jump Modal -->
+<div class="jump-overlay" id="jump-overlay" onclick="window.closeJump(event)">
+  <div class="jump-modal">
+    <h3>Go to slide</h3>
+    <input type="number" id="jump-input" min="1" max="10" placeholder="1-10" onkeydown="if(event.key==='Enter')window.jumpToSlide()">
+    <div class="jump-hint">Press Enter to go, Escape to cancel</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var current = 1;
+  var total = 10;
+
+  function showSlide(n) {
+    if (n < 1 || n > total) return;
+    current = n;
+    var el = document.getElementById('slide-' + n);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    updateNav();
+  }
+
+  function updateNav() {
+    document.getElementById('nav-counter').textContent = current + ' / ' + total;
+    document.getElementById('prev-btn').disabled = current === 1;
+    document.getElementById('next-btn').disabled = current === total;
+  }
+
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  function promptSlide() {
+    var overlay = document.getElementById('jump-overlay');
+    overlay.classList.add('active');
+    var input = document.getElementById('jump-input');
+    input.value = '';
+    input.focus();
+  }
+
+  function closeJump(e) {
+    if (e && e.target !== document.getElementById('jump-overlay')) return;
+    document.getElementById('jump-overlay').classList.remove('active');
+  }
+
+  function jumpToSlide() {
+    var val = parseInt(document.getElementById('jump-input').value);
+    if (val >= 1 && val <= total) {
+      showSlide(val);
+    }
+    document.getElementById('jump-overlay').classList.remove('active');
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('jump-overlay').classList.contains('active')) {
+      if (e.key === 'Escape') {
+        document.getElementById('jump-overlay').classList.remove('active');
+      }
+      return;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); nextSlide(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prevSlide(); }
+    else if (e.key === 'Home') { e.preventDefault(); showSlide(1); }
+    else if (e.key === 'End') { e.preventDefault(); showSlide(total); }
+    else if (e.key === 'g' || e.key === 'G') { promptSlide(); }
+  });
+
+  // Scroll-based slide detection
+  var debounce = null;
+  window.addEventListener('scroll', function() {
+    clearTimeout(debounce);
+    debounce = setTimeout(function() {
+      var viewportCenter = window.innerHeight / 2;
+      for (var i = total; i >= 1; i--) {
+        var el = document.getElementById('slide-' + i);
+        if (el && el.getBoundingClientRect().top <= viewportCenter) {
+          current = i;
+          updateNav();
+          break;
+        }
+      }
+    }, 80);
+  });
+
+  // Expose to window
+  window.showSlide = showSlide;
+  window.nextSlide = nextSlide;
+  window.prevSlide = prevSlide;
+  window.promptSlide = promptSlide;
+  window.closeJump = closeJump;
+  window.jumpToSlide = jumpToSlide;
+
+  updateNav();
+})();
+</script>
+</body>
+</html>
