@@ -95,6 +95,14 @@
     });
   }
 
+  // ---- Insight Body Links Open in New Tab ----
+  document.querySelectorAll('.insight-body a, .insight-hero a:not(.btn--ghost)').forEach(function (link) {
+    if (!link.getAttribute('target')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener');
+    }
+  });
+
   // ---- Active Nav Link Highlighting ----
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
