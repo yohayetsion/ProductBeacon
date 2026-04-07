@@ -828,33 +828,40 @@ a.card:hover {
 
 .insight-table {
   width: 100%;
-  border-collapse: collapse;
-  margin: var(--space-6) 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--space-8) 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid #475569;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 .insight-table thead {
-  background: var(--surface);
+  background: #1E293B;
 }
 
 .insight-table th {
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
-  font-weight: 600;
-  color: var(--text);
-  border-bottom: 2px solid var(--border);
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--amber);
+  border-bottom: 2px solid #475569;
 }
 
 .insight-table td {
-  padding: 10px 16px;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-secondary);
+  padding: 12px 18px;
+  border-bottom: 1px solid #334155;
+  color: #CBD5E1;
   vertical-align: top;
+}
+
+.insight-table tbody tr:nth-child(even) {
+  background: rgba(30, 41, 59, 0.5);
 }
 
 .insight-table tbody tr:last-child td {
@@ -862,12 +869,17 @@ a.card:hover {
 }
 
 .insight-table tbody tr:hover {
-  background: rgba(245, 158, 11, 0.04);
+  background: rgba(245, 158, 11, 0.08);
 }
 
 .insight-table td:first-child {
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 600;
+  color: #F1F5F9;
+  white-space: nowrap;
+}
+
+.insight-table td strong {
+  color: #F1F5F9;
 }
 
 @media (max-width: 767px) {
@@ -875,11 +887,11 @@ a.card:hover {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    font-size: 0.8125rem;
   }
   .insight-table th,
   .insight-table td {
-    padding: 8px 12px;
-    font-size: 0.8125rem;
+    padding: 10px 14px;
   }
 }
 
