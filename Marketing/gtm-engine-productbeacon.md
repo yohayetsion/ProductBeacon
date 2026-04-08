@@ -497,7 +497,7 @@ productbeacon.agency
 
 3. **4 touches max.** T1-T4 over 30 days. After that, nurture or silence. Never re-enter cold sequence.
 
-4. **One proof point per email.** Never the full resume. Rotate: "17 years at NICE/Cognyte" OR "$106K in 8 weeks" OR "82 AI agents."
+4. **One proof point per email.** Never the full resume. Rotate: "17 years at NICE/Cognyte" OR "$190K in 14 weeks" OR "82 AI agents."
 
 5. **Research quality > send volume.** 25 deeply researched emails beat 250 generic ones at this price point.
 

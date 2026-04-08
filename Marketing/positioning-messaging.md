@@ -50,7 +50,7 @@ ProductBeacon creates the category of **AI-Augmented Product Leadership**: a ser
 
 ### Level 2: Elevator Pitch (30 seconds)
 
-"ProductBeacon embeds senior product leadership into startups and scaling companies. Our founder brings 17 years of enterprise product experience managing $200M portfolios and 30-person orgs at NICE and Cognyte. What makes us different is how we deliver: we built Product Org OS, an 82-agent AI system purpose-built for product work. That means one senior leader delivers what traditionally takes a team of five to eight people. We proved it at AXIA Security, where we delivered $106K of equivalent value in eight weeks as a fractional CPO. Strategy, PRDs, demos, brand, GTM, all from one engagement."
+"ProductBeacon embeds senior product leadership into startups and scaling companies. Our founder brings 17 years of enterprise product experience managing $200M portfolios and 30-person orgs at NICE and Cognyte. What makes us different is how we deliver: we built Product Org OS, an 82-agent AI system purpose-built for product work. That means one senior leader delivers what traditionally takes a team of five to eight people. We proved it at AXIA Security, where we delivered $190K of equivalent value in 14 weeks as a fractional CPO. Strategy, PRDs, demos, brand, GTM, commercial readiness, all from one engagement."
 
 ---
 
@@ -62,7 +62,7 @@ The problem is access. A full-time CPO costs $300K or more and takes months to h
 
 ProductBeacon changes the math. We combine a 17-year enterprise product veteran with Product Org OS, a proprietary AI operating system with 82 specialized agents for product work. Market analyses that took weeks now take hours. PRDs that took days now take hours. Strategic document packages that required a team now come from a single engagement.
 
-This is not theoretical. At AXIA Security, we delivered nine work streams in eight weeks as a fractional CPO: market analysis, competitive profiles, seven PRD iterations, a 47-version interactive demo, brand identity, positioning, investor decks, a production website, and sales enablement. The equivalent market value was $106,000. With Legionis, we built an entire product from concept to near-launch: vision, strategy, competitive analysis, pricing, GTM, full codebase.
+This is not theoretical. At AXIA Security, we delivered nine work streams in 14 weeks as a fractional CPO: market analysis, 10 competitor profiles, a definitive PRD with 14 diagrams, a 36-version interactive demo, brand identity, positioning, enterprise EULA, pricing strategy, a production website, and sales enablement. The equivalent market value was $190,000. With Legionis, we built an entire product from concept to near-launch: vision, strategy, competitive analysis, pricing, GTM, full codebase.
 
 ProductBeacon gives you CPO-level leadership, team-level execution, and radical transparency on what was delivered and what it was worth."
 
@@ -76,7 +76,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 
 **Lead message:** "You need a CPO but you are not ready for a $300K hire. ProductBeacon gives you 17 years of enterprise product leadership, embedded in your company, at a fraction of the cost. And because we use AI to amplify our delivery, you get the output of a product team, not just one advisor."
 
-**Proof point:** "At AXIA Security, we stepped in as fractional CPO and delivered $106K of equivalent value in 8 weeks. Market analysis, PRDs, an interactive demo, brand identity, investor materials, and a production website. One person. Eight weeks."
+**Proof point:** "At AXIA Security, we stepped in as fractional CPO and delivered $190K of equivalent value in 14 weeks. Market analysis, PRDs, an interactive demo, brand identity, enterprise legal agreements, pricing strategy, and a production website. One person. 14 weeks."
 
 **Call to action:** "Let's spend 30 minutes on your product situation. No pitch deck, no sales process. Just a conversation about where you are and what you need."
 
@@ -118,7 +118,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 
 **Lead message:** "Your portfolio company needs product leadership yesterday. A full-time CPO search takes 3-6 months and costs $300K+. ProductBeacon deploys in days, delivers at team scale using AI augmentation, and has a proven track record with documented outcomes. One engagement, transparent deliverables, and we leave the company stronger than we found it."
 
-**Proof point:** "At AXIA Security, we delivered 9 work streams in 8 weeks with a documented equivalent value of $106K. Every deliverable is tracked, every decision is documented with rationale, and we build internal capability so the company does not depend on us long-term."
+**Proof point:** "At AXIA Security, we delivered 9 work streams in 14 weeks with a documented equivalent value of $190K. Every deliverable is tracked, every decision is documented with rationale, and we build internal capability so the company does not depend on us long-term."
 
 **Call to action:** "I can brief you in 20 minutes on the model and share the AXIA case study. If it fits, I can be embedded in your portfolio company within a week."
 
@@ -175,7 +175,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 **Statement:** ProductBeacon documents every deliverable, every decision, every dollar of equivalent value created. Our case studies include real numbers because we believe trust is built through visibility, not polish.
 
 **Proof points:**
-- AXIA case study: $106K equivalent value, itemized by deliverable, in 8 weeks
+- AXIA case study: $190K equivalent value, itemized by deliverable, in 14 weeks
 - Every decision documented with rationale, alternatives considered, and re-decision triggers
 - Clients retain all institutional knowledge, decision history, and frameworks
 - No black-box methodology. The Product Org OS is open source.
@@ -189,7 +189,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 **Statement:** One ProductBeacon engagement delivers the equivalent output of a 5-8 person traditional product team.
 
 **Proof points:**
-- AXIA: 9 parallel work streams delivered by one person in 8 weeks
+- AXIA: 9 parallel work streams delivered by one person in 14 weeks
 - Legionis: Full product build (strategy, design, development, GTM) delivered by one person
 - AI augmentation compresses weeks of research into hours, days of documentation into minutes
 - No junior analysts, no project managers, no overhead. Senior-led from start to finish.
@@ -292,7 +292,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 
 ### Objection 1: "Can one person really replace a product team?"
 
-**Response:** "One person does not replace a product team. One person, augmented by 82 AI agents, delivers the output equivalent of a team. Let me be specific: at AXIA Security, one person delivered 9 work streams in 8 weeks, including market analysis, PRDs, an interactive demo, brand identity, and a production website. The equivalent market value was $106K. The AI handles research, documentation, and analysis at machine speed. The human applies judgment, strategy, and stakeholder management. It is not about replacing people. It is about what becomes possible when a senior leader has the right tools."
+**Response:** "One person does not replace a product team. One person, augmented by 82 AI agents, delivers the output equivalent of a team. Let me be specific: at AXIA Security, one person delivered 9 work streams in 14 weeks, including market analysis, PRDs, an interactive demo, enterprise legal agreements, pricing strategy, brand identity, and a production website. The equivalent market value was $190K. The AI handles research, documentation, and analysis at machine speed. The human applies judgment, strategy, and stakeholder management. It is not about replacing people. It is about what becomes possible when a senior leader has the right tools."
 
 ---
 
@@ -326,7 +326,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 
 | Do | Example |
 |-----|---------|
-| **Lead with outcomes, not process** | "We delivered $106K of value in 8 weeks" not "We use a 6-phase methodology" |
+| **Lead with outcomes, not process** | "We delivered $190K of value in 14 weeks" not "We use a 6-phase methodology" |
 | **Be specific and concrete** | "9 work streams, 47 demo versions, 7 PRD iterations" not "comprehensive deliverables" |
 | **Use plain language** | "We sit in the chair and do the work" not "We leverage synergistic value creation" |
 | **Show, do not tell** | Reference actual case studies, not theoretical capabilities |
@@ -343,7 +343,7 @@ ProductBeacon gives you CPO-level leadership, team-level execution, and radical 
 | **Don't claim to be cheaper AND better in the same sentence** | It sounds too good to be true. Separate the claims with proof. |
 | **Don't oversell AI as magic** | AI is a force multiplier, not a silver bullet. Be honest about the human judgment layer. |
 | **Don't criticize competitors by name** | Compete on categories, not companies. "Unlike traditional consultancies" not "Unlike McKinsey" |
-| **Don't promise specific financial outcomes** | "We delivered $106K equivalent value" (past) not "We will deliver $100K+ of value" (future) |
+| **Don't promise specific financial outcomes** | "We delivered $190K equivalent value" (past) not "We will deliver $100K+ of value" (future) |
 | **Don't use "disrupt" or "revolutionary"** | Let the work speak. Customers decide if it is revolutionary. |
 | **Don't hide behind the brand** | ProductBeacon is Yohay Etsion. The personal credibility IS the brand at this stage. Own it. |
 | **Don't use em dashes** | Per brand voice standards, use periods, commas, colons, or semicolons instead |
@@ -367,8 +367,8 @@ For quick access when creating any marketing collateral:
 | Portfolio scale | $200M+ product portfolios | Enterprise-grade capability |
 | Team leadership | 30+ person product organizations | Org scaling expertise |
 | AI operating system | Product Org OS, 82 agents, 101 skills | Technology differentiator |
-| AXIA value delivered | $106K equivalent value in 8 weeks | ROI and speed proof |
-| AXIA scope | 9 work streams, 7 PRD iterations, 47-version demo | Execution breadth |
+| AXIA value delivered | $190K equivalent value in 14 weeks | ROI and speed proof |
+| AXIA scope | 9 work streams, definitive PRD, 36-version demo, enterprise EULA | Execution breadth |
 | Legionis build | Concept to near-launch, full stack | E2E capability |
 | Book | "Leading the Charge" on product org management | Thought leadership |
 | Education | B.Sc. EE (BGU), MBA Finance (TAU) | Technical + business depth |

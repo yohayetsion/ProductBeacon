@@ -107,7 +107,7 @@ I spent 17 years leading product orgs at NICE and Cognyte
 ($200M portfolios) and now work with post-seed companies
 as a fractional product leader. I recently helped a
 cybersecurity startup go from zero product strategy to a
-documented $106K value package in 8 weeks.
+documented $190K value package in 14 weeks.
 
 Worth a conversation?
 
@@ -128,7 +128,7 @@ that takes 3-6 months.
 I've been in that seat for 17 years (NICE, Cognyte, $200M
 portfolios) and now embed as a fractional product leader
 for companies navigating exactly this. My last engagement
-delivered 9 work streams in 8 weeks.
+delivered 9 work streams in 14 weeks.
 
 Happy to share what I've seen work in similar situations.
 
@@ -230,10 +230,10 @@ post-funding.
 
 A cybersecurity startup in a similar position came to
 us with 40 features on the roadmap and no framework for
-saying no. In 8 weeks, we narrowed that to 3 strategic
+saying no. In 14 weeks, we narrowed that to 3 strategic
 bets, built a competitive positioning framework, and
 created an interactive demo that their sales team actually
-used. Documented value: $106K.
+used. Documented value: $190K.
 
 The situation feels similar to what [Company] might be
 navigating right now. If I'm wrong, no worries. If I'm
@@ -477,7 +477,7 @@ leadership but are not ready for a full-time CPO hire.
 That's exactly the gap I fill.
 
 My last engagement (a cybersecurity startup) delivered
-$106K of documented value in 8 weeks: strategy, PRDs,
+$190K of documented value in 14 weeks: strategy, PRDs,
 competitive analysis, an interactive demo, and a
 production website. I use an AI operating system I built
 (82 agents, open-source) to deliver at a pace that
@@ -678,7 +678,7 @@ When someone makes a referral (whether it converts or not):
 
 4. **First name sign-off.** Just "Yohay." Not "Yohay Etsion" or "Yohay Etsion, Founder, ProductBeacon" with a 10-line signature block. You are a person, not a company.
 
-5. **One proof point per email.** NEVER list your full resume. Pick the ONE credential most relevant to their situation. "17 years at NICE/Cognyte" OR "$106K value in 8 weeks" OR "82 AI agents." Not all three in one email.
+5. **One proof point per email.** NEVER list your full resume. Pick the ONE credential most relevant to their situation. "17 years at NICE/Cognyte" OR "$190K value in 14 weeks" OR "82 AI agents." Not all three in one email.
 
 6. **Ask, don't tell.** "Worth a conversation?" beats "I'd love to set up a call to discuss how we can help." Questions invite dialogue. Statements invite deletion.
 

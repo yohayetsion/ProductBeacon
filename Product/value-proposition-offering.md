@@ -88,7 +88,7 @@ All tiers are powered by the AI Delivery Engine (Product Org OS: 82 AI agents, 1
 |---------------|------------------------------|
 | CPO-caliber leadership, fast | 17 years of enterprise product leadership (NICE, Cognyte, $200M+ portfolios), available to start within days of signing |
 | Team-level output at fractional cost | Product Org OS (82 AI agents) multiplies one senior leader's capacity by 5-10x, producing the output of a 3-5 person consulting team |
-| Speed that redefines expectations | AI-augmented delivery: AXIA engagement delivered $106K of equivalent value in 8 weeks. Market analyses in hours, PRDs in days, full strategic packages in weeks |
+| Speed that redefines expectations | AI-augmented delivery: AXIA engagement delivered $190K of equivalent value in 14 weeks. Market analyses in hours, PRDs in days, full strategic packages in weeks |
 | Organizational memory | Every decision documented with context, alternatives, rationale, and re-decision triggers. The company's product knowledge base is richer when the engagement ends |
 | Capability building | Frameworks, playbooks, and processes transferred to the internal team. Goal: client no longer needs ProductBeacon because internal capability was built |
 | Transparent outcomes | Real case studies with specific deliverables, timelines, and value delivered. No vague testimonials; concrete proof of what was produced |
@@ -146,7 +146,7 @@ The original four-tier model included "AI-Augmented Product Services" as a stand
 - PE/VC portfolio companies needing product leadership across investments
 - Established companies needing interim product leadership during reorganization
 
-**Example Deliverables (from AXIA, 8 weeks)**:
+**Example Deliverables (from AXIA, 14 weeks)**:
 - Product vision and strategic positioning (4 iterations)
 - Market analysis with 9 competitor profiles
 - Product roadmap with prioritization rationale
@@ -201,7 +201,7 @@ The original four-tier model included "AI-Augmented Product Services" as a stand
 - Marketing website
 - Sales enablement package
 
-**Example Deliverables (from AXIA, 8 weeks)**:
+**Example Deliverables (from AXIA, 14 weeks)**:
 - 47-version interactive demo across 8 screens
 - Production website
 - 5 brand identity presentations
@@ -410,7 +410,7 @@ Product Org OS is a proprietary operating system built by ProductBeacon's founde
 
 ### AI-Augmented Delivery in Practice
 
-**AXIA Security Case Study (8 weeks, single operator)**
+**AXIA Security Case Study (14 weeks, single operator)**
 
 | Deliverable | Traditional Approach | ProductBeacon (AI-Augmented) | Speed Factor |
 |-------------|---------------------|------------------------------|-------------|
@@ -420,9 +420,9 @@ Product Org OS is a proprietary operating system built by ProductBeacon's founde
 | Brand identity (5 presentations) | 3-4 weeks, design agency | Iterative development in days | ~5x faster |
 | Design system (3 versions) | 4-6 weeks, design team | Structured generation + iteration | ~5x faster |
 | Production website | 2-4 weeks, dev team | Built and deployed in days | ~5x faster |
-| Complete engagement | 4-6 months with a team of 5-8 | 8 weeks, one person | ~3-4x faster, ~5-10x lower cost |
+| Complete engagement | 4-6 months with a team of 5-8 | 14 weeks, one person | ~3-4x faster, ~5-10x lower cost |
 
-**Equivalent market value**: ~$106,000 of deliverables in 8 weeks
+**Equivalent market value**: ~$190,000 of deliverables in 14 weeks
 
 **Legionis Case Study (full product build)**
 
@@ -597,7 +597,7 @@ Every ProductBeacon engagement defines success criteria upfront. These are track
 
 | Engagement | Duration | Key Metrics |
 |------------|----------|-------------|
-| **AXIA Security** | 8 weeks | ~$106K equivalent value delivered. 9 work streams. Deliverables: market analysis (9 competitors), 7 PRD versions (12 diagrams), 47-version interactive demo (8 screens), brand identity (5 presentations), design system (3 versions), investor decks, production website, sales enablement toolkit. Single operator, AI-augmented. |
+| **AXIA Security** | 14 weeks | ~$190K equivalent value delivered. 9 work streams. Deliverables: market analysis (10 competitors), definitive PRD with 14 diagrams, 36-version interactive demo (8 screens, 4 custom partner demos), 4 positioning iterations, 7 brand presentations, enterprise EULA v2, pricing strategy, production website, sales enablement. Single operator, AI-augmented. |
 | **Legionis** | Ongoing | Full product build from concept to near-launch. Vision, market analysis, competitive landscape, pricing strategy, business case, GTM, launch plan, PRD, brand guide, value proposition, full codebase (Next.js, 21 DB tables), marketing website. Single operator, AI-augmented. |
 
 ---
@@ -616,7 +616,7 @@ You get Yohay embedded in your company 2-4 days/week. He runs product: sets stra
 
 You get an end-to-end product package: from "we have an idea" to "we're ready to launch." Strategy, requirements, design direction, pricing, GTM plan, sales materials, demos, and launch coordination. Your engineers build the code; ProductBeacon ensures they build the right thing, positioned correctly, with a plan to take it to market.
 
-**You'll see**: A complete launch package. The AXIA engagement produced ~$106K of deliverables in 8 weeks. The Legionis engagement took a concept to a near-launch platform.
+**You'll see**: A complete launch package. The AXIA engagement produced ~$190K of deliverables in 14 weeks. The Legionis engagement took a concept to a near-launch platform.
 
 ### If you need your product org to work better (Tier 3: Product Org Services)
 

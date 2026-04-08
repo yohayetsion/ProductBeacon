@@ -80,7 +80,7 @@ ProductBeacon prices on the value delivered, not hours worked. This is a deliber
 | **Scope management** | Change requests scoped and priced separately; minor scope adjustments absorbed |
 
 **Price point rationale:**
-- The AXIA engagement delivered ~$106K equivalent value in 8 weeks
+- The AXIA engagement delivered ~$190K equivalent value in 14 weeks
 - A comparable package from a product studio (Thoughtbot) would cost $150K+ with engineering, or $60-80K for strategy/design only
 - MBB firms charge $500K+ for comparable strategic depth (without execution)
 - At $30K-$80K, clients get enterprise-quality strategy + execution at 20-50% of agency pricing
@@ -159,7 +159,7 @@ ProductBeacon prices on the value delivered, not hours worked. This is a deliber
 - Lead with the value comparison: ProductBeacon at $20K/month vs. full-time CPO at $25K-$32K/month, with more output
 - Emphasize the AI-powered execution capacity (scaleups value speed and throughput)
 - Offer combined Tier 1 + Tier 3 packages for companies that need both leadership and org improvement
-- Reference the AXIA case study ($106K value in 8 weeks) for credibility
+- Reference the AXIA case study ($190K value in 14 weeks) for credibility
 
 ### Established Companies
 
@@ -273,12 +273,12 @@ Every sales conversation should anchor ProductBeacon's pricing against the alter
 #### The AXIA Proof
 
 The AXIA engagement is the strongest value anchor:
-- **8 weeks**, single operator, AI-augmented
-- **$106K equivalent market value** in deliverables
-- Deliverables: market analysis (9 competitors), PRD (7 versions, 12 diagrams), interactive demo (47 versions), brand identity (5 presentations), design system (3 versions), production website, sales enablement toolkit
+- **14 weeks**, single operator, AI-augmented
+- **$190K equivalent market value** in deliverables
+- Deliverables: market analysis (10 competitors), definitive PRD with 14 diagrams, interactive demo (36 major versions, 8 screens), 4 positioning iterations, 7 brand presentations, enterprise EULA v2, pricing strategy, production website, sales enablement
 - This is what ProductBeacon ACTUALLY delivers, not a theoretical capability
 
-**Usage in sales**: "In our most recent engagement, we delivered $106K of market-value deliverables in 8 weeks. That included a full competitive analysis, seven PRD iterations, a 47-version interactive demo, brand identity, a design system, a production website, and a sales toolkit. One person, AI-augmented."
+**Usage in sales**: "In our most recent engagement, we delivered $190K of market-value deliverables in 14 weeks. That included 10 competitor profiles, a definitive PRD, a 36-version interactive demo, enterprise legal agreements, pricing strategy, brand identity, a production website, and commercial readiness materials. One person, AI-augmented."
 
 ---
 

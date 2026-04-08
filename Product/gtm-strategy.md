@@ -196,7 +196,7 @@ See detailed Content Strategy in Section 3.
 
 | Asset | Content Plays |
 |-------|--------------|
-| **AXIA case study** (live presentation) | LinkedIn carousel summarizing key metrics. Blog post "How AI-Augmented Consulting Delivered $106K Value in 8 Weeks." Webinar walking through the engagement. |
+| **AXIA case study** (live presentation) | LinkedIn carousel summarizing key metrics. Blog post "How AI-Augmented Consulting Delivered $190K Value in 14 Weeks." Webinar walking through the engagement. |
 | **Product Org OS** (82 agents, 101 skills) | "Why I Open-Sourced My Competitive Advantage" post. Monthly "New Skills" updates. GitHub stars/forks milestones. |
 | **Leading the Charge book** | Quote graphics for LinkedIn. "Key frameworks from the book" article series. Updated frameworks with AI angle. |
 | **Legionis V2V map** | "From Concept to Near-Launch: How I Used My Own Methodology" case study. Technical deep-dive on building AI agents. |
@@ -466,7 +466,7 @@ Invest in visibility (content, speaking, network), not in lead-buying (paid ads,
 
 3. **Send 25 personal messages to warm network contacts.** Not a pitch. An update: "Here's what I'm working on. Who do you know that might benefit?" These conversations will surface the first 2-3 opportunities and refine the positioning based on real reactions.
 
-4. **Publish 3 LinkedIn posts (proof-of-work pillar).** Topics: "What 82 AI Agents Taught Me About Product Management", "The $106K Case Study: AI-Augmented Consulting in Action", and one framework post from the book. Establish the content rhythm.
+4. **Publish 3 LinkedIn posts (proof-of-work pillar).** Topics: "What 82 AI Agents Taught Me About Product Management", "The $190K Case Study: AI-Augmented Consulting in Action", and one framework post from the book. Establish the content rhythm.
 
 ### Day 15-30
 

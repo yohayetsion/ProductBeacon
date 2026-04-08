@@ -14,7 +14,7 @@ ProductBeacon is a product services brand that combines 17 years of enterprise p
 
 The opportunity is driven by three converging forces: the fractional executive market reaching $5.7B with 14% annual growth, AI consulting projected to grow from $11B to $91B by 2035 (26.2% CAGR), and 30% of midsize enterprises expected to have a fractional executive by 2027. ProductBeacon sits at the intersection of these trends, creating a new category -- AI-Augmented Product Leadership -- where a single senior operator, amplified by AI, delivers the output traditionally requiring a team.
 
-Two completed engagements validate the model: AXIA (8 weeks, $106K equivalent value across 9 work streams) and Legionis (full E2E build from concept to near-launch). The core thesis is that AI amplification of a senior product leader creates a fundamentally different unit economics profile than traditional consulting, enabling premium outcomes at accessible price points.
+Two completed engagements validate the model: AXIA (14 weeks, $190K equivalent value across 9 work streams) and Legionis (full E2E build from concept to near-launch). The core thesis is that AI amplification of a senior product leader creates a fundamentally different unit economics profile than traditional consulting, enabling premium outcomes at accessible price points.
 
 **Recommendation**: GO -- with phased investment in brand, sales infrastructure, and case study documentation before scaling outreach.
 
@@ -318,7 +318,7 @@ This is the most critical near-term risk. Mitigation:
 
 3. **The investment is modest.** This is a services business, not a product requiring millions in R&D. The core asset (Yohay's expertise + Product Org OS) already exists. Launch investment is primarily brand/website/legal -- manageable within Etsion Brands portfolio.
 
-4. **Two engagements prove feasibility.** AXIA ($106K equivalent value in 8 weeks) and Legionis (full E2E build) demonstrate that the model works. The gap is not "can we deliver" but "can we sell."
+4. **Two engagements prove feasibility.** AXIA ($190K equivalent value in 14 weeks) and Legionis (full E2E build) demonstrate that the model works. The gap is not "can we deliver" but "can we sell."
 
 5. **Strategic synergy with portfolio.** ProductBeacon feeds Legionis (services inform product), leverages Maad House (brand/design capabilities), and positions the "Leading the Charge" / Vision to Value thought leadership as commercial assets.
 

@@ -81,7 +81,7 @@ What every ProductBeacon client can expect:
 | Promise | What It Means |
 |---------|---------------|
 | **Senior leadership from day one** | Your engagement is led by someone with 17 years of enterprise product leadership experience. No junior analysts, no bait-and-switch staffing. |
-| **Speed that redefines expectations** | AI-augmented delivery means market analyses in hours, PRDs in days, and full strategic packages in weeks. The AXIA engagement delivered $106K of equivalent value in 8 weeks. |
+| **Speed that redefines expectations** | AI-augmented delivery means market analyses in hours, PRDs in days, and full strategic packages in weeks. The AXIA engagement delivered $190K of equivalent value in 14 weeks. |
 | **End-to-end, not just advice** | We do not hand you a strategy deck and walk away. We build the roadmap, write the PRDs, coordinate with engineering, create the demos, and prepare the GTM. |
 | **Documented decisions and rationale** | Every strategic choice is recorded with context, alternatives considered, and re-decision triggers. Your organization retains the institutional knowledge, not just the deliverable. |
 | **Clean handoff, no dependency** | Engagements are designed to build internal capability, not create consultant dependency. We leave behind playbooks, frameworks, and trained teams. |
@@ -145,7 +145,7 @@ Segments 2 and 3 are served opportunistically in Phase 1, then deliberately in P
 
 1. **"We built an 82-agent AI operating system for product work, and we use it on every engagement."** No other product services firm has purpose-built AI tooling at this depth. Product Org OS is not a wrapper around ChatGPT. It is a structured operating system with agents, skills, knowledge packs, and organizational memory.
 
-2. **"Here is exactly what we delivered, what it cost, and what it was worth."** The AXIA engagement is documented with specific deliverables, timelines, and equivalent market value ($106K in 8 weeks). The Legionis build demonstrates end-to-end capability from concept to near-launch. Radical transparency is not a tagline; it is the business model.
+2. **"Here is exactly what we delivered, what it cost, and what it was worth."** The AXIA engagement is documented with specific deliverables, timelines, and equivalent market value ($190K in 14 weeks). The Legionis build demonstrates end-to-end capability from concept to near-launch. Radical transparency is not a tagline; it is the business model.
 
 3. **"One person delivered what traditionally requires a team of 5-8."** The AI-augmented model is not theoretical. It has been proven in live engagements. Market analyses, competitive landscapes, PRDs, demos, websites, brand systems, sales enablement, all delivered by a single senior leader with AI augmentation.
 
