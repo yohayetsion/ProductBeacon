@@ -3,953 +3,960 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orbem — Product Strategy Brief</title>
+<title>Orbem | Product Strategy Brief</title>
 <link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6958557273b04c17bbd8daf2/695fe0e26f6efd25eb75da3c_favicon.png">
+<!-- Rethink Sans loaded from Google Fonts; fallback system-ui if unavailable -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --primary: #433DEC;
+  --accent: #FF5327;
+  --secondary: #1863DC;
+  --bg: #FFFDFA;
+  --card: #FFFFFF;
+  --card-alt: #F8F5EE;
+  --text: #201618;
+  --muted: #6b5d56;
+  --border: rgba(32, 22, 24, 0.10);
+  --green: #22c55e;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --radius: 10px;
+  --radius-sm: 2px;
+}
 
-  :root {
-    --primary: #433DEC;
-    --accent: #FF5327;
-    --bg: #FFFDFA;
-    --card: #F5F3EF;
-    --text: #201618;
-    --muted: #6B5E62;
-    --border: #E2DED9;
-    --radius: 10px;
-    --font: 'Rethink Sans', sans-serif;
-  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html {
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-  }
-  html::-webkit-scrollbar { display: none; }
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar { display: none; }
 
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-  }
+body {
+  font-family: 'Rethink Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* ── Slides ── */
-  .slide {
-    min-height: 100vh;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 72px 80px 120px;
-    position: relative;
-  }
+.slide {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 80px 120px;
+  overflow-y: auto;
+  border-bottom: 1px solid var(--border);
+  scroll-snap-align: start;
+}
 
-  .slide-inner {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-  }
+.slide-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
 
-  /* ── Nav ── */
-  #nav {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(255, 253, 250, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid var(--border);
-    padding: 12px 24px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 16px;
-  }
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 40px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
 
-  #nav-left { display: flex; align-items: center; gap: 8px; justify-content: flex-start; }
-  #nav-center { display: flex; align-items: center; gap: 6px; }
-  #nav-right { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.pill.accent { background: var(--accent); }
+.pill.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
 
-  .nav-btn {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: background 0.15s, color 0.15s;
-  }
-  .nav-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--text);
+}
 
-  .slide-dot {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    border: 1.5px solid var(--border);
-    background: var(--card);
-    color: var(--muted);
-    font-family: var(--font);
-    font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.15s;
-    flex-shrink: 0;
-  }
-  .slide-dot.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-  .slide-dot:hover:not(.active) { background: var(--border); }
+h2 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 24px;
+  color: var(--text);
+}
 
-  #counter {
-    font-size: 12px;
-    color: var(--muted);
-    font-weight: 600;
-    white-space: nowrap;
-  }
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: var(--text);
+}
 
-  /* ── Typography ── */
-  .pill {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 99px;
-    margin-bottom: 20px;
-  }
-  .pill-primary { background: var(--primary); color: #fff; }
-  .pill-accent { background: var(--accent); color: #fff; }
-  .pill-muted { background: var(--card); color: var(--muted); border: 1px solid var(--border); }
-  .pill-green { background: #D1FAE5; color: #065F46; }
-  .pill-amber { background: #FEF3C7; color: #92400E; }
+p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+}
 
-  h1.hero-title {
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 20px;
-  }
-  h1.hero-title span.accent { color: var(--primary); }
+p.lede {
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 820px;
+}
 
-  h2.section-title {
-    font-size: clamp(28px, 4vw, 48px);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
-  }
+strong { font-weight: 700; color: var(--text); }
 
-  h3.card-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
+/* Logo */
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
 
-  p.hero-sub {
-    font-size: clamp(15px, 2vw, 18px);
-    color: var(--muted);
-    line-height: 1.65;
-    max-width: 700px;
-    margin-bottom: 32px;
-  }
+.logo-word {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
 
-  p.body { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.logo-dot {
+  color: var(--accent);
+}
 
-  /* ── Big Numbers ── */
-  .big-num {
-    font-size: 72px;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1;
-    letter-spacing: -0.03em;
-  }
-  .big-num-label { font-size: 14px; font-weight: 600; color: var(--muted); margin-top: 6px; }
+.pb-mark {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding-left: 20px;
+  border-left: 1.5px solid var(--border);
+}
 
-  /* ── Cards ── */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-  }
+/* Title slide */
+.title-slide h1 {
+  font-size: 72px;
+  max-width: 1000px;
+}
 
-  .card-grid {
-    display: grid;
-    gap: 16px;
-  }
-  .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .card-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.title-slide .subline {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 720px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
 
-  .num-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    text-align: center;
-  }
+/* Cards / Grids */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
 
-  .moat-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px;
-    border-left: 4px solid var(--primary);
-  }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
 
-  /* ── Table ── */
-  .comp-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    margin-top: 24px;
-  }
-  .comp-table th {
-    background: var(--primary);
-    color: #fff;
-    font-weight: 700;
-    padding: 10px 14px;
-    text-align: left;
-    font-size: 12px;
-    letter-spacing: 0.03em;
-  }
-  .comp-table th:first-child { border-radius: var(--radius) 0 0 0; }
-  .comp-table th:last-child { border-radius: 0 var(--radius) 0 0; }
-  .comp-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-    vertical-align: middle;
-  }
-  .comp-table tr:nth-child(even) td { background: var(--card); }
-  .comp-table tr.highlight-row td { background: #EDEEFF; font-weight: 600; }
-  .comp-table .check { color: #059669; font-weight: 700; }
-  .comp-table .cross { color: var(--muted); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
 
-  /* ── Scorecard ── */
-  .grade-badge {
-    display: inline-block;
-    width: 40px; height: 40px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .grade-a { background: #D1FAE5; color: #065F46; }
-  .grade-b-plus { background: #DBEAFE; color: #1E40AF; }
-  .grade-b { background: #EDE9FE; color: #5B21B6; }
+.card.accent-border {
+  border-left: 4px solid var(--accent);
+}
 
-  .score-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .score-row:last-child { border-bottom: none; }
-  .score-info { flex: 1; }
-  .score-label { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
-  .score-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.card.primary-border {
+  border-left: 4px solid var(--primary);
+}
 
-  /* ── Value Prop ── */
-  .vp-block {
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    margin-bottom: 16px;
-  }
-  .vp-amber { background: #FFFBEB; border: 1.5px solid #FCD34D; }
-  .vp-green { background: #ECFDF5; border: 1.5px solid #6EE7B7; }
-  .vp-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-  .vp-label.amber { color: #B45309; }
-  .vp-label.green { color: #065F46; }
-  .vp-quote {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.55;
-    color: var(--text);
-    font-style: italic;
-  }
-  .vp-note { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+.moat-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
 
-  /* ── Timeline arrows ── */
-  .narrative-split {
-    display: grid;
-    grid-template-columns: 1fr 40px 1fr;
-    align-items: center;
-    gap: 0;
-    margin-top: 24px;
-  }
-  .narrative-box {
-    border-radius: var(--radius);
-    padding: 24px;
-    height: 100%;
-  }
-  .narrative-today { background: #FFF7ED; border: 1.5px solid #FED7AA; }
-  .narrative-tomorrow { background: #EEF2FF; border: 1.5px solid #C7D2FE; }
-  .narrative-arrow {
-    display: flex; align-items: center; justify-content: center;
-    font-size: 24px; color: var(--primary);
-    font-weight: 800;
-  }
-  .narrative-label { font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 10px; }
-  .narrative-label.today { color: #C2410C; }
-  .narrative-label.tomorrow { color: #3730A3; }
-  .narrative-title { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
-  .narrative-body { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.card .durability {
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  font-style: italic;
+}
 
-  /* ── Recs ── */
-  .rec-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding: 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    margin-bottom: 12px;
-  }
-  .rec-num {
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    background: var(--primary);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .rec-text h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-  .rec-text p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+/* Competitive table */
+.comp-table {
+  margin-top: 32px;
+  overflow-x: auto;
+}
 
-  /* ── CTA ── */
-  .cta-btn {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    font-family: var(--font);
-    font-size: 15px;
-    font-weight: 700;
-    padding: 14px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: opacity 0.15s;
-    margin-top: 8px;
-  }
-  .cta-btn:hover { opacity: 0.88; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 
-  /* ── Slide-specific ── */
-  .slide-1 { background: linear-gradient(145deg, #FFFDFA 0%, #EDEEFF 100%); }
-  .slide-10 { background: linear-gradient(145deg, #1A1733 0%, #2E2880 100%); color: #fff; }
-  .slide-10 .hero-sub { color: rgba(255,255,255,0.7); }
-  .slide-10 #nav { background: rgba(26, 23, 51, 0.85); border-color: rgba(255,255,255,0.1); }
+th {
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 
-  /* Brand bar */
-  .brand-bar {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 40px;
-  }
-  .brand-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .brand-sep { width: 1px; height: 16px; background: var(--border); }
+th.prospect-col {
+  background: var(--accent);
+}
 
-  /* Hero brand logo */
-  .hero-logo {
-    font-size: clamp(56px, 9vw, 96px);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: var(--primary);
-    line-height: 1;
-    margin-bottom: 12px;
-  }
+td {
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  vertical-align: top;
+}
 
-  /* Divider */
-  .divider { width: 48px; height: 4px; background: var(--accent); border-radius: 2px; margin: 20px 0; }
+td.prospect-col {
+  background: rgba(255, 83, 39, 0.05);
+  font-weight: 600;
+}
 
-  /* Inline link */
-  a.inline-link { color: var(--primary); font-weight: 600; text-decoration: underline; }
+tr:hover td { background: rgba(67, 61, 236, 0.03); }
+tr:hover td.prospect-col { background: rgba(255, 83, 39, 0.08); }
 
-  /* Slide 9 highlight */
-  .highlight-quote {
-    background: var(--card);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 20px 24px;
-    margin: 20px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.6;
-    font-style: italic;
-  }
+/* Scorecard */
+.grade-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .slide { padding: 48px 24px 100px; }
-    .card-grid-3, .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    .card-grid-2 { grid-template-columns: 1fr; }
-    .comp-table { font-size: 11px; }
-    .comp-table th, .comp-table td { padding: 8px 8px; }
-    .narrative-split { grid-template-columns: 1fr; gap: 12px; }
-    .narrative-arrow { transform: rotate(90deg); }
-    #nav-center { display: none; }
-    .big-num { font-size: 52px; }
-  }
+.grade-row:last-child { border-bottom: none; }
 
-  @media (max-width: 480px) {
-    .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
-  }
+.grade-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius);
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.grade-a { background: var(--green); }
+.grade-b { background: var(--amber); }
+.grade-c { background: var(--red); }
+
+.grade-label {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.grade-desc {
+  font-size: 15px;
+  color: var(--muted);
+  margin-left: auto;
+  max-width: 50%;
+  text-align: right;
+}
+
+.quote-box {
+  background: var(--card-alt);
+  border-left: 4px solid var(--primary);
+  padding: 24px 28px;
+  border-radius: var(--radius);
+  font-size: 19px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.quote-box .attribution {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Value Prop Gap (slide 6) */
+.gap-box {
+  padding: 28px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+  background: var(--card);
+}
+
+.gap-box.current {
+  border-left-color: var(--amber);
+}
+
+.gap-box.reframed {
+  border-left-color: var(--green);
+  background: #F8F5EE;
+}
+
+.gap-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.gap-label.current { color: var(--amber); }
+.gap-label.reframed { color: var(--green); }
+
+.gap-quote {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Narrative today/tomorrow */
+.narrative-card {
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border-top: 4px solid;
+}
+
+.narrative-card.today { border-top-color: var(--amber); }
+.narrative-card.tomorrow { border-top-color: var(--primary); }
+
+.narrative-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.narrative-card.today .narrative-label { color: var(--amber); }
+.narrative-card.tomorrow .narrative-label { color: var(--primary); }
+
+/* Recommendations */
+.reco-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.reco {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 24px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+
+.reco-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.reco h3 { margin-bottom: 8px; }
+.reco p { font-size: 16px; margin-bottom: 0; color: var(--text); }
+
+/* Slide 9 */
+.bigger-picture p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.bigger-picture a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+/* CTA slide */
+.cta-slide { text-align: center; }
+.cta-slide .slide-inner { max-width: 760px; }
+
+.cta-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.cta-slide h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.cta-slide p {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 18px 36px;
+  border-radius: var(--radius);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+  letter-spacing: -0.005em;
+}
+
+.cta-button:hover { background: #322bd9; }
+
+.cta-footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+/* Navigation */
+nav.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(255, 253, 250, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-right { justify-content: flex-end; }
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.nav-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.nav-btn.arrow {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.nav-numbers {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-num {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: all 0.15s;
+}
+
+.nav-num:hover {
+  background: var(--card-alt);
+  color: var(--text);
+}
+
+.nav-num.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.nav-counter {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  .slide { padding: 40px 20px 120px; }
+  h1 { font-size: 32px; }
+  .title-slide h1 { font-size: 36px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 18px; }
+  p, p.lede { font-size: 16px; }
+  p.lede { font-size: 17px; }
+
+  .logo-word { font-size: 28px; }
+  .pb-mark { font-size: 10px; padding-left: 12px; }
+
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+  .card, .narrative-card { padding: 20px; }
+
+  table { display: block; overflow-x: auto; white-space: nowrap; font-size: 13px; }
+  th, td { padding: 10px 12px; }
+
+  .reco { grid-template-columns: 1fr; padding: 18px 20px; gap: 8px; }
+  .reco-num { font-size: 24px; }
+
+  .grade-row { flex-wrap: wrap; }
+  .grade-desc { margin-left: 0; max-width: 100%; text-align: left; font-size: 14px; }
+
+  .cta-slide h2 { font-size: 26px; }
+  .cta-logos { flex-direction: column; gap: 16px; }
+  .pb-mark { border-left: none; padding-left: 0; padding-top: 12px; border-top: 1.5px solid var(--border); }
+
+  nav.bottom-nav { padding: 8px 12px; gap: 4px; }
+  .nav-btn { padding: 6px 10px; font-size: 11px; }
+  .nav-numbers { gap: 2px; }
+  .nav-num { width: 24px; height: 24px; font-size: 10px; }
+  .nav-counter { font-size: 10px; }
+}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 1 — Title
-══════════════════════════════════════════════ -->
-<section class="slide slide-1" id="slide-1">
+<!-- SLIDE 1 - TITLE -->
+<section class="slide title-slide" id="slide-1">
   <div class="slide-inner">
-    <div class="brand-bar">
-      <span class="brand-name">Orbem</span>
-      <div class="brand-sep"></div>
-      <span class="brand-name">orbem.ai</span>
+    <div class="logo-row">
+      <span class="logo-word">orbem<span class="logo-dot">.</span></span>
+      <span class="pb-mark">Product Strategy Brief</span>
     </div>
-
-    <span class="pill pill-primary">Product Strategy Brief</span>
-
-    <div class="hero-logo">ORBEM</div>
-
-    <h1 class="hero-title">The Platform Hiding<br>Behind the <span class="accent">Product</span></h1>
-
-    <div class="divider"></div>
-
-    <p class="hero-sub">A product strategy analysis of Orbem's competitive moat, positioning opportunity, and the multi-vertical expansion thesis</p>
-
-    <div style="display:flex; gap:10px; flex-wrap:wrap;">
-      <span class="pill pill-muted">Deep Tech</span>
-      <span class="pill pill-muted">Industrial MRI</span>
-      <span class="pill pill-muted">AI Inspection</span>
-      <span class="pill pill-muted">€55.5M Series B</span>
-    </div>
+    <h1>You built a monopoly. Your homepage still sells a miracle.</h1>
+    <p class="subline">A look at positioning, moat, and the product-organization moves that turn EUR 55.5M of Series B fuel into category ownership.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 2 — The Market
-══════════════════════════════════════════════ -->
+<!-- SLIDE 2 - THE MARKET -->
 <section class="slide" id="slide-2">
   <div class="slide-inner">
-    <span class="pill pill-primary">The Market</span>
-    <h2 class="section-title">Two Forces Converging<br>on the Same Problem</h2>
-    <p class="hero-sub">Regulatory mandates and AI-powered inspection are reshaping industrial quality control. Orbem sits at the intersection of both.</p>
-
-    <div class="card-grid card-grid-4" style="margin-bottom:32px;">
-      <div class="num-card">
-        <div class="big-num">$10B+</div>
-        <div class="big-num-label">Non-Destructive Testing market</div>
-      </div>
-      <div class="num-card">
-        <div class="big-num">$1.5B+</div>
-        <div class="big-num-label">AI food quality inspection by late 2020s</div>
-      </div>
-      <div class="num-card">
-        <div class="big-num">2027</div>
-        <div class="big-num-label">EU-wide egg sexing mandate deadline</div>
-      </div>
-      <div class="num-card">
-        <div class="big-num">4</div>
-        <div class="big-num-label">Active verticals (poultry, fruits, nuts + more)</div>
-      </div>
-    </div>
-
-    <div class="card-grid card-grid-2">
-      <div class="card">
-        <h3 class="card-title" style="color:var(--primary);">⚖️ Regulatory Tailwind</h3>
-        <p class="body">Germany mandated in-ovo sexing in 2022. The EU-wide directive targeting 2027 creates a compliance-driven replacement cycle across thousands of hatcheries. This is not optional adoption — it is legislated demand.</p>
-      </div>
-      <div class="card">
-        <h3 class="card-title" style="color:var(--accent);">♻️ Sustainability Pressure</h3>
-        <p class="body">Food waste reduction targets across the EU and UK are pushing food producers toward upstream inspection. Catching defects before commitment — before incubation, before shipment — is the new standard of efficiency.</p>
-      </div>
-    </div>
+    <span class="pill">The Market</span>
+    <h2>Three markets stacked on one platform, each on a different clock.</h2>
+    <p class="lede">In-ovo sexing is regulatory-forced and moving fast. EU penetration doubled from 20% to 28% in twelve months (Innovate Animal Ag, April 2025). Germany banned male-chick culling in 2022, France in 2023, Italy followed, and Norway and Switzerland commit to full transition by 2025 to 2027. The US, historically closed, opened in late 2024 under Walmart's 2025 supplier guidance, Unilever commitments, and United Egg Producers certification. That shift made the US the category's biggest land-grab, on a window measured in quarters, not years.</p>
+    <p>Underneath the same AI-MRI stack sit two larger horizons: non-destructive fruit and vegetable grading (Orbem's own framing cites 1.25B tonnes of produce lost between harvest and retail) and long-horizon industrial MRI for preventive human health. Three markets, three buying cycles, one product organization.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 3 — Competitive Landscape
-══════════════════════════════════════════════ -->
+<!-- SLIDE 3 - COMPETITIVE LANDSCAPE -->
 <section class="slide" id="slide-3">
   <div class="slide-inner">
-    <span class="pill pill-primary">Competitive Landscape</span>
-    <h2 class="section-title">Orbem vs. The Field</h2>
-    <p class="hero-sub" style="margin-bottom:0;">Five dimensions. One platform that checks every box.</p>
+    <span class="pill">Competitive Landscape</span>
+    <h2>A four-vendor fight with two dark horses.</h2>
+    <p class="lede">Orbem is the only non-invasive, both-layer (brown and white), imaging-based vendor already deployed at commercial scale, with 9 European hatcheries plus US installations and distribution through Vencomatic Group. Behind AAT on price and throughput. Ahead of Seleggt on invasiveness. In a dead heat with MatrixSpec for the US white-egg race, and MatrixSpec has not yet shipped.</p>
 
-    <table class="comp-table">
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>Technology</th>
-          <th>Invasiveness</th>
-          <th>Internal Detection</th>
-          <th>Multi-Vertical</th>
-          <th>Funding / Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="highlight-row">
-          <td><strong>Orbem</strong></td>
-          <td>MRI + AI</td>
-          <td class="check">✓ Non-invasive</td>
-          <td class="check">✓ Full volumetric</td>
-          <td class="check">✓ Yes (4 verticals)</td>
-          <td><strong>€55.5M Series B</strong></td>
-        </tr>
-        <tr>
-          <td>In Ovo</td>
-          <td>Hyperspectral</td>
-          <td class="check">✓ Non-invasive</td>
-          <td class="cross">◐ Limited</td>
-          <td class="cross">✗ No</td>
-          <td>Significant</td>
-        </tr>
-        <tr>
-          <td>SELEGGT / AAT</td>
-          <td>Endocrine marker</td>
-          <td class="cross">✗ Fluid extraction</td>
-          <td class="cross">◐ Limited</td>
-          <td class="cross">✗ No</td>
-          <td>Moderate</td>
-        </tr>
-        <tr>
-          <td>QualySense / TOMRA</td>
-          <td>Spectral / optical</td>
-          <td class="check">✓ Non-invasive</td>
-          <td class="cross">✗ Surface only</td>
-          <td class="cross">✗ No</td>
-          <td>Acquired</td>
-        </tr>
-        <tr>
-          <td>Traditional Methods</td>
-          <td>Manual / visual</td>
-          <td class="cross">✗ Destructive</td>
-          <td class="cross">✗ Destructive</td>
-          <td class="cross">✗ No</td>
-          <td>N/A</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div style="margin-top:20px; padding:14px 18px; background:var(--card); border-radius:var(--radius); display:flex; gap:12px; align-items:center;">
-      <span style="font-size:20px;">💡</span>
-      <p style="font-size:13px; color:var(--muted); line-height:1.5;"><strong style="color:var(--text);">Key insight:</strong> Every competitor is either invasive, surface-limited, or single-vertical. Orbem is the only player with full volumetric, non-invasive, multi-vertical capability — and is the only one with Series B scale to prove it.</p>
+    <div class="comp-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Vendor</th>
+            <th>Approach</th>
+            <th>Egg Coverage</th>
+            <th>Commercial Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AAT / Cheggy</strong></td>
+            <td>Hyperspectral imaging</td>
+            <td>Brown only</td>
+            <td>15 machines installed (early 2025)</td>
+          </tr>
+          <tr>
+            <td><strong>Seleggt / Respeggt</strong></td>
+            <td>Liquid-assay sampling (invasive)</td>
+            <td>Brown only</td>
+            <td>Lease and buy; first-mover</td>
+          </tr>
+          <tr>
+            <td><strong>Nectra</strong></td>
+            <td>Hyperspectral, smaller footprint</td>
+            <td>Brown only</td>
+            <td>Scaling</td>
+          </tr>
+          <tr>
+            <td><strong>MatrixSpec / HyperEye</strong></td>
+            <td>Day 4 detection (claimed)</td>
+            <td>Both layers (claimed)</td>
+            <td>Pre-scale, Canada</td>
+          </tr>
+          <tr class="prospect">
+            <td class="prospect-col"><strong>Orbem</strong></td>
+            <td class="prospect-col">AI-powered MRI, non-invasive</td>
+            <td class="prospect-col"><strong>Brown and white</strong></td>
+            <td class="prospect-col">9 EU hatcheries + US, via Vencomatic</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 4 — Your Moat
-══════════════════════════════════════════════ -->
+<!-- SLIDE 4 - YOUR MOAT -->
 <section class="slide" id="slide-4">
   <div class="slide-inner">
-    <span class="pill pill-accent">Competitive Moat</span>
-    <h2 class="section-title">Three Layers of<br>Defensible Advantage</h2>
-    <p class="hero-sub">Not one barrier — a compounding stack. Each layer reinforces the next.</p>
+    <span class="pill accent">Your Moat</span>
+    <h2>Three strategic advantages, in order of durability.</h2>
 
-    <div style="display:flex; flex-direction:column; gap:16px; margin-top:8px;">
-
-      <div class="moat-card">
-        <div style="display:flex; align-items:flex-start; gap:16px;">
-          <div style="font-size:32px; flex-shrink:0;">🧲</div>
-          <div>
-            <h3 class="card-title" style="font-size:18px; margin-bottom:8px;">1 — Industrial MRI at Speed</h3>
-            <p class="body">Commoditized hardware. Proprietary AI. The barrier is the multi-year combination of imaging physics, machine learning architecture, and domain-specific biology. Competitors cannot shortcut this stack by licensing a model — they'd need to rebuild the entire sensing-to-inference pipeline from scratch.</p>
-          </div>
-        </div>
+    <div class="grid-3">
+      <div class="card accent-border">
+        <div class="moat-num">01</div>
+        <h3>Industrial MRI reinvented for biological throughput</h3>
+        <p>Every competitor solves sexing with a different physics stack. Orbem took a clinical modality with a fifty-year history of being slow and expensive, re-engineered it for sub-second inline scanning, and put it on hatchery floors. A well-funded competitor needs five to seven years to reach parity on the physics, AI, and automation stack combined.</p>
+        <div class="durability">Durability: very high</div>
       </div>
 
-      <div class="moat-card" style="border-left-color:var(--accent);">
-        <div style="display:flex; align-items:flex-start; gap:16px;">
-          <div style="font-size:32px; flex-shrink:0;">🔬</div>
-          <div>
-            <h3 class="card-title" style="font-size:18px; margin-bottom:8px;">2 — Volumetric Intelligence</h3>
-            <p class="body">Competitors inspect surfaces. Orbem sees inside. Internal fat distribution, seed viability, embryo development, structural anomalies — none of these are accessible to optical or spectral approaches. This is not incremental improvement; it's a different category of information.</p>
-          </div>
-        </div>
+      <div class="card accent-border">
+        <div class="moat-num">02</div>
+        <h3>The world's largest biological MRI training dataset</h3>
+        <p>170 million eggs scanned compounds into model accuracy no entrant can bootstrap. The same imaging primitives transfer to fruits, nuts, and eventually human tissue.</p>
+        <div class="durability">Durability: compounding and irreversible</div>
       </div>
 
-      <div class="moat-card" style="border-left-color:#7C3AED;">
-        <div style="display:flex; align-items:flex-start; gap:16px;">
-          <div style="font-size:32px; flex-shrink:0;">🏗️</div>
-          <div>
-            <h3 class="card-title" style="font-size:18px; margin-bottom:8px;">3 — Platform Extensibility</h3>
-            <p class="body">Same imaging infrastructure. Different AI models per vertical. Poultry proves the technology; fruits and nuts prove the platform thesis. Each new vertical adds training data, domain IP, and enterprise relationships — compounding advantages that a single-vertical competitor cannot replicate.</p>
-          </div>
-        </div>
+      <div class="card accent-border">
+        <div class="moat-num">03</div>
+        <h3>Proprietary claim on fertilization-status detection (Genus Scale)</h3>
+        <p>No named competitor has a product in this sub-category. It applies to every egg, not only table eggs, so its addressable base is arguably larger than in-ovo sexing itself.</p>
+        <div class="durability">Durability: medium to high, protected by MRI stack plus dataset</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 5 — Positioning Scorecard
-══════════════════════════════════════════════ -->
+<!-- SLIDE 5 - POSITIONING SCORECARD -->
 <section class="slide" id="slide-5">
   <div class="slide-inner">
-    <span class="pill pill-primary">Positioning Analysis</span>
-    <h2 class="section-title">Positioning Scorecard</h2>
-    <p class="hero-sub" style="margin-bottom:8px;">Current tagline: <em>"The world gets better when you see it from the inside out"</em></p>
+    <span class="pill">Positioning Scorecard</span>
+    <h2>Poetic. Category unclear on first scan.</h2>
 
-    <div class="card" style="margin-bottom: 24px;">
-      <div class="score-row">
-        <div class="grade-badge grade-b" style="width:52px; height:52px; font-size:20px;">B</div>
-        <div class="score-info">
-          <div class="score-label">Clarity</div>
-          <div class="score-desc">Evocative but not immediately legible. A CEO encountering Orbem for the first time still doesn't know what is being sold. "Inside out" is a metaphor, not a mechanism. The tagline invites curiosity rather than conviction.</div>
+    <div class="grid-2">
+      <div>
+        <div class="quote-box">
+          See what's hidden inside. AI-powered MRI uncovers what is hidden deep beneath the surface.
+          <span class="attribution">Orbem homepage hero + supporting line</span>
+        </div>
+        <div style="margin-top: 28px;">
+          <div class="grade-row">
+            <span class="grade-badge grade-c">C</span>
+            <span class="grade-label">Clarity</span>
+            <span class="grade-desc">A hatchery COO and a preventive-health investor cannot both be the reader.</span>
+          </div>
+          <div class="grade-row">
+            <span class="grade-badge grade-b">B</span>
+            <span class="grade-label">Differentiation</span>
+            <span class="grade-desc">"MRI" is genuinely unique. Fast / Accessible / Simple earns trust through concession-then-claim.</span>
+          </div>
+          <div class="grade-row">
+            <span class="grade-badge grade-b">B</span>
+            <span class="grade-label">Believability</span>
+            <span class="grade-desc">Scale proof ("170M eggs scanned") lives in the Series B press release, not the hero.</span>
+          </div>
         </div>
       </div>
-      <div class="score-row">
-        <div class="grade-badge grade-b-plus" style="width:52px; height:52px; font-size:20px;">B+</div>
-        <div class="score-info">
-          <div class="score-label">Differentiation</div>
-          <div class="score-desc">The MRI angle is genuinely rare in the industrial inspection world — no competitor leads with it. The problem is that it surfaces as a descriptor in supporting copy rather than as the centerpiece of the positioning. The moat is undersold.</div>
-        </div>
-      </div>
-      <div class="score-row">
-        <div class="grade-badge grade-a" style="width:52px; height:52px; font-size:20px;">A−</div>
-        <div class="score-info">
-          <div class="score-label">Believability</div>
-          <div class="score-desc">Strong. €55.5M Series B, Munich Technical University spinout, commercial deployments at scale. The credibility infrastructure exists. Orbem doesn't need to earn trust — it needs to use it more aggressively in its positioning narrative.</div>
-        </div>
-      </div>
-    </div>
 
-    <div style="padding:16px 20px; background:#EDEEFF; border-radius:var(--radius); border-left:4px solid var(--primary);">
-      <p style="font-size:14px; color:var(--primary); font-weight:600; line-height:1.6;">The overall grade is B+. The brand has real substance. The gap is between what Orbem has built and how clearly that's communicated to a buyer who has never heard of industrial MRI inspection.</p>
+      <div>
+        <div class="card primary-border">
+          <h3>What's working</h3>
+          <p>The Genus product architecture (Focus, Scale, Echo) signals platform, not point solution. The Technology page's concession-rebuttal on MRI's reputation is rhetorically strong.</p>
+        </div>
+        <div class="card accent-border" style="margin-top: 20px;">
+          <h3>What's not</h3>
+          <p>The hero does not pick a buyer. The market is rewarding operational proof (deployment count, accuracy, day-of-detection), not philosophy. "Invisible visible" is a mission sentence forced to carry a hero's job.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 6 — Value Prop Gap
-══════════════════════════════════════════════ -->
+<!-- SLIDE 6 - VALUE PROP GAP -->
 <section class="slide" id="slide-6">
   <div class="slide-inner">
-    <span class="pill pill-accent">Value Proposition</span>
-    <h2 class="section-title">The Value Prop Gap</h2>
-    <p class="hero-sub">One reframe separates an instrument-led pitch from an outcome-led platform story.</p>
+    <span class="pill accent">Value Prop Gap</span>
+    <h2>From modality marketing to operational asset.</h2>
 
-    <div class="vp-block vp-amber">
-      <div class="vp-label amber">Current — Instrument-Led</div>
-      <div class="vp-quote">"AI-powered MRI uncovers what is hidden deep beneath the surface"</div>
-      <div class="vp-note">Leads with the technology. The buyer must infer the value themselves. "MRI" as a category signals cost, complexity, and specialist equipment — before any benefit is established. The outcome is absent.</div>
-    </div>
-
-    <div style="text-align:center; font-size:28px; color:var(--primary); margin: 4px 0; font-weight:800;">↓</div>
-
-    <div class="vp-block vp-green">
-      <div class="vp-label green">Reframed — Outcome-Led</div>
-      <div class="vp-quote">"Every unit of biological product, inspectable before commitment"</div>
-      <div class="vp-note">The egg before incubation. The mango before shipment. The pistachio before packing. <strong>Value is certainty. MRI is the mechanism.</strong> This frame scales across every vertical without requiring the buyer to understand imaging physics.</div>
-    </div>
-
-    <div class="card-grid card-grid-3" style="margin-top:20px;">
-      <div class="card" style="text-align:center;">
-        <div style="font-size:28px; margin-bottom:8px;">🥚</div>
-        <p style="font-size:13px; font-weight:700; margin-bottom:4px;">Poultry</p>
-        <p style="font-size:12px; color:var(--muted);">Know sex and viability before incubation begins</p>
+    <div class="grid-2" style="margin-top: 32px;">
+      <div class="gap-box current">
+        <div class="gap-label current">Current framing</div>
+        <div class="gap-quote">"Determine sex and fertility non-invasively. AI-powered MRI uncovers what is hidden deep beneath the surface."</div>
+        <p style="margin-top: 18px; font-size: 15px; color: var(--muted);">This is modality marketing. It tells a hatchery operator what the box does, not what changes in their P&amp;L on Monday morning. "Non-invasive" and "fast" are spec language in a category where AAT is cheaper and Seleggt offers a lease.</p>
       </div>
-      <div class="card" style="text-align:center;">
-        <div style="font-size:28px; margin-bottom:8px;">🥭</div>
-        <p style="font-size:13px; font-weight:700; margin-bottom:4px;">Tropical Fruits</p>
-        <p style="font-size:12px; color:var(--muted);">Detect internal defects before shipment decisions</p>
-      </div>
-      <div class="card" style="text-align:center;">
-        <div style="font-size:28px; margin-bottom:8px;">🌰</div>
-        <p style="font-size:13px; font-weight:700; margin-bottom:4px;">Nuts &amp; Seeds</p>
-        <p style="font-size:12px; color:var(--muted);">Assess fill, quality, and density before packing</p>
+
+      <div class="gap-box reframed">
+        <div class="gap-label reframed">Reframed</div>
+        <div class="gap-quote">"Every egg you load becomes a data point. You run a fuller incubator, hit welfare commitments your retailer audits, and price pullets against buyers who now pay more for traceability."</div>
+        <p style="margin-top: 18px; font-size: 15px; color: var(--muted);">The shift: from "we see inside the egg" to "every egg becomes an asset in your operational, regulatory, and commercial posture." Pricing anchors to the value of the data stream, not machine economics.</p>
       </div>
     </div>
+
+    <p style="margin-top: 28px;"><strong>Why the gap matters:</strong> Orbem gets compared line-by-line with AAT on price and throughput (a losing frame), the fruits and healthcare arcs read as unrelated verticals rather than one compounding platform, and pricing stays anchored to machine economics instead of the value of the data stream.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 7 — Narrative Opportunity
-══════════════════════════════════════════════ -->
+<!-- SLIDE 7 - NARRATIVE OPPORTUNITY -->
 <section class="slide" id="slide-7">
   <div class="slide-inner">
-    <span class="pill pill-primary">Narrative Strategy</span>
-    <h2 class="section-title">From Product Company<br>to Platform Company</h2>
-    <p class="hero-sub">The technology already supports the platform story. The narrative hasn't caught up yet.</p>
+    <span class="pill">Narrative Opportunity</span>
+    <h2>One story for everyone, or three stories that compound into one.</h2>
 
-    <div class="narrative-split">
-      <div class="narrative-box narrative-today">
-        <div class="narrative-label today">Today</div>
-        <div class="narrative-title">"AI-Powered MRI Company"</div>
-        <p class="narrative-body">Tech-first positioning. Multi-vertical feels opportunistic rather than architectural. Poultry dominates the public identity. The platform potential is buried in the product detail pages. New verticals appear additive rather than proof of a thesis.</p>
-        <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
-          <span class="pill pill-amber" style="width:fit-content;">Genus Focus as primary product</span>
-          <span class="pill pill-amber" style="width:fit-content;">Poultry-first perception</span>
-          <span class="pill pill-amber" style="width:fit-content;">Technology descriptor</span>
-        </div>
+    <div class="grid-2">
+      <div class="narrative-card today">
+        <div class="narrative-label">Today</div>
+        <p>Orbem tells one story to everyone: "the invisible visible with AI-powered MRI for everything and everyone." A hatchery COO, a fruit packer, and a preventive-health investor meet the same sentence and none are fully served.</p>
+        <p>In a category where the third-party scorekeeper (Innovate Animal Ag) ranks vendors by installed hatcheries and per-pullet cost, "the invisible visible" cedes ground to vendors whose language is tighter to the buyer's math.</p>
       </div>
 
-      <div class="narrative-arrow">→</div>
-
-      <div class="narrative-box narrative-tomorrow">
-        <div class="narrative-label tomorrow">Tomorrow</div>
-        <div class="narrative-title">"Industrial Intelligence Platform"</div>
-        <p class="narrative-body">The only company making biological matter fully transparent at commercial scale. Named product portfolio across verticals. Each vertical is proof of the platform thesis, not a separate product line. Poultry is the reference deployment, not the identity.</p>
-        <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
-          <span class="pill pill-green" style="width:fit-content;">Named product family</span>
-          <span class="pill pill-green" style="width:fit-content;">Platform-first identity</span>
-          <span class="pill pill-green" style="width:fit-content;">Outcome-led messaging</span>
-        </div>
+      <div class="narrative-card tomorrow">
+        <div class="narrative-label">Tomorrow</div>
+        <p>Orbem tells three stories that compound into one. US poultry buyers meet a page built on white-layer coverage and the 170M-egg proof. Fruits and health meet platform vision and dataset asymmetry. The mission stays the same. The hero does not.</p>
+        <p>The Series B window is the repositioning window. Funding four motions in parallel without splitting the narrative forces one homepage to carry four buyer economics at once.</p>
       </div>
     </div>
+
+    <p style="margin-top: 28px; font-size: 18px;">That is the moment to pick the buyer for each motion and let the platform story sit behind them, not in front of them.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 8 — Recommendations
-══════════════════════════════════════════════ -->
+<!-- SLIDE 8 - RECOMMENDATIONS -->
 <section class="slide" id="slide-8">
   <div class="slide-inner">
-    <span class="pill pill-accent">Recommendations</span>
-    <h2 class="section-title">Four Moves That<br>Compound the Moat</h2>
-    <p class="hero-sub" style="margin-bottom: 24px;">Tactical changes that connect Orbem's technical reality to market perception.</p>
+    <span class="pill accent">Recommendations</span>
+    <h2>Four moves before the US window closes.</h2>
 
-    <div class="rec-item">
-      <div class="rec-num">1</div>
-      <div class="rec-text">
-        <h3>Lead with outcomes, not instruments</h3>
-        <p>Hatchery operators want to stop culling male chicks before incubation — they are not buying MRI machines. Mango exporters want to ship with confidence — not acquire imaging hardware. Every buyer conversation and web page should lead with the decision enabled, not the technology deployed.</p>
+    <div class="reco-list">
+      <div class="reco">
+        <div class="reco-num">01</div>
+        <div>
+          <h3>Lead the US poultry narrative with white-layer coverage.</h3>
+          <p>In US-facing content, "the only non-invasive in-ovo solution that works for white eggs" is the headline, not a spec bullet. Pair it with the 170M-eggs scale proof in the hero. Brown-only competitors (AAT, Nectra) are structurally unable to serve the commodity US market. This is the one line that wins the US window before MatrixSpec ships.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="rec-item">
-      <div class="rec-num">2</div>
-      <div class="rec-text">
-        <h3>Formalize the platform narrative</h3>
-        <p>A named product family beyond Genus Focus signals architectural intent. It tells enterprise buyers, investors, and potential partners: the poultry deployment was not a one-off — it was the first proof point in a deliberate platform strategy. Naming creates category.</p>
+      <div class="reco">
+        <div class="reco-num">02</div>
+        <div>
+          <h3>Give Genus Scale its own category-creation narrative.</h3>
+          <p>A monopoly product deserves monopoly positioning. Today Scale is co-presented with Focus under "Poultry" at equal weight. Split it: a fertilization-detection product line with its own page, its own economic story (yield, not welfare), and its own buyer (operations director, not sustainability lead). The addressable base is larger than in-ovo sexing itself.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="rec-item">
-      <div class="rec-num">3</div>
-      <div class="rec-text">
-        <h3>Anchor sustainability with customer data</h3>
-        <p>The waste reduction story is compelling in the abstract but lacks teeth. One published case study with a specific number — "X% reduction in culling waste across Y hatcheries" — transforms a narrative claim into a commercial reference. Specificity earns credibility faster than general positioning.</p>
+      <div class="reco">
+        <div class="reco-num">03</div>
+        <div>
+          <h3>Package for both buying moments.</h3>
+          <p>Default to integrated equipment sale leaves mid-size hatcheries under Walmart or UEP pressure with nowhere to go but Seleggt's lease. Add a per-egg lease motion for the Welfare Compliance buyer. Keep the CapEx motion for the Hatchery Yield buyer. Two packages, two product requirement sets, same platform.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="rec-item">
-      <div class="rec-num">4</div>
-      <div class="rec-text">
-        <h3>Build a vertical-expansion playbook</h3>
-        <p>Document what made poultry work — the sales motion, onboarding sequence, integration requirements, regulatory hooks, ROI calculation methodology — before expanding to the next vertical. Platform companies that scale reliably do so because they systematize their go-to-market, not just their technology.</p>
+      <div class="reco">
+        <div class="reco-num">04</div>
+        <div>
+          <h3>Split product leadership by buying motion, not by vertical.</h3>
+          <p>Inside poultry alone, name two commercial motions: Welfare Compliance (sold to CEO and sustainability, per-egg lease) and Hatchery Yield (sold to operations, throughput and capacity tied to Genus Scale). Fruits and healthcare each get a discovery-mode product lead with a productization-versus-research charter, not a shipping roadmap. This is an organizational change, not a rebrand.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 9 — The Bigger Picture
-══════════════════════════════════════════════ -->
-<section class="slide" id="slide-9">
+<!-- SLIDE 9 - THE BIGGER PICTURE -->
+<section class="slide bigger-picture" id="slide-9">
   <div class="slide-inner">
-    <span class="pill pill-primary">The Bigger Picture</span>
-    <h2 class="section-title">A Category-Defining<br>Position Within Reach</h2>
-    <p class="hero-sub">The moat is real. The commercial traction is real. What's missing is the connective tissue.</p>
-
-    <div class="highlight-quote">
-      "Orbem has a deep-tech moat with commercial traction. Genus Focus is deployed and generating revenue with regulatory tailwind. The multi-vertical thesis transforms Orbem from single-product to platform company."
-    </div>
-
-    <div class="card-grid card-grid-3" style="margin: 20px 0;">
-      <div class="card" style="border-top: 3px solid var(--primary);">
-        <h3 class="card-title">What's There</h3>
-        <ul style="font-size:14px; color:var(--muted); line-height:1.8; padding-left:16px; margin-top:8px;">
-          <li>Industrial MRI + AI stack</li>
-          <li>Commercial deployments</li>
-          <li>Regulatory tailwind (EU 2027)</li>
-          <li>€55.5M Series B capital</li>
-          <li>Munich TU spinout credibility</li>
-        </ul>
-      </div>
-      <div class="card" style="border-top: 3px solid var(--accent);">
-        <h3 class="card-title">What's Missing</h3>
-        <ul style="font-size:14px; color:var(--muted); line-height:1.8; padding-left:16px; margin-top:8px;">
-          <li>Platform-first identity</li>
-          <li>Outcome-first messaging</li>
-          <li>Named product family</li>
-          <li>Quantified customer evidence</li>
-          <li>Vertical expansion playbook</li>
-        </ul>
-      </div>
-      <div class="card" style="border-top: 3px solid #7C3AED;">
-        <h3 class="card-title">The Opportunity</h3>
-        <ul style="font-size:14px; color:var(--muted); line-height:1.8; padding-left:16px; margin-top:8px;">
-          <li>Category definition</li>
-          <li>Platform premium valuation</li>
-          <li>Enterprise-scale deals</li>
-          <li>Repeatable vertical GTM</li>
-          <li>Compounding market position</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="body">With product leadership shaping that narrative, Orbem compounds its technical advantage into a category-defining position. Learn more at <a class="inline-link" href="https://productbeacon.agency" target="_blank">productbeacon.agency</a>.</p>
+    <span class="pill">The Bigger Picture</span>
+    <h2>The Series B clock is running.</h2>
+    <p>EUR 55.5M committed in January 2026 to four motions (US scale, poultry manufacturing capacity, fruits entry via Genus Echo, healthcare R&amp;D) means every quarter without a per-motion buyer definition is a quarter that defaults into the old "invisible visible" story. The US poultry window is the shortest of the four. MatrixSpec's Day 4 claim, if it commercializes, collapses the welfare and incubator-capacity story at exactly the wrong moment.</p>
+    <p>A company that has built a category of one and the world's largest biological MRI dataset does not have a technology problem. It has a narrative and packaging problem, and a product-organization question underneath it: who owns the commercial motion for each buyer, and what does their first 90 days look like.</p>
+    <p>ProductBeacon embeds product leaders who take ownership of commercial-motion definition, positioning, and the product requirements that follow. More at <a href="https://productbeacon.agency">productbeacon.agency</a>.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  SLIDE 10 — CTA
-══════════════════════════════════════════════ -->
-<section class="slide slide-10" id="slide-10">
-  <div class="slide-inner" style="text-align:center;">
-    <div style="margin-bottom:32px;">
-      <div style="font-size:clamp(48px, 8vw, 80px); font-weight:900; letter-spacing:-0.04em; color:#fff; line-height:1; margin-bottom:8px;">ORBEM</div>
-      <div style="font-size:14px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:4px;">×</div>
-      <div style="font-size:22px; font-weight:800; letter-spacing:0.03em; color:rgba(255,255,255,0.6);">PRODUCTBEACON</div>
+<!-- SLIDE 10 - CTA -->
+<section class="slide cta-slide" id="slide-10">
+  <div class="slide-inner">
+    <div class="cta-logos">
+      <span class="logo-word">orbem<span class="logo-dot">.</span></span>
+      <span class="pb-mark">PRODUCTBEACON</span>
     </div>
-
-    <div class="divider" style="background:var(--accent); margin:24px auto;"></div>
-
-    <p style="font-size:clamp(16px, 2.5vw, 22px); color:rgba(255,255,255,0.8); line-height:1.65; max-width:680px; margin:0 auto 32px; font-style:italic;">
-      "This brief is based on public information.<br>
-      Imagine what we'd find with access to the product,<br>the team, and the roadmap."
-    </p>
-
-    <div style="margin-bottom:40px;">
-      <a href="mailto:contact@productbeacon.agency" class="cta-btn">contact@productbeacon.agency</a>
-    </div>
-
-    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-      <span class="pill" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.15);">Fractional Chief Product</span>
-      <span class="pill" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.15);">Product Strategy</span>
-      <span class="pill" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.15);">Platform Narrative</span>
-      <span class="pill" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.6); border:1px solid rgba(255,255,255,0.15);">GTM Design</span>
-    </div>
-
-    <div style="margin-top:40px; font-size:12px; color:rgba(255,255,255,0.25);">
-      productbeacon.agency — Yohay Etsion — Fractional Product Leadership
-    </div>
+    <h2>This brief is based on public information.</h2>
+    <p>Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <a class="cta-button" href="mailto:contact@productbeacon.agency">contact@productbeacon.agency</a>
+    <div class="cta-footer">productbeacon.agency</div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-  FIXED BOTTOM NAV
-══════════════════════════════════════════════ -->
-<nav id="nav">
-  <div id="nav-left">
-    <button class="nav-btn" onclick="window.prevSlide()">← Prev</button>
+<!-- NAV -->
+<nav class="bottom-nav" aria-label="Slide navigation">
+  <div class="nav-left">
+    <button class="nav-btn arrow" id="prev-btn" aria-label="Previous slide">&larr; Prev</button>
   </div>
-  <div id="nav-center">
-    <div id="slide-dots"></div>
+  <div class="nav-center" style="display:flex; align-items:center; gap:12px;">
+    <div class="nav-numbers" id="nav-numbers"></div>
+    <span class="nav-counter" id="nav-counter">01 / 10</span>
   </div>
-  <div id="nav-right">
-    <span id="counter">1 / 10</span>
-    <button class="nav-btn" onclick="window.nextSlide()">Next →</button>
+  <div class="nav-right">
+    <button class="nav-btn arrow" id="next-btn" aria-label="Next slide">Next &rarr;</button>
   </div>
 </nav>
 
 <script>
-(function () {
-  'use strict';
+(function() {
+  const TOTAL = 10;
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const numbersWrap = document.getElementById('nav-numbers');
+  const counter = document.getElementById('nav-counter');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  let current = 1;
 
-  var TOTAL = 10;
-  var current = 1;
-
-  function buildDots() {
-    var container = document.getElementById('slide-dots');
-    container.style.display = 'flex';
-    container.style.gap = '4px';
-    for (var i = 1; i <= TOTAL; i++) {
-      var btn = document.createElement('button');
-      btn.className = 'slide-dot' + (i === 1 ? ' active' : '');
-      btn.textContent = i;
-      btn.setAttribute('data-slide', i);
-      btn.onclick = (function (n) { return function () { window.showSlide(n); }; })(i);
-      container.appendChild(btn);
-    }
+  // Build number buttons
+  for (let i = 1; i <= TOTAL; i++) {
+    const b = document.createElement('button');
+    b.className = 'nav-num';
+    b.textContent = String(i).padStart(2, '0');
+    b.dataset.slide = i;
+    b.addEventListener('click', () => goTo(i));
+    numbersWrap.appendChild(b);
   }
 
-  function updateNav(n) {
-    document.querySelectorAll('.slide-dot').forEach(function (d) {
-      d.classList.toggle('active', parseInt(d.getAttribute('data-slide'), 10) === n);
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function updateCounter(n) {
+    counter.textContent = pad(n) + ' / ' + pad(TOTAL);
+    document.querySelectorAll('.nav-num').forEach(el => {
+      el.classList.toggle('active', parseInt(el.dataset.slide, 10) === n);
     });
-    document.getElementById('counter').textContent = n + ' / ' + TOTAL;
+    current = n;
   }
 
-  window.showSlide = function (n) {
+  function goTo(n) {
     if (n < 1 || n > TOTAL) return;
-    current = n;
-    var target = document.getElementById('slide-' + n);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-    updateNav(n);
-  };
+    const target = document.getElementById('slide-' + n);
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateCounter(n);
+  }
 
-  window.nextSlide = function () { window.showSlide(current + 1); };
-  window.prevSlide = function () { window.showSlide(current - 1); };
+  prevBtn.addEventListener('click', () => goTo(Math.max(1, current - 1)));
+  nextBtn.addEventListener('click', () => goTo(Math.min(TOTAL, current + 1)));
 
-  window.promptSlide = function () {
-    var input = window.prompt('Go to slide (1-' + TOTAL + '):');
-    var n = parseInt(input, 10);
-    if (!isNaN(n)) window.showSlide(n);
-  };
-
-  // Keyboard navigation
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.nextSlide();
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') window.prevSlide();
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(Math.max(1, current - 1)); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); goTo(Math.min(TOTAL, current + 1)); }
+    else if (/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+      const n = e.key === '0' ? 10 : parseInt(e.key, 10);
+      goTo(n);
+    }
   });
 
-  // Touch swipe
-  var touchStartX = 0;
-  var touchStartY = 0;
-  document.addEventListener('touchstart', function (e) {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-  document.addEventListener('touchend', function (e) {
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    var dy = e.changedTouches[0].clientY - touchStartY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
-      if (dx < 0) window.nextSlide();
-      else window.prevSlide();
-    }
-  }, { passive: true });
-
-  // IntersectionObserver to keep nav in sync when scrolling manually
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-        var id = entry.target.id;
-        var n = parseInt(id.replace('slide-', ''), 10);
-        if (!isNaN(n) && n !== current) {
-          current = n;
-          updateNav(n);
-        }
+  // Intersection observer to update counter on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        const id = entry.target.id; // slide-N
+        const n = parseInt(id.replace('slide-', ''), 10);
+        if (!isNaN(n)) updateCounter(n);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: [0.5] });
 
-  document.querySelectorAll('.slide').forEach(function (s) { observer.observe(s); });
+  slides.forEach(s => io.observe(s));
 
-  buildDots();
+  // Initial
+  updateCounter(1);
+
+  // Expose for inline use if needed
+  window.goTo = goTo;
 })();
 </script>
+
 </body>
 </html>
