@@ -1,751 +1,1291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloover · Product Strategy Brief</title>
-<link rel="icon" type="image/png" href="https://static.wixstatic.com/media/1857a1_bc5348115aea47d28a9aee02885b0636~mv2.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary: #002EFF;
-  --accent: #002EFF;
-  --secondary: #2B5672;
-  --bg: #FFFFFF;
-  --card: #F8FAFC;
-  --text: #000000;
-  --muted: #64748b;
-  --border: #E2E8F0;
-  --green: #16a34a;
-  --amber: #f59e0b;
-  --red: #ef4444;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scrollbar-width: none; scroll-behavior: smooth; }
-html::-webkit-scrollbar { display: none; }
-body {
-  font-family: 'Inter', 'Madefor Text', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-h1, h2, h3, h4, .headline, .pill, .big-num {
-  font-family: 'DM Sans', sans-serif;
-  letter-spacing: -0.02em;
-}
-h1 { font-size: 56px; font-weight: 800; line-height: 1.05; }
-h2 { font-size: 36px; font-weight: 700; line-height: 1.15; }
-h3 { font-size: 22px; font-weight: 600; }
-p { font-size: 17px; color: var(--text); }
-p.muted { color: var(--muted); }
-strong { font-weight: 700; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloover — Product Strategy Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230D7C5F'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23F59E0B'/%3E%3Crect x='9' y='19' width='14' height='2.5' rx='1.25' fill='%23fff'/%3E%3Crect x='12' y='23' width='8' height='2' rx='1' fill='%23fff'/%3E%3C/svg%3E" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.slide {
-  min-height: 100vh;
-  padding: 80px 80px 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-bottom: 1px solid var(--border);
-}
+    html {
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+    html::-webkit-scrollbar { display: none; }
 
-.pill {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 50px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-.pill-outline {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 50px;
-  background: transparent;
-  color: var(--primary);
-  border: 1.5px solid var(--primary);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FFFFFF;
+      color: #1A1A2E;
+      overflow-x: hidden;
+    }
 
-.wordmark {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 44px;
-  color: var(--primary);
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-.wordmark-small {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--primary);
-  letter-spacing: -0.04em;
-}
-.pb-mark {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--secondary);
-  letter-spacing: 0.18em;
-}
+    /* ── SLIDE ── */
+    .slide {
+      min-height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px 80px 100px;
+      position: relative;
+    }
 
-.title-head {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 48px;
-}
-.title-head .sep {
-  width: 1px;
-  height: 40px;
-  background: var(--border);
-}
+    .slide:nth-child(even) { background: #FAFAFA; }
+    .slide:nth-child(odd)  { background: #FFFFFF; }
 
-.headline-xl {
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 24px;
-}
-.lead {
-  font-size: 19px;
-  color: var(--secondary);
-  max-width: 820px;
-  line-height: 1.55;
-}
+    /* ── SLIDE 1 – TITLE ── */
+    .slide-title {
+      background: linear-gradient(135deg, #0D7C5F 0%, #0A6550 50%, #064035 100%) !important;
+      color: #FFFFFF;
+      align-items: center;
+      text-align: center;
+    }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-}
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 28px;
-}
-.big-num {
-  font-size: 64px;
-  font-weight: 800;
-  color: var(--primary);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-}
-.card h4 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
-  color: var(--secondary);
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.card p { font-size: 15px; color: var(--muted); }
+    .slide-title .logo-mark {
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 32px;
-  font-size: 14px;
-}
-th, td {
-  padding: 14px 12px;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-}
-th {
-  background: var(--primary);
-  color: #fff;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.03em;
-}
-th.highlight {
-  background: #001FB2;
-}
-td.highlight {
-  background: #EFF3FF;
-  font-weight: 600;
-}
-tr:hover { background: #F8FAFC; }
+    .slide-title .brand-word {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
 
-.moat-block {
-  background: var(--card);
-  border-left: 4px solid var(--primary);
-  padding: 24px 28px;
-  margin-top: 18px;
-  border-radius: 2px;
-}
-.moat-num {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  color: var(--primary);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  margin-bottom: 6px;
-}
-.moat-block h3 { margin-bottom: 10px; }
-.moat-block p { color: var(--secondary); }
-.durability {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 4px 12px;
-  background: var(--primary);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 50px;
-}
+    .slide-title .brief-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #F59E0B;
+      margin-bottom: 40px;
+    }
 
-blockquote {
-  border-left: 4px solid var(--primary);
-  padding: 18px 24px;
-  font-style: italic;
-  color: var(--secondary);
-  background: var(--card);
-  margin: 20px 0;
-  border-radius: 2px;
-}
-blockquote.amber { border-left-color: var(--amber); background: #FFFBEB; }
-blockquote.green { border-left-color: var(--green); background: #F0FDF4; }
+    .slide-title h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
 
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 36px;
-}
-.split-panel h4 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  color: var(--secondary);
-}
+    .slide-title .sub {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      max-width: 700px;
+      line-height: 1.65;
+    }
 
-.grade-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
-  padding: 14px 18px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-}
-.grade-badge {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  color: #fff;
-  flex-shrink: 0;
-}
-.grade-a { background: var(--green); }
-.grade-b { background: var(--amber); }
-.grade-c { background: var(--red); }
-.grade-row .label { font-weight: 600; font-family: 'DM Sans', sans-serif; }
-.grade-row .desc { color: var(--muted); font-size: 14px; }
+    .title-pills {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
 
-.reco {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--primary);
-  padding: 26px 30px;
-  margin-top: 16px;
-  border-radius: 2px;
-}
-.reco-num {
-  display: inline-block;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 800;
-  font-size: 24px;
-  color: var(--primary);
-  margin-right: 12px;
-}
-.reco h3 { display: inline; }
-.reco p { margin-top: 10px; color: var(--secondary); }
-.owner {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 4px 12px;
-  background: #EFF3FF;
-  color: var(--primary);
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 600;
-}
+    .title-pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.85);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+    }
 
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin-top: 32px;
-}
-.today-card, .tomorrow-card {
-  padding: 28px;
-  border-radius: 2px;
-  border: 1px solid var(--border);
-}
-.today-card { background: var(--card); }
-.tomorrow-card { background: var(--primary); color: #fff; }
-.tomorrow-card h4, .today-card h4 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 14px;
-  opacity: 0.75;
-}
-.tomorrow-card p { color: #fff; }
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #0D7C5F;
+      margin-bottom: 12px;
+    }
 
-.cta-center {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.btn {
-  display: inline-block;
-  padding: 16px 36px;
-  background: var(--primary);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  margin-top: 32px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,46,255,0.25); }
+    /* ── SLIDE HEADINGS ── */
+    .slide-heading {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      color: #1A1A2E;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
 
-.cta-head {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 48px;
-}
-.cta-head .sep { width: 1px; height: 40px; background: var(--border); }
+    .slide-subheading {
+      font-size: 16px;
+      font-weight: 400;
+      color: #6B7280;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
 
-.pb-link {
-  color: var(--primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.pb-link:hover { text-decoration: none; }
+    /* ── STAT GRID ── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
 
-nav {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  padding: 8px 12px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-.nav-nums { display: flex; gap: 4px; align-items: center; }
-.nav-nums button {
-  width: 30px;
-  height: 30px;
-  border: none;
-  background: transparent;
-  border-radius: 50px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--secondary);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-.nav-nums button:hover { background: var(--card); color: var(--primary); }
-.nav-nums button.active { background: var(--primary); color: #fff; }
-.nav-counter {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  padding: 0 8px;
-}
-.nav-arrow {
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .stat-card {
+      background: #F0FAF6;
+      border-radius: 12px;
+      padding: 28px 24px;
+      border: 1px solid #D1FAE5;
+    }
 
-@media (max-width: 768px) {
-  .slide { padding: 50px 20px 130px; }
-  h1, .headline-xl { font-size: 34px; }
-  h2 { font-size: 26px; }
-  h3 { font-size: 18px; }
-  .wordmark { font-size: 32px; }
-  .big-num { font-size: 44px; }
-  .card-grid { grid-template-columns: 1fr; }
-  .split, .two-col { grid-template-columns: 1fr; gap: 20px; }
-  table { display: block; overflow-x: auto; font-size: 13px; }
-  .title-head, .cta-head { flex-direction: column; gap: 14px; text-align: center; }
-  .title-head .sep, .cta-head .sep { display: none; }
-  nav { gap: 4px; padding: 6px 8px; }
-  .nav-nums button { width: 26px; height: 26px; font-size: 11px; }
-}
-</style>
+    .stat-card .stat-num {
+      font-size: 36px;
+      font-weight: 900;
+      color: #0D7C5F;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-card .stat-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #6B7280;
+      line-height: 1.4;
+    }
+
+    /* ── BULLET LIST ── */
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .bullet-dot {
+      width: 8px;
+      height: 8px;
+      background: #0D7C5F;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* ── TWO-COL ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: #F0FAF6;
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #D1FAE5;
+    }
+
+    .card-amber {
+      background: #FFFBEB;
+      border-color: #FDE68A;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0D7C5F;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .card-title-amber {
+      color: #D97706;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.65;
+    }
+
+    /* ── COMP TABLE ── */
+    .comp-table-wrap {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead th {
+      background: #0D7C5F;
+      color: #FFFFFF;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    thead th:first-child { border-radius: 0; }
+
+    tbody tr:nth-child(even) { background: #F9FAFB; }
+    tbody tr:nth-child(odd)  { background: #FFFFFF; }
+
+    tbody td {
+      padding: 13px 16px;
+      color: #374151;
+      border-bottom: 1px solid #F3F4F6;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    tbody td:first-child {
+      font-weight: 600;
+      color: #1A1A2E;
+      white-space: nowrap;
+    }
+
+    .cloover-col {
+      background: #F0FAF6 !important;
+    }
+
+    .cloover-col td, tbody tr .cloover-col {
+      color: #0D7C5F;
+      font-weight: 600;
+    }
+
+    /* highlight Cloover column */
+    table tbody td:nth-child(2) {
+      background: #F0FAF6;
+      color: #065F46;
+      font-weight: 600;
+    }
+
+    /* ── MOAT CARDS ── */
+    .moat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .moat-card {
+      background: #F0FAF6;
+      border-radius: 12px;
+      padding: 32px 24px;
+      border: 1px solid #D1FAE5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .moat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0D7C5F, #F59E0B);
+    }
+
+    .moat-num {
+      font-size: 48px;
+      font-weight: 900;
+      color: rgba(13,124,95,0.12);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .moat-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0D7C5F;
+      margin-bottom: 10px;
+    }
+
+    .moat-card p {
+      font-size: 13.5px;
+      color: #374151;
+      line-height: 1.65;
+    }
+
+    /* ── SCORECARD ── */
+    .scorecard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .score-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: #F9FAFB;
+      border-radius: 10px;
+      border: 1px solid #E5E7EB;
+    }
+
+    .score-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .score-a  { background: #D1FAE5; color: #065F46; }
+    .score-b  { background: #FEF3C7; color: #92400E; }
+    .score-b-plus { background: #DBEAFE; color: #1E40AF; }
+
+    .score-label { font-size: 14px; font-weight: 600; color: #1A1A2E; }
+    .score-desc  { font-size: 12px; color: #6B7280; margin-top: 2px; line-height: 1.4; }
+
+    /* ── POSITIONING COMPARE ── */
+    .pos-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .pos-card {
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .pos-current {
+      background: #FFFBEB;
+      border: 2px solid #F59E0B;
+    }
+
+    .pos-reframed {
+      background: #ECFDF5;
+      border: 2px solid #0D7C5F;
+    }
+
+    .pos-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .tag-amber { background: #FEF3C7; color: #B45309; }
+    .tag-green { background: #D1FAE5; color: #065F46; }
+
+    .pos-card .quote {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1A1A2E;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .pos-card .pos-note {
+      font-size: 13px;
+      color: #6B7280;
+      line-height: 1.6;
+    }
+
+    /* ── NARRATIVE TIMELINE ── */
+    .narrative-timeline {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: center;
+    }
+
+    .timeline-block {
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .today-block {
+      background: #F3F4F6;
+      border: 1px solid #E5E7EB;
+    }
+
+    .tomorrow-block {
+      background: #F0FAF6;
+      border: 1px solid #D1FAE5;
+    }
+
+    .timeline-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 24px;
+      gap: 8px;
+    }
+
+    .arrow-line {
+      width: 2px;
+      height: 40px;
+      background: linear-gradient(180deg, #9CA3AF, #0D7C5F);
+    }
+
+    .arrow-head {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid #0D7C5F;
+    }
+
+    .timeline-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .tag-grey { color: #9CA3AF; }
+    .tag-teal { color: #0D7C5F; }
+
+    .timeline-block h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+    }
+
+    .timeline-block p {
+      font-size: 13.5px;
+      color: #6B7280;
+      line-height: 1.65;
+    }
+
+    /* ── RECS ── */
+    .rec-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .rec-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #FAFAFA;
+      border-radius: 12px;
+      padding: 22px 24px;
+      border: 1px solid #E5E7EB;
+    }
+
+    .rec-num {
+      width: 36px;
+      height: 36px;
+      background: #0D7C5F;
+      color: #FFFFFF;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .rec-content .rec-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 5px;
+    }
+
+    .rec-content p {
+      font-size: 13.5px;
+      color: #6B7280;
+      line-height: 1.6;
+    }
+
+    /* ── BIGGER PICTURE ── */
+    .big-picture-content {
+      max-width: 800px;
+    }
+
+    .big-picture-content p {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F0FAF6;
+      border: 1px solid #D1FAE5;
+      color: #0D7C5F;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .link-pill:hover { background: #D1FAE5; }
+
+    /* ── CTA SLIDE ── */
+    .slide-cta {
+      background: linear-gradient(135deg, #064035 0%, #0D7C5F 50%, #0A8F6E 100%) !important;
+      color: #FFFFFF;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cta-logo {
+      font-size: 48px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .cta-brand {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #F59E0B;
+      margin-bottom: 48px;
+    }
+
+    .cta-body {
+      font-size: clamp(14px, 1.8vw, 16px);
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #F59E0B;
+      color: #1A1A2E;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-btn:hover { opacity: 0.9; }
+
+    .cta-disclaimer {
+      margin-top: 32px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── SLIDE COUNTER ── */
+    .slide-counter {
+      position: absolute;
+      top: 32px;
+      right: 80px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #D1FAE5;
+      opacity: 0.7;
+    }
+
+    .slide-counter.dark {
+      color: #9CA3AF;
+    }
+
+    /* ── NAV BAR ── */
+    #nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 24px;
+      z-index: 100;
+    }
+
+    .nav-left  { display: flex; justify-content: flex-start; }
+    .nav-right { display: flex; justify-content: flex-end; }
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    .nav-btn {
+      background: none;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+
+    .nav-btn:hover { background: #F0FAF6; border-color: #0D7C5F; color: #0D7C5F; }
+    .nav-btn:disabled { opacity: 0.35; cursor: default; }
+
+    .nav-dots {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #D1D5DB;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-dot.active {
+      width: 18px;
+      border-radius: 3px;
+      background: #0D7C5F;
+    }
+
+    /* ── JUMP OVERLAY ── */
+    #jump-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #jump-overlay.active { display: flex; }
+
+    #jump-box {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 32px;
+      width: 340px;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.18);
+    }
+
+    #jump-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1A1A2E;
+    }
+
+    #jump-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    #jump-list li {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #374151;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    #jump-list li:hover { background: #F0FAF6; color: #0D7C5F; font-weight: 600; }
+
+    #jump-close {
+      margin-top: 16px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      background: none;
+      font-family: inherit;
+      font-size: 13px;
+      cursor: pointer;
+      color: #6B7280;
+    }
+
+    #jump-close:hover { background: #F9FAFB; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .slide { padding: 40px 24px 80px; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      .moat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .three-col { grid-template-columns: 1fr; }
+      .scorecard-grid { grid-template-columns: 1fr; }
+      .pos-compare { grid-template-columns: 1fr; }
+      .narrative-timeline { grid-template-columns: 1fr; }
+      .timeline-arrow { display: none; }
+      .slide-counter { right: 24px; top: 16px; }
+      .comp-table-wrap { font-size: 11px; }
+      thead th, tbody td { padding: 9px 10px; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- SLIDE 1: TITLE -->
-<section class="slide" id="s1">
-  <div class="title-head">
-    <div class="wordmark">cloover</div>
-    <div class="sep"></div>
-    <div class="pb-mark">PRODUCT STRATEGY BRIEF</div>
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 1 – TITLE                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide slide-title" id="slide-1">
+  <div class="slide-counter">01 / 10</div>
+  <div class="logo-mark">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="12" r="6" fill="#F59E0B"/>
+      <rect x="7" y="20" width="18" height="3" rx="1.5" fill="rgba(255,255,255,0.8)"/>
+      <rect x="11" y="25" width="10" height="2.5" rx="1.25" fill="rgba(255,255,255,0.5)"/>
+    </svg>
   </div>
-  <h1 class="headline-xl">Your homepage pitches QED.<br>Your Stuttgart installer needed Monday.</h1>
-  <p class="lead">A narrative read of Cloover's market, moat, positioning, and value proposition in the window between the Series A announcement and the installer-facing product that $1.2B of capital was actually raised to build.</p>
-</section>
-
-<!-- SLIDE 2: THE MARKET -->
-<section class="slide" id="s2">
-  <span class="pill">The Market</span>
-  <h2>A capital-formation problem the size of a continent, with a bottleneck nobody solved.</h2>
-  <p style="margin-top: 20px; max-width: 900px;">European residential renewable energy is the largest capital-formation opportunity on the continent. The European Commission estimates roughly <strong>€275B of annual investment</strong> required over the next 5 to 10 years to decarbonize EU homes (Forbes, Jan 2026). SolarPower Europe projects EU residential solar rising from ~13 GW in 2023 to ~25 GW per year by 2027. The European Heat Pump Association reports ~3.0M heat pumps installed in 2023 with policy bodies targeting a tripling by 2030.</p>
-  <div class="card-grid">
-    <div class="card">
-      <div class="big-num">€275B</div>
-      <h4>Annual EU Investment</h4>
-      <p>Required to decarbonize EU homes over the next 5 to 10 years (EC).</p>
-    </div>
-    <div class="card">
-      <div class="big-num">25 GW</div>
-      <h4>Residential Solar by 2027</h4>
-      <p>Up from ~13 GW in 2023 (SolarPower Europe).</p>
-    </div>
-    <div class="card">
-      <div class="big-num">3x</div>
-      <h4>Heat Pump Target by 2030</h4>
-      <p>From 3.0M installed in 2023 (EHPA).</p>
-    </div>
-  </div>
-  <p style="margin-top: 32px; max-width: 900px;">Three forcing functions keep the demand curve steep: ETS2 building-sector carbon pricing from 2027, Germany's 65% renewable heating mandate, and the Netherlands gas phase-out. The bottleneck is not demand and it is not hardware. It is installer capacity and homeowner financing, and those two constraints meet in the same 20-minute driveway conversation on a Saturday afternoon.</p>
-</section>
-
-<!-- SLIDE 3: COMPETITIVE LANDSCAPE -->
-<section class="slide" id="s3">
-  <span class="pill">Competitive Landscape</span>
-  <h2>Three established lanes. Cloover is the only platform bridging all three, and the homepage does not say so.</h2>
-  <p style="margin-top: 20px; max-width: 900px;">The map below tells the story: every other European player occupies one of three lanes. Cloover sits across all three and has a balance-sheet weapon that no single-lane competitor can answer. That is the strategic position. It is not the message on the homepage.</p>
-  <table>
-    <thead>
-      <tr>
-        <th>Dimension</th>
-        <th class="highlight">Cloover</th>
-        <th>Enpal / 1KOMMA5°</th>
-        <th>Otovo</th>
-        <th>Aurora / OpenSolar</th>
-        <th>Bees &amp; Bears</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Category</strong></td>
-        <td class="highlight">Installer platform + embedded finance + procurement</td>
-        <td>Vertically integrated D2C installer</td>
-        <td>Consumer marketplace</td>
-        <td>Installer design and proposal software</td>
-        <td>EU installer embedded finance</td>
-      </tr>
-      <tr>
-        <td><strong>Customer ownership</strong></td>
-        <td class="highlight">Installer keeps the homeowner</td>
-        <td>Platform owns the homeowner</td>
-        <td>Platform owns the homeowner</td>
-        <td>Installer keeps the homeowner</td>
-        <td>Installer keeps the homeowner</td>
-      </tr>
-      <tr>
-        <td><strong>Capital stack</strong></td>
-        <td class="highlight">$1.2B debt facility + €300M EIF guarantee</td>
-        <td>Equity-funded, balance-sheet lender</td>
-        <td>Equity-funded</td>
-        <td>Software only</td>
-        <td>Smaller credit facility</td>
-      </tr>
-      <tr>
-        <td><strong>Geographic depth</strong></td>
-        <td class="highlight">DE, CH, SE, NL (AT live, FR/IT/UK next)</td>
-        <td>DE-led, EU footprint</td>
-        <td>Pan-European marketplace</td>
-        <td>Global</td>
-        <td>DACH-focused</td>
-      </tr>
-      <tr>
-        <td><strong>Strategic risk</strong></td>
-        <td class="highlight">Installer base shrinks as D2C rolls up independents</td>
-        <td>Margin compression if financing tightens</td>
-        <td>Marketplace economics</td>
-        <td>Commodity software</td>
-        <td>Capital depth</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="margin-top: 28px; max-width: 920px;">The line at the top of the table matters most. The <strong>installer keeps the homeowner</strong> row is the single sentence Cloover's category cannot be beaten on, and the current homepage does not make that promise explicit. Enpal and 1KOMMA5° employ or acquire the installer's customer. Cloover is the only platform at scale arming the independent installer instead of competing for their customer, and the $1.2B debt facility with EIF backing is a regulatory-grade underwrite no competitor can replicate with a larger Series A. The moat is real. The message is not.</p>
-</section>
-
-<!-- SLIDE 4: YOUR MOAT -->
-<section class="slide" id="s4">
-  <span class="pill">Your Moat</span>
-  <h2>Three structural advantages. Not features.</h2>
-  <div class="moat-block">
-    <div class="moat-num">01</div>
-    <h3>$1.2B debt facility with EIF guarantee.</h3>
-    <p>The €300M European Investment Fund guarantee is not just capital. It is multi-year underwriting of credit risk by a public European institution. A competing platform cannot replicate this by raising a larger equity round. Regulatory relationships and public-institution guarantees are not fungible with VC dollars.</p>
-    <span class="durability">Durability: High</span>
-  </div>
-  <div class="moat-block">
-    <div class="moat-num">02</div>
-    <h3>Installer-empowerment model in a vertical-integration category.</h3>
-    <p>The D2C incumbents employ or acquire the installer's customer. Cloover is the only European platform at scale that arms the independent installer instead of capturing their homeowner. The stance becomes harder to abandon the more installer trust compounds, but only if Cloover actively signals the non-compete on product surface, not just in press.</p>
-    <span class="durability">Durability: Medium-High</span>
-  </div>
-  <div class="moat-block">
-    <div class="moat-num">03</div>
-    <h3>Bundled stack (software + financing + procurement + working capital).</h3>
-    <p>Most competitors own one layer: Pylon is software, Bees &amp; Bears is financing, Krannich is distribution. The capital plus software plus procurement plus energy management combination is a multi-year build no single-lane entrant can replicate in a quarter.</p>
-    <span class="durability">Durability: Medium-High</span>
+  <div class="brand-word">CLOOVER</div>
+  <div class="brief-label">Product Strategy Brief</div>
+  <h1>The Shopify of Energy</h1>
+  <p class="sub">A product strategy analysis of Cloover's platform model, embedded financing moat, and the B2B play for Europe's energy transition</p>
+  <div class="title-pills">
+    <span class="title-pill">B2B Platform Strategy</span>
+    <span class="title-pill">Embedded Finance</span>
+    <span class="title-pill">Energy Transition</span>
+    <span class="title-pill">Europe-wide</span>
   </div>
 </section>
 
-<!-- SLIDE 5: POSITIONING SCORECARD -->
-<section class="slide" id="s5">
-  <span class="pill">Positioning Scorecard</span>
-  <h2>The homepage sells the thesis. The thesis is not what the installer buys on Monday morning.</h2>
-  <div class="split">
-    <div class="split-panel">
-      <h4>Current Homepage</h4>
-      <blockquote>"The all-in-one platform for energy independence."<br><br>Banner: "News: $1.2bn funding secured. Join Cloover to build the AI operating system for energy independence."</blockquote>
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 2 – THE MARKET                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-2">
+  <div class="slide-counter dark">02 / 10</div>
+  <div class="section-label">Market Context</div>
+  <h2 class="slide-heading">Europe's Clean Energy Market<br>Is Structurally Shifting</h2>
+  <p class="slide-subheading">Solar, battery storage, heat pumps, and EV charging are converging into a single energy stack — and tens of thousands of independent installers are the distribution backbone.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-num">$1.2B</div>
+      <div class="stat-label">Financing commitment secured — transformative capital weapon in the B2B installer market</div>
     </div>
-    <div class="split-panel">
-      <h4>Grades</h4>
-      <div class="grade-row">
-        <div class="grade-badge grade-c">C</div>
-        <div>
-          <div class="label">Clarity</div>
-          <div class="desc">Four abstractions in one line. Nothing actionable for the installer.</div>
-        </div>
+    <div class="stat-card">
+      <div class="stat-num">$22M</div>
+      <div class="stat-label">Series A raised to build the infrastructure layer for Europe's energy installer network</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">10,000s</div>
+      <div class="stat-label">Independent installers across Europe that Cloover can empower — underserved by D2C players</div>
+    </div>
+  </div>
+
+  <ul class="bullet-list">
+    <li><span class="bullet-dot"></span>REPowerEU targets and post-2022 energy price shock are accelerating residential and commercial clean energy adoption across Europe</li>
+    <li><span class="bullet-dot"></span>The market is highly fragmented — tens of thousands of small and mid-sized independent installers lack operational infrastructure, not technical expertise</li>
+    <li><span class="bullet-dot"></span>Solar, battery, heat pump, and EV charging are converging — customers want a single energy stack, but installers operate in silos</li>
+    <li><span class="bullet-dot"></span>Financing remains the #1 conversion barrier at point of sale — slow bank approvals kill deals that customers are ready to make</li>
+    <li><span class="bullet-dot"></span>The $1.2B financing commitment turns capital access into a product feature — embedded, instant, and built into the installer's workflow</li>
+  </ul>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 3 – COMPETITIVE LANDSCAPE           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-3">
+  <div class="slide-counter dark">03 / 10</div>
+  <div class="section-label">Competitive Landscape</div>
+  <h2 class="slide-heading">Cloover Isn't Competing<br>With Installers — It Empowers Them</h2>
+  <p class="slide-subheading">The key distinction: while Enpal and 1Komma5° employ or control installers, Cloover partners with the independent installer network that D2C players can't fully capture.</p>
+
+  <div class="comp-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th style="background:#065F46;">Cloover</th>
+          <th>Enpal</th>
+          <th>1Komma5°</th>
+          <th>Otovo</th>
+          <th>GoodLeap</th>
+          <th>Banks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Model</td>
+          <td>B2B platform for installers</td>
+          <td>D2C installer</td>
+          <td>D2C installer + storage</td>
+          <td>Marketplace</td>
+          <td>US solar financing</td>
+          <td>Traditional lending</td>
+        </tr>
+        <tr>
+          <td>Installer relationship</td>
+          <td>Partner — empowers</td>
+          <td>Employer / exclusive</td>
+          <td>Employer</td>
+          <td>Lead gen only</td>
+          <td>Lender</td>
+          <td>Unrelated</td>
+        </tr>
+        <tr>
+          <td>Financing</td>
+          <td>Embedded ($1.2B)</td>
+          <td>Own balance sheet</td>
+          <td>Own balance sheet</td>
+          <td>None</td>
+          <td>Embedded (US only)</td>
+          <td>Slow approval</td>
+        </tr>
+        <tr>
+          <td>Operations platform</td>
+          <td>Yes — quote to install to monitor</td>
+          <td>Internal only</td>
+          <td>Internal only</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Geography</td>
+          <td>Europe-wide</td>
+          <td>Germany</td>
+          <td>Germany + Nordics</td>
+          <td>Europe (limited)</td>
+          <td>US only</td>
+          <td>Local</td>
+        </tr>
+        <tr>
+          <td>AI layer</td>
+          <td>Yes — OS-level</td>
+          <td>Limited</td>
+          <td>Limited</td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 4 – YOUR MOAT                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-4">
+  <div class="slide-counter dark">04 / 10</div>
+  <div class="section-label">Competitive Moat</div>
+  <h2 class="slide-heading">Three Interlocking Advantages<br>No Competitor Can Replicate Quickly</h2>
+  <p class="slide-subheading">Each moat strengthens the others. Together, they create a flywheel that compounds with every installer onboarded and every deal closed.</p>
+
+  <div class="moat-grid">
+    <div class="moat-card">
+      <div class="moat-num">01</div>
+      <div class="moat-title">Embedded Financing at Scale</div>
+      <p>$1.2B isn't a balance sheet number — it's a product feature. Instant or near-instant financing decisions at point of sale, embedded directly in the installer's quoting workflow. No European B2B platform competitor has this. It's the difference between a closed deal and a lost one.</p>
+    </div>
+    <div class="moat-card">
+      <div class="moat-num">02</div>
+      <div class="moat-title">B2B Platform Network Effect</div>
+      <p>Installers are partners, not competitors. Every installer who joins brings more financed volume, which attracts more capital, which enables more installer partnerships. The financial flywheel and operational flywheel run simultaneously — each new partner makes the platform more valuable for all others.</p>
+    </div>
+    <div class="moat-card">
+      <div class="moat-num">03</div>
+      <div class="moat-title">Full-Lifecycle Operating System</div>
+      <p>If Cloover owns quoting, financing, project management, AND fleet monitoring, the switching cost compounds with every deal closed and system brought under management. After a year on the platform, leaving means losing visibility into an entire installed fleet — and every future financing deal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 5 – POSITIONING SCORECARD           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-5">
+  <div class="slide-counter dark">05 / 10</div>
+  <div class="section-label">Positioning Analysis</div>
+  <h2 class="slide-heading">Positioning Scorecard</h2>
+  <p class="slide-subheading">Current positioning: "AI OS for energy independence" (LinkedIn) / "Building the operating system for energy independence" (press)</p>
+
+  <div class="scorecard-grid">
+    <div class="score-row">
+      <div class="score-badge score-b">B</div>
+      <div>
+        <div class="score-label">Clarity</div>
+        <div class="score-desc">Clear to investors and tech media. Opaque to the installer in Stuttgart deciding whether to change how they run their business.</div>
       </div>
-      <div class="grade-row">
-        <div class="grade-badge grade-b">B-</div>
-        <div>
-          <div class="label">Differentiation</div>
-          <div class="desc">"AI OS" is ownable but untied to proof. Enpal and 1KOMMA5° land sharper.</div>
-        </div>
+    </div>
+    <div class="score-row">
+      <div class="score-badge score-a">A−</div>
+      <div>
+        <div class="score-label">Differentiation</div>
+        <div class="score-desc">"OS for energy independence" is memorable and defensible. No competitor claims this. $1.2B commitment is a category-separating proof point.</div>
       </div>
-      <div class="grade-row">
-        <div class="grade-badge grade-b">B+</div>
-        <div>
-          <div class="label">Believability</div>
-          <div class="desc">$1.2B and 500+ partners land. The "AI OS" claim does not.</div>
-        </div>
+    </div>
+    <div class="score-row">
+      <div class="score-badge score-b-plus">B+</div>
+      <div>
+        <div class="score-label">Believability</div>
+        <div class="score-desc">$22M Series A + $1.2B financing commitment from credible funders. Berlin + Stockholm presence signals ambition.</div>
+      </div>
+    </div>
+    <div class="score-row">
+      <div class="score-badge score-b">B−</div>
+      <div>
+        <div class="score-label">Installer Relevance</div>
+        <div class="score-desc">Messaging speaks to investors, not installers. "AI OS" doesn't answer "what does this do for me on Monday morning?"</div>
       </div>
     </div>
   </div>
-  <p style="margin-top: 32px; max-width: 920px;">These grades work for the investor audience reading the Forbes coverage. They fail for the Stuttgart installer who has 20 seconds on the homepage to decide whether Cloover is worth a demo booking before the 2pm site visit. The investor reads "AI operating system" and nods. The installer reads it and bounces to the Bees &amp; Bears tab already open in the next browser window. The scorecard is not wrong. It is scored against the wrong reader.</p>
-</section>
 
-<!-- SLIDE 6: VALUE PROP GAP -->
-<section class="slide" id="s6">
-  <span class="pill">Value Prop Gap</span>
-  <h2>The proof points are already on the page. They are presented as stats, not as the promise.</h2>
-  <div class="split">
-    <div class="split-panel">
-      <h4>Current Value Prop</h4>
-      <blockquote class="amber">"The all-in-one platform for energy independence." "AI operating system for the energy transition." Mechanism foregrounded. Investor language. The installer-facing proof points (2-minute approval, 90%+ acceptance, 40% less risk, installer paid in full after install) sit below the hero as bullets.</blockquote>
-    </div>
-    <div class="split-panel">
-      <h4>Reframed Value Prop</h4>
-      <blockquote class="green">"Close the Saturday sale in the driveway. Your customer signs on the tablet, gets credit approval in two minutes, and we pay you the full project amount after installation. No bank. No waiting. No customer-capture." The proof points become the promise, not the footnote.</blockquote>
-    </div>
-  </div>
-  <p style="margin-top: 32px; max-width: 920px;">Why the gap matters: the installer in Stuttgart is comparing Cloover to Enpal (which would employ him and take his customers) and to his local bank (which would take three weeks and decline a third of his homeowners). The winning message is not "AI OS." It is <strong>instant financing plus you keep the customer.</strong> The raw material is already on the homepage. 2-minute approval, 90% acceptance, 40% less risk, installer paid in full after install. These are installer-economic claims that make the value obvious to the buyer who actually signs the contract. They are currently arranged as feature bullets under an investor headline, and the page architecture inverts which audience is the paying one.</p>
-</section>
-
-<!-- SLIDE 7: NARRATIVE OPPORTUNITY -->
-<section class="slide" id="s7">
-  <span class="pill">Narrative Opportunity</span>
-  <h2>From an investor-facing AI OS to the infrastructure layer that independent installers survive on.</h2>
   <div class="two-col">
-    <div class="today-card">
-      <h4>Today</h4>
-      <h3 style="margin-bottom: 12px;">"AI operating system for energy independence."</h3>
-      <p class="muted">An investor narrative. Useful for the Series A cycle. Already served its purpose.</p>
+    <div class="card">
+      <div class="card-title">Strengths</div>
+      <p>"Operating system" metaphor carries platform weight. "Energy independence" is geopolitically timely post-2022. The Shopify analogy resonates strongly with B2B software buyers and investors who understand platform dynamics.</p>
     </div>
-    <div class="tomorrow-card">
-      <h4>Tomorrow</h4>
-      <h3 style="margin-bottom: 12px; color: #fff;">"The infrastructure that lets the independent installer win against the roll-ups."</h3>
-      <p>A category narrative only Cloover can make, because only Cloover has $1.2B of underwritten capital plus the software plus the procurement plus the working capital product, and because only Cloover has the strategic stance of not competing with its installer customers for the homeowner.</p>
+    <div class="card card-amber">
+      <div class="card-title card-title-amber">Gap to Close</div>
+      <p>The $1.2B commitment is buried in press releases — not weaponized in product messaging. Installers' primary question is "will you steal my customers?" — this is never addressed directly in current positioning.</p>
     </div>
   </div>
-  <p style="margin-top: 32px; max-width: 920px;">The Series A window is the moment to claim the installer-infrastructure category, not document it. The $1.2B raise, the 500+ partners, the Austrian launch, the France and Italy and UK roadmap are all assets that lose compounding value if the category claim ships six months late. Once Enpal or 1KOMMA5° accelerate their roll-up pace or a well-funded fintech entrant copies the bundled stack, "all-in-one platform for energy independence" becomes a positioning comparison Cloover is on the wrong side of. The installer-empowerment claim is a category claim the D2C incumbents structurally cannot counter without abandoning their own model.</p>
 </section>
 
-<!-- SLIDE 8: RECOMMENDATIONS -->
-<section class="slide" id="s8">
-  <span class="pill">Recommendations</span>
-  <h2>Four product-organization moves to re-anchor the product around the installer who signs the Monday contract.</h2>
-  <div class="reco">
-    <span class="reco-num">01</span><h3>Re-anchor the homepage primary promise around the installer journey.</h3>
-    <p>Keep the "AI OS" language for the investor and press surface where it already resonates. Replace the hero with an installer-first promise grounded in the proof points already on the page: 2-minute approval, 90% acceptance, installer paid in full after install, no customer-capture. The installer acquisition funnel and the investor narrative become dual-register, not single-register. Testable in A/B within three weeks.</p>
-    <span class="owner">Owner: Director of Product Marketing</span>
-  </div>
-  <div class="reco">
-    <span class="reco-num">02</span><h3>Make the non-compete stance an explicit on-page product commitment.</h3>
-    <p>"We will never compete with you for your customer" is Cloover's single most defensible stance against Enpal and 1KOMMA5°. It is currently subtext. Make it a named product principle, attached to a legally-binding contract clause installers can see before signing. This moves it from marketing copy to trust architecture.</p>
-    <span class="owner">Owner: VP Product plus General Counsel</span>
-  </div>
-  <div class="reco">
-    <span class="reco-num">03</span><h3>Architect product lines around installer workflow, not platform pillars.</h3>
-    <p>The current four-pillar structure (Customer Financing, AI Workflow, Procurement, Energy Management) reads as an org chart. The installer buys the Saturday-to-Monday workflow: proposal on Saturday, credit approval in 2 minutes, installation scheduled Tuesday, paid Friday. Rebuild the product surface around that workflow, and pillars become implementation detail.</p>
-    <span class="owner">Owner: VP Product</span>
-  </div>
-  <div class="reco">
-    <span class="reco-num">04</span><h3>Sequence multi-country localization by installer ecosystem, not by GDP.</h3>
-    <p>Each country has different credit infrastructure (Schufa in Germany, BankID in Sweden) and different installer-cohort economics. The product roadmap should sequence by which installer ecosystem is most fragmented and most at risk of D2C roll-up, not by market size. This converts the €22M equity and the debt facility into defended installer share rather than distributed thin coverage.</p>
-    <span class="owner">Owner: VP Product plus Head of Expansion</span>
-  </div>
-</section>
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 6 – VALUE PROP GAP                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-6">
+  <div class="slide-counter dark">06 / 10</div>
+  <div class="section-label">Value Proposition Analysis</div>
+  <h2 class="slide-heading">The Value Prop Gap:<br>Investors vs. Installers</h2>
+  <p class="slide-subheading">Cloover's current messaging wins in boardrooms. It needs a parallel track that wins in the field — with the person whose livelihood depends on choosing the right platform.</p>
 
-<!-- SLIDE 9: THE BIGGER PICTURE -->
-<section class="slide" id="s9">
-  <span class="pill">The Bigger Picture</span>
-  <h2>The funding stack is a forcing function. The installer-empowerment story has to ship while the capital is still news.</h2>
-  <p style="margin-top: 28px; max-width: 920px;">A 9x revenue growth year, a 5x target for 2026, multi-country expansion, and a product portfolio spanning financing plus procurement plus working capital plus energy management is not a GTM problem. It is a product-organization problem. Multi-country localization, two-sided marketplace ownership, product-line architecture, and EIF compliance reporting are each their own product surface, and a Series A company with $1.3B of debt on the balance sheet cannot run them as side projects. The investor narrative got the company funded. The installer narrative is what keeps the $1.2B facility drawing down at the pace the business model requires.</p>
-  <p style="margin-top: 24px; max-width: 920px;">The asset is built. The capital is underwritten. The installer base is 500+ and growing. The story that ties them together is behind the asset. Closing that gap is product-leadership work: positioning, product-line architecture, roadmap sequencing, pricing alignment to installer unit economics. It is not a marketing campaign. It is the product organization owning the narrative the Series A already promised.</p>
-  <p style="margin-top: 28px; max-width: 920px;">Read more about how we engage at <a class="pb-link" href="https://productbeacon.agency">productbeacon.agency</a>.</p>
-</section>
-
-<!-- SLIDE 10: CTA -->
-<section class="slide" id="s10">
-  <div class="cta-center">
-    <div class="cta-head">
-      <div class="wordmark">cloover</div>
-      <div class="sep"></div>
-      <div class="pb-mark">PRODUCTBEACON</div>
+  <div class="pos-compare">
+    <div class="pos-card pos-current">
+      <div class="pos-tag tag-amber">Current — Investor-Facing</div>
+      <div class="quote">"AI OS for energy independence"</div>
+      <p class="pos-note">Aspirational and investor-facing. Resonates in press and funding conversations. The installer in Stuttgart, Lisbon, or Warsaw reads this and wonders: is Cloover another Enpal — someone who's eventually going to compete with me for my customers?</p>
     </div>
-    <h2 style="max-width: 760px;">This brief is based on public information.</h2>
-    <p class="lead" style="margin-top: 20px; max-width: 680px;">Imagine what we would find with access to the product, the team, and the roadmap.</p>
-    <a class="btn" href="mailto:contact@productbeacon.agency">contact@productbeacon.agency</a>
-    <p class="muted" style="margin-top: 36px; font-size: 14px;"><a class="pb-link" href="https://productbeacon.agency">productbeacon.agency</a></p>
+    <div class="pos-card pos-reframed">
+      <div class="pos-tag tag-green">Reframed — Installer-Facing</div>
+      <div class="quote">"Run your entire solar business in one place — quotes, financing, installation, monitoring. Instant financing for your customers. No bank. No waiting."</div>
+      <p class="pos-note">Concrete, operational, installer-facing. Answers the Monday-morning question immediately. The financing proof point becomes the hero. The operational stack becomes the lock-in story told through value, not obligation.</p>
+    </div>
   </div>
 </section>
 
-<nav>
-  <div class="nav-nums" id="navNums"></div>
-  <div class="nav-counter" id="navCounter">1 / 10</div>
-  <div style="display: flex; gap: 4px;">
-    <button class="nav-arrow" onclick="window.prevSlide()" aria-label="Previous">&#x2190;</button>
-    <button class="nav-arrow" onclick="window.nextSlide()" aria-label="Next">&#x2192;</button>
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 7 – NARRATIVE OPPORTUNITY           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-7">
+  <div class="slide-counter dark">07 / 10</div>
+  <div class="section-label">Narrative Strategy</div>
+  <h2 class="slide-heading">The Narrative Arc:<br>From Vision to Category Leadership</h2>
+  <p class="slide-subheading">The goal isn't to abandon the current positioning — it's to build a second register that speaks to the distribution network Cloover is actually building.</p>
+
+  <div class="narrative-timeline">
+    <div class="timeline-block today-block">
+      <div class="timeline-tag tag-grey">Today</div>
+      <h3>"Energy Transition Platform"</h3>
+      <p>Vision-level positioning. Speaks to investors, press, and macro audiences. Installers read it and wonder if Cloover is another D2C brand building to compete with them. The strategic logic is correct — the audience match is off.</p>
+    </div>
+    <div class="timeline-arrow">
+      <div class="arrow-line"></div>
+      <div class="arrow-head"></div>
+    </div>
+    <div class="timeline-block tomorrow-block">
+      <div class="timeline-tag tag-teal">Tomorrow</div>
+      <h3>"The Business Platform for Energy Installers"</h3>
+      <p>Like Shopify for merchants: you bring the craft, we provide the infrastructure. Financing, operations, fleet monitoring — all in one. B2B always, never competing with you. This is the message that converts installers and builds the network effect Cloover needs.</p>
+    </div>
   </div>
-</nav>
+
+  <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+    <div class="card" style="padding: 20px 22px;">
+      <div class="card-title" style="margin-bottom: 8px; font-size: 12px;">The Shopify Parallel</div>
+      <p style="font-size: 13px;">Shopify never competes with merchants. Cloover should never compete with installers. The platform wins when its network wins.</p>
+    </div>
+    <div class="card" style="padding: 20px 22px;">
+      <div class="card-title" style="margin-bottom: 8px; font-size: 12px;">The $1.2B Proof Point</div>
+      <p style="font-size: 13px;">"Instant financing for your customers" is the most powerful three words in the installer's vocabulary. Lead with it.</p>
+    </div>
+    <div class="card" style="padding: 20px 22px;">
+      <div class="card-title" style="margin-bottom: 8px; font-size: 12px;">The Explicit Promise</div>
+      <p style="font-size: 13px;">Address the #1 installer fear directly: "We are your partner. We will never compete with you for your customers."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 8 – RECOMMENDATIONS                 -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-8">
+  <div class="slide-counter dark">08 / 10</div>
+  <div class="section-label">Strategic Recommendations</div>
+  <h2 class="slide-heading">Four Product Leadership<br>Priorities</h2>
+  <p class="slide-subheading">These are not marketing tweaks — they're product strategy decisions about how Cloover positions itself to capture the European installer network before D2C players or utility giants move downstream.</p>
+
+  <div class="rec-list">
+    <div class="rec-item">
+      <div class="rec-num">1</div>
+      <div class="rec-content">
+        <div class="rec-title">Dual-Register Messaging Architecture</div>
+        <p>Keep "AI OS for energy independence" for investors and press. Build a parallel installer-facing message: "Everything you need to grow your energy business — financing, operations, fleet management." These are two different audiences with two different jobs to be done. Serve both, don't conflate them.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num">2</div>
+      <div class="rec-content">
+        <div class="rec-title">Weaponize the $1.2B Financing Commitment</div>
+        <p>"Instant financing for your customers. No bank." is a concrete, competitive advantage any installer understands immediately. This should be the hero message, the homepage above-the-fold, the first thing an installer hears in a sales conversation. It's currently buried in press releases.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num">3</div>
+      <div class="rec-content">
+        <div class="rec-title">Make the B2B Partnership Promise Explicit</div>
+        <p>Installers' #1 fear about platforms is customer capture. Address it directly and loudly: "We are your business partner, never your competitor." This single commitment unlocks the trust required to build a network of tens of thousands of installers who choose Cloover over staying independent.</p>
+      </div>
+    </div>
+    <div class="rec-item">
+      <div class="rec-num">4</div>
+      <div class="rec-content">
+        <div class="rec-title">Prove the Flywheel With Public Metrics</div>
+        <p>Show installer growth metrics, customer financing approval rates, and time-to-financing numbers. Every installer success story attracts the next one. The network effect only becomes visible — and therefore powerful — when Cloover makes the flywheel legible to the market.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 9 – THE BIGGER PICTURE              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide" id="slide-9">
+  <div class="slide-counter dark">09 / 10</div>
+  <div class="section-label">Strategic Outlook</div>
+  <h2 class="slide-heading">The Right Strategic Bet,<br>Well Executed</h2>
+
+  <div class="big-picture-content">
+    <p>Cloover made the right strategic bet: empower the existing distribution network rather than compete with it. Europe's energy transition will happen through tens of thousands of independent installers — not a handful of D2C brands with captive workforces. That's not a question of if, it's a question of which platform they choose to run their businesses on.</p>
+
+    <p>The infrastructure layer — financing, operations, monitoring — will capture more durable value than any single installer business. Financing embedded at the point of sale is not just a product feature; it's a structural barrier to entry that compounds with every deal closed and every system that comes under fleet management.</p>
+
+    <p>With product leadership focused on building the dual-register messaging architecture and proving the installer flywheel through public metrics, Cloover can establish itself as the essential infrastructure for Europe's energy transition — before D2C players attempt to move upstream into B2B tooling, or utility giants attempt to move downstream into the installer relationship.</p>
+
+    <a href="https://productbeacon.agency" target="_blank" class="link-pill">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D7C5F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      productbeacon.agency
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SLIDE 10 – CTA                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="slide slide-cta" id="slide-10">
+  <div class="slide-counter">10 / 10</div>
+  <div class="cta-logo">CLOOVER</div>
+  <div class="cta-brand">ProductBeacon</div>
+  <p class="cta-body">This brief explores Cloover's platform strategy, embedded financing moat, and B2B positioning opportunity across Europe's clean energy installer market. Based on publicly available information.</p>
+  <a href="mailto:contact@productbeacon.agency" class="cta-btn">contact@productbeacon.agency</a>
+  <p class="cta-disclaimer">Public information brief · ProductBeacon · productbeacon.agency</p>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- NAVIGATION                                -->
+<!-- ══════════════════════════════════════════ -->
+<div id="nav-bar">
+  <div class="nav-left">
+    <button class="nav-btn" id="btn-prev" onclick="window.navPrev()">← Prev</button>
+  </div>
+  <div class="nav-center">
+    <div class="nav-dots" id="nav-dots"></div>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" id="btn-next" onclick="window.navNext()">Next →</button>
+    <button class="nav-btn" id="btn-jump" onclick="window.openJump()" style="margin-left: 8px; border-color: #0D7C5F; color: #0D7C5F;">☰</button>
+  </div>
+</div>
+
+<!-- JUMP OVERLAY -->
+<div id="jump-overlay" onclick="if(event.target===this)window.closeJump()">
+  <div id="jump-box">
+    <h3>Jump to slide</h3>
+    <ul id="jump-list"></ul>
+    <button id="jump-close" onclick="window.closeJump()">Close</button>
+  </div>
+</div>
 
 <script>
 (function() {
-  const total = 10;
-  let current = 1;
-  const navNums = document.getElementById('navNums');
-  const navCounter = document.getElementById('navCounter');
+  const TOTAL = 10;
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsContainer = document.getElementById('nav-dots');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const jumpList = document.getElementById('jump-list');
+  const jumpOverlay = document.getElementById('jump-overlay');
 
-  for (let i = 1; i <= total; i++) {
-    const b = document.createElement('button');
-    b.textContent = i;
-    b.dataset.slide = i;
-    b.onclick = () => window.showSlide(i);
-    navNums.appendChild(b);
-  }
+  const TITLES = [
+    'Title — The Shopify of Energy',
+    'The Market',
+    'Competitive Landscape',
+    'Your Moat',
+    'Positioning Scorecard',
+    'Value Prop Gap',
+    'Narrative Opportunity',
+    'Recommendations',
+    'The Bigger Picture',
+    'CTA'
+  ];
 
-  function updateActive() {
-    document.querySelectorAll('#navNums button').forEach(b => {
-      b.classList.toggle('active', parseInt(b.dataset.slide) === current);
-    });
-    navCounter.textContent = current + ' / ' + total;
-  }
+  let current = 0;
 
-  window.showSlide = function(n) {
-    if (n < 1 || n > total) return;
-    current = n;
-    const el = document.getElementById('s' + n);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    updateActive();
-  };
-  window.nextSlide = function() { if (current < total) window.showSlide(current + 1); };
-  window.prevSlide = function() { if (current > 1) window.showSlide(current - 1); };
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); window.nextSlide(); }
-    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); window.prevSlide(); }
-    else if (e.key === 'Home') { e.preventDefault(); window.showSlide(1); }
-    else if (e.key === 'End') { e.preventDefault(); window.showSlide(total); }
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => window.showSlide(i);
+    dotsContainer.appendChild(dot);
   });
 
-  // Update active slide on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting && e.intersectionRatio > 0.5) {
-        const id = e.target.id;
-        current = parseInt(id.replace('s', ''));
-        updateActive();
+  // Build jump list
+  TITLES.forEach((t, i) => {
+    const li = document.createElement('li');
+    li.textContent = (i + 1).toString().padStart(2, '0') + ' — ' + t;
+    li.onclick = () => { window.showSlide(i); window.closeJump(); };
+    jumpList.appendChild(li);
+  });
+
+  window.showSlide = function(idx) {
+    current = Math.max(0, Math.min(TOTAL - 1, idx));
+    slides[current].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.nav-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current === TOTAL - 1;
+  };
+
+  window.navPrev = function() { window.showSlide(current - 1); };
+  window.navNext = function() { window.showSlide(current + 1); };
+
+  window.openJump = function() {
+    jumpOverlay.classList.add('active');
+  };
+
+  window.closeJump = function() {
+    jumpOverlay.classList.remove('active');
+  };
+
+  // Keyboard nav
+  document.addEventListener('keydown', e => {
+    if (jumpOverlay.classList.contains('active')) {
+      if (e.key === 'Escape') window.closeJump();
+      return;
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') window.navNext();
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   window.navPrev();
+    if (e.key === 'Escape') window.closeJump();
+  });
+
+  // Touch swipe
+  let touchStartX = 0, touchStartY = 0;
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      if (dx < 0) window.navNext();
+      else         window.navPrev();
+    }
+  }, { passive: true });
+
+  // IntersectionObserver — update active dot on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        const idx = slides.indexOf(entry.target);
+        if (idx !== -1) {
+          current = idx;
+          document.querySelectorAll('.nav-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+          });
+          btnPrev.disabled = current === 0;
+          btnNext.disabled = current === TOTAL - 1;
+        }
       }
     });
-  }, { threshold: [0.5] });
-  document.querySelectorAll('.slide').forEach(s => observer.observe(s));
+  }, { threshold: 0.5 });
 
-  updateActive();
+  slides.forEach(s => observer.observe(s));
+
+  // Init state
+  btnPrev.disabled = true;
 })();
 </script>
-
 </body>
 </html>
