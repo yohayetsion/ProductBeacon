@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deskpro - Product Strategy Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #02203B;
+  --accent: #74D1FF;
+  --bg: #FFFFFF;
+  --text: #090C2F;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 900px; width: 100%; }
+.slide-number { position: absolute; top: 24px; right: 32px; font-size: 13px; font-weight: 600; color: rgba(0,0,0,0.25); letter-spacing: 1px; }
+
+/* Slide 1 - Title */
+.slide-title { background: var(--primary); color: #fff; }
+.slide-title .slide-number { color: rgba(255,255,255,0.3); }
+.slide-title .logo { height: 36px; margin-bottom: 32px; filter: brightness(0) invert(1); }
+.slide-title .label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.slide-title h1 { font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+.slide-title .subtitle { font-size: 18px; font-weight: 300; line-height: 1.6; opacity: 0.8; max-width: 700px; }
+
+/* Content slides */
+.slide-light { background: #f8f9fb; }
+.slide-white { background: #fff; }
+.slide h2 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 24px; }
+.slide p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; color: #333; }
+
+/* Tables */
+.comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+.comp-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+.comp-table td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+.comp-table tr:hover { background: #f0f7ff; }
+.comp-table .highlight { background: rgba(116,209,255,0.1); font-weight: 600; }
+
+/* Gap table */
+.gap-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.gap-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+.gap-table th:first-child { background: #fee2e2; color: #991b1b; border-radius: 8px 0 0 0; }
+.gap-table th:last-child { background: #dcfce7; color: #166534; border-radius: 0 8px 0 0; }
+.gap-table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; line-height: 1.6; vertical-align: top; }
+.gap-table td:first-child { color: #991b1b; background: #fef2f2; }
+.gap-table td:last-child { color: #166534; background: #f0fdf4; }
+
+/* Grades */
+.grade { display: inline-block; width: 32px; height: 32px; border-radius: 50%; font-weight: 700; font-size: 14px; line-height: 32px; text-align: center; color: #fff; margin-right: 8px; }
+.grade-a { background: #16a34a; }
+.grade-b { background: #d97706; }
+.grade-c { background: #dc2626; }
+
+/* Scorecard */
+.scorecard { margin: 24px 0; }
+.scorecard-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid #e5e7eb; }
+.scorecard-item .label { font-weight: 600; min-width: 140px; color: var(--primary); }
+
+/* Moat items */
+.moat-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--accent); }
+.moat-item strong { color: var(--primary); }
+
+/* Moves */
+.move { margin-bottom: 24px; padding: 20px; background: #f0f7ff; border-radius: 12px; border-left: 4px solid var(--accent); }
+.move-num { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.move p { margin-bottom: 0; }
+
+/* CTA Slide */
+.slide-cta { background: var(--primary); color: #fff; text-align: center; }
+.slide-cta .slide-number { color: rgba(255,255,255,0.3); }
+.slide-cta .logo { height: 36px; margin-bottom: 24px; filter: brightness(0) invert(1); }
+.slide-cta .divider { width: 48px; height: 2px; background: var(--accent); margin: 24px auto; }
+.slide-cta h2 { color: #fff; font-size: 28px; margin-bottom: 16px; }
+.slide-cta p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 16px; }
+.slide-cta .pb-logo { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--accent); margin-top: 32px; }
+.slide-cta a { color: var(--accent); text-decoration: none; }
+.slide-cta a:hover { text-decoration: underline; }
+.quote { font-style: italic; color: #555; border-left: 3px solid var(--accent); padding-left: 16px; margin: 16px 0; }
+
+/* Nav */
+.nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(2,32,59,0.92); backdrop-filter: blur(12px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 10px 24px; }
+.nav-dots { display: flex; gap: 8px; justify-content: center; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; border: none; transition: all 0.2s; }
+.nav-dot.active { background: var(--accent); transform: scale(1.3); }
+.nav-arrow { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 6px 14px; border-radius: 6px; transition: background 0.2s; }
+.nav-arrow:hover { background: rgba(255,255,255,0.1); }
+.nav-counter { color: rgba(255,255,255,0.5); font-size: 12px; font-weight: 600; text-align: right; }
+
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 90px; }
+  .slide-title h1 { font-size: 32px; }
+  .slide h2 { font-size: 24px; }
+  .comp-table { font-size: 11px; }
+  .comp-table th, .comp-table td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<section class="slide slide-title" id="slide-1">
+  <div class="slide-number">01/10</div>
+  <div class="slide-inner">
+    <img src="https://www.deskpro.com/img/logo.svg" alt="Deskpro" class="logo" onerror="this.style.display='none'">
+    <div class="label">Product Strategy Brief</div>
+    <h1>The Compliance Moat Nobody Can See</h1>
+    <p class="subtitle">A 24-year help desk veteran has built the only AI-powered support platform that works in sovereign, air-gapped environments. The market cannot see it because the messaging hides it.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-2">
+  <div class="slide-number">02/10</div>
+  <div class="slide-inner">
+    <h2>The Market</h2>
+    <p>The help desk market is consolidating around two opposing forces. Cloud-native platforms are racing to embed AI into every support workflow. Meanwhile, regulated industries are under increasing pressure to keep data sovereign, with compliance teams holding veto power over any cloud-only tooling decision.</p>
+    <p>The result is a structural gap. Every major help desk vendor adding AI does it through public cloud APIs. That means every compliance-bound organization is locked out of the AI revolution in customer support.</p>
+    <p>The market for AI-powered support in regulated environments is not a niche. It is the entire public sector, healthcare, defense, and financial services verticals combined. And the tier-one players (Zendesk, Salesforce) have not prioritized it because their business models depend on cloud margin.</p>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-3">
+  <div class="slide-number">03/10</div>
+  <div class="slide-inner">
+    <h2>The Field</h2>
+    <p>The competitive landscape is crowded at the surface, but thinly contested where it matters most. Most vendors fight for the same cloud-first buyer. Only a handful offer on-premise deployment, and none combine it with AI-native capabilities.</p>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Dimension</th><th>Zendesk</th><th>Freshdesk</th><th>Intercom</th><th>SysAid</th><th>ManageEngine</th><th class="highlight">Deskpro</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Market Tier</td><td>Enterprise incumbent</td><td>SMB-focused</td><td>AI-first (cloud)</td><td>Mid-market ITSM</td><td>Enterprise ITSM</td><td class="highlight">Mid-market + sovereign AI</td></tr>
+        <tr><td>AI Capability</td><td>Cloud AI add-on</td><td>Cloud AI add-on</td><td>AI-first (cloud only)</td><td>Limited AI</td><td>Limited AI</td><td class="highlight">AI in sovereign/air-gapped</td></tr>
+        <tr><td>Deployment</td><td>Cloud only</td><td>Cloud only</td><td>Cloud only</td><td>Cloud + on-prem</td><td>Cloud + on-prem</td><td class="highlight">Cloud + private + on-prem</td></tr>
+        <tr><td>Compliance</td><td>SOC II, GDPR</td><td>SOC II</td><td>SOC II</td><td>ISO 27001</td><td>ISO 27001</td><td class="highlight">SOC II, ISO 27001, HIPAA, CE+, CSA, GDPR</td></tr>
+        <tr><td>Primary Buyer</td><td>VP Support</td><td>Support managers</td><td>Product/Support</td><td>IT directors</td><td>IT directors</td><td class="highlight">CISO, Compliance, CTO</td></tr>
+      </tbody>
+    </table>
+    <p>SysAid and ManageEngine offer on-premise options but lack AI-native capabilities in those environments. That leaves Deskpro Private as the only platform where a compliance officer can approve AI-powered support without a data sovereignty exception.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-4">
+  <div class="slide-number">04/10</div>
+  <div class="slide-inner">
+    <h2>Your Moat</h2>
+    <p>Deskpro's strategic advantages are not the ones it leads with.</p>
+    <div class="moat-item">
+      <p><strong>Sovereign AI Architecture.</strong> Deskpro Private runs AI through AWS PrivateLink to Amazon Bedrock inside sovereign data centers and air-gapped environments. No competitor offers this combination. This is not a deployment option. It is a structural capability that took years of compliance investment to build.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>Compliance Certification Stack.</strong> SOC II, ISO 27001, HIPAA, Cyber Essentials Plus, CSA, and GDPR. These are not checkboxes. They are the result of sustained organizational investment that competitors cannot shortcut.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>24 Years of Domain Expertise.</strong> Building a help desk is straightforward. Building one that handles the edge cases of enterprise support at scale across 150 countries takes decades. This product maturity is the retention engine no startup can replicate and no incumbent has prioritized for sovereign environments.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-5">
+  <div class="slide-number">05/10</div>
+  <div class="slide-inner">
+    <h2>Positioning Scorecard</h2>
+    <p class="quote">"The Help Desk, Redefined."</p>
+    <div class="scorecard">
+      <div class="scorecard-item">
+        <div><span class="grade grade-c">C</span></div>
+        <div><div class="label">Clarity</div><p>"Redefined" communicates nothing specific. Every help desk vendor from Zendesk to Zoho makes the same omnichannel AI claims.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-c">C</span></div>
+        <div><div class="label">Differentiation</div><p>The most differentiated capability (sovereign AI in air-gapped environments) is treated as a feature, not the core positioning.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Believability</div><p>24 years of operation and a deep compliance stack lend credibility, but the generic messaging undermines it.</p></div>
+      </div>
+    </div>
+    <p>A compliance officer evaluating help desk platforms will not find the sovereign AI story on the homepage. They will find "faster resolution, fewer escalations" language that could belong to any competitor. The differentiation exists in the product, but it is invisible in the positioning.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-6">
+  <div class="slide-number">06/10</div>
+  <div class="slide-inner">
+    <h2>Value Prop Gap</h2>
+    <table class="gap-table">
+      <thead><tr><th>Current Positioning</th><th>Reframed Positioning</th></tr></thead>
+      <tbody>
+        <tr><td>"The Help Desk, Redefined"</td><td>"The only AI-powered support platform built for regulated environments"</td></tr>
+        <tr><td>Omnichannel support with AI</td><td>AI that compliance officers can approve</td></tr>
+        <tr><td>Deployment flexibility (cloud, private, on-prem)</td><td>Sovereign AI architecture (PrivateLink to Bedrock, air-gapped)</td></tr>
+        <tr><td>Compliance certs in the footer</td><td>Compliance-led buyer journey from the first click</td></tr>
+        <tr><td>One website for all buyers</td><td>Separate positioning for Cloud and Private</td></tr>
+      </tbody>
+    </table>
+    <p>The current positioning competes with Zendesk on features. The reframed positioning competes with nobody, because nobody else occupies the sovereign AI support category.</p>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-7">
+  <div class="slide-number">07/10</div>
+  <div class="slide-inner">
+    <h2>Narrative Opportunity</h2>
+    <p><strong>Today,</strong> Deskpro tells the story of a modern help desk with deployment options.</p>
+    <p><strong>Tomorrow,</strong> Deskpro should tell two stories.</p>
+    <p><strong>Deskpro Cloud</strong> is the profitable, steady mid-market help desk. It is the cash engine. It continues serving support team leaders who care about resolution speed and agent productivity.</p>
+    <p><strong>Deskpro Private</strong> is the strategic bet. It is the platform that government agencies, healthcare systems, defense contractors, and financial institutions choose because it is the only help desk their compliance team can approve. The buyer is the CISO, not the VP of Support. The proof points are regulatory approvals, not feature comparisons.</p>
+    <p>That "AI Maturity Journey" guide buried in the content hub should be the centerpiece of Private's buyer narrative, positioned as a framework for evaluating whether any help desk can survive regulatory scrutiny.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-8">
+  <div class="slide-number">08/10</div>
+  <div class="slide-inner">
+    <h2>Four Moves</h2>
+    <div class="move">
+      <div class="move-num">Move 1</div>
+      <p><strong>Split the product narrative.</strong> Give Deskpro Private its own subdomain, messaging framework, and buyer journey. The cloud buyer and the compliance buyer should never land on the same homepage.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 2</div>
+      <p><strong>Lead with compliance, not features.</strong> Move SOC II, ISO 27001, HIPAA, and Cyber Essentials Plus from the footer to the hero. Make the compliance certification stack the first thing a regulated buyer sees.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 3</div>
+      <p><strong>Restructure proof architecture.</strong> Replace generic support testimonials with quotes from government agencies and healthcare systems that chose Deskpro specifically because compliance approved it.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 4</div>
+      <p><strong>Define the buyer as the CISO.</strong> Commission a messaging audit against win/loss data. The hypothesis: Deskpro wins not when it out-features Zendesk, but when compliance eliminates cloud-only competitors.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-9">
+  <div class="slide-number">09/10</div>
+  <div class="slide-inner">
+    <h2>The Bigger Picture</h2>
+    <p>Deskpro has spent 24 years building a profitable help desk business. In that time, it has quietly assembled something no competitor can replicate quickly: the compliance infrastructure to run AI in the most restricted environments on earth.</p>
+    <p>The recent VP departure creates a natural inflection point. This is not a gap to fill with another generalist. It is an opportunity to restructure product leadership around a dual-track model before the window closes and a larger player figures out the sovereign AI play.</p>
+    <p><strong>The compliance moat is real. The question is whether the market will see it before a competitor builds one.</strong></p>
+  </div>
+</section>
+
+<section class="slide slide-cta" id="slide-10">
+  <div class="slide-number">10/10</div>
+  <div class="slide-inner">
+    <img src="https://www.deskpro.com/img/logo.svg" alt="Deskpro" class="logo" onerror="this.style.display='none'">
+    <div class="divider"></div>
+    <div class="pb-logo">PRODUCTBEACON</div>
+    <h2>What would we find with full access?</h2>
+    <p>This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <p><a href="https://productbeacon.agency">productbeacon.agency</a></p>
+  </div>
+</section>
+
+<nav class="nav">
+  <button class="nav-arrow" onclick="window.showSlide(currentSlide-1)">&larr;</button>
+  <div class="nav-dots" id="navDots"></div>
+  <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+    <span class="nav-counter" id="navCounter">1/10</span>
+    <button class="nav-arrow" onclick="window.showSlide(currentSlide+1)">&rarr;</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+  var totalSlides = 10;
+  window.currentSlide = 1;
+  var dotsEl = document.getElementById('navDots');
+  for(var i=1;i<=totalSlides;i++){
+    var d = document.createElement('button');
+    d.className = 'nav-dot' + (i===1?' active':'');
+    d.dataset.slide = i;
+    d.onclick = function(){ window.showSlide(parseInt(this.dataset.slide)); };
+    dotsEl.appendChild(d);
+  }
+  window.showSlide = function(n){
+    if(n<1||n>totalSlides) return;
+    window.currentSlide = n;
+    document.getElementById('slide-'+n).scrollIntoView({behavior:'smooth'});
+    var dots = document.querySelectorAll('.nav-dot');
+    dots.forEach(function(dot){ dot.classList.remove('active'); });
+    dots[n-1].classList.add('active');
+    document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') window.showSlide(window.currentSlide+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp') window.showSlide(window.currentSlide-1);
+  });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var n = parseInt(entry.target.id.replace('slide-',''));
+        window.currentSlide = n;
+        var dots = document.querySelectorAll('.nav-dot');
+        dots.forEach(function(dot){ dot.classList.remove('active'); });
+        dots[n-1].classList.add('active');
+        document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+      }
+    });
+  }, {threshold:0.5});
+  for(var i=1;i<=totalSlides;i++) observer.observe(document.getElementById('slide-'+i));
+})();
+</script>
+</body>
+</html>

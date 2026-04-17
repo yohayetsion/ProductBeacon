@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duna - Product Strategy Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0000EE;
+  --accent: #1B0624;
+  --bg: #FFFFFF;
+  --text: #160F0C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 900px; width: 100%; }
+.slide-number { position: absolute; top: 24px; right: 32px; font-size: 13px; font-weight: 600; color: rgba(0,0,0,0.2); letter-spacing: 1px; }
+
+.slide-title { background: linear-gradient(135deg, #0000EE 0%, #1B0624 100%); color: #fff; }
+.slide-title .slide-number { color: rgba(255,255,255,0.3); }
+.slide-title .label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+.slide-title h1 { font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+.slide-title .subtitle { font-size: 18px; font-weight: 300; line-height: 1.6; opacity: 0.75; max-width: 700px; }
+
+.slide-light { background: #f7f5ff; }
+.slide-white { background: #fff; }
+.slide h2 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 24px; }
+.slide p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; color: #333; }
+
+.comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+.comp-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+.comp-table td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; color: #444; vertical-align: top; }
+.comp-table tr:hover { background: #f0edff; }
+.comp-table .highlight { background: rgba(0,0,238,0.05); font-weight: 600; color: var(--primary); }
+
+.gap-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.gap-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+.gap-table th:first-child { background: #fee2e2; color: #991b1b; border-radius: 8px 0 0 0; }
+.gap-table th:last-child { background: #dcfce7; color: #166534; border-radius: 0 8px 0 0; }
+.gap-table td { padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; line-height: 1.6; vertical-align: top; }
+.gap-table td:first-child { color: #991b1b; background: #fef2f2; }
+.gap-table td:last-child { color: #166534; background: #f0fdf4; }
+
+.grade { display: inline-block; width: 32px; height: 32px; border-radius: 50%; font-weight: 700; font-size: 14px; line-height: 32px; text-align: center; color: #fff; margin-right: 8px; }
+.grade-a { background: #16a34a; }
+.grade-b { background: #d97706; }
+.grade-c { background: #dc2626; }
+
+.scorecard { margin: 24px 0; }
+.scorecard-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid #e5e7eb; }
+.scorecard-item .label { font-weight: 600; min-width: 140px; color: var(--primary); }
+
+.moat-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary); }
+.moat-item strong { color: var(--primary); }
+
+.move { margin-bottom: 24px; padding: 20px; background: #f0edff; border-radius: 12px; border-left: 4px solid var(--primary); }
+.move-num { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.move p { margin-bottom: 0; }
+
+.slide-cta { background: linear-gradient(135deg, #0000EE 0%, #1B0624 100%); color: #fff; text-align: center; }
+.slide-cta .slide-number { color: rgba(255,255,255,0.3); }
+.slide-cta .divider { width: 48px; height: 2px; background: rgba(255,255,255,0.4); margin: 24px auto; }
+.slide-cta h2 { color: #fff; font-size: 28px; margin-bottom: 16px; }
+.slide-cta p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 16px; }
+.slide-cta .pb-logo { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: rgba(255,255,255,0.7); margin-top: 32px; }
+.slide-cta a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+.slide-cta a:hover { border-bottom-color: #fff; }
+.quote { font-style: italic; color: #555; border-left: 3px solid var(--primary); padding-left: 16px; margin: 16px 0; }
+
+.nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,238,0.92); backdrop-filter: blur(12px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 10px 24px; }
+.nav-dots { display: flex; gap: 8px; justify-content: center; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; border: none; transition: all 0.2s; }
+.nav-dot.active { background: #fff; transform: scale(1.3); }
+.nav-arrow { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 6px 14px; border-radius: 6px; transition: background 0.2s; }
+.nav-arrow:hover { background: rgba(255,255,255,0.15); }
+.nav-counter { color: rgba(255,255,255,0.5); font-size: 12px; font-weight: 600; text-align: right; }
+
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 90px; }
+  .slide-title h1 { font-size: 32px; }
+  .slide h2 { font-size: 24px; }
+  .comp-table { font-size: 11px; }
+  .comp-table th, .comp-table td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<section class="slide slide-title" id="slide-1">
+  <div class="slide-number">01/10</div>
+  <div class="slide-inner">
+    <div class="label">Product Strategy Brief</div>
+    <h1>Network Effects on Paper Only</h1>
+    <p class="subtitle">A $35M Series A compliance platform with fintech royalty on the cap table has a "Business Identity Network" vision that could redefine onboarding. The question is whether network effects are being built into the product or exist only in the fundraising deck.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-2">
+  <div class="slide-number">02/10</div>
+  <div class="slide-inner">
+    <h2>The Market</h2>
+    <p>The compliance infrastructure market is growing on two converging forces. Regulatory complexity is expanding globally, with every new jurisdiction adding KYC, KYB, and AML requirements that compound the cost of onboarding businesses across borders. And AI is simultaneously creating new compliance risks (deepfakes, synthetic identities) and new solutions (automated document verification, AI-powered case management).</p>
+    <p>Compliance is shifting from cost center to product opportunity. Embedded finance requires embedded compliance. Cross-border commerce requires cross-border identity. The fintechs, banks, and platforms that need to onboard businesses compliantly are spending more each year.</p>
+    <p>Duna's $35M Series A from CapitalG, with angels from Snowflake, Adyen, Stripe, Notion, Personio, Wise, Mollie, Remote, Goldman Sachs, and Anthropic, validates both the market and the team. But the KYB/KYC/AML category has over ten well-funded competitors, and the buyer has seen the "AI-native compliance" pitch before.</p>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-3">
+  <div class="slide-number">03/10</div>
+  <div class="slide-inner">
+    <h2>The Field</h2>
+    <p>The compliance platform market splits into three segments: identity verification (KYC), business verification (KYB), and full-stack compliance spanning both plus ongoing AML monitoring. Duna competes in the third, most ambitious segment.</p>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Dimension</th><th>Sumsub</th><th>Persona</th><th>Fourthline</th><th>Middesk</th><th>Onfido/Entrust</th><th class="highlight">Duna</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Focus</td><td>Full-stack KYC+KYB</td><td>Identity API</td><td>KYC/AML banking</td><td>KYB (US)</td><td>AI identity</td><td class="highlight">Full-stack + network vision</td></tr>
+        <tr><td>European Depth</td><td>Broad but shallow</td><td>US-dominant</td><td>Deep in banking</td><td>US-only</td><td>Global (acquired)</td><td class="highlight">210+ registries, 7+ languages</td></tr>
+        <tr><td>AI Approach</td><td>AI-assisted</td><td>API-first</td><td>Process automation</td><td>Data aggregation</td><td>AI-powered docs</td><td class="highlight">AI-native, compliance as code</td></tr>
+        <tr><td>Differentiator</td><td>Geographic breadth</td><td>Developer experience</td><td>Banking relationships</td><td>SMB speed</td><td>Scale (Entrust)</td><td class="highlight">Policy Engine + network</td></tr>
+      </tbody>
+    </table>
+    <p>Against Sumsub, Duna differentiates through European depth. Against Fourthline, Duna differentiates through AI-native architecture. One of Duna's founders was previously CRO at Fourthline, meaning Duna was literally built to solve Fourthline's limitations.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-4">
+  <div class="slide-number">04/10</div>
+  <div class="slide-inner">
+    <h2>Your Moat</h2>
+    <p>Duna has three potential moat sources, each at a different maturity level.</p>
+    <div class="moat-item">
+      <p><strong>European Regulatory Depth (Real Today).</strong> With 210+ local registries, UBO registers, and local VAT integration across 7+ languages, Duna has invested heavily in the compliance complexity that makes European KYB harder than US KYB. Middesk cannot replicate this easily.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>Compliance as Code (Partially Built).</strong> The Policy Engine turns compliance policy into executable code. If policies become code on Duna's platform, switching costs increase dramatically because moving means re-encoding every policy from scratch.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>Business Identity Network (Aspirational).</strong> If businesses onboarded through Duna can share their verified identity with other Duna customers, the network effect creates a moat no single-tenant tool can match. This is the moat that determines whether Duna becomes infrastructure or just another tool.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-5">
+  <div class="slide-number">05/10</div>
+  <div class="slide-inner">
+    <h2>Positioning Scorecard</h2>
+    <p class="quote">"The new standard in compliance."</p>
+    <div class="scorecard">
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Clarity</div><p>Strong metrics (10.6x faster onboarding, 37% conversion increase, 4.8x analyst efficiency) make the value concrete.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Differentiation</div><p>"Compliance as code" via the Policy Engine is genuinely novel. But it is module six of six, not the headline.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-a">A</span></div>
+        <div><div class="label">Believability</div><p>CapitalG backing, founder pedigree (Stripe, Trade Republic), Sifted and WIRED recognition, and the Conversations video series create strong credibility.</p></div>
+      </div>
+    </div>
+    <p>Duna's positioning is effective at selling a compliance automation tool. But the company's stated mission is to "redefine identity for the global economy." The website sells the floor. The vision deck sells the ceiling. The gap between them is where the positioning work lives.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-6">
+  <div class="slide-number">06/10</div>
+  <div class="slide-inner">
+    <h2>Value Prop Gap</h2>
+    <table class="gap-table">
+      <thead><tr><th>Current Positioning</th><th>Reframed Positioning</th></tr></thead>
+      <tbody>
+        <tr><td>"The new standard in compliance"</td><td>"Compliance as code: your policy becomes software"</td></tr>
+        <tr><td>Onboarding speed metrics as headlines</td><td>Metrics as proof points, Policy Engine as headline</td></tr>
+        <tr><td>Six modules presented equally</td><td>Policy Engine as architectural differentiator</td></tr>
+        <tr><td>Tool-level language on product pages</td><td>Infrastructure-level language matching the Conversations series</td></tr>
+        <tr><td>Network vision on the About page</td><td>Network vision as the strategic investor/partner narrative</td></tr>
+      </tbody>
+    </table>
+    <p>The mission statement ("business identity is a problem rooted in code, not compliance") is exactly right. It lives on the About page, not the homepage.</p>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-7">
+  <div class="slide-number">07/10</div>
+  <div class="slide-inner">
+    <h2>Narrative Opportunity</h2>
+    <p><strong>Today,</strong> Duna tells two stories that do not converge. The website sells compliance automation. The Conversations video series sells infrastructure. Both are good. They need to become one.</p>
+    <p><strong>Tomorrow,</strong> the unified narrative: compliance is not a workflow to automate. It is a system to encode. Duna's Policy Engine turns compliance policy into executable code. That code runs across onboarding, decisioning, and lifecycle monitoring. And as more businesses are verified through that code, the Business Identity Network makes onboarding a one-click event.</p>
+    <p>That narrative takes the operational buyer on a journey from "this tool saves us time" to "this platform encodes our compliance DNA." It also answers the strategic risk: if Stripe or Adyen build compliance into their own platforms, they can replicate features, but they cannot replicate a network of shared business identities.</p>
+  </div>
+</section>
+
+<section class="slide slide-light" id="slide-8">
+  <div class="slide-number">08/10</div>
+  <div class="slide-inner">
+    <h2>Four Moves</h2>
+    <div class="move">
+      <div class="move-num">Move 1</div>
+      <p><strong>Elevate the Policy Engine.</strong> Move it from module six to the architectural headline. "Compliance as code" is the most defensible positioning in the set. It should lead the homepage.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 2</div>
+      <p><strong>Restructure the messaging hierarchy.</strong> Use the metrics (10.6x, 37%, 4.8x) as proof points beneath "compliance as code." The metrics sell a tool. The Policy Engine sells a platform.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 3</div>
+      <p><strong>Define the network activation strategy now.</strong> Which customer segment creates the highest density of shared identity lookups? Build network effects at 60 people, before Series B growth pressure makes it impossible.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 4</div>
+      <p><strong>Bridge the two narratives.</strong> Align every page to the infrastructure story (Conversations series), with tool-level detail as supporting evidence, not the other way around.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-white" id="slide-9">
+  <div class="slide-number">09/10</div>
+  <div class="slide-inner">
+    <h2>The Bigger Picture</h2>
+    <p>Duna's angel roster reads like a blueprint for the problem it solves. Stripe, Adyen, Wise, Mollie: these are the companies whose growth was constrained by the compliance complexity Duna aims to eliminate. That is not just investor validation. It is a product thesis embedded in the cap table.</p>
+    <p>But the same investors represent a strategic risk. If Stripe or Adyen decide to build rather than partner, Duna's market position becomes complicated. The Business Identity Network vision is the strategic answer, because a network of shared identities is something no single platform can replicate.</p>
+    <p><strong>The question is whether network effects are being architected into the product today, or whether they remain a slide in the fundraising deck. Post-Series A, the disciplined move is adoption density in one segment before geographic breadth. Network effects require density, not coverage.</strong></p>
+  </div>
+</section>
+
+<section class="slide slide-cta" id="slide-10">
+  <div class="slide-number">10/10</div>
+  <div class="slide-inner">
+    <div class="divider"></div>
+    <div class="pb-logo">PRODUCTBEACON</div>
+    <h2>What would we find with full access?</h2>
+    <p>This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <p><a href="https://productbeacon.agency">productbeacon.agency</a></p>
+  </div>
+</section>
+
+<nav class="nav">
+  <button class="nav-arrow" onclick="window.showSlide(currentSlide-1)">&larr;</button>
+  <div class="nav-dots" id="navDots"></div>
+  <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+    <span class="nav-counter" id="navCounter">1/10</span>
+    <button class="nav-arrow" onclick="window.showSlide(currentSlide+1)">&rarr;</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+  var totalSlides = 10;
+  window.currentSlide = 1;
+  var dotsEl = document.getElementById('navDots');
+  for(var i=1;i<=totalSlides;i++){
+    var d = document.createElement('button');
+    d.className = 'nav-dot' + (i===1?' active':'');
+    d.dataset.slide = i;
+    d.onclick = function(){ window.showSlide(parseInt(this.dataset.slide)); };
+    dotsEl.appendChild(d);
+  }
+  window.showSlide = function(n){
+    if(n<1||n>totalSlides) return;
+    window.currentSlide = n;
+    document.getElementById('slide-'+n).scrollIntoView({behavior:'smooth'});
+    var dots = document.querySelectorAll('.nav-dot');
+    dots.forEach(function(dot){ dot.classList.remove('active'); });
+    dots[n-1].classList.add('active');
+    document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') window.showSlide(window.currentSlide+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp') window.showSlide(window.currentSlide-1);
+  });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var n = parseInt(entry.target.id.replace('slide-',''));
+        window.currentSlide = n;
+        var dots = document.querySelectorAll('.nav-dot');
+        dots.forEach(function(dot){ dot.classList.remove('active'); });
+        dots[n-1].classList.add('active');
+        document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+      }
+    });
+  }, {threshold:0.5});
+  for(var i=1;i<=totalSlides;i++) observer.observe(document.getElementById('slide-'+i));
+})();
+</script>
+</body>
+</html>

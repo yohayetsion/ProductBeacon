@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FYLD - Product Strategy Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #FFF308;
+  --accent: #2448C1;
+  --bg: #2E2E2E;
+  --text: #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; color: #e0e0e0; background: var(--bg); }
+
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 900px; width: 100%; }
+.slide-number { position: absolute; top: 24px; right: 32px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+
+.slide-title { background: linear-gradient(135deg, #1a1a1a 0%, #2E2E2E 100%); color: #fff; }
+.slide-title .logo { height: 40px; margin-bottom: 32px; }
+.slide-title .label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; }
+.slide-title h1 { font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; color: var(--primary); }
+.slide-title .subtitle { font-size: 18px; font-weight: 300; line-height: 1.6; opacity: 0.7; max-width: 700px; }
+
+.slide-dark { background: #2a2a2a; }
+.slide-darker { background: #222; }
+.slide h2 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 24px; }
+.slide p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; color: #c0c0c0; }
+
+.comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+.comp-table th { background: var(--accent); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+.comp-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); color: #b0b0b0; vertical-align: top; }
+.comp-table tr:hover { background: rgba(255,243,8,0.04); }
+.comp-table .highlight { color: var(--primary); font-weight: 600; background: rgba(255,243,8,0.06); }
+
+.gap-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.gap-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+.gap-table th:first-child { background: rgba(220,38,38,0.15); color: #fca5a5; border-radius: 8px 0 0 0; }
+.gap-table th:last-child { background: rgba(22,163,74,0.15); color: #86efac; border-radius: 0 8px 0 0; }
+.gap-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; line-height: 1.6; vertical-align: top; }
+.gap-table td:first-child { color: #fca5a5; background: rgba(220,38,38,0.05); }
+.gap-table td:last-child { color: #86efac; background: rgba(22,163,74,0.05); }
+
+.grade { display: inline-block; width: 32px; height: 32px; border-radius: 50%; font-weight: 700; font-size: 14px; line-height: 32px; text-align: center; color: #fff; margin-right: 8px; }
+.grade-a { background: #16a34a; }
+.grade-b { background: #d97706; }
+.grade-c { background: #dc2626; }
+
+.scorecard { margin: 24px 0; }
+.scorecard-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.scorecard-item .label { font-weight: 600; min-width: 140px; color: var(--primary); }
+
+.moat-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary); }
+.moat-item strong { color: #fff; }
+
+.move { margin-bottom: 24px; padding: 20px; background: rgba(255,243,8,0.06); border-radius: 12px; border-left: 4px solid var(--primary); }
+.move-num { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.move p { margin-bottom: 0; }
+
+.slide-cta { background: linear-gradient(135deg, #1a1a1a 0%, #2E2E2E 100%); color: #fff; text-align: center; }
+.slide-cta .logo { height: 40px; margin-bottom: 24px; }
+.slide-cta .divider { width: 48px; height: 2px; background: var(--primary); margin: 24px auto; }
+.slide-cta h2 { color: var(--primary); font-size: 28px; margin-bottom: 16px; }
+.slide-cta p { color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 16px; }
+.slide-cta .pb-logo { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--primary); margin-top: 32px; }
+.slide-cta a { color: var(--primary); text-decoration: none; }
+.slide-cta a:hover { text-decoration: underline; }
+.quote { font-style: italic; color: #a0a0a0; border-left: 3px solid var(--primary); padding-left: 16px; margin: 16px 0; }
+
+.nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(30,30,30,0.92); backdrop-filter: blur(12px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 10px 24px; }
+.nav-dots { display: flex; gap: 8px; justify-content: center; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.15); cursor: pointer; border: none; transition: all 0.2s; }
+.nav-dot.active { background: var(--primary); transform: scale(1.3); }
+.nav-arrow { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 6px 14px; border-radius: 6px; transition: background 0.2s; }
+.nav-arrow:hover { background: rgba(255,255,255,0.1); }
+.nav-counter { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 600; text-align: right; }
+
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 90px; }
+  .slide-title h1 { font-size: 32px; }
+  .slide h2 { font-size: 24px; }
+  .comp-table { font-size: 11px; }
+  .comp-table th, .comp-table td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<section class="slide slide-title" id="slide-1">
+  <div class="slide-number">01/10</div>
+  <div class="slide-inner">
+    <img src="https://fyld.ai/hs-fs/hubfs/FYLD-logo-for-website.png?width=245&height=50&name=FYLD-logo-for-website.png" alt="FYLD" class="logo" onerror="this.style.display='none'">
+    <div class="label">Product Strategy Brief</div>
+    <h1>$41M for a Point Solution Story</h1>
+    <p class="subtitle">A frontline intelligence platform with genuinely differentiated AI video analysis is telling a point-solution story with platform-sized capital behind it. The gap between the raise and the narrative is where the strategic risk lives.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-2">
+  <div class="slide-number">02/10</div>
+  <div class="slide-inner">
+    <h2>The Market</h2>
+    <p>Infrastructure operators across utilities, highways, water, and energy manage thousands of field workers using paper-based processes or fragmented digital tools. The cost of this fragmentation is measured in repeat site visits, safety incidents, rework, and regulatory penalties.</p>
+    <p>Two forces are converging. Aging infrastructure in the US and UK is driving record spending on maintenance and construction. And AI-native video analysis has matured to the point where field interactions can be converted into structured operational intelligence in real time.</p>
+    <p>The result is a market where "frontline intelligence" is becoming a line item in infrastructure budgets. But the category is not yet established. Buyers still benchmark solutions against construction management platforms and field service tools, not against a purpose-built intelligence layer.</p>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-3">
+  <div class="slide-number">03/10</div>
+  <div class="slide-inner">
+    <h2>The Field</h2>
+    <p>FYLD sits at the intersection of field service management, construction tech, and AI-powered operational intelligence. Buyers have not yet separated "frontline intelligence" from adjacent categories.</p>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Dimension</th><th>Procore</th><th>Fieldwire/Hilti</th><th>Autodesk CC</th><th>Synchroteam</th><th>IronSight</th><th class="highlight">FYLD</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Focus</td><td>Construction mgmt</td><td>Field task mgmt</td><td>Construction suite</td><td>FSM scheduling</td><td>Oil/gas ops</td><td class="highlight">Frontline intelligence</td></tr>
+        <tr><td>AI Native</td><td>No</td><td>No</td><td>Emerging</td><td>No</td><td>No</td><td class="highlight">Yes (video analysis)</td></tr>
+        <tr><td>Data Type</td><td>Project data</td><td>Task data</td><td>Design/build</td><td>Schedule data</td><td>Operational</td><td class="highlight">Behavioral (point of work)</td></tr>
+        <tr><td>Primary Buyer</td><td>Project managers</td><td>Site managers</td><td>Enterprise IT</td><td>Ops managers</td><td>Energy operators</td><td class="highlight">Ops directors, CDIOs, Safety</td></tr>
+      </tbody>
+    </table>
+    <p>The real competitive threat is not any single player. It is the "good enough" combination of existing FSM tools plus cheap video capture plus a PowerBI dashboard. That cobbled-together stack is what most infrastructure operators actually use today.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-4">
+  <div class="slide-number">04/10</div>
+  <div class="slide-inner">
+    <h2>Your Moat</h2>
+    <p>FYLD's strategic moat is not the video analysis. It is the data.</p>
+    <div class="moat-item">
+      <p><strong>Behavioral Data at Scale.</strong> Every video work assessment, every compliance check, every field interaction creates a structured dataset about how physical work actually gets done. No competitor has this. Procore has project data. Fieldwire has task data. FYLD has behavioral data from the point of work, captured by the workers themselves.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>The 2,600-User Proof Point.</strong> M Group Water: 2,600 people using the platform every day. That is not a software metric. That is a behavioral change metric. It represents the kind of adoption density that turns a tool into a data asset.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>The Data Flywheel.</strong> More field teams using FYLD means smarter AI predictions, which means better outcomes, which drives more usage. This compounding advantage is the defensible value proposition. It is conspicuously absent from the current narrative.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-5">
+  <div class="slide-number">05/10</div>
+  <div class="slide-inner">
+    <h2>Positioning Scorecard</h2>
+    <p class="quote">"Frontline intelligence. Driving operational excellence."</p>
+    <div class="scorecard">
+      <div class="scorecard-item">
+        <div><span class="grade grade-c">C</span></div>
+        <div><div class="label">Clarity</div><p>"Operational excellence" is a consulting framework term. No operations director wakes up wanting operational excellence. They want fewer callbacks and fewer calls from the regulator.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Differentiation</div><p>The outcomes are real (48% fewer injuries, 12% productivity boost, 6x ROI) but wrapped in infrastructure jargon that makes the value sound operational, not transformational.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Believability</div><p>Enterprise customer roster (Southern Water, SGN, Amey, Kier, Galliford Try, NCDOT) and the 2,600-user daily stat are strong. But the metrics are buried below the fold.</p></div>
+      </div>
+    </div>
+    <p>FYLD has transformational outcomes but communicates them in operational language. The buyer who needs to hear "AI catches the miss before it becomes a callback" instead hears "minimize repeat visits, avoidable rework, delivery variability."</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-6">
+  <div class="slide-number">06/10</div>
+  <div class="slide-inner">
+    <h2>Value Prop Gap</h2>
+    <table class="gap-table">
+      <thead><tr><th>Current Positioning</th><th>Reframed Positioning</th></tr></thead>
+      <tbody>
+        <tr><td>"Operational excellence"</td><td>"Your field teams get it right the first time"</td></tr>
+        <tr><td>Connect / Focus / Transform (architecture)</td><td>Fewer callbacks, fewer incidents, fewer surprises</td></tr>
+        <tr><td>Efficient delivery, operational resilience</td><td>Stop repeat visits, see problems before they cost money</td></tr>
+        <tr><td>Platform capability description</td><td>Data flywheel: more usage makes the platform smarter</td></tr>
+        <tr><td>Point-solution metrics</td><td>Platform narrative connecting $41M to a vision</td></tr>
+      </tbody>
+    </table>
+    <p>The current positioning explains how the product works. The reframed positioning explains why operations directors should care, in the language they use in their own budget meetings.</p>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-7">
+  <div class="slide-number">07/10</div>
+  <div class="slide-inner">
+    <h2>Narrative Opportunity</h2>
+    <p><strong style="color:#fff">Today,</strong> FYLD tells the story of a frontline intelligence platform with three layers and strong outcome metrics. It is a good product story. But $41M demands a platform story.</p>
+    <p><strong style="color:#fff">Tomorrow,</strong> FYLD should tell the story of the data flywheel. Every field interaction builds a behavioral dataset no competitor can replicate. That dataset powers predictions: which jobs will fail, which crews will have safety incidents, which projects will run over budget.</p>
+    <p>Moving from retrospective analysis ("here is what happened") to prospective intelligence ("here is what will happen tomorrow") fundamentally changes the buyer conversation from "safety tool" to "operational decision engine." That shift changes the budget line, the buyer, and the competitive set all at once.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-8">
+  <div class="slide-number">08/10</div>
+  <div class="slide-inner">
+    <h2>Four Moves</h2>
+    <div class="move">
+      <div class="move-num">Move 1</div>
+      <p><strong>Rewrite the homepage in buyer language.</strong> Replace product architecture (Connect, Focus, Transform) with outcome narratives for three personas: ops director ("fewer repeat visits"), CDIO ("data-driven decisions"), safety director ("incidents prevented, not just reported").</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 2</div>
+      <p><strong>Lead with the 2,600-user stat.</strong> The M Group Water number is the most powerful proof point on the site. It belongs in the headline. Behavioral change at that scale separates a tool from a platform.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 3</div>
+      <p><strong>Build the data flywheel narrative.</strong> Articulate how usage compounds intelligence. This is the story that justifies the $41M raise and positions FYLD as a platform, not a point solution.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 4</div>
+      <p><strong>Sequence the geographic expansion.</strong> Running three theaters (UK, US, Latin America) post-Series B with 130 people is ambitious. Sequence for dominance in one market before diluting focus across three.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-9">
+  <div class="slide-number">09/10</div>
+  <div class="slide-inner">
+    <h2>The Bigger Picture</h2>
+    <p>FYLD has built something genuinely rare: a product that field workers actually use every day, at scale, to change how physical work gets done. The 48% injury reduction and 2,600-user daily adoption are evidence of product-market fit in a category that barely existed three years ago.</p>
+    <p>The question is not whether the product works. It is whether the narrative matches the ambition. $41M in Series B capital buys a runway to define "frontline intelligence" as a category. But category creation requires a story that buyers, analysts, and competitors all recognize as distinct.</p>
+    <p><strong style="color:#fff">The data flywheel is the moat. The prediction capability is the unlock. The narrative is the gap.</strong></p>
+  </div>
+</section>
+
+<section class="slide slide-cta" id="slide-10">
+  <div class="slide-number">10/10</div>
+  <div class="slide-inner">
+    <img src="https://fyld.ai/hs-fs/hubfs/FYLD-logo-for-website.png?width=245&height=50&name=FYLD-logo-for-website.png" alt="FYLD" class="logo" onerror="this.style.display='none'">
+    <div class="divider"></div>
+    <div class="pb-logo">PRODUCTBEACON</div>
+    <h2>What would we find with full access?</h2>
+    <p>This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <p><a href="https://productbeacon.agency">productbeacon.agency</a></p>
+  </div>
+</section>
+
+<nav class="nav">
+  <button class="nav-arrow" onclick="window.showSlide(currentSlide-1)">&larr;</button>
+  <div class="nav-dots" id="navDots"></div>
+  <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+    <span class="nav-counter" id="navCounter">1/10</span>
+    <button class="nav-arrow" onclick="window.showSlide(currentSlide+1)">&rarr;</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+  var totalSlides = 10;
+  window.currentSlide = 1;
+  var dotsEl = document.getElementById('navDots');
+  for(var i=1;i<=totalSlides;i++){
+    var d = document.createElement('button');
+    d.className = 'nav-dot' + (i===1?' active':'');
+    d.dataset.slide = i;
+    d.onclick = function(){ window.showSlide(parseInt(this.dataset.slide)); };
+    dotsEl.appendChild(d);
+  }
+  window.showSlide = function(n){
+    if(n<1||n>totalSlides) return;
+    window.currentSlide = n;
+    document.getElementById('slide-'+n).scrollIntoView({behavior:'smooth'});
+    var dots = document.querySelectorAll('.nav-dot');
+    dots.forEach(function(dot){ dot.classList.remove('active'); });
+    dots[n-1].classList.add('active');
+    document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') window.showSlide(window.currentSlide+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp') window.showSlide(window.currentSlide-1);
+  });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var n = parseInt(entry.target.id.replace('slide-',''));
+        window.currentSlide = n;
+        var dots = document.querySelectorAll('.nav-dot');
+        dots.forEach(function(dot){ dot.classList.remove('active'); });
+        dots[n-1].classList.add('active');
+        document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+      }
+    });
+  }, {threshold:0.5});
+  for(var i=1;i<=totalSlides;i++) observer.observe(document.getElementById('slide-'+i));
+})();
+</script>
+</body>
+</html>

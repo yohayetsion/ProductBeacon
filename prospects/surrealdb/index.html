@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SurrealDB - Product Strategy Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #7C5CFC;
+  --accent: #888495;
+  --bg: #242424;
+  --text: #DEDCE4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 900px; width: 100%; }
+.slide-number { position: absolute; top: 24px; right: 32px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+
+.slide-title { background: linear-gradient(135deg, #1a1a2e 0%, #242424 100%); color: #fff; }
+.slide-title .logo { height: 36px; margin-bottom: 32px; }
+.slide-title .label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; }
+.slide-title h1 { font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+.slide-title .subtitle { font-size: 18px; font-weight: 300; line-height: 1.6; opacity: 0.7; max-width: 700px; }
+
+.slide-dark { background: #2a2a2e; }
+.slide-darker { background: #1e1e22; }
+.slide h2 { font-size: 32px; font-weight: 700; color: var(--primary); margin-bottom: 24px; }
+.slide p { font-size: 16px; line-height: 1.75; margin-bottom: 16px; color: #b8b6c4; }
+
+.comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+.comp-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+.comp-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #a0a0b0; vertical-align: top; }
+.comp-table tr:hover { background: rgba(124,92,252,0.06); }
+.comp-table .highlight { color: #fff; font-weight: 600; background: rgba(124,92,252,0.08); }
+
+.gap-table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.gap-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+.gap-table th:first-child { background: rgba(220,38,38,0.12); color: #fca5a5; border-radius: 8px 0 0 0; }
+.gap-table th:last-child { background: rgba(22,163,74,0.12); color: #86efac; border-radius: 0 8px 0 0; }
+.gap-table td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 14px; line-height: 1.6; vertical-align: top; }
+.gap-table td:first-child { color: #fca5a5; background: rgba(220,38,38,0.04); }
+.gap-table td:last-child { color: #86efac; background: rgba(22,163,74,0.04); }
+
+.grade { display: inline-block; width: 32px; height: 32px; border-radius: 50%; font-weight: 700; font-size: 14px; line-height: 32px; text-align: center; color: #fff; margin-right: 8px; }
+.grade-a { background: #16a34a; }
+.grade-b { background: #d97706; }
+.grade-c { background: #dc2626; }
+
+.scorecard { margin: 24px 0; }
+.scorecard-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.scorecard-item .label { font-weight: 600; min-width: 140px; color: var(--primary); }
+
+.moat-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary); }
+.moat-item strong { color: #fff; }
+
+.move { margin-bottom: 24px; padding: 20px; background: rgba(124,92,252,0.08); border-radius: 12px; border-left: 4px solid var(--primary); }
+.move-num { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.move p { margin-bottom: 0; }
+
+.slide-cta { background: linear-gradient(135deg, #1a1a2e 0%, #242424 100%); color: #fff; text-align: center; }
+.slide-cta .logo { height: 36px; margin-bottom: 24px; }
+.slide-cta .divider { width: 48px; height: 2px; background: var(--primary); margin: 24px auto; }
+.slide-cta h2 { color: var(--primary); font-size: 28px; margin-bottom: 16px; }
+.slide-cta p { color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 16px; }
+.slide-cta .pb-logo { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--primary); margin-top: 32px; }
+.slide-cta a { color: var(--primary); text-decoration: none; }
+.slide-cta a:hover { text-decoration: underline; }
+.quote { font-style: italic; color: #8a889a; border-left: 3px solid var(--primary); padding-left: 16px; margin: 16px 0; }
+
+.nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(26,26,30,0.92); backdrop-filter: blur(12px); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 10px 24px; }
+.nav-dots { display: flex; gap: 8px; justify-content: center; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.12); cursor: pointer; border: none; transition: all 0.2s; }
+.nav-dot.active { background: var(--primary); transform: scale(1.3); }
+.nav-arrow { background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 6px 14px; border-radius: 6px; transition: background 0.2s; }
+.nav-arrow:hover { background: rgba(255,255,255,0.08); }
+.nav-counter { color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 600; text-align: right; }
+
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 90px; }
+  .slide-title h1 { font-size: 32px; }
+  .slide h2 { font-size: 24px; }
+  .comp-table { font-size: 11px; }
+  .comp-table th, .comp-table td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+
+<section class="slide slide-title" id="slide-1">
+  <div class="slide-number">01/10</div>
+  <div class="slide-inner">
+    <img src="https://surrealdb.com/assets/static/logo.BG7_TG2b.svg" alt="SurrealDB" class="logo" onerror="this.style.display='none'">
+    <div class="label">Product Strategy Brief</div>
+    <h1>The Database for a World Not Yet Here</h1>
+    <p class="subtitle">A multi-model database is betting its future on AI agents that barely exist in production yet. It is either the most prescient infrastructure bet of the decade or a solution waiting for its problem to arrive.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-2">
+  <div class="slide-number">02/10</div>
+  <div class="slide-inner">
+    <h2>The Market</h2>
+    <p>The database market is enormous ($80B+) but a specific wedge is opening. AI agents need context that spans documents, graphs, vectors, time-series, and relational data. Today, building an AI agent means stitching together five or more specialized databases, each with its own query language and failure modes.</p>
+    <p>The "context layer" opportunity sits at the intersection of two macro trends. AI is moving from single-model inference to multi-step agent workflows that require persistent, structured memory. And developers are exhausted by database sprawl, actively seeking consolidation.</p>
+    <p>Meanwhile, the "Postgres for everything" movement is gaining momentum. PostgreSQL extensions (pgvector, Apache AGE, TimescaleDB) let developers add capabilities to the most trusted relational engine in the world without learning a new query language. This is SurrealDB's most formidable competitor, and it is free.</p>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-3">
+  <div class="slide-number">03/10</div>
+  <div class="slide-inner">
+    <h2>The Field</h2>
+    <p>SurrealDB competes on multiple fronts simultaneously. The multi-model approach means every specialist database vendor is a potential critic.</p>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Dimension</th><th>Postgres + Ext</th><th>Neo4j</th><th>MongoDB</th><th>ArangoDB</th><th>Pinecone</th><th class="highlight">SurrealDB</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Data Models</td><td>Multi (extensions)</td><td>Graph + vector</td><td>Document + vector</td><td>Doc + graph + KV</td><td>Vector only</td><td class="highlight">Doc + graph + vector + TS + relational</td></tr>
+        <tr><td>AI Agent Support</td><td>Assembly required</td><td>Graph memory</td><td>Document-centric</td><td>Limited</td><td>Purpose-built vector</td><td class="highlight">Native multi-model + Spectron</td></tr>
+        <tr><td>Query Language</td><td>SQL (universal)</td><td>Cypher</td><td>MQL</td><td>AQL</td><td>Proprietary API</td><td class="highlight">SurrealQL (proprietary)</td></tr>
+        <tr><td>Dev Familiarity</td><td>Decades</td><td>Graph specialists</td><td>Massive base</td><td>Niche</td><td>AI/ML engineers</td><td class="highlight">Growing, but new</td></tr>
+        <tr><td>Maturity</td><td>Decades</td><td>15+ years</td><td>15+ years</td><td>10+ years</td><td>3-5 years</td><td class="highlight">Early</td></tr>
+      </tbody>
+    </table>
+    <p>ArangoDB is the most instructive comparison. Founded in 2014, genuinely multi-model, open-source, technically solid. After a decade, ArangoDB has not broken through to mainstream adoption. The multi-model pitch alone does not win markets.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-4">
+  <div class="slide-number">04/10</div>
+  <div class="slide-inner">
+    <h2>Your Moat</h2>
+    <p>SurrealDB's potential moat has three components, each at a different stage.</p>
+    <div class="moat-item">
+      <p><strong>SurrealQL (Adoption Barrier and Lock-in).</strong> Every developer who learns the proprietary query language and builds production systems on it becomes locked in through skill investment and codebase dependency. This is the same dynamic that made SQL, MQL, and Cypher durable competitive advantages. But it is also the biggest adoption barrier.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>Multi-Model Native Architecture.</strong> Purpose-built multi-model engines handle cross-model queries (join a graph traversal with a vector search in one ACID transaction) that extension-based approaches struggle with at scale. The moat depends on workloads becoming complex enough to justify the switching cost.</p>
+    </div>
+    <div class="moat-item">
+      <p><strong>Spectron Memory Layer.</strong> Purpose-built for agent workflows with entities, knowledge graphs, temporal facts, and hybrid retrieval. The sharpest competitive wedge, but it targets a market (production AI agents at scale) that has not yet arrived.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-5">
+  <div class="slide-number">05/10</div>
+  <div class="slide-inner">
+    <h2>Positioning Scorecard</h2>
+    <p class="quote">"Replace five databases with one."</p>
+    <div class="scorecard">
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Clarity</div><p>The consolidation claim is immediately understandable. Five becomes one. Simple.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-b">B</span></div>
+        <div><div class="label">Differentiation</div><p>The multi-model native story is differentiated, but "agents fail due to context, not models" is the sharper claim and it does not lead the homepage.</p></div>
+      </div>
+      <div class="scorecard-item">
+        <div><span class="grade grade-c">C</span></div>
+        <div><div class="label">Believability</div><p>Enterprise logos (Nvidia, Apple, Samsung) create implied scale, but one production case study (Aspire) is thin proof for a five-database replacement claim.</p></div>
+      </div>
+    </div>
+    <p>SurrealDB is trying to be both a database consolidation play and an AI agent infrastructure play simultaneously. For a 90-person company post-Series A, that breadth of messaging is a risk. Picking one story and winning it completely would be stronger than fighting five credibility battles at once.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-6">
+  <div class="slide-number">06/10</div>
+  <div class="slide-inner">
+    <h2>Value Prop Gap</h2>
+    <table class="gap-table">
+      <thead><tr><th>Current Positioning</th><th>Reframed Positioning</th></tr></thead>
+      <tbody>
+        <tr><td>"Replace five databases with one"</td><td>"The context layer for AI agents"</td></tr>
+        <tr><td>Multi-model as the headline</td><td>Multi-model as the enabler of the agent context story</td></tr>
+        <tr><td>Five simultaneous credibility battles</td><td>One credibility battle: agent memory vs. stitched alternatives</td></tr>
+        <tr><td>SurrealDB + Spectron as two products</td><td>Unified agent infrastructure platform</td></tr>
+        <tr><td>Enterprise logos as proof</td><td>Production case studies with measurable outcomes</td></tr>
+      </tbody>
+    </table>
+    <p>"Agents fail due to context, not models" is the strongest narrative in SurrealDB's arsenal. It reframes the AI infrastructure conversation away from compute (where SurrealDB cannot compete) and toward data architecture (where SurrealDB has a genuine point of view).</p>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-7">
+  <div class="slide-number">07/10</div>
+  <div class="slide-inner">
+    <h2>Narrative Opportunity</h2>
+    <p><strong style="color:#fff">Today,</strong> SurrealDB tells two stories simultaneously. Database consolidation and AI agent infrastructure compete for the same homepage. The result is messaging that speaks to two different buyers without fully committing to either.</p>
+    <p><strong style="color:#fff">Tomorrow,</strong> the narrative should converge. AI agents need context that spans documents, graphs, vectors, time-series, and relational data. That context needs to live in one engine with ACID guarantees, not stitched across five databases with eventual consistency. SurrealDB is that engine. The consolidation is the architectural reason. The agent context layer is the buyer-facing story.</p>
+    <p>If this narrative gains traction, SurrealDB becomes the "context infrastructure" company, a layer as fundamental to AI agents as S3 became to cloud applications. But it requires the AI agent market to mature from experimental to production.</p>
+  </div>
+</section>
+
+<section class="slide slide-dark" id="slide-8">
+  <div class="slide-number">08/10</div>
+  <div class="slide-inner">
+    <h2>Four Moves</h2>
+    <div class="move">
+      <div class="move-num">Move 1</div>
+      <p><strong>Pick one buyer persona and commit.</strong> AI agent developers who need persistent, structured context are the sharpest wedge. Win that narrative completely before expanding to general-purpose database consolidation.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 2</div>
+      <p><strong>Resolve the Spectron positioning tension.</strong> A second product before the first has achieved category dominance muddies the water. Fold Spectron into SurrealDB as a capability or position it as the agent-specific interface to the same engine.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 3</div>
+      <p><strong>Build production case studies.</strong> One Aspire deployment is not enough. Commission detailed production stories showing cross-model queries, agent workflows, and measurable infrastructure simplification.</p>
+    </div>
+    <div class="move">
+      <div class="move-num">Move 4</div>
+      <p><strong>Stress-test the timing bet.</strong> Map the AI agent market's production readiness against runway and growth targets. If the market is 18-24 months out, a "bridge" developer infrastructure play may be needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-darker" id="slide-9">
+  <div class="slide-number">09/10</div>
+  <div class="slide-inner">
+    <h2>The Bigger Picture</h2>
+    <p>SurrealDB is making a bet that the database landscape will be reshaped by AI agents the same way it was reshaped by mobile, cloud, and big data before. If that bet is right, being the native context layer for agents is a generational infrastructure opportunity.</p>
+    <p>The technical foundation is strong. But ArangoDB proved that technical differentiation alone does not win the multi-model market. What wins is a clear buyer, a clear use case, and a narrative that makes the technology feel inevitable rather than aspirational.</p>
+    <p><strong style="color:#fff">"Agents fail due to context, not models" is that narrative. The question is whether product leadership is building the roadmap, the proof architecture, and the go-to-market around that singular bet, or hedging across five database categories and hoping one breaks through.</strong></p>
+  </div>
+</section>
+
+<section class="slide slide-cta" id="slide-10">
+  <div class="slide-number">10/10</div>
+  <div class="slide-inner">
+    <img src="https://surrealdb.com/assets/static/logo.BG7_TG2b.svg" alt="SurrealDB" class="logo" onerror="this.style.display='none'">
+    <div class="divider"></div>
+    <div class="pb-logo">PRODUCTBEACON</div>
+    <h2>What would we find with full access?</h2>
+    <p>This brief is based on public information. Imagine what we'd find with access to the product, the team, and the roadmap.</p>
+    <p><a href="https://productbeacon.agency">productbeacon.agency</a></p>
+  </div>
+</section>
+
+<nav class="nav">
+  <button class="nav-arrow" onclick="window.showSlide(currentSlide-1)">&larr;</button>
+  <div class="nav-dots" id="navDots"></div>
+  <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+    <span class="nav-counter" id="navCounter">1/10</span>
+    <button class="nav-arrow" onclick="window.showSlide(currentSlide+1)">&rarr;</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+  var totalSlides = 10;
+  window.currentSlide = 1;
+  var dotsEl = document.getElementById('navDots');
+  for(var i=1;i<=totalSlides;i++){
+    var d = document.createElement('button');
+    d.className = 'nav-dot' + (i===1?' active':'');
+    d.dataset.slide = i;
+    d.onclick = function(){ window.showSlide(parseInt(this.dataset.slide)); };
+    dotsEl.appendChild(d);
+  }
+  window.showSlide = function(n){
+    if(n<1||n>totalSlides) return;
+    window.currentSlide = n;
+    document.getElementById('slide-'+n).scrollIntoView({behavior:'smooth'});
+    var dots = document.querySelectorAll('.nav-dot');
+    dots.forEach(function(dot){ dot.classList.remove('active'); });
+    dots[n-1].classList.add('active');
+    document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') window.showSlide(window.currentSlide+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp') window.showSlide(window.currentSlide-1);
+  });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var n = parseInt(entry.target.id.replace('slide-',''));
+        window.currentSlide = n;
+        var dots = document.querySelectorAll('.nav-dot');
+        dots.forEach(function(dot){ dot.classList.remove('active'); });
+        dots[n-1].classList.add('active');
+        document.getElementById('navCounter').textContent = n+'/'+totalSlides;
+      }
+    });
+  }, {threshold:0.5});
+  for(var i=1;i<=totalSlides;i++) observer.observe(document.getElementById('slide-'+i));
+})();
+</script>
+</body>
+</html>

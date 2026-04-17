@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metafour — Product Strategy Brief | ProductBeacon</title>
+<link rel="icon" type="image/png" href="https://cdn-jhcpf.nitrocdn.com/CgqPoxPtwOPbMrJJeCJwqjHXPNIImMIY/assets/images/optimized/rev-184b1a2/www.metafour.com/wp-content/uploads/2023/10/cropped-cropped-Site-Identity-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+body { font-family: 'Mulish', sans-serif; background: #FFFFFF; color: #000000; line-height: 1.6; }
+.slide { min-height: 100vh; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 60px 40px 100px; position: relative; }
+.slide-inner { max-width: 960px; width: 100%; }
+.slide-number { position: absolute; top: 20px; right: 28px; font-family: 'Roboto Mono', monospace; font-size: 12px; color: #999; letter-spacing: 1px; }
+.pill { display: inline-block; background: #EBF2FA; color: #11458F; font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 2px; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; border: 1px solid rgba(17,69,143,0.2); }
+h1 { font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+h3 { font-family: 'Roboto Mono', monospace; font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+p { font-size: 16px; color: #333; margin-bottom: 14px; }
+.title-slide { text-align: center; background: #0A1628; color: #fff; }
+.title-slide .slide-inner { color: #fff; }
+.title-slide .logo-img { height: 48px; margin-bottom: 24px; }
+.title-slide .label { font-family: 'Roboto Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #168AC5; font-weight: 600; margin-bottom: 12px; }
+.title-slide h1 { font-size: 36px; margin-bottom: 16px; color: #fff; }
+.title-slide .subtitle { font-size: 16px; color: #94A3B8; max-width: 600px; margin: 0 auto 12px; }
+.title-slide .prepared { font-family: 'Roboto Mono', monospace; font-size: 13px; color: #168AC5; margin-top: 24px; }
+.num-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin: 30px 0; }
+.num-card { background: #EBF2FA; border-radius: 6px; padding: 32px 24px; text-align: center; border: 1px solid rgba(17,69,143,0.1); }
+.num-card .big-num { font-family: 'Roboto Mono', monospace; font-size: 64px; font-weight: 700; color: #11458F; line-height: 1; margin-bottom: 8px; }
+.num-card .num-label { font-size: 14px; color: #666; }
+.table-wrap { overflow-x: auto; margin: 24px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { font-family: 'Roboto Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; background: #EBF2FA; padding: 12px 14px; text-align: left; border-bottom: 2px solid #E5E7EB; color: #666; }
+td { padding: 12px 14px; border-bottom: 1px solid #F3F4F6; vertical-align: top; }
+tr:hover td { background: #FAFAFA; }
+.col-highlight { background: rgba(17,69,143,0.06); }
+th.col-highlight { background: rgba(17,69,143,0.12); color: #11458F; }
+.accent-cards { display: grid; gap: 24px; margin: 24px 0; }
+.accent-card { background: #fff; border-left: 4px solid #168AC5; border-radius: 6px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.accent-card h3 { color: #11458F; margin-bottom: 10px; }
+.accent-card p { margin-bottom: 0; }
+.quote-block { background: #EBF2FA; border-left: 4px solid #11458F; padding: 20px 24px; border-radius: 0 6px 6px 0; margin: 20px 0; font-size: 18px; font-style: italic; }
+.grades { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 20px 0; }
+.grade-item { text-align: center; padding: 16px; background: #EBF2FA; border-radius: 6px; }
+.grade-item .grade-label { font-family: 'Roboto Mono', monospace; font-size: 12px; color: #666; letter-spacing: 1px; margin-bottom: 6px; }
+.grade-item .grade-value { font-size: 28px; font-weight: 800; }
+.grade-green { color: #10B981; }
+.grade-amber { color: #F59E0B; }
+.grade-red { color: #EF4444; }
+.strengths-gaps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+.strengths-gaps h3 { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+.sg-list { list-style: none; padding: 0; }
+.sg-list li { font-size: 14px; padding: 6px 0; color: #444; position: relative; padding-left: 18px; }
+.sg-list li::before { content: ''; position: absolute; left: 0; top: 13px; width: 8px; height: 8px; border-radius: 50%; }
+.strengths .sg-list li::before { background: #10B981; }
+.gaps .sg-list li::before { background: #F59E0B; }
+.vp-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+.vp-box { padding: 28px; border-radius: 6px; }
+.vp-box.current { background: #FFF7ED; border: 1px solid #FDE68A; }
+.vp-box.reframed { background: #F0FDF4; border: 1px solid #BBF7D0; }
+.vp-box .vp-label { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 600; margin-bottom: 10px; }
+.vp-box.current .vp-label { color: #D97706; }
+.vp-box.reframed .vp-label { color: #059669; }
+.vp-box p { font-size: 16px; font-weight: 600; margin-bottom: 0; }
+.narrative-block { margin: 20px 0; }
+.narrative-block .n-label { font-family: 'Roboto Mono', monospace; font-size: 12px; letter-spacing: 2px; font-weight: 600; color: #11458F; margin-bottom: 8px; }
+.narrative-block p { font-size: 15px; }
+.divider { width: 60px; height: 3px; background: linear-gradient(90deg, #168AC5, #11458F); border-radius: 2px; margin: 20px 0; }
+.rec-list { list-style: none; padding: 0; counter-reset: rec; }
+.rec-item { background: #EBF2FA; border-radius: 6px; padding: 24px 24px 24px 70px; margin-bottom: 16px; position: relative; border: 1px solid rgba(17,69,143,0.1); }
+.rec-item::before { counter-increment: rec; content: counter(rec); position: absolute; left: 20px; top: 22px; width: 36px; height: 36px; background: #168AC5; color: #fff; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.rec-item h3 { margin-bottom: 8px; }
+.rec-item p { font-size: 14px; color: #444; margin-bottom: 0; }
+.opp-text p { font-size: 16px; line-height: 1.7; margin-bottom: 18px; color: #333; }
+.opp-text a { color: #11458F; text-decoration: none; font-weight: 600; }
+.opp-text a:hover { text-decoration: underline; }
+.cta-slide { text-align: center; }
+.cta-slide .logo-img { height: 40px; margin-bottom: 20px; }
+.cta-slide .beacon-label { font-family: 'Roboto Mono', monospace; font-size: 14px; letter-spacing: 4px; color: #11458F; font-weight: 700; margin-bottom: 24px; }
+.cta-slide .cta-text { font-size: 18px; color: #444; max-width: 600px; margin: 0 auto 32px; font-style: italic; }
+.cta-btn { display: inline-block; background: #11458F; color: #fff; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 15px; padding: 16px 40px; border-radius: 6px; text-decoration: none; letter-spacing: 1px; transition: all 0.2s; box-shadow: 0 2px 8px rgba(17,69,143,0.3); }
+.cta-btn:hover { background: #0D3672; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(17,69,143,0.4); }
+.nav-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(0,0,0,0.08); padding: 12px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.nav-left { display: flex; align-items: center; gap: 8px; }
+.nav-center { display: flex; align-items: center; gap: 12px; }
+.nav-right { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.nav-btn { background: none; border: 1px solid #E5E7EB; border-radius: 6px; padding: 8px 16px; cursor: pointer; font-family: 'Roboto Mono', monospace; font-size: 12px; color: #222; transition: all 0.15s; }
+.nav-btn:hover { background: #EBF2FA; border-color: #11458F; color: #11458F; }
+.nav-btn:disabled { opacity: 0.3; cursor: default; }
+.nav-btn:disabled:hover { background: none; border-color: #E5E7EB; color: #222; }
+.nav-counter { font-family: 'Roboto Mono', monospace; font-size: 13px; color: #666; min-width: 60px; text-align: center; cursor: pointer; }
+.nav-counter:hover { color: #11458F; }
+.nav-brand { font-family: 'Roboto Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #11458F; font-weight: 600; }
+.jump-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; align-items: center; justify-content: center; }
+.jump-overlay.active { display: flex; }
+.jump-modal { background: #fff; border-radius: 6px; padding: 32px; max-width: 400px; width: 90%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+.jump-modal h3 { margin-bottom: 16px; }
+.jump-modal input { width: 100%; padding: 12px; border: 1px solid #E5E7EB; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 16px; text-align: center; outline: none; }
+.jump-modal input:focus { border-color: #11458F; }
+.jump-modal .jump-hint { font-size: 12px; color: #666; margin-top: 8px; text-align: center; }
+@media (max-width: 768px) {
+  .slide { padding: 40px 20px 100px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  .num-card .big-num { font-size: 48px; }
+  .num-cards { grid-template-columns: 1fr; }
+  .vp-compare { grid-template-columns: 1fr; }
+  .strengths-gaps { grid-template-columns: 1fr; }
+  .grades { grid-template-columns: 1fr 1fr 1fr; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 10px; }
+}
+@media (max-width: 480px) {
+  .title-slide h1 { font-size: 24px; }
+  .grades { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide title-slide" id="slide-1">
+<span class="slide-number" style="color:#668">01</span>
+<div class="slide-inner">
+  <img class="logo-img" src="https://cdn-jhcpf.nitrocdn.com/CgqPoxPtwOPbMrJJeCJwqjHXPNIImMIY/assets/images/source/rev-184b1a2/www.metafour.com/wp-content/uploads/2019/06/Metafour-Logo-Horizontal.svg" alt="Metafour" style="filter: brightness(0) invert(1);">
+  <div class="label">PRODUCT STRATEGY BRIEF</div>
+  <h1>Four Decades of Quiet Expertise</h1>
+  <p class="subtitle">A 40-year employee-owned delivery software company is sitting on a logistics intelligence dataset and a mailroom monopoly, but the market sees neither because the messaging leads with heritage instead of outcomes.</p>
+  <div class="prepared">Prepared by ProductBeacon &nbsp;|&nbsp; April 2026</div>
+</div>
+</div>
+
+<!-- Slide 2: The Market -->
+<div class="slide" id="slide-2">
+<span class="slide-number">02</span>
+<div class="slide-inner">
+  <div class="pill">THE MARKET</div>
+  <h2>Delivery Management Has Commoditized Around Its Core Features</h2>
+  <div class="num-cards">
+    <div class="num-card">
+      <div class="big-num">95M</div>
+      <div class="num-label">Items shipped annually through the Metafour platform</div>
+    </div>
+    <div class="num-card">
+      <div class="big-num">18K</div>
+      <div class="num-label">Businesses across 150 countries</div>
+    </div>
+    <div class="num-card">
+      <div class="big-num">40+</div>
+      <div class="num-label">Carrier integrations built over four decades</div>
+    </div>
+  </div>
+  <p>Route optimization, real-time tracking, electronic proof of delivery, and driver apps are available as standalone tools with aggressive pricing and modern interfaces. API-first competitors can replicate carrier connections faster than Metafour built them. The bundled suite model is under pressure from point solutions that each do one piece better.</p>
+  <p>Meanwhile, the corporate mailroom segment sits quietly underserved. No funded competitor is targeting it. This is the niche nobody else wants, and that makes it valuable.</p>
+</div>
+</div>
+
+<!-- Slide 3: The Field -->
+<div class="slide" id="slide-3">
+<span class="slide-number">03</span>
+<div class="slide-inner">
+  <div class="pill">COMPETITIVE LANDSCAPE</div>
+  <h2>Horizontal Point Solutions vs. Bundled Breadth</h2>
+  <p>Every element of Metafour's offering is available as a standalone tool. The defense is end-to-end coverage. The mailroom business is the position nobody can attack.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Tookan</th>
+          <th>Detrack</th>
+          <th>OptimoRoute</th>
+          <th>Track-POD</th>
+          <th class="col-highlight">Metafour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core</strong></td>
+          <td>Last-mile management</td>
+          <td>Tracking + ePOD</td>
+          <td>Route optimization</td>
+          <td>Delivery + route planning</td>
+          <td class="col-highlight"><strong>End-to-end delivery + mailroom</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Approach</strong></td>
+          <td>Modern UX, aggressive pricing</td>
+          <td>Real-time tracking focus</td>
+          <td>Field service expansion</td>
+          <td>Driver app + ePOD</td>
+          <td class="col-highlight"><strong>Bundled workflow, rate shopping to invoicing</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Scale</strong></td>
+          <td>Global SaaS</td>
+          <td>SMB-focused</td>
+          <td>Field service + delivery</td>
+          <td>SMB/mid-market</td>
+          <td class="col-highlight"><strong>18,000 businesses, 150 countries</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Differentiator</strong></td>
+          <td>Route optimization engine</td>
+          <td>Simplicity</td>
+          <td>Optimization algorithms</td>
+          <td>All-in-one delivery</td>
+          <td class="col-highlight"><strong>40+ carrier integrations, employee-owned</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- Slide 4: Your Moat -->
+<div class="slide" id="slide-4">
+<span class="slide-number">04</span>
+<div class="slide-inner">
+  <div class="pill">YOUR MOAT</div>
+  <h2>Three Advantages, Only One Being Leveraged</h2>
+  <div class="accent-cards">
+    <div class="accent-card">
+      <h3>Employee Ownership</h3>
+      <p>In a market of VC-funded and PE-owned competitors, Metafour makes product decisions for long-term customer value. No board pushing premature AI features. No sponsor demanding price increases. Enterprise buyers tired of vendor instability respond to this. Yet it appears nowhere in the product narrative.</p>
+    </div>
+    <div class="accent-card">
+      <h3>The Logistics Data Asset</h3>
+      <p>95 million items shipped annually across 150 countries. Four decades of delivery patterns, carrier performance, pricing trends, and seasonal volume. Properly productized, this transforms Metafour from a workflow tool into a logistics intelligence platform. Predictive carrier selection, delivery success scoring, dynamic pricing.</p>
+    </div>
+    <div class="accent-card">
+      <h3>The Mailroom Monopoly</h3>
+      <p>Metamail has almost no funded competitors. Allen and Overy processing 15,000 pieces weekly is exactly the kind of sticky, invisible infrastructure that creates durable revenue. This is either a legacy stream or a strategic wedge into enterprise facilities management.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Slide 5: Positioning Scorecard -->
+<div class="slide" id="slide-5">
+<span class="slide-number">05</span>
+<div class="slide-inner">
+  <div class="pill">POSITIONING</div>
+  <h2>Heritage as a Double-Edged Sword</h2>
+  <div class="quote-block">"Leading Delivery Software" with "4 Decades of Expertise"</div>
+  <div class="grades">
+    <div class="grade-item">
+      <div class="grade-label">CLARITY</div>
+      <div class="grade-value grade-red">C</div>
+    </div>
+    <div class="grade-item">
+      <div class="grade-label">DIFFERENTIATION</div>
+      <div class="grade-value grade-red">C</div>
+    </div>
+    <div class="grade-item">
+      <div class="grade-label">BELIEVABILITY</div>
+      <div class="grade-value grade-amber">B</div>
+    </div>
+  </div>
+  <div class="strengths-gaps">
+    <div class="strengths">
+      <h3>Strengths</h3>
+      <ul class="sg-list">
+        <li>Concrete case study metrics (50% less data entry, 6 hrs saved daily)</li>
+        <li>Enterprise credibility (Allen and Overy, Hellmann)</li>
+        <li>Employee ownership as implicit trust signal</li>
+      </ul>
+    </div>
+    <div class="gaps">
+      <h3>Gaps</h3>
+      <ul class="sg-list">
+        <li>Two products, six industries, zero unified story</li>
+        <li>"40+ years" signals legacy to growth-stage buyers</li>
+        <li>Vision statement contradicts heritage positioning</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Slide 6: Value Prop Gap -->
+<div class="slide" id="slide-6">
+<span class="slide-number">06</span>
+<div class="slide-inner">
+  <div class="pill">VALUE PROPOSITION</div>
+  <h2>From Selling History to Selling Intelligence</h2>
+  <div class="vp-compare">
+    <div class="vp-box current">
+      <div class="vp-label">CURRENT</div>
+      <p>"Leading delivery software with 40+ years of expertise"</p>
+    </div>
+    <div class="vp-box reframed">
+      <div class="vp-label">REFRAMED</div>
+      <p>"The only delivery platform where your data makes every shipment smarter than the last"</p>
+    </div>
+  </div>
+  <div class="vp-compare">
+    <div class="vp-box current">
+      <div class="vp-label">CURRENT</div>
+      <p>Two parallel products on one homepage, no connecting narrative</p>
+    </div>
+    <div class="vp-box reframed">
+      <div class="vp-label">REFRAMED</div>
+      <p>"We manage every delivery, in and out" -- one story, two entry points</p>
+    </div>
+  </div>
+  <p>The 40 years are not a value proposition. The data those 40 years generated is.</p>
+</div>
+</div>
+
+<!-- Slide 7: Narrative Opportunity -->
+<div class="slide" id="slide-7">
+<span class="slide-number">07</span>
+<div class="slide-inner">
+  <div class="pill">THE NARRATIVE</div>
+  <h2>From Reliable Veteran to Logistics Intelligence Company</h2>
+  <div class="narrative-block">
+    <div class="n-label">TODAY</div>
+    <p>Metafour tells the story of a reliable software company with decades of experience. Heritage leads because nobody has forced the question of what comes next. Two products sit side by side without a connecting thread.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="narrative-block">
+    <div class="n-label">TOMORROW</div>
+    <p>Metafour tells the story of a logistics intelligence company. 40 years of delivery data power predictive carrier selection and delivery success scoring. Employee ownership becomes the trust anchor. The mailroom business becomes the wedge into enterprise facilities management. "We have seen more deliveries than anyone, and that makes your deliveries smarter."</p>
+  </div>
+</div>
+</div>
+
+<!-- Slide 8: Four Moves -->
+<div class="slide" id="slide-8">
+<span class="slide-number">08</span>
+<div class="slide-inner">
+  <div class="pill">RECOMMENDATIONS</div>
+  <h2>Four Moves</h2>
+  <ol class="rec-list">
+    <li class="rec-item">
+      <h3>Unify the Product Narrative</h3>
+      <p>Stop presenting courier and mailroom software as parallel products. Build one story: "Metafour manages the movement of physical items, in and out." One homepage, one value proposition, two entry points.</p>
+    </li>
+    <li class="rec-item">
+      <h3>Lead with Outcomes, Retire Heritage</h3>
+      <p>Replace "40+ years of expertise" with the metrics that already exist. "50% less data entry. 60% fewer customer queries. 6 hours saved daily." The founding year is footnote material.</p>
+    </li>
+    <li class="rec-item">
+      <h3>Quantify the Data Asset</h3>
+      <p>Commission an assessment of what 95 million annual shipments across 150 countries represent as a dataset. Identify the intelligence features (predictive carrier selection, delivery success scoring) that would change how buyers perceive the value.</p>
+    </li>
+    <li class="rec-item">
+      <h3>Position Employee Ownership as Competitive Advantage</h3>
+      <p>Build messaging that turns the ownership structure into buyer reassurance. Enterprise buyers at firms like Allen and Overy care deeply about vendor stability. "Our roadmap is built for your success, not our investors' exit."</p>
+    </li>
+  </ol>
+</div>
+</div>
+
+<!-- Slide 9: The Bigger Picture -->
+<div class="slide" id="slide-9">
+<span class="slide-number">09</span>
+<div class="slide-inner">
+  <div class="pill">THE OPPORTUNITY</div>
+  <h2>The Bigger Picture</h2>
+  <div class="opp-text">
+    <p>Metafour has survived four decades in a market that has commoditized around it. That survival is evidence of a business that understands its customers deeply enough to retain them through waves of disruption.</p>
+    <p>But the delivery management market is being reshaped by AI, real-time visibility, and API-first infrastructure. The window to convert 40 years of data into a defensible intelligence moat is open now. Every year that passes, competitors accumulate more delivery data and the head start narrows.</p>
+    <p>The question is not whether Metafour can continue to operate successfully. It can. The question is whether someone decides to unlock the strategic assets this company has been quietly building since before most of its competitors were founded.</p>
+  </div>
+</div>
+</div>
+
+<!-- Slide 10: CTA -->
+<div class="slide" id="slide-10">
+<span class="slide-number">10</span>
+<div class="slide-inner cta-slide">
+  <img class="logo-img" src="https://cdn-jhcpf.nitrocdn.com/CgqPoxPtwOPbMrJJeCJwqjHXPNIImMIY/assets/images/source/rev-184b1a2/www.metafour.com/wp-content/uploads/2019/06/Metafour-Logo-Horizontal.svg" alt="Metafour">
+  <div class="beacon-label">PRODUCTBEACON</div>
+  <p class="cta-text">This brief is based on public information. Imagine what we would find with access to the product, the team, and the roadmap.</p>
+  <a href="https://productbeacon.agency" target="_blank" class="cta-btn">productbeacon.agency</a>
+</div>
+</div>
+
+<!-- Nav Bar -->
+<div class="nav-bar">
+  <div class="nav-left"><span class="nav-brand">PRODUCTBEACON</span></div>
+  <div class="nav-center">
+    <button class="nav-btn" id="prev-btn" onclick="window.prevSlide()">&larr; Prev</button>
+    <span class="nav-counter" id="nav-counter" onclick="window.promptSlide()">1 / 10</span>
+    <button class="nav-btn" id="next-btn" onclick="window.nextSlide()">Next &rarr;</button>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="window.showSlide(1)">Start</button>
+    <button class="nav-btn" onclick="window.showSlide(10)">End</button>
+  </div>
+</div>
+
+<!-- Jump Modal -->
+<div class="jump-overlay" id="jump-overlay" onclick="window.closeJump(event)">
+  <div class="jump-modal">
+    <h3>Go to slide</h3>
+    <input type="number" id="jump-input" min="1" max="10" placeholder="1-10" onkeydown="if(event.key==='Enter')window.jumpToSlide()">
+    <div class="jump-hint">Press Enter to go, Escape to cancel</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var current = 1, total = 10;
+  function showSlide(n) { if (n < 1 || n > total) return; current = n; var el = document.getElementById('slide-' + n); if (el) el.scrollIntoView({ behavior: 'smooth' }); updateNav(); }
+  function updateNav() { document.getElementById('nav-counter').textContent = current + ' / ' + total; document.getElementById('prev-btn').disabled = current === 1; document.getElementById('next-btn').disabled = current === total; }
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+  function promptSlide() { var o = document.getElementById('jump-overlay'); o.classList.add('active'); var i = document.getElementById('jump-input'); i.value = ''; i.focus(); }
+  function closeJump(e) { if (e && e.target !== document.getElementById('jump-overlay')) return; document.getElementById('jump-overlay').classList.remove('active'); }
+  function jumpToSlide() { var v = parseInt(document.getElementById('jump-input').value); if (v >= 1 && v <= total) showSlide(v); document.getElementById('jump-overlay').classList.remove('active'); }
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('jump-overlay').classList.contains('active')) { if (e.key === 'Escape') document.getElementById('jump-overlay').classList.remove('active'); return; }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); nextSlide(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prevSlide(); }
+    else if (e.key === 'Home') { e.preventDefault(); showSlide(1); }
+    else if (e.key === 'End') { e.preventDefault(); showSlide(total); }
+    else if (e.key === 'g' || e.key === 'G') { promptSlide(); }
+  });
+  var debounce = null;
+  window.addEventListener('scroll', function() { clearTimeout(debounce); debounce = setTimeout(function() { var vc = window.innerHeight / 2; for (var i = total; i >= 1; i--) { var el = document.getElementById('slide-' + i); if (el && el.getBoundingClientRect().top <= vc) { current = i; updateNav(); break; } } }, 80); });
+  window.showSlide = showSlide; window.nextSlide = nextSlide; window.prevSlide = prevSlide; window.promptSlide = promptSlide; window.closeJump = closeJump; window.jumpToSlide = jumpToSlide;
+  updateNav();
+})();
+</script>
+</body>
+</html>
