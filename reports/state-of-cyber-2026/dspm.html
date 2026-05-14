@@ -609,6 +609,50 @@ svg:not(.nav-bar svg) {
         border: none !important;
     }
     
+
+    /* ── Disclosures slide (auto-moved from cover) ── */
+    .disclosures-section {
+        padding: 50px 70px 80px;
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--bg, #0a0e1a);
+        color: var(--text-primary, #f8fafc);
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .disclosures-heading {
+        color: var(--primary, #F59E0B);
+        font-size: 26pt;
+        font-weight: 800;
+        border-bottom: 2px solid var(--primary, #F59E0B);
+        padding-bottom: 12px;
+        margin: 0 0 28px 0;
+    }
+    .disclosure-block {
+        margin-bottom: 30px;
+        padding: 18px 22px;
+        background: rgba(245, 158, 11, 0.04);
+        border-left: 4px solid var(--primary, #F59E0B);
+        border-radius: 0 6px 6px 0;
+    }
+    .disclosure-block.disclosure-not-advice {
+        background: rgba(245, 158, 11, 0.07);
+    }
+    .disclosure-label {
+        color: var(--primary, #F59E0B);
+        font-size: 14pt;
+        font-weight: 700;
+        margin: 0 0 8pt 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .disclosure-block p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--text-primary, #e2e8f0);
+        margin: 0;
+    }
+    
 </style>
 </head>
 <body>
@@ -624,7 +668,7 @@ svg:not(.nav-bar svg) {
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <div class="hero-title">ProductBeacon — State of Cyber Security Markets 2026, Front 3: The Data Posture Front</div>
 <div data-prev-section="s1-1">
-  <p class="hero-subtitle"><em>Disclosure: The author is Head of Product (Fractional) at AXIA, which competes in DSPM. This chapter uses only publicly available material and reflects the author's personal view, not AXIA's position.</em></p>
+  
 </div>
 </div>
 </div>
@@ -1903,6 +1947,23 @@ svg:not(.nav-bar svg) {
 </ol>
 </section>
 
+</div>
+
+<div class="slide" data-slide="disclosures">
+<section class="disclosures-section">
+<h2 class="disclosures-heading">Disclosures</h2>
+
+<div class="disclosure-block">
+<h3 class="disclosure-label">Disclosure</h3>
+<p>Disclosure: The author is Head of Product (Fractional) at AXIA, which competes in DSPM. This chapter uses only publicly available material and reflects the author's personal view, not AXIA's position.</p>
+</div>
+
+<div class="disclosure-block disclosure-not-advice">
+<h3 class="disclosure-label">Not investment advice</h3>
+<p>This report does not constitute investment, legal, tax, or accounting advice. No claim in this report should be relied upon as the basis for any investment decision. The author has no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+</div>
+
+</section>
 </div>
 <div class="nav-bar">
 <div></div>
