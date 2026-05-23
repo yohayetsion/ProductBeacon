@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProductBeacon Research</title>
+<meta name="description" content="Impartial cyber market research, published on the open web, methodology-first. Authored by Yohay Etsion.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ProductBeacon Research">
+<meta property="og:description" content="Impartial cyber market research, published on the open web, methodology-first. Authored by Yohay Etsion.">
+<meta property="og:url" content="https://productbeacon.agency/research/">
+<meta property="og:image" content="https://productbeacon.agency/research/og/umbrella.png">
+<meta property="og:site_name" content="ProductBeacon Research">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProductBeacon Research">
+<meta name="twitter:description" content="Impartial cyber market research, published on the open web, methodology-first. Authored by Yohay Etsion.">
+<meta name="twitter:image" content="https://productbeacon.agency/research/og/umbrella.png">
+
+<!-- Favicon (Research variant per A-5) -->
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================================
+   ProductBeacon Research. Umbrella Page (A-10).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3.
+   Pattern parity with A-7 landing page.
+   ==================================================================== */
+
+:root {
+  /* Color tokens */
+  --ink: #0F172A;
+  --surface: #1E293B;
+  --bright: #F8FAFC;
+  --primary-text: #F1F5F9;
+  --slate-400: #94A3B8;
+  --slate-600: #475569;
+  --amber: #F59E0B;
+  --amber-60: #F59E0B99;
+  --amber-12: #F59E0B1F;
+  --amber-20: #F59E0B33;
+  --amber-light: #FBBF24;
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1; STATIC on umbrella per A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
+}
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
+}
+
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.topnav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text);
+}
+.topnav-brand-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav-brand-wordmark { font-size: 16px; font-weight: 500; }
+.topnav-brand-wordmark strong { font-weight: 700; }
+.topnav-links {
+  display: flex;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary-text);
+  transition: color var(--research-mark-hover-transition);
+}
+.topnav-links a:hover { color: var(--amber); }
+.topnav-links a.active { color: var(--amber); }
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-7);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 64ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Sub-hero methodology link (prominent) */
+.hero-methodology {
+  margin: var(--space-3) 0 0 0;
+}
+.hero-methodology a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.hero-methodology a:hover { color: var(--amber-light); }
+
+/* ---------- Section base ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+}
+.section-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-6) 0;
+  max-width: var(--reading-max);
+}
+
+/* ---------- Featured Research card ---------- */
+.featured-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+  max-width: 880px;
+}
+.featured-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.featured-card .chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--amber);
+  margin: 0;
+}
+.featured-card .chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.featured-card .chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+  max-width: var(--reading-max);
+}
+.featured-card .chapter-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.featured-card .chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.featured-card .chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.featured-card .chapter-links a:hover { color: var(--amber-light); }
+.featured-card .chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Coming soon placeholder ---------- */
+.coming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+.coming-card {
+  background: transparent;
+  border: 1px dashed var(--slate-600);
+  border-radius: 12px;
+  padding: var(--space-5);
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.coming-card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-600);
+  margin: 0;
+}
+.coming-card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--slate-400);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.coming-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate-600);
+  margin: 0;
+}
+
+/* ---------- Footer (A-3 verbatim) ---------- */
+.footer {
+  border-top: 1px solid var(--slate-600);
+  background: var(--ink);
+  padding: var(--space-8) 32px var(--space-7);
+}
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.footer-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  margin-bottom: var(--space-6);
+}
+.footer-block-lockup { margin-bottom: var(--space-4); }
+.footer-block-parent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--primary-text);
+}
+.footer-block-parent .parent-icon {
+  width: 24px; height: 24px;
+  background: var(--amber);
+  border-radius: 5px;
+}
+.footer-block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.footer-block-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+  max-width: var(--reading-max);
+}
+.footer-block-body a {
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--slate-600);
+  transition: color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+}
+.footer-block-body a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+.footer-divider {
+  height: 1px;
+  background: var(--slate-600);
+  margin: 0 0 var(--space-5) 0;
+}
+.footer-disclosure {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--slate-400);
+  line-height: 1.6;
+  margin: 0;
+  max-width: var(--reading-max);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-6) 24px; }
+  .section-title { font-size: 28px; }
+  .featured-card { padding: var(--space-5); }
+  .featured-card .chapter-title { font-size: 24px; }
+  .coming-grid { grid-template-columns: 1fr; }
+  .footer-blocks { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer { padding: var(--space-7) 24px var(--space-6); }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .topnav { padding: 16px 24px; flex-wrap: wrap; }
+  .topnav-links { gap: var(--space-3); }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .topnav-brand-wordmark { font-size: 14px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     SLIM AMBER RIBBON (A-1 §5.1; static on umbrella surface)
+     Continuation text: "Published Research" (per A-1 §5.1)
+     ===================================================================== -->
+<div class="ribbon" role="banner" aria-label="ProductBeacon Research surface">
+  <div class="ribbon-left">
+    <a href="/research/" class="lockup lockup-md" aria-label="ProductBeacon Research">
+      <span class="lockup-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+          <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+        </svg>
+      </span>
+      <span class="lockup-divider" aria-hidden="true"></span>
+      <span class="lockup-wordmark">Research</span>
+    </a>
+  </div>
+  <div class="ribbon-continuation">Published Research</div>
+</div>
+
+<!-- =====================================================================
+     TOP NAV (Research item active per A-2 §1.2)
+     ===================================================================== -->
+<nav class="topnav" aria-label="Primary">
+  <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
+    <span class="topnav-brand-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" fill="#0F172A"/>
+        <path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/>
+      </svg>
+    </span>
+    <span class="topnav-brand-wordmark"><strong>Product</strong>Beacon</span>
+  </a>
+  <ul class="topnav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/research/" class="active">Research</a></li>
+    <li><a href="/services/">Practice</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</nav>
+
+<!-- =====================================================================
+     HERO (Research-as-publishing-program framing)
+     ===================================================================== -->
+<main>
+<header class="hero">
+  <div class="hero-lockup-row">
+    <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
+      <span class="lockup-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="11" r="5" fill="#F59E0B"/>
+          <path d="M8 18 L16 30 L24 18 Z" fill="#F59E0B"/>
+        </svg>
+      </span>
+      <span class="lockup-divider" aria-hidden="true"></span>
+      <span class="lockup-wordmark">Research</span>
+    </span>
+  </div>
+
+  <p class="hero-eyebrow">Open Web · Methodology-First · Zero Vendor Sponsors</p>
+
+  <h1 class="hero-headline">ProductBeacon Research.</h1>
+
+  <p class="hero-subhead">
+    Impartial cyber market research, published on the open web. Every report runs on publicly verifiable sources and the Verifiable Proxy Rule. Methodology is the product, and it ships on one canonical page covering every market we cover.
+  </p>
+
+  <div class="hero-byline">
+    <p class="hero-byline-line1">Authored by Yohay Etsion.</p>
+    <p class="hero-byline-line2">
+      Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026).
+    </p>
+  </div>
+
+  <p class="hero-methodology">
+    <a href="/research/methodology.html">Read the methodology &rarr;</a>
+  </p>
+</header>
+
+<!-- =====================================================================
+     FEATURED RESEARCH: State of Cyber 2026
+     ===================================================================== -->
+<section class="section" aria-labelledby="featured-title">
+  <p class="section-eyebrow">Featured Research</p>
+  <h2 class="section-title" id="featured-title">Currently published.</h2>
+  <p class="section-intro">
+    One market, one report, in progress. Part 1 lands the data battlegrounds; Part 2 lands the platform wars.
+  </p>
+
+  <article class="featured-card" aria-labelledby="soc2026-title">
+    <p class="chapter-label">Cyber Security Markets · Part 1</p>
+    <h3 class="chapter-title" id="soc2026-title">State of Cyber Security Markets 2026.</h3>
+    <p class="chapter-teaser">
+      An operator's read of the IRM, DLP, DSPM, and convergence battlegrounds. Four chapters, 280 citations, zero vendor sponsors, with falsifiable tests for 2027 grounded in publicly observable signals.
+    </p>
+    <p class="chapter-meta">4 Chapters &middot; 280 Citations &middot; Part 1 Live</p>
+    <div class="chapter-links">
+      <a href="/research/state-of-cyber-2026/">Read Part 1 &rarr;</a>
+      <span class="sep">&middot;</span>
+      <a href="/research/state-of-cyber-2026/#chapters">Jump to chapters</a>
+    </div>
+  </article>
+</section>
+
+<!-- =====================================================================
+     COMING SOON / FUTURE RESEARCH MARKETS PLACEHOLDER
+     Per A-6 §7: reserved structural slot, no specific markets named yet.
+     ===================================================================== -->
+<section class="section" aria-labelledby="coming-title">
+  <p class="section-eyebrow">What is next</p>
+  <h2 class="section-title" id="coming-title">More markets, coming.</h2>
+  <p class="section-intro">
+    ProductBeacon Research is a publishing program, not a one-off report. Additional market coverage will appear here as it ships. Each market follows the same methodology and the same publication discipline.
+  </p>
+
+  <div class="coming-grid" aria-label="Future research markets, to be announced">
+    <div class="coming-card" aria-hidden="true">
+      <p class="coming-card-label">Coming</p>
+      <p class="coming-card-title">Market 2</p>
+      <p class="coming-card-body">To be announced.</p>
+    </div>
+    <div class="coming-card" aria-hidden="true">
+      <p class="coming-card-label">Coming</p>
+      <p class="coming-card-title">Market 3</p>
+      <p class="coming-card-body">To be announced.</p>
+    </div>
+    <div class="coming-card" aria-hidden="true">
+      <p class="coming-card-label">Coming</p>
+      <p class="coming-card-title">Market 4</p>
+      <p class="coming-card-body">To be announced.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =====================================================================
+     FOOTER (A-3 verbatim, two-block)
+     ===================================================================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-blocks">
+
+      <!-- Block A: About the author (left) -->
+      <div class="footer-block-left">
+        <div class="footer-block-lockup">
+          <span class="lockup lockup-md" aria-label="ProductBeacon Research">
+            <span class="lockup-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+                <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+              </svg>
+            </span>
+            <span class="lockup-divider" aria-hidden="true"></span>
+            <span class="lockup-wordmark">Research</span>
+          </span>
+        </div>
+        <p class="footer-block-title">About the author &middot; Yohay Etsion</p>
+        <p class="footer-block-body">Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+      </div>
+
+      <!-- Block B: About ProductBeacon (right) -->
+      <div class="footer-block-right">
+        <div class="footer-block-parent" aria-label="ProductBeacon">
+          <span class="parent-icon" aria-hidden="true"></span>
+          <span><strong style="font-weight:700;">Product</strong>Beacon</span>
+        </div>
+        <p class="footer-block-title">About ProductBeacon</p>
+        <p class="footer-block-body">ProductBeacon is the <a href="/services/">fractional product leadership practice</a> for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including Product Org OS and Vision to Value, coming 2026.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-divider" role="separator"></div>
+
+    <p class="footer-disclosure">
+      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

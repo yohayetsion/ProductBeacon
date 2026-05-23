@@ -1,0 +1,8 @@
+# State of Cyber 2026 chapter URL migration (A-8, 2026-05-23)
+# Promotes /reports/* to /research/* under the new Research sub-brand surface.
+# Permanent: do not remove.
+# Old URLs are referenced in Resend campaign tags, prior LinkedIn comments (May 12-20, 2026),
+# and prospect briefs shared with named CISOs.
+# See ProductBeacon/Marketing/research-url-migration-spec.md for full mapping.
+
+/reports/state-of-cyber-2026/*  /research/state-of-cyber-2026/:splat  301

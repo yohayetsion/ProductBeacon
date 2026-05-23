@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State of Cyber Security Markets 2026 · ProductBeacon Research</title>
+<meta name="description" content="An operator's read of the IRM, DLP, DSPM, and convergence battlegrounds. 280 citations, four chapters, zero vendor sponsors. Authored by Yohay Etsion.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="State of Cyber Security Markets 2026 · ProductBeacon Research">
+<meta property="og:description" content="280 citations. Four chapters. Zero vendor sponsors. Authored by Yohay Etsion.">
+<meta property="og:url" content="https://productbeacon.agency/research/state-of-cyber-2026/">
+<meta property="og:image" content="https://productbeacon.agency/research/og/landing.png">
+<meta property="og:site_name" content="ProductBeacon Research">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="State of Cyber Security Markets 2026 · ProductBeacon Research">
+<meta name="twitter:description" content="280 citations. Four chapters. Zero vendor sponsors. Authored by Yohay Etsion.">
+<meta name="twitter:image" content="https://productbeacon.agency/research/og/landing.png">
+
+<!-- Favicon (Research variant per A-5) -->
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================================
+   ProductBeacon Research. Landing Page (A-7).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3
+   ==================================================================== */
+
+:root {
+  /* Color tokens */
+  --ink: #0F172A;            /* Default Research surface background */
+  --surface: #1E293B;        /* Card / elevated section bg */
+  --bright: #F8FAFC;         /* Maximum-contrast hero copy + chapter titles */
+  --primary-text: #F1F5F9;   /* Body copy, wordmark on dark */
+  --slate-400: #94A3B8;      /* Mono small-caps, eyebrow, disclosure */
+  --slate-600: #475569;      /* Dividers */
+  --amber: #F59E0B;          /* Primary accent */
+  --amber-60: #F59E0B99;     /* Lockup divider default */
+  --amber-12: #F59E0B1F;     /* Ribbon background */
+  --amber-20: #F59E0B33;     /* Ribbon border-bottom */
+  --amber-light: #FBBF24;    /* Hover / active */
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
+}
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
+}
+
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.topnav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text);
+}
+.topnav-brand-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav-brand-wordmark { font-size: 16px; font-weight: 500; }
+.topnav-brand-wordmark strong { font-weight: 700; }
+.topnav-links {
+  display: flex;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary-text);
+  transition: color var(--research-mark-hover-transition);
+}
+.topnav-links a:hover { color: var(--amber); }
+.topnav-links a.active { color: var(--amber); }
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-7);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-6) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Three-doors card */
+.doors {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  border: 1px solid #334155;
+}
+.doors-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.doors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.doors-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.doors-list li strong { color: var(--bright); font-weight: 500; }
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--research-mark-hover-transition), color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn-primary:hover { background: var(--amber-light); }
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-text);
+  border-color: var(--slate-600);
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- Section: chapters ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+}
+.chapter-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--primary-text);
+  margin: 0;
+}
+.chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.chapter-links a:hover { color: var(--amber-light); }
+.chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Methodology link ---------- */
+.methodology-block {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) 32px;
+  text-align: left;
+}
+.methodology-block a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.methodology-block a:hover { color: var(--amber-light); }
+.methodology-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--slate-400);
+  margin: 4px 0 0 0;
+}
+
+/* ---------- Email-capture form (E-1) ---------- */
+.subscribe {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-8);
+}
+.subscribe-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  max-width: 720px;
+}
+.subscribe-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+}
+.subscribe-cadence {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 280px;
+  height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--ink);
+  border: 1px solid var(--slate-600);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--research-mark-hover-transition);
+}
+.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
+.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
+.subscribe-form button { min-width: 160px; }
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: var(--space-3) 0 0 0;
+  min-height: 1.2em;
+}
+
+/* ---------- Footer (A-3 verbatim) ---------- */
+.footer {
+  border-top: 1px solid var(--slate-600);
+  background: var(--ink);
+  padding: var(--space-8) 32px var(--space-7);
+}
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.footer-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  margin-bottom: var(--space-6);
+}
+.footer-block-lockup { margin-bottom: var(--space-4); }
+.footer-block-parent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--primary-text);
+}
+.footer-block-parent .parent-icon {
+  width: 24px; height: 24px;
+  background: var(--amber);
+  border-radius: 5px;
+}
+.footer-block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.footer-block-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+  max-width: var(--reading-max);
+}
+.footer-block-body a {
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--slate-600);
+  transition: color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+}
+.footer-block-body a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+.footer-divider {
+  height: 1px;
+  background: var(--slate-600);
+  margin: 0 0 var(--space-5) 0;
+}
+.footer-disclosure {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--slate-400);
+  line-height: 1.6;
+  margin: 0;
+  max-width: var(--reading-max);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-7) 24px; }
+  .section-title { font-size: 28px; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .footer-blocks { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer { padding: var(--space-7) 24px var(--space-6); }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .topnav { padding: 16px 24px; flex-wrap: wrap; }
+  .topnav-links { gap: var(--space-3); }
+  .doors { padding: var(--space-4); }
+  .subscribe { padding: var(--space-6) 24px var(--space-7); }
+  .subscribe-card { padding: var(--space-5); }
+  .methodology-block { padding: var(--space-5) 24px; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .topnav-brand-wordmark { font-size: 14px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     SLIM AMBER RIBBON (A-1 §5.1)
+     ===================================================================== -->
+<div class="ribbon" role="banner" aria-label="ProductBeacon Research surface">
+  <div class="ribbon-left">
+    <a href="/research/" class="lockup lockup-md" aria-label="ProductBeacon Research">
+      <span class="lockup-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+          <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+        </svg>
+      </span>
+      <span class="lockup-divider" aria-hidden="true"></span>
+      <span class="lockup-wordmark">Research</span>
+    </a>
+  </div>
+  <div class="ribbon-continuation">State of Cyber Security Markets 2026</div>
+</div>
+
+<!-- =====================================================================
+     TOP NAV
+     ===================================================================== -->
+<nav class="topnav" aria-label="Primary">
+  <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
+    <span class="topnav-brand-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" fill="#0F172A"/>
+        <path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/>
+      </svg>
+    </span>
+    <span class="topnav-brand-wordmark"><strong>Product</strong>Beacon</span>
+  </a>
+  <ul class="topnav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/research/" class="active">Research</a></li>
+    <li><a href="/services/">Practice</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</nav>
+
+<!-- =====================================================================
+     HERO (Author-first, three-audience UTM routing)
+     ===================================================================== -->
+<main>
+<header class="hero">
+  <div class="hero-lockup-row">
+    <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
+      <span class="lockup-icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="11" r="5" fill="#F59E0B"/>
+          <path d="M8 18 L16 30 L24 18 Z" fill="#F59E0B"/>
+        </svg>
+      </span>
+      <span class="lockup-divider" aria-hidden="true"></span>
+      <span class="lockup-wordmark">Research</span>
+    </span>
+  </div>
+
+  <p class="hero-eyebrow">Part 1 · 280 Citations · Zero Vendor Sponsors</p>
+
+  <h1 class="hero-headline">State of Cyber Security Markets 2026.</h1>
+
+  <p class="hero-subhead" id="hero-subhead">
+    An operator's read of the IRM, DLP, DSPM, and convergence battlegrounds.
+  </p>
+
+  <div class="hero-byline">
+    <p class="hero-byline-line1">By Yohay Etsion.</p>
+    <p class="hero-byline-line2">
+      Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026).
+    </p>
+  </div>
+
+  <section class="doors" aria-labelledby="doors-eyebrow" id="audience-doors">
+    <p class="doors-eyebrow" id="doors-eyebrow">Three ways to read this report</p>
+    <ul class="doors-list">
+      <li><strong>For PE analysts and expert-network sourcing</strong> start with the Convergence Synthesis. Three investable theses with falsifiable tests grounded in publicly observable signals.</li>
+      <li><strong>For founder-CEOs evaluating product-leadership gaps</strong> start with the IRM chapter. Organizational signal density is highest there, and the chapter doubles as a read of how AXIA's market lands.</li>
+      <li><strong>For CISOs and operators tracking the market</strong> read the four chapters in order. Each ends with a falsifiable test for 2027 that you can re-check against your own deal flow.</li>
+    </ul>
+  </section>
+
+  <div class="hero-ctas">
+    <a class="btn btn-primary" href="#chapters">Read the report</a>
+    <a class="btn btn-ghost" href="#subscribe">Get synthesis brief</a>
+  </div>
+</header>
+
+<!-- =====================================================================
+     CHAPTERS (4 cards)
+     ===================================================================== -->
+<section class="section" id="chapters" aria-labelledby="chapters-title">
+  <p class="section-eyebrow">The Four Chapters</p>
+  <h2 class="section-title" id="chapters-title">Part 1: The Data Battlegrounds.</h2>
+
+  <div class="chapter-grid">
+
+    <article class="chapter-card">
+      <p class="chapter-label">Chapter One · IRM</p>
+      <h3 class="chapter-title">The Insider Risk Management Front</h3>
+      <p class="chapter-teaser">Microsoft Risky Agents is the bet that bends the IRM market. 60 citations across the platform-vendor moves, the agentic-AI extension, and the consolidation arc.</p>
+      <div class="chapter-links">
+        <a href="/research/state-of-cyber-2026/irm.html">Read chapter →</a>
+        <span class="sep">·</span>
+        <a href="/research/state-of-cyber-2026/irm.pdf">PDF</a>
+      </div>
+    </article>
+
+    <article class="chapter-card">
+      <p class="chapter-label">Chapter Two · DLP</p>
+      <h3 class="chapter-title">The Data Loss Prevention Front</h3>
+      <p class="chapter-teaser">AI-native DLP is the rebuild; legacy DLP is the deprecation. 103 citations covering the four-way vendor split, Cyberhaven's lineage thesis, and the Thoma Bravo data-security stack.</p>
+      <div class="chapter-links">
+        <a href="/research/state-of-cyber-2026/dlp.html">Read chapter →</a>
+        <span class="sep">·</span>
+        <a href="/research/state-of-cyber-2026/dlp.pdf">PDF</a>
+      </div>
+    </article>
+
+    <article class="chapter-card">
+      <p class="chapter-label">Chapter Three · DSPM</p>
+      <h3 class="chapter-title">The Data Security Posture Management Front</h3>
+      <p class="chapter-teaser">Six platform absorbs in fourteen months. Cyera's $9B Series F is the counter-thesis. 95 citations across the absorption chain, the gravity vendors, and the attention vendors.</p>
+      <div class="chapter-links">
+        <a href="/research/state-of-cyber-2026/dspm.html">Read chapter →</a>
+        <span class="sep">·</span>
+        <a href="/research/state-of-cyber-2026/dspm.pdf">PDF</a>
+      </div>
+    </article>
+
+    <article class="chapter-card">
+      <p class="chapter-label">Chapter Four · Convergence</p>
+      <h3 class="chapter-title">The Convergence Synthesis</h3>
+      <p class="chapter-teaser">DSPM is the absorption substrate. Thoma Bravo is the stack thesis. Agentic AI pulls enforcement back to the data source. Two cross-front Pattern Claims with named falsifiability.</p>
+      <div class="chapter-links">
+        <a href="/research/state-of-cyber-2026/convergence.html">Read chapter →</a>
+        <span class="sep">·</span>
+        <a href="/research/state-of-cyber-2026/convergence.pdf">PDF</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- =====================================================================
+     METHODOLOGY LINK
+     ===================================================================== -->
+<section class="methodology-block" aria-label="Methodology">
+  <a href="/research/methodology.html">Read the full methodology →</a>
+  <p class="methodology-note">Publicly verifiable sources only. Verifiable Proxy Rule. Disclosure framework. Refresh cadence. One canonical page covering every ProductBeacon Research market.</p>
+</section>
+
+<!-- =====================================================================
+     EMAIL-CAPTURE FORM (E-1)
+     Inline only. No popup. No modal. Per A-2 §7 anti-pattern guard.
+     ===================================================================== -->
+<section class="subscribe" id="subscribe" aria-labelledby="subscribe-headline">
+  <div class="subscribe-card">
+    <h2 class="subscribe-headline" id="subscribe-headline">Get notified when new ProductBeacon Research ships.</h2>
+    <p class="subscribe-cadence">Expect ~6-10 emails per year. Ship events only, no weekly digest.</p>
+    <form class="subscribe-form" id="subscribe-form" action="BEEHIIV_EMBED_URL" method="post" novalidate>
+      <label for="subscribe-email" class="sr-only">Email address</label>
+      <input type="email" id="subscribe-email" name="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <p class="subscribe-msg" id="subscribe-msg" aria-live="polite"></p>
+  </div>
+</section>
+</main>
+
+<!-- =====================================================================
+     FOOTER (A-3 verbatim, two-block)
+     ===================================================================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-blocks">
+
+      <!-- Block A: About the author (left) -->
+      <div class="footer-block-left">
+        <div class="footer-block-lockup">
+          <span class="lockup lockup-md" aria-label="ProductBeacon Research">
+            <span class="lockup-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+                <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+              </svg>
+            </span>
+            <span class="lockup-divider" aria-hidden="true"></span>
+            <span class="lockup-wordmark">Research</span>
+          </span>
+        </div>
+        <p class="footer-block-title">About the author · Yohay Etsion</p>
+        <p class="footer-block-body">Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+      </div>
+
+      <!-- Block B: About ProductBeacon (right) -->
+      <div class="footer-block-right">
+        <div class="footer-block-parent" aria-label="ProductBeacon">
+          <span class="parent-icon" aria-hidden="true"></span>
+          <span><strong style="font-weight:700;">Product</strong>Beacon</span>
+        </div>
+        <p class="footer-block-title">About ProductBeacon</p>
+        <p class="footer-block-body">ProductBeacon is the <a href="/services/">fractional product leadership practice</a> for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including Product Org OS and Vision to Value, coming 2026.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-divider" role="separator"></div>
+
+    <p class="footer-disclosure">
+      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report.
+    </p>
+  </div>
+</footer>
+
+<!-- =====================================================================
+     THREE-AUDIENCE UTM ROUTING (CMO P0-3 fail-safe: default = operator)
+     ===================================================================== -->
+<script>
+(function() {
+  // Per v4 strategy "Three Audiences, Three Front Doors" + CMO P0-3 fail-safe
+  // Default door (no UTM, unknown UTM) = analyst/operator framing.
+  var copy = {
+    investor: {
+      subhead: "Three investable theses with named falsifiability. The Thoma Bravo Data Security Stack, Agentic AI Pulls Enforcement to Data Source, and the DSPM Absorption Chain. Each grounded in publicly observable signals."
+    },
+    ciso: {
+      subhead: "An operator's read of the IRM, DLP, DSPM, and convergence battlegrounds. Front-line tracking of where enterprise budgets are quietly shifting, with falsifiable tests for 2027."
+    },
+    founder: {
+      subhead: "How the cyber market reads if you are a founder-CEO sizing product-leadership gaps. The IRM and DLP chapters double as proof that the methodology behind ProductBeacon's fractional practice runs on live portfolio companies."
+    },
+    operator: {
+      subhead: "An operator's read of the IRM, DLP, DSPM, and convergence battlegrounds."
+    }
+  };
+
+  function getAudience() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get('audience') || '').toLowerCase().trim();
+      if (raw === 'investor' || raw === 'ciso' || raw === 'founder') return raw;
+      return 'operator'; // fail-safe per CMO P0-3
+    } catch (e) {
+      return 'operator';
+    }
+  }
+
+  function applyAudience() {
+    var aud = getAudience();
+    var pack = copy[aud] || copy.operator;
+    var el = document.getElementById('hero-subhead');
+    if (el && pack && pack.subhead) {
+      el.textContent = pack.subhead;
+    }
+    document.documentElement.setAttribute('data-audience', aud);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyAudience);
+  } else {
+    applyAudience();
+  }
+})();
+</script>
+
+<!-- =====================================================================
+     EMAIL-CAPTURE: lightweight client-side validation + UX
+     Real submission wired to BEEHIIV_EMBED_URL (devops fills in post E-2).
+     ===================================================================== -->
+<script>
+(function() {
+  var form = document.getElementById('subscribe-form');
+  var msg = document.getElementById('subscribe-msg');
+  if (!form || !msg) return;
+
+  form.addEventListener('submit', function(ev) {
+    var email = document.getElementById('subscribe-email').value || '';
+    // Basic shape check; real validation happens at Beehiiv.
+    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!ok) {
+      ev.preventDefault();
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    // If the Beehiiv URL has not been wired yet, intercept and show a status message
+    // instead of submitting to the placeholder action.
+    if (form.action.indexOf('BEEHIIV_EMBED_URL') !== -1) {
+      ev.preventDefault();
+      msg.textContent = 'Subscription endpoint not yet configured. Your address was not sent.';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

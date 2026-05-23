@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology · ProductBeacon Research</title>
+<meta name="description" content="Sourcing rules, disclosure framework, and refresh cadence for the open-web cyber market research published under the ProductBeacon Research banner.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Methodology · ProductBeacon Research">
+<meta property="og:description" content="Sourcing rules, disclosure framework, and refresh cadence. v1.0 · Last updated 2026-05-23.">
+<meta property="og:url" content="https://productbeacon.agency/research/methodology.html">
+<meta property="og:image" content="https://productbeacon.agency/research/og/methodology.png">
+<meta property="og:site_name" content="ProductBeacon Research">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Methodology · ProductBeacon Research">
+<meta name="twitter:description" content="Sourcing rules, disclosure framework, and refresh cadence.">
+
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0F172A;
+  --surface: #1E293B;
+  --bright: #F8FAFC;
+  --primary-text: #F1F5F9;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --amber: #F59E0B;
+  --amber-60: #F59E0B99;
+  --amber-12: #F59E0B1F;
+  --amber-20: #F59E0B33;
+  --content-max: 720px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--amber); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Ribbon */
+.ribbon {
+  height: 48px;
+  background: var(--amber-12);
+  border-bottom: 1px solid var(--amber-20);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.ribbon-left { display: flex; align-items: center; gap: 16px; }
+.lockup { display: inline-flex; align-items: center; gap: 16px; }
+.lockup-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--ink);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 12px;
+}
+.lockup-divider { width: 2px; height: 24px; background: var(--amber-60); }
+.lockup-text { font-family: 'Inter'; font-weight: 500; font-size: 18px; color: var(--primary-text); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Nav */
+.nav {
+  background: var(--ink);
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand { font-weight: 700; color: var(--primary-text); font-size: 18px; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { color: var(--slate-400); font-weight: 500; font-size: 14px; }
+.nav-links a.active { color: var(--amber); }
+
+/* Hero */
+.hero {
+  padding: 80px 32px 48px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+h1 {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--bright);
+  margin: 0 0 16px 0;
+}
+.hero-lede {
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--slate-400);
+  margin: 0 0 24px 0;
+}
+.hero-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--slate-500);
+  margin-bottom: 8px;
+}
+.byline {
+  font-size: 14px;
+  color: var(--slate-400);
+  font-weight: 500;
+}
+
+/* Content */
+main {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+.content h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--bright);
+  margin: 56px 0 16px 0;
+}
+.content h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 32px 0 8px 0;
+}
+.content p, .content li {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 16px 0;
+  color: var(--primary-text);
+}
+.content strong { color: var(--bright); font-weight: 600; }
+.content ul { margin: 16px 0 16px 24px; }
+.content li { margin: 8px 0; }
+.content code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--amber);
+}
+.content hr {
+  border: none;
+  border-top: 1px solid var(--surface);
+  margin: 48px 0;
+}
+.content blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 8px 0 8px 24px;
+  margin: 24px 0;
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
+  color: var(--slate-400);
+}
+
+/* Footer */
+footer {
+  background: var(--ink);
+  border-top: 1px solid var(--surface);
+  padding: 64px 32px;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.footer-block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+  margin-bottom: 16px;
+}
+.footer-block-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+}
+.disclosure-row {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--surface);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--slate-400);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ribbon-continuation { display: none; }
+  h1 { font-size: 36px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <div class="ribbon-left">
+    <span class="lockup">
+      <span class="lockup-icon">P</span>
+      <span class="lockup-divider"></span>
+      <span class="lockup-text">Research</span>
+    </span>
+  </div>
+  <span class="ribbon-continuation">Methodology</span>
+</div>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">ProductBeacon</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/insights/">Insights</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">ProductBeacon Research</div>
+  <h1>Methodology</h1>
+  <p class="hero-lede">Sourcing rules, disclosure framework, and refresh cadence for the open-web cyber market research published under the ProductBeacon Research banner.</p>
+  <div class="hero-meta">v1.0 · Last updated 2026-05-23</div>
+  <div class="byline">By Yohay Etsion</div>
+</section>
+
+<main class="content">
+
+<h2>§1. Who this is for</h2>
+
+<p>ProductBeacon Research is open-web cyber market research with a publishing standard that three audiences should be able to verify independently. We write to that bar and publish the rules so the bar is checkable.</p>
+
+<p>For <strong>private-equity and hedge-fund analysts</strong>, methodology is what separates research from opinion. You need to know whether a Winner / Watch / Loser characterization traces to a public signal you can re-derive, whether the author has a position in any named security, and whether citation density matches claim strength.</p>
+
+<p>For <strong>CISO operators and security buyers</strong>, methodology is the difference between a vendor landscape you can take into a steering meeting and one you cannot. You need positioning paragraphs anchored to dated vendor URLs, category boundaries that follow the vendor's own current product page, and a commitment that we will not retroactively re-classify a vendor mid-research because their hero copy changed last week.</p>
+
+<p>For <strong>fractional founders, CPOs, and product leaders</strong>, methodology is the portable part of the work. The frameworks below work for any market we eventually cover; markets come and go.</p>
+
+<hr>
+
+<h2>§2. Sourcing rules</h2>
+
+<p>Every claim in a ProductBeacon Research chapter traces to one of the following published surfaces:</p>
+
+<ul>
+<li><strong>Vendor earnings call transcripts and investor materials.</strong></li>
+<li><strong>Named-outlet journalism</strong> (Bloomberg, Reuters, Fortune, TechCrunch, Calcalist, SecurityWeek, Dark Reading, WSJ, FT, NYT, The Information, plus equivalent regional and industry outlets).</li>
+<li><strong>Analyst category creation or reclassification</strong> (Gartner Magic Quadrant, Market Guide, Hype Cycle; IDC MarketScape; Forrester Wave).</li>
+<li><strong>Public vendor product pages</strong>, with dated capture (hero copy, headline capabilities, category labels).</li>
+<li><strong>SEC filings</strong> (S-1, 10-K, 10-Q segment disclosures; 8-K material event filings).</li>
+<li><strong>Funding rounds</strong> with named lead investor and valuation.</li>
+<li><strong>Vendor LinkedIn self-positioning</strong> (useful for trend signals, never sufficient alone for casualty framing).</li>
+</ul>
+
+<p>Pitchbook, Crunchbase-premium, and The Information subscriber-only data are used <strong>only via named journalistic republication</strong>. Direct subscriber-only database republication is out of scope.</p>
+
+<p>What does <strong>not</strong> count: anonymous "industry source" claims, vendor self-reports without independent corroboration, future-tense roadmap statements treated as present capability, and paid analyst reports without primary-source backup.</p>
+
+<p>When a citation URL breaks, we replace it with the stable Wayback snapshot at <code>web.archive.org/web/2*/{original-url}</code>. Evidence preservation is part of the publishing standard.</p>
+
+<p>State of Cyber 2026 Part 1 ships with <strong>280 unique citations across the four chapters, 47 of which cross-reference between chapters</strong>. The full list lives at <a href="/research/state-of-cyber-2026/citations.md">/research/state-of-cyber-2026/citations.md</a>. We cite when we claim, not when we speculate.</p>
+
+<hr>
+
+<h2>§3. Verifiable proxy rule</h2>
+
+<p>The hardest methodological commitment we make: <strong>every falsifiable test in the report grounds on a publicly observable signal the reader can independently re-derive</strong>. This applies to Pattern Claim Conditional predictions, Plays-Conditional outcomes, Campaign Ahead watchlist items, and the falsifiable-test footers on every Pattern Claim diagram.</p>
+
+<p>This was not free. During pre-publication audit on 2026-05-20, six conditional predictions across the four Part 1 chapters originally hung on "enterprise RFP language" as the falsifiable test. RFPs are private; a reader cannot independently observe what an enterprise puts into one. We rewrote all six against the public ground types listed in §2.</p>
+
+<p>Worked examples by chapter:</p>
+
+<ul>
+<li><strong>IRM.</strong> A prediction about insider-risk vendor consolidation rewrote from "RFPs increasingly require behavioral analytics" to a named-outlet customer-win count plus the vendor's earnings-call segment disclosure.</li>
+<li><strong>DLP.</strong> A prediction about AI-native DLP displacement rewrote from "buyer RFP language shifts" to a snapshot-comparable change in product page hero copy plus analyst category reclassification.</li>
+<li><strong>DSPM.</strong> A prediction about DSPM absorption rewrote from "DSPM RFP line items" to a Gartner Market Guide category-reclassification event plus public funding-round framing.</li>
+<li><strong>Convergence.</strong> A cross-front Pattern Claim rewrote from "private win-loss intel" to two named-outlet enterprise customer-win disclosures within a 90-day window.</li>
+</ul>
+
+<p>Predictions grounded on private data cannot be falsified by the reader; predictions grounded on public signals can. The reader who returns in 2027 should be able to check whether we were right or wrong using the same evidence categories we used to make the call.</p>
+
+<p>Observational use of "RFP" remains permitted where a chapter reports on cited vendor framing with footnote to the vendor's public material. Observing what a cited source says about RFPs is different from asking the reader to bet on private RFP language as a future signal; only the latter is prohibited.</p>
+
+<hr>
+
+<h2>§4. Disclosure framework</h2>
+
+<p><strong>Author conflict.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report. This disclosure appears on every chapter cover statement, in the footer of every Research page, and again here. AXIA's scope is DLP only; it does not compete in IRM, DSPM, or the cross-front Convergence theses.</p>
+
+<p><strong>No vendor sponsors. No paywalled data. No analyst-firm reuse.</strong> We do not accept vendor sponsorship, republish paywalled analyst datasets, or reuse paid analyst-firm conclusions. The frameworks are our own.</p>
+
+<p><strong>No vendor receives pre-publication review of how they are covered.</strong> Pre-publication vendor "review" is the mechanism through which industry analysis quietly becomes vendor-flavored content. We do not run that loop. Named vendors receive the published chapter at the same time as the rest of the audience.</p>
+
+<p><strong>Post-publication factual-correction window.</strong> Within five business days of publication, any named vendor may request a factual correction by writing to the published research contact. We will correct factual inaccuracies (misquoted product page, wrong funding number, mistaken acquisition date). We will not negotiate positioning, change Winner / Watch / Loser characterizations, or remove Pattern Claims under vendor pressure. The correction window is for facts, not framing.</p>
+
+<p><strong>Methodology applies equally</strong> to AXIA-adjacent vendors and to non-adjacent vendors. There is no parity exception.</p>
+
+<hr>
+
+<h2>§5. Citation discipline</h2>
+
+<p>The master citations file lives at <a href="/research/state-of-cyber-2026/citations.md">/research/state-of-cyber-2026/citations.md</a>, regenerated at every chapter ship. It tracks the 280 unique citations plus the 47 cross-chapter references (most often between DSPM and Convergence, where the absorption thesis depends on signals also cited in DLP).</p>
+
+<p>Per-chapter density follows the <strong>cite-when-claiming</strong> rule: we cite at the point in the prose where the claim is made. We do not cite to decorate, and we do not pile citations at the end of a section as a substitute for in-line attribution. In-text citations link out directly to the cited surface. Wayback snapshots are cited as <code>web.archive.org/web/{YYYYMMDD}/{original-url}</code> with the snapshot date visible. Footnotes are reserved for methodology cross-references.</p>
+
+<hr>
+
+<h2>§6. Refresh cadence</h2>
+
+<p>ProductBeacon Research operates on a <strong>Quarterly Refresh</strong> cadence. Every three months we re-audit each published chapter against three signal types: (1) new earnings disclosures, (2) named-outlet customer-win disclosures that materially shift a vendor's bucket assignment, and (3) analyst category-reclassification events.</p>
+
+<p>A <strong>v0.X bump</strong> indicates a material change: a Pattern Claim is added, removed, or its falsifiable test is rewritten; a vendor moves between Gravity, Attention, and Wildcard buckets; a Winner / Watch / Loser characterization changes; or a new vendor is added. A <strong>Quarterly Refresh note</strong> is incremental: a funding round closed, an executive change does not meet the casualty-corroboration threshold, or a product-page snapshot shows a hero-copy shift that does not yet warrant reclassification. Refresh notes append to the bottom of the chapter rather than re-writing it.</p>
+
+<p><strong>Reader notification.</strong> Readers on the ship-event email list are notified when a chapter ships, when a Quarterly Refresh adds material content, and when a new market opens (per §7). Expected volume: six to ten emails per year. Ship events only.</p>
+
+<hr>
+
+<h2>§7. Per-market scoping</h2>
+
+<p>This methodology is <strong>domain-agnostic</strong>. The sourcing rules, Verifiable Proxy Rule, disclosure framework, citation discipline, and refresh cadence above apply to any market that ProductBeacon Research eventually covers, not only cyber security. Future research markets (for example, video-surveillance, contact-center AI, or adjacent enterprise software categories) may add per-market scoping addenda that specify market-specific vendor selection rules, analyst-firm authorities, or bucket definitions. This section reserves the structure so the canonical methodology page does not require a v2.0 rewrite when a second research market opens.</p>
+
+<p><em>(No per-market addenda are published for Wave 1. State of Cyber 2026 Part 1 follows the canonical methodology in §§1-6 and §8-9 below without per-market modification.)</em></p>
+
+<hr>
+
+<h2>§8. Evidence preservation</h2>
+
+<p>We commit to <strong>URL stability</strong> for published chapter URLs and citation URLs for as long as ProductBeacon Research is published. Chapter URLs at <code>productbeacon.agency/research/state-of-cyber-2026/{slug}.html</code> persist; we do not redirect, rename, or remove published chapters.</p>
+
+<p>When a citation URL breaks, we replace it with the corresponding Internet Archive Wayback Machine snapshot, with the snapshot date visible. The claim does not change; the citation surface gets stabilized.</p>
+
+<p><strong>Snapshot discipline.</strong> Vendor product-page leads are evaluated against dated HTML capture taken at the moment a chapter enters research. Mid-research rebrands do not re-classify a vendor within the front. If a vendor's hero copy changes mid-research, we footnote the change and let the original capture stand for the chapter; the change becomes signal in the next Quarterly Refresh, not a within-research reclassification.</p>
+
+<hr>
+
+<h2>§9. Versioning and changelog</h2>
+
+<p><strong>v1.0 · 2026-05-23.</strong> Initial publication of the methodology page for State of Cyber 2026 Part 1 (IRM, DLP, DSPM, and the cross-front Convergence chapter). Locks the sourcing rules in §2, the Verifiable Proxy Rule in §3 (introduced after the 2026-05-20 pre-publication audit), the disclosure framework in §4, citation discipline in §5, and the Quarterly Refresh cadence in §6. The §7 per-market scoping slot is reserved and empty for Wave 1.</p>
+
+<p>Future material changes to this methodology page will be logged here, dated, with a short note on what changed and why. Methodology version bumps are independent of chapter version bumps.</p>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-block-title">About the author</div>
+      <p class="footer-block-body">Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+    </div>
+    <div>
+      <div class="footer-block-title">About ProductBeacon</div>
+      <p class="footer-block-body">ProductBeacon is the <a href="/services/">fractional product leadership practice</a> for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including Product Org OS and Vision to Value, coming 2026.</p>
+    </div>
+  </div>
+  <div class="disclosure-row">
+    Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report.
+  </div>
+</footer>
+
+</body>
+</html>
