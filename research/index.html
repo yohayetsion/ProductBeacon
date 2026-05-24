@@ -439,6 +439,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   width: 24px; height: 24px;
   background: var(--amber);
   border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-block-title {
   font-family: 'JetBrains Mono', monospace;
@@ -525,19 +528,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
      SLIM AMBER RIBBON (A-1 §5.1; static on umbrella surface)
      Continuation text: "Published Research" (per A-1 §5.1)
      ===================================================================== -->
-<div class="ribbon" role="banner" aria-label="ProductBeacon Research surface">
-  <div class="ribbon-left">
-    <a href="/research/" class="lockup lockup-md" aria-label="ProductBeacon Research">
-      <span class="lockup-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
-          <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
-        </svg>
-      </span>
-      <span class="lockup-divider" aria-hidden="true"></span>
-      <span class="lockup-wordmark">Research</span>
-    </a>
-  </div>
   <div class="ribbon-continuation">Published Research</div>
 </div>
 
@@ -639,6 +629,11 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 
   <div class="coming-grid" aria-label="Future research markets">
     <div class="coming-card">
+      <p class="coming-card-label">Coming June 2026</p>
+      <p class="coming-card-title">State of Cyber 2026 &middot; Part 2</p>
+      <p class="coming-card-body">Four more cyber-security fronts plus a cross-front Platform Wars Synthesis. SOC platform war, SSE / edge theater, AI security, and identity &amp; PAM.</p>
+    </div>
+    <div class="coming-card">
       <p class="coming-card-label">Coming</p>
       <p class="coming-card-title">Investigative Analytics</p>
       <p class="coming-card-body">The investigative-software market that law enforcement, government, and corporate fraud teams actually buy. Seventeen years at NICE and Cognyte sat at the center of this category.</p>
@@ -647,11 +642,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
       <p class="coming-card-label">Coming</p>
       <p class="coming-card-title">CCaaS</p>
       <p class="coming-card-body">Contact-center-as-a-service, the platform layer enterprise customer-service runs on. Authored from inside the segment, not from analyst-firm distance.</p>
-    </div>
-    <div class="coming-card">
-      <p class="coming-card-label">Coming</p>
-      <p class="coming-card-title">Conversational AI</p>
-      <p class="coming-card-body">The agentic-AI layer redrawing how enterprise customer interactions work. Where NICE plays, and where the next category-creation moves are forming.</p>
     </div>
   </div>
 </section>
