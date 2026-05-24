@@ -6,3 +6,4 @@
 # See ProductBeacon/Marketing/research-url-migration-spec.md for full mapping.
 
 /reports/state-of-cyber-2026/*  /research/state-of-cyber-2026/:splat  301
+
