@@ -17,7 +17,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Methodology · ProductBeacon Research">
-<meta name="twitter:description" content="280 citations. Four chapters. Zero vendor sponsors. Authored by Yohay Etsion.">
+<meta name="twitter:description" content="Sourcing rules, disclosure framework, refresh cadence for ProductBeacon Research.">
 <meta name="twitter:image" content="https://productbeacon.agency/research/og/methodology.png">
 
 <!-- Favicon (Research variant per A-5) -->
@@ -660,7 +660,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 
   <p class="hero-eyebrow">ProductBeacon Research</p>
   <h1 class="hero-headline">Methodology</h1>
-  <p class="hero-subhead" id="hero-subhead">Sourcing rules, disclosure framework, and refresh cadence for the open-web market research published under the ProductBeacon Research banner. Domain-agnostic: same standard applies whether the report covers cybersecurity (Part 1 of State of Cyber 2026), workforce-optimization software, intelligence analytics, or any other enterprise software market we eventually cover.</p>
+  <p class="hero-subhead" id="hero-subhead">Sourcing rules, disclosure framework, and refresh cadence for the open-web market research published under the ProductBeacon Research banner.</p>
 
   <p class="hero-byline" style="margin-top: var(--space-3); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--slate-400); letter-spacing: 0.05em;">v1.0 &middot; Last updated 2026-05-23 &middot; By Yohay Etsion</p>
 </header>
@@ -668,9 +668,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <section class="methodology-content" style="max-width: 760px; margin: 0 auto; padding: var(--space-7) var(--space-5);">
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;1. Who this is for</h2>
-<p>ProductBeacon Research is open-web market research with a publishing standard that three audiences should be able to verify independently. We write to that bar and publish the rules so the bar is checkable. The current focus is cybersecurity (Part 1 of State of Cyber 2026 ships first); the same publishing standard governs every market we cover going forward.</p>
+<p>ProductBeacon Research is open-web market research with a publishing standard that three audiences should be able to verify independently. We write to that bar and publish the rules so the bar is checkable.</p>
 <p>For <strong>private-equity and hedge-fund analysts</strong>, methodology is what separates research from opinion. You need to know whether a Winner / Watch / Loser characterization traces to a public signal you can re-derive, whether the author has a position in any named security, and whether citation density matches claim strength.</p>
-<p>For <strong>CISO operators and security buyers</strong>, methodology is the difference between a vendor landscape you can take into a steering meeting and one you cannot. You need positioning paragraphs anchored to dated vendor URLs, category boundaries that follow the vendor own current product page, and a commitment that we will not retroactively re-classify a vendor mid-research because their hero copy changed last week.</p>
+<p>For <strong>category-tracking operators and buyers</strong>, methodology is the difference between a vendor landscape you can take into a decision meeting and one you cannot. You need positioning paragraphs anchored to dated vendor URLs, category boundaries that follow the vendor's own current product page, and a commitment that we will not retroactively re-classify a vendor mid-research.</p>
 <p>For <strong>fractional founders, CPOs, and product leaders</strong>, methodology is the portable part of the work. The frameworks below work for any market we eventually cover; markets come and go.</p>
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;2. Sourcing rules</h2>
@@ -687,22 +687,22 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <p>Pitchbook, Crunchbase-premium, and The Information subscriber-only data are used <strong>only via named journalistic republication</strong>. Direct subscriber-only database republication is out of scope.</p>
 <p>What does <strong>not</strong> count: anonymous "industry source" claims, vendor self-reports without independent corroboration, future-tense roadmap statements treated as present capability, and paid analyst reports without primary-source backup.</p>
 <p>When a citation URL breaks, we replace it with the stable Wayback snapshot at <code>web.archive.org/web/2*/{original-url}</code>. Evidence preservation is part of the publishing standard.</p>
-<p>State of Cyber 2026 Part 1 ships with <strong>280 unique citations across the four chapters, 47 of which cross-reference between chapters</strong>. The full list lives at <a href="/research/state-of-cyber-2026/citations.md" style="color: var(--amber);">/research/state-of-cyber-2026/citations.md</a>. We cite when we claim, not when we speculate.</p>
+<p>Each report ships with a master citations file regenerated at every chapter release. Citation density follows the <strong>cite-when-claiming</strong> rule below in §5. We cite when we claim, not when we speculate.</p>
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;3. Verifiable proxy rule</h2>
 <p>The hardest methodological commitment we make: <strong>every falsifiable test in the report grounds on a publicly observable signal the reader can independently re-derive</strong>. This applies to Pattern Claim Conditional predictions, Plays-Conditional outcomes, Campaign Ahead watchlist items, and the falsifiable-test footers on every Pattern Claim diagram.</p>
 <p>This was not free. During pre-publication audit on 2026-05-20, six conditional predictions across the four Part 1 chapters originally hung on "enterprise RFP language" as the falsifiable test. RFPs are private; a reader cannot independently observe what an enterprise puts into one. We rewrote all six against the public ground types listed in &sect;2.</p>
-<p>Worked examples by chapter:</p>
+<p>Worked examples of the substitution pattern:</p>
 <ul>
-<li><strong>IRM.</strong> A prediction about insider-risk vendor consolidation rewrote from "RFPs increasingly require behavioral analytics" to a named-outlet customer-win count plus the vendor earnings-call segment disclosure.</li>
-<li><strong>DLP.</strong> A prediction about AI-native DLP displacement rewrote from "buyer RFP language shifts" to a snapshot-comparable change in product page hero copy plus analyst category reclassification.</li>
-<li><strong>DSPM.</strong> A prediction about DSPM absorption rewrote from "DSPM RFP line items" to a Gartner Market Guide category-reclassification event plus public funding-round framing.</li>
-<li><strong>Convergence.</strong> A cross-front Pattern Claim rewrote from "private win-loss intel" to two named-outlet enterprise customer-win disclosures within a 90-day window.</li>
+<li>A prediction about vendor consolidation rewritten from "RFPs increasingly require [capability X]" to a named-outlet customer-win count plus the vendor earnings-call segment disclosure.</li>
+<li>A prediction about category displacement rewritten from "buyer RFP language shifts" to a snapshot-comparable change in product-page hero copy plus analyst category reclassification.</li>
+<li>A prediction about market absorption rewritten from "RFP line items" to a research-analyst category-reclassification event plus public funding-round framing.</li>
+<li>A prediction about cross-category dynamics rewritten from "private win-loss intel" to two named-outlet enterprise customer-win disclosures within a 90-day window.</li>
 </ul>
 <p>Predictions grounded on private data cannot be falsified by the reader; predictions grounded on public signals can. The reader who returns in 2027 should be able to check whether we were right or wrong using the same evidence categories we used to make the call.</p>
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;4. Disclosure framework</h2>
-<p><strong>Author conflict.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report. This disclosure appears on every chapter cover statement, in the footer of every Research page, and again here. AXIA scope is DLP only; it does not compete in IRM, DSPM, or the cross-front Convergence theses.</p>
+<p><strong>Author conflict.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment. Where DLP appears in ProductBeacon Research coverage, this disclosure appears on the chapter cover statement, in the footer of the relevant Research page, and again here. AXIA's scope is DLP only; the disclosure is narrow to that segment and does not transfer to other segments or markets.</p>
 <p><strong>No vendor sponsors. No paywalled data. No analyst-firm reuse.</strong> We do not accept vendor sponsorship, republish paywalled analyst datasets, or reuse paid analyst-firm conclusions. The frameworks are our own.</p>
 <p><strong>No vendor receives pre-publication review of how they are covered.</strong> Pre-publication vendor "review" is the mechanism through which industry analysis quietly becomes vendor-flavored content. We do not run that loop. Named vendors receive the published chapter at the same time as the rest of the audience.</p>
 <p><strong>Post-publication factual-correction window.</strong> Within five business days of publication, any named vendor may request a factual correction by writing to the published research contact. We will correct factual inaccuracies (misquoted product page, wrong funding number, mistaken acquisition date). We will not negotiate positioning, change Winner / Watch / Loser characterizations, or remove Pattern Claims under vendor pressure. The correction window is for facts, not framing.</p>
@@ -720,17 +720,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;7. Per-market scoping</h2>
 <p>This methodology is <strong>domain-agnostic</strong>. The sourcing rules, Verifiable Proxy Rule, disclosure framework, citation discipline, and refresh cadence above apply to any market that ProductBeacon Research eventually covers.</p>
 
-<p><strong>Markets in scope or planned:</strong></p>
-<ul>
-<li><strong>Cybersecurity</strong> (currently published). State of Cyber 2026 Part 1 covers IRM, DLP, DSPM, and Convergence; Part 2 covers SOC Platform War, SSE / Edge Theater, AI Security, and Identity &amp; PAM (planned 2026).</li>
-<li><strong>Workforce-optimization software</strong> (planned). The WFO category that NICE has anchored for two decades. Yohay's seventeen-year operator background at NICE provides direct context. Adjacent categories include workforce engagement, real-time interaction guidance, and AI-augmented agent assist.</li>
-<li><strong>Intelligence analytics</strong> (planned). The category Cognyte has built around lawful interception, threat intelligence, fusion, and OSINT. Yohay's eight years at Cognyte provides direct context. Adjacent categories include national-security analytics and enterprise threat intelligence.</li>
-<li><strong>Other enterprise software categories</strong> as opportunity surfaces.</li>
-</ul>
+<p>Each market may add a per-market scoping addendum below this section specifying market-specific vendor selection rules, analyst-firm authorities (the relevant Magic Quadrants and Waves differ by category), and bucket-definition criteria. The structure reserves the slot; the canonical methodology page does not require a v2.0 rewrite when a new market opens. Markets covered to date are listed on the <a href="/research/" style="color: var(--amber);">/research/</a> umbrella page; new markets are announced via the ship-event email list.</p>
 
-<p>Each market may add a per-market scoping addendum below this section specifying market-specific vendor selection rules, analyst-firm authorities (the relevant Magic Quadrants and Waves differ by category), and bucket-definition criteria. The structure reserves the slot; the canonical methodology page does not require a v2.0 rewrite when a second research market opens.</p>
-
-<p><em>(No per-market addenda are published yet. State of Cyber 2026 Part 1 follows the canonical methodology in &sect;&sect;1 through 6 and &sect;8 through 9 below without per-market modification.)</em></p>
+<p><em>(No per-market addenda are published at first publication. Markets covered to date follow the canonical methodology without per-market modification.)</em></p>
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;8. Evidence preservation</h2>
 <p>We commit to <strong>URL stability</strong> for published chapter URLs and citation URLs for as long as ProductBeacon Research is published. Chapter URLs at <code>productbeacon.agency/research/state-of-cyber-2026/{slug}.html</code> persist; we do not redirect, rename, or remove published chapters.</p>
@@ -738,7 +730,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <p><strong>Snapshot discipline.</strong> Vendor product-page leads are evaluated against dated HTML capture taken at the moment a chapter enters research. Mid-research rebrands do not re-classify a vendor within the front.</p>
 
 <h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">&sect;9. Versioning and changelog</h2>
-<p><strong>v1.0 &middot; 2026-05-23.</strong> Initial publication of the methodology page for State of Cyber 2026 Part 1 (IRM, DLP, DSPM, and the cross-front Convergence chapter). Locks the sourcing rules in &sect;2, the Verifiable Proxy Rule in &sect;3 (introduced after the 2026-05-20 pre-publication audit), the disclosure framework in &sect;4, citation discipline in &sect;5, and the Quarterly Refresh cadence in &sect;6. The &sect;7 per-market scoping slot is reserved and empty for Wave 1.</p>
+<p><strong>v1.0 &middot; 2026-05-23.</strong> First publication of this methodology page. Locks the sourcing rules in &sect;2, the Verifiable Proxy Rule in &sect;3 (introduced after a 2026-05-20 pre-publication audit revealed predictions hung on private signal types), the disclosure framework in &sect;4, citation discipline in &sect;5, and the Quarterly Refresh cadence in &sect;6. The &sect;7 per-market scoping slot is reserved and empty at first publication.</p>
 
 </section>
 </main>
@@ -783,7 +775,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     <div class="footer-divider" role="separator"></div>
 
     <p class="footer-disclosure">
-      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report.
+      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment. Disclosure applies where DLP appears in ProductBeacon Research coverage.
     </p>
   </div>
 </footer>
