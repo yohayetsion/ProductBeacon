@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State of Cyber 2026 Synthesis · ProductBeacon Research</title>
+<meta name="description" content="Sourcing rules, disclosure framework, and refresh cadence for the open-web cyber market research published under the ProductBeacon Research banner.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="State of Cyber 2026 Synthesis · ProductBeacon Research">
+<meta property="og:description" content="Eight-page synthesis of State of Cyber 2026 Part 1.">
+<meta property="og:url" content="https://productbeacon.agency/research/state-of-cyber-2026/synthesis.html">
+<meta property="og:image" content="https://productbeacon.agency/research/og/methodology.png">
+<meta property="og:site_name" content="ProductBeacon Research">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="State of Cyber 2026 Synthesis · ProductBeacon Research">
+<meta name="twitter:description" content="Sourcing rules, disclosure framework, refresh cadence for ProductBeacon Research.">
+<meta name="twitter:image" content="https://productbeacon.agency/research/og/methodology.png">
+
+<!-- Favicon (Research variant per A-5) -->
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================================
+   ProductBeacon Research. Landing Page (A-7).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3
+   ==================================================================== */
+
+:root {
+  /* Color tokens */
+  --ink: #0F172A;            /* Default Research surface background */
+  --surface: #1E293B;        /* Card / elevated section bg */
+  --bright: #F8FAFC;         /* Maximum-contrast hero copy + chapter titles */
+  --primary-text: #F1F5F9;   /* Body copy, wordmark on dark */
+  --slate-400: #94A3B8;      /* Mono small-caps, eyebrow, disclosure */
+  --slate-600: #475569;      /* Dividers */
+  --amber: #F59E0B;          /* Primary accent */
+  --amber-60: #F59E0B99;     /* Lockup divider default */
+  --amber-12: #F59E0B1F;     /* Ribbon background */
+  --amber-20: #F59E0B33;     /* Ribbon border-bottom */
+  --amber-light: #FBBF24;    /* Hover / active */
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
+}
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
+}
+
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.topnav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text);
+}
+.topnav-brand-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav-brand-wordmark { font-size: 16px; font-weight: 500; }
+.topnav-brand-wordmark strong { font-weight: 700; }
+.topnav-links {
+  display: flex;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary-text);
+  transition: color var(--research-mark-hover-transition);
+}
+.topnav-links a:hover { color: var(--amber); }
+.topnav-links a.active { color: var(--amber); }
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-5);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-6) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Three-doors card */
+.doors {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  border: 1px solid #334155;
+}
+.doors-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.doors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.doors-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.doors-list li strong { color: var(--bright); font-weight: 500; }
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--research-mark-hover-transition), color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn-primary:hover { background: var(--amber-light); }
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-text);
+  border-color: var(--slate-600);
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- Section: chapters ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+}
+.chapter-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--primary-text);
+  margin: 0;
+}
+.chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.chapter-links a:hover { color: var(--amber-light); }
+.chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Methodology link ---------- */
+.methodology-block {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) 32px;
+  text-align: left;
+}
+.methodology-block a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.methodology-block a:hover { color: var(--amber-light); }
+.methodology-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--slate-400);
+  margin: 4px 0 0 0;
+}
+
+/* ---------- Email-capture form (E-1) ---------- */
+.subscribe {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-8);
+}
+.subscribe-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  max-width: 720px;
+}
+.subscribe-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+}
+.subscribe-cadence {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 280px;
+  height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--ink);
+  border: 1px solid var(--slate-600);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--research-mark-hover-transition);
+}
+.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
+.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
+.subscribe-form button { min-width: 160px; }
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: var(--space-3) 0 0 0;
+  min-height: 1.2em;
+}
+
+/* ---------- Footer (A-3 verbatim) ---------- */
+.footer {
+  border-top: 1px solid var(--slate-600);
+  background: var(--ink);
+  padding: var(--space-8) 32px var(--space-7);
+}
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.footer-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  margin-bottom: var(--space-6);
+}
+.footer-block-lockup { margin-bottom: var(--space-4); }
+.footer-block-parent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--primary-text);
+}
+.footer-block-parent .parent-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.footer-block-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+  max-width: var(--reading-max);
+}
+.footer-block-body a {
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--slate-600);
+  transition: color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+}
+.footer-block-body a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+.footer-divider {
+  height: 1px;
+  background: var(--slate-600);
+  margin: 0 0 var(--space-5) 0;
+}
+.footer-disclosure {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--slate-400);
+  line-height: 1.6;
+  margin: 0;
+  max-width: var(--reading-max);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-7) 24px; }
+  .section-title { font-size: 28px; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .footer-blocks { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer { padding: var(--space-7) 24px var(--space-6); }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .topnav { padding: 16px 24px; flex-wrap: wrap; }
+  .topnav-links { gap: var(--space-3); }
+  .doors { padding: var(--space-4); }
+  .subscribe { padding: var(--space-6) 24px var(--space-7); }
+  .subscribe-card { padding: var(--space-5); }
+  .methodology-block { padding: var(--space-5) 24px; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .topnav-brand-wordmark { font-size: 14px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+<body>
+
+
+<!-- =====================================================================
+     TOP NAV
+     ===================================================================== -->
+<nav class="topnav" aria-label="Primary">
+  <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
+    <span class="topnav-brand-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" fill="#0F172A"/>
+        <path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/>
+      </svg>
+    </span>
+    <span class="topnav-brand-wordmark"><strong>Product</strong>Beacon</span>
+  </a>
+  <ul class="topnav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/research/" class="active">Research</a></li>
+    <li><a href="/#services">Practice</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</nav>
+
+<!-- =====================================================================
+     HERO (Author-first, three-audience UTM routing)
+     ===================================================================== -->
+<main>
+<header class="hero">
+  <div class="hero-lockup-row">
+  </div>
+
+  <p class="hero-eyebrow">ProductBeacon Research &middot; State of Cyber 2026</p>
+  <h1 class="hero-headline">Synthesis Brief</h1>
+  <p class="hero-subhead" id="hero-subhead">Eight pages distilling Part 1's four chapters into actionable theses. For PE analysts, CISO operators, and fractional founders.</p>
+
+  <p class="hero-byline" style="margin-top: var(--space-3); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--slate-400); letter-spacing: 0.05em;">v1.0 &middot; 2026-05-24 &middot; By Yohay Etsion</p>
+</header>
+
+<section class="methodology-content" style="max-width: 760px; margin: 0 auto; padding: var(--space-4) var(--space-5) var(--space-7);">
+<p><em>An executive distillation of the four chapters: IRM, DLP, DSPM, and the cross-front Convergence read.</em></p>
+<p><strong>Asset ID:</strong> C-8 (Executive Synthesis brief, 8 pages) <strong>Version:</strong> v1.0 <strong>Date:</strong> 2026-05-24 <strong>Author:</strong> Yohay Etsion, Head of Product (Fractional) at AXIA, Creator of Product Org OS, Author of Leading the Charge (2003) and Vision to Value (coming 2026) <strong>Surface:</strong> Gated download behind email-capture form on the ProductBeacon Research site.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 1: Executive Summary</h2>
+<p>ProductBeacon Research is open-web cyber market research published with a verifiability standard most analyst-firm output does not meet. The four chapters of State of Cyber 2026 Part 1 ship with 280 unique citations, zero vendor sponsors, no paywalled-data reuse, and every conditional prediction grounded on a publicly observable proxy a reader can independently re-derive. This synthesis brief distils Part 1 into the three Pattern Claims that thread across the four chapters and the three buyer choices those Patterns force on the 2026 CISO.</p>
+<p>Three Pattern Claims do the load-bearing work of Part 1. <strong>The DSPM Absorption Chain</strong> is the lead claim and the spine of the cross-front Convergence read: six platform absorbs in fourteen months, on one side, and Cyera's USD 9B Series F in January 2026, on the other. The same wave that pulled Insider Risk Management into "Human Risk" platforms and Data Loss Prevention into "Data Security" platforms is now pulling DSPM into the buyers it was supposed to replace. <strong>The Thoma Bravo Data Security Stack</strong> is the cleanest 2026 example of a PE-backed vendor assembling a multi-front data-security stack as an IPO asset, with Proofpoint touching IRM, DLP, and DSPM through three distinct product lines. The H2 2026 S-1 will pressure-test whether the stack is a platform or a portfolio. <strong>Agentic AI Pulls Enforcement Back to the Data Source</strong> is the architectural reason the absorption settles where it does: when machine identities outnumber humans 80-to-1 and AI agents authenticate via shared service accounts that IAM treats as trusted infrastructure, the only enforcement point that scales is the data store itself.</p>
+<p>The buyer who reads this report has three real choices for the 2026 renewal cycle: consolidate to a platform (Microsoft Purview if Microsoft-standardized; Cyberhaven for a specialist-led unified platform; Proofpoint for an email-anchored stack), buy best-of-breed across the three fronts (Cyera or BigID for DSPM, a behavioral-IRM specialist for IRM, Microsoft or Cyberhaven for DLP), or hybridise (anchor on DSPM and selectively augment for AI-agent coverage where the platform incumbent is not yet GA-deep enough). This synthesis brief is not a recommendation. It is a structured way to enter the renewal conversation with the right Pattern Claims on the table.</p>
+<p>> <em>Not investment advice. See Disclosures.</em></p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 2: Methodology Snapshot</h2>
+<p>ProductBeacon Research is built on a publishing standard three audiences should be able to verify independently: private-equity and hedge-fund analysts, CISO operators, and fractional product leaders. We publish the rules so the bar is checkable.</p>
+<p><strong>280 citations across the four chapters.</strong> Per-chapter counts: IRM 60, DLP 103, DSPM 95, Convergence 22. Of those, 47 are cross-chapter references where the same source anchors claims across multiple fronts, most often between DSPM and Convergence, where the absorption thesis depends on signals also cited in DLP. Every claim cites at the point it is made. We cite when we claim, not when we speculate.</p>
+<p><strong>Zero vendor sponsors. No paywalled data. No analyst-firm reuse.</strong> We do not accept vendor sponsorship, republish paywalled analyst datasets, or reuse paid analyst-firm conclusions. The frameworks are our own. Named vendors do not receive pre-publication review of how they are covered.</p>
+<p><strong>Verifiable Proxy Rule.</strong> Every falsifiable test in the report grounds on a publicly observable signal. During pre-publication audit on 2026-05-20, six conditional predictions originally hung on "enterprise RFP language" as the falsifiable test. RFPs are private. A reader cannot independently observe what an enterprise puts into one. We rewrote all six against named-outlet customer wins, vendor earnings disclosures, analyst category-reclassification events, product-page hero changes captured as dated HTML, SEC filings, and funding rounds. Predictions grounded on private data cannot be falsified by the reader; predictions grounded on public signals can.</p>
+<p><strong>Post-publication factual-correction window.</strong> Within five business days of publication, any named vendor may request a factual correction by writing to the published research contact. We will correct factual inaccuracies. We will not negotiate positioning, change Winner / Watch / Loser characterizations, or remove Pattern Claims under vendor pressure. The correction window is for facts, not framing.</p>
+<p><strong>Author conflict disclosure.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment covered in this report. AXIA's scope is DLP only; it does not compete in IRM, DSPM, or the cross-front Convergence theses. Methodology applies equally to AXIA-adjacent vendors and to non-adjacent vendors. There is no parity exception.</p>
+<p>Full methodology page, including refresh cadence and the canonical 280-citation list, lives at <code>productbeacon.agency/research/methodology.html</code>.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 3: IRM, The Insider Risk Landscape</h2>
+<p>The Insider Risk Management chapter evaluates eight vendors across three tiers: three Gravity (Microsoft Purview, Varonis, Proofpoint ITM), four Attention (Cyberhaven, DTEX Systems, Mimecast Incydr, Everfox), and one Wildcard (Above Security). IRM answers a different question from the adjacent categories: who is doing what, and why, not what data is moving (DLP) or what data exists (DSPM). The 2026 product narrative has converged on AI-driven behavioral analysis at the content and intent layer, replacing the rule-and-anomaly UEBA tooling that defined 2018-2023.</p>
+<p><strong>Top three takeaways.</strong> First, distribution wins the default-choice slot. Microsoft Purview ships IRM inside the M365 E5 bundle with twelve policy templates including "Risky AI usage" and "Risky Agents (preview)". The buyer rarely makes a standalone IRM purchase decision when Purview is already activated. Second, AI-actor framing has gone from differentiator to table-stakes-in-progress. Above Security's USD 50M Series A funding thesis explicitly treats AI agents as insiders; Cyberhaven, DTEX, and Microsoft Purview all ship AI-actor coverage; if every Gravity-tier vendor has both an AI-usage template and an autonomous-agent investigation experience by Q4 2026, the wedge closes. Third, public-market discipline anchors the credibility floor: Varonis (NASDAQ:VRNS) at 16% YoY total ARR growth and 32% SaaS-ARR growth in Q4 2025 is the most analyzable Gravity-tier vendor in the category.</p>
+<p><strong>Pattern Claim from the IRM chapter, The Mimecast Absorption Thesis.</strong> Mimecast acquired Code42 in July 2024. The code42.com homepage now 301-redirects to mimecast.com/products/incydr; the Incydr page hero now reads "Adaptive data protection for a changing world" with no use of the phrase "insider risk" in the primary header. I read this as Mimecast subordinating the standalone IRM category brand to a broader Human Risk Management umbrella. The Pattern Claim is structural: if Mimecast's H2 2026 product cadence shows Incydr-branded releases on parity with pre-acquisition velocity, the absorption is structural-only; if Incydr is described only as a "module" or "capability" of the Mimecast HRM platform by Q4 2026, the standalone identity is consumed. This is one of three category-absorption events in 2024-2026 that Part 1 documents.</p>
+<p>> Full chapter at <code>productbeacon.agency/research/state-of-cyber-2026/irm.html</code>.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 4: DLP, The Data Loss Landscape</h2>
+<p>The Data Loss Prevention chapter evaluates nine vendors across three tiers: three Gravity (Microsoft Purview DLP, Broadcom/Symantec, Forcepoint), four Attention (Cyberhaven, Nightfall AI, Fortra/Digital Guardian, Proofpoint Enterprise DLP), and two Wildcard (Cyera, Operant AI). DLP answers what data is moving, in what channel, with what enforcement primitive applied. The 2026 product narrative has shifted from regex-and-fingerprint as the primary substrate toward AI-classifier substrates, and from "stop the file from leaving" toward "stop the sensitive content from being typed into a chatbot or pasted into an agent's tool call."</p>
+<p><strong>Top three takeaways.</strong> First, the DSPM-eats-DLP convergence has crossed from positioning into vendor reality. Microsoft Purview ships a productized Symantec-and-Forcepoint-to-Purview migration assistant. Cyberhaven's February 2026 unified launch bundles DSPM + DLP + IRM + AI Security on a single data-lineage substrate. BigID, Palo Alto Prisma Cloud, and IBM Guardium all now position DLP as a module of a DSPM-anchored platform. Second, identity-led DLP is the post-CyberArk question. Palo Alto Networks closed its USD 25B CyberArk acquisition on February 11, 2026, the largest cybersecurity deal in history, with a closing release citing an 80-to-1 machine-vs-human identity ratio. That ratio is the load-bearing number: content-rule DLP cannot scale to machine-identity volume even in principle. Third, MCP-DLP is a genuine category-formation moment. Operant AI launched Endpoint Protector on May 4, 2026 covering the Model Context Protocol surface that legacy DLP, CASB, and proxy controls have zero visibility into.</p>
+<p><strong>Pattern Claim from the DLP chapter, Identity-Led DLP Post-CyberArk.</strong> The historical content-classification-led DLP architecture asks what content is moving. The identity-led pitch asks which identity is moving content and is that identity privileged to do so. The 80-to-1 ratio gives the identity-led pitch durability that pure platform-bundling does not have. The falsifiable test: if by Q4 2026 either Palo Alto Networks' earnings cite Cortex XSIAM + Prisma Cloud DLP + CyberArk integration as a named contributor to enterprise wins, or Microsoft adds "Entra ID identity-aware DLP" as a headline capability with named reference customers, or Gartner reclassifies identity-integration as a baseline DLP requirement, the enforcement primitive has reorganized.</p>
+<p><strong>Author conflict disclosure.</strong> AXIA, where I am Head of Product (Fractional), competes in the Data Loss Prevention segment. The methodology is built so this disclosure does not require a reader's trust. Every claim in the DLP chapter, including those touching AXIA-adjacent vendors, grounds on the same Verifiable Proxy Rule applied across the other three chapters. There is no parity exception.</p>
+<p>> Full chapter at <code>productbeacon.agency/research/state-of-cyber-2026/dlp.html</code>.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 5: DSPM, The Data Posture Landscape</h2>
+<p>The Data Security Posture Management chapter evaluates eight vendors across three tiers: two Gravity (Microsoft Purview DSPM, BigID), four Attention (Cyera, Sentra, Proofpoint DSPM, Symmetry Systems), and two Wildcard (Concentric AI, Bedrock Data). DSPM answers what data exists, where it sits, who can reach it, and how exposed it is. The 2026 product narrative has expanded scope from cloud-storage-only coverage to a multi-estate scope that explicitly includes AI training pipelines and the vector stores feeding production LLM and agent workflows.</p>
+<p><strong>Top three takeaways.</strong> First, the boundary problem is itself the load-bearing observation. Four distinct vendor archetypes claim DSPM territory: DSPM-native specialists (Cyera, Sentra), platform-incumbents-with-DSPM-module (Microsoft Purview, BigID), CNAPP-extensions claiming DSPM (Wiz, Orca, CrowdStrike, FortiCNAPP), and data-governance pivots (Securiti). The chapter's scoping rule places vendors whose primary product page leads with DSPM as the headline category in the Contenders table; CNAPP-extensions appear as Plays-only references. The boundary itself is a Pattern Claim. Second, the Cyera valuation cadence (USD 1.4B April 2024 to USD 3B November 2024 to USD 6B June 2025 to USD 9B January 2026, four rounds in twenty-one months) is the largest concentration of data-security capital in the 2024-2026 cohort. Third, the August 2, 2026 EU AI Act Article 10 enforcement deadline is the most-cited single 2026 regulatory deadline in DSPM buyer-facing material; the obligations on training-data governance map directly onto the DSPM discovery + classification + lineage + access-governance surface.</p>
+<p><strong>Lead Pattern Claim across the launch cascade, The DSPM Absorption Chain.</strong> Per Yohay's launch-post framing, this is the one claim that has six platform absorbs in fourteen months on one side and Cyera's USD 9B Series F on the other. The chapter sources seven category-shaping events across approximately two years (IBM-Polar, PANW-Dig, CrowdStrike-Flow, Rubrik-Laminar, Proofpoint-Normalyze, Veeam-Securiti AI at USD 1.725B closed December 2025, Google-Wiz at USD 32B closed early 2026). The C-1 launch post compresses the framing to "six platform absorbs in fourteen months" to land the cascade tease; the chapter itself anchors the longer event chain. Both framings point to the same wave: platform incumbents from four different starting positions (data-resilience, CNAPP, identity, and email-security) are all converging on a DSPM-anchored data-security stack. The standalone-DSPM lane survives only at the AI-training-pipeline frontier where CNAPP-bundled DSPM has not caught up; the Cyera mega-round is the standalone-leader pole that the absorption is failing to consume.</p>
+<p>> Full chapter at <code>productbeacon.agency/research/state-of-cyber-2026/dspm.html</code>.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 6: Convergence, The Cross-Front Synthesis</h2>
+<p>The Convergence chapter is the synthesis the three Part 1 fronts could not contain inside themselves. The chapter argues for one chosen thesis and names two serious counter-positions before arguing from the chosen read. This synthesis brief flags all three because the reader's renewal-cycle position depends on which one they bet on.</p>
+<p><strong>The chosen thesis: DSPM Absorption Substrate.</strong> The 2026 consolidation of IRM, DLP, and DSPM is not three parallel platform races. It is a single absorption wave in which the data layer becomes the anchor for the surrounding categories. DSPM wins the substrate role because the underlying problem (where sensitive data sits, who can reach it, and what classifier output downstream controls trust) is the only primitive all three categories ultimately need. IRM and DLP are absorbing into platforms whose load-bearing surface is the data layer that DSPM established.</p>
+<p><strong>Counter-position 1: Three-Front Bundle Thesis.</strong> The 2026 convergence is driven by platform economics and suite-attach mechanics, not by any architectural preference for the data layer. Microsoft Purview ships IRM, DLP, and DSPM as modules of the same M365 E5 SKU. Proofpoint, Varonis, and Cyberhaven all ship multi-module data-security suites. Under this thesis the survivors are platform vendors with cross-module distribution leverage, and DSPM is not specially privileged.</p>
+<p><strong>Counter-position 2: Identity-Data-Behavior Collapse Thesis.</strong> The 2026 convergence is being driven by agentic AI, and the three fronts collapse because the subject of analysis (the entity whose behavior, data access, and content movement is being governed) is no longer cleanly human or non-human. The survivors are vendors whose product accommodates the data-actor collapse natively, regardless of category lineage.</p>
+<p><strong>Three Cross-Front Pattern Claims that bracket the chapter's read.</strong></p>
+<p><em>Pattern Claim, The Thoma Bravo Data Security Stack.</em> Proofpoint is the only single vendor with named-outlet-sourced presence across all three Part 1 fronts at combined Gravity/Attention placement: ITM at IRM Gravity, Enterprise DLP at DLP Attention, post-Normalyze DSPM at DSPM Attention. The parent was taken private by Thoma Bravo in August 2021 at USD 12.3B and is publicly signaling 2026 IPO intent. I read this as the cleanest example of a PE-backed platform vendor assembling a multi-front data-security stack as an IPO asset rather than as an architecturally coherent product. The H2 2026 S-1 will pressure-test whether the stack is a platform or a portfolio.</p>
+<p><em>Pattern Claim, Agentic AI Pulls Enforcement Back to the Data Source.</em> Three category-specific architectural articulations converge on the same structural primitive: Microsoft Purview's "Risky Agents (preview)" template (IRM), Operant AI's MCP-protocol-level Endpoint Protector launch (DLP), Veeam's DataAI Command Platform thesis that enforcement must shift "to the data source, not at the agent, so known and unknown agents cannot access sensitive data if that data is governed at the source" (DSPM). When the actor is a machine identity at machine speed, the only enforcement point that scales is the data store itself. This claim runs underneath all three of the convergence theses.</p>
+<p><em>Pattern Claim, DSPM Absorption Chain.</em> The lead claim across the launch cascade. See page 5 for the full treatment; the synthesis matters here because the three Pattern Claims together, and not any one of them alone, are what give the 2026 convergence story its shape. Pattern Claim 1 (Thoma Bravo Stack) documents the vendor-level absorption dynamic. Pattern Claim 2 (Agentic AI Data-Source Pivot) documents the architectural reason the absorbed mass settles on the data layer. Pattern Claim 3 (DSPM Absorption Chain) documents the chain of events that have already executed against that gravity.</p>
+<p>> Full chapter at <code>productbeacon.agency/research/state-of-cyber-2026/convergence.html</code>. <em>Not investment advice. See Disclosures.</em></p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 7: What This Means For Three Audiences</h2>
+<p>We write to three audiences and the synthesis lands differently for each. This page is the where-to-pull-on-this section.</p>
+<p><strong>For private-equity and hedge-fund analysts.</strong> The sourceable signals are concentrated in three event types over the next four quarters. First, the Proofpoint S-1 filing structure. If ITM, Enterprise DLP, and DSPM appear as a single named Data Security segment with unified ARR disclosure, the Thoma Bravo Data Security Stack is being marketed as a platform and the integration-depth question becomes a public-market-disclosure question. If the three are segmented separately under an "Information Protection" umbrella, the stack is a portfolio and renewal-cycle competitive pressure from Microsoft Purview's single-classifier-stack and Cyberhaven's single-lineage-substrate platforms intensifies through 2027. Second, the Cyera Series G cadence. ARR crossing USD 200M with sustained 80%+ growth and a fresh mega-round at flat-or-up keeps the standalone-DSPM lane wide; a flat-or-down round or an acquisition signal would force a Pattern Claim 1 re-read. Third, a mid-tier DSPM-native acquisition event matching the Securiti AI or Normalyze cadence (Bloomberg, Reuters, Fortune, TechCrunch, Calcalist as named-outlet anchors): any platform-vendor announcement of Sentra, BigID, Symmetry Systems, Concentric AI, or Bedrock Data hardens the DSPM Absorption Substrate read.</p>
+<p><strong>For CISO operators and security buyers.</strong> Bring three things to the steering meeting. The first is a vendor-tier audit against the chapter's Gravity / Attention / Wildcard placements: every renewal under consideration should map to a named tier, and any vendor outside the eight to nine per chapter should be challenged on why it survived the published-material discipline filter. The second is a Verifiable Proxy Rule applied to vendor claims. If a vendor's hero copy claims unified IRM + DLP + DSPM coverage, ask for the shared classifier substrate, the unified control plane, and the joint customer reference. The Convergence chapter explicitly flags that several multi-front platform pitches do not yet name these at flagship-mature integration depth. The third is an explicit position on which of the three convergence theses the enterprise is betting on. Choice 1 (consolidate to a platform), Choice 2 (best-of-breed across the three fronts), and Choice 3 (hybridise on a DSPM anchor) all have defensible logic; the renewal cycle reveals which assumption the buyer was operating under, sometimes too late.</p>
+<p><strong>For fractional founders, CPOs, and product leaders.</strong> Three frameworks port to other markets. First, the published-material discipline. The chapter selects vendors by a defensible filter (post-USD-100M private, public, or named-outlet-anchored) rather than by analyst-firm convenience; this filter survives any category transition. Second, the four-archetype boundary analysis. DSPM is the muddiest of the three fronts in 2026 because four vendor archetypes claim its territory with different load-bearing primitives. Any market entering a "convergence" moment will produce the same boundary-problem signature, and naming the archetypes is the first step to defensible positioning. Third, the Pattern Claim shape. Observation → My read → Conditional prediction → Sources, with the conditional prediction grounded on a publicly observable proxy, is a portable analytical structure for any product or market category being repositioned by a structural force.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; color: var(--bright); margin: var(--space-7) 0 var(--space-3);">Page 8: Disclosures and Backmatter</h2>
+<p><strong>Author conflict disclosure.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in this report. AXIA's scope is DLP only; it does not compete in IRM, DSPM, or the cross-front Convergence theses. The methodology applies equally to AXIA-adjacent vendors and to non-adjacent vendors. There is no parity exception.</p>
+<p><strong>Not investment advice.</strong> Nothing in this synthesis brief or in the underlying chapters constitutes investment advice, an offer to buy or sell any security, or a recommendation for any specific investment action. Vendor placements (Gravity / Attention / Wildcard), Winner / Watch / Loser characterizations, and Pattern Claim conditional predictions are research opinions grounded on publicly verifiable proxies; they are not financial advice and should not be relied upon as such. Readers should consult their own advisors before making investment decisions about any named vendor.</p>
+<p><strong>Citation count.</strong> State of Cyber 2026 Part 1 ships with 280 unique citations across the four chapters, 47 of which cross-reference between chapters. The full citation list lives at <code>productbeacon.agency/research/state-of-cyber-2026/citations.md</code>, regenerated at every chapter ship.</p>
+<p><strong>Methodology.</strong> The full sourcing rules, Verifiable Proxy Rule, disclosure framework, citation discipline, and Quarterly Refresh cadence live at <code>productbeacon.agency/research/methodology.html</code>. Methodology version bumps are independent of chapter version bumps. v1.0 of the methodology page was published 2026-05-23 alongside Part 1.</p>
+<p><strong>Contact and corrections.</strong> Within five business days of any chapter's publication date, named vendors may request a factual correction by writing to <code>yohay@productbeacon.agency</code>. We will correct factual inaccuracies. We will not negotiate positioning, change Winner / Watch / Loser characterizations, or remove Pattern Claims under vendor pressure. The correction window is for facts, not framing.</p>
+<p><strong>About the author.</strong> Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+<p><strong>About ProductBeacon.</strong> ProductBeacon is the fractional product leadership practice for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including <a href="https://github.com/yohayetsion/product-org-os" style="color: var(--amber);">Product Org OS</a> and Vision to Value, coming 2026. Learn more at <a href="https://productbeacon.agency/services/" style="color: var(--amber);">productbeacon.agency/services/</a>.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-5) 0;">
+<p><em>State of Cyber 2026 Part 1 Executive Synthesis · v1.0 · 2026-05-24 · ProductBeacon Research</em></p>
+</section>
+</main>
+
+<!-- =====================================================================
+     FOOTER (A-3 verbatim, two-block)
+     ===================================================================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-blocks">
+
+      <!-- Block A: About the author (left) -->
+      <div class="footer-block-left">
+        <div class="footer-block-lockup">
+          <span class="lockup lockup-md" aria-label="ProductBeacon Research">
+            <span class="lockup-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+                <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+              </svg>
+            </span>
+            <span class="lockup-divider" aria-hidden="true"></span>
+            <span class="lockup-wordmark">Research</span>
+          </span>
+        </div>
+        <p class="footer-block-title">About the author · Yohay Etsion</p>
+        <p class="footer-block-body">Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+      </div>
+
+      <!-- Block B: About ProductBeacon (right) -->
+      <div class="footer-block-right">
+        <div class="footer-block-parent" aria-label="ProductBeacon">
+          <span class="parent-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#0F172A"/><path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/></svg></span>
+          <span><strong style="font-weight:700;">Product</strong>Beacon</span>
+        </div>
+        <p class="footer-block-title">About ProductBeacon</p>
+        <p class="footer-block-body">ProductBeacon is the <a href="/#services">fractional product leadership practice</a> for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including Product Org OS and Vision to Value, coming 2026.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-divider" role="separator"></div>
+
+    <p class="footer-disclosure">
+      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment. Disclosure applies where DLP appears in ProductBeacon Research coverage.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
