@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State of Cyber 2026: Three Pattern Claims, Three Choices · ProductBeacon Research</title>
+<meta name="description" content="Sourcing rules, disclosure framework, and refresh cadence for the open-web cyber market research published under the ProductBeacon Research banner.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="State of Cyber 2026: Three Pattern Claims, Three Choices · ProductBeacon Research">
+<meta property="og:description" content="State of Cyber 2026 Part 1 distilled into three Pattern Claims + three buyer choices.">
+<meta property="og:url" content="https://productbeacon.agency/research/state-of-cyber-2026/brief.html">
+<meta property="og:image" content="https://productbeacon.agency/research/og/methodology.png">
+<meta property="og:site_name" content="ProductBeacon Research">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="State of Cyber 2026: Three Pattern Claims, Three Choices · ProductBeacon Research">
+<meta name="twitter:description" content="Sourcing rules, disclosure framework, refresh cadence for ProductBeacon Research.">
+<meta name="twitter:image" content="https://productbeacon.agency/research/og/methodology.png">
+
+<!-- Favicon (Research variant per A-5) -->
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================================
+   ProductBeacon Research. Landing Page (A-7).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3
+   ==================================================================== */
+
+:root {
+  /* Color tokens */
+  --ink: #0F172A;            /* Default Research surface background */
+  --surface: #1E293B;        /* Card / elevated section bg */
+  --bright: #F8FAFC;         /* Maximum-contrast hero copy + chapter titles */
+  --primary-text: #F1F5F9;   /* Body copy, wordmark on dark */
+  --slate-400: #94A3B8;      /* Mono small-caps, eyebrow, disclosure */
+  --slate-600: #475569;      /* Dividers */
+  --amber: #F59E0B;          /* Primary accent */
+  --amber-60: #F59E0B99;     /* Lockup divider default */
+  --amber-12: #F59E0B1F;     /* Ribbon background */
+  --amber-20: #F59E0B33;     /* Ribbon border-bottom */
+  --amber-light: #FBBF24;    /* Hover / active */
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
+}
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
+}
+
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.topnav-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text);
+}
+.topnav-brand-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav-brand-wordmark { font-size: 16px; font-weight: 500; }
+.topnav-brand-wordmark strong { font-weight: 700; }
+.topnav-links {
+  display: flex;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary-text);
+  transition: color var(--research-mark-hover-transition);
+}
+.topnav-links a:hover { color: var(--amber); }
+.topnav-links a.active { color: var(--amber); }
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-5);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-6) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Three-doors card */
+.doors {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  border: 1px solid #334155;
+}
+.doors-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.doors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.doors-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.doors-list li strong { color: var(--bright); font-weight: 500; }
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--research-mark-hover-transition), color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn-primary:hover { background: var(--amber-light); }
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-text);
+  border-color: var(--slate-600);
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- Section: chapters ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+}
+.chapter-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--primary-text);
+  margin: 0;
+}
+.chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.chapter-links a:hover { color: var(--amber-light); }
+.chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Methodology link ---------- */
+.methodology-block {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) 32px;
+  text-align: left;
+}
+.methodology-block a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.methodology-block a:hover { color: var(--amber-light); }
+.methodology-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--slate-400);
+  margin: 4px 0 0 0;
+}
+
+/* ---------- Email-capture form (E-1) ---------- */
+.subscribe {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-8);
+}
+.subscribe-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  max-width: 720px;
+}
+.subscribe-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+}
+.subscribe-cadence {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 280px;
+  height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--ink);
+  border: 1px solid var(--slate-600);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--research-mark-hover-transition);
+}
+.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
+.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
+.subscribe-form button { min-width: 160px; }
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: var(--space-3) 0 0 0;
+  min-height: 1.2em;
+}
+
+/* ---------- Footer (A-3 verbatim) ---------- */
+.footer {
+  border-top: 1px solid var(--slate-600);
+  background: var(--ink);
+  padding: var(--space-8) 32px var(--space-7);
+}
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+.footer-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  margin-bottom: var(--space-6);
+}
+.footer-block-lockup { margin-bottom: var(--space-4); }
+.footer-block-parent {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--primary-text);
+}
+.footer-block-parent .parent-icon {
+  width: 28px; height: 28px;
+  background: var(--amber);
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.footer-block-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text);
+  margin: 0;
+  max-width: var(--reading-max);
+}
+.footer-block-body a {
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--slate-600);
+  transition: color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+}
+.footer-block-body a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+.footer-divider {
+  height: 1px;
+  background: var(--slate-600);
+  margin: 0 0 var(--space-5) 0;
+}
+.footer-disclosure {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--slate-400);
+  line-height: 1.6;
+  margin: 0;
+  max-width: var(--reading-max);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-7) 24px; }
+  .section-title { font-size: 28px; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .footer-blocks { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer { padding: var(--space-7) 24px var(--space-6); }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .topnav { padding: 16px 24px; flex-wrap: wrap; }
+  .topnav-links { gap: var(--space-3); }
+  .doors { padding: var(--space-4); }
+  .subscribe { padding: var(--space-6) 24px var(--space-7); }
+  .subscribe-card { padding: var(--space-5); }
+  .methodology-block { padding: var(--space-5) 24px; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .topnav-brand-wordmark { font-size: 14px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+<body>
+
+
+<!-- =====================================================================
+     TOP NAV
+     ===================================================================== -->
+<nav class="topnav" aria-label="Primary">
+  <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
+    <span class="topnav-brand-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" fill="#0F172A"/>
+        <path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/>
+      </svg>
+    </span>
+    <span class="topnav-brand-wordmark"><strong>Product</strong>Beacon</span>
+  </a>
+  <ul class="topnav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Insights</a></li>
+    <li><a href="/research/" class="active">Research</a></li>
+    <li><a href="/#services">Practice</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</nav>
+
+<!-- =====================================================================
+     HERO (Author-first, three-audience UTM routing)
+     ===================================================================== -->
+<main>
+<header class="hero">
+  <p class="hero-eyebrow">ProductBeacon Research &middot; State of Cyber 2026</p>
+  <h1 class="hero-headline">Three Pattern Claims, Three Choices</h1>
+  <p class="hero-subhead" id="hero-subhead">A distillation of IRM, DLP, DSPM, and Convergence. For PE analysts, CISO operators, and fractional founders.</p>
+  <p class="hero-byline" style="margin-top: var(--space-3); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--slate-400); letter-spacing: 0.05em;">v1.0 &middot; 2026-05-25 &middot; By Yohay Etsion</p>
+</header>
+
+<section class="methodology-content" style="max-width: 760px; margin: 0 auto; padding: var(--space-3) var(--space-5) var(--space-6);">
+<p><em>A distillation of IRM, DLP, DSPM, and Convergence. For PE analysts, CISO operators, and fractional founders.</em></p>
+<p><strong>ProductBeacon Research · v1.0 · 2026-05-25</strong></p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">TL;DR</h2>
+<p>Part 1's lead finding: the DSPM standalone lane is collapsing into the platforms it was meant to disrupt. Two structural companions explain why. A PE-backed multi-front IPO asset is in motion (Proofpoint under Thoma Bravo). An architectural reason both settle on the data layer (agentic AI at 80-to-1 machine-vs-human identity). The 2026 renewal cycle is not three parallel platform races. It is one absorption wave with a data-layer anchor. Read the cards. Click into the chapter you want. Skip the rest.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">Card 1: The DSPM Absorption Chain</h2>
+<p><strong>Claim.</strong> The wave that pulled Insider Risk Management into Human Risk platforms and Data Loss Prevention into Data Security platforms is now pulling DSPM into the buyers it was supposed to replace. The standalone-DSPM lane survives only at the AI-training-pipeline frontier where the platform incumbents have not caught up.</p>
+<p><strong>Evidence.</strong> Six platform absorbs in fourteen months: IBM-Polar, PANW-Dig, CrowdStrike-Flow, Rubrik-Laminar, Proofpoint-Normalyze, Veeam-Securiti AI (USD 1.725B, December 2025). Google-Wiz (USD 32B, early 2026) sits above as a cross-front megadeal. The counter-pole is Cyera: USD 9B Series F (January 2026) caps a four-round, twenty-one-month cadence. The largest concentration of data-security capital in the cohort.</p>
+<p><em>Falsifiable test. A named-outlet acquisition (Bloomberg, Reuters, Fortune, TechCrunch, Calcalist) of Sentra, BigID, Symmetry, Concentric, or Bedrock Data by Q4 2026 matching the Securiti or Normalyze cadence hardens the read. A flat-or-down Cyera Series G, or an acquisition signal on Cyera itself, forces a re-read.</em></p>
+<p><strong>So what.</strong> If you are buying DSPM standalone in 2026, you are betting against the absorption.</p>
+<div style="max-width: 680px; margin: var(--space-4) auto; padding: var(--space-3); background: var(--surface); border-radius: 8px;"><figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
+<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
+    .cat-label { font-size: 13px; font-weight: 700; }
+    .desc { font-size: 10px; fill: #4b5563; }
+    .focus-label { font-size: 14px; font-weight: 700; fill: #92400E; }
+    .caption { font-size: 10px; font-style: italic; fill: #6b7280; }
+    .divider { stroke: #d1d5db; stroke-width: 1.5; stroke-dasharray: 4,4; }
+  </style>
+
+  <text x="400" y="28" text-anchor="middle" class="title">Where DSPM Sits in the 2026 Cyber Stack</text>
+
+  <!-- Vertical divider: data-centric vs platform-centric -->
+  <line x1="400" y1="65" x2="400" y2="430" class="divider"/>
+  <text x="200" y="58" text-anchor="middle" class="desc" font-weight="600" fill="#374151">DATA-CENTRIC</text>
+  <text x="600" y="58" text-anchor="middle" class="desc" font-weight="600" fill="#374151">PLATFORM / INFRASTRUCTURE-CENTRIC</text>
+
+  <!-- Horizontal divider: discovery/posture vs enforcement/runtime -->
+  <line x1="80" y1="250" x2="720" y2="250" class="divider"/>
+  <text x="55" y="160" text-anchor="middle" class="desc" font-weight="600" fill="#374151" transform="rotate(-90 55 160)">POSTURE</text>
+  <text x="55" y="350" text-anchor="middle" class="desc" font-weight="600" fill="#374151" transform="rotate(-90 55 350)">ENFORCEMENT</text>
+
+  <!-- Top-left quadrant: DATA-CENTRIC + POSTURE — DSPM (the focus) -->
+  <ellipse cx="220" cy="165" rx="135" ry="65" fill="#fed7aa" stroke="#92400E" stroke-width="2.5" opacity="0.85"/>
+  <text x="220" y="160" text-anchor="middle" class="focus-label">DSPM</text>
+  <text x="220" y="180" text-anchor="middle" class="desc" font-weight="600">Data Security Posture</text>
+  <text x="220" y="195" text-anchor="middle" class="desc">Discover, classify, recommend</text>
+
+  <!-- Bottom-left quadrant: DATA-CENTRIC + ENFORCEMENT — DLP -->
+  <ellipse cx="220" cy="340" rx="115" ry="55" fill="#fde68a" stroke="#a16207" stroke-width="1.8" opacity="0.7"/>
+  <text x="220" y="335" text-anchor="middle" class="cat-label" fill="#78350f">DLP</text>
+  <text x="220" y="355" text-anchor="middle" class="desc">Data Loss Prevention</text>
+  <text x="220" y="370" text-anchor="middle" class="desc">Channel-egress blocking</text>
+
+  <!-- Top-right quadrant: PLATFORM + POSTURE — CNAPP DSPM modules -->
+  <ellipse cx="580" cy="155" rx="125" ry="60" fill="#dbeafe" stroke="#1e40af" stroke-width="1.8" opacity="0.65"/>
+  <text x="580" y="150" text-anchor="middle" class="cat-label" fill="#1e3a8a">CNAPP (DSPM module)</text>
+  <text x="580" y="170" text-anchor="middle" class="desc">Wiz, Orca, FortiCNAPP</text>
+  <text x="580" y="185" text-anchor="middle" class="desc">CrowdStrike Falcon Cloud</text>
+
+  <!-- Lower-right: Data Governance (legacy / pivots) -->
+  <ellipse cx="580" cy="340" rx="115" ry="55" fill="#e9d5ff" stroke="#6b21a8" stroke-width="1.5" opacity="0.6"/>
+  <text x="580" y="335" text-anchor="middle" class="cat-label" fill="#581c87">Data Governance</text>
+  <text x="580" y="355" text-anchor="middle" class="desc">OneTrust, Privacera, Immuta</text>
+  <text x="580" y="370" text-anchor="middle" class="desc">DSPM-language pivots</text>
+
+  <!-- Boundary annotation -->
+  <text x="400" y="455" text-anchor="middle" class="desc" font-style="italic">DSPM's category boundary is contested from all three neighbors —</text>
+  <text x="400" y="470" text-anchor="middle" class="desc" font-style="italic">CNAPP pulls right (bundling), DLP pulls down (convergence), Governance pulls diagonally (rebranding).</text>
+
+  <!-- Caption -->
+  <text x="400" y="490" text-anchor="middle" class="caption">Author's read of public material, May 2026. Boundaries are conceptual, not data-derived.</text>
+</svg>
+
+<figcaption style="font-size:10pt;color:#6b7280;font-style:italic;margin-top:6pt;">Where DSPM Sits in the Cyber Stack — DSPM, DLP, IRM, CNAPP, and AI Security positioned by Data-Estate Coverage Scope × Action Posture</figcaption>
+</figure>
+</div>
+<div data-prev-section="s2-4">
+  <p><em>The DSPM category sits in the data-at-rest discovery quadrant. DLP shares the data-classification substrate; IRM shares the access-pattern visibility surface. CNAPP claims data security as a sub-feature of cloud-workload protection — a boundary the chapter dissects below. AI Security entrants are extending DSPM into AI-training-pipeline and vector-store coverage.</em></p>
+</div>
+<div data-prev-section="s2-5">
+  <p><strong>What DSPM IS.</strong> A discovery-and-posture workflow for data at rest. Coverage scope spans cloud object storage (S3, Azure Blob, GCS), managed databases and warehouses (RDS, Aurora, Snowflake, BigQuery, Databricks), SaaS data tenants (M365, Salesforce, Workday, ServiceNow), increasingly on-prem and hybrid file shares, and — newly — AI-training pipelines (training data corpora, vector embeddings, RAG indexes)<sup class="fn-ref" id="fnref-p6"><a href="https://bigid.com/" target="_blank" rel="noopener" title="Open source in new tab">6</a></sup><sup class="fn-ref" id="fnref-p1"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">1</a></sup><sup class="fn-ref" id="fnref-p3"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">3</a></sup>. Classification is AI-classifier-led in 2026 vendor narratives, with regex-and-fingerprint relegated to fallback paths. The action posture spans pure visibility (recommendation-only, leave remediation to DLP and IAM controls), guided remediation (the platform proposes posture changes that the buyer approves and applies through downstream tools), and automated remediation (the platform applies posture changes inline — IAM tightening, encryption-at-rest enforcement, sensitive-data quarantine, or — in the most aggressive vendor positioning — automated DLP-style inline blocking on egress). The 2026 DSPM product surfaces commonly include: cloud-data-store connectors, SaaS-tenant API connectors, IAM and permissions-graph ingestion, sensitivity-classification engines (LLM-based or trained ML), remediation workflows, and increasingly DDR (Data Detection and Response) for runtime data-access monitoring.</p>
+</div>
+<div data-prev-section="s2-6">
+  <p><strong>What DSPM IS NOT.</strong> Not a DLP alone (DLP enforces on egress; DSPM maps and recommends posture, with some vendors extending into enforcement primitives but most leaving that to DLP integration). Not a CNAPP (CNAPP secures the cloud workload — compute, network, identity, secrets — with data security as one feature among many; DSPM treats data-at-rest as the load-bearing primitive). Not a CSPM (CSPM checks cloud-configuration posture against benchmarks; DSPM checks data posture across cloud-stored data). Not an AI Security platform (AI App Sec governs the runtime of AI applications; DSPM governs the data feeding and produced by them — a separate scope<sup class="fn-ref"><a href="#fn-p5" id="fnref-p5">5</a></sup>). And not a data catalog or data governance tool (Collibra, Alation, OneTrust DataDiscovery) — those products lead with metadata management and governance workflows; DSPM leads with security posture and exposure reduction.</p>
+</div>
+</div>
+<div class="slide" data-slide="3" data-title="What is DSPM, and what is just...">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">What is DSPM, and what is just...</span>
+</div>
+<h3>What is DSPM, and what is just CNAPP wearing a DSPM hat</h3>
+<div data-prev-section="s3-1">
+  <p>The DSPM category is the muddiest of the data fronts in 2026 because four distinct vendor archetypes claim DSPM territory, each with different load-bearing primitives, and the term "DSPM" appears on product pages in ways that range from primary-category-anchor to feature-bullet-buried-in-CNAPP-taxonomy. The boundary commentary that follows uses verbatim pillars from each archetype's product surface to make the distinction concrete; the report's §3.2c scoping rule is that vendors whose primary product page leads with "DSPM" or "Data Security Posture Management" as the headline category are in §3.3 Contenders, while vendors that mention DSPM as a sub-feature of CNAPP or as one capability inside a broader platform appear in §3.4 Plays only.</p>
+</div>
+<div data-prev-section="s3-2">
+  <p><strong>Archetype 1: DSPM-native specialists.</strong> Cyera's dedicated DSPM product page leads with <em>"Modern DSPM. Complete data clarity. Actionable intelligence. Built for the AI era."</em><sup class="fn-ref" id="fnref-p3"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">3</a></sup>. Sentra positions itself as a DSPM-led platform with adjacent Data Detection and Response<sup class="fn-ref" id="fnref-p7"><a href="https://www.sentra.io/" target="_blank" rel="noopener" title="Open source in new tab">7</a></sup>. Symmetry Systems self-identifies as a DSPM leader recognized in Gartner's Market Guide for DSPM (2025) and ships DataGuard as its core DSPM product<sup class="fn-ref" id="fnref-p8"><a href="https://www.symmetry-systems.com/" target="_blank" rel="noopener" title="Open source in new tab">8</a></sup>. Concentric AI similarly references its Gartner Market Guide recognition under the DSPM category and leads its homepage with data-security-governance framing<sup class="fn-ref" id="fnref-p9"><a href="https://concentric.ai/" target="_blank" rel="noopener" title="Open source in new tab">9</a></sup>. These are the cleanest §3.3 placements — DSPM is the headline category, the product taxonomy is DSPM-anchored, and the rest of the platform is built outward from the DSPM primitive.</p>
+</div>
+<div data-prev-section="s3-3">
+  <p><strong>Archetype 2: Platform-incumbents-with-DSPM-module.</strong> Microsoft Purview ships DSPM as a dedicated module of the Purview compliance suite, with the documentation surface explicitly titled <em>"Learn about Data Security Posture Management (classic)"</em> and a successor "new DSPM" with expanded data-source coverage<sup class="fn-ref" id="fnref-p1"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">1</a></sup>. BigID leads its homepage with <em>"The Only Platform Built for AI Risk at Every Layer"</em><sup class="fn-ref" id="fnref-p10"><a href="https://bigid.com/" target="_blank" rel="noopener" title="Open source in new tab">10</a></sup> and presents DSPM as the first sub-pillar under its Data Security product line — a "platform-led, DSPM-first" framing distinct from Cyera's DSPM-as-headline approach. Varonis, by contrast, leads <code>varonis.com</code> with <em>"Secure AI and the Data That Powers It"</em> and positions DSPM as a use-case module of its Data Security Platform (<em>"Improve your data security posture automatically"</em>)<sup class="fn-ref" id="fnref-p11"><a href="https://www.varonis.com/" target="_blank" rel="noopener" title="Open source in new tab">11</a></sup> — DSPM is a feature surface, not the lead category. The report's §3.2c rule resolves these by surface evidence: Microsoft and BigID have dedicated DSPM product surfaces that lead with DSPM-as-category, so they are in §3.3; Varonis's hero leads with AI+Data Security Platform and DSPM lives in the use-case nav, so Varonis is a §3.4 Plays / §3.6 Pattern Claims reference.</p>
+</div>
+<div data-prev-section="s3-4">
+  <p><strong>Archetype 3: CNAPP-extensions claiming DSPM.</strong> Wiz leads <code>wiz.io</code> with <em>"Protect Everything You Build and Run"</em> and positions data security inside its code-cloud-runtime CNAPP taxonomy<sup class="fn-ref" id="fnref-p12"><a href="https://www.wiz.io/" target="_blank" rel="noopener" title="Open source in new tab">12</a></sup>; DSPM is not a primary pillar on the homepage. Orca leads <code>orca.security</code> with platform-positioning copy and self-describes as "industry-leading CNAPP" in its meta-description<sup class="fn-ref" id="fnref-p13"><a href="https://orca.security/" target="_blank" rel="noopener" title="Open source in new tab">13</a></sup>; DSPM is not mentioned on the homepage. CrowdStrike Falcon Cloud Security leads <code>crowdstrike.com/platform/cloud-security</code> with <em>"Stop cloud breaches from code to runtime"</em> and is positioned in IDC's MarketScape for Worldwide CNAPP and Frost Radar™ for CNAPPs<sup class="fn-ref" id="fnref-p14"><a href="https://www.crowdstrike.com/en-us/platform/cloud-security/" target="_blank" rel="noopener" title="Open source in new tab">14</a></sup>; the page taxonomy includes CSPM, ASPM, and AI-SPM, but DSPM is absent — even though CrowdStrike acquired Flow Security in 2024 for its DSPM-adjacent capability, the marketing surface continues to lead with CNAPP. FortiCNAPP, the post-acquisition rebrand of Lacework, leads with <em>"Cloud-Native Application Protection Platform (CNAPP)"</em><sup class="fn-ref" id="fnref-p15"><a href="https://www.fortinet.com/products/forticnapp" target="_blank" rel="noopener" title="Open source in new tab">15</a></sup> and similarly does not surface DSPM as a primary pillar. These four are §3.4-only references in this chapter; the §3.6 candidate Pattern Claim "The CNAPP-Absorbs-DSPM Thesis" examines whether their structural pull eventually displaces standalone DSPM specialists.</p>
+</div>
+<div data-prev-section="s3-5">
+  <p><strong>Archetype 4: Data-governance-and-privacy pivots to DSPM.</strong> Securiti.ai leads <code>securiti.ai</code> with <em>"Your Data Command Center™"</em><sup class="fn-ref" id="fnref-p16"><a href="https://securiti.ai/" target="_blank" rel="noopener" title="Open source in new tab">16</a></sup> — an umbrella positioning that includes DSPM as one capability alongside Gencore AI (safe enterprise AI) and Agent Commander (agentic AI risk). Securiti's heritage is PrivacyOps; the 2024-2026 pivot is to Data Command Center framing that explicitly bundles DSPM but does not lead with it. The §3.2c rule places Securiti in §3.4 Plays. BigID's pivot from data-governance heritage to DSPM-first product taxonomy makes it a §3.3 inclusion despite the platform-led hero — the structural primitive is data discovery and classification, and DSPM is named as a lead product surface even when the hero copy is platform-level. The two pivots are different vectors of the same underlying motion: legacy data-governance and privacy vendors are repositioning around DSPM language as the buyer term-of-art shifts.</p>
+</div>
+<div data-prev-section="s3-6">
+  <p>The boundary problem is itself a load-bearing observation for §3.6 Pattern Claims. The §3.3 in-scope vendor list of eight names covers Archetypes 1 and 2; the §3.4 section covers Archetypes 3 and 4. Three candidate Pattern Claims emerge from this scope decision and are seeded for §3.6 authoring: <em>The CNAPP-Absorbs-DSPM Thesis</em> (Archetype 3 displaces Archetypes 1 and 2 on cloud workloads), <em>The Data-Governance-Pivot Thesis</em> (Archetype 4 — and BigID-style §3.3 vendors — reshape buyer expectations around DSPM as data-governance-with-security-teeth), and a third claim on AI-training-pipeline coverage as the emerging differentiator that separates Archetype 1 specialists from Archetype 3 CNAPP-extensions. This boundary discussion is methodological scaffolding the reader can interrogate; if the surface evidence shifts (a CNAPP vendor re-hero-positions DSPM, or a DSPM-native folds into a CNAPP suite), the §3.3-vs-§3.4 split reads differently and the Pattern Claims need to update with it.</p>
+</div>
+<div data-prev-section="s3-7">
+  <p><strong>Three common buyer misconceptions.</strong> First: <em>"DSPM is just a fancier CSPM — if I have Wiz or CrowdStrike for cloud security, I have DSPM coverage."</em> CSPM checks cloud-configuration posture against benchmarks; DSPM classifies the actual sensitive data sitting in those clouds and maps who can reach it. The two answer different questions, and 2026 vendor evidence shows that CNAPP-leading vendors materially de-prioritize DSPM on their hero surfaces (Wiz, Orca, CrowdStrike, FortiCNAPP all surface CNAPP/CSPM/CWPP first; DSPM appears as a sub-feature or not at all)<sup class="fn-ref" id="fnref-p12"><a href="https://www.wiz.io/" target="_blank" rel="noopener" title="Open source in new tab">12</a></sup><sup class="fn-ref" id="fnref-p13"><a href="https://orca.security/" target="_blank" rel="noopener" title="Open source in new tab">13</a></sup><sup class="fn-ref" id="fnref-p14"><a href="https://www.crowdstrike.com/en-us/platform/cloud-security/" target="_blank" rel="noopener" title="Open source in new tab">14</a></sup><sup class="fn-ref" id="fnref-p15"><a href="https://www.fortinet.com/products/forticnapp" target="_blank" rel="noopener" title="Open source in new tab">15</a></sup>. Buyers who treat CNAPP-bundled DSPM as equivalent to a DSPM-native product are accepting a coverage-and-classification depth gap that surfaces during real-incident investigations. Second: <em>"DSPM is a discovery tool — I'll buy it once, build the inventory, and the data won't change."</em> The 2026 data estate changes weekly: SaaS connectors get added, AI training corpora grow, vector stores spin up for new agent workflows. Continuous discovery and re-classification is the actual job; one-time scans are the failure mode the 2018-era data-discovery products got wrong. Third: <em>"DSPM and DLP are the same product with two names — vendors are just renaming legacy DLP."</em> DLP enforces on egress; DSPM discovers and classifies at rest, with most §3.3 contenders surfacing remediation guidance rather than inline enforcement primitives. The convergence is real — Cyera, BigID, and Proofpoint DSPM all ship classify-and-protect bundles — but the buyer test is which primitive is load-bearing: a DSPM-led product makes posture-and-discovery decisions first and treats DLP as one of several enforcement options; a DLP-led product makes enforcement decisions first and treats discovery as setup. The §3.4 <em>DSPM-augments-DLP</em> Play (carried over from DLP Front 2 §2.2 Buyer Trends) is the structural motion that's blurring this line, but the buyer's evaluation question stays distinct.</p>
+</div>
+<div data-prev-section="s3-8">
+  
+</div>
+<div data-prev-section="s3-9">
+  
+</div>
+<div data-prev-section="s3-10">
+  
+</div>
+<div data-prev-section="s3-11">
+  
+</div>
+<div data-prev-section="s3-12">
+  
+</div>
+<div data-prev-section="s3-13">
+  
+</div>
+<div data-prev-section="s3-14">
+  
+</div>
+<div data-prev-section="s3-15">
+  
+</div>
+<div data-prev-section="s3-16">
+  
+</div>
+<div data-prev-section="s3-17">
+  
+</div>
+<div data-prev-section="s3-18">
+  
+</div>
+<div data-prev-section="s3-19">
+  
+</div>
+<div data-prev-section="s3-20">
+  
+</div>
+<div data-prev-section="s3-21">
+  
+</div>
+<div data-prev-section="s3-22">
+  
+</div>
+<div data-prev-section="s3-23">
+  
+</div>
+</div>
+<div class="slide" data-slide="4" data-title="3.2 The Terrain">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">3.2 The Terrain</span>
+</div>
+<h2>3.2 The Terrain</h2>
+<div data-prev-section="s4-1">
+  <p>DSPM is the youngest of the three data fronts and the one where "market size" is most clearly a category-boundary claim rather than a measurement. Three named forecasters reach 2026-vintage estimates that differ by approximately 80×. Frost & Sullivan places the 2024 baseline at USD 415M growing at 37.4% CAGR through 2029, under a narrow software-only "DSPM tool" definition<sup class="fn-ref" id="fnref-t1"><a href="https://store.frost.com/data-security-posture-management-market-global-2024-2029.html" target="_blank" rel="noopener" title="Open source in new tab">17</a></sup><sup class="fn-ref" id="fnref-t2"><a href="https://www.paloaltonetworks.com/cyberpedia/dspm-market" target="_blank" rel="noopener" title="Open source in new tab">18</a></sup>. Sentra-cited material places the 2024 baseline at USD 1.86B growing to USD 22.5B by 2033 (~32% CAGR implied) under a multi-cloud DSPM platform definition<sup class="fn-ref" id="fnref-t3"><a href="https://www.sentra.io/blog/how-cisos-will-evaluate-dspm-in-2026" target="_blank" rel="noopener" title="Open source in new tab">19</a></sup>. Relyance AI's republication of InsightAce Analytic projects USD 34.2B by 2034 at 34.2% CAGR under a broader data-security-platform-including-AI-workloads definition<sup class="fn-ref" id="fnref-t4"><a href="https://www.relyance.ai/blog/dspm-market-analysis-current-solutions-miss-mark" target="_blank" rel="noopener" title="Open source in new tab">20</a></sup>. The spread is itself the finding: any vendor or buyer citing a single DSPM TAM should be asked which scope (tool, platform, data-security-broad) they are pricing against. Palo Alto Networks' own DSPM Market Size Guide surfaces four additional named forecasters with seven-estimate range wider than 80×<sup class="fn-ref" id="fnref-t2"><a href="https://www.paloaltonetworks.com/cyberpedia/dspm-market" target="_blank" rel="noopener" title="Open source in new tab">18</a></sup>. Gartner's only publicly-citable DSPM figure is not a dollar amount but a penetration trajectory — below 1% in 2022, projected past 20% by 2026<sup class="fn-ref" id="fnref-t5"><a href="https://www.gartner.com/en/documents/6964866" target="_blank" rel="noopener" title="Open source in new tab">21</a></sup><sup class="fn-ref" id="fnref-t6"><a href="https://cloudsecurityalliance.org/blog/2023/07/19/top-takeaways-from-the-gartner-innovation-insight-data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">22</a></sup>. That penetration framing may be the most defensible "size of the opportunity" claim in 2026 reporting.</p>
+</div>
+<div data-prev-section="s4-2">
+  <p><strong>Buyer trends.</strong> Three transactions in a six-month window reshape the DSPM buyer conversation from "buy a DSPM tool" to "evaluate the DSPM module of my cloud, identity, or data-resilience platform." Google closed its USD 32B Wiz acquisition on March 11, 2026 — the largest cloud-security deal in history; Wiz had previously absorbed DSPM into its CNAPP via the Gem Security acquisition, and the Google close embeds DSPM into the Google Cloud product surface<sup class="fn-ref" id="fnref-t7"><a href="https://tech-insider.org/google-wiz-acquisition-cloud-security-2026/" target="_blank" rel="noopener" title="Open source in new tab">23</a></sup><sup class="fn-ref" id="fnref-t8"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">24</a></sup>. Veeam closed its USD 1.725B Securiti AI acquisition on December 11, 2025 — Securiti described in the press release as "the #1-ranked DSPM platform" by Veeam — and unveiled the DataAI Command Platform at VeeamON on May 13, 2026, mapping DSPM against 100+ regulatory frameworks including EU AI Act, DORA, GDPR, HIPAA, and NIST<sup class="fn-ref" id="fnref-t9"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">25</a></sup><sup class="fn-ref" id="fnref-t10"><a href="https://www.morningstar.com/news/business-wire/20260512305482/veeam-launches-dataai-command-platform-the-industrys-first-unified-data-and-ai-trust-infrastructure-for-the-agentic-era" target="_blank" rel="noopener" title="Open source in new tab">26</a></sup>. Palo Alto Networks closed its USD 25B CyberArk acquisition on February 11, 2026, restructuring identity-led data security at scale with DSPM sitting adjacent to identity governance under the Prisma Cloud and Cortex XSIAM umbrellas<sup class="fn-ref" id="fnref-t11"><a href="https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era" target="_blank" rel="noopener" title="Open source in new tab">27</a></sup>. Standalone DSPM as a procurement category may be approaching its renewal-cycle limit. The Palo Alto Networks 2026 DSPM Adoption Report cites 92% of enterprises using multi-cloud architectures and 83% of IT and cybersecurity leaders identifying lack of data visibility as a primary security-posture weakness<sup class="fn-ref" id="fnref-t12"><a href="https://www.paloaltonetworks.com/cyberpedia/dspm-adoption-report" target="_blank" rel="noopener" title="Open source in new tab">28</a></sup>, and Sentra's 13-criteria 2026 CISO buying rubric codifies the procurement reframe: agentless-everywhere deployment, in-environment operation, >98% unstructured-data classification accuracy, petabyte-scale cost efficiency, full remediation-workflow automation, and usage-based pricing<sup class="fn-ref" id="fnref-t3"><a href="https://www.sentra.io/blog/how-cisos-will-evaluate-dspm-in-2026" target="_blank" rel="noopener" title="Open source in new tab">19</a></sup>.</p>
+</div>
+<div data-prev-section="s4-3">
+  <p><strong>User trends.</strong> DSPM has a buyer/user-split problem unlike DLP. DLP has a relatively clean buyer-user mapping — security team buys, security team operates. DSPM's day-two operator is ambiguous across security, data, and privacy teams. The Wiz academy piece names "security and IT teams" as the operating unit<sup class="fn-ref" id="fnref-t13"><a href="https://www.wiz.io/academy/data-security/data-security-posture-management-dspm" target="_blank" rel="noopener" title="Open source in new tab">29</a></sup>; BigID's 2026 guide describes a "data security, privacy, and compliance teams" multi-stakeholder operating model<sup class="fn-ref" id="fnref-t14"><a href="https://bigid.com/blog/what-is-dspm/" target="_blank" rel="noopener" title="Open source in new tab">30</a></sup>; Cyera's platform documentation references "data owners" as in-scope remediation actors<sup class="fn-ref" id="fnref-t15"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">31</a></sup>. The buyer is the CISO; the operator is increasingly outside the CISO's direct org. Modern DSPM platforms route alerts to the right operator with context — Sentra's "issues routed directly to data owners" framing<sup class="fn-ref" id="fnref-t3"><a href="https://www.sentra.io/blog/how-cisos-will-evaluate-dspm-in-2026" target="_blank" rel="noopener" title="Open source in new tab">19</a></sup> is representative, and Forcepoint's February 2026 "Top 8 DSPM Trends" piece names trend #1 as "DSPM becomes an active security layer, not a reporting tool"<sup class="fn-ref" id="fnref-t16"><a href="https://www.forcepoint.com/blog/insights/dspm-trends" target="_blank" rel="noopener" title="Open source in new tab">32</a></sup>. A second user-side shift sits beneath this: as agentic AI moves from discovery (read-only) to action (read-write) on data, the operator question becomes "who approves the agent's read-write to sensitive data classes?" — historically a privacy / data-governance call, increasingly a security-team call when handled in real time<sup class="fn-ref" id="fnref-t12"><a href="https://www.paloaltonetworks.com/cyberpedia/dspm-adoption-report" target="_blank" rel="noopener" title="Open source in new tab">28</a></sup>.</p>
+</div>
+<div data-prev-section="s4-4">
+  <p><strong>Tech trends.</strong> Four architectural shifts define the 2026 surface. First, AI training pipelines, model artifacts, vector databases, fine-tuning datasets, and RAG context stores are newly in-scope data classes. Thales, Zscaler, and Wiz all 2026-position AI-training-data as the primary new frontier for DSPM coverage<sup class="fn-ref" id="fnref-t17"><a href="https://cpl.thalesgroup.com/blog/data-security/dspm-ai-act-data-governance-compliance" target="_blank" rel="noopener" title="Open source in new tab">33</a></sup><sup class="fn-ref" id="fnref-t18"><a href="https://www.zscaler.com/blogs/product-insights/eu-ai-act-what-security-leaders-need-know-and-how-d-ai-spm-can-help" target="_blank" rel="noopener" title="Open source in new tab">34</a></sup><sup class="fn-ref" id="fnref-t19"><a href="https://www.wiz.io/academy/ai-security/dspm-for-ai" target="_blank" rel="noopener" title="Open source in new tab">35</a></sup>; Zscaler explicitly markets "D(AI)-SPM" as the AI-extended DSPM category<sup class="fn-ref" id="fnref-t18"><a href="https://www.zscaler.com/blogs/product-insights/eu-ai-act-what-security-leaders-need-know-and-how-d-ai-spm-can-help" target="_blank" rel="noopener" title="Open source in new tab">34</a></sup>. Second, discovery is splitting into two camps — manifest-based scanning (catalog-and-inventory-driven) and semantic-AI-driven classification (LLM-based content classification including unstructured text). Forcepoint's 2026 trends piece names "AI-powered classification becomes table stakes" as trend #5<sup class="fn-ref" id="fnref-t16"><a href="https://www.forcepoint.com/blog/insights/dspm-trends" target="_blank" rel="noopener" title="Open source in new tab">32</a></sup>; Sentra's >98% unstructured-data classification accuracy threshold<sup class="fn-ref" id="fnref-t3"><a href="https://www.sentra.io/blog/how-cisos-will-evaluate-dspm-in-2026" target="_blank" rel="noopener" title="Open source in new tab">19</a></sup> is the semantic-AI camp's marketed bar. Third, inline enforcement — historically rare in DSPM — is emerging as the active-security-layer pivot. Veeam's DataAI Governance framing ("enforces control at the data source, not at the agent, so known and unknown agents cannot access sensitive data if that data is governed at the source"<sup class="fn-ref" id="fnref-t9"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">25</a></sup>) is the strongest 2026 named-vendor articulation. Fourth, DSPM/CNAPP convergence at the platform layer is the structural pattern post-Wiz: Wiz/Google, Palo Alto Prisma Cloud, Microsoft Defender for Cloud, CrowdStrike Falcon Cloud Security, and SentinelOne Singularity Cloud all embed DSPM within CNAPP by 2026. The standalone-DSPM category survives only where data-coverage breadth or AI-data-specific positioning materially exceeds what cloud-native CNAPP can offer.</p>
+</div>
+<div data-prev-section="s4-5">
+  <p><strong>Regulatory trends.</strong> EU AI Act Article 10 high-risk-system obligations take effect August 2, 2026<sup class="fn-ref" id="fnref-t20"><a href="https://www.mckennaconsultants.com/eu-ai-act-high-risk-compliance-a-technical-readiness-guide-for-august-2026/" target="_blank" rel="noopener" title="Open source in new tab">36</a></sup><sup class="fn-ref" id="fnref-t21"><a href="https://www.fusefy.ai/aivibes/eu-ai-act-august-2026-deadline-enterprise-compliance/" target="_blank" rel="noopener" title="Open source in new tab">37</a></sup><sup class="fn-ref" id="fnref-t22"><a href="https://artificialintelligenceact.eu/article/10/" target="_blank" rel="noopener" title="Open source in new tab">38</a></sup> and are the most-cited single 2026 regulatory deadline in DSPM buyer-facing material. Article 10 requires data-governance practices including "examination in view of possible biases," "appropriate data preparation processing operations," and traceability of training datasets — which maps directly onto DSPM's discovery + classification + lineage + access-governance surface. Thales, Zscaler, and Wiz all 2026-position DSPM as the compliance-evidence-generation layer for Article 10<sup class="fn-ref" id="fnref-t17"><a href="https://cpl.thalesgroup.com/blog/data-security/dspm-ai-act-data-governance-compliance" target="_blank" rel="noopener" title="Open source in new tab">33</a></sup><sup class="fn-ref" id="fnref-t18"><a href="https://www.zscaler.com/blogs/product-insights/eu-ai-act-what-security-leaders-need-know-and-how-d-ai-spm-can-help" target="_blank" rel="noopener" title="Open source in new tab">34</a></sup><sup class="fn-ref" id="fnref-t19"><a href="https://www.wiz.io/academy/ai-security/dspm-for-ai" target="_blank" rel="noopener" title="Open source in new tab">35</a></sup>, and the Veeam DataAI Compliance product line maps explicitly against EU AI Act, DORA, GDPR, HIPAA, NIST, and AI RMF<sup class="fn-ref" id="fnref-t9"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">25</a></sup>. GDPR Article 30's records-of-processing requirement was historically a documentation exercise; in 2026, with AI training datasets as a new processing class, the burden is operationally infeasible without DSPM-native data inventory and lineage<sup class="fn-ref" id="fnref-t23"><a href="https://iapp.org/resources/article/mapping-interplays-gdpr-eu-ai-act" target="_blank" rel="noopener" title="Open source in new tab">39</a></sup>. The Israeli Privacy Protection Law Amendment 13 took effect August 14, 2025 — the most significant reform of Israeli privacy law since 1981<sup class="fn-ref" id="fnref-t24"><a href="https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2026/israel" target="_blank" rel="noopener" title="Open source in new tab">40</a></sup><sup class="fn-ref" id="fnref-t25"><a href="https://iuslaboris.com/insights/major-amendment-to-privacy-law-in-israel/" target="_blank" rel="noopener" title="Open source in new tab">41</a></sup><sup class="fn-ref" id="fnref-t26"><a href="https://iclg.com/practice-areas/data-protection-laws-and-regulations/israel" target="_blank" rel="noopener" title="Open source in new tab">42</a></sup> — substantially expanding Privacy Protection Authority enforcement powers, mandating DPO appointment, and strengthening the Protection of Privacy Regulations (Data Security) 5777 baseline. For the cluster of Israeli-headquartered DSPM vendors (Cyera, Sentra, BigID by heritage), Amendment 13 is both a home-market compliance driver and a positioning asset. The US state privacy law mosaic — CCPA / CPRA plus equivalents in CO, CT, UT, VA, TX, FL, OR, MT — extends through 2026 with jurisdiction-aware policy enforcement increasingly an RFP line item<sup class="fn-ref" id="fnref-t27"><a href="https://www.forcepoint.com/blog/insights/tracking-global-data-protection-laws-2026" target="_blank" rel="noopener" title="Open source in new tab">43</a></sup><sup class="fn-ref" id="fnref-t28"><a href="https://hyperproof.io/resource/data-protection-strategies-for-2026/" target="_blank" rel="noopener" title="Open source in new tab">44</a></sup>.</p>
+</div>
+</div>
+<div class="slide" data-slide="5" data-title="3.3 The Contenders">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">3.3 The Contenders</span>
+</div>
+<h2>3.3 The Contenders</h2>
+<div data-prev-section="s5-1">
+  <p>Eight vendors evaluated across three tiers: <strong>2 Gravity</strong> (platform incumbents with structural distribution moats), <strong>4 Attention</strong> (DSPM-native or platform-flagship vendors with strong analyst and named-outlet sourcing), and <strong>2 Wildcard</strong> (Series B or earlier specialists with descriptive-only treatment per the chapter's published-material discipline).</p>
+</div>
+<div data-prev-section="s5-2">
+  <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
+<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
+    .axis-label { font-size: 12px; font-weight: 600; fill: #374151; }
+    .axis-end { font-size: 10px; fill: #6b7280; }
+    .vendor-label { font-size: 11px; font-weight: 600; fill: #1f2937; }
+    .tier-legend { font-size: 11px; fill: #374151; }
+    .caption { font-size: 10px; font-style: italic; fill: #6b7280; }
+    .gravity { fill: #92400E; }
+    .attention { fill: #F59E0B; }
+    .wildcard { fill: #FBBF24; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .axis { stroke: #9ca3af; stroke-width: 1.5; }
+  </style>
+
+  <text x="400" y="28" text-anchor="middle" class="title">DSPM Vendor Landscape — 2026</text>
+
+  <!-- Plot area: x=100-720, y=80-420 -->
+  <line x1="100" y1="420" x2="720" y2="420" class="axis"/>
+  <line x1="100" y1="80" x2="100" y2="420" class="axis"/>
+
+  <!-- Grid -->
+  <line x1="100" y1="250" x2="720" y2="250" class="grid" stroke-dasharray="2,3"/>
+  <line x1="410" y1="80" x2="410" y2="420" class="grid" stroke-dasharray="2,3"/>
+
+  <!-- X-axis -->
+  <text x="410" y="455" text-anchor="middle" class="axis-label">Data-Estate Coverage Scope →</text>
+  <text x="100" y="440" text-anchor="start" class="axis-end">cloud-storage only</text>
+  <text x="720" y="440" text-anchor="end" class="axis-end">multi-cloud + SaaS + on-prem + AI training</text>
+
+  <!-- Y-axis -->
+  <text x="60" y="250" text-anchor="middle" class="axis-label" transform="rotate(-90 60 250)">Action Posture →</text>
+  <text x="90" y="420" text-anchor="end" class="axis-end" transform="rotate(-90 90 420)">visibility</text>
+  <text x="90" y="80" text-anchor="end" class="axis-end" transform="rotate(-90 90 80)">automated remediation</text>
+
+  <!-- Vendor positions -->
+  <!-- BigID (Gravity) — broadest scope (incl. AI training), automated remediation -->
+  <circle cx="680" cy="130" r="9" class="gravity"/>
+  <text x="680" y="115" text-anchor="middle" class="vendor-label">BigID</text>
+
+  <!-- Microsoft Purview DSPM (Gravity) — Microsoft-tenant anchored, mid-Y -->
+  <circle cx="380" cy="200" r="9" class="gravity"/>
+  <text x="380" y="185" text-anchor="middle" class="vendor-label">Microsoft Purview</text>
+
+  <!-- Cyera (Attention) — multi-cloud + SaaS, automated remediation high -->
+  <circle cx="600" cy="155" r="8" class="attention"/>
+  <text x="600" y="140" text-anchor="middle" class="vendor-label">Cyera</text>
+
+  <!-- Sentra (Attention) — cloud + SaaS, mid-Y -->
+  <circle cx="540" cy="220" r="8" class="attention"/>
+  <text x="540" y="205" text-anchor="middle" class="vendor-label">Sentra</text>
+
+  <!-- Proofpoint DSPM (Attention) — multi-cloud + on-prem, recommend-and-guided -->
+  <circle cx="610" cy="290" r="8" class="attention"/>
+  <text x="610" y="275" text-anchor="middle" class="vendor-label">Proofpoint DSPM</text>
+
+  <!-- Symmetry Systems (Attention) — narrow scope but highest action posture (Identity × Data Graph) -->
+  <circle cx="320" cy="110" r="8" class="attention"/>
+  <text x="320" y="95" text-anchor="middle" class="vendor-label">Symmetry</text>
+
+  <!-- Concentric AI (Wildcard) — mid-scope, visibility-led -->
+  <circle cx="450" cy="340" r="7" class="wildcard"/>
+  <text x="450" y="325" text-anchor="middle" class="vendor-label">Concentric AI</text>
+
+  <!-- Bedrock Data (Wildcard) — AI-native, mid-Y -->
+  <circle cx="500" cy="260" r="7" class="wildcard"/>
+  <text x="500" y="245" text-anchor="middle" class="vendor-label">Bedrock Data</text>
+
+  <!-- Legend -->
+  <rect x="115" y="100" width="180" height="78" fill="#fffbeb" stroke="#fcd34d" stroke-width="1" rx="4"/>
+  <text x="125" y="120" class="tier-legend" font-weight="700">Tier</text>
+  <circle cx="135" cy="138" r="6" class="gravity"/>
+  <text x="148" y="142" class="tier-legend">Gravity (public / post-$100M)</text>
+  <circle cx="135" cy="156" r="6" class="attention"/>
+  <text x="148" y="160" class="tier-legend">Attention (Series B-F)</text>
+  <circle cx="135" cy="174" r="6" class="wildcard"/>
+  <text x="148" y="178" class="tier-legend">Wildcard (seed / Series A)</text>
+
+  <!-- Caption -->
+  <text x="400" y="485" text-anchor="middle" class="caption">Author's read of public material, May 2026. Vendor positions are conceptual, not data-derived.</text>
+</svg>
+
+<figcaption style="font-size:10pt;color:#6b7280;font-style:italic;margin-top:6pt;">DSPM Vendor Landscape 2026 — 8 vendors plotted on Data-Estate Coverage Scope × Action Posture axes</figcaption>
+</figure>
+</div>
+<div data-prev-section="s5-3">
+  <p><em>Reading the quadrants — <strong>upper-left</strong>: narrow-scope + automated-enforcement (depth-first specialists). <strong>Upper-right</strong>: broad-scope + automated-enforcement (platform vendors pushing past visibility into inline remediation). <strong>lower-left</strong>: narrow-scope + visibility-led (single-environment discovery tools). <strong>lower-right</strong>: broad-scope + visibility-led (multi-cloud DSPM-natives still maturing their remediation primitives). Tier colors mark Gravity (orange), Attention (amber), and Wildcard (pale amber).</em></p>
+</div>
+<div data-prev-section="s5-4">
+  <p><em>Author's read of public material, May 2026. Vendor positions are conceptual, not data-derived.</em></p>
+</div>
+<div data-prev-section="s5-5">
+  <p><!-- Axes LOCKED in segments/axis-library.md (Front 3 row, 2026-05-14): X = Data-Estate Coverage Scope (Microsoft-tenant-bounded → multi-cloud + SaaS + on-prem + AI-training-pipeline); Y = Action Posture (visibility-only → automated remediation + inline enforcement). Tier-color rule: Gravity = #92400E burnt orange; Attention = #F59E0B amber; Wildcard = #FBBF24 pale amber. No falsifiable-test footer — vendor landscape is a snapshot, not a thesis. --></p>
+</div>
+</div>
+<div class="slide" data-slide="6" data-title="Gravity tier">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Gravity tier</span>
+</div>
+<h3>Gravity tier</h3>
+<h4>Microsoft Purview Data Security Posture Management <code>[cross-front: see IRM Front 1 + DLP Front 2]</code></h4>
+<div data-prev-section="s6-1">
+  <blockquote class="card"><em>"Microsoft Purview Data Security Posture Management (DSPM) enables you to quickly and easily monitor cross-cloud data and user risk through dynamic reports and trend analysis."</em> — Microsoft Learn product docs, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c1"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">45</a></sup></blockquote>
+</div>
+<div data-prev-section="s6-2">
+  <p>Microsoft Purview DSPM is the volume leader by distribution reach, the same way Purview DLP is in Front 2 and Insider Risk Management is in Front 1. The buyer rarely makes a standalone DSPM purchase decision — DSPM activates as part of a broader Microsoft 365 E5 / E5 Compliance rollout or via the Microsoft Purview Suite. Microsoft now distinguishes "classic" DSPM (the surface the canonical Learn URL was first pulled from) from a "new" DSPM that "extends coverage to more data sources, introduces guided workflows for proactive risk management, and streamlines data security operations" — the new surface adds third-party SaaS and IaaS coverage via Microsoft Sentinel data-lake integrations and partner connectors (Google Cloud Platform, Snowflake, Databricks named explicitly), and integrates with partner solutions Varonis, Cyera, BigID, and OneTrust<sup class="fn-ref" id="fnref-c2"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about" target="_blank" rel="noopener" title="Open source in new tab">46</a></sup>. The structural positioning is distinct from the standalone-DSPM cohort: Microsoft Purview DSPM is the <em>visibility-and-recommendation layer</em> on top of an enforcement estate Microsoft already sells (DLP + Insider Risk Management + Information Protection + Adaptive Protection), not a standalone discovery product. AI-and-agentic posture is the strongest sub-claim in the field for Microsoft-tenant cases: the new DSPM ships a dedicated <strong>AI observability</strong> page tracking agent-specific activities across Microsoft and third-party environments including the recently released Agent 365; the <strong>Apps and agents</strong> discovery page lists the top 20 most-recently-used agents with sensitive-data-access detail; and Activity Explorer's AI activities tab captures generative-AI prompts and responses against sensitivity-classification and DLP-rule matches<sup class="fn-ref" id="fnref-c2"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about" target="_blank" rel="noopener" title="Open source in new tab">46</a></sup>. Stated USP: a correlation layer that processes signals from co-resident Purview solutions and surfaces recommendations to close policy-coverage gaps. Target buyer: Microsoft-standardized enterprise CISO with the M365 Purview admin as the operator. Pricing signal: bundled within M365 E5 / E5 Compliance and Microsoft Purview Suite (user-based); no standalone DSPM price disclosed. Architectural classification: SaaS-platform delivery, Microsoft-tenant-anchored with cross-cloud coverage via Sentinel and partner connectors; visibility + recommendation + guided/automated remediation for Microsoft sources, integration-mediated for non-Microsoft sources. Material tier: vendor-controlled heavy — Microsoft Learn documentation surface across both classic and new versions, Mechanics videos, FastTrack rollout playbooks, partner-integration documentation. Cross-front coherence: structurally consistent with Purview's IRM and DLP product surfaces; each module has its own product page and its own verbatim pillar.</p>
+</div>
+<div data-prev-section="s6-3">
+  <h4>BigID</h4>
+</div>
+<div data-prev-section="s6-4">
+  <blockquote class="card"><em>"DSPM That Goes Beyond Visibility. Most DSPM tools stop at mapping your cloud data. BigID goes further: deep discovery, advanced classification, automated remediation, and continuous governance across every environment: not just a static snapshot."</em> — BigID DSPM product page, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c3"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">47</a></sup></blockquote>
+</div>
+<div data-prev-section="s6-5">
+  <p>BigID is the data-governance-heritage vendor that pivoted to DSPM language as the buyer term-of-art shifted, and the only Gravity-tier vendor in the chapter whose product taxonomy leads with DSPM as a headline category. Stated USP per the verbatim DSPM-page pillar: DSPM that "goes beyond visibility" — deep discovery + advanced classification + automated remediation + continuous governance across multi-cloud, SaaS, IaaS, PaaS, hybrid, and AI environments<sup class="fn-ref" id="fnref-c3"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">47</a></sup><sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>. The five named sub-pillars on the DSPM product page are <em>"Agentic Risk Remediation,"</em> <em>"Unmatched Coverage,"</em> <em>"Identity-Aware Discovery,"</em> <em>"Industry-Leading Classification,"</em> and <em>"From Insight to Action,"</em> with the hero framing explicitly comparative — positioning BigID against the visibility-only DSPM-natives and against the CNAPP-extensions where DSPM is a static sub-feature<sup class="fn-ref" id="fnref-c3"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">47</a></sup>. Architectural lineage: BigID launched as data-discovery + privacy-ops (Series C–F era), pivoted to "data security platform" umbrella with DSPM as the first sub-pillar; the structural primitive remains data-classification-plus-context, now layered with "agentic, AI-guided prioritization and remediation"<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>. Action posture is the broadest in the field on paper — guided and automated remediation actions including "delete toxic data, redact secrets, revoke risky access, enforce retention" branded as "Agentic Risk Remediation"<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>. AI/agentic posture covers the model-side data lineage explicitly ("Govern training data, track lineage, remove toxic inputs, and detect shadow AI") plus identity-aware discovery linking data risk to real identities<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>, but the DSPM product page does not describe vector store inspection, LLM prompt classification at runtime, or agent-tool-call-boundary controls in the way Symmetry Systems or Bedrock Data do — placing BigID as broadest-coverage-with-data-governance-heritage rather than depth-first AI-runtime entrant. "Agentic" in BigID's 2026 messaging primarily refers to AI-assisted prioritization and remediation of discovered data risks, not to inline agent-runtime data-access governance. Target buyer per the verbatim DSPM-page framing: "enterprises who need more than dashboards — built to scale, take action, adapt, and stay ahead"<sup class="fn-ref" id="fnref-c3"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">47</a></sup>. Pricing: enterprise contract motion only, not publicly disclosed. Architectural classification: cloud-native agentless SaaS at petabyte scale, broad-but-visibility-led at the architectural primitive level despite the "Agentic Risk Remediation" pillar. Material tier: vendor-controlled heavy — dedicated DSPM product page, corporate homepage, seven-sub-pillar product taxonomy, Gartner-recognized DSPM Representative Vendor placement; Series E at $60M led by Riverwood Capital in March 2024 with $1B+ post-money valuation and CEO disclosure of approaching $100M ARR at round close<sup class="fn-ref" id="fnref-w3"><a href="https://siliconangle.com/2024/03/19/data-security-startup-bigid-valued-1b-following-60m-round/" target="_blank" rel="noopener" title="Open source in new tab">49</a></sup>. The March 2024 round sits at the edge of the positioning-staleness window — flagged for refresh if a 2026 round surfaces.</p>
+</div>
+</div>
+<div class="slide" data-slide="7" data-title="Attention tier">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Attention tier</span>
+</div>
+<h3>Attention tier</h3>
+<h4>Cyera <code>[cross-front: see DLP Front 2]</code></h4>
+<div data-prev-section="s7-1">
+  <blockquote class="card"><em>"Modern DSPM. Complete data clarity. Actionable intelligence. Built for the AI era."</em> — Cyera DSPM product page, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c5"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">50</a></sup></blockquote>
+</div>
+<div data-prev-section="s7-2">
+  <p>Cyera closed a USD 400M Series F at $9B post-money in January 2026, a triple-up from $3B in June 2025, with Blackstone joining the cap table alongside Accel, Coatue, Cyberstarts, Georgian, Greenoaks, Lightspeed, Redpoint, Sapphire, Sequoia, and Spark — anchored across Fortune, BusinessWire, Calcalist, and TechCrunch and the company press release<sup class="fn-ref" id="fnref-c6"><a href="https://fortune.com/2026/01/08/cyera-cybersecurity-startup-yotam-segev-400-million-series-f-funding-9-billion-valuation-blackstone/" target="_blank" rel="noopener" title="Open source in new tab">51</a></sup><sup class="fn-ref" id="fnref-c7"><a href="https://www.businesswire.com/news/home/20260108628439/en/Cyera-Raises-$400M-to-Meet-Rapidly-Growing-Demand-for-AI-Security-Among-Enterprises" target="_blank" rel="noopener" title="Open source in new tab">52</a></sup><sup class="fn-ref" id="fnref-c8"><a href="https://techcrunch.com/2026/01/08/data-security-startup-cyera-hits-9b-valuation-six-months-after-being-valued-at-6b/" target="_blank" rel="noopener" title="Open source in new tab">53</a></sup>. The DSPM product page is a dedicated surface distinct from the Cyera corporate homepage and from the company's DLP-product framing in Front 2; the DSPM pillar emphasizes the foundational platform (classification + scale + signal-to-noise), the DLP pillar emphasizes the decisioning overlay above existing DLP enforcement (Front 2 row 8). The two are complementary, not contradictory — DSPM as the data-context layer; DLP as the alert-decisioning overlay above existing DLP tooling — and consistent with Cyera's umbrella positioning as an AI-native data security control plane. Stated USP per the DSPM-page architecture: three top-level pillars on the DSPM page — <em>"Fast deployment, limitless scale"</em> (agentless architecture, "Deploy in minutes and see immediate value... scan hundreds of petabytes"), <em>"Goodbye regex blind spots"</em> (AI-native classifier with 95%+ precision, no manual rules or tuning), <em>"Cut through the noise to prioritize real risk"</em> (contextual risk-prioritization)<sup class="fn-ref" id="fnref-c9"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">54</a></sup>. Architectural reality per the product surface: agentless cloud-native SaaS with documented support for in-cloud and on-prem deployment modes — "entirely within your cloud or on-prem environments so sensitive data remains in place"<sup class="fn-ref" id="fnref-c9"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">54</a></sup> — though the on-prem mode is mid-broad on architectural disclosure and buyers evaluating sovereign-data or air-gapped DSPM should ask for an architectural diagram and named on-prem datastore connectors. Data-source coverage spans AWS, Azure, GCP, Snowflake, Databricks, Salesforce, ServiceNow, Microsoft 365 / Copilot, plus NetApp on-prem file systems (with a vendor-cited proof-point of "82M+ NetApp on-prem files scanned in under 40 days"). Action posture extends past visibility into automated remediation at scale: 30+ out-of-the-box actions including revoke access, mask sensitive data, trigger predefined workflows, or route issues directly to data owners<sup class="fn-ref" id="fnref-c9"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">54</a></sup>. AI/agentic posture has named product extensions — AI Guardian for shadow AI / LLM defense, AI-SPM for shadow AI / prompt monitoring<sup class="fn-ref" id="fnref-c9"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">54</a></sup> — and Cyera publishes an LLM-driven classifier research note that anchors the classifier substrate. Target buyer: enterprise CISO / data security director / Chief Data Officer at a multi-cloud organization with petabyte-scale data estates. Pricing: not publicly stated; demo-request is the primary motion. Architectural classification: agentless cloud-native, broad-multi-cloud-and-SaaS scope with mid-broad on-prem disclosure, mid-high action posture. Material tier: vendor-controlled heavy (dedicated DSPM product page) plus named-outlet heavy on the Series F cycle. Valuation trajectory: $1.4B April 2024 → $3B Series D November 2024 → $6B Series E June 2025 → $9B Series F January 2026 — four rounds in 21 months, the largest valuation-acceleration on record in the data-security-private cohort and the strongest discrete signal of where data-security capital is concentrating<sup class="fn-ref" id="fnref-w2"><a href="https://www.businesswire.com/news/home/20260108628439/en/Cyera-Raises-$400M-to-Meet-Rapidly-Growing-Demand-for-AI-Security-Among-Enterprises" target="_blank" rel="noopener" title="Open source in new tab">55</a></sup>.</p>
+</div>
+<div data-prev-section="s7-3">
+  <h4>Sentra</h4>
+</div>
+<div data-prev-section="s7-4">
+  <blockquote class="card"><em>"Prevent Data Security Catastrophes Before Copilot Rollouts. Sentra delivers unmatched AI-data governance and continuous compliance at speed and scale previously unimagined."</em> — Sentra homepage, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c10"><a href="https://www.sentra.io/" target="_blank" rel="noopener" title="Open source in new tab">56</a></sup></blockquote>
+</div>
+<div data-prev-section="s7-5">
+  <p>Sentra is the most segment-specific positioning of the eight vendors — leading not with the DSPM category name (Cyera, BigID, Bedrock Data) or with a workflow definition (Microsoft Purview) but with a <em>use case</em> tied to a concrete enterprise buying trigger (Copilot adoption). The product taxonomy includes DSPM + Data Detection & Response (DDR) + Sentra for AI/ML + Sentra for M365 Copilot — four distinct product lines with DSPM as the foundational layer<sup class="fn-ref" id="fnref-c10"><a href="https://www.sentra.io/" target="_blank" rel="noopener" title="Open source in new tab">56</a></sup><sup class="fn-ref" id="fnref-c11"><a href="https://www.sentra.io/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">57</a></sup>. Stated USP: agentless cloud-native DSPM as Copilot-readiness infrastructure, with the hybrid-intelligence classification approach explicitly described — "For structured data we use advanced statistical analysis" and "for unstructured data we use LLMs and ML to accurately understand the context of data"<sup class="fn-ref" id="fnref-c11"><a href="https://www.sentra.io/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">57</a></sup>. The classifier substrate places Sentra in the same multi-paradigm AI-classifier camp as Cyera and Nightfall (Front 2), rather than the LLM-classifier-first or proprietary-substrate camps. Coverage spans AWS, Azure, GCP, M365 Copilot, AI/ML training assets, and on-prem environments via a dedicated offering<sup class="fn-ref" id="fnref-c11"><a href="https://www.sentra.io/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">57</a></sup>; the homepage features comparative cost framing ("~$40,000/yr to scan 100 PB" versus competitors at "$400,000+/yr") — a cost-comparative signal disclosed at the homepage level without specific list pricing. Action posture progresses from visibility through recommendation and guided remediation into automated response, with Data Detection & Response as a distinct product capability that extends DSPM into a real-time data-event response posture<sup class="fn-ref" id="fnref-c11"><a href="https://www.sentra.io/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">57</a></sup>. Target buyer: Fortune-500 enterprise security teams mid-rollout or pre-rollout on Copilot — <em>"VP, Security Architecture"</em> customer attribution at SoFi anchors the buyer narrative. Pricing: indirect cost-comparative signal stated; specific pricing not publicly disclosed. Architectural classification: agentless cloud-native SaaS with on-prem option, mid-scope on cloud-coverage (broad on AWS/Azure/GCP/M365 but lighter on the SaaS-tenant breadth Cyera and BigID emphasize), mid action posture with DDR as the differentiating remediation primitive. Material tier: vendor-controlled medium (homepage + DSPM product page + DDR / AI/ML / Copilot product pages). Series B at $50M led by Key1 Capital in April 2025 with Bessemer, Zeev Ventures, Standard Investments, and Munich Re Ventures, cumulative funding $100M+<sup class="fn-ref" id="fnref-w4"><a href="https://www.businesswire.com/news/home/20250422569273/en/Sentra-Closes-$50-Million-Series-B-Amid-Surging-Demand-for-Securing-Data-for-AI-Adoption" target="_blank" rel="noopener" title="Open source in new tab">58</a></sup><sup class="fn-ref" id="fnref-w5"><a href="https://www.securityweek.com/cloud-data-security-play-sentra-raises-50-million-series-b/" target="_blank" rel="noopener" title="Open source in new tab">59</a></sup>. Sentra's deepest "AI pipeline" claims surface in blog and buying-criteria material rather than in product-page architectural documentation — vendor-controlled disclosure of vector-DB inspection at platform-product-page granularity was not surfaced during the snapshot pass, so the AI/ML coverage claim is broader than it is deep on the canonical surface.</p>
+</div>
+<div data-prev-section="s7-6">
+  <h4>Proofpoint Data Security Posture Management <code>[cross-front: see IRM Front 1 + DLP Front 2]</code></h4>
+</div>
+<div data-prev-section="s7-7">
+  <blockquote class="card"><em>"Proofpoint Data Security Posture Management. Proofpoint and Normalyze, a leader in data security posture management, have joined forces to discover, classify and protect data across SaaS, PaaS, multi-cloud, on-premises and hybrid environments."</em> — Proofpoint integration page, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c12"><a href="https://www.proofpoint.com/us/normalyze-is-now-proofpoint" target="_blank" rel="noopener" title="Open source in new tab">60</a></sup></blockquote>
+</div>
+<div data-prev-section="s7-8">
+  <p>Proofpoint DSPM is the third Proofpoint product appearing in this report (after Proofpoint Insider Threat Management in Front 1 Gravity and Proofpoint Information Protection / Enterprise DLP in Front 2 Attention). The standalone <code>normalyze.ai</code> domain 301-redirects to the Proofpoint integration page as of access time, completing the absorption of the acquired Normalyze platform into the Proofpoint surface; the page preserves the Normalyze coverage scope claim (SaaS + PaaS + multi-cloud + on-prem + hybrid) and reframes it as a Proofpoint product, including explicit mention of Databases-as-a-Service (DBaaS) and CI/CD coverage<sup class="fn-ref" id="fnref-c12"><a href="https://www.proofpoint.com/us/normalyze-is-now-proofpoint" target="_blank" rel="noopener" title="Open source in new tab">60</a></sup>. Stated USP: discover, classify, and protect across all major data environments with "joined forces" framing positioning the integration as a partnership-of-equals narrative rather than an absorption, even though the standalone Normalyze domain has been retired. Action posture spans visibility ("Classify structured and unstructured data... using AI"), recommendation ("Prioritize human-centric risks... with recommended steps"), and guided/automated remediation ("Remediate security and compliance issues quickly with recommended steps and automated IT workflows")<sup class="fn-ref" id="fnref-c12"><a href="https://www.proofpoint.com/us/normalyze-is-now-proofpoint" target="_blank" rel="noopener" title="Open source in new tab">60</a></sup>. Inline blocking is not claimed at the DSPM surface — enforcement is recommendation-and-workflow-routed. The convergence story between Normalyze DSPM and Proofpoint Information Protection (cross-reference to Front 2 §2.3) is the load-bearing platform pitch: <em>"By combining Proofpoint's leading human-centric security platform with Normalyze's pioneering DSPM technology, we can provide you with comprehensive visibility and control"</em><sup class="fn-ref" id="fnref-c12"><a href="https://www.proofpoint.com/us/normalyze-is-now-proofpoint" target="_blank" rel="noopener" title="Open source in new tab">60</a></sup>. The page does not name a shared classifier substrate, a unified control plane, or specific data-flow handoffs between DSPM-discovered classes and Information Protection enforcement points — which makes the convergence read as a go-to-market claim more than a shipped architectural integration at the time of the snapshot. Buyers should ask for a reference architecture before assuming DSPM-to-DLP / DSPM-to-ITM enforcement integration is shipping at product-flagship maturity. Target buyer: email-security-led CISO at a Proofpoint-standardized organization rationalizing the data-security stack into the Proofpoint platform — same buyer narrative as the Front 1 ITM and Front 2 DLP products, extended to DSPM. Pricing: not publicly stated; bundled into Proofpoint platform pricing motion. Architectural classification: vendor-controlled medium on the integration page (vendor-controlled heavy at the parent Proofpoint platform), agentless cloud-native inherited from the Normalyze legacy though deployment-model granularity is not specified on the integration page itself; broad coverage scope, mid action posture. Material tier: vendor-controlled medium (integration page; standalone Normalyze domain retired); Proofpoint is a Thoma Bravo take-private (August 2021, USD 12.3B transaction value) that reportedly crossed $2B ARR mid-2024 under Thoma Bravo ownership. The DSPM page reads as a recent-integration Normalyze-line, not as a mature Proofpoint-flagship like Information Protection — Attention tier holds at this snapshot. Move to Gravity at next refresh if the hero positioning shifts across the parent Proofpoint surface.</p>
+</div>
+<div data-prev-section="s7-9">
+  <h4>Symmetry Systems</h4>
+</div>
+<div data-prev-section="s7-10">
+  <blockquote class="card"><em>"Secure Data. Control Agents. Unleash AI. You can't truly secure your data or govern your AI without knowing who or what can reach both. Symmetry unifies identity, data, and AI risk into one view – so you can act, not just observe."</em> — Symmetry Systems homepage, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c13"><a href="https://www.symmetry-systems.com/" target="_blank" rel="noopener" title="Open source in new tab">61</a></sup></blockquote>
+</div>
+<div data-prev-section="s7-11">
+  <p>Symmetry Systems is the most architecturally heterogeneous deployment story in the eight-vendor list and the candidate that most cleanly tests the chapter's Action Posture Y-axis. Five named deployment options — Managed SaaS (SOC 2 Type II certified), Outpost (classification compute inside customer VPC / on-prem), In-Your-Environment (self-managed IaC), Geographically Federated (separate instances per region, "Data never crosses sovereign boundaries"), and Air-Gapped ("World's first air-gapped DSPM for defense, federal, and healthcare environments")<sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. Stated USP: the <strong>Identity × Data Graph</strong> as the structural differentiator — "The only unified graph connecting every identity to every data object" that fuses humans, service accounts, AI agents, and third-party vendors into one access-and-permissions view<sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. Two named product anchors: DataGuard (DSPM core with built-in enforcement) and AIGuard (AI agent identity and governance). Coverage spans AWS, GCP, Azure, OCI, on-prem infrastructure, SaaS applications, and AI/LLM data — with "every AI agent and copilot" access-governance positioning as the 2026 emphasis<sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. Action posture extends past visibility into automated remediation with built-in enforcement: <em>"DataEnforce automatically remediates misconfigurations, revokes excess permissions, and enforces policy"</em><sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. AI/agentic posture is the sharpest in the field — Symmetry positions AI agents as first-class principals "not retrofitted" and names the structural problem: agents "authenticate via shared service accounts your IAM treats as trusted infrastructure — no session, no MFA, no individual identity to inspect," to which Symmetry responds with native AI agent visibility giving agents "their own identity, access graph, scope policies, and audit trail"<sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. The control point is the data-store access boundary, not the LLM-or-agent-runtime boundary — architecturally cleaner than inline-prompt inspection but worth flagging for buyers who expect "control AI agents" to mean prompt-time or tool-call-time intervention. Target buyer: enterprise security leaders at organizations operating large-scale identity infrastructure (Active Directory / Entra / Okta-heavy estates) with AI agents emerging as first-class principals; customer types named on the page span Fortune 50 retailers, Big 4 consulting, healthcare RCM, biotech, and defense contractors. Pricing: not publicly stated; a <em>"Start free trial"</em> CTA appears alongside the standard <em>"Request a Demo"</em> — the only self-serve signal across the eight vendors, though no tier or price is shown. Architectural classification: hybrid SaaS / in-environment / air-gapped, mid-broad on cloud-coverage scope but broadest on deployment-architecture dimension, high action posture (DataEnforce remediation plus AI-agent identity enforcement at the data-store boundary). Material tier: vendor-controlled medium (homepage + product page); Gartner DSPM Representative Vendor 2025<sup class="fn-ref" id="fnref-c15"><a href="https://www.symmetry-systems.com/news/2025-gartner-market-guide-for-dspm/" target="_blank" rel="noopener" title="Open source in new tab">63</a></sup> and 2024 Strong Performer Peer Insights Voice of the Customer. Last named-outlet funding round is the July 2023 $17.7M inside round led by ForgePoint Capital — ~34 months stale at access time, which fails the chapter's positioning-staleness window; per the snapshot policy this is a War Chest-row staleness, not a §3.3 positioning concern, and the product-page material is current and on-brand. The funding-staleness disposition is treated separately in §3.5.</p>
+</div>
+</div>
+<div class="slide" data-slide="8" data-title="Wildcard tier">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Wildcard tier</span>
+</div>
+<h3>Wildcard tier</h3>
+<h4>Concentric AI</h4>
+<div data-prev-section="s8-1">
+  <blockquote class="card"><em>"Intelligent data security made easy. Governance for your data at rest, data in motion, and GenAI applications."</em> — Concentric AI homepage, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c16"><a href="https://concentric.ai/" target="_blank" rel="noopener" title="Open source in new tab">64</a></sup></blockquote>
+</div>
+<div data-prev-section="s8-2">
+  <p>Concentric AI is one of two Wildcard placements in the chapter, treated descriptively per the chapter's published-material discipline. Stated USP: Semantic Intelligence™ as the proprietary technology layer — vendor-named as "patented context-aware AI" with capabilities described as "precise labeling powered by categorization"<sup class="fn-ref" id="fnref-c16"><a href="https://concentric.ai/" target="_blank" rel="noopener" title="Open source in new tab">64</a></sup>, though the technical substrate (deep-learning architecture, training corpus, fine-tuning approach) is not publicly disclosed at vendor-page granularity. The hero framing is the simplest, broadest, least segment-specific of all eight vendors — "made easy" is the structural marker of a vendor differentiating on deployment ease rather than on architectural primitive. The subhero names three coverage states (rest + motion + GenAI applications) placing Concentric on the multi-channel side of the chapter's coverage-scope X-axis. Coverage spans cloud (Snowflake, AWS S3, Google Workspace, Microsoft 365), on-prem (named natively), SaaS / collaboration (Slack, Confluence, Salesforce, Microsoft Exchange), GenAI applications (Claude, ChatGPT, Microsoft Copilot, Google Gemini, Perplexity named explicitly), and infrastructure (NetApp, Amazon RDS, Microsoft SQL Server)<sup class="fn-ref" id="fnref-c16"><a href="https://concentric.ai/" target="_blank" rel="noopener" title="Open source in new tab">64</a></sup>. The differentiator claims are <em>"Agentless"</em> and <em>"10 Minutes POC deployment time"</em> — speed and friction are the primitives, targeting buyers frustrated with deployment-heavy DSPM tooling. Action posture spans visibility (foundational discovery and classification), recommendation (risk identification and insight generation), and automated remediation ("Centralized remediation" capability); inline blocking is not detailed on the homepage. GenAI posture is the strongest sub-claim — visibility into Claude / ChatGPT / Copilot / Gemini / Perplexity conversations plus named integrations for prompt monitoring — placing Concentric in the prompt-inspection sub-category alongside Cyera AI Guardian, with vector-store or agent-tool-call inspection not described at product-page granularity. Target buyer: enterprise CISO / CIO / VP of Infrastructure (named customer roles on the page). Pricing: usage-based model disclosed — "Prices are based on the amount of structured and unstructured data scanned"<sup class="fn-ref" id="fnref-c16"><a href="https://concentric.ai/" target="_blank" rel="noopener" title="Open source in new tab">64</a></sup> — the only vendor of the eight to publicly disclose its pricing model, even without disclosing the rates. Architectural classification: agentless API-based SaaS, mid-broad coverage scope, visibility-led with mid action posture. Material tier: vendor-controlled medium; Gartner Recognized Vendor for DSPM per the page; Series B at $45M led by Top Tier Capital Partners and HarbourVest Partners in October 2024, cumulative funding $67M+<sup class="fn-ref" id="fnref-w6"><a href="https://www.businesswire.com/news/home/20241023142039/en/Concentric-AI-Secures-$45M-Financing-in-Series-B-Round-Led-by-Top-Tier-Capital-Partners-and-HarbourVest-Partners-to-Capitalize-on-Rapidly-Growing-DSPM-Market" target="_blank" rel="noopener" title="Open source in new tab">65</a></sup><sup class="fn-ref" id="fnref-w7"><a href="https://forgepointcap.com/perspectives/symmetry-systems-closes-17-7-million-to-scale-its-ai-powered-data-security-platform/" target="_blank" rel="noopener" title="Open source in new tab">66</a></sup>. The October 2024 Series B sits at the edge of the positioning-staleness window — flagged for refresh in next quarterly cycle.</p>
+</div>
+<div data-prev-section="s8-3">
+  <h4>Bedrock Data (formerly Bedrock Security)</h4>
+</div>
+<div data-prev-section="s8-4">
+  <blockquote class="card"><em>"THE AI-NATIVE DSPM. Prevent data leakage and misuse as your data accelerates across cloud and on-premise. Bedrock Data autonomously classifies petabytes in hours to drive native policy enforcement."</em> — Bedrock Data homepage, accessed 2026-05-14 <sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup></blockquote>
+</div>
+<div data-prev-section="s8-5">
+  <p>Bedrock Data is the second Wildcard, treated descriptively. The company rebranded from <em>"Bedrock Security"</em> to <em>"Bedrock Data"</em> in mid-2026 — the <code>bedrock.security</code> domain now 301-redirects to <code>bedrockdata.ai</code>, no rebrand-announcement banner appears on the page, and the wordmark shifted from <code>.security</code> TLD positioning to <code>.ai</code> TLD positioning. The product still leads with DSPM as the headline category, so the chapter scoping discipline holds: Bedrock is in §3.3 on product-positioning grounds. Stated USP: AI-native DSPM with autonomous classification at petabyte scale and native policy enforcement as the structural primitive<sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup>. The opening sentences make three claims — AI-native classification, petabyte-scale-in-hours speed, and native policy enforcement (not just visibility) — backed by a comparative claim of <em>"25x lower infrastructure cost"</em> versus competitors, the only explicit cost-comparative claim among the chapter's Wildcards. Architectural primitive: the <strong>Metadata Lake</strong> and <strong>Serverless Outpost</strong> — "serverless Outpost scans SaaS, IaaS, and on-premise environments" under a "Zero Data Access architecture" that keeps scanning "entirely within your perimeter"<sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup>. Coverage spans SaaS, IaaS, and on-prem at "petabyte" scale; the page makes named claims about AI training pipelines — "Confidently deploy assistants, RAG systems, and autonomous agents" via the ArgusAI module — but does not explicitly enumerate vector stores or embedding databases at product-page granularity<sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup>. Action posture progresses from visibility through assessment to guided and automated remediation, plus native enforcement that "syncs granular sensitivity tags and labels directly to data stores" and enforces "least privilege access... automating policy controls"<sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup>. AI/agentic posture has named claims — "Model consumption of sensitive datasets is audited, preventing AI assistants from surfacing restricted content" and ArgusAI "connects the Metadata Lake to AI applications to trace data flow and user interaction" — these are RAG-pipeline-anchored claims, distinct from Symmetry's identity-graph-anchored AI-agent control and from Cyera / Concentric's prompt-inspection claims. The Zero-Data-Access metadata-only architecture is structurally attractive for sovereign-data and regulated-industry buyers but creates a trade-off — RAG-pipeline visibility and AI-inference-time auditing depend on what metadata gets indexed and how completely the Metadata Lake mirrors the underlying data store, so buyers should ask for a clear scope-of-coverage document before assuming RAG inference monitoring is comprehensive. The deeper architectural disclosure — Metadata Lake schema, classifier training methodology, ArgusAI integration depth with the named integration targets (Microsoft Purview, Snowflake, AWS) — is not yet in publicly-citable form, so the AI-data-flow claims read as a forming category-extension rather than a fully-shipped architecture. Target buyer per the page: enterprise organizations managing sensitive data across multi-cloud environments, with a customer quote attributed to <em>"Sr. Director Product Security, Fastest Growing US Fintech Co."</em> anchoring financial services as a key target. Pricing: not publicly stated; comparative cost claim disclosed without absolute pricing. Architectural classification: agentless / serverless hybrid, mid-broad coverage scope, mid-high action posture with native enforcement. Material tier: vendor-controlled medium (homepage is current and on-brand; product page leads with DSPM as headline); Series A at $25M led by Greylock Partners in November 2025 (prior $10M seed from Greylock in 2024), 2024 RSA Conference Innovation Sandbox Finalist<sup class="fn-ref" id="fnref-c18"><a href="https://www.businesswire.com/news/home/20251119811935/en/" target="_blank" rel="noopener" title="Open source in new tab">68</a></sup><sup class="fn-ref" id="fnref-c19"><a href="https://www.businesswire.com/news/home/20240402284910/en/" target="_blank" rel="noopener" title="Open source in new tab">69</a></sup>. Brand transition is a positioning fact, not an M&A indicator.</p>
+</div>
+</div>
+<div class="slide" data-slide="9" data-title="3.4 Their Plays">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">3.4 Their Plays</span>
+</div>
+<h2>3.4 Their Plays</h2>
+<div data-prev-section="s9-1">
+  <p>Five strategic moves shape the DSPM front through H2 2026 and into 2027.</p>
+</div>
+<div data-prev-section="s9-2">
+  <h3>Play 1: CNAPP-Absorbs-DSPM Suite Bundling</h3>
+</div>
+<div data-prev-section="s9-3">
+  <ul><li><strong>Observation.</strong> Five CNAPP-led vendors — Wiz (now Google, post-USD-32B close March 11, 2026<sup class="fn-ref" id="fnref-t7"><a href="https://tech-insider.org/google-wiz-acquisition-cloud-security-2026/" target="_blank" rel="noopener" title="Open source in new tab">23</a></sup><sup class="fn-ref" id="fnref-t8"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">24</a></sup>), Orca Security<sup class="fn-ref" id="fnref-pl1"><a href="https://orca.security/" target="_blank" rel="noopener" title="Open source in new tab">70</a></sup>, CrowdStrike Falcon Cloud Security (with the acquired Flow Security 2024 DSPM-adjacent capability)<sup class="fn-ref" id="fnref-pl2"><a href="https://www.crowdstrike.com/en-us/platform/cloud-security/" target="_blank" rel="noopener" title="Open source in new tab">71</a></sup>, FortiCNAPP (post-Fortinet's acquisition of Lacework)<sup class="fn-ref" id="fnref-pl3"><a href="https://www.fortinet.com/products/forticnapp" target="_blank" rel="noopener" title="Open source in new tab">72</a></sup>, and Aqua — position DSPM as a sub-feature inside the code-cloud-runtime CNAPP taxonomy. None of the five leads with DSPM as a primary pillar on the homepage. Wiz had previously absorbed DSPM into its CNAPP via the Gem Security acquisition; the Google close embeds that bundle into the Google Cloud product surface. CrowdStrike's page taxonomy includes CSPM, ASPM, and AI-SPM but not DSPM — even though Flow Security was acquired for the DSPM-adjacent capability.</li>
+<li><strong>Participants.</strong> Wiz / Google Cloud, Orca, CrowdStrike Falcon Cloud Security (Flow Security inside), FortiCNAPP (Lacework inside), Aqua — versus the standalone DSPM-natives (Cyera, BigID, Sentra, Symmetry Systems, Bedrock Data, Concentric AI) and the platform-incumbents-with-DSPM-module (Microsoft Purview, Proofpoint DSPM).</li>
+<li><strong>Conditional outcome.</strong> <em>If Q3-Q4 2026 earnings disclosures from Wiz/Google Cloud, CrowdStrike, Palo Alto Networks, or Microsoft segment results cite "CNAPP-bundled DSPM" or "DSPM-as-platform-module" as a named contributor to enterprise growth — AND Gartner's next Market Guide for DSPM (or equivalent Forrester / IDC publication) reclassifies CNAPP-extension vendors into the primary DSPM table — the bundling motion has reorganized the cloud-data-security buying process and standalone DSPM-natives face structural pricing pressure inside cloud-workload accounts. If H2 2026 earnings cycles produce no such DSPM-bundle disclosures and the next Gartner/Forrester DSPM cycle keeps CNAPP-extensions in a secondary segment, the standalone DSPM-natives hold their lane and CNAPP-bundled DSPM remains a sub-feature competitive disadvantage.</em></li>
+<li><strong>Evidence.</strong> Google-Wiz $32B close cleared Nov 2025 (TechCrunch), close confirmed early 2026<sup class="fn-ref" id="fnref-t7"><a href="https://tech-insider.org/google-wiz-acquisition-cloud-security-2026/" target="_blank" rel="noopener" title="Open source in new tab">23</a></sup><sup class="fn-ref" id="fnref-t8"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">24</a></sup>; CrowdStrike Falcon Cloud Security product page taxonomy and Flow Security acquisition coverage<sup class="fn-ref" id="fnref-pl2"><a href="https://www.crowdstrike.com/en-us/platform/cloud-security/" target="_blank" rel="noopener" title="Open source in new tab">71</a></sup>; FortiCNAPP product page (post-Lacework absorption)<sup class="fn-ref" id="fnref-pl3"><a href="https://www.fortinet.com/products/forticnapp" target="_blank" rel="noopener" title="Open source in new tab">72</a></sup>; Orca platform-positioning copy and CNAPP self-description<sup class="fn-ref" id="fnref-pl1"><a href="https://orca.security/" target="_blank" rel="noopener" title="Open source in new tab">70</a></sup>.</li></ul>
+</div>
+</div>
+<div class="slide" data-slide="10" data-title="Play 2: Data-Privacy-Ops Pivot...">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Play 2: Data-Privacy-Ops Pivot...</span>
+</div>
+<h3>Play 2: Data-Privacy-Ops Pivot to Data Command Center</h3>
+<div data-prev-section="s10-1">
+  <ul><li><strong>Observation.</strong> Securiti AI repositioned its PrivacyOps heritage into a "Your Data Command Center™" umbrella that bundles DSPM as one capability alongside Gencore AI (safe enterprise AI) and Agent Commander (agentic AI risk)<sup class="fn-ref" id="fnref-pl4"><a href="https://securiti.ai/" target="_blank" rel="noopener" title="Open source in new tab">73</a></sup>. Veeam closed its USD 1.725B Securiti AI acquisition on December 11, 2025<sup class="fn-ref" id="fnref-pl5"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">74</a></sup> and unveiled the DataAI Command Platform at VeeamON on May 13, 2026, mapping the platform against 100+ regulatory frameworks including EU AI Act, DORA, GDPR, HIPAA, NIST, and AI RMF<sup class="fn-ref" id="fnref-pl6"><a href="https://www.morningstar.com/news/business-wire/20260512305482/veeam-launches-dataai-command-platform-the-industrys-first-unified-data-and-ai-trust-infrastructure-for-the-agentic-era" target="_blank" rel="noopener" title="Open source in new tab">75</a></sup>. Veeam's DataAI Governance framing — "enforces control at the data source, not at the agent, so known and unknown agents cannot access sensitive data if that data is governed at the source"<sup class="fn-ref" id="fnref-pl6"><a href="https://www.morningstar.com/news/business-wire/20260512305482/veeam-launches-dataai-command-platform-the-industrys-first-unified-data-and-ai-trust-infrastructure-for-the-agentic-era" target="_blank" rel="noopener" title="Open source in new tab">75</a></sup> — completes the pivot from PrivacyOps to data-source-enforcement-anchored DSPM.</li>
+<li><strong>Participants.</strong> Veeam (data-resilience-led parent), Securiti AI (absorbed DSPM platform), Rehan Jalil (Securiti founder, now Veeam President of Security and AI). Adjacent: BigID's parallel data-governance-pivot to DSPM-first product taxonomy.</li>
+<li><strong>Conditional outcome.</strong> <em>If Veeam's DataAI Command Platform wins enterprise data-resilience-anchored buying cycles by H2 2026 with DSPM as a load-bearing module, the data-privacy-ops-pivot vector has produced a viable third platform-absorption path alongside CNAPP-bundled DSPM and identity-led DSPM. If the platform remains a positioning narrative without flagship deployments through 2027, the pivot is marketing-tier and Veeam returns to a backup-and-resilience-led pitch.</em></li>
+<li><strong>Evidence.</strong> Securiti.ai homepage and "Your Data Command Center" framing<sup class="fn-ref" id="fnref-pl4"><a href="https://securiti.ai/" target="_blank" rel="noopener" title="Open source in new tab">73</a></sup>; Veeam-Securiti close December 11, 2025 (Veeam PR, BusinessWire, Bloomberg, TechCrunch)<sup class="fn-ref" id="fnref-pl5"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">74</a></sup>; Veeam DataAI Command Platform launch May 13, 2026 (Veeam PR via Morningstar, SiliconAngle)<sup class="fn-ref" id="fnref-pl6"><a href="https://www.morningstar.com/news/business-wire/20260512305482/veeam-launches-dataai-command-platform-the-industrys-first-unified-data-and-ai-trust-infrastructure-for-the-agentic-era" target="_blank" rel="noopener" title="Open source in new tab">75</a></sup>.</li></ul>
+</div>
+</div>
+<div class="slide" data-slide="11" data-title="Play 3: AI-Training-Pipeline C...">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Play 3: AI-Training-Pipeline C...</span>
+</div>
+<h3>Play 3: AI-Training-Pipeline Coverage as the Standalone-DSPM Survival Path</h3>
+<div data-prev-section="s11-1">
+  <ul><li><strong>Observation.</strong> Zscaler explicitly markets "D(AI)-SPM" as the AI-extended DSPM category<sup class="fn-ref" id="fnref-pl7"><a href="https://www.zscaler.com/blogs/product-insights/eu-ai-act-what-security-leaders-need-know-and-how-d-ai-spm-can-help" target="_blank" rel="noopener" title="Open source in new tab">76</a></sup>. Cyera, Sentra, BigID, and Bedrock Data all 2026-ship AI-training-data discovery, model-output classification, and vector-DB / RAG-pipeline coverage as the differentiator separating them from CNAPP-bundled DSPM<sup class="fn-ref" id="fnref-pl8"><a href="https://www.wiz.io/academy/ai-security/dspm-for-ai" target="_blank" rel="noopener" title="Open source in new tab">77</a></sup>. Microsoft Purview's new DSPM ships a dedicated AI observability page tracking Agent 365 and Apps-and-agents discovery surface<sup class="fn-ref" id="fnref-c2"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about" target="_blank" rel="noopener" title="Open source in new tab">46</a></sup>. The structural read: standalone DSPM vendors that frame primarily as "discover and classify sensitive data" face platform-absorption pressure (Play 1); standalone DSPM vendors that frame primarily around AI-training data, model artifacts, vector DBs, and AI access capture an under-served frontier where CNAPP-embedded DSPM has not caught up yet.</li>
+<li><strong>Participants.</strong> Cyera (AI Guardian + AI-SPM extensions), Sentra (Sentra for AI/ML + Copilot product lines), BigID (training data lineage + shadow AI detection), Bedrock Data (ArgusAI + RAG-pipeline framing), Zscaler (D(AI)-SPM trade name), Microsoft Purview (Agent 365 + AI observability). Watch: Wiz academy publishes "DSPM for AI Best Practices"<sup class="fn-ref" id="fnref-pl8"><a href="https://www.wiz.io/academy/ai-security/dspm-for-ai" target="_blank" rel="noopener" title="Open source in new tab">77</a></sup> — CNAPP catching up at the marketing layer if not yet at the product layer.</li>
+<li><strong>Conditional outcome.</strong> <em>If by Q4 2026 at least three of the eight §3.3 DSPM contenders publicly add vector-store inspection, embedding-database posture, or agent-tool-call access as headline product-page capabilities (snapshot-comparable to today's pages) — AND at least two of those vendors publish named reference deployments via press release or named-outlet coverage — the AI-data-positioned subset of the standalone DSPM cohort has a durable survival path through 2027. If CNAPP vendors (Wiz, Orca, CrowdStrike Falcon Cloud Security, FortiCNAPP) ship competitive AI-pipeline DSPM modules with public product-page hero claims and named customer-win coverage within a renewal cycle, the standalone window closes.</em></li>
+<li><strong>Evidence.</strong> Zscaler D(AI)-SPM page<sup class="fn-ref" id="fnref-pl7"><a href="https://www.zscaler.com/blogs/product-insights/eu-ai-act-what-security-leaders-need-know-and-how-d-ai-spm-can-help" target="_blank" rel="noopener" title="Open source in new tab">76</a></sup>; Wiz DSPM for AI Best Practices academy piece<sup class="fn-ref" id="fnref-pl8"><a href="https://www.wiz.io/academy/ai-security/dspm-for-ai" target="_blank" rel="noopener" title="Open source in new tab">77</a></sup>; Cyera AI Guardian product framing<sup class="fn-ref" id="fnref-c9"><a href="https://www.cyera.com/platform/dspm" target="_blank" rel="noopener" title="Open source in new tab">54</a></sup>; Sentra AI/ML and Copilot product lines<sup class="fn-ref" id="fnref-c11"><a href="https://www.sentra.io/data-security-posture-management" target="_blank" rel="noopener" title="Open source in new tab">57</a></sup>; BigID training-data lineage claims<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>; Bedrock Data ArgusAI / RAG framing<sup class="fn-ref" id="fnref-c17"><a href="https://bedrockdata.ai/" target="_blank" rel="noopener" title="Open source in new tab">67</a></sup>; Microsoft Purview new DSPM AI observability<sup class="fn-ref" id="fnref-c2"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about" target="_blank" rel="noopener" title="Open source in new tab">46</a></sup>.</li></ul>
+</div>
+</div>
+<div class="slide" data-slide="12" data-title="Play 4: Varonis AI-Native Repo...">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Play 4: Varonis AI-Native Repo...</span>
+</div>
+<h3>Play 4: Varonis AI-Native Repositioning</h3>
+<div data-prev-section="s12-1">
+  <ul><li><strong>Observation.</strong> Varonis (NASDAQ: VRNS) leads <code>varonis.com</code> with <em>"SECURE AI AND THE DATA THAT POWERS IT,"</em> with the opening <em>"Confidently adopt AI, reduce data exposure, and stop AI-powered threats, automatically"</em> — repositioning the broader Varonis Data Security Platform around AI-data-security as the hero category rather than DSPM<sup class="fn-ref" id="fnref-pl9"><a href="https://www.varonis.com/" target="_blank" rel="noopener" title="Open source in new tab">78</a></sup>. The DSPM use-case page is a module of the platform, not the lead category; module language reads <em>"Improve your data security posture automatically."</em> Varonis Q1 2026 results released April 28, 2026 (revenue $173.1M, +27% YoY; SaaS ARR ex-conversions $522.6M, +29%; total SaaS ARR $683.2M including conversions)<sup class="fn-ref" id="fnref-pl10"><a href="https://www.fool.com/earnings/call-transcripts/2026/04/28/varonis-vrns-q1-2026-earnings-call-transcript/" target="_blank" rel="noopener" title="Open source in new tab">79</a></sup> show the public-vendor side of the story; the cross-front context from the IRM Front 1 chapter (October 28, 2025 stock drop, ~5% layoff, securities class action filed January 2026) frames the repositioning push.</li>
+<li><strong>Participants.</strong> Varonis (lead actor) plus the broader legacy-data-security cohort repositioning around AI-data-security framing. Adjacent: Microsoft Purview's new DSPM with Varonis named as a partner-integration target.</li>
+<li><strong>Conditional outcome.</strong> <em>If Varonis's AI-Native repositioning shows in named-outlet enterprise reference wins through H2 2026 as DSPM-platform-replace deals against legacy estates, the repositioning has translated from messaging into pipeline. If Q3-Q4 2026 earnings cycles show flat-or-declining new-logo DSPM-attributed bookings, the repositioning is positioning-tier without buying-process traction and the platform-bundle motion remains a narrative move.</em></li>
+<li><strong>Cross-reference.</strong> This play is the fourth absorption vector in the chapter — alongside CNAPP-bundled DSPM (Play 1), data-privacy-ops-pivot (Play 2), and identity-led DSPM (Play 5), legacy-data-security AI repositioning is the fourth way DSPM-as-line-item arrives inside a larger platform purchase. Pattern Claim 1 documents the cumulative effect.</li>
+<li><strong>Evidence.</strong> Varonis homepage and DSPM use-case page (accessed 2026-05-14)<sup class="fn-ref" id="fnref-pl9"><a href="https://www.varonis.com/" target="_blank" rel="noopener" title="Open source in new tab">78</a></sup>; Varonis Q1 2026 earnings (April 28, 2026)<sup class="fn-ref" id="fnref-pl10"><a href="https://www.fool.com/earnings/call-transcripts/2026/04/28/varonis-vrns-q1-2026-earnings-call-transcript/" target="_blank" rel="noopener" title="Open source in new tab">79</a></sup>; cross-reference to the IRM Front 1 chapter for the Q4 2025 / Q1 2026 platform-context events.</li>
+<li><em>Not investment advice. See Disclosures.</em></li></ul>
+</div>
+</div>
+<div class="slide" data-slide="13" data-title="Play 5: Identity-Led DSPM via ...">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">Play 5: Identity-Led DSPM via ...</span>
+</div>
+<h3>Play 5: Identity-Led DSPM via Symmetry's Identity × Data Graph</h3>
+<div data-prev-section="s13-1">
+  <ul><li><strong>Observation.</strong> Symmetry Systems positions the Identity × Data Graph as the structural primitive — "The only unified graph connecting every identity to every data object" that fuses humans, service accounts, AI agents, and third-party vendors into one access-and-permissions view<sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>. The framing intersects with the Palo Alto Networks / CyberArk close (USD 25B, February 11, 2026) which restructures identity-led data security at scale and cites an 80-to-1 machine-vs-human identity ratio<sup class="fn-ref" id="fnref-t11"><a href="https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era" target="_blank" rel="noopener" title="Open source in new tab">27</a></sup>. The play is a category-level architectural claim that DSPM enforcement increasingly anchors at the identity-and-data-graph layer rather than at the content-classification-only layer.</li>
+<li><strong>Participants.</strong> Symmetry Systems (lead architectural articulator); Palo Alto Networks / CyberArk (largest identity-led platform consolidator); adjacent: Microsoft Purview (Entra-bundled identity-aware DSPM), BigID (identity-aware discovery sub-pillar)<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>.</li>
+<li><strong>Conditional outcome.</strong> <em>If by Q4 2026 either (a) Palo Alto Networks earnings disclosures cite the Cortex XSIAM + Prisma Cloud + CyberArk integration with DSPM-attached wins as a named contributor; OR (b) Microsoft Purview DSPM publicly adds "Entra ID identity-graph DSPM" as a headline capability with named reference customers; OR (c) Gartner's next Market Guide for DSPM reclassifies identity-graph integration as a baseline DSPM capability rather than a feature, the identity-led DSPM pitch has reorganized the enforcement primitive and content-classification-only DSPM specialists face structural displacement at the architectural layer. If none of those three signals materialize through 2027 and vendor product pages continue marketing identity-integration as a discrete adjacent feature, the identity-led pitch is platformization narrative rather than enforcement-architecture change.</em></li>
+<li><strong>Evidence.</strong> Symmetry Systems homepage and product page (Identity × Data Graph framing)<sup class="fn-ref" id="fnref-c13"><a href="https://www.symmetry-systems.com/" target="_blank" rel="noopener" title="Open source in new tab">61</a></sup><sup class="fn-ref" id="fnref-c14"><a href="https://www.symmetry-systems.com/product/" target="_blank" rel="noopener" title="Open source in new tab">62</a></sup>; Palo Alto Networks / CyberArk close release with 80-to-1 machine-vs-human ratio<sup class="fn-ref" id="fnref-t11"><a href="https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era" target="_blank" rel="noopener" title="Open source in new tab">27</a></sup>; BigID DSPM page identity-aware discovery pillar<sup class="fn-ref" id="fnref-c4"><a href="https://bigid.com/data-security-posture-management/" target="_blank" rel="noopener" title="Open source in new tab">48</a></sup>.</li>
+</ul>
+</div>
+</div>
+<div class="slide" data-slide="14" data-title="3.5 War Chests & Casualties">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">3.5 War Chests & Casualties</span>
+</div>
+<h2>3.5 War Chests & Casualties</h2>
+<div data-prev-section="s14-1">
+  <p><em>Snapshot of recent funding events, valuations, strategic investors, and any documented distress signals across the DSPM front. All figures trace to vendor-controlled surfaces, SEC filings, or named-outlet journalism (Fortune, TechCrunch, Reuters, Bloomberg, Calcalist, BusinessWire, GlobeNewswire, PRNewswire, SecurityWeek, Times of Israel, SiliconAngle). Executive transitions appear as positioning facts when corroborated by company PR plus a named outlet; LinkedIn-only signals are not used.</em></p>
+</div>
+<div data-prev-section="s14-2">
+  <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
+<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Manrope, system-ui, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
+    .year-label { font-size: 12px; font-weight: 700; fill: #374151; }
+    .month-label { font-size: 9px; fill: #6b7280; }
+    .event-label { font-size: 10px; font-weight: 600; fill: #1f2937; }
+    .event-detail { font-size: 9px; fill: #4b5563; }
+    .raise { fill: #92400E; }
+    .acquisition { fill: #b91c1c; }
+    .caption { font-size: 10px; font-style: italic; fill: #6b7280; }
+    .legend { font-size: 11px; fill: #374151; }
+    .timeline { stroke: #9ca3af; stroke-width: 2; }
+  </style>
+
+  <text x="400" y="28" text-anchor="middle" class="title">DSPM Funding &amp; M&amp;A Timeline — Mar 2024 to May 2026</text>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="240" x2="740" y2="240" class="timeline"/>
+
+  <!-- Year/month ticks: timeline spans ~26 months -->
+  <!-- Mar 2024 = x:80; May 2026 = x:740 -->
+  <line x1="80" y1="235" x2="80" y2="245" class="timeline"/>
+  <text x="80" y="260" text-anchor="middle" class="year-label">2024</text>
+  <text x="80" y="273" text-anchor="middle" class="month-label">Mar</text>
+
+  <line x1="180" y1="235" x2="180" y2="245" class="timeline"/>
+  <text x="180" y="273" text-anchor="middle" class="month-label">Oct</text>
+
+  <line x1="280" y1="235" x2="280" y2="245" class="timeline"/>
+  <text x="280" y="260" text-anchor="middle" class="year-label">2025</text>
+  <text x="280" y="273" text-anchor="middle" class="month-label">Apr</text>
+
+  <line x1="430" y1="235" x2="430" y2="245" class="timeline"/>
+  <text x="430" y="273" text-anchor="middle" class="month-label">Dec</text>
+
+  <line x1="540" y1="235" x2="540" y2="245" class="timeline"/>
+  <text x="540" y="260" text-anchor="middle" class="year-label">2026</text>
+  <text x="540" y="273" text-anchor="middle" class="month-label">Jan</text>
+
+  <line x1="630" y1="235" x2="630" y2="245" class="timeline"/>
+  <text x="630" y="273" text-anchor="middle" class="month-label">Mar</text>
+
+  <line x1="740" y1="235" x2="740" y2="245" class="timeline"/>
+  <text x="740" y="273" text-anchor="middle" class="month-label">May</text>
+
+  <!-- ABOVE-LINE: funding rounds -->
+  <!-- BigID Series E Mar 2024 $60M @$1B -->
+  <line x1="80" y1="235" x2="80" y2="160" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="80" cy="160" r="6" class="raise"/>
+  <text x="80" y="145" text-anchor="middle" class="event-label">BigID</text>
+  <text x="80" y="132" text-anchor="middle" class="event-detail">Series E $60M</text>
+  <text x="80" y="120" text-anchor="middle" class="event-detail">@$1B (Mar '24)</text>
+
+  <!-- Concentric Series B Oct 2024 $45M -->
+  <line x1="180" y1="235" x2="180" y2="195" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="180" cy="195" r="6" class="raise"/>
+  <text x="180" y="180" text-anchor="middle" class="event-label">Concentric AI</text>
+  <text x="180" y="167" text-anchor="middle" class="event-detail">Series B $45M</text>
+
+  <!-- Sentra Series B Apr 2025 $50M -->
+  <line x1="280" y1="235" x2="280" y2="160" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="280" cy="160" r="6" class="raise"/>
+  <text x="280" y="145" text-anchor="middle" class="event-label">Sentra</text>
+  <text x="280" y="132" text-anchor="middle" class="event-detail">Series B $50M</text>
+
+  <!-- Bedrock Series A Nov 2025 $25M -->
+  <line x1="415" y1="235" x2="415" y2="195" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="415" cy="195" r="6" class="raise"/>
+  <text x="415" y="180" text-anchor="middle" class="event-label">Bedrock Security</text>
+  <text x="415" y="167" text-anchor="middle" class="event-detail">Series A $25M</text>
+
+  <!-- Cyera Series F Jan 2026 $400M @$9B -->
+  <line x1="540" y1="235" x2="540" y2="105" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="540" cy="105" r="9" class="raise"/>
+  <text x="540" y="90" text-anchor="middle" class="event-label" font-weight="700">Cyera</text>
+  <text x="540" y="77" text-anchor="middle" class="event-detail">Series F $400M</text>
+  <text x="540" y="65" text-anchor="middle" class="event-detail" font-weight="700">@$9B (Jan '26)</text>
+
+  <!-- BELOW-LINE: M&A / acquisitions -->
+  <!-- Proofpoint acquires Normalyze Oct 2024 -->
+  <line x1="200" y1="245" x2="200" y2="305" stroke="#b91c1c" stroke-width="1.5"/>
+  <circle cx="200" cy="305" r="6" class="acquisition"/>
+  <text x="200" y="322" text-anchor="middle" class="event-label">Proofpoint ← Normalyze</text>
+  <text x="200" y="334" text-anchor="middle" class="event-detail">Acquisition (Oct '24)</text>
+
+  <!-- Veeam acquires Securiti.ai Dec 2025 $1.725B -->
+  <line x1="430" y1="245" x2="430" y2="340" stroke="#b91c1c" stroke-width="1.5"/>
+  <circle cx="430" cy="340" r="7" class="acquisition"/>
+  <text x="430" y="357" text-anchor="middle" class="event-label">Veeam ← Securiti.ai</text>
+  <text x="430" y="369" text-anchor="middle" class="event-detail">$1.725B (Dec '25)</text>
+
+  <!-- Google acquires Wiz Mar 2026 $32B -->
+  <line x1="630" y1="245" x2="630" y2="340" stroke="#b91c1c" stroke-width="1.5"/>
+  <circle cx="630" cy="340" r="9" class="acquisition"/>
+  <text x="630" y="357" text-anchor="middle" class="event-label" font-weight="700">Google ← Wiz</text>
+  <text x="630" y="369" text-anchor="middle" class="event-detail" font-weight="700">$32B (Mar '26)</text>
+
+  <!-- Legend -->
+  <rect x="600" y="395" width="170" height="50" fill="#fffbeb" stroke="#fcd34d" stroke-width="1" rx="4"/>
+  <circle cx="615" cy="412" r="6" class="raise"/>
+  <text x="628" y="416" class="legend">Funding round</text>
+  <circle cx="615" cy="432" r="6" class="acquisition"/>
+  <text x="628" y="436" class="legend">Acquisition / M&amp;A close</text>
+
+  <!-- Caption -->
+  <text x="400" y="430" text-anchor="middle" class="caption">Author's read of public material, May 2026. Capital flows are cited; positions are conceptual.</text>
+  <text x="400" y="445" text-anchor="middle" class="caption">Wiz acquisition is by Google (CNAPP-adjacent); shown to anchor cross-segment M&amp;A intensity.</text>
+</svg>
+
+<figcaption style="font-size:10pt;color:#6b7280;font-style:italic;margin-top:6pt;">DSPM Funding Events — 2023 to 2026, by date, magnitude, and event type</figcaption>
+</figure>
+</div>
+<div data-prev-section="s14-3">
+  <p><em>A three-year compression of the DSPM money story: Symmetry Systems' July 2023 $17.7M inside round; BigID's March 2024 Series E at $1B+ valuation; Concentric's October 2024 Series B; Proofpoint's October 2024 absorption of Normalyze; Sentra's April 2025 Series B; Bedrock Data's November 2025 Series A; Veeam's December 2025 close of Securiti AI at $1.725B; Cyera's January 2026 Series F at $9B post-money; and Google's $32B close of Wiz in early 2026 as the cross-front anchor for the CNAPP-Absorbs-DSPM thesis.</em></p>
+</div>
+<div data-prev-section="s14-4">
+  <div class="table-container"><table>
+<thead><tr><th>Vendor</th><th>Most Recent Round</th><th>Valuation (if public)</th><th>Strategic Investor</th><th>Distress Signal</th></tr></thead>
+<tbody>
+<tr><td><strong>Microsoft</strong> (Purview Data Security Posture Management — module within Microsoft Purview / Microsoft 365 E5 / E5 Compliance) <sup class="fn-ref" id="fnref-w1"><a href="https://learn.microsoft.com/en-us/purview/data-security-posture-management-learn-about" target="_blank" rel="noopener" title="Open source in new tab">80</a></sup></td><td>n/a — bundled within M365 E5 + Defender for Cloud licensing</td><td>Public parent (NASDAQ: MSFT); FY25 total revenue $281.7B (+15% YoY); Purview DSPM revenue not broken out separately</td><td>n/a — platform parent</td><td><em>(empty — no public distress event)</em></td></tr>
+<tr><td><strong>BigID</strong> (private; legacy data-governance vendor repositioned to DSPM + AI-data-security) <sup class="fn-ref" id="fnref-w3"><a href="https://siliconangle.com/2024/03/19/data-security-startup-bigid-valued-1b-following-60m-round/" target="_blank" rel="noopener" title="Open source in new tab">49</a></sup></td><td>Series E — $60M led by Riverwood Capital with Silver Lake Waterman and Advent, announced March 20, 2024; cumulative funding $320M</td><td>$1B+ post-money valuation; CEO disclosed approaching $100M ARR at round close</td><td>Riverwood Capital; prior rounds: Silver Lake Waterman, Advent, Tiger Global, Bessemer</td><td><em>(empty — no public distress event; March 2024 Series E is at the 24-month positioning window edge; flagged for refresh if a 2026 round surfaces before chapter publication)</em></td></tr>
+<tr><td><strong>Cyera</strong> (private; DSPM-native; cross-front to DLP Front 2) <sup class="fn-ref" id="fnref-w2"><a href="https://www.businesswire.com/news/home/20260108628439/en/Cyera-Raises-$400M-to-Meet-Rapidly-Growing-Demand-for-AI-Security-Among-Enterprises" target="_blank" rel="noopener" title="Open source in new tab">55</a></sup></td><td>Series F — $400M led by funds managed by Blackstone with Accel, Coatue, Cyberstarts, Georgian, Greenoaks, Lightspeed, Redpoint, Sapphire, Sequoia, Spark, announced January 8, 2026; cumulative funding $1.7B+</td><td>$9B post-money valuation (Jan 2026 Series F); trajectory $1.4B Apr 2024 → $3B Series D Nov 2024 → $6B Series E Jun 2025 → $9B Series F Jan 2026</td><td>Blackstone (NYSE: BX) — new strategic investor in Series F; prior round leads: Sequoia, Accel, Coatue, Lightspeed, Greenoaks, Georgian</td><td><em>(empty — no public distress event)</em></td></tr>
+<tr><td><strong>Sentra</strong> (private; DSPM-native, AI-data-security positioning) <sup class="fn-ref" id="fnref-w4"><a href="https://www.businesswire.com/news/home/20250422569273/en/Sentra-Closes-$50-Million-Series-B-Amid-Surging-Demand-for-Securing-Data-for-AI-Adoption" target="_blank" rel="noopener" title="Open source in new tab">58</a></sup></td><td>Series B — $50M led by Key1 Capital with Bessemer Venture Partners, Zeev Ventures, Standard Investments, Munich Re Ventures, announced April 22, 2025; cumulative funding $100M+</td><td>Private — not disclosed</td><td>Key1 Capital; prior rounds: Bessemer Venture Partners, Zeev Ventures, Standard Investments, Munich Re Ventures</td><td><em>(empty — no public distress event)</em></td></tr>
+<tr><td><strong>Concentric AI</strong> (Wildcard — private; DSPM with semantic deep-learning classification) <sup class="fn-ref" id="fnref-w6"><a href="https://www.businesswire.com/news/home/20241023142039/en/Concentric-AI-Secures-$45M-Financing-in-Series-B-Round-Led-by-Top-Tier-Capital-Partners-and-HarbourVest-Partners-to-Capitalize-on-Rapidly-Growing-DSPM-Market" target="_blank" rel="noopener" title="Open source in new tab">65</a></sup></td><td>Series B — $45M led by Top Tier Capital Partners and HarbourVest Partners with Ballistic Ventures, Engineering Capital, Clear Ventures, Citi Ventures, CyberFuture, announced October 23, 2024; cumulative funding $67M+</td><td>Private — not disclosed</td><td>Top Tier Capital Partners; HarbourVest Partners; Citi Ventures</td><td><em>(empty — no public distress event; Wildcard descriptive treatment per chapter discipline)</em></td></tr>
+<tr><td><strong>Bedrock Data</strong> (formerly Bedrock Security; Wildcard — private; AI-native DSPM with Metadata Lake / ArgusAI) <sup class="fn-ref" id="fnref-w8"><a href="https://www.businesswire.com/news/home/20251119811935/en/" target="_blank" rel="noopener" title="Open source in new tab">81</a></sup></td><td>Series A — $25M led by Greylock Partners, announced November 19, 2025; prior $10M seed from Greylock 2024; cumulative funding $35M</td><td>Private — not disclosed</td><td>Greylock Partners</td><td><em>(empty — no public distress event; 2024 RSA Innovation Sandbox Finalist; brand transition from Bedrock Security to Bedrock Data is positioning fact, not distress)</em></td></tr>
+</tbody></table></div>
+</div>
+<div data-prev-section="s14-5">
+  <p>The DSPM funding cycle is the loudest of the three data fronts in this report. Cyera's January 8, 2026 Series F at $9B post-money is the single largest data-security-private mark on the table and the strongest discrete signal in the pilot — Blackstone joining the cap table on a triple-up from $3B (November 2024) → $6B (June 2025) → $9B (January 2026) inside fourteen months<sup class="fn-ref" id="fnref-w2"><a href="https://www.businesswire.com/news/home/20260108628439/en/Cyera-Raises-$400M-to-Meet-Rapidly-Growing-Demand-for-AI-Security-Among-Enterprises" target="_blank" rel="noopener" title="Open source in new tab">55</a></sup>. Sentra's $50M Series B (April 2025) and Concentric's $45M Series B (October 2024) cluster a second tier of well-capitalized DSPM-natives<sup class="fn-ref" id="fnref-w4"><a href="https://www.businesswire.com/news/home/20250422569273/en/Sentra-Closes-$50-Million-Series-B-Amid-Surging-Demand-for-Securing-Data-for-AI-Adoption" target="_blank" rel="noopener" title="Open source in new tab">58</a></sup><sup class="fn-ref" id="fnref-w6"><a href="https://www.businesswire.com/news/home/20241023142039/en/Concentric-AI-Secures-$45M-Financing-in-Series-B-Round-Led-by-Top-Tier-Capital-Partners-and-HarbourVest-Partners-to-Capitalize-on-Rapidly-Growing-DSPM-Market" target="_blank" rel="noopener" title="Open source in new tab">65</a></sup>; Bedrock Data's $25M Series A (November 2025, led by Greylock) sits at the early-Wildcard band<sup class="fn-ref" id="fnref-w8"><a href="https://www.businesswire.com/news/home/20251119811935/en/" target="_blank" rel="noopener" title="Open source in new tab">81</a></sup>. Vendor absorption is the second pattern — Proofpoint absorbed Normalyze (October 2024)<sup class="fn-ref" id="fnref-w9"><a href="https://www.businesswire.com/news/home/20241029400659/en/Proofpoint-Signs-Definitive-Agreement-to-Acquire-Normalyze" target="_blank" rel="noopener" title="Open source in new tab">82</a></sup>, Veeam closed its $1.725B Securiti AI acquisition (December 2025)<sup class="fn-ref" id="fnref-w10"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">83</a></sup>, and Google's $32B Wiz close (early 2026) puts DSPM-adjacent CNAPP behind a hyperscaler<sup class="fn-ref" id="fnref-w11"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">84</a></sup>. Two vendors evaluated for vendor-card inclusion above but treated separately here: Symmetry Systems' last named-outlet round is the July 2023 $17.7M inside round (ForgePoint Capital), ~34 months stale against the chapter's freshness window — Symmetry remains an in-scope Attention vendor on product-positioning grounds but does not carry funding-side material at the named-outlet sourcing bar<sup class="fn-ref" id="fnref-w7"><a href="https://forgepointcap.com/perspectives/symmetry-systems-closes-17-7-million-to-scale-its-ai-powered-data-security-platform/" target="_blank" rel="noopener" title="Open source in new tab">66</a></sup>. Securiti AI (Veeam absorption) and Normalyze (Proofpoint absorption) are no longer independent vendors and appear as M&A absorption anchors in the strategic-moves and pattern-claim sections rather than as standalone rows. Varonis is a public-company cross-reference to the IRM Front 1 chapter — the October 28, 2025 single-day stock drop, ~5% layoff, and January 2026 securities class action are all anchored in IRM and not duplicated here; the DSPM-front positioning is platform-relevant (the broader Varonis Data Security Platform reframed around AI-data-security), not distress-relevant. See Phase 3 Venture Landscape chapter for deep analysis.</p>
+</div>
+<div data-prev-section="s14-6">
+  <blockquote class="card"><em>Not investment advice. See front-matter disclosure.</em></blockquote>
+</div>
+</div>
+<div class="slide" data-slide="15" data-title="3.6 Winning & Losing">
+<div class="brand-bar">
+<div class="brand-logo">
+<div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="28" height="28"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+<span class="logo-text">ProductBeacon</span>
+</div>
+<span class="section-label">3.6 Winning & Losing</span>
+</div>
+<h2>3.6 Winning & Losing</h2>
+<div data-prev-section="s15-1">
+  <p>Two themes shape what's winning and losing in DSPM in 2026. Each is anchored to public evidence, framed explicitly as opinion, and stated as a falsifiable prediction the next twelve to eighteen months will either confirm or refute.</p>
+</div>
+<div class="pattern-claim-callout">
+<h3 class="pattern-claim-title">Pattern Claim 1 — The DSPM Absorption Chain</h3>
+<div class="pattern-claim-body"><strong>Observation.</strong> Six DSPM-relevant M&A events across roughly two years restructure DSPM as a category that platform-incumbents absorb rather than DSPM-natives consolidate. IBM acquired Polar Security (May 2023, folded into Guardium); Palo Alto Networks acquired Dig Security (November 2023, folded into Prisma Cloud); CrowdStrike acquired Flow Security (March 2024, folded into Falcon Cloud Security); Rubrik acquired Laminar Security (June 2024); Proofpoint absorbed Normalyze (October-November 2024, now Proofpoint DSPM)<sup class="fn-ref" id="fnref-cl1"><a href="https://www.businesswire.com/news/home/20241029400659/en/Proofpoint-Signs-Definitive-Agreement-to-Acquire-Normalyze" target="_blank" rel="noopener" title="Open source in new tab">85</a></sup>; Veeam closed its USD 1.725B acquisition of Securiti AI on December 11, 2025<sup class="fn-ref" id="fnref-cl2"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">86</a></sup>; and Google closed its USD 32B acquisition of Wiz in early 2026<sup class="fn-ref" id="fnref-cl3"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">87</a></sup>. The DSPM-pure-play vendor population has thinned materially across this window — three categories of acquirer have entered the absorption (legacy-data-security platforms like IBM Guardium and Rubrik, identity/CNAPP platforms like Palo Alto and CrowdStrike, data-resilience and cloud-hyperscaler platforms like Veeam and Google). At the same time, Cyera's January 2026 Series F at $9B post-money<sup class="fn-ref" id="fnref-cl4"><a href="https://fortune.com/2026/01/08/cyera-cybersecurity-startup-yotam-segev-400-million-series-f-funding-9-billion-valuation-blackstone/" target="_blank" rel="noopener" title="Open source in new tab">88</a></sup> is the strongest counterweight — the standalone DSPM leader is the largest pure-play data-security private mark in the pilot, but the company's own platform-extension messaging (AI Guardian, AI-SPM, DLP overlay) signals it sees the same gravity its acquired peers folded into.</div>
+<div class="pattern-claim-body"><strong>My read.</strong> I read this as DSPM moving from a standalone procurement category to a <em>line item inside larger data-security, cloud-security, or data-resilience platform RFPs</em> — the structural pattern documented across three platform-absorption vectors (CNAPP-bundled, data-privacy-ops-pivot, identity-led). The Cyera $9B counterweight is real but does not refute the thesis; it confirms that the standalone-DSPM lane has narrowed to a small number of vendors with enough AI-data-specific differentiation and capital depth to resist absorption. The lane is narrow, not closed: $9B is wallet-bounded against hyperscaler and data-resilience platform M&A budgets that already routinely clear that mark, and the Veeam-Securiti close at sub-$2B is a reminder that absorber-willingness is not the constraint. The mid-tier DSPM-natives (Sentra, BigID, Symmetry Systems, Concentric AI, Bedrock Data) face the same gravity, with the survival path running through AI-training-pipeline coverage rather than through generalist DSPM positioning (Play 3).</div>
+<div class="pattern-claim-body"><strong>Conditional prediction.</strong> <em>If at least one of the mid-tier DSPM-natives (Sentra, BigID, Symmetry Systems, Concentric AI, Bedrock Data) announces an acquisition by a platform incumbent within the next twelve months — AND Q3-Q4 2026 earnings calls from CrowdStrike, Wiz/Google Cloud, Palo Alto Networks, or Microsoft segment disclosures cite "DSPM-bundled" or "DSPM-platform-replace" wins as a named contributor to enterprise growth — AND Gartner's next Market Guide for DSPM (or equivalent Forrester / IDC publication) reclassifies CNAPP-extension vendors into the primary DSPM table, the absorption thesis is structurally durable through 2027 and standalone DSPM-natives face renewal-cycle pricing pressure. If H2 2026 produces a fresh Series E-or-larger raise for a standalone DSPM-native without a platform-acquisition narrative — AND at least two named-outlet (Bloomberg, Reuters, Fortune, TechCrunch, Calcalist, SecurityWeek, Dark Reading) 2026-2027 enterprise reference wins for that DSPM-native surface as platform-replace deals against CNAPP-bundled DSPM — the standalone lane is wider than the absorption pattern suggests and the thesis weakens.</em></div>
+<div class="pattern-claim-body"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-cl1"><a href="https://www.businesswire.com/news/home/20241029400659/en/Proofpoint-Signs-Definitive-Agreement-to-Acquire-Normalyze" target="_blank" rel="noopener" title="Open source in new tab">85</a></sup> <sup class="fn-ref" id="fnref-cl2"><a href="https://www.veeam.com/company/press-release/veeam-acquires-securiti-ai.html" target="_blank" rel="noopener" title="Open source in new tab">86</a></sup> <sup class="fn-ref" id="fnref-cl3"><a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm" target="_blank" rel="noopener" title="Open source in new tab">87</a></sup> <sup class="fn-ref" id="fnref-cl4"><a href="https://fortune.com/2026/01/08/cyera-cybersecurity-startup-yotam-segev-400-million-series-f-funding-9-billion-valuation-blackstone/" target="_blank" rel="noopener" title="Open source in new tab">88</a></sup></div>
+</div>
+<div data-prev-section="s15-7">
+  <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
+<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <style>
+    .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
+    .subtitle { font-size: 12px; fill: #6b7280; }
+    .platform { fill: #1e3a8a; }
+    .target { fill: #b91c1c; }
+    .counter { fill: #92400E; }
+    .lbl { font-size: 11px; font-weight: 600; fill: #1f2937; }
+    .det { font-size: 9.5px; fill: #4b5563; }
+    .arrow { stroke: #4b5563; stroke-width: 1.8; fill: none; marker-end: url(#arr); }
+    .test-box { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
+    .test-label { font-size: 11px; font-weight: 700; fill: #78350f; }
+    .test-text { font-size: 10px; fill: #451a03; }
+    .caption { font-size: 9.5px; font-style: italic; fill: #6b7280; }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" class="title">Pattern Claim 1: The DSPM Absorption Chain</text>
+  <text x="400" y="48" text-anchor="middle" class="subtitle">Six platform absorptions in 14 months; Cyera $9B is the strongest counter-thesis</text>
+
+  <!-- Three column layout: Platform / Target / Outcome -->
+
+  <!-- Header row -->
+  <text x="135" y="80" text-anchor="middle" class="lbl" fill="#1e3a8a">PLATFORM</text>
+  <text x="400" y="80" text-anchor="middle" class="lbl" fill="#b91c1c">DSPM TARGET</text>
+  <text x="665" y="80" text-anchor="middle" class="lbl" fill="#4b5563">OUTCOME</text>
+
+  <!-- Row 1: IBM ← Polar (2023, predates window but anchor) -->
+  <rect x="65" y="95" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="115" text-anchor="middle" class="lbl" fill="#1e3a8a">IBM</text>
+  <rect x="335" y="95" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="115" text-anchor="middle" class="lbl" fill="#b91c1c">Polar Security</text>
+  <line x1="205" y1="111" x2="335" y2="111" class="arrow"/>
+  <text x="665" y="115" text-anchor="middle" class="det">Embedded in Guardium (2023, pre-window)</text>
+
+  <!-- Row 2: Palo Alto ← Dig (2023) -->
+  <rect x="65" y="140" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="160" text-anchor="middle" class="lbl" fill="#1e3a8a">Palo Alto Networks</text>
+  <rect x="335" y="140" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="160" text-anchor="middle" class="lbl" fill="#b91c1c">Dig Security</text>
+  <line x1="205" y1="156" x2="335" y2="156" class="arrow"/>
+  <text x="665" y="160" text-anchor="middle" class="det">Embedded in Prisma Cloud (2023)</text>
+
+  <!-- Row 3: Rubrik ← Laminar -->
+  <rect x="65" y="185" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="205" text-anchor="middle" class="lbl" fill="#1e3a8a">Rubrik</text>
+  <rect x="335" y="185" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="205" text-anchor="middle" class="lbl" fill="#b91c1c">Laminar</text>
+  <line x1="205" y1="201" x2="335" y2="201" class="arrow"/>
+  <text x="665" y="205" text-anchor="middle" class="det">Data-resilience bundle (2023)</text>
+
+  <!-- Row 4: Proofpoint ← Normalyze (Oct 2024) -->
+  <rect x="65" y="230" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="250" text-anchor="middle" class="lbl" fill="#1e3a8a">Proofpoint</text>
+  <rect x="335" y="230" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="250" text-anchor="middle" class="lbl" fill="#b91c1c">Normalyze</text>
+  <line x1="205" y1="246" x2="335" y2="246" class="arrow"/>
+  <text x="665" y="250" text-anchor="middle" class="det" font-weight="600">Now "Proofpoint DSPM" (Oct '24)</text>
+
+  <!-- Row 5: Veeam ← Securiti $1.725B (Dec 2025) -->
+  <rect x="65" y="275" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="295" text-anchor="middle" class="lbl" fill="#1e3a8a">Veeam</text>
+  <rect x="335" y="275" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="295" text-anchor="middle" class="lbl" fill="#b91c1c">Securiti.ai</text>
+  <line x1="205" y1="291" x2="335" y2="291" class="arrow"/>
+  <text x="665" y="295" text-anchor="middle" class="det" font-weight="600">$1.725B close (Dec '25)</text>
+
+  <!-- Row 6: Google ← Wiz $32B (Mar 2026) -->
+  <rect x="65" y="320" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
+  <text x="135" y="340" text-anchor="middle" class="lbl" fill="#1e3a8a">Google</text>
+  <rect x="335" y="320" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
+  <text x="400" y="340" text-anchor="middle" class="lbl" fill="#b91c1c">Wiz (CNAPP w/ DSPM)</text>
+  <line x1="205" y1="336" x2="335" y2="336" class="arrow"/>
+  <text x="665" y="340" text-anchor="middle" class="det" font-weight="700">$32B close (Mar '26)</text>
+
+  <!-- Counter-thesis -->
+  <rect x="270" y="365" width="260" height="40" fill="#fed7aa" stroke="#92400E" stroke-width="2" rx="4"/>
+  <text x="400" y="383" text-anchor="middle" class="lbl" fill="#92400E">⚡ Counter-thesis: Cyera Series F $9B</text>
+  <text x="400" y="398" text-anchor="middle" class="det" fill="#78350f">Blackstone-led, Jan 2026 — DSPM-native standalone trajectory</text>
+
+  <!-- Falsifiable-test footer -->
+  <rect x="80" y="425" width="640" height="55" class="test-box" rx="4"/>
+  <text x="400" y="445" text-anchor="middle" class="test-label">FALSIFIABLE TEST — H1 2026 through Q1 2027</text>
+  <text x="400" y="462" text-anchor="middle" class="test-text">1+ mid-tier DSPM-native acquired by platform incumbent, AND CNAPP/data-resilience vendor earnings disclose "DSPM-bundled"</text>
+  <text x="400" y="476" text-anchor="middle" class="test-text">wins, AND Gartner Market Guide for DSPM reclassifies CNAPP-extensions into primary table. Cyera Series G+ counter-signal.</text>
+</svg>
+
+<figcaption style="font-size:10pt;color:#6b7280;font-style:italic;margin-top:6pt;">The DSPM Absorption Chain — H2 2026 test: standalone-DSPM RFP versus DSPM-as-line-item-inside-platform RFP</figcaption>
+</figure></div>
+
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">Card 2: The Thoma Bravo Data Security Stack</h2>
+<p><strong>Claim.</strong> Proofpoint is the cleanest 2026 example of a PE-backed vendor assembling a multi-front data-security stack as an IPO asset. The H2 2026 S-1 would pressure-test whether the stack is a platform or a portfolio.</p>
+<p><strong>Evidence.</strong> Proofpoint is the only vendor with named-outlet presence across all three Part 1 fronts at combined Gravity or Attention placement: ITM at IRM Gravity, Enterprise DLP at DLP Attention, post-Normalyze DSPM at DSPM Attention. The parent was taken private by Thoma Bravo in August 2021 at USD 12.3B and is publicly signaling 2026 IPO intent. Normalyze wires the DSPM leg into the same stack.</p>
+<p><em>Falsifiable test. If the S-1 reports ITM, Enterprise DLP, and DSPM as a single Data Security segment with unified ARR, the stack is a platform and integration depth becomes a disclosure question. If the three are segmented under an Information Protection umbrella, the stack is a portfolio and renewal-cycle pressure from Microsoft Purview and Cyberhaven intensifies through 2027.</em></p>
+<p><strong>So what.</strong> For the analyst: read the S-1 segment structure first. For the CISO: a Proofpoint platform pitch in 2026 needs ARR unification evidence, not vendor logos.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">Card 3: Agentic AI Pulls Enforcement Back to the Data Source</h2>
+<p><strong>Claim.</strong> When machine identities outnumber humans 80-to-1 and AI agents authenticate via shared service accounts that IAM treats as trusted infrastructure, the only enforcement point that scales is the data store itself. This is the architectural reason the absorbed mass settles on the data layer, not on the agent and not on the network edge.</p>
+<p><strong>Evidence.</strong> The 80-to-1 ratio was cited in the closing release for Palo Alto Networks' acquisition of CyberArk on February 11, 2026 at USD 25B, the largest cybersecurity deal in history. Three category-specific articulations converge on the same primitive: Microsoft Purview's Risky Agents (preview) template at the IRM layer, Operant AI's MCP-protocol Endpoint Protector launched May 4, 2026 at the DLP layer, and Veeam's DataAI Command Platform thesis that enforcement must shift to the data source so known and unknown agents cannot reach sensitive data when that data is governed at source.</p>
+<p><em>Falsifiable test. By Q4 2026, any one of:</em></p>
+<ul>
+<li><em>PANW earnings cite Cortex XSIAM with Prisma Cloud DLP and CyberArk integration as a named contributor to enterprise wins.</em></li>
+<li><em>Microsoft adds Entra ID identity-aware DLP as a headline capability with named reference customers.</em></li>
+<li><em>Gartner reclassifies identity-integration as a baseline DLP requirement.</em></li>
+</ul>
+<p><em>Any of the three confirms the enforcement primitive has reorganized.</em></p>
+<p><strong>So what.</strong> Buy at the data layer, govern at the data layer, or expect agentic AI to walk past whatever you bought.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">Three Buyer Choices</h2>
+<p>The 2026 renewal cycle resolves to three real options.</p>
+<p><strong>Consolidate to a platform</strong> (Microsoft Purview if M365-standardized, Cyberhaven for a specialist-led unified platform on a single lineage substrate, Proofpoint for an email-anchored stack). <em>If you are M365-standardized and the renewal lands before Article 10 readiness pressure, consolidate.</em></p>
+<p><strong>Best-of-breed across fronts</strong> (Cyera or BigID for DSPM, a behavioral-IRM specialist for IRM, Microsoft or Cyberhaven for DLP). <em>If you have specialist-led IRM in place and a DSPM RFP underway, best-of-breed.</em></p>
+<p><strong>Hybridize</strong> (DSPM-anchored substrate with selective augmentation where the platform is not yet GA-deep enough on AI-agent coverage). <em>If your data stores are heterogeneous and your AI-agent footprint is growing fast, hybridize.</em></p>
+<p>Each has defensible logic. The renewal cycle reveals which assumption you were operating under, sometimes too late.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<h2 style="font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 28px; color: var(--bright); margin: var(--space-6) 0 var(--space-3);">Three Audience Reads</h2>
+<p><strong>For the PE or hedge-fund analyst.</strong> Start with Convergence for the chosen thesis plus two stress-test counter-positions. DSPM for the Cyera cadence and the absorption chain. DLP for the post-CyberArk identity-led thesis. Three investable theses, three falsifiable tests, public signals an IC memo can re-derive.</p>
+<p><strong>For the CISO operator.</strong> Start with DLP if your renewal hinges on Microsoft Purview migration. DSPM if 2026 budget includes EU AI Act Article 10 readiness (August 2, 2026). IRM if AI-actor coverage is on the steering agenda. The three buyer choices above are your decision tree. Bring the choice you are making to the meeting.</p>
+<p><strong>For the fractional founder or product leader.</strong> Any chapter as a worked example of how to read a market. Three portable frameworks: published-material discipline (post-USD-100M private, public, or named-outlet anchor); four-archetype boundary analysis when a category enters convergence; the Pattern Claim shape of Observation, My read, Conditional prediction, Sources, grounded on a publicly observable proxy.</p>
+<hr style="border:none; border-top: 1px solid var(--slate-600); margin: var(--space-4) 0;">
+<p>Read the full chapters at <a href="https://productbeacon.agency/research/state-of-cyber-2026/" style="color: var(--amber);">productbeacon.agency/research/state-of-cyber-2026/</a> (IRM, DLP, DSPM, Convergence). Methodology: 280 citations across the four chapters, Verifiable Proxy Rule, no vendor sponsors. See <a href="https://productbeacon.agency/research/methodology.html" style="color: var(--amber);">productbeacon.agency/research/methodology.html</a>.</p>
+<p><em>Author conflict disclosure. Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. The methodology applies equally to AXIA-adjacent and non-adjacent vendors. No parity exception. Not investment advice. See Disclosures in the source chapters. Factual corrections: yohay@productbeacon.agency within five business days of any chapter's publication.</em></p>
+</section>
+
+<section style="max-width: 760px; margin: 0 auto; padding: var(--space-4) var(--space-5) var(--space-7); text-align: center; border-top: 1px solid var(--slate-600); margin-top: var(--space-4);">
+  <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: var(--slate-400); margin: 0 0 var(--space-3) 0;">Prefer to read offline, share with a colleague, or bring to a call?</p>
+  <a href="/research/state-of-cyber-2026/brief.pdf" style="font-family: 'Inter', sans-serif; font-weight: 500; font-size: 17px; color: var(--amber); letter-spacing: 0.01em;">Download as PDF &rarr;</a>
+  <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate-400); margin: var(--space-3) 0 0 0;">Want the longer reading-notes version? <a href="/research/state-of-cyber-2026/synthesis.html" style="color: var(--amber);">Read the Report Digest &rarr;</a></p>
+</section>
+</main>
+
+<!-- =====================================================================
+     FOOTER (A-3 verbatim, two-block)
+     ===================================================================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-blocks">
+
+      <!-- Block A: About the author (left) -->
+      <div class="footer-block-left">
+        <div class="footer-block-lockup">
+          <span class="lockup lockup-md" aria-label="ProductBeacon Research">
+            <span class="lockup-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+                <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+              </svg>
+            </span>
+            <span class="lockup-divider" aria-hidden="true"></span>
+            <span class="lockup-wordmark">Research</span>
+          </span>
+        </div>
+        <p class="footer-block-title">About the author · Yohay Etsion</p>
+        <p class="footer-block-body">Yohay Etsion is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention segment. Seventeen years building product organizations at NICE and Cognyte, managing $200M+ portfolios and 30+ person teams. Creator of Product Org OS, an open-source methodology operationalizing Vision to Value. He is the author of Leading the Charge (2003) and Vision to Value (coming 2026).</p>
+      </div>
+
+      <!-- Block B: About ProductBeacon (right) -->
+      <div class="footer-block-right">
+        <div class="footer-block-parent" aria-label="ProductBeacon">
+          <span class="parent-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#0F172A"/><path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/></svg></span>
+          <span><strong style="font-weight:700;">Product</strong>Beacon</span>
+        </div>
+        <p class="footer-block-title">About ProductBeacon</p>
+        <p class="footer-block-body">ProductBeacon is the <a href="/#services">fractional product leadership practice</a> for ambitious startups and scaleups that need senior product judgment without full-time overhead. Outreach is signal-triggered, never spam or spray-and-pray: we approach when we see the specific pain we know how to fix. We publish open-source thinking on how product organizations actually work, including Product Org OS and Vision to Value, coming 2026.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-divider" role="separator"></div>
+
+    <p class="footer-disclosure">
+      Yohay is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment. Disclosure applies where DLP appears in ProductBeacon Research coverage.
+    </p>
+  </div>
+</footer>
+
+
+</body>
+</html>
