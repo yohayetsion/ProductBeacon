@@ -7,3 +7,8 @@
 
 /reports/state-of-cyber-2026/*  /research/state-of-cyber-2026/:splat  301
 
+# Phase 1 P0-4 (Round 15, 2026-05-27): Pre-Call Pack URL canonicalization
+# brief.{html,pdf} renamed to pre-call-brief.{html,pdf} in Round 14 (channel-fit correction).
+# Append only - do NOT modify the A-8 rule above (per M14).
+/research/state-of-cyber-2026/brief.html      /research/state-of-cyber-2026/pre-call-brief.html      301
+/research/state-of-cyber-2026/brief.pdf       /research/state-of-cyber-2026/pre-call-brief.pdf       301
