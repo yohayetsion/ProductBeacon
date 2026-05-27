@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State of Cyber Security Markets 2026 · ProductBeacon Research</title>
-<meta name="description" content="State of Cyber Security Markets 2026. An operator's read across eight fronts, two parts. Part 1 ships now (IRM, DLP, DSPM, Convergence). Part 2 ships June 2026 (SOC Platform War, SSE / Edge Theater, AI Security, Identity & PAM, Platform Wars Synthesis). Authored by Yohay Etsion.">
+<title>State of Cyber Security Markets 2026 | ProductBeacon</title>
+<meta name="description" content="Independent cybersecurity market research 2026: insider risk management vendors, DLP, DSPM, and the agentic AI data security convergence. 280 citations.">
 
 <!-- Canonical (Round 15 P0-4) -->
 <link rel="canonical" href="https://productbeacon.agency/research/state-of-cyber-2026/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="State of Cyber Security Markets 2026 · ProductBeacon Research">
-<meta property="og:description" content="280 citations. Four chapters. Zero vendor sponsors. Authored by Yohay Etsion.">
+<meta property="og:title" content="State of Cyber Security Markets 2026 | ProductBeacon">
+<meta property="og:description" content="Independent cybersecurity market research 2026: insider risk management vendors, DLP, DSPM, and the agentic AI data security convergence. 280 citations.">
 <meta property="og:url" content="https://productbeacon.agency/research/state-of-cyber-2026/">
 <meta property="og:image" content="https://productbeacon.agency/research/og/landing.png">
 <meta property="og:image:width" content="1200">
@@ -28,8 +28,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@productbeacon">
 <meta name="twitter:creator" content="@yohayetsion">
-<meta name="twitter:title" content="State of Cyber Security Markets 2026 · ProductBeacon Research">
-<meta name="twitter:description" content="280 citations. Four chapters. Zero vendor sponsors. Authored by Yohay Etsion.">
+<meta name="twitter:title" content="State of Cyber Security Markets 2026 | ProductBeacon">
+<meta name="twitter:description" content="Independent cybersecurity market research 2026: insider risk management vendors, DLP, DSPM, and the agentic AI data security convergence. 280 citations.">
 <meta name="twitter:image" content="https://productbeacon.agency/research/og/landing.png">
 <meta name="twitter:image:alt" content="State of Cyber Security Markets 2026 by Yohay Etsion. ProductBeacon Research. 280 citations, zero vendor sponsors.">
 
@@ -724,7 +724,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   </p>
 
   <div class="hero-byline">
-    <p class="hero-byline-line1">By Yohay Etsion.</p>
+    <p class="hero-byline-line1">By Yohay Etsion. <a href="/research/author.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60); font-size: 0.85em; margin-left: 8px;">Full research-author bio &rarr;</a></p>
     <p class="hero-byline-line2">
       Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026).
     </p>
@@ -735,6 +735,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     <ul class="doors-list">
       <li><strong>For PE analysts and expert-network sourcing</strong> start with the synthesis chapters. Each part of the report ends with an investable-theses chapter where the cross-front pattern claims land, every claim grounded on a falsifiable test you can re-derive in 2027 from publicly observable signals.</li>
       <li><strong>For CISOs and operators tracking the market</strong> read the four chapters in order. Each ends with a falsifiable test for 2027 that you can re-check against your own deal flow.</li>
+      <li><strong>For founders and operators</strong> the DSPM Absorption Chain, the Proofpoint platform trajectory, and the agentic AI shift are not noise. They are the buying conditions your enterprise customers will use in 2026 procurement. <a href="/research/state-of-cyber-2026/dspm.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Read DSPM chapter &rarr;</a></li>
     </ul>
     <p class="doors-footer" style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--slate-600); font-size: 15px; color: var(--slate-400);">Before you start: <a href="/research/methodology.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">read how we source and how to verify any claim →</a></p>
   </section>
@@ -949,6 +950,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     try {
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get('audience') || '').toLowerCase().trim();
+      if (raw === 'analyst') return 'investor'; // Round 15 P2 Wave B: alias for analyst-door
       if (raw === 'investor' || raw === 'ciso' || raw === 'founder') return raw;
       return 'operator'; // fail-safe per CMO P0-3
     } catch (e) {

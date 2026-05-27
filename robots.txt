@@ -1,0 +1,23 @@
+# ProductBeacon robots.txt
+# Last updated: 2026-05-27
+
+User-agent: *
+Allow: /
+Disallow: /prospects/
+Disallow: /planning/
+Disallow: /analysis/
+
+# AI search crawlers (explicitly allowed for GEO discoverability)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://productbeacon.agency/sitemap.xml
