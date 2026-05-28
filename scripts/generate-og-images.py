@@ -174,6 +174,22 @@ IMAGES = [
         "chapters_line": "<span>IRM</span> &nbsp;·&nbsp; <span>DLP</span> &nbsp;·&nbsp; <span>DSPM</span> &nbsp;·&nbsp; <span>Convergence</span>",
         "tag": "280 CITATIONS",
     },
+    {
+        "name": "umbrella.png",
+        "eyebrow": "",
+        "title": "Independent Cyber & Product Research",
+        "subtitle": "Market analysis with every claim cited. No vendor sponsors, no paywalled data, no analyst-firm reuse.",
+        "chapters_line": "",
+        "tag": "ZERO VENDOR SPONSORS",
+    },
+    {
+        "name": "methodology.png",
+        "eyebrow": "Methodology",
+        "title": "How the research is built",
+        "subtitle": "Sourcing rules, citation discipline, the Verifiable Proxy Rule, and a quarterly refresh cadence.",
+        "chapters_line": "",
+        "tag": "OPEN-WEB SOURCED",
+    },
 ]
 
 
