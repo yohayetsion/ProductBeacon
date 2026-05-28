@@ -273,6 +273,33 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .topnav-links a:hover { color: var(--amber); }
 .topnav-links a.active { color: var(--amber); }
 
+/* ---------- Breadcrumb (Round 16 D-3) ---------- */
+.breadcrumb {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px var(--space-3);
+}
+.breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-2); }
+.breadcrumb a { color: var(--slate-400); transition: color var(--research-mark-hover-transition); }
+.breadcrumb a:hover { color: var(--amber); }
+.breadcrumb li[aria-current="page"] { color: var(--amber-light); }
+.breadcrumb .sep { color: var(--slate-600); }
+@media (max-width: 480px) { .breadcrumb { padding: 0 24px var(--space-3); } }
+
 /* ---------- Hero ---------- */
 .hero {
   max-width: var(--content-max);
@@ -704,6 +731,13 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
      HERO (Author-first, three-audience UTM routing)
      ===================================================================== -->
 <main>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/research/">ProductBeacon Research</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <a href="/research/state-of-cyber-2026/">State of Cyber 2026</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <span aria-current="page">Pre-Call Briefing Pack</span></li>
+  </ol>
+</nav>
 <header class="hero">
   <p class="hero-eyebrow">ProductBeacon Research &middot; Pre-Call Briefing Pack</p>
   <h1 class="hero-headline">State of Cyber 2026: Pre-Call Briefing Pack</h1>

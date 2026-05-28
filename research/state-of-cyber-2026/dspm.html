@@ -371,6 +371,13 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; positi
 .hero-title { font-size: 2.2rem; font-weight: 800; line-height: 1.1; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; position: relative; z-index: 1; }
 @media (min-width: 768px) { .hero-title { font-size: 3.2rem; } }
 @media (min-width: 1200px) { .hero-title { font-size: 4rem; } }
+.deck-breadcrumb { position: relative; z-index: 1; margin-bottom: 20px; }
+.deck-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); }
+.deck-breadcrumb li { display: flex; align-items: center; gap: 8px; }
+.deck-breadcrumb a { color: var(--text-secondary); transition: color 150ms ease-in-out; }
+.deck-breadcrumb a:hover { color: var(--accent); }
+.deck-breadcrumb li[aria-current="page"] { color: var(--accent); }
+.deck-breadcrumb .sep { color: var(--text-muted); }
 .hero-subtitle { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; max-width: 700px; position: relative; z-index: 1; }
 @media (min-width: 768px) { .hero-subtitle { font-size: 1.3rem; } }
 
@@ -759,6 +766,13 @@ svg:not(.nav-bar svg) {
 <span class="section-label">ProductBeacon — State of Cyber...</span>
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
+<nav class="deck-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/research/">ProductBeacon Research</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <a href="/research/state-of-cyber-2026/">State of Cyber 2026</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <span aria-current="page">Front 3: Data Security Posture Management</span></li>
+  </ol>
+</nav>
 <div class="hero-title">ProductBeacon — State of Cyber Security Markets 2026, Front 3: The Data Posture Front</div>
 <div data-prev-section="s1-1">
   
@@ -782,7 +796,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s2-3">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+<svg role="img" aria-labelledby="fig-dspm-1-title fig-dspm-1-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <title id="fig-dspm-1-title">Where DSPM Sits in the 2026 Cyber Stack</title>
+  <desc id="fig-dspm-1-desc">Map positioning Data Security Posture Management against IRM, DLP, and adjacent categories in the 2026 cyber stack.</desc>
   <style>
     .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
     .cat-label { font-size: 13px; font-weight: 700; }
@@ -967,7 +983,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s5-2">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+<svg role="img" aria-labelledby="fig-dspm-2-title fig-dspm-2-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <title id="fig-dspm-2-title">DSPM Vendor Landscape 2026</title>
+  <desc id="fig-dspm-2-desc">Vendor landscape positioning the major Data Security Posture Management vendors by their primary focus and product approach in 2026.</desc>
   <style>
     .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
     .axis-label { font-size: 12px; font-weight: 600; fill: #374151; }
@@ -1261,7 +1279,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s14-2">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Manrope, system-ui, sans-serif">
+<svg role="img" aria-labelledby="fig-dspm-3-title fig-dspm-3-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Manrope, system-ui, sans-serif">
+  <title id="fig-dspm-3-title">DSPM Funding and M&amp;A Timeline, March 2024 to May 2026</title>
+  <desc id="fig-dspm-3-desc">Timeline of Data Security Posture Management funding rounds and acquisitions from March 2024 through May 2026.</desc>
   <style>
     .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
     .year-label { font-size: 12px; font-weight: 700; fill: #374151; }
@@ -1416,7 +1436,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s15-7">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+<svg role="img" aria-labelledby="fig-dspm-4-title fig-dspm-4-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <title id="fig-dspm-4-title">Pattern Claim 1: The DSPM Absorption Chain</title>
+  <desc id="fig-dspm-4-desc">Diagram of the Pattern Claim that platform vendors absorb standalone DSPM startups, forming a consolidated data-security stack.</desc>
   <style>
     .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
     .subtitle { font-size: 12px; fill: #6b7280; }
@@ -1522,7 +1544,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s15-14">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+<svg role="img" aria-labelledby="fig-dspm-5-title fig-dspm-5-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
+  <title id="fig-dspm-5-title">Pattern Claim 2: Agentic AI Pulls Enforcement Back to the Data Source</title>
+  <desc id="fig-dspm-5-desc">Diagram of the Pattern Claim that agentic AI shifts data-security enforcement from the endpoint and network back to the data source itself.</desc>
   <style>
     .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
     .subtitle { font-size: 12px; fill: #6b7280; }

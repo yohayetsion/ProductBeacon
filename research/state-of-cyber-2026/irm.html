@@ -369,6 +369,13 @@ hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; positi
 .hero-title { font-size: 2.2rem; font-weight: 800; line-height: 1.1; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; position: relative; z-index: 1; }
 @media (min-width: 768px) { .hero-title { font-size: 3.2rem; } }
 @media (min-width: 1200px) { .hero-title { font-size: 4rem; } }
+.deck-breadcrumb { position: relative; z-index: 1; margin-bottom: 20px; }
+.deck-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-muted); }
+.deck-breadcrumb li { display: flex; align-items: center; gap: 8px; }
+.deck-breadcrumb a { color: var(--text-secondary); transition: color 150ms ease-in-out; }
+.deck-breadcrumb a:hover { color: var(--accent); }
+.deck-breadcrumb li[aria-current="page"] { color: var(--accent); }
+.deck-breadcrumb .sep { color: var(--text-muted); }
 .hero-subtitle { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; max-width: 700px; position: relative; z-index: 1; }
 @media (min-width: 768px) { .hero-subtitle { font-size: 1.3rem; } }
 
@@ -757,6 +764,13 @@ svg:not(.nav-bar svg) {
 <span class="section-label">ProductBeacon — State of Cyber...</span>
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
+<nav class="deck-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/research/">ProductBeacon Research</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <a href="/research/state-of-cyber-2026/">State of Cyber 2026</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <span aria-current="page">Front 1: Insider Risk Management</span></li>
+  </ol>
+</nav>
 <div class="hero-title">ProductBeacon — State of Cyber Security Markets 2026, Front 1: The Insider Risk Front</div>
 <div data-prev-section="s1-1">
   
@@ -780,7 +794,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s2-3">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Manrope, system-ui, -apple-system, sans-serif">
+<svg role="img" aria-labelledby="fig-irm-1-title fig-irm-1-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <title id="fig-irm-1-title">Where IRM Sits in the Cyber Stack</title>
+  <desc id="fig-irm-1-desc">Quadrant map positioning Insider Risk Management against DLP, DSPM, and SOC platforms along two axes: subject of analysis (data to people) and action type (detect to enforce).</desc>
   <rect width="900" height="640" fill="#0a0e1a"/>
   <rect x="0" y="0" width="900" height="6" fill="#F59E0B"/>
 
@@ -924,7 +940,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s4-2">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+<svg role="img" aria-labelledby="fig-irm-2-title fig-irm-2-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <title id="fig-irm-2-title">IRM Vendor Landscape 2026</title>
+  <desc id="fig-irm-2-desc">Vendor landscape positioning the major Insider Risk Management vendors by their primary focus and product approach in 2026.</desc>
   <!-- Background (ProductBeacon dark) -->
   <rect width="800" height="600" fill="#0a0e1a"/>
 
@@ -1268,7 +1286,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s12-2">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
+<svg role="img" aria-labelledby="fig-irm-3-title fig-irm-3-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <title id="fig-irm-3-title">IRM Funding Events 2021 to 2026</title>
+  <desc id="fig-irm-3-desc">Timeline of Insider Risk Management funding rounds and M&amp;A events from 2021 through 2026.</desc>
   <rect width="1000" height="540" fill="#0a0e1a"/>
   <rect x="0" y="0" width="1000" height="6" fill="#F59E0B"/>
 
@@ -1462,7 +1482,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s13-7">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Manrope, system-ui, -apple-system, sans-serif">
+<svg role="img" aria-labelledby="fig-irm-4-title fig-irm-4-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <title id="fig-irm-4-title">The Mimecast Absorption Thesis</title>
+  <desc id="fig-irm-4-desc">Diagram of the Pattern Claim that Mimecast absorbs Code42 Incydr, folding standalone IRM into a broader human-risk platform.</desc>
   <rect width="800" height="400" fill="#0a0e1a"/>
   <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
 
@@ -1531,7 +1553,9 @@ svg:not(.nav-bar svg) {
 </div>
 <div data-prev-section="s13-13">
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
-<svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Manrope, system-ui, -apple-system, sans-serif">
+<svg role="img" aria-labelledby="fig-irm-5-title fig-irm-5-desc" style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <title id="fig-irm-5-title">The Behavioral-Engine Renaissance</title>
+  <desc id="fig-irm-5-desc">Diagram of the Pattern Claim that behavioral analytics engines re-emerge as the core of agentic-era insider risk detection.</desc>
   <rect width="800" height="520" fill="#0a0e1a"/>
   <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
 
