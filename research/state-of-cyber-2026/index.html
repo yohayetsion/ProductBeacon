@@ -897,7 +897,11 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <div class="subscribe-card">
     <h2 class="subscribe-headline" id="subscribe-headline">Get notified when new ProductBeacon Research ships.</h2>
     <p class="subscribe-cadence">Expect ~6-10 emails per year. Ship events only, no weekly digest.</p>
-    <form class="subscribe-form" id="subscribe-form" action="BEEHIIV_EMBED_URL" method="post" novalidate>
+    <form class="subscribe-form" id="subscribe-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New ProductBeacon Research subscription request">
+      <input type="hidden" name="from_name" value="ProductBeacon Research">
+      <input type="checkbox" name="botcheck" class="sr-only" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label for="subscribe-email" class="sr-only">Email address</label>
       <input type="email" id="subscribe-email" name="email" placeholder="your@email.com" required autocomplete="email">
       <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -1005,8 +1009,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 </script>
 
 <!-- =====================================================================
-     EMAIL-CAPTURE: lightweight client-side validation + UX
-     Real submission wired to BEEHIIV_EMBED_URL (devops fills in post E-2).
+     EMAIL-CAPTURE: AJAX submit to Web3Forms -> emails admin@etsionbrands.com.
+     Stays on page; shows status in #subscribe-msg. Guards the unconfigured
+     placeholder key so it degrades gracefully until the key is installed.
      ===================================================================== -->
 <script>
 (function() {
@@ -1015,20 +1020,39 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   if (!form || !msg) return;
 
   form.addEventListener('submit', function(ev) {
-    var email = document.getElementById('subscribe-email').value || '';
-    // Basic shape check; real validation happens at Beehiiv.
-    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!ok) {
-      ev.preventDefault();
+    ev.preventDefault();
+    var emailEl = document.getElementById('subscribe-email');
+    var email = (emailEl && emailEl.value) || '';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.color = '#FCA5A5';
       msg.textContent = 'Please enter a valid email address.';
       return;
     }
-    // If the Beehiiv URL has not been wired yet, intercept and show a status message
-    // instead of submitting to the placeholder action.
-    if (form.action.indexOf('BEEHIIV_EMBED_URL') !== -1) {
-      ev.preventDefault();
-      msg.textContent = 'Subscription endpoint not yet configured. Your address was not sent.';
+    var keyEl = form.querySelector('input[name="access_key"]');
+    if (keyEl && keyEl.value.indexOf('WEB3FORMS_ACCESS_KEY') !== -1) {
+      msg.style.color = '#FCA5A5';
+      msg.textContent = 'Subscription endpoint not yet configured. Email research@productbeacon.agency to subscribe.';
+      return;
     }
+    msg.style.color = 'var(--slate-400)';
+    msg.textContent = 'Sending...';
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    }).then(function(r) { return r.json(); }).then(function(j) {
+      if (j && j.success) {
+        form.reset();
+        msg.style.color = '#FBBF24';
+        msg.textContent = 'Thanks. You are on the list for ship-event notifications.';
+      } else {
+        msg.style.color = '#FCA5A5';
+        msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
+      }
+    }).catch(function() {
+      msg.style.color = '#FCA5A5';
+      msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
+    });
   });
 })();
 </script>
