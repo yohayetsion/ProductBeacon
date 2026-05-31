@@ -95,7 +95,7 @@
 </script>
 
 <!-- Favicon (Research variant per A-5) -->
-<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
 
 <!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -786,22 +786,22 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <div style="max-width: 720px; margin: var(--space-5) auto; padding: var(--space-4); background: var(--surface); border-radius: 8px;"><figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
 <svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
   <style>
-    .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
-    .subtitle { font-size: 12px; fill: #6b7280; }
-    .platform { fill: #1e3a8a; }
-    .target { fill: #b91c1c; }
-    .counter { fill: #92400E; }
-    .lbl { font-size: 11px; font-weight: 600; fill: #1f2937; }
-    .det { font-size: 9.5px; fill: #4b5563; }
-    .arrow { stroke: #4b5563; stroke-width: 1.8; fill: none; marker-end: url(#arr); }
-    .test-box { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
-    .test-label { font-size: 11px; font-weight: 700; fill: #78350f; }
-    .test-text { font-size: 10px; fill: #451a03; }
-    .caption { font-size: 9.5px; font-style: italic; fill: #6b7280; }
+    .title { font-size: 17px; font-weight: 700; fill: #F1F5F9; }
+    .subtitle { font-size: 12px; fill: #CBD5E1; }
+    .platform { fill: #93C5FD; }
+    .target { fill: #FCA5A5; }
+    .counter { fill: #FBBF24; }
+    .lbl { font-size: 11px; font-weight: 600; fill: #E2E8F0; }
+    .det { font-size: 9.5px; fill: #CBD5E1; }
+    .arrow { stroke: #64748B; stroke-width: 1.8; fill: none; marker-end: url(#arr); }
+    .test-box { fill: #2a2410; stroke: #FBBF24; stroke-width: 2; }
+    .test-label { font-size: 11px; font-weight: 700; fill: #FBBF24; }
+    .test-text { font-size: 10px; fill: #FBBF24; }
+    .caption { font-size: 9.5px; font-style: italic; fill: #94A3B8; }
   </style>
   <defs>
     <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L9,4 L0,8 z" fill="#4b5563"/>
+      <path d="M0,0 L9,4 L0,8 z" fill="#64748B"/>
     </marker>
   </defs>
 
@@ -811,62 +811,62 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <!-- Three column layout: Platform / Target / Outcome -->
 
   <!-- Header row -->
-  <text x="135" y="80" text-anchor="middle" class="lbl" fill="#1e3a8a">PLATFORM</text>
-  <text x="400" y="80" text-anchor="middle" class="lbl" fill="#b91c1c">DSPM TARGET</text>
-  <text x="665" y="80" text-anchor="middle" class="lbl" fill="#4b5563">OUTCOME</text>
+  <text x="135" y="80" text-anchor="middle" class="lbl" fill="#93C5FD">PLATFORM</text>
+  <text x="400" y="80" text-anchor="middle" class="lbl" fill="#FCA5A5">DSPM TARGET</text>
+  <text x="665" y="80" text-anchor="middle" class="lbl" fill="#CBD5E1">OUTCOME</text>
 
   <!-- Row 1: IBM ← Polar (2023, predates window but anchor) -->
-  <rect x="65" y="95" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="115" text-anchor="middle" class="lbl" fill="#1e3a8a">IBM</text>
-  <rect x="335" y="95" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="115" text-anchor="middle" class="lbl" fill="#b91c1c">Polar Security</text>
+  <rect x="65" y="95" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="115" text-anchor="middle" class="lbl" fill="#93C5FD">IBM</text>
+  <rect x="335" y="95" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="115" text-anchor="middle" class="lbl" fill="#FCA5A5">Polar Security</text>
   <line x1="205" y1="111" x2="335" y2="111" class="arrow"/>
   <text x="665" y="115" text-anchor="middle" class="det">Embedded in Guardium (2023, pre-window)</text>
 
   <!-- Row 2: Palo Alto ← Dig (2023) -->
-  <rect x="65" y="140" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="160" text-anchor="middle" class="lbl" fill="#1e3a8a">Palo Alto Networks</text>
-  <rect x="335" y="140" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="160" text-anchor="middle" class="lbl" fill="#b91c1c">Dig Security</text>
+  <rect x="65" y="140" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="160" text-anchor="middle" class="lbl" fill="#93C5FD">Palo Alto Networks</text>
+  <rect x="335" y="140" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="160" text-anchor="middle" class="lbl" fill="#FCA5A5">Dig Security</text>
   <line x1="205" y1="156" x2="335" y2="156" class="arrow"/>
   <text x="665" y="160" text-anchor="middle" class="det">Embedded in Prisma Cloud (2023)</text>
 
   <!-- Row 3: Rubrik ← Laminar -->
-  <rect x="65" y="185" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="205" text-anchor="middle" class="lbl" fill="#1e3a8a">Rubrik</text>
-  <rect x="335" y="185" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="205" text-anchor="middle" class="lbl" fill="#b91c1c">Laminar</text>
+  <rect x="65" y="185" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="205" text-anchor="middle" class="lbl" fill="#93C5FD">Rubrik</text>
+  <rect x="335" y="185" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="205" text-anchor="middle" class="lbl" fill="#FCA5A5">Laminar</text>
   <line x1="205" y1="201" x2="335" y2="201" class="arrow"/>
   <text x="665" y="205" text-anchor="middle" class="det">Data-resilience bundle (2023)</text>
 
   <!-- Row 4: Proofpoint ← Normalyze (Oct 2024) -->
-  <rect x="65" y="230" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="250" text-anchor="middle" class="lbl" fill="#1e3a8a">Proofpoint</text>
-  <rect x="335" y="230" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="250" text-anchor="middle" class="lbl" fill="#b91c1c">Normalyze</text>
+  <rect x="65" y="230" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="250" text-anchor="middle" class="lbl" fill="#93C5FD">Proofpoint</text>
+  <rect x="335" y="230" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="250" text-anchor="middle" class="lbl" fill="#FCA5A5">Normalyze</text>
   <line x1="205" y1="246" x2="335" y2="246" class="arrow"/>
   <text x="665" y="250" text-anchor="middle" class="det" font-weight="600">Now "Proofpoint DSPM" (Oct '24)</text>
 
   <!-- Row 5: Veeam ← Securiti $1.725B (Dec 2025) -->
-  <rect x="65" y="275" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="295" text-anchor="middle" class="lbl" fill="#1e3a8a">Veeam</text>
-  <rect x="335" y="275" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="295" text-anchor="middle" class="lbl" fill="#b91c1c">Securiti.ai</text>
+  <rect x="65" y="275" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="295" text-anchor="middle" class="lbl" fill="#93C5FD">Veeam</text>
+  <rect x="335" y="275" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="295" text-anchor="middle" class="lbl" fill="#FCA5A5">Securiti.ai</text>
   <line x1="205" y1="291" x2="335" y2="291" class="arrow"/>
   <text x="665" y="295" text-anchor="middle" class="det" font-weight="600">$1.725B close (Dec '25)</text>
 
   <!-- Row 6: Google ← Wiz $32B (Mar 2026) -->
-  <rect x="65" y="320" width="140" height="32" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1" rx="3"/>
-  <text x="135" y="340" text-anchor="middle" class="lbl" fill="#1e3a8a">Google</text>
-  <rect x="335" y="320" width="130" height="32" fill="#fee2e2" stroke="#b91c1c" stroke-width="1" rx="3"/>
-  <text x="400" y="340" text-anchor="middle" class="lbl" fill="#b91c1c">Wiz (CNAPP w/ DSPM)</text>
+  <rect x="65" y="320" width="140" height="32" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1" rx="3"/>
+  <text x="135" y="340" text-anchor="middle" class="lbl" fill="#93C5FD">Google</text>
+  <rect x="335" y="320" width="130" height="32" fill="#3a1414" stroke="#F87171" stroke-width="1" rx="3"/>
+  <text x="400" y="340" text-anchor="middle" class="lbl" fill="#FCA5A5">Wiz (CNAPP w/ DSPM)</text>
   <line x1="205" y1="336" x2="335" y2="336" class="arrow"/>
   <text x="665" y="340" text-anchor="middle" class="det" font-weight="700">$32B close (Mar '26)</text>
 
   <!-- Counter-thesis -->
-  <rect x="270" y="365" width="260" height="40" fill="#fed7aa" stroke="#92400E" stroke-width="2" rx="4"/>
-  <text x="400" y="383" text-anchor="middle" class="lbl" fill="#92400E">⚡ Counter-thesis: Cyera Series F $9B</text>
-  <text x="400" y="398" text-anchor="middle" class="det" fill="#78350f">Blackstone-led, Jan 2026 — DSPM-native standalone trajectory</text>
+  <rect x="270" y="365" width="260" height="40" fill="#3a2410" stroke="#FB923C" stroke-width="2" rx="4"/>
+  <text x="400" y="383" text-anchor="middle" class="lbl" fill="#FBBF24">⚡ Counter-thesis: Cyera Series F $9B</text>
+  <text x="400" y="398" text-anchor="middle" class="det" style="fill:#FDBA74">Blackstone-led, Jan 2026 — DSPM-native standalone trajectory</text>
 
   <!-- Falsifiable-test footer -->
   <rect x="80" y="425" width="640" height="55" class="test-box" rx="4"/>
@@ -883,13 +883,13 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <div style="max-width: 720px; margin: var(--space-5) auto; padding: var(--space-4); background: var(--surface); border-radius: 8px;"><figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
 <svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
   <style>
-    .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
-    .subtitle { font-size: 12px; fill: #6b7280; }
+    .title { font-size: 18px; font-weight: 700; fill: #F1F5F9; }
+    .subtitle { font-size: 12px; fill: #CBD5E1; }
     .circle-label { font-size: 15px; font-weight: 700; }
-    .desc { font-size: 10.5px; fill: #4b5563; }
-    .core-label { font-size: 13px; font-weight: 700; fill: #7c2d12; }
-    .core-sub { font-size: 10px; font-weight: 600; fill: #78350f; }
-    .caption { font-size: 10px; font-style: italic; fill: #6b7280; }
+    .desc { font-size: 10.5px; fill: #CBD5E1; }
+    .core-label { font-size: 13px; font-weight: 700; fill: #FDBA74; }
+    .core-sub { font-size: 10px; font-weight: 600; fill: #FBBF24; }
+    .caption { font-size: 10px; font-style: italic; fill: #94A3B8; }
   </style>
 
   <text x="400" y="28" text-anchor="middle" class="title">The Convergence Frame — IRM × DLP × DSPM</text>
@@ -897,38 +897,38 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 
   <!-- Three overlapping circles (Venn-style) -->
   <!-- IRM (top, blue) -->
-  <circle cx="400" cy="180" r="125" fill="#dbeafe" stroke="#1e40af" stroke-width="2" opacity="0.55"/>
-  <text x="400" y="115" text-anchor="middle" class="circle-label" fill="#1e3a8a">IRM</text>
+  <circle cx="400" cy="180" r="125" fill="#1e3a5f" stroke="#60A5FA" stroke-width="2" opacity="0.55"/>
+  <text x="400" y="115" text-anchor="middle" class="circle-label" fill="#93C5FD">IRM</text>
   <text x="400" y="132" text-anchor="middle" class="desc">Insider Risk</text>
   <text x="400" y="146" text-anchor="middle" class="desc">Subject = human actor</text>
 
   <!-- DLP (lower-left, amber) -->
-  <circle cx="310" cy="320" r="125" fill="#fde68a" stroke="#a16207" stroke-width="2" opacity="0.55"/>
-  <text x="240" y="380" text-anchor="middle" class="circle-label" fill="#78350f">DLP</text>
+  <circle cx="310" cy="320" r="125" fill="#3a2e0a" stroke="#FBBF24" stroke-width="2" opacity="0.55"/>
+  <text x="240" y="380" text-anchor="middle" class="circle-label" fill="#FBBF24">DLP</text>
   <text x="240" y="397" text-anchor="middle" class="desc">Data Loss Prevention</text>
   <text x="240" y="411" text-anchor="middle" class="desc">Subject = channel egress</text>
 
   <!-- DSPM (lower-right, orange) -->
-  <circle cx="490" cy="320" r="125" fill="#fed7aa" stroke="#92400E" stroke-width="2" opacity="0.55"/>
-  <text x="560" y="380" text-anchor="middle" class="circle-label" fill="#7c2d12">DSPM</text>
+  <circle cx="490" cy="320" r="125" fill="#3a2410" stroke="#FB923C" stroke-width="2" opacity="0.55"/>
+  <text x="560" y="380" text-anchor="middle" class="circle-label" fill="#FDBA74">DSPM</text>
   <text x="560" y="397" text-anchor="middle" class="desc">Data Security Posture</text>
   <text x="560" y="411" text-anchor="middle" class="desc">Subject = data state</text>
 
   <!-- Convergence core (where all three overlap) -->
-  <ellipse cx="400" cy="265" rx="55" ry="38" fill="#92400E" stroke="#451a03" stroke-width="2" opacity="0.9"/>
+  <ellipse cx="400" cy="265" rx="55" ry="38" fill="#92400E" stroke="#FB923C" stroke-width="2" opacity="0.9"/>
   <text x="400" y="261" text-anchor="middle" class="core-label" fill="#fef3c7">DATA-LAYER</text>
   <text x="400" y="278" text-anchor="middle" class="core-label" fill="#fef3c7">SUBSTRATE</text>
 
   <!-- Three driving forces (in margins) -->
-  <text x="115" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 1</text>
+  <text x="115" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 1</text>
   <text x="115" y="206" text-anchor="middle" class="desc">Agentic AI</text>
   <text x="115" y="220" text-anchor="middle" class="desc">collapses subject</text>
 
-  <text x="685" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 2</text>
+  <text x="685" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 2</text>
   <text x="685" y="206" text-anchor="middle" class="desc">Platform-economics</text>
   <text x="685" y="220" text-anchor="middle" class="desc">gravity (M&amp;A)</text>
 
-  <text x="400" y="465" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 3</text>
+  <text x="400" y="465" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 3</text>
   <text x="400" y="479" text-anchor="middle" class="desc">CISO budget fatigue — running out of tool lines</text>
 
   <!-- Caption -->
@@ -947,13 +947,13 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <div style="max-width: 720px; margin: var(--space-5) auto; padding: var(--space-4); background: var(--surface); border-radius: 8px;"><figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
 <svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
   <style>
-    .title { font-size: 18px; font-weight: 700; fill: #1f2937; }
-    .subtitle { font-size: 12px; fill: #6b7280; }
+    .title { font-size: 18px; font-weight: 700; fill: #F1F5F9; }
+    .subtitle { font-size: 12px; fill: #CBD5E1; }
     .circle-label { font-size: 15px; font-weight: 700; }
-    .desc { font-size: 10.5px; fill: #4b5563; }
-    .core-label { font-size: 13px; font-weight: 700; fill: #7c2d12; }
-    .core-sub { font-size: 10px; font-weight: 600; fill: #78350f; }
-    .caption { font-size: 10px; font-style: italic; fill: #6b7280; }
+    .desc { font-size: 10.5px; fill: #CBD5E1; }
+    .core-label { font-size: 13px; font-weight: 700; fill: #FDBA74; }
+    .core-sub { font-size: 10px; font-weight: 600; fill: #FBBF24; }
+    .caption { font-size: 10px; font-style: italic; fill: #94A3B8; }
   </style>
 
   <text x="400" y="28" text-anchor="middle" class="title">The Convergence Frame — IRM × DLP × DSPM</text>
@@ -961,38 +961,38 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 
   <!-- Three overlapping circles (Venn-style) -->
   <!-- IRM (top, blue) -->
-  <circle cx="400" cy="180" r="125" fill="#dbeafe" stroke="#1e40af" stroke-width="2" opacity="0.55"/>
-  <text x="400" y="115" text-anchor="middle" class="circle-label" fill="#1e3a8a">IRM</text>
+  <circle cx="400" cy="180" r="125" fill="#1e3a5f" stroke="#60A5FA" stroke-width="2" opacity="0.55"/>
+  <text x="400" y="115" text-anchor="middle" class="circle-label" fill="#93C5FD">IRM</text>
   <text x="400" y="132" text-anchor="middle" class="desc">Insider Risk</text>
   <text x="400" y="146" text-anchor="middle" class="desc">Subject = human actor</text>
 
   <!-- DLP (lower-left, amber) -->
-  <circle cx="310" cy="320" r="125" fill="#fde68a" stroke="#a16207" stroke-width="2" opacity="0.55"/>
-  <text x="240" y="380" text-anchor="middle" class="circle-label" fill="#78350f">DLP</text>
+  <circle cx="310" cy="320" r="125" fill="#3a2e0a" stroke="#FBBF24" stroke-width="2" opacity="0.55"/>
+  <text x="240" y="380" text-anchor="middle" class="circle-label" fill="#FBBF24">DLP</text>
   <text x="240" y="397" text-anchor="middle" class="desc">Data Loss Prevention</text>
   <text x="240" y="411" text-anchor="middle" class="desc">Subject = channel egress</text>
 
   <!-- DSPM (lower-right, orange) -->
-  <circle cx="490" cy="320" r="125" fill="#fed7aa" stroke="#92400E" stroke-width="2" opacity="0.55"/>
-  <text x="560" y="380" text-anchor="middle" class="circle-label" fill="#7c2d12">DSPM</text>
+  <circle cx="490" cy="320" r="125" fill="#3a2410" stroke="#FB923C" stroke-width="2" opacity="0.55"/>
+  <text x="560" y="380" text-anchor="middle" class="circle-label" fill="#FDBA74">DSPM</text>
   <text x="560" y="397" text-anchor="middle" class="desc">Data Security Posture</text>
   <text x="560" y="411" text-anchor="middle" class="desc">Subject = data state</text>
 
   <!-- Convergence core (where all three overlap) -->
-  <ellipse cx="400" cy="265" rx="55" ry="38" fill="#92400E" stroke="#451a03" stroke-width="2" opacity="0.9"/>
+  <ellipse cx="400" cy="265" rx="55" ry="38" fill="#92400E" stroke="#FB923C" stroke-width="2" opacity="0.9"/>
   <text x="400" y="261" text-anchor="middle" class="core-label" fill="#fef3c7">DATA-LAYER</text>
   <text x="400" y="278" text-anchor="middle" class="core-label" fill="#fef3c7">SUBSTRATE</text>
 
   <!-- Three driving forces (in margins) -->
-  <text x="115" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 1</text>
+  <text x="115" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 1</text>
   <text x="115" y="206" text-anchor="middle" class="desc">Agentic AI</text>
   <text x="115" y="220" text-anchor="middle" class="desc">collapses subject</text>
 
-  <text x="685" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 2</text>
+  <text x="685" y="190" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 2</text>
   <text x="685" y="206" text-anchor="middle" class="desc">Platform-economics</text>
   <text x="685" y="220" text-anchor="middle" class="desc">gravity (M&amp;A)</text>
 
-  <text x="400" y="465" text-anchor="middle" class="desc" font-weight="700" fill="#374151">FORCE 3</text>
+  <text x="400" y="465" text-anchor="middle" class="desc" font-weight="700" fill="#CBD5E1">FORCE 3</text>
   <text x="400" y="479" text-anchor="middle" class="desc">CISO budget fatigue — running out of tool lines</text>
 
   <!-- Caption -->
@@ -1138,22 +1138,22 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
 <svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
   <style>
-    .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
-    .subtitle { font-size: 12px; fill: #6b7280; }
-    .front-box { fill: #fef3c7; stroke: #d97706; stroke-width: 1.8; }
-    .front-label { font-size: 12px; font-weight: 700; fill: #78350f; }
-    .module-label { font-size: 11px; font-weight: 600; fill: #1f2937; }
-    .module-tier { font-size: 9.5px; fill: #4b5563; font-style: italic; }
-    .stack-label { font-size: 14px; font-weight: 700; fill: #b91c1c; }
-    .question-label { font-size: 11px; font-weight: 700; fill: #6b21a8; }
-    .test-box { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
-    .test-label { font-size: 11px; font-weight: 700; fill: #78350f; }
-    .test-text { font-size: 10px; fill: #451a03; }
-    .arrow { stroke: #4b5563; stroke-width: 1.8; fill: none; marker-end: url(#arr); }
+    .title { font-size: 17px; font-weight: 700; fill: #F1F5F9; }
+    .subtitle { font-size: 12px; fill: #CBD5E1; }
+    .front-box { fill: #332810; stroke: #FBBF24; stroke-width: 1.8; }
+    .front-label { font-size: 12px; font-weight: 700; fill: #FBBF24; }
+    .module-label { font-size: 11px; font-weight: 600; fill: #E2E8F0; }
+    .module-tier { font-size: 9.5px; fill: #CBD5E1; font-style: italic; }
+    .stack-label { font-size: 14px; font-weight: 700; fill: #FCA5A5; }
+    .question-label { font-size: 11px; font-weight: 700; fill: #C4B5FD; }
+    .test-box { fill: #2a2410; stroke: #FBBF24; stroke-width: 2; }
+    .test-label { font-size: 11px; font-weight: 700; fill: #FBBF24; }
+    .test-text { font-size: 10px; fill: #FBBF24; }
+    .arrow { stroke: #64748B; stroke-width: 1.8; fill: none; marker-end: url(#arr); }
   </style>
   <defs>
     <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
-      <path d="M0,0 L9,4 L0,8 z" fill="#4b5563"/>
+      <path d="M0,0 L9,4 L0,8 z" fill="#64748B"/>
     </marker>
   </defs>
 
@@ -1188,7 +1188,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <line x1="230" y1="325" x2="350" y2="255" class="arrow"/>
 
   <!-- Stack box (center-right) -->
-  <rect x="355" y="175" width="220" height="105" fill="#fee2e2" stroke="#b91c1c" stroke-width="2.5" rx="5"/>
+  <rect x="355" y="175" width="220" height="105" fill="#3a1414" stroke="#F87171" stroke-width="2.5" rx="5"/>
   <text x="465" y="200" text-anchor="middle" class="stack-label">"Thoma Bravo</text>
   <text x="465" y="220" text-anchor="middle" class="stack-label">Data Security Stack"</text>
   <text x="465" y="245" text-anchor="middle" class="module-label">3 fronts × 1 owner</text>
@@ -1196,7 +1196,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <text x="465" y="275" text-anchor="middle" class="module-tier">over 12 years</text>
 
   <!-- The question (right side) -->
-  <rect x="600" y="160" width="170" height="135" fill="#f3e8ff" stroke="#6b21a8" stroke-width="1.8" rx="5"/>
+  <rect x="600" y="160" width="170" height="135" fill="#2a1a3a" stroke="#C084FC" stroke-width="1.8" rx="5"/>
   <text x="685" y="183" text-anchor="middle" class="question-label">THE QUESTION</text>
   <text x="685" y="208" text-anchor="middle" class="module-label">Platform or</text>
   <text x="685" y="225" text-anchor="middle" class="module-label">Portfolio?</text>
@@ -1209,9 +1209,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <line x1="575" y1="225" x2="600" y2="225" class="arrow"/>
 
   <!-- Implication strip -->
-  <rect x="50" y="385" width="720" height="40" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" rx="4"/>
-  <text x="410" y="405" text-anchor="middle" class="module-label" fill="#78350f">My read: Proofpoint is the cross-front presence anomaly. The H2 2026 IPO S-1 disclosure is the</text>
-  <text x="410" y="419" text-anchor="middle" class="module-tier" fill="#78350f">single best public signal of whether the 3-module surface is one platform or three SKUs sharing a logo.</text>
+  <rect x="50" y="385" width="720" height="40" fill="#332810" stroke="#FBBF24" stroke-width="1.5" rx="4"/>
+  <text x="410" y="405" text-anchor="middle" class="module-label" fill="#FBBF24">My read: Proofpoint is the cross-front presence anomaly. The H2 2026 IPO S-1 disclosure is the</text>
+  <text x="410" y="419" text-anchor="middle" class="module-tier" fill="#FBBF24">single best public signal of whether the 3-module surface is one platform or three SKUs sharing a logo.</text>
 
   <!-- Falsifiable-test footer -->
   <rect x="80" y="440" width="640" height="50" class="test-box" rx="4"/>
@@ -1227,17 +1227,17 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <div style="max-width: 720px; margin: var(--space-5) auto; padding: var(--space-4); background: var(--surface); border-radius: 8px;"><figure class="inline-diagram" style="text-align:center;margin:18pt 0;page-break-inside:avoid;">
 <svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Manrope, system-ui, sans-serif">
   <style>
-    .title { font-size: 17px; font-weight: 700; fill: #1f2937; }
-    .subtitle { font-size: 12px; fill: #6b7280; }
-    .front-label { font-size: 12px; font-weight: 700; fill: #1e3a8a; }
-    .vendor-label { font-size: 11px; font-weight: 700; fill: #1f2937; }
-    .articulation { font-size: 9.5px; fill: #4b5563; font-style: italic; }
-    .converge-label { font-size: 14px; font-weight: 700; fill: #92400E; }
-    .primitive { font-size: 11px; font-weight: 600; fill: #78350f; }
-    .test-box { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; }
-    .test-label { font-size: 11px; font-weight: 700; fill: #78350f; }
-    .test-text { font-size: 10px; fill: #451a03; }
-    .arrow-strong { stroke: #92400E; stroke-width: 2.5; fill: none; marker-end: url(#arr2); }
+    .title { font-size: 17px; font-weight: 700; fill: #F1F5F9; }
+    .subtitle { font-size: 12px; fill: #CBD5E1; }
+    .front-label { font-size: 12px; font-weight: 700; fill: #93C5FD; }
+    .vendor-label { font-size: 11px; font-weight: 700; fill: #E2E8F0; }
+    .articulation { font-size: 9.5px; fill: #CBD5E1; font-style: italic; }
+    .converge-label { font-size: 14px; font-weight: 700; fill: #FBBF24; }
+    .primitive { font-size: 11px; font-weight: 600; fill: #FBBF24; }
+    .test-box { fill: #2a2410; stroke: #FBBF24; stroke-width: 2; }
+    .test-label { font-size: 11px; font-weight: 700; fill: #FBBF24; }
+    .test-text { font-size: 10px; fill: #FBBF24; }
+    .arrow-strong { stroke: #FB923C; stroke-width: 2.5; fill: none; marker-end: url(#arr2); }
   </style>
   <defs>
     <marker id="arr2" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
@@ -1249,7 +1249,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <text x="400" y="48" text-anchor="middle" class="subtitle">Three category-specific articulations converging on the same architectural primitive</text>
 
   <!-- IRM articulation (left) -->
-  <rect x="35" y="80" width="220" height="105" fill="#dbeafe" stroke="#1e40af" stroke-width="1.5" rx="5"/>
+  <rect x="35" y="80" width="220" height="105" fill="#1e3a5f" stroke="#60A5FA" stroke-width="1.5" rx="5"/>
   <text x="145" y="100" text-anchor="middle" class="front-label">IRM Front 1</text>
   <text x="145" y="120" text-anchor="middle" class="vendor-label">Microsoft "Risky Agents"</text>
   <text x="145" y="138" text-anchor="middle" class="articulation">Insider Risk Management</text>
@@ -1258,8 +1258,8 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <text x="145" y="180" text-anchor="middle" class="articulation">into the IRM policy schema.</text>
 
   <!-- DLP articulation (center) -->
-  <rect x="290" y="80" width="220" height="105" fill="#fde68a" stroke="#a16207" stroke-width="1.5" rx="5"/>
-  <text x="400" y="100" text-anchor="middle" class="front-label" fill="#78350f">DLP Front 2</text>
+  <rect x="290" y="80" width="220" height="105" fill="#3a2e0a" stroke="#FBBF24" stroke-width="1.5" rx="5"/>
+  <text x="400" y="100" text-anchor="middle" class="front-label" fill="#FBBF24">DLP Front 2</text>
   <text x="400" y="120" text-anchor="middle" class="vendor-label">Strac four-surface AI DLP</text>
   <text x="400" y="138" text-anchor="middle" class="articulation">Inspection of LLM prompts,</text>
   <text x="400" y="152" text-anchor="middle" class="articulation">RAG retrievals, vector stores,</text>
@@ -1267,8 +1267,8 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <text x="400" y="180" text-anchor="middle" class="articulation">at the data-touch boundary.</text>
 
   <!-- DSPM articulation (right) -->
-  <rect x="545" y="80" width="220" height="105" fill="#fed7aa" stroke="#92400E" stroke-width="1.5" rx="5"/>
-  <text x="655" y="100" text-anchor="middle" class="front-label" fill="#7c2d12">DSPM Front 3</text>
+  <rect x="545" y="80" width="220" height="105" fill="#3a2410" stroke="#FB923C" stroke-width="1.5" rx="5"/>
+  <text x="655" y="100" text-anchor="middle" class="front-label" fill="#FDBA74">DSPM Front 3</text>
   <text x="655" y="120" text-anchor="middle" class="vendor-label">Veeam DataAI Command</text>
   <text x="655" y="138" text-anchor="middle" class="articulation">"Data governed at the source,</text>
   <text x="655" y="152" text-anchor="middle" class="articulation">not at the agent — known</text>
@@ -1281,15 +1281,15 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <line x1="655" y1="185" x2="450" y2="245" class="arrow-strong"/>
 
   <!-- Architectural primitive (center, large) -->
-  <rect x="200" y="250" width="400" height="100" fill="#fed7aa" stroke="#92400E" stroke-width="3" rx="6"/>
+  <rect x="200" y="250" width="400" height="100" fill="#3a2410" stroke="#FB923C" stroke-width="3" rx="6"/>
   <text x="400" y="275" text-anchor="middle" class="converge-label">ENFORCEMENT AT THE DATA SOURCE</text>
   <text x="400" y="298" text-anchor="middle" class="primitive">Single primitive across three categories:</text>
   <text x="400" y="316" text-anchor="middle" class="primitive">policy + classification + inspection at the data-touch boundary,</text>
   <text x="400" y="332" text-anchor="middle" class="primitive">independent of the actor (human, app, or agent) making the access.</text>
 
   <!-- Driving force -->
-  <text x="400" y="375" text-anchor="middle" class="primitive" fill="#374151" font-style="italic">Driver: ~80:1 machine-to-human identity ratio (per PANW / CyberArk close)</text>
-  <text x="400" y="390" text-anchor="middle" class="primitive" fill="#374151" font-style="italic">— agent runtimes are too many and too autonomous to control reliably at the agent layer.</text>
+  <text x="400" y="375" text-anchor="middle" class="primitive" fill="#CBD5E1" font-style="italic">Driver: ~80:1 machine-to-human identity ratio (per PANW / CyberArk close)</text>
+  <text x="400" y="390" text-anchor="middle" class="primitive" fill="#CBD5E1" font-style="italic">— agent runtimes are too many and too autonomous to control reliably at the agent layer.</text>
 
   <!-- Falsifiable-test footer -->
   <rect x="80" y="410" width="640" height="65" class="test-box" rx="4"/>
