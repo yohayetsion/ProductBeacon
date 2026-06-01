@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: Scaling as Design Problem — Vision to Value</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ---- Vision to Value digital edition (book-reader additions) ---- */
+.v2v-figure { margin: var(--space-8) 0; text-align: center; }
+.v2v-figure img { max-width: 100%; height: auto; background: #fff; border-radius: var(--border-radius-sm); padding: var(--space-4); border: 1px solid var(--border); }
+.v2v-figure figcaption { color: var(--muted); font-size: 0.875rem; margin-top: var(--space-3); line-height: 1.5; max-width: 640px; margin-left:auto; margin-right:auto; }
+.v2v-table-wrap { overflow-x: auto; margin: var(--space-6) 0; }
+
+/* Reader shell: contents sidebar + content column */
+.reader-shell { max-width: 1100px; margin: 0 auto; padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-12); display: grid; grid-template-columns: 260px 1fr; gap: var(--space-12); align-items: start; }
+.reader-toc { position: sticky; top: calc(var(--nav-height) + var(--space-6)); max-height: calc(100vh - var(--nav-height) - var(--space-12)); overflow-y: auto; border-right: 1px solid var(--border); padding-right: var(--space-6); }
+.reader-toc h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--space-4); }
+.reader-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+.reader-toc li { margin-bottom: var(--space-2); }
+.reader-toc a { color: var(--secondary); font-size: 0.9rem; line-height: 1.4; text-decoration: none; display: block; padding: 4px 0; }
+.reader-toc a:hover { color: var(--amber); }
+.reader-toc a.current { color: var(--amber); font-weight: 600; }
+.reader-content { min-width: 0; max-width: var(--content-width); }
+.reader-content h1 { font-size: 2.25rem; margin-bottom: var(--space-8); line-height: 1.15; }
+.reader-content p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.reader-content h2 { font-size: 1.6rem; margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--border); color: var(--bright); }
+.reader-content h3 { font-size: 1.2rem; margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--text); }
+.reader-content ul, .reader-content ol { color: var(--secondary); padding-left: var(--space-6); margin-bottom: var(--space-4); line-height: 1.75; }
+.reader-content li { margin-bottom: var(--space-2); }
+.reader-content strong { color: var(--text); }
+.reader-content em { color: var(--text); }
+.reader-pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--border); }
+.reader-pager a { flex: 1; }
+.reader-pager .reader-pager__next { text-align: right; }
+.reader-progress { font-size: 0.8rem; color: var(--muted); margin-bottom: var(--space-6); font-family: var(--font-mono); }
+
+/* Landing-specific */
+.book-hero { padding-top: calc(var(--nav-height) + var(--space-20)); padding-bottom: var(--space-16); }
+.book-hero__series { color: var(--amber); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-4); }
+.book-hero h1 { font-size: 3.25rem; line-height: 1.08; margin-bottom: var(--space-3); }
+.book-hero__subtitle { font-size: 1.4rem; color: var(--secondary); margin-bottom: var(--space-6); }
+.book-hero__thesis { font-size: 1.2rem; color: var(--text); max-width: 680px; line-height: 1.6; margin-bottom: var(--space-8); }
+.book-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-4); }
+.book-blurb { max-width: var(--content-width); margin: 0 auto; }
+.book-blurb p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.book-blurb strong { color: var(--text); }
+.soft-ask { background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius); padding: var(--space-8); margin-top: var(--space-8); }
+.soft-ask h3 { margin-bottom: var(--space-2); }
+.soft-ask p { color: var(--secondary); font-size: 0.95rem; margin-bottom: var(--space-4); }
+.soft-ask form { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.soft-ask input[type=email] { flex: 1; min-width: 220px; background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius-sm); padding: var(--space-3) var(--space-4); color: var(--text); font-family: var(--font-sans); font-size: 1rem; }
+.soft-ask input[type=email]:focus { outline: none; border-color: var(--amber); }
+.cc-note { font-size: 0.85rem; color: var(--muted); margin-top: var(--space-6); line-height: 1.6; }
+.cc-note a { color: var(--secondary); }
+.whats-inside { max-width: var(--content-width); margin: var(--space-16) auto 0; }
+.whats-inside ul { color: var(--secondary); padding-left: var(--space-6); line-height: 1.75; }
+.whats-inside li { margin-bottom: var(--space-3); }
+
+@media (max-width: 860px) {
+  .reader-shell { grid-template-columns: 1fr; gap: var(--space-6); }
+  .reader-toc { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: var(--space-6); }
+  .book-hero h1 { font-size: 2.4rem; }
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="https://productbeacon.agency/" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="https://productbeacon.agency/services.html">Services</a></li>
+      <li><a href="https://productbeacon.agency/insights/">Insights</a></li>
+      <li><a href="../index.html" class="active">The Book</a></li>
+      <li><a href="https://productbeacon.agency/about.html">About</a></li>
+      <li><a href="https://productbeacon.agency/contact.html">Contact</a></li>
+      <li><a href="https://productbeacon.agency/contact.html" class="btn btn--primary btn--lg">Book a Call</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="https://productbeacon.agency/services.html" role="menuitem">Services</a>
+    <a href="https://productbeacon.agency/insights/" role="menuitem">Insights</a>
+    <a href="../index.html" role="menuitem">The Book</a>
+    <a href="https://productbeacon.agency/about.html" role="menuitem">About</a>
+    <a href="https://productbeacon.agency/contact.html" role="menuitem">Contact</a>
+    <a href="https://productbeacon.agency/contact.html" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Book a Call</a>
+  </div>
+</nav>
+<div class="reader-shell">
+  <aside class="reader-toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="preface.html">Preface</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="chapter-1-end-to-end-product-organizations.html">Chapter 1: End-to-end Product Organizations</a></li>
+<li><a href="chapter-2-the-strategic-process-and-operational-focus-areas.html">Chapter 2: The Strategic Process and Operational Focus Areas</a></li>
+<li><a href="chapter-3-structure-and-scope.html">Chapter 3: Structure and Scope</a></li>
+<li><a href="chapter-4-decision-interfaces-and-the-architecture.html">Chapter 4: Decision Interfaces and the Architecture</a></li>
+<li><a href="chapter-5-scaling-as-design-problem.html" class="current">Chapter 5: Scaling as Design Problem</a></li>
+<li><a href="chapter-6-people-at-scale.html">Chapter 6: People at Scale</a></li>
+<li><a href="chapter-7-the-executive-altitude.html">Chapter 7: The Executive Altitude</a></li>
+<li><a href="chapter-8-the-eight-operating-principles.html">Chapter 8: The Eight Operating Principles</a></li>
+<li><a href="conclusion-from-vision-to-value.html">Conclusion: From Vision to Value</a></li>
+<li><a href="appendix-a-installation-guide-a-first-90-days-sequence.html">Appendix A: Installation Guide - A First-90-Days Sequence</a></li>
+<li><a href="appendix-b-decision-system-blueprints-and-economic-artifacts-templates.html">Appendix B: Decision System Blueprints and Economic Artifacts (Templates)</a></li>
+<li><a href="appendix-c-function-specific-decision-interface-charters.html">Appendix C: Function-Specific Decision Interface Charters</a></li>
+<li><a href="appendix-d-glossary.html">Appendix D: Glossary</a></li>
+<li><a href="appendix-e-further-resources.html">Appendix E: Further Resources</a></li>
+
+    </ol>
+  </aside>
+  <article class="reader-content">
+    <p class="reader-progress">Vision to Value &middot; 7 / 16</p>
+    <h1>Chapter 5: Scaling as Design Problem</h1>
+    <h2 id="peer-dynamics-scale-with-altitude">Peer Dynamics Scale with Altitude</h2>
+<p>Scaling is not a phase the product organization passes through. It is a continuous design problem that reshapes the decision system every time altitude distance between decisions widens. Early-stage organizations win through informal alignment, heroic ownership, and fast iteration. At scale those same behaviors break the system unevenly: coordination costs rise faster at the Director altitude than at the executive altitude, peer rosters expand faster at lower altitudes than at higher ones, and the organization can ship more while learning less. This chapter is how senior leaders adapt the operating model as scale changes the work at every altitude, not just at the top. It opens with how peer dynamics scale with altitude, because that inversion is the scaling problem most often misdiagnosed as a coordination problem, and closes with the design moves that keep the system coherent as it grows.</p>
+<p>Peer dynamics are not a C-suite phenomenon. They intensify as altitude drops. The CPO who runs five or six peer interfaces at the executive table is running the lightest peer load in the product organization. The VP Product two altitudes below runs roughly three times that count. The Director of PM two altitudes below the VP runs ten times that count. The larger the organization, the steeper this inversion. In a scaled company the CPO has fewer peers than the VP has, and the VP has fewer peers than the Director has. Peer-contract design therefore matters most at the altitudes the book might appear to address least.</p>
+<p>The same Charter discipline operates at every altitude. A CPO running a Commitment Charter with a CRO is running the same machine as a VP Product running a Launch Readiness Charter with a VP Marketing and a VP Sales, and the same machine a Director of PM runs with a Director of Engineering and a Director of PMM on a platform intake Charter. Altitude changes three things and only three things: the decision stakes, the counterparty roster, and the cadence intensity. The shape of the machine does not change. The Charter names a decision, names the owner, names the counterparties, defines the cadence, defines the escalation. The template is altitude-agnostic. A Director&#x27;s Charter carries more line-items than a CPO&#x27;s, because the Director&#x27;s peer count is larger. Same machine, more rows.</p>
+<p>The peer counts illustrate the inversion without fixing it to any particular org. In a very large company, a CxO typically deals with five or six direct peers at the executive table. A VP under that CxO deals with roughly fifteen to twenty horizontal peers across functions. A Director at the same company deals with fifty to a hundred peer Directors plus the VP tier plus, indirectly, an executive tier they rarely work with. Peer dynamics are most intense, not least intense, at the Director altitude.</p>
+<p>The peer-count inversion is the Three Tiers framing in the peer dimension. At Tier 1, the CPO deals with five or six C-suite peers on a stable cadence. At Tier 2, a VP Product is inside a room of fifteen to twenty VP-tier peers, most of them intermittent. At Tier 3, a Director of PM operates inside fifty to a hundred Director-tier peers plus the fifteen to twenty VPs plus the C-suite they will rarely meet directly. Altitude compresses the peer roster as it rises and expands it as it falls, and the decision-system design has to absorb the inversion explicitly.</p>
+<p>I lived this inversion in the wrong direction before I understood it. I came up through a global enterprise software company, from PM to Director to VP inside the same organization, and every altitude rewired the peer system on me in a way I initially misread. As a PM, my peer surface was the handful of people inside my product line and two or three engineering leads. When I moved into the Director role, the peer surface did not just grow, it changed shape. I suddenly had dozens of Director peers across platform teams, data teams, adjacent product lines, and the go-to-market organization, most of whom I had never needed to coordinate with before. I read the volume as noise and tried to triage my way through it. The peers read me, correctly, as a Director who had not yet noticed that his job was now the peer system itself. It took me most of a year to stop treating peer meetings as a tax on my real work and start treating the peer roster as the work.</p>
+<p>The move from Director to VP was the inversion I was least prepared for. My peer count dropped by more than half, from a Director roster in the fifties to a VP roster in the teens, and I mistook the thinner roster for a lighter load. It was not. Each VP peer carried a function I could no longer route around: sales, marketing, customer success, engineering across business units, operations, and finance. Fewer peers, higher stakes, slower cadence, and no ability to absorb a bad interface by working harder. The discipline I had built as a Director, coordination by volume, did not scale down. The discipline the VP altitude needed, coordination by stakes and cadence, I did not yet have.</p>
+<p>Accountability without authority is the default condition at every altitude, not a special case at one. A VP Product running a portfolio tradeoff across business units is accountable for tradeoff coherence without line authority over the unit heads. A CPO running a GTM commitment across Sales, Marketing, and Customer Success has the same structural position at a different altitude. The person making a given decision personally varies by decision and by altitude. The person accountable for the integrity of the decision system rarely holds full authority over the decisions it produces. This is the structural condition of product leadership, not the edge case. The Charter exists because this condition is the default.</p>
+<p>The executive interfaces in Chapter 7 are the highest-altitude instance of this cross-altitude discipline. Directors run it with their Director peers. VPs run it with VP peers. CPOs run it with C-suite peers. The counterparties change. The Charter does not. The Product Operations Charter in Appendix C is the cadence-and-record instance that keeps the machine legible as peer rosters expand at lower altitudes; it governs which forums live and which die, not what the live ones decide.</p>
+<h2 id="how-scale-changes-the-leadership-problem">How Scale Changes the Leadership Problem</h2>
+<p>At small scale, leadership is about direction and momentum. At scale, it is about coherence. Four predictable shifts occur as organizations grow:</p>
+<ul><li>Decision latency increases</li><li>Ownership boundaries blur</li><li>Local optimizations multiply</li><li>Communication paths fragment</li></ul>
+<p>These are the signs that informal systems have reached their limit. The outcome is rarely slower delivery; the outcome is weaker learning. Teams execute fast inside local context while drifting from the strategy that justified the work.</p>
+<p>As the Introduction set out, AI accelerates execution and raises the bar for decision systems. In a scaling organization, that bar sits inside the Product Leadership Team (PLT). The cost of producing &quot;more work&quot; drops sharply: prototyping, analysis, copy, even chunks of engineering output. That increases the need for this decision system, not reduces it. When execution gets cheaper, the limiting factor becomes decision quality. Without tighter decision interfaces, teams ship faster inside local context while drifting faster at the portfolio level. AI lowers the cost per bet and raises the importance of portfolio discipline, because a portfolio running more parallel bets exposes more variance, more coordination surface, and more unmeasured opportunity cost.</p>
+<p>Use AI to strengthen the loop, not bypass it: AI drafts options and clarifies tradeoffs; the decision owner still owns intent. AI summarizes evidence and disagreement; it does not manufacture alignment. AI flags outcome anomalies early; leaders still perform the re-decision.</p>
+<p><em>Vignette (final): As teams multiplied, the same unresolved decision reappeared across portfolios. Scale did not break the system; it revealed what was never designed to learn.</em></p>
+<p>Scaling failures rarely come from one bad decision. They come from structural debt that compounds quietly.</p>
+<h2 id="scaling-is-a-design-problem-not-a-capacity-problem">Scaling Is a Design Problem, Not a Capacity Problem</h2>
+<p>The reflex is to add capacity: more teams, more managers, more process. Capacity helps only when the design is sound. A common mistake is over-rotating into reorganization or governance changes before decision failures are clearly diagnosed.</p>
+<p><em><strong>The Headcount Trap</strong></em><em>: A company doubled PM headcount to &quot;go faster.&quot; Output increased, but priorities diverged. Teams duplicated work across product lines. Decisions got slower because more people meant more stakeholders.</em></p>
+<p><em>The fix was design, not capacity. Three explicit interfaces were introduced: portfolio sequencing (who decides cross-team tradeoffs), platform intake (how shared work is prioritized), and launch readiness (when something is ready to ship). Once these had owners and cadences, speed improved, because coordination became intentional.</em></p>
+<p>If decision quality, ownership, or learning loops are unclear, structural change amplifies confusion. Reorganizations are high-cost interventions; treat them as a last move, not a reflex. Effective scaling starts with design questions: where should decisions live at this stage, what must remain centralized vs. decentralized, which interfaces must be explicit rather than assumed, which outcomes should be team-owned vs. portfolio-coordinated. When these go unanswered, headcount increases the surface area of misalignment: more output, less impact.</p>
+<h2 id="the-three-structural-moves-that-make-scale-work">The Three Structural Moves That Make Scale Work</h2>
+<p>Most scaling patterns are variants of three moves. The details vary by company; the underlying logic stays consistent.</p>
+<h3>Move 1: Evolve Leadership From Hands On to System Design</h3>
+<p>Early on, product leadership is deeply embedded in decisions, user feedback, and product details: the system is small enough for that to work. At scale, the role shifts from making decisions to designing how decisions are made and outcomes are governed.</p>
+<p>The leader&#x27;s work evolves through three modes: <strong>hands-on</strong> (engaging users and making design tweaks), <strong>team coordination</strong> (balancing involvement and delegation), and <strong>strategic guidance</strong> (directing multiple teams with vision and intent). What changes is not seniority; it is the source of leverage. Leaders who fail to make this transition become the bottleneck. Those who make it let the organization compound without them.</p>
+<p><strong>A VP-altitude cadence, concretely.</strong> A VP Product running a scaled portfolio carries a standing quarterly roadmap forum with the VP Engineering. The forum is named in both leaders&#x27; calendars as a Charter, not a status update. Its decision class is roadmap sequencing for the next two quarters, with one re-decision trigger (capacity evidence) and one escalation path (unresolved tradeoffs rise to the CPO-CTO interface within the same cycle). Required inputs are the current bet ledger from Business Operations, the capacity envelope from Engineering, and the portfolio-evidence read from Value Realization. The forum runs ninety minutes and produces a written decision record every cycle. The cadence is quarterly because the scope-locking decisions it carries are quarterly; attempting to run the same Charter weekly either reduces it to status or exhausts the counterparty. A cadence well-matched to the decision class it serves is what makes the cadence work; a misfit produces the governance-theater failure mode this book names elsewhere.</p>
+<h3>Move 2: Introduce a Portfolio Layer Without Creating Bureaucracy</h3>
+<p>A single team can treat prioritization as a team-level exercise. At scale, prioritization becomes a portfolio problem that needs a mechanism for tradeoffs across domains and product lines, platform vs. feature investment, time horizons, and customer segments with competing needs.</p>
+<p>The portfolio layer does three things and only three: maintain coherence between strategy and team execution, make cross-team tradeoffs explicit, and protect teams from thrash by stabilizing priorities for a meaningful window. As a gatekeeper for day-to-day choices, it increases latency; absent, teams make portfolio decisions without authority.</p>
+<p><em>Vignette: after a messy flagship launch, leadership introduced a portfolio &quot;process&quot; to reduce thrash. A weekly steering meeting became mandatory for every initiative. Teams arrived with decks optimized for approval, not truth. Decisions moved upward even when the tradeoffs were local. The same launch reappeared every week as a special case: pricing exceptions, onboarding gaps, platform asks. The meeting grew to twelve people; nothing was truly decided in the room. Cycle time slowed, but risk did not fall. The org replaced decision rights with choreography. The redesign was simple: explicitly separate portfolio decisions from team decisions.</em></p>
+<p><em>Portfolio forums decide:</em></p>
+<ul><li><em>Investment boundaries and sequencing across bets</em></li><li><em>Stop / continue / re-scope decisions</em></li><li><em>Cross-team or cross-market tradeoffs</em></li><li><em>Changes to strategic intent or success criteria</em></li></ul>
+<p><em>Teams decide:</em></p>
+<ul><li><em>How to execute within agreed boundaries</em></li><li><em>Discovery, delivery, and iteration choices</em></li><li><em>Day-to-day prioritization inside a committed bet</em></li></ul>
+<p><em>When portfolio forums drift into execution choices, bureaucracy emerges.</em></p>
+<p><em>When teams make portfolio tradeoffs, coherence breaks.</em></p>
+<p><em>Portfolio became a tradeoff engine again, not an approval ritual.</em></p>
+<h3>Move 3: Separate Product Teams, Platform Teams, and a Product Leadership Group</h3>
+<p>At scale, differentiate the teams that ship user-facing value from the teams that enable others through shared capabilities, and carry a leadership group that maintains coherence across both.</p>
+<p>Diagram: A simple scalable structure</p>
+<p><strong>Product Teams</strong> are vertical teams with dedicated roles; <strong>Platform Teams</strong> provide shared services; the <strong>Leadership Group</strong> aligns strategy across all products. This is less about reporting lines and more about decision placement. Product teams own outcomes in a defined problem space; platform teams own enabling capabilities with clear service boundaries; the leadership group owns portfolio tradeoffs, operating-system design, and cross-functional alignment. Scaling succeeds when these operate as a single system, not three competing power centers.</p>
+<h2 id="the-product-leadership-team-as-the-scaling-engine">The Product Leadership Team as the Scaling Engine</h2>
+<p>As the org scales, the PLT becomes the primary unit of coherence. Seated at director altitude per the Chapter 3 specification — PM-Director, Director of Product Marketing, BD Director, Competitive Intelligence (CI) Director, Business Operations Director, Product Operations Director, Customer Success / Value Realization Director — the PLT is where the day-to-day decision system holds together at the altitude where scale actually compounds. The VP Product chairs the executive-altitude counterpart forum; the PLT runs one altitude below, where the decision traffic lives. Their job is not to review roadmaps; it is to make the organization more decision-capable. A high-performing PLT:</p>
+<ul><li>Sets strategy boundaries and investment intent</li><li>Defines decision rules, escalation thresholds, and what must be written down</li><li>Runs the portfolio process that forces tradeoffs instead of hiding them</li><li>Maintains consistent standards for outcomes, discovery quality, and launch readiness</li><li>Partners with engineering, design, and GTM leaders to keep decisions integrated</li></ul>
+<p>When this team is weak, the organization looks busy and fragmented.</p>
+<h3>Incentives Shape the Decision System, Or Deform It</h3>
+<p>Decision systems are reinforced or undermined by incentives: the design of scorecards and planning cycles is a core input to decision quality. Four deformations are common enough to name:</p>
+<ul><li><strong>Quarterly OKRs harden hypotheses into targets to defend.</strong> Teams sandbag commitments, then game definitions to protect attainment. The bet that was a hypothesis becomes a forecast. Learning stalls because no one wants to be the team whose OKR &quot;missed,&quot; even when the correct decision was to stop the bet.</li><li><strong>Annual planning locks bets before the evidence does.</strong> Re-deciding mid-year feels like failure. Leaders who change direction on new evidence are penalized at review. The organization defends plans rather than revises them.</li><li><strong>Functional scorecards push tradeoffs into politics.</strong> Sales optimizes for quota, CS for NPS, Engineering for uptime, and tradeoffs surface as negotiation rather than interface decisions. Politics becomes the coordination mechanism.</li><li><strong>Compensation plans reward local optimization by default.</strong> Unless bonus structure, review criteria, and promotion decisions explicitly reward shared outcomes, no process design overcomes the incentive gradient.</li></ul>
+<p><strong>Design implication:</strong> tie incentives to shared outcomes, and explicitly define when re-decision is expected and rewarded, not tolerated. A CFO or CRO should ask: <em>&quot;What does our compensation plan pay people to do when a bet&#x27;s assumptions invalidate: defend, or revise?&quot;</em> If the honest answer is &quot;defend,&quot; the decision system will not produce the outcomes this book describes.</p>
+<p>A PLT at scale rarely holds one bet at a time. It holds many, at different stages of the decision pipeline, each competing for the finite resource of leadership attention. This is the classic concurrency problem applied to decisions. The portfolio layer is closer to a priority queue than a scheduler; what it lacks is an explicit rule for which bet gets attention when two compete. The standing rule: re-decision triggers beat roadmap reviews; live customer escalations beat both; anything without a named owner and cadence gets no leadership time. In its absence, the loudest bet wins and the most important waits.</p>
+<h2 id="the-interfaces-that-usually-break-first">The Interfaces That Usually Break First</h2>
+<p>Scaling pain rarely starts inside teams. It starts between teams.</p>
+<p><strong>Interface failure story (the cost of an unclear launch interface):</strong> Project Orion &quot;launched on time&quot; after a green meeting, but the interface was never designed. PMM shipped decks, CS wrote a FAQ, Product marked the checklist complete; pricing pages were inconsistent and onboarding readiness was assumed. Within two weeks, Sales invented custom discount structures, CS built manual onboarding spreadsheets, and the platform team absorbed emergency changes. Product lost the learning window because &quot;success&quot; was never a shared outcome. The downstream rework created more drag than a two-week slip would have.</p>
+<p><em>Read from the Product Marketing seat, none of these moves are neutral. Sales &quot;inventing&quot; discount structures is PMM&#x27;s pricing gap becoming Sales&#x27;s problem. CS &quot;building&quot; manual spreadsheets is the enablement readiness PMM did not defend becoming Customer Success&#x27;s unpaid second job. Platform &quot;absorbing&quot; emergency changes is the launch tier classification that never happened becoming Engineering&#x27;s cost. The verb &quot;invented&quot; is the tell: Sales was not careless; Sales was left without tools.</em></p>
+<p>Three interfaces break most often.</p>
+<p><strong>Interface 1: Product and Platform.</strong> <em>Failure mode:</em> platform becomes a bottleneck, product teams build around it, or both. <em>Design:</em> a clear platform charter with service boundaries and explicit prioritization rules; a platform roadmap treated like a product roadmap (customers, outcomes, feedback loops); a joint planning ritual where tradeoffs are negotiated before commitments.</p>
+<p><strong>Interface 2: Product and Go-to-market.</strong> <em>Failure mode:</em> GTM is discovered late and patched, or GTM drives commitments product and engineering cannot sustain. <em>Design:</em> a small set of recurring joint decisions, each with a named owner: positioning statement (PMM), messaging architecture (PMM), pricing and packaging (Product + PMM + Finance shared), launch tier classification (PMM: T1 full Charter, T2 managed, T3 quiet), competitive narrative (PMM), sales enablement (PMM + Sales), launch readiness gate (see Chapter 3 Charter), and post-launch re-decision triggers. Scale the mechanism to the launch tier: T1 earns the full Charter; T3 earns the explicit decision not to stand one up. The common failure is the inverse: T3 ceremony on T1 decisions.</p>
+<p><em>Partner-mediated and channel motions are a scope extension of this interface, not a separate one.</em> When the product ships through a partner (co-sell, reseller, OEM, platform owner, systems integrator) or a regulated channel (procurement, compliance, security gates), the joint decisions extend: partner enablement readiness, co-sell alignment, partner-margin constraints, API and integration ownership, procurement and compliance gates, and re-decision triggers tied to partner-roadmap dependencies. The launch readiness gate must include the partner side. The most common partner-launch failure is not disengagement; it is that the partner&#x27;s roadmap or compliance posture shifted and Product did not have a re-decision trigger wired to it. Business Development owns these inputs.</p>
+<p><em>The CS-Sales handoff is the primary cross-executive seam.</em> The interface between Customer Success (product-side) and Sales (CRO-side) is where the CRO-CPO contract actually gets tested, and where most scaled organizations quietly lose expansion revenue. The seam runs along three joints: close-to-onboarding (what Sales committed to, what CS now owns), renewal and expansion (who holds the account, who surfaces expansion, who decides pricing posture), and escalation when a deployed customer is not reaching value (who calls it, who intervenes, who reopens pricing). Design this as a named interface with a charter the CPO and CRO both sign. Without it, the organization ships expansion revenue as a hope, not a decision.</p>
+<p><strong>Interface 3: Strategy and Execution.</strong> <em>Failure mode:</em> teams ship work aligned to local priorities while drifting from strategic intent. <em>Design:</em> a stable strategy artifact connecting investments to outcomes; a portfolio cadence that re-confirms, stops, or redirects bets on evidence; a learning-loop discipline that ensures outcomes flow back into strategy.</p>
+<h2 id="state-persistence-across-leadership-transitions">State Persistence Across Leadership Transitions</h2>
+<p>Every product organization eventually goes through a leadership change: new CPO, reorg, acquisition, reduction in force. The organization carries <em>state</em>: in-flight commitments, open decision records, active charters, bets whose success criteria were set by people no longer in the room. A decision system answers what happens to that state at transition. A style guide does not.</p>
+<p>The failure mode is predictable and expensive. New leadership sweeps existing commitments as &quot;legacy&quot; and restarts formulation from scratch. Six months later the organization has lost institutional memory, reopened settled decisions, and burned credibility with peers who remember agreements the new regime no longer honors. The reverse is equally expensive: new leadership inherits commitments they do not believe in, cannot re-decide without looking disloyal, and manages bets they would not have made.</p>
+<p>The design move is to treat Decision Records and Charters as persistent state that survives leadership. A new leader&#x27;s first formal act is a <strong>state audit</strong>: every active bet, open charter, and armed re-decision trigger, sorted into three buckets: recommitted (with their name attached), re-decided (with documented reasoning), or retired (with learning recorded). Nothing lives in silent limbo.</p>
+<p>A style belongs to the leader. A system belongs to the organization.</p>
+<h2 id="three-scaling-pitfalls-to-watch-for">Three Scaling Pitfalls to Watch For</h2>
+<p><strong>Pitfall 1: The Illusion of Alignment.</strong> Shared vocabulary masks diverging intent. Teams use the same words (strategy, priorities, outcomes) but mean different things. <em>Signal:</em> frequent clarification meetings with no change in execution. <em>Fix:</em> tighten decision boundaries and connect strategy to team-level tradeoffs.</p>
+<p><strong>Pitfall 2: Process as a Substitute for Judgment.</strong> Organizations add process to reduce risk; over time, process replaces judgment rather than supporting it. <em>Signal:</em> teams optimize compliance instead of outcomes. <em>Fix:</em> audit which decisions require rigor and which require speed; remove process that no longer serves learning.</p>
+<p><strong>Pitfall 3: Heroic Leadership at Scale.</strong> Leaders effective through personal involvement struggle to let go. <em>Signal:</em> key decisions stall when specific individuals are unavailable. <em>Fix:</em> design for replaceability. If a decision cannot be made without you, the system is incomplete.</p>
+<h2 id="a-practical-role-map-for-the-scaling-phase">A Practical Role Map for the Scaling Phase</h2>
+<p>Scaling requires role clarity without bureaucracy. The roles below are organized by the architecture the Chapter 3 sidebar names: core functions that formulate strategy, sensor functions that inform the decision system, and execution functions that carry committed strategy into outcomes.</p>
+<p><strong>Product Manager</strong></p>
+<p>Central role, owns outcomes and prioritization. At scale, the PM is the operator of the decision interfaces the leadership system designs: running the weekly synchronization with engineering, closing the design review, reconciling messaging assumptions with the PMM counterpart, and producing the decision records that survive the PM who wrote them.</p>
+<p><strong>Product Marketing Manager</strong></p>
+<p>Owns positioning, messaging architecture, launch narrative, competitive narrative, sales enablement, and the launch readiness gate. Co-owns pricing and packaging with Product and Finance. In some operating models, chairs the launch review rather than participating in one - a configuration choice that follows from where the organization locates launch ownership.</p>
+<p><strong>Business Development Leader</strong></p>
+<p>A distinction first. In many companies &quot;Business Development&quot; names a seat inside Sales, typically non-quota, opening new markets, segments, or partner channels for Sales to close. That is a Sales function with a longer cycle; it is not what this chapter names. The Business Development this book describes is a Product function, reports to the Chief Product Officer, sits at Formulation-altitude, and decides which partnerships, platforms, and channels carry the bets the product commits to. Same name, different seat.</p>
+<p>The third core seat. Owns partnership strategy, make-vs-buy-vs-partner sourcing calls, and ecosystem posture, the three disciplines that shape what the product becomes by bringing partner, channel, and platform intent into Formulation before scope and sequencing harden. The signature pre-build accountability: closing the partnership decisions that the roadmap will rest on, so the bet the organization commits to is the bet that is actually reachable through the path to market it has. The durable artifact is a partnership architecture, the map of which partners own which segments, which integrations carry which commitments, and which re-decision triggers reopen a partnership when the ecosystem moves. In organizations whose strategy depends on external leverage (platform, marketplace, API-first, OEM-embedded, regulated-industry, channel-led), Business Development belongs in core; in organizations selling direct with no partnership dependency, Business Development is thinner or federated, but the discipline still has to exist somewhere.</p>
+<p><strong>Sidebar: Business Development in Product Is Not Sales</strong>  A second failure mode is internal drift: a correctly-placed Product-side seat acquiring Sales-side behavior. Structure looks like Sales (pipeline, deal motion, target-account list), outcomes read like Sales (revenue, deals closed), and Business Development gets judged on Sales metrics. This reproduces the motion-mix failure the CPO-CRO interface is designed to catch, and is how the seat reverts to Sales shape.  Business Development owns three motions Sales does not. First, <strong>partnership-architecture decisions</strong>: which classes of partner the product supports (technology, channel, solution, alliance), with what integration depth, under what economics. This is a portfolio decision. The CPO-CTO interface reads the technical choices; CPO-CRO reads channel; CPO-CFO reads economics; Business Development owns the synthesis.  Second, <strong>market-access through partnership</strong>: entering a geography, vertical, or segment through a partner&#x27;s installed base rather than direct-sales build-out. This is a strategic bet with its own continuation threshold and re-decision triggers, distinct from Sales pipeline.  Third, <strong>negotiated economics</strong> (per Principle 5): revenue share, margin split, co-sell credit, MDF, partner-tier economics. These set the economic shape of partner-mediated revenue, not report on it. Business Development and the CFO co-decide the negotiation, with Business Development accountable for the partnership-architecture spine and the CFO accountable for the margin and capital-allocation floor; the CRO interface receives the output as input.  The consequence: reports to Product, not Sales; compensation tied to portfolio outcomes, not quota; attends the CPO-CRO forum on the same cadence as the CRO.</p>
+<p>Directors of Product Management steward the operating layer for teams of PMs and Group PMs, but they scale by altitude rather than by function, so they are treated in the next chapter alongside the talent ladder rather than among the function seats here. The deeper altitude question, what changes when a high-performing PM is promoted to Director, is the subject of the Hardest Evolution sidebar in Chapter 6.</p>
+<p><strong>Competitive Intelligence Leader</strong></p>
+<p>The market sensor. CI owns three artifacts: a live threat register (competitors, substitutes, entrants scored against the bets they most plausibly move), a cadenced category read (what the category is becoming and on what timeline), and the competitive-context slot in the Decision Interface Charter delivered as evidence, not commentary. CI owns one signature decision: whether a market-evidence re-decision trigger has fired on a named bet. Analyst sensing (what the frame says about category motion) is CI; analyst operations (briefings, narrative alignment) is PMM. Sensor reads gate the portfolio review, not advise it.</p>
+<p><strong>Business Operations Leader (Product)</strong></p>
+<p>The business sensor. Business Operations owns P&amp;L hygiene across regions, booking-data hygiene, GTM push through sales systems so product commitments reach pipeline, and two-way product-initiative-to-business tracking. Also preparing the financial and operational pre-reads that make portfolio and kill decisions defensible. Business Operations and CI are peer sensors pointed at different surfaces; both are gating inputs to the portfolio review.</p>
+<p>The field set that makes a pre-read gate-ready rather than consultative is specified in the Portfolio-Review Financial Pre-Read section of Appendix B <em>(see TOC entry: Appendix B → Portfolio-Review Financial Pre-Read)</em></p>
+<p><strong>Product Operations Leader</strong></p>
+<p>Runs the operating layer the CPO designs. Product Operations owns the operating calendar and cadence contract the PLT operates inside, the telemetry on decision-system machinery (cadence adherence, charter decay, re-decision integrity - signals that predict outcome failure), and the findability of the decision-record and charter archive so Q2 decisions are still live in Q4. A related sub-responsibility is trigger instrumentation: wiring re-decision triggers into the operating calendar so they fire on schedule rather than on escalation. At scale, this is a director or VP role, not a coordinator. The level signals the mandate.</p>
+<p><em>Leaders who confuse &quot;decision system&quot; with &quot;documentation&quot; rebuild rituals from scratch every time a Director or VP leaves. The Charter written in Q1 is unfindable by Q4 not because it was badly written but because no named role owned the archive, indexing, and annual review cadence. The cost is quiet until a leadership transition forces it into view, and the organization discovers it was operating on memorized ritual the whole time.</em></p>
+<p><strong>Design Leader</strong></p>
+<p>Two named contributions, not one. First, interaction-model ownership, the way the product&#x27;s surface resolves the buyer&#x27;s and user&#x27;s questions into action across the entire flow. Second, the user-research input feeding that ownership: jobs-to-be-done evidence, pre-purchase and post-purchase usability, and the empirical basis for the interaction model, held as an input class under Design rather than as a separate decision-altitude seat. The market-sensing half of research belongs to CI; the user-facing half is owned by Design as a contributing function. And a PLT-attendance rule that follows from the first two: Design is a required voice anywhere the promise meets the user. Not &quot;Design attends everything&quot;, a conditional rule that fires on the surface of the decision, not on its seniority.</p>
+<p><em>The design system is a portfolio asset, not an operational convenience.</em> This claim matters because design systems are most often funded as operations (a place where UI components live) and most often judged as operations (is the component library up to date; are the tokens consistent). Funded as operations, the design system is the first asset cut when engineering velocity is constrained. Judged as operations, the design system is evaluated against the wrong metric. Both failure modes compound the same way: the design system degrades faster than the product surface grows, and the product organization inherits a coherence debt that reads in customer-evidence as product-maturity gap. The correction is to treat the design system as a portfolio-altitude asset. The CPO-CTO interface records the design system&#x27;s capital envelope alongside platform investment; the CPO-CMO interface reads the design system as an input to category authority (a mature design system signals product maturity to enterprise buyers); the CPO-COO interface records the design system&#x27;s operational cost against the cost of coherence debt it prevents. Three executive interfaces read the design system, each for a different reason. The Director of Design owns the system&#x27;s technical standard and evolution. The Product Director owns the rate at which product surfaces adopt the system. The Director of Product Marketing reads the system as category-authority evidence. The Chief People Officer reads the system as a signal of the design-engineering hiring market the product organization is positioned against. Four counterparties, one asset, four reads. A design system paid down against a three-year horizon returns in category-authority proof, in evaluator-shortlist signal, in customer-evidence of product maturity, and in design-engineering hiring leverage. None of these returns show up in a quarterly operations review. All of them show up in the executive interfaces Chapter 7 describes. Portfolio assets live at executive altitude; design systems that live at operations altitude degrade at operations cadence.</p>
+<p><strong>Customer Success Leader</strong></p>
+<p>Three contributions. <em>Account-level intervention authority</em>: when an account crosses a health threshold, CS names the intervention and is accountable for the account-level decision, not just for raising the flag. <em>Cost-to-serve envelope</em>: the cost per account becomes a deciding input into pricing, packaging, and post-launch re-decisions. <em>Onboarding-intensity design</em>: how heavy or light the first sixty days must be, given product, segment, and activation economics.</p>
+<p><strong>Value Realization Leader</strong></p>
+<p>Two signature decisions at cohort and portfolio altitude. <em>Expansion-readiness authority</em>: whether a cohort has reached the value the pricing assumed. <em>Bet-invalidation calls at T+6 and T+12</em>: whether evidence supports continuing, re-scoping, or stopping. CS owns the account; Value Realization owns the cohort and portfolio measurement. Neither substitutes for the other.</p>
+<p>Not every company needs all of these immediately. Scale creates capability gaps; your job is to identify which gaps cause the most structural drag, then close them with roles, rituals, or decision rules.</p>
+<h2 id="observing-the-decision-system-itself">Observing the Decision System Itself</h2>
+<p><em>At scale the accountability-without-authority condition named in Chapter 1 operates at every altitude. This chapter&#x27;s scaling moves assume that condition; the observability layer below is one of the design surfaces the condition demands.</em></p>
+<p>Every decision system needs a monitoring layer: not to measure <em>outcomes</em>, which existing cadences handle, but to measure <em>the health of the decision machinery before outcomes arrive</em>. <strong>By the time a bet misses, the decision is six months old and the signal is too late to act on.</strong></p>
+<p>A healthy decision system is observable through five signals. <strong>Decision latency</strong>: the time between a trigger (market evidence, red indicator, customer escalation) and a named owner committing to an outcome-tracked choice. Rising latency means ambiguous ownership or too-slow cadence. <strong>Re-decision frequency</strong>: commitments reopened per quarter. Too low means ignoring outcome evidence; too high means commitments are not commitments. <strong>Charter age distribution</strong>: how long interfaces have run without review. Old charters calcify; new ones haven&#x27;t earned fit. <strong>Share of decisions with measured outcomes</strong>: percentage with explicit leading/mid/lagging indicators. A decision without a measured outcome cannot be learned from. <strong>Bet disposition mix</strong>: ratio of bets renewed, revised, and stopped. A portfolio that only renews has no learning loop; one that only stops is thrashing.</p>
+<p>None of these requires new instrumentation; all five are derivable from existing Decision Records and Charters. The move is to read them as a dashboard, not individual artifacts.</p>
+<p><strong>Who owns which signal.</strong> The set splits along machinery vs. economics. Product Operations owns the mechanical signals: cadence adherence (forums producing written decisions vs. deferrals), charter decay (active charters reviewed this cycle), and re-decision integrity (re-decisions against documented triggers vs. calendar-forced). Business Operations owns the economic signals: share of decisions with measured outcomes, and bet disposition mix. Decision latency is joint: Product Operations owns the measurement mechanics; Business Operations owns the economic interpretation of &quot;acted upon,&quot; because latency that does not close a business loop is different in kind. Commitment drift splits the same way: mechanical half (Product Operations, against the decision record), economic half (Business Operations, against the capital envelope). The partition ensures that when a signal degrades, one function is accountable, not two looking at each other.</p>
+<p>At scale, the same telemetry can catch whether AI is amplifying decision quality or accelerating decision drift. Decision latency, commitment drift, charter decay, re-decision integrity, and bet disposition can all read against an AI-acceptance overlay. When commitment drift rises in the same quarter the seat&#x27;s AI-acceptance rate climbs past the floor the PLT named, the org is shipping drafted commitments faster than the Charter can verify them, and the cadence reopens. The seat-to-headcount ratio can join the set as its own signal: a falling ratio with stable charter decay is healthy compression, and a falling ratio with rising charter decay is structural erosion. The work the chapter named was always the structural work that does not get done in the loud quarters.</p>
+<p>By now the chapter has closed the gap it opened. Leadership shifted from doing the work to designing the system that does it. Portfolio tradeoffs got a forum instead of a gatekeeper. Product, platform, and the leadership group were pulled apart so they could run as one decision system instead of three that compete. And the seams most likely to tear, product to platform, product to go-to-market, strategy to execution, were designed before the organization had to find them under load. Five signals prove those moves held: latency, re-decision frequency, charter age, the share of decisions with measured outcomes, and the mix of bets killed, doubled, or held. Read them together, not as five scattered artifacts, and the decision system can finally watch itself work.</p>
+<p>That is what designing for scale produces. Not a bigger organization, a legible one: an organization that can tell, before the outcome lands, whether its decision machinery is sound. This kind of structural work never shows on a slide in the quarter you do it. It shows the quarter after, when a bet that would have drifted gets caught by a signal nobody had to be a hero to read. A legible system still comes down to who sits in each seat and whether they can carry the ambiguity the design now requires, which is the part scale leaves unsolved.</p>
+    <nav class="reader-pager">
+      <a href="chapter-4-decision-interfaces-and-the-architecture.html" class="btn btn--outline reader-pager__prev">&larr; Chapter 4: Decision Interfaces and the Architecture</a>
+      <a href="chapter-6-people-at-scale.html" class="btn btn--primary reader-pager__next">Chapter 6: People at Scale &rarr;</a>
+    </nav>
+  </article>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="https://productbeacon.agency/" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Senior product leadership, AI-powered execution.</p>
+      </div>
+      <div class="footer__col">
+        <h4>The Book</h4>
+        <a href="../index.html">Overview</a>
+        <a href="../reader/index.html">Read Online</a>
+        <a href="../downloads/vision-to-value.pdf">Download PDF</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="https://productbeacon.agency/case-studies.html">Case Studies</a>
+        <a href="https://productbeacon.agency/insights/">Insights</a>
+        <a href="https://productbeacon.agency/about.html">About</a>
+        <a href="https://productbeacon.agency/contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="https://github.com/yohayetsion/product-org-os" target="_blank" rel="noopener">Product Org OS</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 ProductBeacon. A brand of Etsion Brands Ltd. Book text licensed CC-BY 4.0.</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

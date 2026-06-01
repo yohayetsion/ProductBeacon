@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680" role="img" aria-label="Hat-Density Per Human: Series-C+ vs Sub-Series-C">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <marker id="arrowhead-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5B8AC0"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 18px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1000" height="680" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="500.0" y="36" class="h" text-anchor="middle" style="font-size:20px">Hat-Density Per Human</text>
+<text x="500.0" y="58" class="small" text-anchor="middle">The shape stays invariant; accountability distribution scales with hat-density-per-human.</text>
+<rect x="60" y="110" width="428.0" height="480" rx="8" ry="8" fill="#E8F0F8" stroke="#3B6BA5" stroke-width="2"/>
+<rect x="60" y="110" width="428.0" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="274.0" y="136" class="label" text-anchor="middle" style="font-weight:700;font-size:15px">SERIES-C+ INSTALL</text>
+<text x="274.0" y="154" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">Distributed seats + distributed accountability</text>
+<text x="76" y="198.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Hats per human</text>
+<text x="76" y="214.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">~1 per Director (one craft per seat)</text>
+<line x1="74" y1="258.0" x2="474.0" y2="258.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="76" y="278.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Decision attestation</text>
+<text x="76" y="294.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Per seat-holder, named explicitly</text>
+<line x1="74" y1="338.0" x2="474.0" y2="338.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="76" y="358.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Re-decision triggers</text>
+<text x="76" y="374.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Owned by individual seat-holders</text>
+<line x1="74" y1="418.0" x2="474.0" y2="418.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="76" y="438.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">AI augmentation</text>
+<text x="76" y="454.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Each Director extends their own craft</text>
+<line x1="74" y1="498.0" x2="474.0" y2="498.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="76" y="518.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Operational floor</text>
+<text x="76" y="534.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">~7 humans across the leadership team</text>
+<rect x="512.0" y="110" width="428.0" height="480" rx="8" ry="8" fill="#E8F0F8" stroke="#5B8AC0" stroke-width="2"/>
+<rect x="512.0" y="110" width="428.0" height="56" rx="8" ry="8" fill="#5B8AC0"/>
+<text x="726.0" y="136" class="label" text-anchor="middle" style="font-weight:700;font-size:15px">SUB-SERIES-C INSTALL</text>
+<text x="726.0" y="154" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">Bundled seats + concentrated accountability</text>
+<text x="528.0" y="198.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Hats per human</text>
+<text x="528.0" y="214.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">2–3 per human (multi-craft seat-holders)</text>
+<line x1="526.0" y1="258.0" x2="926.0" y2="258.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="528.0" y="278.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Decision attestation</text>
+<text x="528.0" y="294.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Per accountable human; AI agents extend, not sign</text>
+<line x1="526.0" y1="338.0" x2="926.0" y2="338.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="528.0" y="358.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Re-decision triggers</text>
+<text x="528.0" y="374.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Often shared across roles; named explicitly</text>
+<line x1="526.0" y1="418.0" x2="926.0" y2="418.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="528.0" y="438.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">AI augmentation</text>
+<text x="528.0" y="454.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">Each human wields multiple agents within their portfolio</text>
+<line x1="526.0" y1="498.0" x2="926.0" y2="498.0" stroke="#B8C9DA" stroke-width="1"/>
+<text x="528.0" y="518.0" class="sh" text-anchor="start" style="font-size:11px;fill:#3B6BA5">Operational floor</text>
+<text x="528.0" y="534.0" class="body" text-anchor="start" style="font-size:10px;fill:#1F3A5F">~2 humans hold the seven craft layers between them</text>
+<text x="500.0" y="642" class="small" text-anchor="middle" style="font-weight:600;fill:#E07C3E">Decisions require a named human signature regardless of pattern. AI does not sign.</text>
+</svg>

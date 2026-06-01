@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1080" width="840" height="1080" role="img" aria-label="The Vision to Value System: six phases, two pillars">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 16px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="840" height="1080" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="420.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Vision to Value System</text>
+<text x="420.0" y="58" class="small" text-anchor="middle">Six phases connect strategic intent to customer outcome; the loop returns learning to the next decision.</text>
+<rect x="24" y="92" width="130" height="928" rx="8" ry="8" fill="#E8F0F8" stroke="#A8C5E0" stroke-width="1"/>
+<text x="89.0" y="124" class="rail" text-anchor="middle">OPERATING</text>
+<text x="89.0" y="140" class="rail" text-anchor="middle">PRINCIPLES</text>
+<text x="89.0" y="178" class="body" text-anchor="middle" style="font-weight:600;font-size:11px">Decision quality</text>
+<text x="89.0" y="194" class="body" text-anchor="middle" style="font-weight:600;font-size:11px">under pressure</text>
+<text x="89.0" y="222" class="small" text-anchor="middle" style="font-size:10px">Cultural</text>
+<text x="89.0" y="238" class="small" text-anchor="middle" style="font-size:10px">guardrails</text>
+<rect x="686" y="92" width="130" height="928" rx="8" ry="8" fill="#E8F0F8" stroke="#A8C5E0" stroke-width="1"/>
+<text x="751.0" y="124" class="rail" text-anchor="middle">ORGANIZATIONAL</text>
+<text x="751.0" y="140" class="rail" text-anchor="middle">STRUCTURE</text>
+<text x="751.0" y="178" class="body" text-anchor="middle" style="font-weight:600;font-size:11px">Decision durability</text>
+<text x="751.0" y="194" class="body" text-anchor="middle" style="font-weight:600;font-size:11px">over time</text>
+<text x="751.0" y="222" class="small" text-anchor="middle" style="font-size:10px">Who supports</text>
+<text x="751.0" y="238" class="small" text-anchor="middle" style="font-size:10px">the what</text>
+<rect x="182" y="100" width="476" height="130" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="420.0" y="126" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">1. STRATEGIC FOUNDATION</text>
+<text x="420.0" y="146" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">(Input Phase)</text>
+<rect x="194.0" y="164" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="266.6666666666667" y="192" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Strategic Intent</text>
+<rect x="347.33333333333337" y="164" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="420.00000000000006" y="184" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Market &amp;</text>
+<text x="420.00000000000006" y="198" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Competitive Analysis</text>
+<rect x="500.6666666666667" y="164" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="573.3333333333334" y="184" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Product Mission</text>
+<text x="573.3333333333334" y="198" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">&amp; Vision</text>
+<rect x="182" y="254" width="476" height="130" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="420.0" y="280" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">2. STRATEGIC DECISIONS</text>
+<text x="420.0" y="300" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">(Commercial Filter)</text>
+<rect x="194.0" y="318" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="266.6666666666667" y="338" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Business Cases</text>
+<text x="266.6666666666667" y="352" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">&amp; Financial Analyses</text>
+<rect x="347.33333333333337" y="318" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="420.00000000000006" y="338" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Pricing &amp;</text>
+<text x="420.00000000000006" y="352" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Packaging Strategy</text>
+<rect x="500.6666666666667" y="318" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="573.3333333333334" y="338" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Messaging</text>
+<text x="573.3333333333334" y="352" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">&amp; Positioning</text>
+<rect x="182" y="408" width="476" height="130" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="420.0" y="434" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">3. STRATEGIC COMMITMENTS</text>
+<text x="420.0" y="454" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">(Point of No Return)</text>
+<rect x="194.0" y="472" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="266.6666666666667" y="492" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Roadmap Elaboration</text>
+<text x="266.6666666666667" y="506" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">&amp; Prioritization</text>
+<rect x="347.33333333333337" y="472" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="420.00000000000006" y="492" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Go-to-Market</text>
+<text x="420.00000000000006" y="506" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Establishment</text>
+<rect x="500.6666666666667" y="472" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="573.3333333333334" y="492" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Strategy</text>
+<text x="573.3333333333334" y="506" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Communication</text>
+<rect x="182" y="562" width="476" height="130" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="420.0" y="588" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">4. COORDINATED EXECUTION</text>
+<text x="420.0" y="608" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">(The Doing Phase)</text>
+<rect x="194.0" y="626" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="266.6666666666667" y="646" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Product</text>
+<text x="266.6666666666667" y="660" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Development Execution</text>
+<rect x="347.33333333333337" y="626" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="420.00000000000006" y="646" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Marketing Activities</text>
+<text x="420.00000000000006" y="660" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">&amp; Campaigns</text>
+<rect x="500.6666666666667" y="626" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="573.3333333333334" y="646" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Sales</text>
+<text x="573.3333333333334" y="660" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Process Participation</text>
+<rect x="182" y="716" width="476" height="130" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="420.0" y="742" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">5. BUSINESS &amp; CUSTOMER OUTCOMES</text>
+<text x="420.0" y="762" class="label" text-anchor="middle" style="font-weight:400;font-size:11px">(Output Phase)</text>
+<rect x="194.0" y="780" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="266.6666666666667" y="800" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Customer</text>
+<text x="266.6666666666667" y="814" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Onboarding</text>
+<rect x="347.33333333333337" y="780" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="420.00000000000006" y="808" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Value Realization</text>
+<rect x="500.6666666666667" y="780" width="145.33333333333334" height="48" rx="6" ry="6" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="1"/>
+<text x="573.3333333333334" y="800" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">Buyer and</text>
+<text x="573.3333333333334" y="814" class="body" text-anchor="middle" style="font-weight:500;font-size:10px;fill:#1F3A5F">User Behavior</text>
+<line x1="420.0" y1="232" x2="420.0" y2="252" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="420.0" y1="386" x2="420.0" y2="406" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="420.0" y1="540" x2="420.0" y2="560" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="420.0" y1="694" x2="420.0" y2="714" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="182" y="870" width="476" height="56" rx="8" ry="8" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="420.0" y="892" class="sh" text-anchor="middle" style="font-size:13px;fill:#E07C3E">6. The Learning &amp; Adaptation Loop</text>
+<text x="420.0" y="910" class="small" text-anchor="middle" style="fill:#3B6BA5">(the system's brain — outcomes return to decisions)</text>
+<path d="M 662 898.0 L 690 898.0 L 690 319.0 L 658 319.0" stroke="#E07C3E" stroke-width="2" fill="none" marker-end="url(#arrowhead-accent)"/>
+</svg>

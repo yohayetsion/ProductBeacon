@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 700" width="1040" height="700" role="img" aria-label="The Strategic Decision Flow with Gates">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <marker id="arrowhead-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5B8AC0"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 18px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1040" height="700" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="520.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Strategic Decision Flow</text>
+<text x="520.0" y="58" class="small" text-anchor="middle">Each phase carries a gate decision. The decision is the artifact; the phase is the work that earns the right to make it.</text>
+<rect x="40" y="100" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="139.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">FORMULATION</text>
+<text x="360" y="139.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Strategic intent + market read</text>
+<rect x="680" y="112" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="139.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: Is the bet worth pursuing?</text>
+<line x1="140" y1="170" x2="140" y2="182" stroke="#5B8AC0" stroke-width="2" marker-end="url(#arrowhead-light)"/>
+<rect x="40" y="180" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="219.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">ELABORATION</text>
+<text x="360" y="219.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Sequencing, scope, GTM assumptions</text>
+<rect x="680" y="192" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="219.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: Is this commitment fundable?</text>
+<line x1="140" y1="250" x2="140" y2="262" stroke="#5B8AC0" stroke-width="2" marker-end="url(#arrowhead-light)"/>
+<rect x="40" y="260" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="299.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">COMMITMENT</text>
+<text x="360" y="299.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Resource allocation + external promises</text>
+<rect x="680" y="272" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="299.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: Will we ship what we said?</text>
+<line x1="140" y1="330" x2="140" y2="342" stroke="#5B8AC0" stroke-width="2" marker-end="url(#arrowhead-light)"/>
+<rect x="40" y="340" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="379.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">EXECUTION</text>
+<text x="360" y="379.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Discovery, delivery, iteration</text>
+<rect x="680" y="352" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="379.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: Is reality matching the plan?</text>
+<line x1="140" y1="410" x2="140" y2="422" stroke="#5B8AC0" stroke-width="2" marker-end="url(#arrowhead-light)"/>
+<rect x="40" y="420" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="459.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">OUTCOME</text>
+<text x="360" y="459.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Adoption, value realization, evidence</text>
+<rect x="680" y="432" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="459.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: Did the bet pay off?</text>
+<line x1="140" y1="490" x2="140" y2="502" stroke="#5B8AC0" stroke-width="2" marker-end="url(#arrowhead-light)"/>
+<rect x="40" y="500" width="960" height="70" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="64" y="539.0" class="label" text-anchor="start" style="font-weight:700;font-size:14px">LEARNING</text>
+<text x="360" y="539.0" class="label" text-anchor="start" style="font-size:11px;fill:#E8F0F8">Re-decision triggers, portfolio updates</text>
+<rect x="680" y="512" width="300" height="46" rx="4" ry="4" fill="#FFFFFF" stroke="#E07C3E" stroke-width="2"/>
+<text x="830.0" y="539.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#E07C3E">GATE: What does the next bet inherit?</text>
+</svg>

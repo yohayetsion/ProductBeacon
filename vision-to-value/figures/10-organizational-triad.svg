@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 760" width="1140" height="760" role="img" aria-label="The Three Organizational Triads at Executive Altitude">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <marker id="arrowhead-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5B8AC0"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 18px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1140" height="760" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="570.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Organizational Triads</text>
+<text x="570.0" y="58" class="small" text-anchor="middle">Three triads carry the decisions that produce, ship, and validate value. The Chief Product Officer holds the integration of all three.</text>
+<text x="190.0" y="122" class="sh" text-anchor="middle" style="font-weight:700;font-size:13px;fill:#1F3A5F">Triad 1 — Ships Work</text>
+<line x1="190.0" y1="260.75" x2="90.25" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="90.25" y1="418.25" x2="289.75" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="289.75" y1="418.25" x2="190.0" y2="260.75" stroke="#A8C5E0" stroke-width="1.5"/>
+<rect x="125.0" y="331.0" width="130" height="38" rx="18" ry="18" fill="#E07C3E"/>
+<text x="190.0" y="355.0" class="label" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#FFFFFF">Scope Contract</text>
+<rect x="120.0" y="232.75" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="190.0" y="256.75" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="190.0" y="274.75" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns scope</text>
+<rect x="20.25" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="90.25" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Engineering</text>
+<text x="90.25" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns technical shape</text>
+<rect x="219.75" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="289.75" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Design</text>
+<text x="289.75" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns experience</text>
+<text x="570.0" y="122" class="sh" text-anchor="middle" style="font-weight:700;font-size:13px;fill:#1F3A5F">Triad 2 — Takes Work to Market</text>
+<line x1="570.0" y1="260.75" x2="470.25" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="470.25" y1="418.25" x2="669.75" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="669.75" y1="418.25" x2="570.0" y2="260.75" stroke="#A8C5E0" stroke-width="1.5"/>
+<rect x="505.0" y="331.0" width="130" height="38" rx="18" ry="18" fill="#E07C3E"/>
+<text x="570.0" y="355.0" class="label" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#FFFFFF">Go-to-Market Contract</text>
+<rect x="500.0" y="232.75" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="570.0" y="256.75" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="570.0" y="274.75" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns capability</text>
+<rect x="400.25" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="470.25" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product Marketing</text>
+<text x="470.25" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns positioning</text>
+<rect x="599.75" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="669.75" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Business Dev</text>
+<text x="669.75" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns channel</text>
+<text x="950.0" y="122" class="sh" text-anchor="middle" style="font-weight:700;font-size:13px;fill:#1F3A5F">Triad 3 — Closes the Loop</text>
+<line x1="950.0" y1="260.75" x2="850.25" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="850.25" y1="418.25" x2="1049.75" y2="418.25" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="1049.75" y1="418.25" x2="950.0" y2="260.75" stroke="#A8C5E0" stroke-width="1.5"/>
+<rect x="885.0" y="331.0" width="130" height="38" rx="18" ry="18" fill="#E07C3E"/>
+<text x="950.0" y="355.0" class="label" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#FFFFFF">Outcome Contract</text>
+<rect x="880.0" y="232.75" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="950.0" y="256.75" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="950.0" y="274.75" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns capability</text>
+<rect x="780.25" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="850.25" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Value Realization</text>
+<text x="850.25" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns cohort outcomes</text>
+<rect x="979.75" y="390.25" width="140" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="1049.75" y="414.25" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Customer Success</text>
+<text x="1049.75" y="432.25" class="label" text-anchor="middle" style="font-weight:400;font-size:10px;fill:#E8F0F8">owns account-level</text>
+<rect x="60" y="670" width="1020" height="64" rx="8" ry="8" fill="#E8F0F8" stroke="#A8C5E0" stroke-width="1"/>
+<text x="570.0" y="696" class="sh" text-anchor="middle" style="font-weight:700;font-size:13px">The Chief Product Officer holds the integration of all three.</text>
+<text x="570.0" y="718" class="small" text-anchor="middle" style="font-size:11px">Each triad shares an artifact; the artifact is the Charter that governs the joint forum.</text>
+</svg>

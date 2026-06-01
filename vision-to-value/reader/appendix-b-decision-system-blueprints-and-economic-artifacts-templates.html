@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix B: Decision System Blueprints and Economic Artifacts (Templates) — Vision to Value</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ---- Vision to Value digital edition (book-reader additions) ---- */
+.v2v-figure { margin: var(--space-8) 0; text-align: center; }
+.v2v-figure img { max-width: 100%; height: auto; background: #fff; border-radius: var(--border-radius-sm); padding: var(--space-4); border: 1px solid var(--border); }
+.v2v-figure figcaption { color: var(--muted); font-size: 0.875rem; margin-top: var(--space-3); line-height: 1.5; max-width: 640px; margin-left:auto; margin-right:auto; }
+.v2v-table-wrap { overflow-x: auto; margin: var(--space-6) 0; }
+
+/* Reader shell: contents sidebar + content column */
+.reader-shell { max-width: 1100px; margin: 0 auto; padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-12); display: grid; grid-template-columns: 260px 1fr; gap: var(--space-12); align-items: start; }
+.reader-toc { position: sticky; top: calc(var(--nav-height) + var(--space-6)); max-height: calc(100vh - var(--nav-height) - var(--space-12)); overflow-y: auto; border-right: 1px solid var(--border); padding-right: var(--space-6); }
+.reader-toc h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--space-4); }
+.reader-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+.reader-toc li { margin-bottom: var(--space-2); }
+.reader-toc a { color: var(--secondary); font-size: 0.9rem; line-height: 1.4; text-decoration: none; display: block; padding: 4px 0; }
+.reader-toc a:hover { color: var(--amber); }
+.reader-toc a.current { color: var(--amber); font-weight: 600; }
+.reader-content { min-width: 0; max-width: var(--content-width); }
+.reader-content h1 { font-size: 2.25rem; margin-bottom: var(--space-8); line-height: 1.15; }
+.reader-content p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.reader-content h2 { font-size: 1.6rem; margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--border); color: var(--bright); }
+.reader-content h3 { font-size: 1.2rem; margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--text); }
+.reader-content ul, .reader-content ol { color: var(--secondary); padding-left: var(--space-6); margin-bottom: var(--space-4); line-height: 1.75; }
+.reader-content li { margin-bottom: var(--space-2); }
+.reader-content strong { color: var(--text); }
+.reader-content em { color: var(--text); }
+.reader-pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--border); }
+.reader-pager a { flex: 1; }
+.reader-pager .reader-pager__next { text-align: right; }
+.reader-progress { font-size: 0.8rem; color: var(--muted); margin-bottom: var(--space-6); font-family: var(--font-mono); }
+
+/* Landing-specific */
+.book-hero { padding-top: calc(var(--nav-height) + var(--space-20)); padding-bottom: var(--space-16); }
+.book-hero__series { color: var(--amber); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-4); }
+.book-hero h1 { font-size: 3.25rem; line-height: 1.08; margin-bottom: var(--space-3); }
+.book-hero__subtitle { font-size: 1.4rem; color: var(--secondary); margin-bottom: var(--space-6); }
+.book-hero__thesis { font-size: 1.2rem; color: var(--text); max-width: 680px; line-height: 1.6; margin-bottom: var(--space-8); }
+.book-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-4); }
+.book-blurb { max-width: var(--content-width); margin: 0 auto; }
+.book-blurb p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.book-blurb strong { color: var(--text); }
+.soft-ask { background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius); padding: var(--space-8); margin-top: var(--space-8); }
+.soft-ask h3 { margin-bottom: var(--space-2); }
+.soft-ask p { color: var(--secondary); font-size: 0.95rem; margin-bottom: var(--space-4); }
+.soft-ask form { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.soft-ask input[type=email] { flex: 1; min-width: 220px; background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius-sm); padding: var(--space-3) var(--space-4); color: var(--text); font-family: var(--font-sans); font-size: 1rem; }
+.soft-ask input[type=email]:focus { outline: none; border-color: var(--amber); }
+.cc-note { font-size: 0.85rem; color: var(--muted); margin-top: var(--space-6); line-height: 1.6; }
+.cc-note a { color: var(--secondary); }
+.whats-inside { max-width: var(--content-width); margin: var(--space-16) auto 0; }
+.whats-inside ul { color: var(--secondary); padding-left: var(--space-6); line-height: 1.75; }
+.whats-inside li { margin-bottom: var(--space-3); }
+
+@media (max-width: 860px) {
+  .reader-shell { grid-template-columns: 1fr; gap: var(--space-6); }
+  .reader-toc { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: var(--space-6); }
+  .book-hero h1 { font-size: 2.4rem; }
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="https://productbeacon.agency/" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="https://productbeacon.agency/services.html">Services</a></li>
+      <li><a href="https://productbeacon.agency/insights/">Insights</a></li>
+      <li><a href="../index.html" class="active">The Book</a></li>
+      <li><a href="https://productbeacon.agency/about.html">About</a></li>
+      <li><a href="https://productbeacon.agency/contact.html">Contact</a></li>
+      <li><a href="https://productbeacon.agency/contact.html" class="btn btn--primary btn--lg">Book a Call</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="https://productbeacon.agency/services.html" role="menuitem">Services</a>
+    <a href="https://productbeacon.agency/insights/" role="menuitem">Insights</a>
+    <a href="../index.html" role="menuitem">The Book</a>
+    <a href="https://productbeacon.agency/about.html" role="menuitem">About</a>
+    <a href="https://productbeacon.agency/contact.html" role="menuitem">Contact</a>
+    <a href="https://productbeacon.agency/contact.html" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Book a Call</a>
+  </div>
+</nav>
+<div class="reader-shell">
+  <aside class="reader-toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="preface.html">Preface</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="chapter-1-end-to-end-product-organizations.html">Chapter 1: End-to-end Product Organizations</a></li>
+<li><a href="chapter-2-the-strategic-process-and-operational-focus-areas.html">Chapter 2: The Strategic Process and Operational Focus Areas</a></li>
+<li><a href="chapter-3-structure-and-scope.html">Chapter 3: Structure and Scope</a></li>
+<li><a href="chapter-4-decision-interfaces-and-the-architecture.html">Chapter 4: Decision Interfaces and the Architecture</a></li>
+<li><a href="chapter-5-scaling-as-design-problem.html">Chapter 5: Scaling as Design Problem</a></li>
+<li><a href="chapter-6-people-at-scale.html">Chapter 6: People at Scale</a></li>
+<li><a href="chapter-7-the-executive-altitude.html">Chapter 7: The Executive Altitude</a></li>
+<li><a href="chapter-8-the-eight-operating-principles.html">Chapter 8: The Eight Operating Principles</a></li>
+<li><a href="conclusion-from-vision-to-value.html">Conclusion: From Vision to Value</a></li>
+<li><a href="appendix-a-installation-guide-a-first-90-days-sequence.html">Appendix A: Installation Guide - A First-90-Days Sequence</a></li>
+<li><a href="appendix-b-decision-system-blueprints-and-economic-artifacts-templates.html" class="current">Appendix B: Decision System Blueprints and Economic Artifacts (Templates)</a></li>
+<li><a href="appendix-c-function-specific-decision-interface-charters.html">Appendix C: Function-Specific Decision Interface Charters</a></li>
+<li><a href="appendix-d-glossary.html">Appendix D: Glossary</a></li>
+<li><a href="appendix-e-further-resources.html">Appendix E: Further Resources</a></li>
+
+    </ol>
+  </aside>
+  <article class="reader-content">
+    <p class="reader-progress">Vision to Value &middot; 13 / 16</p>
+    <h1>Appendix B: Decision System Blueprints and Economic Artifacts (Templates)</h1>
+    <p>This appendix holds the templates that make the decision system carry weight in practice. The Decision Interface Charter, Decision Record Template, Operating Calendar Stub, and Canonical Rituals reference describe the machinery. The three economic artifacts that follow (Business-Case / Continuation-Threshold Template, Portfolio-Review Financial Pre-Read, GTM-to-P&amp;L Traceability View) describe how the decision system is fed with evidence and reconciled against realized outcomes. Product Operations owns the machinery signals; Business Operations owns the economic signals; the templates belong together because the review they gate is one review. The Board Bet Review Charter (Chapter 7) is a specialization of the Decision Interface Charter below, adapted for the quarterly board surface.</p>
+<p><strong>New to the blueprint?</strong> If you are a newly-seated CPO, VP Product, or Director of Product Operations installing this for the first time, start with the ninety-day sequence in Appendix A - it walks the first Charter install, the first cadence, and the first re-decision, in order, before you expand. The templates in this appendix are the artifacts; the guide in Appendix A is the sequence for landing them.</p>
+<div class="v2v-table-wrap"><table class="insight-table"><thead><tr><th>Book section</th><th>Companion Pack asset</th></tr></thead><tbody><tr><td>Appendix A → Business-Case / Continuation-Threshold Template</td><td>3 worked examples (calculated, placeholder, hybrid) + Threshold Anchor calibration guidance (Half-Life, Reconstructibility, Counterparty tests)</td></tr><tr><td>Appendix A → Portfolio-Review Financial Pre-Read</td><td>Filled-in Q3 2026 example (6 bets)</td></tr><tr><td>Appendix A → GTM-to-P&amp;L Traceability View</td><td>Filled-in April 2026 two-bet example with variance flag armed</td></tr><tr><td>Appendix A → Charter template</td><td>Decision Interface Charter Template printable PDF</td></tr><tr><td>Appendix B → 90-day install sequence</td><td>30-60-90 Day Roadmap worksheet + Leadership Decision Diagnostic</td></tr><tr><td>Appendix C → each function-specific Charter</td><td>Per-archetype weighting notes (PMM, Design, Engineering, Data/Analytics, CS-VR, BizDev, ProdOps)</td></tr><tr><td>Appendix E → Further Resources</td><td>Vision to Value Executive Coach (ChatGPT) + Blueprint Notes (NotebookLM)</td></tr></tbody></table></div>
+<h2 id="decision-interface-charter-template">Decision Interface Charter Template</h2>
+<p><em>PM-level contribution: surface the decision class that needs the charter; scope is decision-shape, not decision-content.</em></p>
+<p>Decision:</p>
+<ul><li>Decision type (launch readiness / pricing exceptions / platform intake / portfolio stop-continue / etc.):</li><li>Accountable owner (single name / role):</li><li>Decision forum &amp; cadence (where it is decided, how often it is reviewed):</li><li>Decision deadline (latest date the decision must be made):</li><li>Decision record location (doc/link):</li><li>Primary stakeholders (input providers vs. informed):</li></ul>
+<p>Context (2-3 lines):</p>
+<p>Non-negotiables / constraints (what cannot be violated):</p>
+<p>Success criteria (define &quot;success&quot; as outcomes; include a time horizon):</p>
+<ul><li>Leading indicators (T+2 weeks):</li><li>Mid indicators (T+6 weeks):</li><li>Lagging indicators (T+12 weeks):</li></ul>
+<p>Required inputs (grouped by tier; who must provide what, by when):</p>
+<p><em>Core inputs (the three strategic formulation surfaces; each reads in its own right, not as commentary on the others):</em></p>
+<ul><li>Product:</li><li>PMM/Marketing:</li><li>Business Development / Partner (if the strategy depends on an external party):</li></ul>
+<p><em>Empowerment inputs (gating, not consultative). Business Operations pre-read and Competitive Intelligence (CI) market read are gating inputs to the portfolio review, not consultative; if absent or stale, the review cannot adjourn with a continue decision on that bet.</em></p>
+<ul><li>Business Operations (P&amp;L posture, booking-data view, portfolio-review pre-read):</li><li>Competitive context (alternatives, substitutes, category position, win/loss signal, market-timing window, category-motion read):</li></ul>
+<p><em>Execution inputs (the seats that will carry the commitment into outcomes):</em></p>
+<ul><li>Engineering:</li><li>Design (with embedded discovery inputs):</li><li>Product Operations (cadence, decision-record readiness, observability signal set):</li><li>Customer Success/Support:</li><li>Value Realization (cohort readiness, adoption-depth baseline, expansion gate):</li></ul>
+<p><em>Peer inputs (rotated by decision type):</em></p>
+<ul><li>Sales/RevOps:</li><li>Finance/Legal/Security (if relevant):</li><li>Data/Analytics (if the decision depends on new instrumentation):</li></ul>
+<p>Decision rules (how this decision gets made):</p>
+<ul><li>What &quot;good enough&quot; evidence looks like:</li><li>Default if inputs are missing:</li><li>Explicit &quot;say no&quot; boundaries (what cannot be promised / done):</li><li>Escalation rule (exact trigger, not feelings):</li></ul>
+<p>Exception handling (how exceptions are requested, approved, and logged):</p>
+<p>Communication plan (who is told, when, and how):</p>
+<p>Learning loop (how outcomes flow back into the system):</p>
+<ul><li>Review date(s):</li><li>Re-decision triggers (what outcome/risk automatically reopens the decision). Include at minimum one outcome-evidence trigger (metrics miss guardrails) and one market-evidence trigger (competitor launches a substitute in the target segment, new entrant redefines the category, or a pricing move compresses the premium):</li></ul>
+<h2 id="decision-record-template-copy-paste">Decision Record Template (copy/paste)</h2>
+<p><em>PM-level contribution: author the record at the decision moment, not in retrospect; PM-Director audits for reconstructibility.</em></p>
+<p>Decision ID (immutable; format: DR-YYYY-NNN):</p>
+<p>Title (one sentence; decision stated in active voice):</p>
+<p>Accountable owner (single name + role at time of decision):</p>
+<p>Date decided:</p>
+<p>Decision forum (where decided; link to meeting note or charter):</p>
+<p>Status: active / superseded / closed</p>
+<p>Decision statement (what was decided, in plain language - 2-3 sentences):</p>
+<p>Context at time of decision (what was true when this was decided - 3-5 bullets):</p>
+<p>Options considered (at least two; why each was considered and why the winning option was chosen):</p>
+<p>Required inputs used (who provided what; version/date of each input):</p>
+<p>Assumptions this decision depends on (the 2-4 assumptions whose invalidation would force reopen):</p>
+<p>Success criteria (T+2 / T+6 / T+12 indicators - link to metric definition, not just the name):</p>
+<p>Re-decision trigger (exact condition that forces formal reopen - not feelings):</p>
+<p>Related decisions (parent decision; sibling decisions; decisions this one supersedes):</p>
+<p>Review date(s) (when this record is audited for findability, not just content):</p>
+<p>Record location (canonical link - must be durable, searchable, and linkable from the charter that governs this decision type).</p>
+<p><em>Hygiene rule:</em> A decision record that cannot be found in 30 seconds by someone who was not in the room is not a decision record - it is a meeting note. Product Operations audits findability quarterly.</p>
+<h2 id="operating-calendar-stub-copy-paste">Operating Calendar Stub (copy/paste)</h2>
+<p>Purpose: a single published, versioned calendar that sequences the rituals in the Canonical Rituals table, so the organization stops negotiating schedule ad-hoc.</p>
+<p>Fields (per ritual):</p>
+<ul><li>Ritual name (must match Canonical Rituals table):</li><li>Owner:</li><li>Cadence window (fixed day/time; not &quot;when calendars align&quot;):</li><li>Pre-read deadline (how long before the meeting inputs must land):</li><li>Decision artifact location (where the output will be written - must match Decision Record Template):</li><li>Calendar version and review date (annual review cadence):</li></ul>
+<p>Sequencing rules (stated once at the top of the calendar):</p>
+<ul><li>Portfolio review sits upstream of product-line review (quarterly before monthly), not the reverse</li><li>Launch Readiness Review dates are derived from committed ship dates, not negotiated per-launch</li><li>Team Outcome Reviews are immutable weekly - they do not move for executive schedules</li><li>A ritual that misses its scheduled window twice in a cycle triggers a charter review, not a calendar slip</li></ul>
+<p>The operating calendar is itself an artifact. Publish it, version it, audit it annually. A calendar that lives only in individual leaders&#x27; heads is a Product Operations failure.</p>
+<h2 id="canonical-rituals-of-a-product-organization-reference">Canonical Rituals of a Product Organization (Reference)</h2>
+<p>The rituals named throughout this book, assembled in one place so the reader can inventory them against their own operating calendar. All rituals are named in the body of the book; nothing here is new. What is new is the catalogue.</p>
+<div class="v2v-table-wrap"><table class="insight-table"><thead><tr><th>Ritual</th><th>Owner (accountable)</th><th>Attendees</th><th>Cadence</th><th>Output (the artifact)</th><th>Failure mode</th></tr></thead><tbody><tr><td>Launch Readiness Review</td><td>Product Director / GM for the bet</td><td>PMM, CS, Eng, Sales, ProdOps (chair)</td><td>Weekly from T-6; final at T-14</td><td>Written go / delay / de-scope decision + re-decision trigger</td><td>Devolves into email; T-14 gate slips silently</td></tr><tr><td>Platform Intake Council</td><td>VP Platform + VP Product, chaired by Product Operations</td><td>Product-line PMs, Platform Eng, Product Operations</td><td>Monthly</td><td>Ranked intake commitment + &quot;not this cycle&quot; list</td><td>Standing queue nobody sequences</td></tr><tr><td>Portfolio Review</td><td>VP Product (or CPO at scale)</td><td>Product Leadership Team (PLT), Business Operations, CI</td><td>Quarterly (90 min)</td><td>Renew / revise / kill decisions per bet + re-decision plan</td><td>Becomes status readout; no stop decisions made</td></tr><tr><td>Team Outcome Review</td><td>Product Manager</td><td>Team, Design, Eng, Data</td><td>Weekly (30 min)</td><td>&quot;Did outcomes move? What changed? What&#x27;s next?&quot; written note</td><td>Collapses into standup; no outcome link</td></tr><tr><td>Product-line Review</td><td>Group PM / Director PM</td><td>Line PMs, PMM, CS, Data</td><td>Monthly (60 min)</td><td>Bet-level re-decision: over/under-performing vs expectations</td><td>Becomes demo day; no re-decisions</td></tr><tr><td>Decision Review (post-launch)</td><td>Decision owner</td><td>Original required-inputs list</td><td>Triggered at T+30 post-launch</td><td>Confirm outcomes vs. assumptions; formal reopen if divergent</td><td>Never happens; calendar forces it eventually</td></tr><tr><td>Joint Product-GTM Forum</td><td>Product + PMM (co-chair)</td><td>Product, PMM, Sales, CS</td><td>Monthly (or per-launch)</td><td>Positioning/packaging decisions before build commits</td><td>PMM briefed after build locks</td></tr><tr><td>Incident / Reliability Tradeoff Review</td><td>Engineering + Product</td><td>SRE, on-call, affected PMs</td><td>On-incident + monthly roll-up</td><td>Reliability-over-roadmap call + re-commit to affected bets</td><td>Incident call made without product tradeoff visible</td></tr></tbody></table></div>
+<p>The operating calendar is itself an artifact. Publish it, version it, and review it annually. When a ritual in this table does not exist or does not produce the stated output, that is a diagnostic - not a failure of attendance.</p>
+<h2 id="business-case-continuation-threshold-template">Business-Case / Continuation-Threshold Template</h2>
+<p><em>PM-level contribution: maintain the threshold math and the evidence record; PM-Director signs; CPO reviews.</em></p>
+<p><strong>Purpose.</strong> A structured document that every strategic bet must carry from formulation through portfolio review. Replaces the ad-hoc business case (written once at approval, never revisited) with a living artifact whose continuation-threshold field is evaluated at each portfolio review. Prevents the failure mode Chapter 2 names - <em>continued investment in bets whose assumptions have invalidated</em> - by making the evidence required for the next increment explicit at the time of the current increment, not retrofitted after a miss.</p>
+<p><strong>Owner.</strong> Product Business Operations Director. Finance supplies enterprise-level financial methodology; the PM supplies product content; Business Operations owns the artifact and its evolution across portfolio cycles.</p>
+<p><strong>Consumers.</strong> VP Product / CPO (portfolio review; renew / revise / kill decision). PM / Director PM for the bet (commitment sequencing, re-decision trigger authoring). CFO (capital envelope reconciliation against enterprise plan). PMM Director (commercial motion economics, pricing coherence with business case). Chief Architect (reversibility and dependency reads inform cost-of-delay).</p>
+<p><strong>Named fields.</strong></p>
+<ul><li>Bet ID (immutable; format: SB-YYYY-NNN; links to Decision Record)</li><li>Bet title (one sentence; the bet stated as hypothesis, not feature)</li><li>Accountable owner (single name + role)</li><li>Date authored / date of current revision / revision number</li><li>Investment envelope (explicit funded amount for the current increment - engineering, design, PMM, CS capacity translated to dollars; not &quot;the team&#x27;s budget&quot;)</li><li>Expected return shape (revenue / margin / retention / strategic-position / defensive; named, not implied; with time horizon)</li><li>Cost-of-delay estimate (what the organization forgoes per quarter of delay; references the alternatives named in the portfolio pre-read)</li><li>Unit-economics hypothesis (per-customer or per-account economics the bet depends on; named inputs, not assumed)</li><li><strong>Continuation threshold (the load-bearing field)</strong> - the specific evidence this bet must produce by the next portfolio review to earn its next increment of investment. Must be outcome-evidence, not activity-evidence (<em>&quot;2,000 activated accounts in segment X with retention above 85% at T+90&quot;</em>, not <em>&quot;launched v2&quot;</em>). Must reference leading / mid / lagging indicators per Chapter 2.</li><li>Assumptions the threshold depends on (the two-to-four assumptions whose invalidation forces the bet back to formulation, not just re-scope)</li><li>Re-decision trigger (exact conditions that reopen the bet between portfolio reviews; at minimum one outcome-evidence trigger and one market-evidence trigger, matching the Decision Record&#x27;s re-decision field - threads the artifacts)</li><li>Alternatives considered (what the same envelope would fund instead; named, not generic)</li><li>Scarcity dimension (capital / capacity / attention per Chapter 2&#x27;s three-constraint frame)</li></ul>
+<p><strong>Cadence.</strong> Authored at commitment-hardening (Chapter 2&#x27;s Elaboration-to-Commitment gate). Refreshed at every portfolio review (quarterly) - the continuation-threshold field is re-evaluated against evidence to date. Archived when the bet is closed; continuation-threshold misses and successes both feed the learning loop.</p>
+<p><strong>Gating status.</strong> Gating input to the portfolio review per the sensor-compulsion protocol above (defined in Chapter 8, Principle 6). If the business case is absent, stale (older than one portfolio cycle without refresh), or has no continuation-threshold field authored, the portfolio review cannot adjourn with a continue decision on the bet. The review can still adjourn with a pause or a kill decision - absence of the artifact is not a default-to-continue.</p>
+<p><strong>Re-decision trigger relationship.</strong> The re-decision trigger field in this artifact is the same trigger carried in the bet&#x27;s Decision Record. When the trigger fires (outcome evidence misses continuation threshold or market evidence invalidates assumptions), the bet returns to formulation review. This artifact names the economic shape of the re-decision; the Decision Record names the decision context; they must match.</p>
+<p><strong>What this artifact is not.</strong> Not an enterprise-level financial model (FP&amp;A owns company-wide modeling; this is bet-level). Not a PRD (the PM&#x27;s PRD describes what is being built; this describes what the organization is investing in). Not a retrospective (the Outcome Review evaluates a bet after its outcome horizon closes; this artifact is forward-looking at every cycle). Not a pricing model (pricing is PMM-owned and appears as an input to unit-economics hypothesis, not as the artifact&#x27;s subject).</p>
+<h3>Launch Narrative Brief (PMM Instance Template)</h3>
+<p><em>PM-level contribution: provide the empowerment inputs the Director of Product Marketing carries into the interface; PM does not own the brief itself.</em></p>
+<p>The Launch Narrative Brief is the PMM&#x27;s instance of the Decision Interface Charter, instantiated at the launch altitude. It carries nine fields, in the order PMM authors them. A brief that cannot be reconstructed in thirty seconds by a PMM who was not in the room fails the same hygiene rule the Board Bet Review Charter carries.</p>
+<p><strong>Field 1: Launch-bet fit.</strong> The strategic bet this launch serves, named from the portfolio record. One sentence. If the launch does not trace to a named bet, the launch is a feature announcement, which is the anti-pattern Chapters 5-6 toolkit describes.</p>
+<p><strong>Field 2: Three-tier message hierarchy.</strong> <em>Tier 1 message</em>: the one sentence the category needs to hear (belongs to Corporate and CMO narrative). <em>Tier 2 message</em>: the one sentence the buyer needs to hear to shortlist (belongs to PMM and positioning). <em>Tier 3 message</em>: the three to five product-specific sentences the evaluator needs to hear to choose (belongs to PMM with Product input). Each tier names its owner; a tier without a named owner is a tier that will drift to whoever writes the collateral first.</p>
+<p><strong>Field 3: Named-alternative competitive frame.</strong> The 2-3 named competitive alternatives the buyer will evaluate this launch against, with the differentiation axis PMM owns against each. &quot;Named&quot; is load-bearing; generic competitive frame (market-segment competitors, rising challengers) does not count.</p>
+<p><strong>Field 4: Proof obligation.</strong> The evidence PMM commits to producing within 90 days of launch, traceable to the Tier 1, 2, and 3 messages. If the Tier 1 message claims &quot;category leadership in X,&quot; the proof obligation names the metric, the source, and the publish date.</p>
+<p><strong>Field 5: Success chain instrumentation.</strong> Awareness metric (owner: Marketing). Adoption metric (owner: Product). Revenue metric (owner: Sales Ops). Each metric named with its source system, its cadence of read, and its owner. A launch without all three is a launch without a success chain.</p>
+<p><strong>Field 6: Re-decision trigger.</strong> The specific signal that would reopen the positioning decision post-launch. Example: &quot;If cohort adoption at Week 4 is below 40% of target across two consecutive launches, reopen the positioning frame.&quot;</p>
+<p><strong>Field 7: Director of Product Marketing sign-off.</strong> Brief is not approved until the Director of Product Marketing signs Fields 1 through 6 on the record, with date and reasoning. This is the charter discipline applied at launch altitude.</p>
+<p><strong>Field 8: Sales enablement handoff.</strong> Named artifact delivered to Sales (battlecard, demo flow, objection-handler), with a named owner on the Sales side and a named date.</p>
+<p><strong>Field 9: Auditable-by.</strong> Marketing team (for awareness integrity), Product (for adoption integrity), Sales Ops (for revenue integrity). All three can read the brief on demand; the brief is one of the inputs to the CPO-CMO interface.</p>
+<h2 id="portfolio-review-financial-pre-read">Portfolio-Review Financial Pre-Read</h2>
+<p><strong>Purpose.</strong> The artifact that converts the quarterly portfolio review from a status readout into a capital-allocation decision forum. Without it, portfolio reviews default to the failure mode named in the Canonical Rituals table: <em>becomes status readout; no stop decisions made</em>. The pre-read is what lets the PLT make defensible renew / revise / kill calls against the three scarcity constraints - capital, capacity, attention - by putting comparable per-bet economics in front of every decision-maker 48 hours before the review.</p>
+<p><strong>Owner.</strong> Product Business Operations Director. Synthesized from each bet&#x27;s Business-Case / Continuation-Threshold Template (above) and from booking-data / P&amp;L hygiene work. Finance supplies enterprise reconciliation; PMs supply bet-level inputs.</p>
+<p><strong>Consumers.</strong> VP Product / CPO (chair of portfolio review; primary decision-maker). PLT members (all seats, per Chapter 1 PLT definition). CI Director (paired with market-read pre-read for the same review). CFO (reconciliation against enterprise capital plan).</p>
+<p><strong>Named fields (per bet in the portfolio).</strong></p>
+<ul><li>Bet ID and title (threaded to Business-Case / Continuation-Threshold Template)</li><li>Sunk cost to date (cumulative investment across prior increments; engineering, design, PMM, CS)</li><li>Marginal investment required for next increment (the envelope the bet is asking for this cycle)</li><li>Continuation-threshold evidence to date (actual leading / mid / lagging indicators vs. the threshold authored at prior review; red / amber / green against each)</li><li>Unit-economics read (current cohort economics vs. hypothesis; named deltas)</li><li>Opportunity cost of next increment (what the same envelope would fund across the alternatives named in the business case; quantified, not abstract)</li><li>Re-decision trigger status (fired / armed / resolved; if fired, this bet is escalated to formulation review before portfolio adjourns)</li><li>Business Operations disposition recommendation (renew / revise / kill, with the specific evidence supporting the recommendation; the sensor output, not the decision)</li></ul>
+<p><strong>Named fields (portfolio-level summary).</strong></p>
+<ul><li>Capital envelope for the planning window (total portfolio budget across bets)</li><li>Capacity constraint read (engineering, design, PMM throughput actually available vs. nominal)</li><li>Attention constraint read (count of bets currently in committed state vs. PLT working-memory capacity)</li><li>Disposition mix (ratio of bets recommended for renew / revise / kill; feeds the bet-disposition-mix observability signal per Chapter 5)</li><li>Reconciliation to prior cycle (which bets moved disposition state since last review, with reason)</li></ul>
+<p><strong>Cadence.</strong> Published to PLT 48 hours before each quarterly portfolio review. Archived after the review with PLT decisions annotated against recommendations (Business Operations recommended kill / PLT decided revise / reason on record). Quarterly review cadence is non-negotiable per the Canonical Rituals table.</p>
+<p><strong>Gating status.</strong> Gating input to the portfolio review per the sensor-compulsion protocol. If the pre-read is absent, stale (older than 72 hours at review start), or missing fields on any active bet, the portfolio review cannot adjourn with a continue decision on the affected bets. This is the single most load-bearing gating relationship in the empowerment tier - it is what converts Business Operations from advisory to accountable.</p>
+<p><strong>Re-decision trigger relationship.</strong> The pre-read is where re-decision triggers fire in practice. When a bet&#x27;s continuation-threshold evidence comes in red, the pre-read surfaces it; when Business Operations recommends kill and PLT decides revise, the revision must author a new continuation-threshold field in the Business-Case template before the decision is recorded. No bet exits a portfolio review in committed state without a refreshed continuation threshold - the pre-read enforces the refresh.</p>
+<p><strong>What this artifact is not.</strong> Not a status update (the pre-read is decision-supporting; PMs provide status through their own Team Outcome Reviews). Not a demand for Finance-grade rigor (pre-read economics are decision-grade - defensible, comparable, traceable - not audit-grade). Not a replacement for the bet&#x27;s own business case (the pre-read synthesizes across bets; the business case lives per-bet). Not a kill-recommendation engine (the pre-read surfaces evidence; the PLT decides. Business Operations is sensor, not decider - this is what the empowerment tier means).</p>
+<h2 id="gtm-to-p-l-traceability-view">GTM-to-P&amp;L Traceability View</h2>
+<p><strong>Purpose.</strong> The report that connects strategic product investment to realized business outcome at bet-level, portfolio-level, and business-level. Answers the question Chapter 2 names but does not operationalize: <em>did the bet the organization made actually move the commercial results the bet promised?</em> Closes the bidirectional tracking responsibility in the Business Operations definition - product initiatives moving booking data in the expected direction, and booking-data deltas surfacing where bets are under- or over-performing their commercial hypothesis. Prevents the GTM-to-P&amp;L disconnection failure mode where sales motion is instrumented through RevOps, product motion is instrumented through Product Operations, and the seam between them is unowned.</p>
+<p><strong>Owner.</strong> Product Business Operations Director. Consumes data from RevOps (pipeline, booking), from PMM (campaign performance, pricing realization), from CS-ops (expansion, retention by cohort), and from Product analytics (adoption depth by cohort mapped to bet). No single other function owns the integration.</p>
+<p><strong>Consumers.</strong> VP Product / CPO (bet-to-commercial-outcome read for portfolio decisions). CFO (product-portfolio contribution to enterprise P&amp;L; reconciliation with enterprise financial plan). Sales Director / RevOps (product-pull on pipeline; where GTM motion is and is not converting bet intent into booking data). PMM Director (pricing realization vs. pricing hypothesis; segment-mix vs. ICP hypothesis). Value Realization lead (adoption-depth trajectory vs. commercial-outcome trajectory; the leading-to-lagging bridge).</p>
+<p><strong>Named fields.</strong></p>
+<ul><li>Bet-level roll-up (per active bet): committed envelope, realized revenue contribution (new + expansion), realized margin contribution, cohort adoption-depth trajectory, pricing realization vs. hypothesis, segment-mix vs. ICP hypothesis</li><li>Portfolio-level roll-up: portfolio contribution to enterprise ARR / NRR / GRR, contribution-to-envelope ratio (realized commercial outcome per dollar of committed investment, across the portfolio)</li><li>GTM-motion cut (per bet): where in the sales funnel the bet&#x27;s commercial motion is converting or leaking (top-of-funnel demand, sales-qualified conversion, closed-won rate, time-to-first-value, expansion motion); named against the sales system&#x27;s instrumentation, not against an independent shadow system</li><li>Regional / segment P&amp;L cut: where the product-initiative-to-business translation is strongest and weakest, by region and segment; the booking-data hygiene work cashed as a report</li><li>Variance flags: bets where realized commercial outcome deviates from business-case hypothesis by &gt; 20%; armed as potential re-decision triggers</li></ul>
+<p><strong>Cadence.</strong> Monthly refresh for the portfolio-level and regional cuts (bookings close cadence). Quarterly refresh for the bet-level roll-up (aligned with portfolio review). On-demand for specific-bet drill-down when a variance flag arms. Variance flags are reviewed at the monthly Product-line Review (per Canonical Rituals) and can escalate to off-cycle portfolio review.</p>
+<p><strong>Gating status.</strong> Consultative to the portfolio review, not gating. The Portfolio-Review Financial Pre-Read is the gating artifact; the traceability view is what the pre-read draws bet-level commercial evidence from. Gating to the Product-line Review at bet-level - a line review cannot adjourn with a continue decision on a bet whose traceability view shows an armed variance flag, without first routing the flag to the bet&#x27;s re-decision trigger evaluation.</p>
+<p><strong>Re-decision trigger relationship.</strong> Variance flags in this view are candidate re-decision triggers. When a flag arms (&gt; 20% deviation between realized and hypothesized), the bet&#x27;s Business-Case / Continuation-Threshold Template is pulled, the re-decision trigger field is evaluated, and if the trigger fires the bet goes to formulation review. The traceability view is therefore the empowerment-tier sensor that surfaces economic invalidation in near-real-time, ahead of the quarterly portfolio cycle.</p>
+<p><strong>What this artifact is not.</strong> Not a sales dashboard (Sales Director owns pipeline and quota dashboards; this view is bet-to-commercial-outcome, not rep-to-quota). Not a product-analytics dashboard (PM owns adoption-depth and feature-usage analysis; this view consumes adoption depth as one input among several). Not a CFO dashboard (CFO owns enterprise P&amp;L; this view is the product-portfolio contribution to that P&amp;L, not the P&amp;L itself). Not a replacement for the Value Realization Report (Value Realization measures whether customers reach promised value; this view measures whether bets move business results. Both must exist).</p>
+    <nav class="reader-pager">
+      <a href="appendix-a-installation-guide-a-first-90-days-sequence.html" class="btn btn--outline reader-pager__prev">&larr; Appendix A: Installation Guide - A First-90-Days Sequence</a>
+      <a href="appendix-c-function-specific-decision-interface-charters.html" class="btn btn--primary reader-pager__next">Appendix C: Function-Specific Decision Interface Charters &rarr;</a>
+    </nav>
+  </article>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="https://productbeacon.agency/" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Senior product leadership, AI-powered execution.</p>
+      </div>
+      <div class="footer__col">
+        <h4>The Book</h4>
+        <a href="../index.html">Overview</a>
+        <a href="../reader/index.html">Read Online</a>
+        <a href="../downloads/vision-to-value.pdf">Download PDF</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="https://productbeacon.agency/case-studies.html">Case Studies</a>
+        <a href="https://productbeacon.agency/insights/">Insights</a>
+        <a href="https://productbeacon.agency/about.html">About</a>
+        <a href="https://productbeacon.agency/contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="https://github.com/yohayetsion/product-org-os" target="_blank" rel="noopener">Product Org OS</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 ProductBeacon. A brand of Etsion Brands Ltd. Book text licensed CC-BY 4.0.</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" role="img" aria-label="The Product Organization Seat Roster">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <marker id="arrowhead-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5B8AC0"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 18px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1000" height="720" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="500.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Product Organization Seat Roster</text>
+<text x="500.0" y="58" class="small" text-anchor="middle">Who sits inside the product organization — and who sits at the boundary as peer.</text>
+<text x="500.0" y="102" class="rail" text-anchor="middle" style="font-size:10px">INSIDE THE PRODUCT ORGANIZATION</text>
+<rect x="40.0" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="102.28571428571428" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="102.28571428571428" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Management</text>
+<rect x="172.57142857142856" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="234.85714285714283" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="234.85714285714283" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Marketing</text>
+<rect x="305.1428571428571" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="367.4285714285714" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Business</text>
+<text x="367.4285714285714" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Development</text>
+<rect x="437.71428571428567" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="499.99999999999994" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Competitive</text>
+<text x="499.99999999999994" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Intelligence</text>
+<rect x="570.2857142857142" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="632.5714285714286" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Business</text>
+<text x="632.5714285714286" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Operations</text>
+<rect x="702.8571428571428" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="765.1428571428571" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Product</text>
+<text x="765.1428571428571" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Operations</text>
+<rect x="835.4285714285713" y="118" width="124.57142857142857" height="100" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="897.7142857142857" y="159.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Value</text>
+<text x="897.7142857142857" y="175.0" class="label" text-anchor="middle" style="font-weight:700;font-size:12px">Realization</text>
+<line x1="40" y1="248" x2="960" y2="248" stroke="#A8C5E0" stroke-width="2"/>
+<text x="500.0" y="242" class="small" text-anchor="middle" style="font-size:8px;fill:#5B8AC0">boundary</text>
+<text x="500.0" y="274" class="rail" text-anchor="middle" style="font-size:10px">AT THE BOUNDARY — PEER FUNCTIONS</text>
+<rect x="40.0" y="290" width="221.0" height="92" rx="8" ry="8" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="2"/>
+<text x="150.5" y="312" class="sh" text-anchor="middle" style="font-weight:700;font-size:12px;fill:#1F3A5F">Engineering</text>
+<text x="150.5" y="332" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">owns technical bets and</text>
+<text x="150.5" y="345" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">platform decisions</text>
+<rect x="273.0" y="290" width="221.0" height="92" rx="8" ry="8" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="2"/>
+<text x="383.5" y="312" class="sh" text-anchor="middle" style="font-weight:700;font-size:12px;fill:#1F3A5F">Design / UX</text>
+<text x="383.5" y="332" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">owns experience coherence</text>
+<text x="383.5" y="345" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">and interaction model</text>
+<rect x="506.0" y="290" width="221.0" height="92" rx="8" ry="8" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="2"/>
+<text x="616.5" y="312" class="sh" text-anchor="middle" style="font-weight:700;font-size:12px;fill:#1F3A5F">Data &amp; Analytics</text>
+<text x="616.5" y="332" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">owns sensors,</text>
+<text x="616.5" y="345" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">instrumentation, outcome</text>
+<text x="616.5" y="358" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">measurement</text>
+<rect x="739.0" y="290" width="221.0" height="92" rx="8" ry="8" fill="#FFFFFF" stroke="#5B8AC0" stroke-width="2"/>
+<text x="849.5" y="312" class="sh" text-anchor="middle" style="font-weight:700;font-size:12px;fill:#1F3A5F">Customer Success</text>
+<text x="849.5" y="332" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">owns account-level</text>
+<text x="849.5" y="345" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">decisions and</text>
+<text x="849.5" y="358" class="small" text-anchor="middle" style="font-size:10px;fill:#3B6BA5">intervention triggers</text>
+<text x="500.0" y="698" class="small" text-anchor="middle" style="fill:#3B6BA5">The Charter discipline names how decisions flow between the two tiers without collapsing the boundary.</text>
+</svg>

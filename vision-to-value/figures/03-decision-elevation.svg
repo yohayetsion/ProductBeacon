@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" width="880" height="640" role="img" aria-label="Decision Elevation: the PLT as the integration point across altitudes">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 16px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="880" height="640" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="440.0" y="36" class="h" text-anchor="middle" style="font-size:20px">Decision Elevation Across Altitudes</text>
+<text x="440.0" y="58" class="small" text-anchor="middle">Decisions elevate when scope expands; the Product Leadership Team is the integration point where altitudes meet.</text>
+<rect x="80" y="100" width="720" height="88" rx="8" ry="8" fill="#1F3A5F"/>
+<text x="104" y="132" class="sh" text-anchor="start" style="font-weight:700;font-size:14px;fill:#FFFFFF">CPO ALTITUDE</text>
+<text x="776" y="128" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">Portfolio shape, strategic intent,</text>
+<text x="776" y="144" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">executive interfaces.</text>
+<rect x="80" y="204" width="720" height="88" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="104" y="236" class="sh" text-anchor="start" style="font-weight:700;font-size:14px;fill:#FFFFFF">VP ALTITUDE</text>
+<text x="776" y="232" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">Cross-domain decisions,</text>
+<text x="776" y="248" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">functional portfolio coherence.</text>
+<rect x="80" y="308" width="720" height="88" rx="8" ry="8" fill="#5B8AC0" stroke="#E07C3E" stroke-width="3"/>
+<text x="104" y="340" class="sh" text-anchor="start" style="font-weight:700;font-size:14px;fill:#FFFFFF">DIRECTOR ALTITUDE</text>
+<text x="776" y="336" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">Cohort decisions, function-level Charters,</text>
+<text x="776" y="352" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">the PLT — the integration point.</text>
+<rect x="80" y="412" width="720" height="88" rx="8" ry="8" fill="#A8C5E0"/>
+<text x="104" y="444" class="sh" text-anchor="start" style="font-weight:700;font-size:14px;fill:#FFFFFF">TEAM ALTITUDE</text>
+<text x="776" y="440" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">Discovery, delivery, iteration</text>
+<text x="776" y="456" class="body" text-anchor="end" style="font-size:11px;fill:#FFFFFF">inside committed bets.</text>
+<line x1="110" y1="410" x2="110" y2="398" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="110" y1="306" x2="110" y2="294" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="110" y1="202" x2="110" y2="190" stroke="#3B6BA5" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="80" y="544" width="720" height="80" rx="8" ry="8" fill="#E8F0F8" stroke="#A8C5E0" stroke-width="1"/>
+<text x="96" y="566" class="sh" text-anchor="start" style="font-size:12px">Elevation rule</text>
+<text x="96" y="588" class="body" text-anchor="start" style="font-size:11px">A decision elevates to the altitude that owns the integration — not the altitude with the most authority.</text>
+<text x="96" y="606" class="body" text-anchor="start" style="font-size:11px">The PLT exists so cross-cohort decisions stop at the Director altitude rather than reaching the VP or CPO by default.</text>
+</svg>

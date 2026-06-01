@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix D: Glossary — Vision to Value</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ---- Vision to Value digital edition (book-reader additions) ---- */
+.v2v-figure { margin: var(--space-8) 0; text-align: center; }
+.v2v-figure img { max-width: 100%; height: auto; background: #fff; border-radius: var(--border-radius-sm); padding: var(--space-4); border: 1px solid var(--border); }
+.v2v-figure figcaption { color: var(--muted); font-size: 0.875rem; margin-top: var(--space-3); line-height: 1.5; max-width: 640px; margin-left:auto; margin-right:auto; }
+.v2v-table-wrap { overflow-x: auto; margin: var(--space-6) 0; }
+
+/* Reader shell: contents sidebar + content column */
+.reader-shell { max-width: 1100px; margin: 0 auto; padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-12); display: grid; grid-template-columns: 260px 1fr; gap: var(--space-12); align-items: start; }
+.reader-toc { position: sticky; top: calc(var(--nav-height) + var(--space-6)); max-height: calc(100vh - var(--nav-height) - var(--space-12)); overflow-y: auto; border-right: 1px solid var(--border); padding-right: var(--space-6); }
+.reader-toc h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--space-4); }
+.reader-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+.reader-toc li { margin-bottom: var(--space-2); }
+.reader-toc a { color: var(--secondary); font-size: 0.9rem; line-height: 1.4; text-decoration: none; display: block; padding: 4px 0; }
+.reader-toc a:hover { color: var(--amber); }
+.reader-toc a.current { color: var(--amber); font-weight: 600; }
+.reader-content { min-width: 0; max-width: var(--content-width); }
+.reader-content h1 { font-size: 2.25rem; margin-bottom: var(--space-8); line-height: 1.15; }
+.reader-content p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.reader-content h2 { font-size: 1.6rem; margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--border); color: var(--bright); }
+.reader-content h3 { font-size: 1.2rem; margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--text); }
+.reader-content ul, .reader-content ol { color: var(--secondary); padding-left: var(--space-6); margin-bottom: var(--space-4); line-height: 1.75; }
+.reader-content li { margin-bottom: var(--space-2); }
+.reader-content strong { color: var(--text); }
+.reader-content em { color: var(--text); }
+.reader-pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--border); }
+.reader-pager a { flex: 1; }
+.reader-pager .reader-pager__next { text-align: right; }
+.reader-progress { font-size: 0.8rem; color: var(--muted); margin-bottom: var(--space-6); font-family: var(--font-mono); }
+
+/* Landing-specific */
+.book-hero { padding-top: calc(var(--nav-height) + var(--space-20)); padding-bottom: var(--space-16); }
+.book-hero__series { color: var(--amber); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-4); }
+.book-hero h1 { font-size: 3.25rem; line-height: 1.08; margin-bottom: var(--space-3); }
+.book-hero__subtitle { font-size: 1.4rem; color: var(--secondary); margin-bottom: var(--space-6); }
+.book-hero__thesis { font-size: 1.2rem; color: var(--text); max-width: 680px; line-height: 1.6; margin-bottom: var(--space-8); }
+.book-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-4); }
+.book-blurb { max-width: var(--content-width); margin: 0 auto; }
+.book-blurb p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.book-blurb strong { color: var(--text); }
+.soft-ask { background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius); padding: var(--space-8); margin-top: var(--space-8); }
+.soft-ask h3 { margin-bottom: var(--space-2); }
+.soft-ask p { color: var(--secondary); font-size: 0.95rem; margin-bottom: var(--space-4); }
+.soft-ask form { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.soft-ask input[type=email] { flex: 1; min-width: 220px; background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius-sm); padding: var(--space-3) var(--space-4); color: var(--text); font-family: var(--font-sans); font-size: 1rem; }
+.soft-ask input[type=email]:focus { outline: none; border-color: var(--amber); }
+.cc-note { font-size: 0.85rem; color: var(--muted); margin-top: var(--space-6); line-height: 1.6; }
+.cc-note a { color: var(--secondary); }
+.whats-inside { max-width: var(--content-width); margin: var(--space-16) auto 0; }
+.whats-inside ul { color: var(--secondary); padding-left: var(--space-6); line-height: 1.75; }
+.whats-inside li { margin-bottom: var(--space-3); }
+
+@media (max-width: 860px) {
+  .reader-shell { grid-template-columns: 1fr; gap: var(--space-6); }
+  .reader-toc { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: var(--space-6); }
+  .book-hero h1 { font-size: 2.4rem; }
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="https://productbeacon.agency/" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="https://productbeacon.agency/services.html">Services</a></li>
+      <li><a href="https://productbeacon.agency/insights/">Insights</a></li>
+      <li><a href="../index.html" class="active">The Book</a></li>
+      <li><a href="https://productbeacon.agency/about.html">About</a></li>
+      <li><a href="https://productbeacon.agency/contact.html">Contact</a></li>
+      <li><a href="https://productbeacon.agency/contact.html" class="btn btn--primary btn--lg">Book a Call</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="https://productbeacon.agency/services.html" role="menuitem">Services</a>
+    <a href="https://productbeacon.agency/insights/" role="menuitem">Insights</a>
+    <a href="../index.html" role="menuitem">The Book</a>
+    <a href="https://productbeacon.agency/about.html" role="menuitem">About</a>
+    <a href="https://productbeacon.agency/contact.html" role="menuitem">Contact</a>
+    <a href="https://productbeacon.agency/contact.html" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Book a Call</a>
+  </div>
+</nav>
+<div class="reader-shell">
+  <aside class="reader-toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="preface.html">Preface</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="chapter-1-end-to-end-product-organizations.html">Chapter 1: End-to-end Product Organizations</a></li>
+<li><a href="chapter-2-the-strategic-process-and-operational-focus-areas.html">Chapter 2: The Strategic Process and Operational Focus Areas</a></li>
+<li><a href="chapter-3-structure-and-scope.html">Chapter 3: Structure and Scope</a></li>
+<li><a href="chapter-4-decision-interfaces-and-the-architecture.html">Chapter 4: Decision Interfaces and the Architecture</a></li>
+<li><a href="chapter-5-scaling-as-design-problem.html">Chapter 5: Scaling as Design Problem</a></li>
+<li><a href="chapter-6-people-at-scale.html">Chapter 6: People at Scale</a></li>
+<li><a href="chapter-7-the-executive-altitude.html">Chapter 7: The Executive Altitude</a></li>
+<li><a href="chapter-8-the-eight-operating-principles.html">Chapter 8: The Eight Operating Principles</a></li>
+<li><a href="conclusion-from-vision-to-value.html">Conclusion: From Vision to Value</a></li>
+<li><a href="appendix-a-installation-guide-a-first-90-days-sequence.html">Appendix A: Installation Guide - A First-90-Days Sequence</a></li>
+<li><a href="appendix-b-decision-system-blueprints-and-economic-artifacts-templates.html">Appendix B: Decision System Blueprints and Economic Artifacts (Templates)</a></li>
+<li><a href="appendix-c-function-specific-decision-interface-charters.html">Appendix C: Function-Specific Decision Interface Charters</a></li>
+<li><a href="appendix-d-glossary.html" class="current">Appendix D: Glossary</a></li>
+<li><a href="appendix-e-further-resources.html">Appendix E: Further Resources</a></li>
+
+    </ol>
+  </aside>
+  <article class="reader-content">
+    <p class="reader-progress">Vision to Value &middot; 15 / 16</p>
+    <h1>Appendix D: Glossary</h1>
+    <p>Each term below carries operational weight in the book. Definitions are extracted from the body where the term first does that work, so a reader handing a chapter to a peer can point to a single page rather than re-explaining the vocabulary. Where a term has multiple conventional meanings, this appendix fixes the meaning used here.</p>
+<p><strong>Adoption depth.</strong> How fully customers are using the product across the feature surface and across their own use cases, measured as a trajectory rather than a single activation threshold. Adoption depth is the difference between a customer who activated once and a customer who routinely reaches value. (Chapter 1, Chapter 2)</p>
+<p><strong>Board Bet Review Charter.</strong> The specialization of the Decision Interface Charter that governs the quarterly portfolio-review surface between the product organization, the CEO, and the board. Owned by the CPO and co-signed with the CEO, cadenced against the board calendar. The forum in which the portfolio of strategic bets is reviewed against outcome evidence, continuation thresholds are honored or breached on the record, and stop-continue-renew calls are made with capital-allocation consequences attached. Not the board deck (a communication artifact) and not the Product Leadership Team (PLT) portfolio review (an internal artifact). The highest-leverage artifact a CPO installs after the Decision Interface Charter in Appendix B. (Chapter 3, Chapter 7)</p>
+<p><strong>Business-Case / Continuation-Threshold Template.</strong> The living per-bet artifact that every strategic bet carries from formulation through portfolio review. Replaces the ad-hoc business case (written once at approval, never revisited) with a document whose continuation-threshold field is re-evaluated at each portfolio review. Owned by Product Business Operations. Gating input to the portfolio review per the sensor-compulsion protocol: if the business case is absent, stale, or has no continuation-threshold field authored, the portfolio review cannot adjourn with a continue decision on the bet. (Chapter 2, Appendix B)</p>
+<p><strong>Buyer versus user.</strong> The distinction between the person who purchases a product (buyer) and the person who uses it (user). In B2B they are frequently different; their insights generate different requirements, both of which must inform scope before build-lock. Product Management is typically user-proximate; Product Marketing is typically buyer-proximate. (Chapter 8, Principle 5)</p>
+<p><strong>Cadence.</strong> The scheduled rhythm of recurring decisions and reviews inside the operating calendar. Not frequency, not &quot;a meeting.&quot; A cadence has an owner, a pre-read deadline, a decision artifact, and a re-decision trigger. (Principle 6; Chapter 3; Chapter 5)</p>
+<p><strong>Capital allocation (product-org sense).</strong> The explicit treatment of a product portfolio as a finite pool of organizational resources - people, attention, market position, time - against which every strategic bet earns or fails to earn its next increment of investment. (Chapter 2)</p>
+<p><strong>Category context.</strong> The shared frame that buyers, analysts, and competitors use to define what a product is and what it competes with. Category context can be stable (mature category), contested (category fight), or in formation (category creation). Formulation bets depend on which one the organization is running inside. (Chapter 2)</p>
+<p><strong>Channel.</strong> A path to market through an external party - reseller, distributor, system integrator, OEM, marketplace, or platform. Distinct from a marketing channel (paid search, email). In this book, &quot;channel&quot; used positively refers to the path-to-market sense. (Chapter 8, Chapter 2, Chapter 5)</p>
+<p><strong>Commitment.</strong> A decision that has been hardened through sequencing, funding, external promise, or organizational dependency, such that changing it now requires a conscious re-decision, not quiet drift. A roadmap item that triggered hiring is a commitment. A demo that reshaped what the market expects is a commitment. A slide in a deck is not. (Introduction, Chapter 2)</p>
+<p><strong>Commitment drift.</strong> The pattern by which commitments quietly degrade over time. Four modes recur: <em>vague</em> (&quot;improve onboarding&quot; with no metric or trigger), <em>politically negotiated</em> (compromise bundles no one can own or measure), <em>decoupled from outcomes</em> (delivery date becomes the only truth; adoption misses reinterpreted as execution issues), and <em>decoupled from market context</em> (the bet is held even after the competitive or category frame that justified it has shifted). Commitment drift is the failure mode the re-decision trigger is designed to prevent. (Chapter 2)</p>
+<p><strong>Commitment hardening.</strong> The step where a product decision becomes a cross-functional promise with resources, a timeline, and success criteria. In executive terms: the step where a bet becomes budgeted - not &quot;deciding to fund&quot; but &quot;the decision that binds the funding.&quot; Operationalized as a one-page decision record defining the measurable outcome, the constraints, the named owner, and what success looks like at 30/60/90 days. (Chapter 2)</p>
+<p><strong>Competitive context.</strong> The external frame a product decision is made against: the named alternatives the buyer considers, the substitutes in the segment, the category position, the win/loss signal, and any market-timing window or competitor move on the roadmap. A required input slot in the Decision Interface Charter. (Chapter 1, Chapter 2, Appendix B)</p>
+<p><strong>Competitive narrative.</strong> The defended answer to how this product wins against a named alternative. Owned by Product Marketing; surfaced through win-loss methodology, battlecards, and counter-positioning. A positioning statement without a competitive narrative is incomplete. (Chapter 8, Principle 5)</p>
+<p><strong>Continuation threshold.</strong> The evidence a strategic bet must produce to earn its next increment of investment. The product-organization equivalent of a hurdle rate. (Chapter 2)</p>
+<p><strong>Core functions (of the product organization).</strong> The three functions that formulate, elaborate, and execute product strategy: Product Management (what to build and why), Product Marketing (how the market will receive it and at what terms), and Business Development (which adjacent markets, partners, and ecosystems shape the strategy&#x27;s boundary). Each owns a distinct strategic formulation surface and attends the PLT by default. Core is a relationship to the decision, not a rank. (Chapter 3)</p>
+<p><strong>Cost of the break (of a signature decision).</strong> The business consequence when the signature decision of a principle goes wrong - for example, for Principle 5, discount-driven pipeline and ACV compression. Named alongside each principle&#x27;s signature decision so the operating cost of the failure mode is visible, not implied. (Chapter 8)</p>
+<p><strong>Cost-to-serve.</strong> The total cost an organization absorbs to operate a launched product per customer or per account - CS load, support volume, escalation rate, reliability overhead. Treated in this book as an outcome to be decided on, not an operational guardrail. (Introduction, Chapter 1)</p>
+<p><strong>Customer as final adjudicator.</strong> The convention this book uses that decision quality has one final arbiter, and it is neither the market nor the portfolio nor the leadership team - it is the customer, and the verdict is delivered in behavior and outcome against what was committed. Shipped is an engineering state, adopted is a behavioral state, valued is the customer&#x27;s verdict - and only the third state closes the loop. Value Realization is the function that makes that verdict visible cohort by cohort and bet by bet. (Chapter 1)</p>
+<p><strong>Customer health score.</strong> A structured, weighted view of a customer&#x27;s likelihood to renew, expand, or churn, combining usage signals, adoption depth, support signal, and relationship signal. In a mature product organization, a health score is a decision artifact that triggers account-level re-decisions (intervention, escalation, expansion eligibility) - not a reporting dashboard. (Chapter 2, Chapter 3)</p>
+<p><strong>Decision elevation.</strong> When a decision is moved up one or more layers of leadership for resolution. In executive terms: escalation, with the specific discipline that what gets elevated is the decision, not the problem. A problem escalated without a decision frame is a complaint. (Chapter 3)</p>
+<p><strong>Decision Improvability.</strong> The organization&#x27;s ability to make the same class of decision better this quarter than last quarter, because quality, repeatability, and durability reinforce one another. Decision Improvability is the scoreboard of a working decision system at the Product Organization altitude - measured not by the single decision, but by the trajectory of a class of decisions over a meaningful window. When an organization says &quot;we are good at launch-readiness decisions now,&quot; it is claiming Decision Improvability on that class. (Chapter 1)</p>
+<p><strong>Decision Interface Charter.</strong> A written artifact governing a recurring cross-functional decision: owner, inputs, forum, cadence, success criteria, escalation rule, re-decision trigger. The signature artifact of the decision system, and the template most likely to be installed first when a reader adopts the book on Monday. See Appendix B for the canonical template. (Chapter 3, Appendix B)</p>
+<p><strong>Decision latency.</strong> The elapsed time between the moment a decision becomes necessary and the moment it is actually made and acted upon. Low decision latency is a capability, not a virtue - the goal is not speed, but the absence of unearned delay. Rising latency almost always precedes rising commitment drift. (Introduction, Chapter 8)</p>
+<p><strong>Decision record.</strong> A persistent, findable artifact capturing a specific decision, its owner, its context, its assumptions, and its re-decision trigger. One of the three mandatory artifacts of the decision system. A decision record that cannot be found in 30 seconds by someone who was not in the room is not a decision record - it is a meeting note. (Chapter 3, Appendix B)</p>
+<p><strong>Decomposition axes (pipeline / invariants / meta-process).</strong> The three orthogonal ways this book decomposes the Product Organization&#x27;s custodianship of the decision system. <em>Pipeline</em>: intent → decisions → commitments → execution → outcomes → learning (Introduction, Chapter 8). <em>Invariants</em>: the eight operating principles that must hold at every pipeline stage (Chapter 8). <em>Meta-process</em>: the strategic-process phases - formulation, elaboration, execution - that design and adjust the pipeline itself (Chapter 2). Each chapter works primarily in one of the three axes. (Introduction)</p>
+<p><strong>Demo narrative.</strong> The Product-Marketing-owned artifact that sequences a product demonstration as a story - protagonist, conflict, resolution - rather than a feature tour. Written before build-lock when Product and Product Marketing co-decide positioning; reviewed as Sales Engineering rehearses it. A capability that is &quot;hard to demo&quot; at launch is almost always a capability whose demo narrative was not written on time. (Chapter 8, Principle 5)</p>
+<p><strong>Discount authority.</strong> The explicit, documented decision about who can approve which discount level, what triggers escalation, and how exceptions are logged. Treated in this book as a first-class decision interface, not a sales-ops artifact. (Chapter 3)</p>
+<p><strong>Ecosystem.</strong> The external set of platforms, partners, integrations, and dependencies through which a product creates or captures value. Named as a conditional fifth operational domain at scale for organizations whose strategy depends on external leverage. (Chapter 2)</p>
+<p><strong>Empowerment (sensor) layer.</strong> The two functions that inform the decision system by reading different surfaces: Competitive Intelligence reads the market (competitor moves, category dynamics, substitutes, win/loss signal, analyst landscape for sensing purposes); Business Operations reads the business (P&amp;L hygiene across regions, booking-data hygiene, GTM push via sales systems, product-initiative-to-business tracking, and the pre-reads that make portfolio and kill decisions defensible). Sensor reads are gating inputs to the portfolio review, not consultative; if absent or stale, the review cannot adjourn with a continue decision on that bet. (Chapter 3, Chapter 5, Appendix B)</p>
+<p><strong>Embedded versus federated Product Operations.</strong> The org-design tradeoff for Product Operations: embedded (Product Operations talent inside each product line, proximity to the work) versus federated (central team reporting to the CPO, consistency across lines). Most mature orgs adopt a hybrid. (Chapter 3)</p>
+<p><strong>End-to-end ownership.</strong> Accountability for the integrity of decisions across the full value loop, from strategic intent through adoption and outcomes. It is explicitly not ownership of every function. Peer leaders - Engineering, Go-to-Market, Finance, Legal, Customer Success - remain fully accountable for how their functions execute inside that loop. In executive terms: end-to-end ownership is a leadership agreement to prevent value loss between functions, not a power grab. (Chapter 1)</p>
+<p><strong>Execution functions (of the product organization).</strong> The four functions that deliver against committed strategy: Product Operations (the operating layer the CPO designs - cadence, archive, telemetry), Design (interaction-model ownership), Customer Success (account-level intervention authority, cost-to-serve envelope, onboarding-intensity design), and Value Realization (cohort-level expansion-readiness authority and bet-invalidation calls at T+6/T+12). Execution is the work that determines whether a strategic bet becomes a lived outcome or a document in a drawer. Execution is a relationship to the decision, not a rank below core. (Chapter 3, Chapter 5)</p>
+<p><strong>Executive altitude (interfaces at).</strong> The nine executive contact surfaces a CPO must design as decision interfaces rather than inherit as performed relationships: CEO-CPO, CPO-Board, CPO-CFO, CPO-GC, CPO-COO. Each uses the Charter discipline from Appendix B with inputs, decision rights, cadence, record, and re-decision triggers adapted to the counterparty. The interfaces that compound executive trust when designed, and the interfaces that break CPO tenure when they are not. (Chapter 7)</p>
+<p><strong>GTM-to-P&amp;L Traceability View.</strong> The report that connects strategic product investment to realized business outcome at bet-level, portfolio-level, and business-level. Owned by Product Business Operations; consumes data from RevOps, PMM, CS-ops, and Product analytics. Consultative to the quarterly portfolio review and gating to the monthly Product-line Review at bet-level. Variance flags in the view (&gt; 20% deviation between realized and hypothesized) are candidate re-decision triggers. (Chapter 2, Appendix B)</p>
+<p><strong>Launch readiness.</strong> The decision interface governing go / delay / de-scope for a product launch. Gated at T-14 with required inputs from PMM, CS, Engineering, Sales; chaired by Product Operations in mature organizations. (Chapter 1, Chapter 3)</p>
+<p><strong>Launch tiering.</strong> The discipline of classifying a release as T1 (flagship - full Decision Interface Charter), T2 (managed - lighter interface), or T3 (quiet release - ceremony explicitly stripped). The Decision Interface Charter template in Appendix B is the T1 archetype. Applying T1 weight to a T3 ship is governance theater; applying T3 weight to a T1 decision is the failure mode Principle 5 is designed to prevent. (Chapter 8, Principle 5; Chapter 5)</p>
+<p><strong>Make-vs-buy-vs-partner.</strong> The sourcing decision inside every strategic bet: whether the capability required to execute the bet is built internally, acquired, licensed, integrated through a partner, or routed through a channel. A first-class Formulation output, co-decided by the Product Leadership Team, Corporate Development, and the CRO, with the CPO accountable for the sourcing call and Corporate Development accountable for the deal structure that carries it. (Chapter 2)</p>
+<p><strong>Market evidence.</strong> External evidence that reopens a decision: a named competitor ships a substitute inside the target segment, a new entrant redefines the category, a pricing move compresses a premium, or a substitute changes what the buyer compares the product to. Paired with outcome evidence as the two trigger classes for re-decisions in Principle 6. (Chapter 8, Principle 6)</p>
+<p><strong>Market sensing.</strong> The discipline of maintaining an external reference frame for the product organization: competitor moves, category dynamics, substitutes, pricing benchmarks, and the market-timing window. Lives inside Competitive Intelligence or Market Insights; may sit inside PMM, Strategy, or a named CI function depending on the organization. (Chapter 1, Chapter 2)</p>
+<p><strong>Messaging architecture.</strong> The message hierarchy that nests from corporate narrative through product narrative, feature narrative, campaign narrative, sales talk-track, web copy, and in-product copy. When well-designed, every message level is consistent with the one above it. Owned by Product Marketing; to the Product Marketing function what the roadmap is to the Product Management function. (Chapter 1, Chapter 8)</p>
+<p><strong>Metric integrity.</strong> The operational discipline - not a value statement - that keeps metric definitions stable and auditable across the organization. Requires five conditions: a single definition, a stable measurement window, a single owner per metric, a single source of truth across Product, Data, Finance, and RevOps, and documented exclusions. When any of the five drift, the organization is no longer measuring the same thing it was measuring last quarter, and the learning signal degrades silently. (Chapter 8, Principle 6)</p>
+<p><strong>Motion (direct / partner-mediated / hybrid).</strong> The choice of how a product reaches its market: direct (own salesforce, own channel), partner-mediated (reseller, OEM, co-sell, platform), or hybrid (both). Named in Principle 5 as a Product Leadership Team decision co-decided with the CRO, with the CPO accountable for the motion call and the CRO accountable for the sales execution it contracts for, not a sales decision made after the product ships. (Chapter 8)</p>
+<p><strong>Net Revenue Retention (NRR) / Expansion.</strong> The compounding revenue contribution from existing customers (expansion, upgrade, cross-sell) minus contraction and churn, expressed as a ratio. In modern B2B SaaS, NRR is the single most important growth lever; expansion is increasingly a product-owned outcome (product-led expansion, usage-based pricing, in-product upgrade flows), not solely a sales motion. (Chapter 2, Appendix B)</p>
+<p><strong>Observability (of the decision system).</strong> The property of a decision system that allows its machinery - not just its outcomes - to be measured in real time. Derived from five system-level signals: decision latency, re-decision frequency, charter age distribution, share of decisions with measured outcomes, and bet disposition mix (renewed / revised / stopped). All five are derivable from the system&#x27;s own artifacts; no new instrumentation required. (Chapter 5, Principle 6)</p>
+<p><strong>Operating calendar.</strong> The published, versioned schedule that sequences the rituals in the Canonical Rituals table. An artifact, not a convention. A calendar that lives only in individual leaders&#x27; heads is a Product Operations failure. (Chapter 5, Appendix B)</p>
+<p><strong>Operating layer.</strong> The scaffolding that makes the decision system durable day to day — tools, dashboards, rituals, cadences, RACI artifacts. Owned by Product Operations. Distinct from the decision system itself (which is what the Product Organization holds as custodian and what this blueprint describes). (Introduction, Chapter 3)</p>
+<p><strong>Decision system (Product Organization custodianship of).</strong> The set of principles, decision models, and structural defaults a Product Organization holds as custodian of the company&#x27;s company-wide decision-making — the integrity of the value loop from intent to outcomes. The book is the blueprint; the open Decision Provenance Standard is the bridge; the open-source Product Org OS is the reference implementation. Distinct from the operating layer (which is the scaffolding that makes the decision system durable day-to-day, owned by Product Operations). (Introduction)</p>
+<p><strong>Outcomes and outputs.</strong> Outputs are the work a product organization produces - features shipped, plans delivered, documents authored. Outcomes are what those outputs produce in the world - customer behavior change, adoption, value realized. A strategic bet&#x27;s success definition ties to outcomes, not outputs; organizations that optimize for output without measuring outcomes produce motion without compounding value. At scale, outcomes are measured across three horizons: leading (T+2 weeks), mid (T+6), and lagging (T+12+). (Introduction, Chapter 2, Chapter 5)</p>
+<p><strong>Partner-mediated GTM.</strong> Go-to-market motion that depends on one or more external parties to reach the customer. A scope extension of Interface 2 (Product and Go-to-market), not a separate Interface. Adds partner enablement readiness, co-sell motion alignment, partner-margin constraints, API and integration ownership, and procurement / compliance gates to the standard Interface 2 decision set. (Chapter 5)</p>
+<p><strong>Peer contract.</strong> The agreement between product leadership and peer leaders in Engineering, Sales, Marketing, and Customer Success about how cross-functional decisions get made, without reporting-line change. Requires shared success definitions for each strategic bet, early explicit inputs before commitments harden, joint go / no-go participation, and mutual enforcement of agreed decision boundaries. (Chapter 1)</p>
+<p><strong>Peer contract, external extension.</strong> The convention that the peer contract defined in Chapter 1 extends across the company boundary when a significant share of value depends on an external party: a platform owner, an integration partner, a regulated channel, a reseller, or a systems integrator. The discipline is harder to enforce and more expensive to get wrong than intramural peer contracts. Business Development operates the contract on Product&#x27;s behalf. (Chapter 1)</p>
+<p><strong>Platform intake.</strong> The decision interface governing how shared platform capacity is prioritized across product lines. Usually held as a monthly Platform Intake Council, chaired by Product Operations. (Chapter 5)</p>
+<p><strong>Portfolio layer.</strong> The leadership mechanism that makes cross-team, cross-bet tradeoffs explicit rather than implicit. The decision altitude at which stop / continue / re-scope decisions and strategic-coherence questions are made. Distinct from the team layer (which decides how to execute within a committed bet) and the strategic layer (which decides where the organization competes at all). (Chapter 5)</p>
+<p><strong>Portfolio-Review Financial Pre-Read.</strong> The artifact that converts the quarterly portfolio review from a status readout into a capital-allocation decision forum. Published to PLT 48 hours before each review; synthesized across every active bet by Product Business Operations. Gating input to the portfolio review per the sensor-compulsion protocol: if the pre-read is absent, stale (older than 72 hours at review start), or missing fields on any active bet, the portfolio review cannot adjourn with a continue decision on the affected bets. The single most load-bearing gating relationship in the empowerment tier - what converts Business Operations from advisory to accountable. (Chapter 5, Appendix B)</p>
+<p><strong>Positioning-against-alternatives.</strong> The test of whether positioning was defined against the options the buyer actually weighs, including substitutes, status quo, and adjacent categories. The fourth question in the Go-to-market Integration Test and one of Principle 5&#x27;s leader behaviors. (Chapter 8, Principle 5)</p>
+<p><strong>Positioning statement.</strong> The named artifact that declares who the product is for, what category it competes in, and what makes it credibly different. A Product Marketing deliverable; the root of the messaging architecture. (Chapter 1, Chapter 8)</p>
+<p><strong>Pricing and packaging as a shared decision right.</strong> The convention used in this book that pricing decisions have three accountable owners across scope: Product owns pricing intent (the value story the price reflects), Product Marketing owns tier design and willingness-to-pay evidence, and Finance owns the margin floor. Sales is a required input on realized price. A Charter that names all four is the single highest-leverage Charter most scaled organizations can design. (Chapter 8, Chapter 2, Chapter 3)</p>
+<p><strong>Product Leadership Team (PLT).</strong> The cross-tier, Director-plus forum accountable for coherence across strategy, execution, and outcomes. Altitude gates membership, not tier: Directors and above from every tier of the product organization attend when their function&#x27;s constraints or capabilities are material to the decision at hand. Core Directors (Product Management, Product Marketing, Business Development) are always seated because each owns a strategic formulation surface. Empowerment Directors (Competitive Intelligence, Business Operations) are seated so sensor reads enter the decision directly rather than being filtered through core. Execution Directors (Product Operations, Design, Customer Success, Value Realization) are seated when the decision touches the surface they run. Peer executives (Sales/CRO, Finance/CFO, Legal/GC, Engineering) rotate in by decision type. The CPO chairs and holds the system; the CPO is the architect of the tiering, not a resident of any single tier. The PLT decides portfolio-level bets, cross-domain tradeoffs, decision boundaries, shared success definitions, and the re-decision log. It does not decide individual team execution choices, discovery details, or day-to-day delivery tradeoffs inside a committed bet. Distinct from the CPO&#x27;s functional leadership team (her direct reports): the direct-reports team is a functional forum, the PLT is a decision forum. In executive terms: the operating committee equivalent for the product organization. (Chapter 1, Chapter 3, Chapter 5)</p>
+<p><strong>Product Operations.</strong> The function that stewards the operating layer. Not program management, not chief of staff, not dashboard maintenance. Responsible for the operating calendar, the decision-record archive, the interface-charter library, launch-readiness standards, and instrumentation discipline. Led by directors and VPs in mature organizations. (Chapter 3, Chapter 5)</p>
+<p><strong>Re-decision trigger.</strong> An outcome condition defined up-front that forces a decision to reopen, regardless of status. The learning loop made structural. A working Charter carries at least one outcome-evidence trigger (metrics miss guardrails) and one market-evidence trigger (a competitor launches a substitute in the target segment, a new entrant redefines the category, or a pricing move compresses the premium). (Chapter 8, Chapter 5, Appendix B)</p>
+<p><strong>Reversibility.</strong> The test <em>if this decision proves wrong, how long does it take to unwind, and what does the unwinding cost?</em> Determines whether a decision should be timeboxed and delegated or hardened with commitment treatment. (Chapter 8, Chapter 2)</p>
+<p><strong>Sales enablement.</strong> The Product-Marketing-owned set of artifacts, co-decided with Sales where sales scope is wider so the battlecards and demo scripts survive contact with the field, with PMM accountable for the artifacts themselves and Sales accountable for field-side adoption and feedback: battlecards, discovery guides, demo scripts, objection handling, win-wire reviews. Distinct from sales operations (quota, territory, CRM). A Decision Interface Charter for launch readiness without sales enablement as a required input is incomplete. (Chapter 8, Chapter 3)</p>
+<p><strong>Sensor-compulsion protocol.</strong> The operational rule - named in Appendix B and enforced throughout the empowerment tier - that empowerment-tier sensor reads (Business Operations pre-read, CI market read) are gating inputs to the portfolio review, not consultative commentary. If the sensor read is absent or stale, the review cannot adjourn with a continue decision on the bets those sensors cover. The structural mechanism that converts Business Operations and CI from advisory to accountable. (Chapter 3, Chapter 5, Appendix B)</p>
+<p><strong>State persistence.</strong> The property of a decision system that keeps its commitments, charters, and open decision records valid across leadership transitions, re-orgs, or acquisitions. Operationalized through a state audit at every transition: every active bet is explicitly recommitted, re-decided, or retired, never silently abandoned. (Chapter 5)</p>
+<p><strong>Strategic bet.</strong> A decision to pursue a specific outcome in a specific market under a specific hypothesis, with sustained investment and an explicit re-decision trigger. A bet is larger than a feature and more durable than a roadmap item. It carries a named accountable owner, a success definition tied to outcomes (not output), a resource envelope, and a decision rule for when to continue, revise, or stop. The minimum unit of formulation is the bet, not the initiative. (Chapter 2)</p>
+<p><strong>Substitute / alternative.</strong> Anything the buyer could choose instead of the product - including direct competitors, indirect competitors, adjacent categories, in-house builds, and doing nothing. A required component of the competitive-context input. (Chapter 2, Appendix B)</p>
+<p><strong>Three capabilities (decision quality / repeatability / durability).</strong> The evaluation lens used in every chapter of this book. <em>Decision quality</em> is making the right calls given available information and constraints. <em>Decision repeatability</em> is enabling those decisions to be made consistently beyond individual leaders. <em>Decision durability</em> is ensuring decisions survive time, scale, and organizational pressure. Vision turns into value only when all three are present. (Introduction)</p>
+<p><strong>Time-to-value (TTV).</strong> The duration between a customer&#x27;s first use of the product and the customer&#x27;s first realized value event - the moment the customer knows the product was worth the money. The most predictive leading indicator for retention and expansion. Measured from the customer&#x27;s perspective, not the vendor&#x27;s onboarding checklist. (Chapter 1, Chapter 2)</p>
+<p><strong>Value realization review.</strong> A cadenced review where adoption, time-to-value, customer health, and expansion signals are read against the strategic bets that produced them. The peer cadence to the portfolio review: the portfolio review reads the business results of decisions; the value realization review reads the customer results. The two must reconcile. (Chapter 2, Chapter 3)</p>
+<p><strong>Win/loss signal.</strong> The structured read of why deals were won or lost across a defined window, used as a re-decision signal into Formulation and into Principle 6&#x27;s learning loop. Distinct from the PMM-owned <em>product of</em> win/loss (battlecards, messaging, packaging inputs); CI owns win/loss as decision signal, PMM owns win/loss as GTM input. (Chapter 1, Chapter 2)</p>
+<p><strong>Win-loss (methodology).</strong> A Product-Marketing-owned evidence-gathering methodology that reviews why deals close and why they do not. A methodology, not a passive signal. Feeds competitive narrative, positioning revisions, and pricing tier adjustments. Distinct from the CI-owned win/loss signal, which treats the same evidence as a re-decision trigger into Formulation. (Chapter 1)</p>
+<p><strong>World-class (product organization).</strong> Not a brand or benchmark. In this book, a product organization defined by three co-present capabilities: routine decision quality, preservation under scale, and learning that makes the next decision better than the last. Title, company size, and industry are not proxies. (Chapter 8)</p>
+    <nav class="reader-pager">
+      <a href="appendix-c-function-specific-decision-interface-charters.html" class="btn btn--outline reader-pager__prev">&larr; Appendix C: Function-Specific Decision Interface Charters</a>
+      <a href="appendix-e-further-resources.html" class="btn btn--primary reader-pager__next">Appendix E: Further Resources &rarr;</a>
+    </nav>
+  </article>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="https://productbeacon.agency/" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Senior product leadership, AI-powered execution.</p>
+      </div>
+      <div class="footer__col">
+        <h4>The Book</h4>
+        <a href="../index.html">Overview</a>
+        <a href="../reader/index.html">Read Online</a>
+        <a href="../downloads/vision-to-value.pdf">Download PDF</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="https://productbeacon.agency/case-studies.html">Case Studies</a>
+        <a href="https://productbeacon.agency/insights/">Insights</a>
+        <a href="https://productbeacon.agency/about.html">About</a>
+        <a href="https://productbeacon.agency/contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="https://github.com/yohayetsion/product-org-os" target="_blank" rel="noopener">Product Org OS</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 ProductBeacon. A brand of Etsion Brands Ltd. Book text licensed CC-BY 4.0.</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

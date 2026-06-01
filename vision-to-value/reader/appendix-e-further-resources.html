@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appendix E: Further Resources — Vision to Value</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* ---- Vision to Value digital edition (book-reader additions) ---- */
+.v2v-figure { margin: var(--space-8) 0; text-align: center; }
+.v2v-figure img { max-width: 100%; height: auto; background: #fff; border-radius: var(--border-radius-sm); padding: var(--space-4); border: 1px solid var(--border); }
+.v2v-figure figcaption { color: var(--muted); font-size: 0.875rem; margin-top: var(--space-3); line-height: 1.5; max-width: 640px; margin-left:auto; margin-right:auto; }
+.v2v-table-wrap { overflow-x: auto; margin: var(--space-6) 0; }
+
+/* Reader shell: contents sidebar + content column */
+.reader-shell { max-width: 1100px; margin: 0 auto; padding: calc(var(--nav-height) + var(--space-12)) var(--space-6) var(--space-12); display: grid; grid-template-columns: 260px 1fr; gap: var(--space-12); align-items: start; }
+.reader-toc { position: sticky; top: calc(var(--nav-height) + var(--space-6)); max-height: calc(100vh - var(--nav-height) - var(--space-12)); overflow-y: auto; border-right: 1px solid var(--border); padding-right: var(--space-6); }
+.reader-toc h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--space-4); }
+.reader-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+.reader-toc li { margin-bottom: var(--space-2); }
+.reader-toc a { color: var(--secondary); font-size: 0.9rem; line-height: 1.4; text-decoration: none; display: block; padding: 4px 0; }
+.reader-toc a:hover { color: var(--amber); }
+.reader-toc a.current { color: var(--amber); font-weight: 600; }
+.reader-content { min-width: 0; max-width: var(--content-width); }
+.reader-content h1 { font-size: 2.25rem; margin-bottom: var(--space-8); line-height: 1.15; }
+.reader-content p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.reader-content h2 { font-size: 1.6rem; margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--border); color: var(--bright); }
+.reader-content h3 { font-size: 1.2rem; margin-top: var(--space-8); margin-bottom: var(--space-3); color: var(--text); }
+.reader-content ul, .reader-content ol { color: var(--secondary); padding-left: var(--space-6); margin-bottom: var(--space-4); line-height: 1.75; }
+.reader-content li { margin-bottom: var(--space-2); }
+.reader-content strong { color: var(--text); }
+.reader-content em { color: var(--text); }
+.reader-pager { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--border); }
+.reader-pager a { flex: 1; }
+.reader-pager .reader-pager__next { text-align: right; }
+.reader-progress { font-size: 0.8rem; color: var(--muted); margin-bottom: var(--space-6); font-family: var(--font-mono); }
+
+/* Landing-specific */
+.book-hero { padding-top: calc(var(--nav-height) + var(--space-20)); padding-bottom: var(--space-16); }
+.book-hero__series { color: var(--amber); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: var(--space-4); }
+.book-hero h1 { font-size: 3.25rem; line-height: 1.08; margin-bottom: var(--space-3); }
+.book-hero__subtitle { font-size: 1.4rem; color: var(--secondary); margin-bottom: var(--space-6); }
+.book-hero__thesis { font-size: 1.2rem; color: var(--text); max-width: 680px; line-height: 1.6; margin-bottom: var(--space-8); }
+.book-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-4); }
+.book-blurb { max-width: var(--content-width); margin: 0 auto; }
+.book-blurb p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: var(--space-4); }
+.book-blurb strong { color: var(--text); }
+.soft-ask { background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius); padding: var(--space-8); margin-top: var(--space-8); }
+.soft-ask h3 { margin-bottom: var(--space-2); }
+.soft-ask p { color: var(--secondary); font-size: 0.95rem; margin-bottom: var(--space-4); }
+.soft-ask form { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.soft-ask input[type=email] { flex: 1; min-width: 220px; background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius-sm); padding: var(--space-3) var(--space-4); color: var(--text); font-family: var(--font-sans); font-size: 1rem; }
+.soft-ask input[type=email]:focus { outline: none; border-color: var(--amber); }
+.cc-note { font-size: 0.85rem; color: var(--muted); margin-top: var(--space-6); line-height: 1.6; }
+.cc-note a { color: var(--secondary); }
+.whats-inside { max-width: var(--content-width); margin: var(--space-16) auto 0; }
+.whats-inside ul { color: var(--secondary); padding-left: var(--space-6); line-height: 1.75; }
+.whats-inside li { margin-bottom: var(--space-3); }
+
+@media (max-width: 860px) {
+  .reader-shell { grid-template-columns: 1fr; gap: var(--space-6); }
+  .reader-toc { position: static; max-height: none; border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: var(--space-6); }
+  .book-hero h1 { font-size: 2.4rem; }
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="https://productbeacon.agency/" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="https://productbeacon.agency/services.html">Services</a></li>
+      <li><a href="https://productbeacon.agency/insights/">Insights</a></li>
+      <li><a href="../index.html" class="active">The Book</a></li>
+      <li><a href="https://productbeacon.agency/about.html">About</a></li>
+      <li><a href="https://productbeacon.agency/contact.html">Contact</a></li>
+      <li><a href="https://productbeacon.agency/contact.html" class="btn btn--primary btn--lg">Book a Call</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="https://productbeacon.agency/services.html" role="menuitem">Services</a>
+    <a href="https://productbeacon.agency/insights/" role="menuitem">Insights</a>
+    <a href="../index.html" role="menuitem">The Book</a>
+    <a href="https://productbeacon.agency/about.html" role="menuitem">About</a>
+    <a href="https://productbeacon.agency/contact.html" role="menuitem">Contact</a>
+    <a href="https://productbeacon.agency/contact.html" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Book a Call</a>
+  </div>
+</nav>
+<div class="reader-shell">
+  <aside class="reader-toc">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="preface.html">Preface</a></li>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="chapter-1-end-to-end-product-organizations.html">Chapter 1: End-to-end Product Organizations</a></li>
+<li><a href="chapter-2-the-strategic-process-and-operational-focus-areas.html">Chapter 2: The Strategic Process and Operational Focus Areas</a></li>
+<li><a href="chapter-3-structure-and-scope.html">Chapter 3: Structure and Scope</a></li>
+<li><a href="chapter-4-decision-interfaces-and-the-architecture.html">Chapter 4: Decision Interfaces and the Architecture</a></li>
+<li><a href="chapter-5-scaling-as-design-problem.html">Chapter 5: Scaling as Design Problem</a></li>
+<li><a href="chapter-6-people-at-scale.html">Chapter 6: People at Scale</a></li>
+<li><a href="chapter-7-the-executive-altitude.html">Chapter 7: The Executive Altitude</a></li>
+<li><a href="chapter-8-the-eight-operating-principles.html">Chapter 8: The Eight Operating Principles</a></li>
+<li><a href="conclusion-from-vision-to-value.html">Conclusion: From Vision to Value</a></li>
+<li><a href="appendix-a-installation-guide-a-first-90-days-sequence.html">Appendix A: Installation Guide - A First-90-Days Sequence</a></li>
+<li><a href="appendix-b-decision-system-blueprints-and-economic-artifacts-templates.html">Appendix B: Decision System Blueprints and Economic Artifacts (Templates)</a></li>
+<li><a href="appendix-c-function-specific-decision-interface-charters.html">Appendix C: Function-Specific Decision Interface Charters</a></li>
+<li><a href="appendix-d-glossary.html">Appendix D: Glossary</a></li>
+<li><a href="appendix-e-further-resources.html" class="current">Appendix E: Further Resources</a></li>
+
+    </ol>
+  </aside>
+  <article class="reader-content">
+    <p class="reader-progress">Vision to Value &middot; 16 / 16</p>
+    <h1>Appendix E: Further Resources</h1>
+    <h2 id="further-reading">Further Reading</h2>
+<p>This book is an executive-altitude blueprint and leaves the craft, the delivery mechanics, and general management to books that cover that territory well. The list below is what a product leader at the Chapter 7 altitude should have read, is currently reading, or should return to, with annotations naming what each adds.</p>
+<p><strong>Product canon</strong></p>
+<ul><li><em>Marty Cagan, </em>Inspired<em>. The category-defining text on the product manager role. </em>Vision to Value assumes you have read this, or a book like it, and picks up where it stops, at the altitude where the CPO starts answering to the board.</li><li><em>Marty Cagan, </em>Empowered<em>. The org-design companion to </em>Inspired<em>. Where </em>Vision to Value<em> treats org design as a consequence of strategy, </em>Empowered treats it as the primary lever. Both are right at different altitudes.</li><li><em>Melissa Perri, </em>Escaping the Build Trap<em>.</em>The clearest diagnostic of how product organizations drift from outcomes to outputs. Pair it with this book&#x27;s Principle 6 on the learning loop.</li><li><em>Teresa Torres, </em>Continuous Discovery Habits<em>. The craft instrument for Tier 3 discovery work. </em>Vision to Value trusts the discovery discipline Torres maps and does not try to re-ground it.</li></ul>
+<p><strong>Operating and decision systems</strong></p>
+<ul><li><em>Joel Trammell (with Sherif Sakr), </em>Chief Executive Operating System<em> (2023). The adjacent prior-art work at the CEO altitude. Trammell addresses how the corporate operating system installs at the executive seat above the CPO; </em>Vision to Value operates one altitude below that, at the seat where product strategy becomes commitment and outcome. The two are complementary reads -- Trammell for the corporate-altitude framework, this volume for the CPO-altitude decision provenance discipline that lives inside it.</li><li><em>Colin Bryar and Bill Carr, </em>Working Backwards<em>.</em>The closest public-domain description of a full product operating system. Read it for the PRFAQ discipline and the portfolio-level evidence framing.</li><li><em>Nicole Forsgren, Jez Humble, Gene Kim, </em>Accelerate<em>.</em>The evidence base for engineering-org performance. Required if you want the Chapter 4 Engineering-Owned Decisions section to land with your CTO.</li><li><em>Andy Grove, </em>High Output Management<em>. The management-altitude companion to this book. If </em>Vision to Value<em> is how a product organization runs, </em>High Output Management is how a manager inside it runs.</li><li><em>John Doerr, </em>Measure What Matters<em>. The OKR canon. </em>Vision to Value does not prescribe OKRs, but it assumes you have a stance on how to use them, and Doerr is where that stance comes from.</li></ul>
+<p><strong>Leadership altitude</strong></p>
+<ul><li><em>Ben Horowitz, </em>The Hard Thing About Hard Things<em>.</em>The executive-altitude voice on decisions without good options. Chapter 7 of this book owes a debt to Horowitz&#x27;s insistence that the CEO job cannot be outsourced to a framework.</li><li><em>Frank Slootman, </em>Amp It Up<em>.</em>The operator-CEO voice on tempo, standards, and intolerance for mediocrity. A useful counter-weight to the empathetic-leadership register that dominates other books in the product canon.</li></ul>
+<p><strong>Writing culture</strong></p>
+<ul><li><em>William Zinsser, </em>On Writing Well<em>.</em>A product leader whose memos cannot be read cannot lead an organization at executive altitude. Zinsser is the shortest route from there to here.</li></ul>
+<h2 id="three-places-to-take-this-book">Three Places to Take This Book</h2>
+<p>If this book has been useful, there are three places to take it next. They are listed in the order of how generous each is with your time - the first is free, the second is guided, the third is a conversation. In order: the open-source Product Org OS at github.com/yohayetsion/product-org-os, the Decision Provenance Standard at decisionprovenancestandard.org, and ProductBeacon at productbeacon.agency.</p>
+<p>1. Product Org OS (open source). The blueprint described in this book has a working reference implementation. <em>Product Org OS</em> is an open-source, AI-native product-leadership framework - the same principles, decision models, and templates translated into tooling your leadership team can install and adapt. It is released under CC-BY 4.0, the same license as this book, and maintained publicly. <em>→ github.com/yohayetsion/product-org-os</em></p>
+<p>2. The Decision Provenance Standard (CC-BY 4.0). The book operationalizes the install layer; the Standard provides the structural definition of what a decision is — an artifact a named human signs and attests to, with eight required schema fields and verbatim attestation language. The book and the Standard ship together: the book describes the shape; the Standard provides the durability anchor the book inherits. <em>→ decisionprovenancestandard.org</em></p>
+<p>3. Working with me directly. I work with a small number of product organizations each year as a fractional Chief Product Officer through my practice, ProductBeacon. If this book named a gap in your organization that you cannot close alone, that is what the practice is for. <em>→ productbeacon.agency</em></p>
+    <nav class="reader-pager">
+      <a href="appendix-d-glossary.html" class="btn btn--outline reader-pager__prev">&larr; Appendix D: Glossary</a>
+      <a href="../index.html" class="btn btn--primary reader-pager__next">Back to overview &rarr;</a>
+    </nav>
+  </article>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="https://productbeacon.agency/" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Senior product leadership, AI-powered execution.</p>
+      </div>
+      <div class="footer__col">
+        <h4>The Book</h4>
+        <a href="../index.html">Overview</a>
+        <a href="../reader/index.html">Read Online</a>
+        <a href="../downloads/vision-to-value.pdf">Download PDF</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="https://productbeacon.agency/case-studies.html">Case Studies</a>
+        <a href="https://productbeacon.agency/insights/">Insights</a>
+        <a href="https://productbeacon.agency/about.html">About</a>
+        <a href="https://productbeacon.agency/contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="https://github.com/yohayetsion/product-org-os" target="_blank" rel="noopener">Product Org OS</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 ProductBeacon. A brand of Etsion Brands Ltd. Book text licensed CC-BY 4.0.</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>

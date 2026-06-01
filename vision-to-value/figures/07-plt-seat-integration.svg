@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 680" width="920" height="680" role="img" aria-label="The Product Leadership Team as End-to-End Integration Point">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <marker id="arrowhead-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5B8AC0"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 18px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="920" height="680" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="460.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Product Leadership Team</text>
+<text x="460.0" y="58" class="small" text-anchor="middle">Seven craft layers integrate end-to-end ownership at the Director altitude.</text>
+<line x1="460.0" y1="366.0" x2="460.0" y2="146.0" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="725.8227040391301" y2="228.83224359107862" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="791.47549014182" y2="414.9546054703892" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="607.5204712999698" y2="564.2131509385322" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="312.47952870003024" y2="564.2131509385322" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="128.52450985817995" y2="414.9546054703892" stroke="#A8C5E0" stroke-width="1.5"/>
+<line x1="460.0" y1="366.0" x2="194.17729596086986" y2="228.83224359107865" stroke="#A8C5E0" stroke-width="1.5"/>
+<rect x="300.0" y="320" width="320" height="92" rx="8" ry="8" fill="#1F3A5F"/>
+<text x="460.0" y="352" class="label" text-anchor="middle" style="font-weight:700;font-size:14px">PRODUCT LEADERSHIP TEAM</text>
+<text x="460.0" y="374" class="label" text-anchor="middle" style="font-weight:400;font-size:11px;fill:#E8F0F8">the integration point</text>
+<text x="460.0" y="394" class="label" text-anchor="middle" style="font-size:10px;fill:#A8C5E0">(seven Director-altitude seats)</text>
+<rect x="370.0" y="122.0" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="460.0" y="150.0" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Product Management</text>
+<rect x="635.8227040391301" y="204.83224359107862" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="725.8227040391301" y="232.83224359107862" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Product Marketing</text>
+<rect x="701.47549014182" y="390.9546054703892" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="791.47549014182" y="418.9546054703892" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Business Development</text>
+<rect x="517.5204712999698" y="540.2131509385322" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="607.5204712999698" y="568.2131509385322" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Competitive Intelligence</text>
+<rect x="222.47952870003024" y="540.2131509385322" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="312.47952870003024" y="568.2131509385322" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Business Operations</text>
+<rect x="38.524509858179954" y="390.9546054703892" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="128.52450985817995" y="418.9546054703892" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Product Operations</text>
+<rect x="104.17729596086986" y="204.83224359107865" width="180" height="48" rx="8" ry="8" fill="#FFFFFF" stroke="#3B6BA5" stroke-width="2"/>
+<text x="194.17729596086986" y="232.83224359107865" class="sh" text-anchor="middle" style="font-weight:700;font-size:11px;fill:#1F3A5F">Value Realization</text>
+<text x="460.0" y="650" class="small" text-anchor="middle" style="fill:#3B6BA5">Each Director carries an inherited Charter instance. End-to-end ownership is held collectively, not by the CPO alone.</text>
+</svg>

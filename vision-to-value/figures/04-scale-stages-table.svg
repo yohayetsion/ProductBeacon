@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 700" width="1040" height="700" role="img" aria-label="Four Scale Stages — Same Shape, Different Accountability Distribution">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3B6BA5"/>
+  </marker>
+  <marker id="arrowhead-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#E07C3E"/>
+  </marker>
+  <style>
+    text { font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F1F33; }
+    .h    { font-size: 16px; font-weight: 700; fill: #1F3A5F; }
+    .sh   { font-size: 13px; font-weight: 600; fill: #1F3A5F; }
+    .body { font-size: 11px; font-weight: 400; }
+    .label{ font-size: 11px; font-weight: 500; fill: #FFFFFF; }
+    .small{ font-size: 9px; font-weight: 400; fill: #3B6BA5; }
+    .rail { font-size: 9px; font-weight: 600; fill: #3B6BA5; letter-spacing: 1px; }
+  </style>
+</defs>
+<rect x="0" y="0" width="1040" height="700" rx="8" ry="8" fill="#FFFFFF"/>
+<text x="520.0" y="36" class="h" text-anchor="middle" style="font-size:20px">The Four Scale Stages of a Product Organization</text>
+<text x="520.0" y="58" class="small" text-anchor="middle">Same shape at every scale; what changes is accountability distribution and operational expression.</text>
+<rect x="28" y="96" width="984" height="56" rx="8" ry="8" fill="#3B6BA5"/>
+<text x="118.0" y="129.0" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">Dimension</text>
+<text x="308.5" y="129.0" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">Enabling</text>
+<text x="509.5" y="129.0" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">Established</text>
+<text x="710.5" y="129.0" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">Company Leading</text>
+<text x="911.5" y="129.0" class="label" text-anchor="middle" style="font-weight:700;font-size:13px">Market Leading</text>
+<rect x="28" y="152" width="984" height="96" rx="0" ry="0" fill="#E8F0F8" stroke="#B8C9DA" stroke-width="1"/>
+<rect x="28" y="152" width="180" height="96" rx="0" ry="0" fill="#A8C5E0"/>
+<text x="118.0" y="204.0" class="body" text-anchor="middle" style="font-weight:600;font-size:12px;fill:#1F3A5F">Decision ownership</text>
+<text x="308.5" y="198.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Founder and senior PMs</text>
+<text x="308.5" y="212.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">hold every call.</text>
+<text x="509.5" y="191.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Named owners per</text>
+<text x="509.5" y="205.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">decision class;</text>
+<text x="509.5" y="219.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">escalation default.</text>
+<text x="710.5" y="191.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">PLT seats hold</text>
+<text x="710.5" y="205.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">cross-functional calls</text>
+<text x="710.5" y="219.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">without escalation.</text>
+<text x="911.5" y="191.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">The decision system runs</text>
+<text x="911.5" y="205.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">without naming the seats</text>
+<text x="911.5" y="219.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">holding it.</text>
+<rect x="28" y="248" width="984" height="96" rx="0" ry="0" fill="#FFFFFF" stroke="#B8C9DA" stroke-width="1"/>
+<rect x="28" y="248" width="180" height="96" rx="0" ry="0" fill="#A8C5E0"/>
+<text x="118.0" y="300.0" class="body" text-anchor="middle" style="font-weight:600;font-size:12px;fill:#1F3A5F">Charter discipline</text>
+<text x="308.5" y="294.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Informal; tribal</text>
+<text x="308.5" y="308.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">knowledge.</text>
+<text x="509.5" y="287.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">One Charter installed</text>
+<text x="509.5" y="301.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">(usually Launch</text>
+<text x="509.5" y="315.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Readiness).</text>
+<text x="710.5" y="287.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Five to seven Charters</text>
+<text x="710.5" y="301.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">across the executive</text>
+<text x="710.5" y="315.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">interfaces.</text>
+<text x="911.5" y="280.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Charters are the</text>
+<text x="911.5" y="294.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">operating fabric; no</text>
+<text x="911.5" y="308.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">decision sits outside</text>
+<text x="911.5" y="322.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">one.</text>
+<rect x="28" y="344" width="984" height="96" rx="0" ry="0" fill="#E8F0F8" stroke="#B8C9DA" stroke-width="1"/>
+<rect x="28" y="344" width="180" height="96" rx="0" ry="0" fill="#A8C5E0"/>
+<text x="118.0" y="396.0" class="body" text-anchor="middle" style="font-weight:600;font-size:12px;fill:#1F3A5F">Sensor inputs</text>
+<text x="308.5" y="390.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Anecdotal; the CEO in</text>
+<text x="308.5" y="404.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">the room.</text>
+<text x="509.5" y="383.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Some sensors named,</text>
+<text x="509.5" y="397.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">often narrated at</text>
+<text x="509.5" y="411.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">meetings.</text>
+<text x="710.5" y="383.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Sensors are gating</text>
+<text x="710.5" y="397.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">inputs; reviews cannot</text>
+<text x="710.5" y="411.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">adjourn without them.</text>
+<text x="911.5" y="390.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Sensors carry their own</text>
+<text x="911.5" y="404.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">re-decision triggers.</text>
+<rect x="28" y="440" width="984" height="96" rx="0" ry="0" fill="#FFFFFF" stroke="#B8C9DA" stroke-width="1"/>
+<rect x="28" y="440" width="180" height="96" rx="0" ry="0" fill="#A8C5E0"/>
+<text x="118.0" y="492.0" class="body" text-anchor="middle" style="font-weight:600;font-size:12px;fill:#1F3A5F">Outcome reviews</text>
+<text x="308.5" y="486.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Status meetings</text>
+<text x="308.5" y="500.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">rebranded.</text>
+<text x="509.5" y="479.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Outcome reviews exist</text>
+<text x="509.5" y="493.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">but rarely change</text>
+<text x="509.5" y="507.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">forward plans.</text>
+<text x="710.5" y="479.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Outcome reviews drive</text>
+<text x="710.5" y="493.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">forecast revision in the</text>
+<text x="710.5" y="507.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">same cycle.</text>
+<text x="911.5" y="479.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">The learning loop is the</text>
+<text x="911.5" y="493.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">cadence; forecasts</text>
+<text x="911.5" y="507.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">revise themselves.</text>
+<rect x="28" y="536" width="984" height="96" rx="0" ry="0" fill="#E8F0F8" stroke="#B8C9DA" stroke-width="1"/>
+<rect x="28" y="536" width="180" height="96" rx="0" ry="0" fill="#A8C5E0"/>
+<text x="118.0" y="588.0" class="body" text-anchor="middle" style="font-weight:600;font-size:12px;fill:#1F3A5F">Talent design</text>
+<text x="308.5" y="582.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">HR administers; Product</text>
+<text x="308.5" y="596.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">reacts to attrition.</text>
+<text x="509.5" y="568.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Joint CPO and Chief</text>
+<text x="509.5" y="582.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">People Officer talent</text>
+<text x="509.5" y="596.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">forum exists, runs</text>
+<text x="509.5" y="610.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">quarterly.</text>
+<text x="710.5" y="575.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Calibration drives</text>
+<text x="710.5" y="589.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">compensation changes in</text>
+<text x="710.5" y="603.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">the same cycle.</text>
+<text x="911.5" y="568.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">Talent design is a</text>
+<text x="911.5" y="582.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">portfolio asset; comp</text>
+<text x="911.5" y="596.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">and leveling</text>
+<text x="911.5" y="610.0" class="body" text-anchor="middle" style="font-size:10px;fill:#1F3A5F">self-calibrate.</text>
+</svg>
