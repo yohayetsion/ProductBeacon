@@ -190,6 +190,40 @@ IMAGES = [
         "chapters_line": "",
         "tag": "OPEN-WEB SOURCED",
     },
+    # Per-chapter cards (distinct content per page -> forces LinkedIn to render a fresh large rendition,
+    # and gives each chapter its own branded social card instead of the shared landing card).
+    {
+        "name": "irm.png",
+        "eyebrow": "Front 1 · State of Cyber 2026",
+        "title": "The Insider Risk Front",
+        "subtitle": "Who is doing what: behavioral and contextual analysis of insider risk across endpoint, identity, and communication surfaces.",
+        "chapters_line": "",
+        "tag": "ZERO VENDOR SPONSORS",
+    },
+    {
+        "name": "dlp.png",
+        "eyebrow": "Front 2 · State of Cyber 2026",
+        "title": "The Data Loss Front",
+        "subtitle": "What data is moving where: content inspection and channel-egress control across the 2026 Data Loss Prevention market.",
+        "chapters_line": "",
+        "tag": "ZERO VENDOR SPONSORS",
+    },
+    {
+        "name": "dspm.png",
+        "eyebrow": "Front 3 · State of Cyber 2026",
+        "title": "The Data Posture Front",
+        "subtitle": "What data exists and who can reach it: discovery, classification, and posture across the data estate.",
+        "chapters_line": "",
+        "tag": "ZERO VENDOR SPONSORS",
+    },
+    {
+        "name": "convergence.png",
+        "eyebrow": "Front 4 · State of Cyber 2026",
+        "title": "The Convergence Synthesis",
+        "subtitle": "How IRM, DLP, and DSPM converge in 2026: three competing theses, three forces, one data-layer substrate.",
+        "chapters_line": "",
+        "tag": "ZERO VENDOR SPONSORS",
+    },
 ]
 
 
