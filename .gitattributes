@@ -1,0 +1,28 @@
+# Normalize line endings so the migration diff stays content-only (not a CRLF/LF storm).
+# Text files are stored with LF in the repo; checkout uses the platform default.
+* text=auto
+
+# Web source files: always LF in the working tree and the repo.
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.xml   text eol=lf
+*.svg   text eol=lf
+*.txt   text eol=lf
+*.sh    text eol=lf
+*.py    text eol=lf
+
+# Binary assets: never touched by EOL normalization.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary

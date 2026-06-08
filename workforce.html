@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Workforce | The Work It Does For You | ProductBeacon</title>
+<meta name="description" content="Not a list of agents. A catalogue of finished work: launch plans, financial models, contracts triaged, landing pages, research, dashboards. Around 100 specialists, with Legal and Compliance available under supervised terms, 130+ skills, and 50+ knowledge libraries, governed by you.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- ====== SEO: canonical / Open Graph / Twitter ====== -->
+<link rel="canonical" href="https://productbeacon.agency/workforce.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ProductBeacon">
+<meta property="og:title" content="The Workforce | The Work It Does For You | ProductBeacon">
+<meta property="og:description" content="Not a list of agents. A catalogue of finished work: launch plans, financial models, contracts triaged, landing pages, research, dashboards. Around 100 specialists, 130+ skills, governed by you.">
+<meta property="og:url" content="https://productbeacon.agency/workforce.html">
+<meta property="og:image" content="https://productbeacon.agency/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Workforce | The Work It Does For You | ProductBeacon">
+<meta name="twitter:description" content="A catalogue of finished work, not a list of agents. Around 100 specialists, 130+ skills, governed by you.">
+<meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TC1LMMGQGV');
+</script>
+<!-- ====== LinkedIn Insight Tag (placeholder — wire LI partner ID before go-live; see index.html) ====== -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function pbTrack(eventName, payload){
+    payload = payload || {};
+    payload.event = eventName;
+    window.dataLayer.push(payload);
+    // TODO (go-live): if (typeof window.lintrk === 'function') { window.lintrk('track', { conversion_id: /* LI id */ }); }
+  }
+  window.pbTrack = pbTrack;
+</script>
+
+<!-- ====== Page-scoped CSS — NEW additive components on live tokens only. Shared style.css untouched. ====== -->
+<style>
+  /* scroll-margin so anchored jumps clear the fixed nav (72px) + sticky sub-nav (52px) */
+  #the-work, #the-team, #the-skills { scroll-margin-top: calc(var(--nav-height) + 52px); }
+  .function-block { scroll-margin-top: calc(var(--nav-height) + 52px); }
+
+  /* ---- NEW: sticky anchor sub-nav (.section-tabs) ---- */
+  .section-tabs {
+    position: sticky;
+    top: var(--nav-height);
+    z-index: 90;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  }
+  .section-tabs__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    display: flex;
+    gap: var(--space-8);
+    height: 52px;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .section-tabs__inner::-webkit-scrollbar { display: none; }
+  .section-tabs a {
+    color: var(--secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: var(--space-2) 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    text-decoration: none;
+  }
+  .section-tabs a:hover { color: var(--bright); }
+  .section-tabs a.is-current { color: var(--amber); border-bottom-color: var(--amber); }
+  @media (prefers-reduced-motion: reduce) { .section-tabs a { transition: none; } }
+
+  /* ---- shared structural legal caveat (.legal-inset) ---- */
+  .legal-inset {
+    background: rgba(148, 163, 184, 0.08);
+    border-left: 3px solid var(--secondary);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    padding: var(--space-3) var(--space-4);
+    margin-top: var(--space-3);
+    font-size: 0.8125rem;
+    color: var(--secondary);
+  }
+
+  /* NEW — hardened human-in-the-loop variant of .legal-inset. Amber border + glow = a guarantee, not fine print. */
+  .legal-inset--hitl {
+    border-left-color: var(--amber);
+    background: var(--amber-glow);
+    color: var(--text);
+  }
+  .legal-inset--hitl strong { color: var(--bright); }
+
+  /* NEW — governance trust band. Live tokens only. Cousin of the .quote / .legal-inset left-border family. */
+  .govern-band {
+    display: flex; flex-wrap: wrap; gap: var(--space-6);
+    margin-top: var(--space-6);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--amber);
+  }
+  .govern-band span {
+    font-size: 0.875rem; color: var(--secondary);
+    display: inline-flex; align-items: center; gap: var(--space-2);
+  }
+  .govern-band span::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--amber); flex-shrink: 0;
+  }
+  @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
+
+  /* NEW — recurring "you decide" control chip. SAME amber dot as .govern-band → one shared motif. */
+  .you-decide {
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    font-size: 0.8125rem; color: var(--text);
+  }
+  .you-decide::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--amber); flex-shrink: 0;
+  }
+
+  /* NEW — supervised-access badge for Legal & Compliance roles conveyed under supervised terms. */
+  .supervised-access {
+    display: inline-block; font-size: 0.6875rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--amber); background: var(--amber-glow);
+    border: 1px solid rgba(245,158,11,0.4); border-radius: var(--border-radius-sm);
+    padding: 2px var(--space-2); margin-left: var(--space-2); vertical-align: middle;
+  }
+
+  /* NEW — page-level human-in-the-loop spine band. The one authoritative statement the per-section insets echo. */
+  .hitl-band {
+    border-left: 3px solid var(--amber);
+    background: var(--amber-glow);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    padding: var(--space-6);
+    margin-top: var(--space-12);
+  }
+  .hitl-band h3 { margin-bottom: var(--space-3); }
+  .hitl-band p { color: var(--text); margin: 0; }
+  .hitl-band strong { color: var(--bright); }
+
+  /* ---- NEW: Alt-2 job matrix (.job-matrix / .job-row) ---- */
+  .job-cluster { margin-top: var(--space-8); }
+  .job-cluster > h3 { margin-bottom: var(--space-4); }
+  .job-matrix { border: 1px solid var(--border); border-radius: var(--border-radius); overflow: hidden; }
+  .job-matrix__head,
+  .job-row > summary {
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr 1.2fr 1.2fr;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    align-items: start;
+  }
+  .job-matrix__head {
+    background: var(--ink);
+    color: var(--amber);
+    font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .job-row { border-top: 1px solid var(--border); }
+  .job-row:first-child { border-top: none; }
+  .job-row > summary { cursor: pointer; background: var(--surface); list-style: none; }
+  .job-row > summary::-webkit-details-marker { display: none; }
+  .job-row:hover > summary { background: rgba(245,158,11,0.08); }
+  .job-row__job { font-weight: 600; color: var(--bright); }
+  .job-row__back { color: var(--text); }
+  .job-row__who, .job-row__decide { color: var(--secondary); font-size: 0.875rem; }
+  .job-row__detail { padding: var(--space-3) var(--space-4) var(--space-4); color: var(--secondary); background: var(--surface); }
+  @media (max-width: 767px) {
+    .job-matrix__head { display: none; }
+    .job-row > summary { grid-template-columns: 1fr; gap: var(--space-2); }
+    .job-row__job { font-size: 1.0625rem; }
+    .job-row__back::before  { content: "What comes back: ";  color: var(--amber); font-weight: 600; }
+    .job-row__who::before   { content: "Who works it: ";     color: var(--amber); font-weight: 600; }
+    .job-row__decide::before{ content: "Where you decide: "; color: var(--amber); font-weight: 600; }
+  }
+
+  /* ---- flow strip (worked example) ---- */
+  .flow-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+  .flow-step {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--border-radius-sm);
+    padding: var(--space-4); position: relative;
+  }
+  .flow-step .eyebrow { color: var(--amber); margin-bottom: var(--space-2); }
+  .flow-step p { font-size: 0.875rem; color: var(--secondary); margin: 0; }
+  @media (max-width: 767px) { .flow-strip { grid-template-columns: 1fr; } }
+
+  /* ---- NEW: Alt-1 org map (.org-grid / .org-tile) ---- */
+  .org-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+  .org-tile {
+    display: block; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--border-radius-sm); padding: var(--space-4);
+    text-decoration: none; color: var(--text);
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .org-tile:hover { border-color: rgba(245,158,11,0.4); transform: translateY(-2px); color: var(--text); }
+  .org-tile h4 { margin-bottom: var(--space-2); display: inline-block; margin-right: var(--space-2); }
+  .org-tile__roles { font-size: 0.8125rem; color: var(--muted); margin-top: var(--space-2); line-height: 1.5; }
+  @media (max-width: 1023px) { .org-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639px)  { .org-grid { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .org-tile { transition: none; } .org-tile:hover { transform: none; } }
+
+  /* ---- function blocks + role cards ---- */
+  .function-block { margin-top: var(--space-12); }
+  .function-block__header { margin-bottom: var(--space-4); }
+  .function-block__header h3 { display: inline-block; margin-right: var(--space-2); }
+  .function-block__header p { color: var(--secondary); margin-top: var(--space-2); }
+  .function-block:target > .function-block__header h3 { color: var(--amber); }
+  @keyframes fnPulse { 0% { border-color: rgba(245,158,11,0.6); } 100% { border-color: var(--border); } }
+  .role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-4); }
+  @media (max-width: 1023px) { .role-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639px)  { .role-grid { grid-template-columns: 1fr; } }
+  .role-card {
+    background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius-sm);
+    padding: var(--space-4); transition: border-color 0.2s;
+  }
+  .role-card[open], .role-card:hover { border-color: rgba(245,158,11,0.4); }
+  .role-card > summary { cursor: pointer; list-style: none; display: block; }
+  .role-card > summary::-webkit-details-marker { display: none; }
+  .role-card__job { color: var(--secondary); font-size: 0.875rem; margin-top: 2px; }
+  .role-card > summary::after {
+    content: ""; display: inline-block; width: 7px; height: 7px; margin-left: var(--space-2);
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg); transition: transform 0.2s; vertical-align: middle;
+  }
+  .role-card[open] > summary::after { transform: rotate(225deg); }
+  .role-card__detail { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border); }
+  .role-card__detail p { font-size: 0.8125rem; color: var(--secondary); margin: 0 0 var(--space-2); }
+  .role-card__control { color: var(--muted) !important; font-style: italic; }
+  @media (prefers-reduced-motion: reduce) {
+    .role-card, .role-card > summary::after { transition: none; }
+    .function-block:target { animation: none; }
+  }
+
+  /* ---- NEW: skills & libraries richness (.pack-grid / .pack-card / .cat-skill-list) ---- */
+  .pack-subhead { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-12); }
+  .pack-subhead h3 { margin: 0; }
+  .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-6); }
+  .pack-card {
+    background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius);
+    padding: var(--space-6); transition: border-color 0.2s, transform 0.15s;
+  }
+  .pack-card[open], .pack-card:hover { border-color: rgba(245,158,11,0.4); }
+  .pack-card:hover { transform: translateY(-2px); }
+  .pack-card > summary { cursor: pointer; list-style: none; display: block; }
+  .pack-card > summary::-webkit-details-marker { display: none; }
+  .pack-card__head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .pack-card__icon { font-size: 1.25rem; flex-shrink: 0; }
+  .pack-card__head h4 { margin: 0; flex: 1; }
+  .pack-card__gloss { color: var(--secondary); font-size: 0.875rem; line-height: 1.5; margin: 0; }
+  .pack-card > summary::after {
+    content: ""; display: inline-block; width: 8px; height: 8px; margin-left: var(--space-2);
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg); transition: transform 0.2s; vertical-align: middle;
+  }
+  .pack-card[open] > summary::after { transform: rotate(225deg); }
+  .cat-skill-list {
+    margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: var(--space-3);
+  }
+  .cat-skill { display: flex; flex-direction: column; gap: 2px; }
+  .cat-skill__name { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--amber); }
+  .cat-skill__desc { font-size: 0.8125rem; color: var(--secondary); line-height: 1.4; }
+  .cat-skill__more { font-size: 0.8125rem; color: var(--muted); font-style: italic; margin-top: var(--space-1); }
+  @media (max-width: 1023px) { .pack-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 639px)  { .pack-grid { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) {
+    .pack-card, .pack-card > summary::after { transition: none; }
+    .pack-card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="/index.html#intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+  </div>
+</nav>
+
+<!-- ====== STICKY SECTION SUB-NAV ====== -->
+<nav class="section-tabs" aria-label="Workforce sections">
+  <div class="section-tabs__inner">
+    <a href="#the-work">The work</a>
+    <a href="#the-team">The team</a>
+    <a href="#the-skills">The skills &amp; libraries</a>
+  </div>
+</nav>
+
+<!-- ====== SECTION 1 — HERO ====== -->
+<section class="hero section--accent" id="hero">
+  <div class="hero__grid"></div>
+  <div class="container">
+    <div class="hero__content">
+      <p class="eyebrow">The Workforce</p>
+      <h1>A workforce you govern. Here is everything it can do.</h1>
+      <p class="hero__sub">Everyone wants to talk about how many agents you get. Here is the question that actually matters: what shows up on your desk, and who decides whether to trust it? This page is the answer. Not a roster. A catalogue of finished, professional-grade work, the kind that used to take a department to produce, arriving in hours instead of weeks, with you governing every call that matters.</p>
+      <p class="text-sm" style="font-family:var(--font-mono); color:var(--secondary); margin-top:16px;">~100 specialists, with Legal &amp; Compliance under supervised terms &middot; 130+ skills &middot; 50+ libraries behind every deliverable</p>
+      <div class="govern-band">
+        <span>You commission the work</span>
+        <span>You review what comes back</span>
+        <span>You hold the line where it matters</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero__visual" aria-hidden="true">
+    <div class="beacon-dot"></div>
+    <div class="beacon-ring"></div>
+    <div class="beacon-ring"></div>
+    <div class="beacon-ring"></div>
+    <div class="beacon-ring"></div>
+  </div>
+</section>
+
+<!-- ====== BLOCK 2 — THE WORK (the lead: job matrix) ====== -->
+<section class="section section--surface" id="the-work">
+  <div class="container">
+    <div class="section__header fade-in">
+      <h2>Here is what you ask for, and here is what comes back.</h2>
+      <p>The reason it arrives finished is not that the work is shallow. Behind every deliverable sits a specialist working from a proven method, well over a hundred ready-made skills and more than fifty libraries of frameworks and hard-won patterns. So the output comes out shaped like work a professional would hand you, not a rough first draft you have to rebuild.</p>
+      <p>The premise is simple: the workforce produces, you govern. Every row below names where the call stays yours.</p>
+    </div>
+
+    <!-- Cluster: Launch & grow -->
+    <div class="job-cluster fade-in">
+      <h3>Launch &amp; grow</h3>
+      <div class="job-matrix">
+        <div class="job-matrix__head">
+          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
+        </div>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A go-to-market plan for a launch</span>
+            <span class="job-row__back">A full launch plan: positioning, messaging, channel mix, timeline, and the metrics to watch</span>
+            <span class="job-row__who">Product Marketing + Content + Competitive Intelligence</span>
+            <span class="job-row__decide"><span class="you-decide">You approve the positioning and the go-date</span></span>
+          </summary>
+          <div class="job-row__detail">The marketing lead is working from a proven launch method, not a blank page. You get a plan you can run, with the channel sequence and the success metrics already mapped.</div>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A content calendar</span>
+            <span class="job-row__back">Weeks of planned, on-voice content with the posts drafted</span>
+            <span class="job-row__who">Content Strategist + Copywriter + Social</span>
+            <span class="job-row__decide"><span class="you-decide">You set the voice and approve the calendar</span></span>
+          </summary>
+          <div class="job-row__detail">A full marketing department's output, without a full marketing department's payroll.</div>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">Copy that converts</span>
+            <span class="job-row__back">Headlines, landing pages, emails, and ads, written and tested</span>
+            <span class="job-row__who">Copywriter + Growth + Paid Media</span>
+            <span class="job-row__decide"><span class="you-decide">You pick the angle that fits your brand</span></span>
+          </summary>
+          <div class="job-row__detail">Written to a real conversion method, with variants ready to test rather than a single guess.</div>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">To show up in search</span>
+            <span class="job-row__back">An SEO plan and the optimized pages to execute it</span>
+            <span class="job-row__who">SEO Specialist + Content Strategist</span>
+            <span class="job-row__decide"><span class="you-decide">You approve the target terms</span></span>
+          </summary>
+        </details>
+      </div>
+    </div>
+
+    <!-- Cluster: Decide & build -->
+    <div class="job-cluster fade-in">
+      <h3>Decide &amp; build</h3>
+      <div class="job-matrix">
+        <div class="job-matrix__head">
+          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
+        </div>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A read on a competitor</span>
+            <span class="job-row__back">A competitive analysis with their moves, your openings, and a positioning response</span>
+            <span class="job-row__who">Competitive Intelligence + Product Marketing</span>
+            <span class="job-row__decide"><span class="you-decide">You choose how to respond</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">Help sizing a decision</span>
+            <span class="job-row__back">A structured decision write-up: the options, the trade-offs, the recommendation, and the reasoning</span>
+            <span class="job-row__who">VP Product + BizOps</span>
+            <span class="job-row__decide"><span class="you-decide">The call is yours, and it is recorded</span></span>
+          </summary>
+          <div class="job-row__detail">The product lead is working from a real decision framework. The decision is written down so it is traceable back to you.</div>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A landing page</span>
+            <span class="job-row__back">Copy, layout, and a build-ready page, on brand, written to convert</span>
+            <span class="job-row__who">UI Designer + Copywriter + Frontend</span>
+            <span class="job-row__decide"><span class="you-decide">You approve the design direction</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A feature scoped and specced</span>
+            <span class="job-row__back">A clear specification: what it does, how it behaves, what to build</span>
+            <span class="job-row__who">Product Manager + UX + Architecture</span>
+            <span class="job-row__decide"><span class="you-decide">You approve the scope</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">Something that needs to actually run</span>
+            <span class="job-row__back">Working frontend and backend, reviewed for quality before it reaches you</span>
+            <span class="job-row__who">Frontend + Backend + QA</span>
+            <span class="job-row__decide"><span class="you-decide">You sign off on what ships</span></span>
+          </summary>
+        </details>
+      </div>
+    </div>
+
+    <!-- Cluster: Money & risk (carries legal inset) -->
+    <div class="job-cluster fade-in">
+      <h3>Money &amp; risk</h3>
+      <div class="job-matrix">
+        <div class="job-matrix__head">
+          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
+        </div>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A financial model</span>
+            <span class="job-row__back">A built model: the structure, the assumptions, the scenarios, ready to pressure-test</span>
+            <span class="job-row__who">FP&amp;A + BizOps</span>
+            <span class="job-row__decide"><span class="you-decide">The numbers are yours; you set the inputs</span></span>
+          </summary>
+          <div class="job-row__detail">The workforce builds the structure and the scenarios. The figures are the founder's. We never invent the numbers.</div>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A contract looked at</span>
+            <span class="job-row__back">A first-pass review and triage: the clauses that matter, the flags, the questions to ask</span>
+            <span class="job-row__who">Contracts Counsel (drafting and triage)<span class="supervised-access">Supervised</span></span>
+            <span class="job-row__decide"><span class="you-decide">Your lawyer's call: real legal weight goes to your own lawyer</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A process fixed</span>
+            <span class="job-row__back">A mapped, improved process with the bottleneck named and the fix specified</span>
+            <span class="job-row__who">Process Engineer + Operations</span>
+            <span class="job-row__decide"><span class="you-decide">You approve the change</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A program coordinated</span>
+            <span class="job-row__back">A plan with owners, milestones, and the rhythm to keep it shipping</span>
+            <span class="job-row__who">Program Manager + ProdOps</span>
+            <span class="job-row__decide"><span class="you-decide">You hold the priorities</span></span>
+          </summary>
+        </details>
+      </div>
+      <div class="legal-inset legal-inset--hitl">
+        <strong>A qualified human stays in the loop.</strong> The finance and legal work is drafting and triage that gets you to a decision faster. The financial model's numbers are yours. For anything carrying real legal weight, the first-pass triage goes to your own lawyer, and the workforce is built to hand it over cleanly. This is not legal or financial advice.
+      </div>
+    </div>
+
+    <!-- Cluster: Find & understand -->
+    <div class="job-cluster fade-in">
+      <h3>Find &amp; understand</h3>
+      <div class="job-matrix">
+        <div class="job-matrix__head">
+          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
+        </div>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">To know what your numbers say</span>
+            <span class="job-row__back">A dashboard and an analysis that turns activity into something you can act on</span>
+            <span class="job-row__who">Data Analyst + BI Engineer</span>
+            <span class="job-row__decide"><span class="you-decide">You decide what to do with it</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A test read</span>
+            <span class="job-row__back">An experiment result with the verdict and the confidence behind it</span>
+            <span class="job-row__who">Experimentation Analyst</span>
+            <span class="job-row__decide"><span class="you-decide">You decide whether to ship</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">Your customers understood</span>
+            <span class="job-row__back">Health scores, segments, and the signals that tell you who is about to leave or buy</span>
+            <span class="job-row__who">CSM + CS Ops</span>
+            <span class="job-row__decide"><span class="you-decide">You decide where to focus</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A research question answered</span>
+            <span class="job-row__back">A synthesized, sourced answer, not a pile of links</span>
+            <span class="job-row__who">Analyst + Market Researcher</span>
+            <span class="job-row__decide"><span class="you-decide">You decide what it means for you</span></span>
+          </summary>
+        </details>
+        <details class="job-row">
+          <summary>
+            <span class="job-row__job">A product roadmap</span>
+            <span class="job-row__back">A prioritized roadmap tied to outcomes, not a wish list</span>
+            <span class="job-row__who">Director of PM + Product Manager</span>
+            <span class="job-row__decide"><span class="you-decide">You set the priorities</span></span>
+          </summary>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WORKED EXAMPLE (flow strip) ====== -->
+<section class="section section--ink" id="worked-example">
+  <div class="container">
+    <div class="section__header fade-in">
+      <h2>From request to deliverable.</h2>
+      <p>One job, end to end, so the matrix is not abstract.</p>
+    </div>
+    <div class="flow-strip fade-in">
+      <div class="flow-step">
+        <p class="eyebrow">You bring</p>
+        <p>"We are launching next month. I need a plan."</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">The workforce produces</p>
+        <p>Positioning, messaging, a channel sequence, a timeline, and the metrics to watch.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">Specialists on it</p>
+        <p>Product Marketing, Content Strategist, Competitive Intelligence, each from a proven method.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">You decide</p>
+        <p>You approve the positioning and the go-date. The plan is yours to run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLOCK 3 — THE TEAM (roster drill-down) ====== -->
+<section class="section section--surface" id="the-team">
+  <div class="container">
+    <!-- Stat band -->
+    <div class="section__header fade-in">
+      <h2>And here is the team behind it.</h2>
+      <p>The whole organization, on one screen, governed by you. You hire none of them. You operate all of them. The org is large because you govern it, not because you staff it. Legal and compliance specialists are conveyed only under supervised terms, with a qualified human required in the loop.</p>
+    </div>
+
+    <div class="metrics fade-in">
+      <div class="metric">
+        <div class="metric__value">~100</div>
+        <div class="metric__label">Specialist agents, with Legal &amp; Compliance under supervised terms</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">130+</div>
+        <div class="metric__label">Ready-made skills</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">50+</div>
+        <div class="metric__label">Knowledge libraries</div>
+      </div>
+      <div class="metric">
+        <div class="metric__value">You</div>
+        <div class="metric__label">Stay in control of every call that matters</div>
+      </div>
+    </div>
+
+    <!-- Org map -->
+    <div class="org-grid fade-in" style="margin-top:48px;">
+      <a class="org-tile" href="#fn-product"><h4>Product &amp; Strategy</h4><p class="org-tile__roles">VP Product &middot; PM &middot; Director PM &middot; Product Marketing &middot; Competitive Intelligence &middot; BizOps &middot; BizDev</p></a>
+      <a class="org-tile" href="#fn-design"><h4>Design</h4><p class="org-tile__roles">Design Director &middot; UI &middot; Visual &middot; Interaction &middot; Motion &middot; User Researcher</p></a>
+      <a class="org-tile" href="#fn-eng"><h4>Engineering &amp; Architecture</h4><p class="org-tile__roles">Tech Lead &middot; Frontend &middot; Backend &middot; DevOps &middot; QA &middot; Chief Architect</p></a>
+      <a class="org-tile" href="#fn-marketing"><h4>Marketing</h4><p class="org-tile__roles">Marketing Director &middot; Copywriter &middot; Content &middot; SEO &middot; Paid Media &middot; Email &middot; Social &middot; PR</p></a>
+      <a class="org-tile" href="#fn-sales"><h4>Sales</h4><p class="org-tile__roles">Sales Director &middot; Account Exec &middot; SDR &middot; Sales Engineer &middot; Sales Ops &middot; Proposal Writer</p></a>
+      <a class="org-tile" href="#fn-cs"><h4>Customer Success</h4><p class="org-tile__roles">CS Director &middot; CSM &middot; Support Lead &middot; Onboarding &middot; KB Specialist &middot; CS Ops</p></a>
+      <a class="org-tile" href="#fn-data"><h4>Data</h4><p class="org-tile__roles">Data Lead &middot; Data Analyst &middot; BI Engineer &middot; ML Engineer &middot; Experimentation</p></a>
+      <a class="org-tile" href="#fn-finance"><h4>Finance</h4><p class="org-tile__roles">CFO &middot; FP&amp;A &middot; Revenue &middot; Treasury &middot; Controller &middot; Tax &middot; Procurement</p></a>
+      <a class="org-tile" href="#fn-legal"><h4>Legal &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="org-tile__roles">General Counsel &middot; Contracts &middot; Privacy &middot; IP &middot; Employment &middot; Compliance. Available under supervised terms.</p></a>
+      <a class="org-tile" href="#fn-ops"><h4>Operations</h4><p class="org-tile__roles">COO &middot; Program Manager &middot; Project Manager &middot; Process Engineer &middot; Risk</p></a>
+      <a class="org-tile" href="#fn-exec"><h4>Executive</h4><p class="org-tile__roles">CEO &middot; senior leadership bench</p></a>
+      <a class="org-tile" href="#fn-staff"><h4>People &amp; Staff</h4><p class="org-tile__roles">HR &middot; People Ops &middot; Personal Assistant &middot; Analyst &middot; Coach</p></a>
+    </div>
+
+    <!-- Function blocks + role cards -->
+    <div class="function-block" id="fn-product">
+      <div class="function-block__header">
+        <h3>Product &amp; Strategy</h3>
+        <p>Decides what to build, how to position it, and where to place your bets.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>VP Product</h4><p class="role-card__job">Owns vision, portfolio, and pricing strategy.</p></summary><div class="role-card__detail"><p>Ask it for: a strategic bet, a roadmap theme, a pricing approach.</p><p class="role-card__control">You stay in control of: where to play.</p></div></details>
+        <details class="role-card"><summary><h4>Product Manager</h4><p class="role-card__job">Turns direction into specs and delivery.</p></summary><div class="role-card__detail"><p>Ask it for: a PRD, user stories, a feature spec.</p><p class="role-card__control">You stay in control of: scope.</p></div></details>
+        <details class="role-card"><summary><h4>Competitive Intelligence</h4><p class="role-card__job">Tracks rivals, runs win/loss, sizes the market.</p></summary><div class="role-card__detail"><p>Ask it for: a battlecard, a competitive teardown, a win/loss readout.</p><p class="role-card__control">You stay in control of: how to respond.</p></div></details>
+        <details class="role-card"><summary><h4>Product Marketing</h4><p class="role-card__job">Positions and launches the work.</p></summary><div class="role-card__detail"><p>Ask it for: positioning, messaging, a launch narrative.</p></div></details>
+        <details class="role-card"><summary><h4>BizOps</h4><p class="role-card__job">Business cases, KPIs, and the numbers behind a call.</p></summary><div class="role-card__detail"><p>Ask it for: a business case, a KPI model.</p></div></details>
+        <details class="role-card"><summary><h4>Business Development</h4><p class="role-card__job">Partnerships, market expansion, channel deals.</p></summary><div class="role-card__detail"><p>Ask it for: a partnership map, an expansion read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-design">
+      <div class="function-block__header">
+        <h3>Design</h3>
+        <p>Makes the work come out looking like a real studio produced it.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>UI Designer</h4><p class="role-card__job">Interface and component design.</p></summary><div class="role-card__detail"><p>Ask it for: component specs, a UI layout.</p></div></details>
+        <details class="role-card"><summary><h4>Visual Designer</h4><p class="role-card__job">Brand and graphic systems.</p></summary><div class="role-card__detail"><p>Ask it for: a visual direction, brand assets.</p></div></details>
+        <details class="role-card"><summary><h4>User Researcher</h4><p class="role-card__job">Studies, interviews, usability.</p></summary><div class="role-card__detail"><p>Ask it for: an interview guide, a synthesis.</p></div></details>
+        <details class="role-card"><summary><h4>Interaction &amp; Motion</h4><p class="role-card__job">Flows and motion.</p></summary><div class="role-card__detail"><p>Ask it for: a flow, a motion spec.</p></div></details>
+        <details class="role-card"><summary><h4>Design Director</h4><p class="role-card__job">Holds the system together.</p></summary><div class="role-card__detail"><p>Ask it for: a design review, system direction.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-eng">
+      <div class="function-block__header">
+        <h3>Engineering &amp; Architecture</h3>
+        <p>Turns an idea into something that actually runs.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Tech Lead</h4><p class="role-card__job">Plans and reviews the build.</p></summary><div class="role-card__detail"><p>Ask it for: an implementation plan, a code review.</p></div></details>
+        <details class="role-card"><summary><h4>Frontend &amp; Backend</h4><p class="role-card__job">Builds the product.</p></summary><div class="role-card__detail"><p>Ask it for: a working page, an API.</p></div></details>
+        <details class="role-card"><summary><h4>DevOps</h4><p class="role-card__job">Deployment and monitoring.</p></summary><div class="role-card__detail"><p>Ask it for: a CI/CD setup, a runbook.</p></div></details>
+        <details class="role-card"><summary><h4>Architects</h4><p class="role-card__job">Systems, API, cloud, security, data, AI.</p></summary><div class="role-card__detail"><p>Ask it for: an architecture review, a threat model.</p></div></details>
+        <details class="role-card"><summary><h4>QA Engineer</h4><p class="role-card__job">Pressure-tests before it ships.</p></summary><div class="role-card__detail"><p>Ask it for: a test plan, a QA pass.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-marketing">
+      <div class="function-block__header">
+        <h3>Marketing</h3>
+        <p>A full marketing department, on call.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Copywriter</h4><p class="role-card__job">Headlines, pages, ads.</p></summary><div class="role-card__detail"><p>Ask it for: landing copy, an email, a tagline.</p></div></details>
+        <details class="role-card"><summary><h4>Content Strategist</h4><p class="role-card__job">Editorial and calendars.</p></summary><div class="role-card__detail"><p>Ask it for: a content calendar, a content strategy.</p></div></details>
+        <details class="role-card"><summary><h4>SEO &amp; Paid Media</h4><p class="role-card__job">Organic and paid reach.</p></summary><div class="role-card__detail"><p>Ask it for: an SEO plan, a paid campaign.</p></div></details>
+        <details class="role-card"><summary><h4>Email &amp; Social</h4><p class="role-card__job">Sequences and social content.</p></summary><div class="role-card__detail"><p>Ask it for: an email sequence, a social calendar.</p></div></details>
+        <details class="role-card"><summary><h4>Growth &amp; PR</h4><p class="role-card__job">Loops and comms.</p></summary><div class="role-card__detail"><p>Ask it for: a growth model, a press release.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-sales">
+      <div class="function-block__header">
+        <h3>Sales</h3>
+        <p>The motion that turns interest into signed business.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Account Executive</h4><p class="role-card__job">Negotiation and closing.</p></summary><div class="role-card__detail"><p>Ask it for: a deal strategy, objection handling.</p></div></details>
+        <details class="role-card"><summary><h4>Sales Engineer</h4><p class="role-card__job">Technical demos and POCs.</p></summary><div class="role-card__detail"><p>Ask it for: a demo script, an RFP response.</p></div></details>
+        <details class="role-card"><summary><h4>SDR</h4><p class="role-card__job">Outbound and qualification.</p></summary><div class="role-card__detail"><p>Ask it for: an outbound sequence.</p></div></details>
+        <details class="role-card"><summary><h4>Proposal Writer</h4><p class="role-card__job">Proposals and SOWs.</p></summary><div class="role-card__detail"><p>Ask it for: a proposal, a pricing presentation.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-cs">
+      <div class="function-block__header">
+        <h3>Customer Success</h3>
+        <p>Keeps customers after you win them.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>CSM</h4><p class="role-card__job">Account health and retention.</p></summary><div class="role-card__detail"><p>Ask it for: a health scorecard, a QBR deck.</p></div></details>
+        <details class="role-card"><summary><h4>Support Lead</h4><p class="role-card__job">Tickets and SLAs.</p></summary><div class="role-card__detail"><p>Ask it for: a support workflow.</p></div></details>
+        <details class="role-card"><summary><h4>Onboarding CSM</h4><p class="role-card__job">Time-to-value.</p></summary><div class="role-card__detail"><p>Ask it for: an onboarding playbook.</p></div></details>
+        <details class="role-card"><summary><h4>KB Specialist</h4><p class="role-card__job">Help docs and self-service.</p></summary><div class="role-card__detail"><p>Ask it for: a KB article.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-data">
+      <div class="function-block__header">
+        <h3>Data</h3>
+        <p>Turns what is happening in your business into something you can act on.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Data Analyst</h4><p class="role-card__job">Ad-hoc analysis and queries.</p></summary><div class="role-card__detail"><p>Ask it for: a cohort analysis, a SQL query.</p></div></details>
+        <details class="role-card"><summary><h4>BI Engineer</h4><p class="role-card__job">Dashboards and reporting.</p></summary><div class="role-card__detail"><p>Ask it for: a dashboard, a metric tree.</p></div></details>
+        <details class="role-card"><summary><h4>ML Engineer</h4><p class="role-card__job">Models and evaluation.</p></summary><div class="role-card__detail"><p>Ask it for: a model approach, an eval.</p></div></details>
+        <details class="role-card"><summary><h4>Experimentation Analyst</h4><p class="role-card__job">A/B test reads.</p></summary><div class="role-card__detail"><p>Ask it for: an experiment design, a result read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-finance">
+      <div class="function-block__header">
+        <h3>Finance</h3>
+        <p>Keeps the numbers honest and the decisions paid for.</p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> First-pass drafting and triage only. The figures in any model are yours; the workforce builds the structure and the scenarios. Anything carrying real weight goes to your own finance professional. This is not financial advice.</div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>CFO &amp; FP&amp;A</h4><p class="role-card__job">Planning and modeling structure.</p></summary><div class="role-card__detail"><p>Ask it for: a model structure, a budget framework.</p><p class="role-card__control">You stay in control of: the numbers.</p></div></details>
+        <details class="role-card"><summary><h4>Revenue &amp; Treasury</h4><p class="role-card__job">Revenue and cash structure.</p></summary><div class="role-card__detail"><p>Ask it for: a revenue model framework.</p></div></details>
+        <details class="role-card"><summary><h4>Controller</h4><p class="role-card__job">Close and controls structure.</p></summary><div class="role-card__detail"><p>Ask it for: a close checklist.</p></div></details>
+        <details class="role-card"><summary><h4>Tax &amp; Procurement</h4><p class="role-card__job">Planning and vendor support.</p></summary><div class="role-card__detail"><p>Ask it for: a procurement checklist.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-legal">
+      <div class="function-block__header">
+        <h3>Legal &amp; Compliance<span class="supervised-access">Available under supervised terms</span></h3>
+        <p>First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> Drafting and triage only, conveyed under supervised terms. Anything with real legal weight still goes to your own lawyer, and the workforce is built to hand it over cleanly. No attorney-client relationship is created, and this is not legal advice.</div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Contracts Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">First-pass contract triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a clause-level triage, the questions to ask.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>Privacy &amp; IP<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Privacy and IP triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a privacy-policy first pass, an IP triage.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>Employment &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Employment and compliance triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a compliance readiness first pass.</p><p class="role-card__control">You stay in control of: anything with weight goes to your qualified professional.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-ops">
+      <div class="function-block__header">
+        <h3>Operations</h3>
+        <p>Makes sure the work actually ships and keeps shipping.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Program &amp; Project Managers</h4><p class="role-card__job">Coordination and governance.</p></summary><div class="role-card__detail"><p>Ask it for: a program plan, a project schedule.</p></div></details>
+        <details class="role-card"><summary><h4>Process Engineer</h4><p class="role-card__job">Maps and fixes processes.</p></summary><div class="role-card__detail"><p>Ask it for: a process map, a bottleneck fix.</p></div></details>
+        <details class="role-card"><summary><h4>Risk &amp; Systems</h4><p class="role-card__job">Risk and enterprise systems.</p></summary><div class="role-card__detail"><p>Ask it for: a risk register.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-exec">
+      <div class="function-block__header">
+        <h3>Executive</h3>
+        <p>Sets direction and makes the trade-offs that shape everything below.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>CEO &amp; leadership</h4><p class="role-card__job">Direction and the calls at the top.</p></summary><div class="role-card__detail"><p>Ask it for: a strategic alignment read, an annual plan.</p><p class="role-card__control">You stay in control of: the final call.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-staff">
+      <div class="function-block__header">
+        <h3>People &amp; Staff</h3>
+        <p>The supporting functions that hold a growing organization together.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>HR &amp; People Ops</h4><p class="role-card__job">Hiring, performance, comp.</p></summary><div class="role-card__detail"><p>Ask it for: a job description, an interview guide.</p></div></details>
+        <details class="role-card"><summary><h4>Personal Staff</h4><p class="role-card__job">Day-to-day support and research.</p></summary><div class="role-card__detail"><p>Ask it for: a daily briefing, a research synthesis.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLOCK 4 — THE SKILLS & LIBRARIES (richness drill-down) ====== -->
+<section class="section section--surface" id="the-skills">
+  <div class="container">
+    <div class="section__header fade-in">
+      <h2>The know-how, built in.</h2>
+      <p>You have seen what lands on your desk and who works it. Here is why it lands finished. A specialist is only as good as the method behind it. Behind the workforce sit more than 130 ready-made skills, each a step-by-step way of producing a specific piece of professional work, and over 50 libraries of frameworks and hard-won patterns the specialists draw on while they work.</p>
+    </div>
+
+    <div class="quote fade-in" style="margin-top:8px;">
+      A chat box knows a little about everything and a method for nothing. This knows how the job is supposed to be done before you ask.
+    </div>
+
+    <!-- Sub-block A: skills by category -->
+    <div class="pack-subhead fade-in">
+      <h3>130+ ready-made skills</h3>
+      <button class="btn btn--ghost" data-expand-target="skills-grid" aria-pressed="false">Expand all</button>
+    </div>
+    <p class="text-secondary fade-in" style="margin-top:8px;">A skill is a proven recipe for producing one specific thing well. You never see the skills working. You just see the finished work that comes out the other side. Here is the range of what they cover.</p>
+
+    <div class="pack-grid" id="skills-grid">
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C4;</span><h4>Plans &amp; documents</h4></div>
+          <p class="pack-card__gloss">The core deliverables a business runs on: plans, briefs, specs, write-ups.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Launch plan</span><span class="cat-skill__desc">A full go-to-market and launch plan, built on a real launch method.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Product requirements</span><span class="cat-skill__desc">A clear PRD a builder can work from.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Business case</span><span class="cat-skill__desc">The case for and against a move before you commit money.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Roadmap</span><span class="cat-skill__desc">A prioritized roadmap tied to outcomes.</span></div>
+          <p class="cat-skill__more">When you ask for a launch plan, it is built on a real product-launch method, not a blank page.</p>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9ED;</span><h4>Strategy &amp; decisions</h4></div>
+          <p class="pack-card__gloss">Deciding where to play and where to bet, recorded so the call is yours and traceable.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Strategic bet</span><span class="cat-skill__desc">A structured bet with the reasoning written down.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Decision record</span><span class="cat-skill__desc">Options, trade-offs, recommendation, traceable back to you.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Positioning</span><span class="cat-skill__desc">How you sit in the market and why.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market analysis</span><span class="cat-skill__desc">A read on the market and where the openings are.</span></div>
+          <p class="cat-skill__more">Decisions are made in the open and recorded, on a published standard for governing AI work.</p>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F50D;</span><h4>Research &amp; discovery</h4></div>
+          <p class="pack-card__gloss">Turning questions into sourced answers, not a pile of links.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Interview synthesis</span><span class="cat-skill__desc">Customer interviews turned into findings.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market &amp; segment research</span><span class="cat-skill__desc">Who the market is and how it splits.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Competitive teardown</span><span class="cat-skill__desc">A rival's moves and your openings.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C8;</span><h4>Growth &amp; go-to-market</h4></div>
+          <p class="pack-card__gloss">Campaigns, content, search, and the motion to launch.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Campaign brief</span><span class="cat-skill__desc">A full campaign with the assets to run it.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Content strategy</span><span class="cat-skill__desc">Weeks of planned, on-voice content.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">SEO &amp; GEO</span><span class="cat-skill__desc">A plan to show up in search and AI answers.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9E9;</span><h4>Strategy frameworks</h4><span class="badge">20+</span></div>
+          <p class="pack-card__gloss">The named methods serious operators reach for, ready to apply to your situation.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Growth loops</span><span class="cat-skill__desc">Map the loops that compound your reach.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market expansion</span><span class="cat-skill__desc">Where to grow next and how.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Competitive forces</span><span class="cat-skill__desc">A structured read on the competitive landscape.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Pricing strategy</span><span class="cat-skill__desc">How to price and structure tiers.</span></div>
+          <p class="cat-skill__more">When you are sizing a hard call, it can run it through a named, proven framework instead of a gut guess.</p>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4DD;</span><h4>Assets &amp; deliverables</h4></div>
+          <p class="pack-card__gloss">The things you take to market: page copy, presentations, briefs, specs.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Page copy</span><span class="cat-skill__desc">On-brand copy written to convert.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Presentation</span><span class="cat-skill__desc">A deck that tells the story.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Sales enablement</span><span class="cat-skill__desc">The briefs that turn a plan into action.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2699;&#xFE0F;</span><h4>Requirements &amp; quality</h4></div>
+          <p class="pack-card__gloss">Turning a fuzzy idea into a clear spec, then pressure-testing it before it reaches you.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Feature spec</span><span class="cat-skill__desc">What it does, how it behaves, what to build.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">User stories</span><span class="cat-skill__desc">Requirements a builder can work from.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Quality checks</span><span class="cat-skill__desc">Built-in checks so the output holds up on contact.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F501;</span><h4>Operations &amp; assessment</h4></div>
+          <p class="pack-card__gloss">Keeping things shipping, and honest read-outs on where something stands.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Program plan</span><span class="cat-skill__desc">Owners, milestones, the rhythm to keep it shipping.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Process improvement</span><span class="cat-skill__desc">The bottleneck named and the fix specified.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Readiness &amp; health checks</span><span class="cat-skill__desc">What is solid and what still needs work.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Retrospective</span><span class="cat-skill__desc">What worked, what did not, what to change.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9E0;</span><h4>Memory of your business</h4></div>
+          <p class="pack-card__gloss">A working record of what you decided, learned, and why.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Context recall</span><span class="cat-skill__desc">What you decided and why, on demand.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Handoff briefing</span><span class="cat-skill__desc">Brief a specialist without re-explaining.</span></div>
+          <p class="cat-skill__more">The workforce builds on yesterday instead of starting from scratch every morning.</p>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F517;</span><h4>Cross-domain specialist work</h4></div>
+          <p class="pack-card__gloss">The deeper, technical jobs that cut across functions, the work you would normally go outside to buy.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Specialist deep-dives</span><span class="cat-skill__desc">Detailed technical work across domains.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Setup &amp; utility</span><span class="cat-skill__desc">Gets the workforce running inside your business and keeps it tidy.</span></div>
+        </div>
+      </details>
+    </div>
+
+    <p class="text-secondary fade-in" style="margin-top:24px;">None of this is improvised. Every category above is a body of method the workforce already has the day you start. You are not teaching it how to do the job. You are pointing it at yours.</p>
+
+    <!-- Sub-block B: libraries by domain -->
+    <div class="pack-subhead fade-in">
+      <h3>50+ knowledge libraries</h3>
+      <button class="btn btn--ghost" data-expand-target="libs-grid" aria-pressed="false">Expand all</button>
+    </div>
+    <p class="text-secondary fade-in" style="margin-top:8px;">Skills are how the work gets done. Libraries are what the work knows: the accumulated frameworks, patterns, and hard-won lessons of each field. A skill knows how to build the deliverable. The library makes sure it is built the way an expert in that field would build it.</p>
+
+    <div class="pack-grid" id="libs-grid">
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4B0;</span><h4>Product &amp; growth</h4></div>
+          <p class="pack-card__gloss">Prioritization, pricing, discovery, metrics, and go-to-market playbooks.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">Pricing and packaging: how to price, how to structure tiers, how to think about value and willingness to pay. So the pricing work is grounded in method, not a number pulled from the air.</span></div>
+          <div class="cat-skill"><span class="cat-skill__desc">Go-to-market and launch: proven launch motions, channel thinking, positioning frameworks. So a launch plan reflects how launches actually win.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4E3;</span><h4>Marketing</h4></div>
+          <p class="pack-card__gloss">Content, growth, SaaS metrics, and market research.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">Competitive strategy: how to read a competitor, find the openings, and respond. So the competitive work has teeth.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4CA;</span><h4>Finance</h4></div>
+          <p class="pack-card__gloss">Business-case and financial-modeling frameworks.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">Finance and modeling: how sound forecasts and models are built, the assumptions that matter, the scenarios worth running. So the structure is honest. The numbers are yours.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2696;&#xFE0F;</span><h4>Legal &amp; compliance</h4></div>
+          <p class="pack-card__gloss">Contract, privacy, IP, employment, and compliance frameworks.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">The structure and the questions that frame a first-pass review. This is drafting and triage that gets you to a decision faster.</span></div>
+        </div>
+        <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> Drafting and triage only, available under supervised terms. Anything carrying real legal weight still goes to your own lawyer, and the workforce is built to hand it over cleanly. This is not legal advice.</div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3A8;</span><h4>Design &amp; research</h4></div>
+          <p class="pack-card__gloss">Design systems, user-research methods, and accessibility.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">What good interface, brand, and product work looks like, and how it is shaped. So the design output looks like it came from a real studio.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3D7;&#xFE0F;</span><h4>Architecture &amp; engineering</h4></div>
+          <p class="pack-card__gloss">How systems are designed to actually hold up.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">How systems are designed to actually hold up. So what gets built is built on sound footing.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C9;</span><h4>Data &amp; analytics</h4></div>
+          <p class="pack-card__gloss">Analytics methods, experimentation, and data governance.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">How to turn activity into a decision, how to read a test, how to know what the numbers are really saying.</span></div>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F31F;</span><h4>Sales &amp; customer success</h4></div>
+          <p class="pack-card__gloss">Sales methodology, onboarding, and support operations.</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__desc">How to read account health, spot who is about to leave or buy, and act on it.</span></div>
+        </div>
+      </details>
+    </div>
+
+    <p class="text-secondary fade-in" style="margin-top:24px;">This is the difference you feel from the first hour. The workforce does not just generate something that sounds right. It produces work built on how the job is actually done, in field after field, because the expertise was loaded in before you arrived.</p>
+
+    <!-- ====== PAGE-LEVEL HUMAN-IN-THE-LOOP SPINE BAND ====== -->
+    <div class="hitl-band fade-in" role="note">
+      <h3>One rule holds across every sensitive field.</h3>
+      <p>Legal, HR, finance, compliance. Anything that carries legal, financial, or compliance weight is drafted and triaged, then handed to your own qualified professional. The workforce drafts and triages so you decide faster. It never replaces the qualified human who signs off. <strong>You, or your lawyer, your accountant, always make the call.</strong> That line is built in, and it is yours to keep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="section section--accent" id="cta">
+  <div class="container" style="text-align:center; max-width:720px;">
+    <h2 class="fade-in" style="margin-bottom:16px;">This is the work, the team, and the know-how. Now make it yours.</h2>
+    <p class="text-lg text-secondary fade-in" style="margin-bottom:32px;">The only thing left is to put the whole thing inside your business and learn to run it. That is what the Operator Intensive does, in a single day, for $10,000.</p>
+    <div class="btn-group fade-in" style="justify-content:center;">
+      <a href="contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack('apply_click',{location:'workforce-cta'})">Apply for an Operator Intensive</a>
+    </div>
+    <p class="text-sm text-secondary fade-in" style="margin-top:16px;">Limited intake, by application. Tell us what you are running, and we will tell you honestly whether it is a fit, or whether <a href="on-call.html" onclick="pbTrack('door_click',{door:'on-call',location:'workforce-cta'})">On Call</a> is the better door.</p>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/index.html" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Run an AI workforce, or have us run it for you.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="/on-call.html">ProductBeacon On Call</a>
+        <a href="/on-call.html#fractional">Fractional Product Leadership</a>
+        <a href="/on-call.html#build">Product Build</a>
+        <a href="/on-call.html#org">Product Org Services</a>
+      </div>
+      <div class="footer__col">
+        <h4>Capabilities</h4>
+        <a href="/index.html#intensive">The Operator Intensive</a>
+        <a href="/workforce.html">The Workforce</a>
+        <a href="/index.html#path">The Operator's Private Line</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
+        <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<!-- ====== Page progressive enhancements: (1) section-tabs scroll-spy; (2) expand-all toggles. Both degrade cleanly. ====== -->
+<script>
+(function(){
+  "use strict";
+  // (1) Section-tabs scroll-spy
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.section-tabs a'));
+  var targets = tabs.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function spy(){
+    var offset = 140; // nav 72 + sub-nav 52 + margin
+    var current = null;
+    for (var i = 0; i < targets.length; i++){
+      if (targets[i].getBoundingClientRect().top - offset <= 0) current = tabs[i];
+    }
+    tabs.forEach(function(t){ t.classList.remove('is-current'); });
+    if (current) current.classList.add('is-current');
+  }
+  if ('IntersectionObserver' in window || true){
+    window.addEventListener('scroll', spy, { passive: true });
+    window.addEventListener('resize', spy);
+    spy();
+  }
+  // (2) Expand-all / Collapse-all per sub-block
+  var btns = document.querySelectorAll('[data-expand-target]');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var grid = document.getElementById(btn.getAttribute('data-expand-target'));
+      if (!grid) return;
+      var expanded = btn.getAttribute('aria-pressed') === 'true';
+      var cards = grid.querySelectorAll('details.pack-card');
+      cards.forEach(function(c){ if (expanded) { c.removeAttribute('open'); } else { c.setAttribute('open',''); } });
+      btn.setAttribute('aria-pressed', String(!expanded));
+      btn.textContent = expanded ? 'Expand all' : 'Collapse all';
+    });
+  });
+})();
+</script>
+</body>
+</html>
