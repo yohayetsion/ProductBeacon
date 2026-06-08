@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProductBeacon AI Workforce — Install Requirements</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+<style>
+  :root{
+    --navy:#0F172A; --ink:#1e293b; --muted:#64748b; --amber:#F59E0B; --amber-2:#FBBF24;
+    --line:#e2e8f0; --bg-soft:#f8fafc; --bg-amber:#fffbeb;
+  }
+  *{box-sizing:border-box;}
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); line-height:1.55; margin:0; background:#fff; font-size:15px;
+  }
+  .page{ max-width:860px; margin:0 auto; padding:40px 48px 56px; }
+  header{ display:flex; align-items:center; gap:14px; border-bottom:3px solid var(--amber); padding-bottom:18px; margin-bottom:8px;}
+  .logo{ width:42px; height:42px; flex:0 0 42px; }
+  .brand{ font-weight:800; color:var(--navy); font-size:18px; letter-spacing:-.01em; }
+  .brand small{ display:block; font-weight:600; color:var(--muted); font-size:12.5px; letter-spacing:.02em; }
+  h1{ color:var(--navy); font-size:25px; line-height:1.2; margin:22px 0 6px; letter-spacing:-.02em; }
+  .lede{ color:var(--ink); font-size:15.5px; margin:0 0 4px; }
+  .tag{ display:inline-block; background:var(--bg-amber); color:#92400e; border:1px solid #fcd34d; border-radius:999px; padding:2px 11px; font-size:12px; font-weight:600; margin-top:6px;}
+  h2{ color:var(--navy); font-size:16.5px; margin:30px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--line); letter-spacing:-.01em;}
+  h2 .num{ color:var(--amber); font-weight:800; margin-right:8px; }
+  p{ margin:9px 0; }
+  .audience{ font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--amber); }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:6px; }
+  .two .audience+p{ margin-top:3px; }
+  table{ width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:14px; }
+  th,td{ text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ background:var(--bg-soft); color:var(--navy); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:.03em; }
+  td:first-child{ font-weight:700; color:var(--navy); white-space:nowrap; }
+  .why{ color:var(--muted); }
+  .sec{ background:var(--bg-soft); border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:8px; padding:14px 18px; margin:12px 0; }
+  .sec h3{ margin:0 0 8px; color:var(--navy); font-size:14.5px; }
+  .sec ul{ margin:6px 0 0; padding-left:18px; }
+  .sec li{ margin:5px 0; }
+  ol.steps{ counter-reset:s; list-style:none; padding:0; margin:8px 0; }
+  ol.steps li{ counter-increment:s; position:relative; padding:7px 0 7px 38px; border-bottom:1px dashed var(--line); }
+  ol.steps li::before{ content:counter(s); position:absolute; left:0; top:7px; width:24px; height:24px; background:var(--navy); color:#fff; border-radius:50%; font-size:12.5px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  code{ font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:#0f172a; color:#fde68a; padding:1.5px 6px; border-radius:5px; font-size:12.5px; }
+  .callout{ background:var(--bg-amber); border:1px solid #fcd34d; border-radius:8px; padding:12px 16px; margin:14px 0; font-size:14px; }
+  footer{ margin-top:34px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:12.5px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  footer a{ color:var(--amber); text-decoration:none; font-weight:600; }
+  @media print{ .page{ padding:24px 30px; max-width:none; } body{ font-size:12.5px; } h1{ font-size:22px;} a{ color:var(--ink);} }
+  @media (max-width:640px){ .two{ grid-template-columns:1fr; } .page{ padding:24px 20px; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <svg class="logo" viewBox="0 0 400 400"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <div class="brand">ProductBeacon<small>AI Workforce · The Operator Intensive</small></div>
+  </header>
+
+  <h1>What to install before your Operator Intensive</h1>
+  <p class="lede">A short, IT-friendly checklist of what needs to be on your laptop for the one-day session. Nothing here is unusual or invasive — these are standard, widely-used developer tools, and everything runs locally on your machine.</p>
+  <span class="tag">~15 minutes to install · Works on Windows &amp; macOS · No servers, no admin daemons</span>
+
+  <div class="two">
+    <div>
+      <div class="audience">For the executive</div>
+      <p>On the day, we install a private "AI workforce" — about a hundred specialist agents — that runs on your own laptop inside Anthropic's Claude Code. To make the day productive, your machine needs a handful of free, standard tools in place beforehand. Forward this page to whoever manages your laptop; the next column is written for them.</p>
+    </div>
+    <div>
+      <div class="audience">For IT / Security</div>
+      <p>The workforce is a set of human-readable instruction files plus small Python helper scripts that run locally inside the Claude Code CLI. There is <strong>no server, no inbound connection, and no background service</strong>. Required software is listed below, followed by the network and data-handling profile.</p>
+    </div>
+  </div>
+
+  <h2><span class="num">1.</span>Software to install</h2>
+  <table>
+    <thead><tr><th>Software</th><th>Why it's needed</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Node.js (LTS)</td><td class="why">Used to install the Claude Code CLI (via <code>npm</code>).</td><td>nodejs.org</td></tr>
+      <tr><td>Claude Code</td><td class="why">Anthropic's official command-line app — the environment the workforce runs in.</td><td><code>npm install -g @anthropic-ai/claude-code</code></td></tr>
+      <tr><td>Claude access</td><td class="why">A Claude Pro or Max subscription, <em>or</em> an Anthropic API key. This is the only paid external dependency (the AI model itself).</td><td>claude.ai / console.anthropic.com</td></tr>
+      <tr><td>Git</td><td class="why">To receive the workforce files and pull periodic updates.</td><td>git-scm.com</td></tr>
+      <tr><td>Python 3.10+</td><td class="why">Runs the small helper scripts (memory, logging, document generation). Standard-library only.</td><td>python.org</td></tr>
+      <tr><td>A terminal</td><td class="why">PowerShell (Windows) or Terminal (macOS) — already built in.</td><td>Built in</td></tr>
+      <tr><td>A GitHub account</td><td class="why">So we can grant your account access to your private workforce repository.</td><td>github.com</td></tr>
+    </tbody>
+  </table>
+  <p class="why" style="font-size:13px;">System: Windows 10/11 or macOS · ~2–5&nbsp;GB free disk · internet connection. Standard user rights are sufficient to run the workforce; admin rights are only needed to install the tools above (IT may pre-install them).</p>
+
+  <h2><span class="num">2.</span>Network &amp; data handling <span style="font-weight:600;font-size:13px;color:var(--muted);">— the part IT cares about</span></h2>
+  <div class="sec">
+    <h3>Connections</h3>
+    <ul>
+      <li><strong>Outbound HTTPS only</strong>, to two destinations: <code>api.anthropic.com</code> (the AI model) and <code>github.com</code> (your repository).</li>
+      <li><strong>No inbound connections. No listening ports. No background service or daemon</strong> is installed or run.</li>
+    </ul>
+  </div>
+  <div class="sec">
+    <h3>Data</h3>
+    <ul>
+      <li>The agents run <strong>locally</strong>. The only data that leaves the laptop is (a) the text you choose to send to Anthropic's model, governed by <strong>Anthropic's commercial terms / DPA</strong> (Anthropic does not train its models on commercial/API customer data), and (b) ordinary Git operations to your private repository.</li>
+      <li><strong>Nothing is sent to ProductBeacon</strong> beyond what you explicitly choose to share with us.</li>
+      <li>The workforce files are plain, auditable Markdown and Python — your team can read exactly what they do.</li>
+    </ul>
+  </div>
+
+  <h2><span class="num">3.</span>Install steps</h2>
+  <ol class="steps">
+    <li>Install <strong>Node.js LTS</strong> from nodejs.org.</li>
+    <li>Install <strong>Claude Code</strong>: run <code>npm install -g @anthropic-ai/claude-code</code> in a terminal.</li>
+    <li>Install <strong>Git</strong> (git-scm.com) and <strong>Python 3.10+</strong> (python.org).</li>
+    <li>Sign in to <strong>Claude</strong> (your Pro/Max subscription) or set your <strong>Anthropic API key</strong>.</li>
+    <li>Accept the <strong>GitHub invitation</strong> we send and <strong>clone</strong> your ProductBeacon AI Workforce repository.</li>
+    <li>Run <code>python install.py</code> once to set up the workforce in your working folder.</li>
+  </ol>
+  <div class="callout"><strong>That's the whole list.</strong> If steps 1–4 are done before the session, we complete steps 5–6 together and spend the day teaching you to operate the workforce. The morning after, you open your laptop and it's waiting for your instructions.</div>
+
+  <footer>
+    <span>ProductBeacon · The practice that makes you the operator of a governed AI workforce.</span>
+    <span><a href="https://productbeacon.agency">productbeacon.agency</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
