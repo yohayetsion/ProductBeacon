@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; }
+  body {
+    font-family:'Inter',system-ui,sans-serif;
+    background:#0B1120;
+    color:#F1F5F9;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:90px;
+    position:relative;
+    overflow:hidden;
+  }
+  /* soft amber glow top-right */
+  body::after {
+    content:""; position:absolute; top:-220px; right:-220px;
+    width:620px; height:620px; border-radius:50%;
+    background:radial-gradient(circle, rgba(245,158,11,0.18), transparent 70%);
+  }
+  .brand { display:flex; align-items:center; gap:22px; margin-bottom:54px; }
+  .brand svg { width:84px; height:84px; }
+  .wordmark { font-size:46px; font-weight:700; letter-spacing:-0.01em; }
+  .wordmark strong { font-weight:800; }
+  h1 {
+    font-size:72px; font-weight:800; line-height:1.06; letter-spacing:-0.02em;
+    max-width:980px;
+  }
+  h1 .amber { color:#F59E0B; }
+  .sub { margin-top:34px; font-size:30px; font-weight:600; color:#C3CCDC; }
+  .url { position:absolute; bottom:64px; left:90px; font-size:24px; font-weight:600; color:#8A97AE; letter-spacing:0.02em; }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="400" rx="48" fill="#0F172A"/><circle cx="200" cy="150" r="50" fill="#F59E0B"/><path d="M125 225 L200 350 L275 225" stroke="#F59E0B" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    <span class="wordmark">Product<strong>Beacon</strong></span>
+  </div>
+  <h1>Run an AI workforce. <span class="amber">Or have us run it for you.</span></h1>
+  <p class="sub">The practice that installs a governed AI workforce, and the know-how to govern it.</p>
+  <div class="url">productbeacon.agency</div>
+</body>
+</html>

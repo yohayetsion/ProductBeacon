@@ -49,6 +49,19 @@ SPECIAL = {
         "/research/state-of-cyber-2026/pre-call-brief.html",
 }
 
+# Operator-intensive migration Phase 5 dispositions (2026-06-08).
+# Retired marketing surfaces -> canonical Version A targets. These OVERWRITE the
+# retired pages with noindex meta-refresh stubs. CF Bulk Redirects (real 301s)
+# take precedence at the edge; these are the repo-only belt-and-suspenders.
+# insights/index.html is the HUB only -- the ~14 article index.html pages STAY live.
+DISPOSITIONS = {
+    REPO / "services.html": "/on-call.html",
+    REPO / "axia-offer.html": "/",
+    REPO / "gtm-engine.html": "/",
+    REPO / "strategic-infrastructure.html": "/",
+    REPO / "insights" / "index.html": "/research/",
+}
+
 
 def write_stub(path: Path, dest: str):
     path.write_text(STUB.format(origin=ORIGIN, dest=dest), encoding="utf-8")
@@ -69,6 +82,13 @@ def main():
         write_stub(src, dest)
 
     for path, dest in SPECIAL.items():
+        if path.exists():
+            write_stub(path, dest)
+        else:
+            print(f"SKIP (missing): {path.relative_to(REPO)}")
+
+    print("--- migration dispositions (2026-06-08) ---")
+    for path, dest in DISPOSITIONS.items():
         if path.exists():
             write_stub(path, dest)
         else:

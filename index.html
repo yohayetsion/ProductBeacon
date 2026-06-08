@@ -8,6 +8,32 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<!-- ====== SEO: canonical / Open Graph / Twitter ====== -->
+<link rel="canonical" href="https://productbeacon.agency/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ProductBeacon">
+<meta property="og:title" content="ProductBeacon | Run an AI Workforce, or Have Us Run It For You">
+<meta property="og:description" content="In one day, ProductBeacon installs an AI workforce inside your business and gives you the know-how to govern it. Or have us run it for you. Limited intake, by application.">
+<meta property="og:url" content="https://productbeacon.agency/">
+<meta property="og:image" content="https://productbeacon.agency/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProductBeacon | Run an AI Workforce, or Have Us Run It For You">
+<meta name="twitter:description" content="In one day, ProductBeacon installs an AI workforce inside your business and gives you the know-how to govern it. Or have us run it for you.">
+<meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
+<!-- ====== SEO: JSON-LD (Organization + FAQPage) ====== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ProductBeacon","url":"https://productbeacon.agency/","logo":"https://productbeacon.agency/og-image.png","description":"ProductBeacon installs and governs an AI workforce inside your business, and offers fractional product leadership, product builds, and product org services.","founder":{"@type":"Person","name":"Yohay Etsion"},"sameAs":["https://www.linkedin.com/in/yohayetsion/","https://www.linkedin.com/company/productbeacon"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is one day really enough?","acceptedAnswer":{"@type":"Answer","text":"One day is enough to install the workforce, run it against your real work, and leave you operating, because we do not waste the day on theory. You are not learning about AI. You are standing up your AI workforce and using it before the day ends. The Private Line exists for everything after, so that as the ground shifts, you stay current without starting over."}},
+{"@type":"Question","name":"Am I locked into your ecosystem?","acceptedAnswer":{"@type":"Answer","text":"The opposite is true. We hand you the keys and a license to run the stack. It is yours to run, with us or without us. The Private Line is the one part you can cancel any time and still keep everything you have. Most people stay, but not because they are trapped. They stay because inheriting our operating know-how is cheaper than rebuilding it themselves."}},
+{"@type":"Question","name":"Platforms do this for free. Why pay you?","acceptedAnswer":{"@type":"Answer","text":"They ship you agents. Nobody ships you the know-how to govern them: which agent for which job, how to review the output, where you have to stay in the loop. That is the entire gap between having AI tools and running an AI workforce. We sell the operator the way to run them."}},
+{"@type":"Question","name":"Why not just hire an AI person instead?","acceptedAnswer":{"@type":"Answer","text":"A hire costs you months and a six-figure salary to find someone who has never actually run a governed AI workforce, because almost nobody has. In one day, we make you that person, for a fraction of one month of that salary, with none of the management overhead. And if you would rather not run it at all, ProductBeacon On Call does."}},
+{"@type":"Question","name":"What happens if I cancel?","acceptedAnswer":{"@type":"Answer","text":"You keep everything you already have. The workforce, the configuration, the runbook, the license. The only thing that stops is the ongoing relationship: the updates, the new agents on request, and the private line. Cancel any time, no penalty, and walk away owning what you came for."}},
+{"@type":"Question","name":"How do I know if I am a fit?","acceptedAnswer":{"@type":"Answer","text":"You are likely a fit if you run a small professional-services firm, you feel the ceiling of doing everything yourself, and you will actually operate the stack the morning after. If you would rather have the outcome handed to you without touching the controls, On Call is the better door."}}
+]}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
 <script>
@@ -67,10 +93,10 @@
 </head>
 <body>
 
-<!-- ====== NAV (copied verbatim from live chrome; Version A link list + Apply button) ====== -->
+<!-- ====== NAV ====== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav__inner">
-    <a href="index.html" class="nav__logo" aria-label="ProductBeacon home">
+    <a href="/index.html" class="nav__logo" aria-label="ProductBeacon home">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="32" height="32" rx="6" fill="#0F172A"/>
         <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
@@ -78,16 +104,14 @@
       </svg>
       <span class="nav__logo-text">Product<strong>Beacon</strong></span>
     </a>
-
     <ul class="nav__links">
-      <li><a href="#intensive">The Operator Intensive</a></li>
-      <li><a href="workforce.html">The Workforce</a></li>
-      <li><a href="on-call.html">On Call &amp; Fractional</a></li>
-      <li><a href="research/">Research</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+      <li><a href="/index.html#intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
     </ul>
-
     <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line x1="3" y1="6" x2="21" y2="6"/>
@@ -96,14 +120,13 @@
       </svg>
     </button>
   </div>
-
   <div class="nav__mobile" role="menu">
-    <a href="#intensive" role="menuitem">The Operator Intensive</a>
-    <a href="workforce.html" role="menuitem">The Workforce</a>
-    <a href="on-call.html" role="menuitem">On Call &amp; Fractional</a>
-    <a href="research/" role="menuitem">Research</a>
-    <a href="about.html" role="menuitem">About</a>
-    <a href="contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+    <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
   </div>
 </nav>
 
@@ -393,35 +416,32 @@
   <div class="container">
     <div class="footer__inner">
       <div class="footer__brand">
-        <a href="index.html" class="nav__logo" style="margin-bottom:8px;">
+        <a href="/index.html" class="nav__logo" style="margin-bottom:8px;">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
           <span class="nav__logo-text">Product<strong>Beacon</strong></span>
         </a>
         <p>Run an AI workforce, or have us run it for you.</p>
       </div>
-
       <div class="footer__col">
         <h4>Services</h4>
-        <a href="on-call.html">ProductBeacon On Call</a>
-        <a href="on-call.html#fractional">Fractional Product Leadership</a>
-        <a href="on-call.html#build">Product Build</a>
-        <a href="on-call.html#org">Product Org Services</a>
+        <a href="/on-call.html">ProductBeacon On Call</a>
+        <a href="/on-call.html#fractional">Fractional Product Leadership</a>
+        <a href="/on-call.html#build">Product Build</a>
+        <a href="/on-call.html#org">Product Org Services</a>
       </div>
-
       <div class="footer__col">
         <h4>Capabilities</h4>
-        <a href="#intensive">The Operator Intensive</a>
-        <a href="workforce.html">The Workforce</a>
-        <a href="#path">The Operator's Private Line</a>
+        <a href="/index.html#intensive">The Operator Intensive</a>
+        <a href="/workforce.html">The Workforce</a>
+        <a href="/index.html#path">The Operator's Private Line</a>
       </div>
-
       <div class="footer__col">
         <h4>Resources</h4>
+        <a href="/case-studies.html">Case Studies</a>
         <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
         <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
       </div>
     </div>
-
     <div class="footer__bottom">
       <span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span>
       <div class="footer__social">
