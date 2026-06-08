@@ -32,7 +32,6 @@
     </a>
     <ul class="nav__links">
       <li><a href="services.html">Services</a></li>
-      <li><a href="insights/">Insights</a></li>
       <li><a href="research/">Research</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="about.html">About</a></li>
@@ -47,7 +46,6 @@
   </div>
   <div class="nav__mobile" role="menu">
     <a href="services.html" role="menuitem">Services</a>
-    <a href="insights/" role="menuitem">Insights</a>
     <a href="research/" role="menuitem">Research</a>
     <a href="case-studies.html" role="menuitem">Case Studies</a>
     <a href="about.html" role="menuitem">About</a>
@@ -158,8 +156,26 @@
         <textarea id="challenge" name="challenge" placeholder="Tell us about your product situation, positioning questions, or strategic challenges..."></textarea>
       </div>
       <input type="hidden" name="_subject" value="ProductBeacon Diagnostic Request">
+      <input type="hidden" name="intent" id="intent-field" value="">
       <button type="submit" class="btn btn--primary btn--lg">Request Diagnostic</button>
     </form>
+    <script>
+      // Capture which door the lead came through (?intent=apply | on-call) for attribution.
+      (function () {
+        var intent = new URLSearchParams(window.location.search).get('intent');
+        if (!intent) return;
+        var field = document.getElementById('intent-field');
+        if (field) field.value = intent;
+        var subj = document.querySelector('input[name="_subject"]');
+        if (subj) {
+          subj.value = intent === 'apply'
+            ? 'Operator Intensive application'
+            : intent === 'on-call'
+              ? 'ProductBeacon On Call enquiry'
+              : subj.value;
+        }
+      })();
+    </script>
   </div>
 </section>
 

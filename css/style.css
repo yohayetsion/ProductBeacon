@@ -575,8 +575,9 @@ a.card:hover {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding-top: var(--nav-height);
+  align-items: flex-start;
+  padding-top: calc(var(--nav-height) + var(--space-12));
+  padding-bottom: var(--space-20);
   position: relative;
   overflow: hidden;
 }
