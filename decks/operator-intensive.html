@@ -1794,25 +1794,33 @@ This pack composes with the following ProductBeacon surfaces:
   <div style="flex:1 1 320px;min-width:300px;">
     <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
       <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-      Spawn Audit Block — real receipt from building this deck
+      Spawn Audit Block — a real receipt: what it loaded, what it produced, what it cost
     </div>
-    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;line-height:1.55;color:#E8EEF6;min-height:300px;">
-      <!-- AUDIT-BLOCK: real block captured live from this deck's own content-strategist spawn (2026-06-07), lightly trimmed to fit -->
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.78rem;line-height:1.5;color:#E8EEF6;min-height:300px;">
+      <!-- AUDIT-BLOCK: real new-format block captured live from this workspace's tech-lead build spawn (2026-06-08), trimmed to fit -->
       <span style="color:#FBBF24;font-weight:700;">&#128203; Spawn Audit Block</span>
       <br><br>
       <span style="color:#FBBF24;">[Pre-Execution Loads]</span>
-      <br>- SKILL.md: <span style="color:#F59E0B;">&#10003;</span> .claude/skills/content-strategist/SKILL.md
-      <br>- Preload packs (1): content-marketing <span style="color:#F59E0B;">&#10003;</span>
-      <br>- Task-matched skills (1): content-copy <span style="color:#F59E0B;">&#10003;</span>
-      <br>- Conditional packs (0): none triggered
+      <br>- SKILL.md: <span style="color:#F59E0B;">&#10003;</span> .claude/skills/tech-lead/SKILL.md
+      <br>- Preload packs (5): dev-team, system-patterns,
+      <br>&nbsp;&nbsp;code-review, api-design, subagent-driven-dev
+      <br>- Task-matched skills (1): code-review <span style="color:#F59E0B;">&#10003;</span>
       <br>- Fallbacks: none
+      <br><br>
+      <span style="color:#FBBF24;">[Outputs]</span>
+      <br>- build-operator-dashboard.py
+      <br>- dashboard-data.json
+      <br>- operator-telemetry-dashboard.html
+      <br><br>
+      <span style="color:#FBBF24;">[Context Records]</span>
+      <br>- none
       <br><br>
       <span style="color:#FBBF24;">[Post-Execution ROI]</span>
       <br>- Time saved: ~5 hrs
-      <br>- Elapsed: ~6 min
-      <br>- Tokens: ~62k (~$1.0 cost)
+      <br>- Tokens: ~50k (~$1.5 cost)
       <br>- Value: ~$500
     </div>
+    <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">Every spawn shows what it produced and what it filed away. That is how the workforce stays auditable.</p>
   </div>
 </div>
 
@@ -2029,10 +2037,10 @@ This pack composes with the following ProductBeacon surfaces:
       <ul class="bullets">
         <li>Three output shapes: the agent deliverable, the plan written before execution, the shareable HTML deck.</li>
         <li>Everything is a file in a known place: versioned, findable, reusable.</li>
-        <li>Decks auto-generate from the markdown and open in your browser.</li>
+        <li>Every deliverable produces two things by contract: the Markdown work product, and exactly one branded, commentable presentation you can review and mark up.</li>
       </ul>
 
-      <blockquote class="pullquote">If an agent made something meaningful, it is saved, never trapped in a chat.</blockquote>
+      <blockquote class="pullquote">Nothing meaningful is trapped in a chat. By the protocol, every deliverable becomes a file and a presentation you can govern.</blockquote>
         </div>
         <div class="split-right">
 <!-- FRAGMENT: outputs | SVG (simplified) — 3 output types -> file glyph -> browser glyph -->
