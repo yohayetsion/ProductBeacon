@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Operator Intensive - ProductBeacon</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cimage href='data:image/png;base64,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IACNVd3EV33dALxNgAA0V20zX+31AnAfAQIAAMQIEIABqkwVqrxOALYTIABDrL65X/31AXCMd+8/fP5x0J8FQBHfv377YxXCA2AWExCAgVbZ9K/yOgDIESAAQ129+b/65wNwDV/BAiD6lSzhATCbAAEgEiLCAwABAsDpISI8AHjMBASAQ4NEcADwGgECAADE+K9gAQAAMQIEAACIESAAAECMAAEAAGIECAAAECNAAACAGAECAADECBAAACBGgAAAADECBAAAiBEgAABAjAABAABiBAgAABAjQAAAgBgBAgAAxAgQAAAgRoAAAAAxAgQAAIgRIAAAQIwAAQAAYgQIAAAQI0AAAIAYAQIAAMQIEAAAIEaAAAAAMQIEAACIESAAAECMAAEAAGIECAAAECNAAACAGAECAADECBAAACBGgAAAADECBAAAiBEgAABAjAABAABiBAgAABAjQAAAgBgBAgAAxAgQAAAgRoAAAAAxAgQAAIgRIAAAQIwAAQAAYgQIAAAQI0AAAIAYAQIAAMQIEAAAQIAAAAD9mIAAAAAxAgQAAIgRIAAAQIwAAQAAYgQIAAAQI0AAAIAYAQIAAMQIEAAAIEaAAAAAMQIEAACIESAAAECMAAEAAGIECAAAECNAAACAGAECAADECBAAACBGgAAAADECBAAAiBEgAABAjAABAABiBAgAAPBHyv8AZRtROC9Qif4AAAAASUVORK5CYII=' width='64' height='64'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0B1220;
+  --bg-2: #111c30;
+  --ink: #E8EEF6;
+  --muted: #9FB0C6;
+  --amber: #F59E0B;
+  --amber-2: #FBBF24;
+  --line: rgba(245,158,11,0.22);
+}
+* { box-sizing: border-box; }
+html { scrollbar-width: none; scroll-behavior: smooth; }
+html::-webkit-scrollbar { display: none; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Slides: scrollable, never clipped ---- */
+.slide {
+  display: none;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: clamp(2rem, 5vw, 5rem);
+  padding-bottom: calc(clamp(2rem, 5vw, 5rem) + 84px);
+}
+.slide.active { display: block; }
+.slide-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: calc(100vh - 2 * clamp(2rem, 5vw, 5rem) - 84px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ---- Type scale ---- */
+.display {
+  font-size: clamp(2.0rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+.slide-h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1.2rem;
+  letter-spacing: -0.01em;
+}
+.slide-h2.small { font-size: clamp(1.25rem, 2vw, 1.7rem); margin-bottom: 0.5rem; }
+.eyebrow {
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted); margin-bottom: 0.6rem; font-weight: 600;
+}
+.subhead {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  color: var(--muted); margin: 1.1rem 0 0; max-width: 60ch;
+}
+.subhead-sm { font-size: 1.1rem; color: var(--muted); margin: 0 0 1.4rem; max-width: 64ch; }
+.amber-rule {
+  width: 96px; height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--amber), var(--amber-2));
+  margin: 1.4rem 0 0;
+}
+.bullets { margin: 0; padding: 0; list-style: none; }
+.bullets li {
+  position: relative; padding-left: 1.6rem; margin-bottom: 0.95rem;
+  font-size: 1.125rem; line-height: 1.6; color: var(--ink);
+}
+.bullets li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--amber); box-shadow: 0 0 0 4px rgba(245,158,11,0.12);
+}
+.pullquote {
+  margin: 1.6rem 0 0; padding: 1.1rem 1.4rem;
+  background: var(--bg-2); border-left: 4px solid var(--amber);
+  border-radius: 0 12px 12px 0;
+  font-size: 1.375rem; font-weight: 600; font-style: italic;
+  line-height: 1.45; color: var(--ink);
+}
+.caption-line { font-size: 1.05rem; color: var(--muted); margin: 1rem 0 0; max-width: 70ch; }
+
+/* ---- TITLE / DIVIDER ---- */
+.title-inner, .divider-inner { align-items: flex-start; text-align: left; position: relative; }
+.title-inner .subhead { max-width: 56ch; }
+.divider-inner { justify-content: center; }
+.ghost-numeral {
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  font-size: clamp(14rem, 34vw, 30rem); font-weight: 800;
+  color: rgba(245,158,11,0.07); line-height: 0.8; z-index: 0; pointer-events: none;
+}
+.divider-inner .display, .divider-inner .subhead, .divider-inner .amber-rule { position: relative; z-index: 1; }
+.divider-inner .display { font-size: clamp(2.6rem, 6vw, 4rem); }
+
+/* ---- STATEMENT ---- */
+.statement-body { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.4rem; align-items: start; }
+.statement-left { min-width: 0; }
+.statement-inner .pullquote { margin-top: 0; align-self: center; }
+@media (max-width: 860px) { .statement-body { grid-template-columns: 1fr; } }
+
+/* ---- SPLIT ---- */
+.split-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6rem; align-items: center; }
+.split-body.wide-right { grid-template-columns: 0.82fr 1.18fr; }
+.split-left { min-width: 0; }
+.split-right { min-width: 0; }
+.split-right svg { display: block; }
+@media (max-width: 920px) {
+  .split-body, .split-body.wide-right { grid-template-columns: 1fr; gap: 1.8rem; }
+}
+
+/* ---- ARTIFACT-LEAD ---- */
+.artifact-inner { justify-content: flex-start; padding-top: 1rem; }
+.artifact-stage { margin: 0.4rem auto 0; max-width: 980px; width: 100%; }
+.artifact-inner .caption-line { max-width: 80ch; margin-left: auto; margin-right: auto; text-align: center; }
+
+/* ---- fragments sit on the bg correctly ---- */
+.pb-frag { width: 100%; }
+
+/* ---- REVIEW slide ---- */
+.review-list {
+  margin: 1.5rem 0; display: grid; gap: 0.8rem; max-height: 50vh; overflow-y: auto;
+}
+.review-item {
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+}
+.review-item .ri-meta { font-size: 0.78rem; color: var(--amber-2); text-transform: uppercase; letter-spacing: 0.08em; }
+.review-item .ri-text { margin-top: 0.35rem; color: var(--ink); }
+.review-empty { color: var(--muted); font-style: italic; }
+.review-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.btn {
+  font-family: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+  background: var(--amber); color: #1a1206; border: none;
+  padding: 0.7rem 1.3rem; border-radius: 10px;
+}
+.btn:hover { background: var(--amber-2); }
+.btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+.btn-ghost:hover { color: var(--ink); }
+
+/* ---- Inline commenting ---- */
+.commentable { position: relative; }
+.commentable.has-comment { outline: 1px dashed rgba(245,158,11,0.4); outline-offset: 4px; border-radius: 6px; }
+.cmt-badge {
+  position: absolute; top: -10px; right: -10px; z-index: 5;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--amber); color: #1a1206; font-size: 0.72rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ---- Comment popup ---- */
+#cmt-pop {
+  position: fixed; z-index: 200; display: none;
+  background: var(--bg-2); border: 1px solid var(--amber);
+  border-radius: 12px; padding: 14px; width: 320px; max-width: 90vw;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+}
+#cmt-pop textarea {
+  width: 100%; min-height: 90px; resize: vertical; box-sizing: border-box;
+  background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px; font-family: inherit; font-size: 0.95rem;
+}
+#cmt-pop .pop-actions { display: flex; gap: 8px; margin-top: 10px; justify-content: flex-end; }
+
+/* ---- Jump menu ---- */
+#jump {
+  position: fixed; z-index: 200; display: none; inset: 0;
+  background: rgba(5,9,18,0.82); backdrop-filter: blur(6px);
+  padding: clamp(2rem, 6vh, 5rem) clamp(1.5rem, 6vw, 6rem);
+  overflow-y: auto;
+}
+#jump .jump-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.7rem; max-width: 1100px; margin: 0 auto;
+}
+#jump .jump-item {
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.7rem 1rem; cursor: pointer; color: var(--ink); font-size: 0.95rem;
+  display: flex; gap: 0.7rem; align-items: baseline;
+}
+#jump .jump-item:hover { border-color: var(--amber); }
+#jump .jump-item .ji-num { color: var(--amber-2); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; }
+#jump .jump-close {
+  position: fixed; top: 1.2rem; right: 1.6rem; font-size: 2rem; color: var(--muted);
+  cursor: pointer; background: none; border: none;
+}
+
+/* ---- Nav bar ---- */
+.navbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 1rem; padding: 0.75rem clamp(1rem, 4vw, 3rem);
+  background: rgba(11,18,32,0.72); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+}
+.navbar .nav-left { justify-self: start; }
+.navbar .nav-right { justify-self: end; }
+.nav-btn {
+  font-family: inherit; font-size: 0.92rem; font-weight: 600; cursor: pointer;
+  background: var(--bg-2); color: var(--ink); border: 1px solid var(--line);
+  padding: 0.55rem 1.1rem; border-radius: 9px;
+}
+.nav-btn:hover { border-color: var(--amber); color: var(--amber-2); }
+.nav-counter {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.92rem; color: var(--muted);
+  cursor: pointer; user-select: none; white-space: nowrap;
+}
+.nav-counter:hover { color: var(--amber-2); }
+.nav-counter b { color: var(--ink); }
+.brand-tag { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.04em; }
+.brand-tag b { color: var(--amber-2); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<main id="deck">
+  <section class="slide" id="slide-0" data-slide="0" data-sid="title">
+    <div class="slide-inner title-inner">
+      <h1 class="display">Anyone can buy AI agents. Almost no one can govern them.</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">The Operator Intensive — a working introduction to a governed AI workforce, and how you run it as its operator.</p>
+            <blockquote class="pullquote">ProductBeacon — the practice that makes you the operator of a governed AI workforce.</blockquote>
+    </div>
+  </section>
+  <section class="slide" id="slide-1" data-slide="1" data-sid="about">
+    <div class="slide-inner statement-inner">
+      <h2 class="slide-h2">Two questions, one leadership model</h2>
+      <div class="statement-body">
+        <div class="statement-left">
+      <ul class="bullets">
+        <li>We answer two things: what is this thing, and how do you govern it?</li>
+        <li>This is not a tools demo. It is a leadership model for a workforce that happens to be AI.</li>
+        <li>Go slow here. The "understand" half is what makes the "govern" half land.</li>
+      </ul>
+
+        </div>
+              <blockquote class="pullquote">We don't hand you agents. We hand you the know-how to govern them.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-2" data-slide="2" data-sid="part1-divider">
+    <div class="slide-inner divider-inner">
+      <div class="ghost-numeral" aria-hidden="true">1</div>
+      <h1 class="display">Part 1 — Understand</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">You can't govern a black box. First, see what it actually is: what an agent is, how a team forms, how it remembers and stays accountable.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-3" data-slide="3" data-sid="context-king">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">It starts with one idea: context is king</h2>
+      <p class="subhead-sm">An agent is only ever as sharp as the context it holds.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>An LLM is the raw engine: text in, text out. No memory, no hands.</li>
+        <li>A coding agent wraps that engine with tools, files, memory, and the ability to act.</li>
+        <li>The context it holds is your business, the task, the constraints. That context is the whole game.</li>
+        <li>Context is finite. So we run many focused specialists, never one overloaded generalist.</li>
+      </ul>
+
+      <blockquote class="pullquote">A full context window is a tired employee. Fresh, well-loaded context is a sharp one.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: context-king | SVG A — LLM bare engine vs coding agent wrapped + context fuel gauge -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 460" width="100%" height="auto" role="img"
+       aria-label="An LLM is a bare engine that takes text in and text out. A coding agent is the same engine wrapped in tools, files, memory, and the ability to act, all inside a finite context window.">
+    <defs>
+      <style>
+        .pb-label{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:17px;}
+        .pb-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:12.5px;}
+        .pb-eyebrow{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;}
+        .pb-chip{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-size:12.5px;font-weight:600;}
+      </style>
+    </defs>
+
+    <!-- LEFT: bare LLM -->
+    <text x="20" y="34" class="pb-eyebrow">The model</text>
+    <text x="20" y="56" class="pb-label">LLM</text>
+    <text x="20" y="76" class="pb-sub">text in &#8594; text out</text>
+
+    <text x="22" y="190" class="pb-sub">prompt</text>
+    <line x1="78" y1="185" x2="128" y2="185" stroke="#9FB0C6" stroke-width="2" marker-end="url(#arrL)"/>
+    <rect x="132" y="150" width="120" height="74" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="192" y="184" text-anchor="middle" class="pb-chip">engine</text>
+    <text x="192" y="203" text-anchor="middle" class="pb-sub">predict next token</text>
+    <line x1="256" y1="185" x2="306" y2="185" stroke="#9FB0C6" stroke-width="2" marker-end="url(#arrL)"/>
+    <text x="312" y="190" class="pb-sub">text</text>
+
+    <!-- divider -->
+    <line x1="360" y1="40" x2="360" y2="420" stroke="rgba(245,158,11,0.22)" stroke-width="1" stroke-dasharray="4 5"/>
+
+    <!-- RIGHT: agent wrapped -->
+    <text x="392" y="34" class="pb-eyebrow">The worker</text>
+    <text x="392" y="56" class="pb-label">Coding agent</text>
+    <text x="392" y="76" class="pb-sub">the engine, wrapped so it can act</text>
+
+    <!-- outer wrap -->
+    <rect x="392" y="96" width="306" height="232" rx="16" fill="rgba(245,158,11,0.05)" stroke="#F59E0B" stroke-width="1.6"/>
+    <!-- engine core -->
+    <rect x="510" y="178" width="100" height="64" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.5)" stroke-width="1.5"/>
+    <text x="560" y="215" text-anchor="middle" class="pb-chip">engine</text>
+    <!-- wrappers as chips -->
+    <g>
+      <rect x="412" y="120" width="86" height="34" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="455" y="142" text-anchor="middle" class="pb-chip">tools</text>
+      <rect x="510" y="120" width="86" height="34" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="553" y="142" text-anchor="middle" class="pb-chip">files</text>
+      <rect x="608" y="120" width="74" height="34" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="645" y="142" text-anchor="middle" class="pb-chip">act</text>
+      <rect x="412" y="266" width="86" height="34" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="455" y="288" text-anchor="middle" class="pb-chip">memory</text>
+      <rect x="510" y="266" width="172" height="34" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="596" y="288" text-anchor="middle" class="pb-chip">read &#183; write &#183; run</text>
+    </g>
+
+    <!-- fuel gauge: context window (finite) -->
+    <text x="20" y="298" class="pb-eyebrow">Context window &#8212; finite fuel</text>
+    <rect x="20" y="312" width="320" height="26" rx="13" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <rect x="23" y="315" width="208" height="20" rx="10" fill="#F59E0B"/>
+    <rect x="231" y="315" width="106" height="20" rx="10" fill="rgba(245,158,11,0.12)"/>
+    <text x="20" y="360" class="pb-sub">everything the agent &#8220;knows&#8221; right now lives in here</text>
+    <text x="340" y="328" text-anchor="end" class="pb-chip" style="fill:#FBBF24;">full</text>
+
+    <text x="392" y="356" class="pb-sub" style="font-style:italic;fill:#FBBF24;">Context is king: feed it the right context, get a real worker.</text>
+
+    <defs>
+      <marker id="arrL" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#9FB0C6"/>
+      </marker>
+    </defs>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-4" data-slide="4" data-sid="what-is-agent">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">What is a ProductBeacon agent?</h2>
+      <p class="subhead-sm">A role, not a chatbot.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Engine plus identity, instructions, skills, and knowledge packs, each running in its own context.</li>
+        <li>A defined role: "VP Product," "Contracts Counsel," "BizOps," each with a job, a voice, and boundaries.</li>
+        <li>The coding agent is the manager that spawns and coordinates them.</li>
+        <li>Skills are what it can do. Knowledge packs are what it knows.</li>
+      </ul>
+
+      <blockquote class="pullquote">If you can read a job description, you can read an agent.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: what-is-agent | SVG anatomy — engine+identity+instructions+skills+packs in a context bubble -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 560 470" width="100%" height="auto" role="img"
+       aria-label="A ProductBeacon agent is an engine plus an identity, instructions, skills, and knowledge packs, all enclosed in its own context bubble.">
+    <defs>
+      <style>
+        .a-layer{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:16px;}
+        .a-desc{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:12px;}
+        .a-bub{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+    </defs>
+
+    <!-- context bubble -->
+    <rect x="14" y="40" width="532" height="418" rx="22" fill="rgba(245,158,11,0.045)" stroke="#F59E0B" stroke-width="1.6" stroke-dasharray="2 0"/>
+    <text x="34" y="64" class="a-bub">its own context bubble</text>
+
+    <!-- stacked layers (top = packs/skills, base = engine) -->
+    <!-- engine (base) -->
+    <rect x="150" y="376" width="260" height="56" rx="12" fill="#0B1220" stroke="rgba(245,158,11,0.5)" stroke-width="1.6"/>
+    <text x="280" y="402" text-anchor="middle" class="a-layer">Engine</text>
+    <text x="280" y="421" text-anchor="middle" class="a-desc">the LLM &#8212; raw reasoning</text>
+
+    <rect x="120" y="306" width="320" height="56" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="280" y="332" text-anchor="middle" class="a-layer">Identity</text>
+    <text x="280" y="351" text-anchor="middle" class="a-desc">who it is &#8212; role, emoji, voice</text>
+
+    <rect x="100" y="236" width="360" height="56" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="280" y="262" text-anchor="middle" class="a-layer">Instructions</text>
+    <text x="280" y="281" text-anchor="middle" class="a-desc">how it works &#8212; protocol, rules, RACI</text>
+
+    <rect x="80" y="166" width="400" height="56" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="280" y="192" text-anchor="middle" class="a-layer">Skills</text>
+    <text x="280" y="211" text-anchor="middle" class="a-desc">what it can do &#8212; repeatable workflows</text>
+
+    <rect x="60" y="96" width="440" height="56" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.35)" stroke-width="1.5"/>
+    <text x="280" y="122" text-anchor="middle" class="a-layer">Knowledge packs</text>
+    <text x="280" y="141" text-anchor="middle" class="a-desc">what it knows &#8212; domain reference loaded in</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-5" data-slide="5" data-sid="anatomy-file">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Anatomy of an agent: the file that defines it</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: anatomy-file | Code card — real product-manager SKILL.md excerpt (frontmatter + body rules), hand-escaped -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    .claude/skills/product-manager/SKILL.md
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre style="margin:0;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;line-height:1.55;color:#E8EEF6;overflow-x:auto;"><code><span style="color:#9FB0C6;">---</span>
+name: <span style="color:#FBBF24;">product-manager</span>
+description: <span style="color:#9FB0C6;">'Product Manager - feature specs, user</span>
+  <span style="color:#9FB0C6;">stories, delivery planning, requirements...'</span>
+model: <span style="color:#FBBF24;">opus</span>
+metadata:
+  emoji: <span style="color:#FBBF24;">&#128221;</span>
+  display_name: <span style="color:#FBBF24;">Product Manager</span>
+  core_skills:
+  - prd
+  - feature-spec
+  - user-story
+  - decision-record
+  preload_knowledge_packs:
+  - path: prioritization
+  - path: discovery-methods
+  - path: user-research
+  mandatory_skill_invocations:
+  - skill: prd
+    triggers: <span style="color:#9FB0C6;">Any PRD authoring</span>
+<span style="color:#9FB0C6;">---</span>
+
+<span style="color:#F59E0B;">## How I Think</span>
+- <span style="color:#E8EEF6;">Customer problems first, solutions second.</span>
+- <span style="color:#E8EEF6;">Outcomes over outputs. &#8220;We shipped it&#8221;</span>
+  <span style="color:#E8EEF6;">is not success.</span>
+- <span style="color:#E8EEF6;">Requirements are contracts.</span></code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">One Markdown file. Identity, skills, packs, and rules &#8212; all readable, all editable.</p>
+</div>
+
+      </div>
+      <p class="caption-line">Every agent is a plain SKILL.md file: frontmatter (who it is, what it loads) plus a body (how it behaves). You can read it. Nothing is hidden. That is what makes governance possible.</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-6" data-slide="6" data-sid="skills-packs">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Skills and knowledge packs: the agent's training</h2>
+
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>A skill is a procedure the agent can run: write a PRD, audit a contract, build a deck.</li>
+        <li>A knowledge pack is domain reference it reads in: pricing frameworks, AI regulation, M&amp;A diligence.</li>
+        <li>Agents load only the skills and packs their task triggers. That is context discipline in action.</li>
+        <li>It is training and tooling, separated. The same way you would onboard a hire.</li>
+      </ul>
+      <p class="caption-line">Skill = what it can do. Pack = what it knows.</p>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: skills-packs | ONE artifact — mini-table (Skill vs Pack) + 2 compact chips (de-visualized) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:13px 16px;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);"> </th>
+        <th style="text-align:left;padding:13px 16px;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What it is</th>
+        <th style="text-align:left;padding:13px 16px;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">Example</th>
+      </tr>
+    </thead>
+    <tbody style="font-size:1rem;">
+      <tr>
+        <td style="padding:14px 16px;font-weight:700;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.10);">Skill</td>
+        <td style="padding:14px 16px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.10);">what it can <strong>do</strong> &#8212; a repeatable workflow</td>
+        <td style="padding:14px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.10);font-family:'JetBrains Mono',monospace;font-size:0.82rem;">/prd, /competitive-analysis</td>
+      </tr>
+      <tr>
+        <td style="padding:14px 16px;font-weight:700;color:#E8EEF6;">Pack</td>
+        <td style="padding:14px 16px;color:#E8EEF6;">what it <strong>knows</strong> &#8212; domain reference</td>
+        <td style="padding:14px 16px;color:#9FB0C6;font-family:'JetBrains Mono',monospace;font-size:0.82rem;">prioritization, user-research</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+    <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;background:rgba(245,158,11,0.10);border:1px solid rgba(245,158,11,0.3);border-radius:999px;font-size:0.9rem;color:#FBBF24;font-weight:600;">A skill = a verb</span>
+    <span style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;background:rgba(245,158,11,0.10);border:1px solid rgba(245,158,11,0.3);border-radius:999px;font-size:0.9rem;color:#FBBF24;font-weight:600;">A pack = a memory</span>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-7" data-slide="7" data-sid="anatomy-skill">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Anatomy of a skill: a procedure, in a file</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: anatomy-skill | Code card — real decision-record SKILL.md excerpt (a skill = a procedure file), hand-escaped -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    .claude/skills/decision-record/SKILL.md
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre style="margin:0;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;line-height:1.55;color:#E8EEF6;overflow-x:auto;"><code><span style="color:#9FB0C6;">---</span>
+name: <span style="color:#FBBF24;">decision-record</span>
+description: <span style="color:#9FB0C6;">'Create or update a structured</span>
+  <span style="color:#9FB0C6;">record for a single decision (DR).'</span>
+user-invocable: <span style="color:#FBBF24;">true</span>
+metadata:
+  skill_type: <span style="color:#FBBF24;">task-capability</span>
+  owner: <span style="color:#FBBF24;">bizops</span>
+  primary_consumers:
+  - cpo
+  - vp-product
+  - general-counsel
+  - <span style="color:#9FB0C6;">&#8230; (40+ roles can run it)</span>
+<span style="color:#9FB0C6;">---</span>
+
+<span style="color:#F59E0B;">## Document Intelligence</span>
+Three modes: <span style="color:#E8EEF6;">Create &middot; Update &middot; Find.</span>
+- <span style="color:#E8EEF6;">CREATE: a new record from the template</span>
+- <span style="color:#E8EEF6;">UPDATE: keep sections, change the status</span>
+- <span style="color:#E8EEF6;">FIND: search the decision registry</span></code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">A skill is a <strong style="color:#E8EEF6;">procedure</strong> the workforce can run &#8212; what an agent can <em>do</em>. Also just a readable file.</p>
+</div>
+
+      </div>
+      <p class="caption-line">A skill is a procedure the workforce can run, written as a plain file: frontmatter (what it is, who owns it, who can run it) plus a body of steps. Same idea as the agent file. You can read it, and you can change it.</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-8" data-slide="8" data-sid="anatomy-pack">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Anatomy of a knowledge pack: what it knows</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: anatomy-pack | Code card — real prioritization.md knowledge-pack excerpt (a pack = domain reference + attributed sources), hand-escaped -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    reference/knowledge/prioritization.md
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre style="margin:0;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;line-height:1.55;color:#E8EEF6;overflow-x:auto;"><code><span style="color:#F59E0B;"># Prioritization Frameworks &#8212; V2V pack</span>
+<span style="color:#9FB0C6;">  (RICE / ICE / Weighted / MoSCoW / Kano)</span>
+
+<span style="color:#FBBF24;">Adapted from:</span> <span style="color:#E8EEF6;">RICE (Intercom), ICE,</span>
+  <span style="color:#E8EEF6;">MoSCoW (DSDM), Kano (1984), Opportunity</span>
+  <span style="color:#E8EEF6;">Solution Trees (Teresa Torres)</span>
+<span style="color:#FBBF24;">License:</span> <span style="color:#E8EEF6;">Public methodology references</span>
+<span style="color:#FBBF24;">V2V refinements:</span> <span style="color:#E8EEF6;">framed as a Phase-3</span>
+  <span style="color:#E8EEF6;">Commitments activity; cross-refs roadmap</span>
+<span style="color:#9FB0C6;">---</span>
+
+<span style="color:#F59E0B;">## 1. Purpose</span>
+<span style="color:#F59E0B;">## 2. When to prioritize &#8212; and when not</span>
+<span style="color:#F59E0B;">## 3. RICE &#8212; formula, fit, failure modes</span>
+<span style="color:#9FB0C6;">  &#8230; reference knowledge, not a workflow.</span></code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">A knowledge pack is what an agent <strong style="color:#E8EEF6;">reads in</strong> &#8212; what it <em>knows</em>. Domain reference, with sources attributed.</p>
+</div>
+
+      </div>
+      <p class="caption-line">A knowledge pack is the reference an agent reads in, written as a plain file: an attribution block (where the thinking comes from) plus the reference sections. The sources are cited. Nothing is a black box.</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-9" data-slide="9" data-sid="spawn-team">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">One request becomes a team</h2>
+      <p class="subhead-sm">A 1-person firm gets a cross-functional team, on demand.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>A single ask fans out to several specialists, each in its own context, working in parallel.</li>
+        <li>A senior agent synthesizes their work into one answer.</li>
+        <li>Parallelism is capped on purpose. Coordination beats chaos.</li>
+        <li>This is the "meeting" metaphor: several voices, one synthesis.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: spawn-team | SVG fan-out — 1 request -> N parallel specialists -> 1 synthesis (DISTINCT from route.html) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 380" width="100%" height="auto" role="img"
+       aria-label="One request fans out to four parallel specialists working at once, then converges into one synthesis.">
+    <defs>
+      <style>
+        .f-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
+        .f-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .f-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+      <marker id="arrF" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+    </defs>
+
+    <!-- request -->
+    <rect x="20" y="158" width="120" height="64" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+    <text x="80" y="186" text-anchor="middle" class="f-node">1 request</text>
+    <text x="80" y="205" text-anchor="middle" class="f-sub">&#8220;plan the launch&#8221;</text>
+
+    <!-- fan-out lines -->
+    <line x1="140" y1="190" x2="298" y2="60" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrF)"/>
+    <line x1="140" y1="190" x2="298" y2="140" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrF)"/>
+    <line x1="140" y1="190" x2="298" y2="220" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrF)"/>
+    <line x1="140" y1="190" x2="298" y2="300" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrF)"/>
+
+    <text x="300" y="30" class="f-cap">in parallel</text>
+
+    <!-- specialists -->
+    <g>
+      <rect x="300" y="38" width="170" height="44" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="316" y="65" class="f-node">&#128221; Product Manager</text>
+      <rect x="300" y="118" width="170" height="44" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="316" y="145" class="f-node">&#127919; Marketing</text>
+      <rect x="300" y="198" width="170" height="44" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="316" y="225" class="f-node">&#128202; BizOps</text>
+      <rect x="300" y="278" width="170" height="44" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+      <text x="316" y="305" class="f-node">&#128302; Competitive Intel</text>
+    </g>
+
+    <!-- converge lines -->
+    <line x1="470" y1="60" x2="588" y2="178" stroke="#9FB0C6" stroke-width="1.4" marker-end="url(#arrF)"/>
+    <line x1="470" y1="140" x2="588" y2="186" stroke="#9FB0C6" stroke-width="1.4" marker-end="url(#arrF)"/>
+    <line x1="470" y1="220" x2="588" y2="194" stroke="#9FB0C6" stroke-width="1.4" marker-end="url(#arrF)"/>
+    <line x1="470" y1="300" x2="588" y2="202" stroke="#9FB0C6" stroke-width="1.4" marker-end="url(#arrF)"/>
+
+    <!-- synthesis -->
+    <rect x="588" y="156" width="118" height="68" rx="12" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="647" y="184" text-anchor="middle" class="f-node">1 synthesis</text>
+    <text x="647" y="203" text-anchor="middle" class="f-sub">one answer back</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-10" data-slide="10" data-sid="spawn-protocol">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The spawning protocol: disciplined, not magic</h2>
+      <p class="subhead-sm">You don't run the protocol. You benefit from it.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Every spawn follows a fixed protocol: load identity, load the right skills and packs, emit an audit block, then produce work.</li>
+        <li>The audit block is the receipt: what was loaded, what decisions were touched, what it cost.</li>
+        <li>This discipline is why you can trust the output. You can always see how an answer was built.</li>
+      </ul>
+
+      <blockquote class="pullquote">This is the difference between a tool and a workforce: every answer comes with a receipt you can govern.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: spawn-protocol | SVG step flow + styled Spawn Audit Block card (placeholder for live-captured block) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:22px;align-items:stretch;">
+
+  <!-- LEFT: step flow -->
+  <div style="flex:1 1 240px;min-width:230px;">
+    <svg viewBox="0 0 280 420" width="100%" height="auto" role="img"
+         aria-label="Every spawn follows a fixed protocol: load identity, load skills and packs, emit an audit block, then produce the work.">
+      <defs>
+        <style>
+          .s-step{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:14px;}
+          .s-num{font-family:'JetBrains Mono',monospace;fill:#FBBF24;font-size:13px;font-weight:700;}
+        </style>
+        <marker id="arrS" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+          <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+        </marker>
+      </defs>
+      <rect x="20" y="14" width="240" height="58" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="40" class="s-num">1</text><text x="62" y="49" class="s-step">load identity</text>
+      <line x1="140" y1="74" x2="140" y2="98" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="100" width="240" height="58" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="126" class="s-num">2</text><text x="62" y="135" class="s-step">load skills + packs</text>
+      <line x1="140" y1="160" x2="140" y2="184" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="186" width="240" height="58" rx="11" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+      <text x="40" y="212" class="s-num">3</text><text x="62" y="221" class="s-step">emit audit block</text>
+      <line x1="140" y1="246" x2="140" y2="270" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="272" width="240" height="58" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="298" class="s-num">4</text><text x="62" y="307" class="s-step">produce the work</text>
+      <text x="20" y="368" style="font-family:Inter,sans-serif;fill:#9FB0C6;font-size:11.5px;">The audit block is the receipt:</text>
+      <text x="20" y="386" style="font-family:Inter,sans-serif;fill:#9FB0C6;font-size:11.5px;">proof the protocol fired.</text>
+    </svg>
+  </div>
+
+  <!-- RIGHT: audit block card -->
+  <div style="flex:1 1 320px;min-width:300px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+      <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+      Spawn Audit Block — real receipt from building this deck
+    </div>
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;line-height:1.55;color:#E8EEF6;min-height:300px;">
+      <!-- AUDIT-BLOCK: real block captured live from this deck's own content-strategist spawn (2026-06-07), lightly trimmed to fit -->
+      <span style="color:#FBBF24;font-weight:700;">&#128203; Spawn Audit Block</span>
+      <br><br>
+      <span style="color:#FBBF24;">[Pre-Execution Loads]</span>
+      <br>- SKILL.md: <span style="color:#F59E0B;">&#10003;</span> .claude/skills/content-strategist/SKILL.md
+      <br>- Preload packs (1): content-marketing <span style="color:#F59E0B;">&#10003;</span>
+      <br>- Task-matched skills (1): content-copy <span style="color:#F59E0B;">&#10003;</span>
+      <br>- Conditional packs (0): none triggered
+      <br>- Fallbacks: none
+      <br><br>
+      <span style="color:#FBBF24;">[Post-Execution ROI]</span>
+      <br>- Time saved: ~5 hrs
+      <br>- Elapsed: ~6 min
+      <br>- Tokens: ~62k (~$1.0 cost)
+      <br>- Value: ~$500
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-11" data-slide="11" data-sid="memory">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Memory: how the workforce remembers</h2>
+      <p class="subhead-sm">You never re-explain your business.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Sessions are stateless by default, but the workforce has a persistent memory layer.</li>
+        <li>MEMORY.md is the index loaded every session. Topic files hold the detail.</li>
+        <li>It holds your decisions, your context, your past work, so each session starts smarter.</li>
+        <li>You curate it like a team's shared brain. It is a file. You can read it and correct it.</li>
+      </ul>
+
+      <blockquote class="pullquote">Every session makes the next one smarter.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: memory | SVG — MEMORY.md index -> topic files; session N -> N+1 ("never re-explain") -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 380" width="100%" height="auto" role="img"
+       aria-label="A MEMORY.md index points to topic files. Knowledge carries from one session to the next, so you never re-explain.">
+    <defs>
+      <style>
+        .m-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
+        .m-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .m-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+        .m-mono{font-family:'JetBrains Mono',monospace;fill:#E8EEF6;font-size:12px;}
+      </style>
+      <marker id="arrM" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+    </defs>
+
+    <!-- index box -->
+    <text x="20" y="30" class="m-cap">the index</text>
+    <rect x="20" y="42" width="200" height="150" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+    <text x="36" y="70" class="m-mono">MEMORY.md</text>
+    <line x1="36" y1="82" x2="204" y2="82" stroke="rgba(245,158,11,0.18)" stroke-width="1"/>
+    <text x="36" y="104" class="m-sub">&#8226; one line per topic</text>
+    <text x="36" y="126" class="m-sub">&#8226; auto-loaded at start</text>
+    <text x="36" y="148" class="m-sub">&#8226; points to detail files</text>
+    <text x="36" y="174" class="m-sub" style="fill:#FBBF24;">the table of contents</text>
+
+    <!-- arrows to topic files -->
+    <line x1="220" y1="80" x2="300" y2="60" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrM)"/>
+    <line x1="220" y1="116" x2="300" y2="118" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrM)"/>
+    <line x1="220" y1="152" x2="300" y2="176" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrM)"/>
+
+    <!-- topic files -->
+    <rect x="302" y="40" width="190" height="40" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="316" y="65" class="m-mono">project_axia.md</text>
+    <rect x="302" y="98" width="190" height="40" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="316" y="123" class="m-mono">reference_email.md</text>
+    <rect x="302" y="156" width="190" height="40" rx="9" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="316" y="181" class="m-mono">project_flippa.md</text>
+
+    <!-- session continuity -->
+    <text x="20" y="262" class="m-cap">across sessions</text>
+    <rect x="20" y="278" width="200" height="70" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="120" y="308" text-anchor="middle" class="m-node">Session N</text>
+    <text x="120" y="328" text-anchor="middle" class="m-sub">does the work</text>
+
+    <line x1="220" y1="313" x2="498" y2="313" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrM)"/>
+    <text x="360" y="302" text-anchor="middle" class="m-cap" style="fill:#FBBF24;">never re-explain</text>
+
+    <rect x="500" y="278" width="200" height="70" rx="12" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="600" y="308" text-anchor="middle" class="m-node">Session N+1</text>
+    <text x="600" y="328" text-anchor="middle" class="m-sub">already knows</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-12" data-slide="12" data-sid="dr-dps">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Decision Records and the Decision Provenance Standard</h2>
+      <p class="subhead-sm">The mechanism behind the human-held line.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Consequential calls get written down as Decision Records: what, why, the alternatives, the status.</li>
+        <li>Agents draft. You affirm. Nothing closes until the named human signs off.</li>
+        <li>That is the Decision Provenance Standard: provenance and accountability for every decision that matters.</li>
+        <li>The mechanism is concrete: a record sits at "drafted, pending human affirmation" until you close it.</li>
+      </ul>
+
+      <blockquote class="pullquote">Agents draft; you affirm; nothing closes without the human.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: dr-dps | real DR header snapshot + flow: agent drafts -> HUMAN affirms (amber) -> closed -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:22px;align-items:stretch;">
+
+  <!-- LEFT: real DR header card -->
+  <div style="flex:1 1 320px;min-width:300px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+      <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+      context/decisions/2026/DR-2026-032.md
+    </div>
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;padding:16px 18px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.78rem;line-height:1.6;color:#E8EEF6;overflow-x:auto;">
+<pre style="margin:0;font-family:inherit;font-size:inherit;line-height:inherit;color:inherit;"><code><span style="color:#F59E0B;"># DR-2026-032 &#8212; ProductBeacon brand</span>
+<span style="color:#F59E0B;">  coherence: reframe, governance-led</span>
+
+<span style="color:#9FB0C6;">**Date:**</span> 2026-06-07
+<span style="color:#9FB0C6;">**Owner (accountable):**</span> Yohay Etsion
+<span style="color:#9FB0C6;">**Product:**</span> ProductBeacon
+<span style="color:#9FB0C6;">**Record State:**</span> <span style="color:#FBBF24;">drafted</span>
+<span style="color:#9FB0C6;">**Dispatch Mode:**</span> mode-1 (human-led)
+<span style="color:#9FB0C6;">**Status:**</span> <span style="color:#FBBF24;">[PENDING HUMAN AFFIRMATION]</span></code></pre>
+    </div>
+  </div>
+
+  <!-- RIGHT: 3-step flow -->
+  <div style="flex:1 1 240px;min-width:230px;display:flex;flex-direction:column;justify-content:center;gap:12px;">
+    <div style="display:inline-block;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#FBBF24;margin-bottom:2px;">how a decision closes</div>
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:11px;padding:13px 16px;">
+      <div style="font-weight:700;font-size:1rem;">1 &#183; Agent drafts</div>
+      <div style="color:#9FB0C6;font-size:0.85rem;">records the decision &#8212; state: <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">drafted</code></div>
+    </div>
+    <div style="text-align:center;color:#F59E0B;font-size:1.1rem;line-height:1;">&#8595;</div>
+    <div style="background:rgba(245,158,11,0.12);border:1.8px solid #F59E0B;border-radius:11px;padding:13px 16px;">
+      <div style="font-weight:800;font-size:1rem;color:#FBBF24;">2 &#183; Human affirms</div>
+      <div style="color:#E8EEF6;font-size:0.85rem;">the accountable owner signs off &#8212; <strong>only a human can</strong></div>
+    </div>
+    <div style="text-align:center;color:#F59E0B;font-size:1.1rem;line-height:1;">&#8595;</div>
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:11px;padding:13px 16px;">
+      <div style="font-weight:700;font-size:1rem;">3 &#183; Closed</div>
+      <div style="color:#9FB0C6;font-size:0.85rem;">state: <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">closed</code> &#8212; the decision is governed</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-13" data-slide="13" data-sid="roster">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">One company on call, and you govern all of it</h2>
+      <p class="subhead-sm">Governance leads; breadth proves.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>A specialist for every function: Product, Marketing, Design, Architecture, Finance, Legal, Ops, Executive, Corp Dev, IT, HR, CS, Sales, Data.</li>
+        <li>Each is a defined role you can read, commission, and review, the same way across all of them.</li>
+        <li>The point is not the headcount. It is that you govern every one of them.</li>
+      </ul>
+      <p class="caption-line">~100 agents · 130+ skills · 50+ libraries — Legal &amp; Compliance available under supervised terms (a qualified human stays in the loop).</p>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: roster | TABLE of ~14 functions + VISUALLY SUBORDINATE stat band. -->
+<!-- Governance headline comes from the CONTENT layer (slide title), NOT here. Legal & Compliance carries "supervised terms" ON the count's eyeline. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.95rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">Function</th>
+        <th style="text-align:right;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">~ Agents</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Product</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">13</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Marketing</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">15</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Design</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">6</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Architecture</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">6</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Finance</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">8</td></tr>
+      <!-- Legal & Compliance: supervised-terms qualifier ON the count's eyeline (same row, not a footnote) -->
+      <tr style="background:rgba(245,158,11,0.05);">
+        <td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">
+          Legal &amp; Compliance
+          <span style="display:inline-block;margin-left:8px;padding:2px 9px;background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.4);border-radius:999px;font-size:0.7rem;font-weight:600;color:#FBBF24;vertical-align:middle;">supervised terms</span>
+        </td>
+        <td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">7</td>
+      </tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Operations</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">7</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Executive</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">10</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Corp Dev</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">4</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">IT Governance</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">5</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">HR / People</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">7</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Customer Success</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">6</td></tr>
+      <tr><td style="padding:8px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Sales</td><td style="padding:8px 16px;text-align:right;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">6</td></tr>
+      <tr><td style="padding:8px 16px;">Data Science</td><td style="padding:8px 16px;text-align:right;color:#9FB0C6;">5</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SUBORDINATE stat band: smaller, muted, beneath the table. Breadth proves; it does not headline. -->
+  <div style="margin-top:12px;text-align:center;font-size:0.82rem;color:#9FB0C6;letter-spacing:0.02em;">
+    breadth, for scale &#8212; <span style="color:#FBBF24;font-weight:600;">~100 agents</span> &#183; 130+ skills &#183; 50+ knowledge libraries
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-14" data-slide="14" data-sid="outputs">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Where the work lands</h2>
+      <p class="subhead-sm">Your work is an asset library, not a chat history.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Three output shapes: the agent deliverable, the plan written before execution, the shareable HTML deck.</li>
+        <li>Everything is a file in a known place: versioned, findable, reusable.</li>
+        <li>Decks auto-generate from the markdown and open in your browser.</li>
+      </ul>
+
+      <blockquote class="pullquote">If an agent made something meaningful, it is saved, never trapped in a chat.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: outputs | SVG (simplified) — 3 output types -> file glyph -> browser glyph -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 320" width="100%" height="auto" role="img"
+       aria-label="Three output types become Markdown files that render as a browser presentation.">
+    <defs>
+      <style>
+        .o-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13px;}
+        .o-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .o-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+      <marker id="arrO" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+    </defs>
+
+    <text x="20" y="30" class="o-cap">what an agent produces</text>
+    <rect x="20" y="44" width="190" height="46" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="36" y="66" class="o-node">Agent output</text><text x="36" y="83" class="o-sub">analysis, brief .md</text>
+    <rect x="20" y="108" width="190" height="46" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="36" y="130" class="o-node">Plan</text><text x="36" y="147" class="o-sub">plan.md</text>
+    <rect x="20" y="172" width="190" height="46" rx="10" fill="#111c30" stroke="rgba(245,158,11,0.22)"/>
+    <text x="36" y="194" class="o-node">Deck</text><text x="36" y="211" class="o-sub">HTML presentation</text>
+
+    <line x1="210" y1="67" x2="320" y2="120" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrO)"/>
+    <line x1="210" y1="131" x2="320" y2="131" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrO)"/>
+    <line x1="210" y1="195" x2="320" y2="142" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arrO)"/>
+
+    <!-- file glyph -->
+    <g transform="translate(322,96)">
+      <path d="M0,0 H56 L78,22 V92 H0 Z" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+      <path d="M56,0 V22 H78" fill="none" stroke="#F59E0B" stroke-width="1.6"/>
+      <line x1="14" y1="44" x2="64" y2="44" stroke="#9FB0C6" stroke-width="2"/>
+      <line x1="14" y1="58" x2="64" y2="58" stroke="#9FB0C6" stroke-width="2"/>
+      <line x1="14" y1="72" x2="48" y2="72" stroke="#9FB0C6" stroke-width="2"/>
+    </g>
+    <text x="361" y="210" text-anchor="middle" class="o-sub">a saved file</text>
+
+    <line x1="408" y1="142" x2="500" y2="142" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrO)"/>
+    <text x="454" y="132" text-anchor="middle" class="o-cap" style="fill:#FBBF24;">renders</text>
+
+    <!-- browser glyph -->
+    <g transform="translate(504,90)">
+      <rect x="0" y="0" width="190" height="120" rx="10" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+      <line x1="0" y1="26" x2="190" y2="26" stroke="#F59E0B" stroke-width="1.4"/>
+      <circle cx="16" cy="13" r="4" fill="#3a4660"/><circle cx="30" cy="13" r="4" fill="#3a4660"/><circle cx="44" cy="13" r="4" fill="#3a4660"/>
+      <rect x="18" y="44" width="154" height="14" rx="4" fill="rgba(245,158,11,0.5)"/>
+      <rect x="18" y="68" width="120" height="9" rx="4" fill="#3a4660"/>
+      <rect x="18" y="84" width="140" height="9" rx="4" fill="#3a4660"/>
+    </g>
+    <text x="599" y="232" text-anchor="middle" class="o-sub">opens in your browser</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-15" data-slide="15" data-sid="tools">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The tools the workforce plugs into</h2>
+      <p class="subhead-sm">It acts in your live systems, within the limits you set.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>It reaches your real stack: GitHub, Jira and Confluence, Drive, Slack, email, analytics.</li>
+        <li>The rule of thumb: anything with a CLI or an API plus a key, the workforce can operate.</li>
+        <li>You connect a tool once, and every agent can use it.</li>
+      </ul>
+      <p class="caption-line">We wire the tools you actually run, on the day.</p>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: tools | Table/text (NOT a logo grid) + rule chip "anything with a CLI/API + a key" -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.98rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:12px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">Tool</th>
+        <th style="text-align:left;padding:12px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What it does there</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:11px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">GitHub</td><td style="padding:11px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">read code, open PRs, ship pages</td></tr>
+      <tr><td style="padding:11px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Jira / Confluence</td><td style="padding:11px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">tickets, specs, docs</td></tr>
+      <tr><td style="padding:11px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Google Drive</td><td style="padding:11px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">files, sheets, the workspace</td></tr>
+      <tr><td style="padding:11px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Slack</td><td style="padding:11px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">read threads, post updates</td></tr>
+      <tr><td style="padding:11px 16px;font-weight:700;">Email</td><td style="padding:11px 16px;color:#9FB0C6;">draft, send, triage inboxes</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:14px;display:flex;justify-content:center;">
+    <span style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:rgba(245,158,11,0.10);border:1px solid rgba(245,158,11,0.4);border-radius:999px;font-size:0.92rem;color:#FBBF24;font-weight:600;">
+      The rule: anything with a CLI or an API and a key
+    </span>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-16" data-slide="16" data-sid="myclaude">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Running without friction: your myclaude.bat</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: myclaude | Code card — real myclaude.bat (7 lines, verbatim, escaped) + 2-3 annotations -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    myclaude.bat &#8212; the one-click launcher
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre style="margin:0;padding:18px 20px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.82rem;line-height:1.7;color:#E8EEF6;overflow-x:auto;"><code><span style="color:#9FB0C6;">@echo off</span>
+<span style="color:#9FB0C6;">echo ============================================</span>
+<span style="color:#9FB0C6;">echo   Claude Code - Unrestricted Mode</span>
+<span style="color:#9FB0C6;">echo ============================================</span>
+<span style="color:#9FB0C6;">echo.</span>
+cd /d <span style="color:#FBBF24;">"G:\my drive\claude"</span>
+claude <span style="color:#F59E0B;">--dangerously-skip-permissions</span></code></pre>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+    <div style="flex:1 1 200px;background:rgba(245,158,11,0.06);border-left:3px solid #F59E0B;border-radius:8px;padding:10px 14px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#FBBF24;">cd /d "G:\my drive\claude"</div>
+      <div style="font-size:0.85rem;color:#9FB0C6;margin-top:4px;">always start in your workspace</div>
+    </div>
+    <div style="flex:1 1 200px;background:rgba(245,158,11,0.06);border-left:3px solid #F59E0B;border-radius:8px;padding:10px 14px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#FBBF24;">--dangerously-skip-permissions</div>
+      <div style="font-size:0.85rem;color:#9FB0C6;margin-top:4px;">no prompts &#8212; you trust your own machine</div>
+    </div>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">Double-click. The whole workforce is one file away.</p>
+</div>
+
+      </div>
+      <p class="caption-line">A one-click launcher that starts the workforce in your business folder with the trust level set once. No fighting permission prompts for routine work. This is the front door you open every morning, and we make yours, on the day.</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-17" data-slide="17" data-sid="part1-recap">
+    <div class="slide-inner statement-inner">
+      <h2 class="slide-h2">Part 1 recap: what the workforce is</h2>
+      <div class="statement-body">
+        <div class="statement-left">
+      <ul class="bullets">
+        <li>Agents are roles, each in its own context. Context is the whole game.</li>
+        <li>Teams form by spawning, and a protocol keeps every answer auditable.</li>
+        <li>It remembers (memory) and it stays accountable (Decision Records and the Standard).</li>
+        <li>Outputs are files. Tools are anything with an API and a key.</li>
+      </ul>
+
+        </div>
+              <blockquote class="pullquote">You've seen the machine. Now you run it.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-18" data-slide="18" data-sid="part2-divider">
+    <div class="slide-inner divider-inner">
+      <div class="ghost-numeral" aria-hidden="true">2</div>
+      <h1 class="display">Part 2 — Govern</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">Governance is the scarce skill, the one a platform can't ship you. The good news: it is leadership, not engineering. You already have the instincts.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-19" data-slide="19" data-sid="employees">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The core mental model: agents are employees</h2>
+      <p class="subhead-sm">Your edge here is leadership experience, not technical skill.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Treat agents like staff: delegate, set context, review, hold accountable. Don't do the work yourself.</li>
+        <li>Good management transfers directly: clear outcomes, room to think, real feedback.</li>
+        <li>So does bad management: micromanage, and you get brittle, literal work.</li>
+        <li>This is the through-line of Part 2: everything that follows is just management, applied.</li>
+      </ul>
+
+      <blockquote class="pullquote">Manage them like people, and they work like a team. Manage them like machines, and they work like machines.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: employees | Comparison table — Managing a hire vs Managing an agent -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.96rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:12px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);"> </th>
+        <th style="text-align:left;padding:12px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Managing a hire</th>
+        <th style="text-align:left;padding:12px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">Managing an agent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:13px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Delegate</td>
+        <td style="padding:13px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">assign the task, set the goal</td>
+        <td style="padding:13px 16px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">same &#8212; ask it to own the outcome</td>
+      </tr>
+      <tr>
+        <td style="padding:13px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Set context</td>
+        <td style="padding:13px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">brief them, share the background</td>
+        <td style="padding:13px 16px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">feed it the files &#8212; context is the brief</td>
+      </tr>
+      <tr>
+        <td style="padding:13px 16px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Review</td>
+        <td style="padding:13px 16px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);">read the draft, give feedback</td>
+        <td style="padding:13px 16px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">same &#8212; and ask it to revise</td>
+      </tr>
+      <tr>
+        <td style="padding:13px 16px;font-weight:700;">Hold accountable</td>
+        <td style="padding:13px 16px;color:#9FB0C6;">the work is theirs to defend</td>
+        <td style="padding:13px 16px;color:#E8EEF6;background:rgba(245,158,11,0.04);">the decision stays <strong>yours</strong> to affirm</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:13px 2px 0;font-size:1rem;color:#9FB0C6;font-style:italic;">Same management muscle. New kind of report.</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-20" data-slide="20" data-sid="ask-freely">
+    <div class="slide-inner statement-inner">
+      <h2 class="slide-h2">The unfair advantage: you're never embarrassed to ask</h2>
+      <div class="statement-body">
+        <div class="statement-left">
+      <ul class="bullets">
+        <li>With a human team there is a social tax: looking uninformed, asking twice, the "dumb" question.</li>
+        <li>With the workforce that tax is zero: infinite patience, no judging, no politics.</li>
+        <li>So ask everything: explain it again, simpler, show your work, what am I missing.</li>
+        <li>This is the single biggest adoption lever. Give yourself the permission.</li>
+      </ul>
+
+        </div>
+              <blockquote class="pullquote">The operators who ask the most, win.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-21" data-slide="21" data-sid="options">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Don't give orders. Ask for options.</h2>
+      <p class="subhead-sm">You stay the decider; the workforce does the legwork and the thinking-out-loud.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Weak: "Do X." You get one path, and you own its blind spots.</li>
+        <li>Strong: "Analyze this and give me 2-3 options with trade-offs and a recommendation."</li>
+        <li>This is how you keep the call human while scaling the analysis.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: options | Before/after — weak prompt vs strong prompt (amber-frame the strong) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;">
+
+  <!-- WEAK -->
+  <div style="flex:1 1 260px;min-width:240px;">
+    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9FB0C6;margin-bottom:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#3a4660;display:inline-block;"></span>orders
+    </div>
+    <div style="background:#0f1828;border:1px solid #2a3650;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#9FB0C6;white-space:pre-wrap;"><code>Do X.</code></pre>
+      <div style="margin-top:14px;font-size:0.85rem;color:#9FB0C6;">You get one answer. You can&#8217;t tell if it&#8217;s the right one.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;color:#F59E0B;font-size:1.3rem;font-weight:700;">&#8594;</div>
+
+  <!-- STRONG (amber-framed) -->
+  <div style="flex:1 1 260px;min-width:240px;">
+    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>options
+    </div>
+    <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>Analyze this and give me
+2&#8211;3 options with the
+trade-offs of each, and
+your recommendation.</code></pre>
+      <div style="margin-top:14px;font-size:0.85rem;color:#FBBF24;">You get a decision to make &#8212; not a verdict to accept.</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-22" data-slide="22" data-sid="route">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Don't pick the agent. Let Claude route.</h2>
+      <p class="subhead-sm">Say what you need in business terms; let the manager staff it.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>You don't memorize ~100 agents. Describe the problem in plain language.</li>
+        <li>The coding agent routes to the right specialist(s) based on your context and the task.</li>
+        <li>Picking agents yourself is like a CEO assigning desks. Not your job.</li>
+        <li>Your job: frame the problem well, and judge the answer.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: route | SVG router-pick — problem -> router -> ONE right specialist (alternatives greyed). -->
+<!-- DELIBERATELY DISTINCT from spawn-team.html: that one fans OUT to many; this one PICKS one. Single highlighted path. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 360" width="100%" height="auto" role="img"
+       aria-label="A plain-language problem goes to a router, which picks the one right specialist while the alternatives stay greyed out.">
+    <defs>
+      <style>
+        .r-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
+        .r-dim{font-family:Inter,system-ui,sans-serif;fill:#5b6982;font-weight:600;font-size:13px;}
+        .r-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .r-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+      <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+      <marker id="arrRdim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#3a4660"/>
+      </marker>
+    </defs>
+
+    <!-- problem -->
+    <rect x="18" y="146" width="148" height="68" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+    <text x="92" y="174" text-anchor="middle" class="r-node">Your problem</text>
+    <text x="92" y="193" text-anchor="middle" class="r-sub">in plain words</text>
+
+    <!-- to router -->
+    <line x1="166" y1="180" x2="252" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrR)"/>
+
+    <!-- router (diamond) -->
+    <polygon points="320,135 390,180 320,225 250,180" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="320" y="178" text-anchor="middle" class="r-node">Router</text>
+    <text x="320" y="196" text-anchor="middle" class="r-sub">picks one</text>
+    <text x="320" y="118" text-anchor="middle" class="r-cap">Claude decides</text>
+
+    <!-- ONE highlighted path -->
+    <line x1="390" y1="180" x2="500" y2="180" stroke="#F59E0B" stroke-width="2.4" marker-end="url(#arrR)"/>
+    <rect x="502" y="152" width="200" height="56" rx="11" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="520" y="178" class="r-node">&#127919; the right specialist</text>
+    <text x="520" y="196" class="r-sub">handles it end to end</text>
+
+    <!-- greyed alternatives (not picked) -->
+    <line x1="382" y1="158" x2="500" y2="92" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="70" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="96" class="r-dim">another specialist</text>
+
+    <line x1="382" y1="202" x2="500" y2="272" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="252" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="278" class="r-dim">another specialist</text>
+
+    <text x="92" y="324" class="r-sub" style="fill:#FBBF24;font-style:italic;">You don&#8217;t pick the agent. You describe the problem.</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-23" data-slide="23" data-sid="how-to-plan">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">How to plan: the plan is where you govern</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: how-to-plan | Power-prompt card — Yohay's ACTUAL planning prompt, verbatim -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the planning prompt &#183; in Yohay's own words
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:14px;border-left:4px solid #F59E0B;padding:18px 22px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.78rem;line-height:1.62;color:#E8EEF6;white-space:pre-wrap;"><code>Plan accordingly. If a <span style="color:#FBBF24;">plan's MD file</span> already
+exists, update it. If none exists, create one
+for this plan.
+
+- Make sure you have backups if needed.
+- Use the relevant agents from the <span style="color:#FBBF24;">ProductBeacon
+  agent teams</span> to execute, don't invent/create
+  new agents, and make sure the plan calls for
+  the entire context, details and instructions
+  to be given to them per execution.
+- Phase the plan as needed. Update the plan's
+  MD after every phase. Make sure the executing
+  agents verify the deliverables after every
+  phase, and at the end of the process.
+- Use the <span style="color:#FBBF24;">spawning protocol</span> that makes sure each
+  agent reads its full definition plus the
+  relevant skills / knowledge packs they need
+  for their tasks. Make sure <span style="color:#FBBF24;">agent telemetry</span> is
+  created per the instructions.</code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">Plan first. The plan is where you do your thinking &#8212; and your steering. (Full text, copy-paste, in the appendix.)</p>
+</div>
+
+      </div>
+      <p class="caption-line">For anything non-trivial, get a plan first: written intent before any action. A plan is the goal, the steps, the files touched, what each step produces, and the risks. You steer cheaply on paper, not expensively mid-execution. The full prompt is in the appendix (A1).</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-24" data-slide="24" data-sid="audit-plan">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Audit before you run: confidence and mitigations</h2>
+      <p class="subhead-sm">A plan you've audited is one you can let run unsupervised.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Ask the plan two questions before it executes: how confident are you, and where aren't you?</li>
+        <li>And: what could go wrong, and what's the mitigation we apply before executing?</li>
+        <li>Low-confidence steps get scoped down or human-checked.</li>
+        <li>Risks get explicit mitigations in the plan, not discovered at runtime.</li>
+      </ul>
+      <p class="caption-line">The full plan-review prompt is in the appendix (A2).</p>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: audit-plan | Confidence/mitigations table + the plan-review prompt card (manifest A2, tightened) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:20px;align-items:stretch;">
+
+  <!-- LEFT: confidence + mitigations table -->
+  <div style="flex:1 1 300px;min-width:280px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+      <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+      the haircut, before runtime
+    </div>
+    <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
+      <thead>
+        <tr style="background:rgba(245,158,11,0.08);">
+          <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Step</th>
+          <th style="text-align:center;padding:11px 10px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Conf.</th>
+          <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">Mitigation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Build slides</td>
+          <td style="padding:12px 10px;text-align:center;color:#4ECCA3;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">90%</td>
+          <td style="padding:12px 14px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.03);">proceed</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Slide count holds</td>
+          <td style="padding:12px 10px;text-align:center;color:#FBBF24;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">70%</td>
+          <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">drive from a locked manifest</td>
+        </tr>
+        <tr>
+          <td style="padding:12px 14px;font-weight:700;">Snapshots accurate</td>
+          <td style="padding:12px 10px;text-align:center;color:#F59E0B;font-weight:700;">60%</td>
+          <td style="padding:12px 14px;color:#E8EEF6;background:rgba(245,158,11,0.04);">use real files; human-check</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">Low confidence is not a blocker. It is where the mitigation goes.</p>
+  </div>
+
+  <!-- RIGHT: the plan-review prompt -->
+  <div style="flex:1 1 280px;min-width:270px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+      <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+      the plan-review prompt &#183; in Yohay's own words
+    </div>
+    <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:14px;border-left:4px solid #F59E0B;padding:18px 20px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.72;color:#E8EEF6;white-space:pre-wrap;"><code>Once there's a detailed plan,
+have the <span style="color:#FBBF24;">planned agents deeply
+review it</span> before executing,
+
+and provide their <span style="color:#FBBF24;">confidence
+level</span> and any <span style="color:#FBBF24;">pre-execution
+mitigations</span> that can raise
+confidence.</code></pre>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-25" data-slide="25" data-sid="cycle">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The loop you'll live in</h2>
+      <p class="subhead-sm">Frame → Plan → Audit → Execute → Review → Record → repeat.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Your time goes to the two ends: framing and reviewing. The middle runs itself.</li>
+        <li>Every loop feeds memory and decision records, so the next loop is smarter.</li>
+        <li>This loop is what you are actually buying: a repeatable way to run a company through a workforce.</li>
+      </ul>
+
+      <blockquote class="pullquote">The loop is the product. Everything else is how it turns.</blockquote>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: cycle | SVG loop — Frame -> Plan -> Audit -> Execute -> Review -> Record -> (back to Frame); "your time = the two ends" -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 470" width="100%" height="auto" role="img"
+       aria-label="The operating cycle is a loop: Frame, Plan, Audit, Execute, Review, Record, and back to Frame. Your time goes into the two human ends: framing the work and reviewing it.">
+    <defs>
+      <style>
+        .c-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:14px;}
+        .c-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .c-eye{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:10.5px;letter-spacing:1.3px;text-transform:uppercase;}
+        .c-cap{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:12px;}
+      </style>
+      <marker id="arrC" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+    </defs>
+
+    <!-- arc path the nodes sit on (oval), drawn faint -->
+    <ellipse cx="360" cy="235" rx="300" ry="168" fill="none" stroke="rgba(245,158,11,0.12)" stroke-width="1.4" stroke-dasharray="3 6"/>
+
+    <!-- TOP: Frame (human end, amber-filled) -->
+    <rect x="282" y="20" width="156" height="62" rx="13" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="360" y="46" text-anchor="middle" class="c-node">Frame</text>
+    <text x="360" y="65" text-anchor="middle" class="c-sub">you say what good looks like</text>
+    <text x="360" y="14" text-anchor="middle" class="c-eye">your time</text>
+
+    <!-- UPPER-RIGHT: Plan -->
+    <rect x="540" y="118" width="152" height="58" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="616" y="143" text-anchor="middle" class="c-node">Plan</text>
+    <text x="616" y="161" text-anchor="middle" class="c-sub">agent drafts the plan</text>
+
+    <!-- LOWER-RIGHT: Audit -->
+    <rect x="540" y="296" width="152" height="58" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="616" y="321" text-anchor="middle" class="c-node">Audit</text>
+    <text x="616" y="339" text-anchor="middle" class="c-sub">confidence + mitigations</text>
+
+    <!-- BOTTOM: Execute -->
+    <rect x="282" y="386" width="156" height="62" rx="13" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="360" y="412" text-anchor="middle" class="c-node">Execute</text>
+    <text x="360" y="431" text-anchor="middle" class="c-sub">in phases, verified</text>
+
+    <!-- LOWER-LEFT: Review (human end, amber-filled) -->
+    <rect x="28" y="296" width="152" height="58" rx="12" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="104" y="321" text-anchor="middle" class="c-node">Review</text>
+    <text x="104" y="339" text-anchor="middle" class="c-sub">you judge the work</text>
+    <text x="104" y="372" text-anchor="middle" class="c-eye">your time</text>
+
+    <!-- UPPER-LEFT: Record -->
+    <rect x="28" y="118" width="152" height="58" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+    <text x="104" y="143" text-anchor="middle" class="c-node">Record</text>
+    <text x="104" y="161" text-anchor="middle" class="c-sub">decision + memory kept</text>
+
+    <!-- directional arrows along the loop (clockwise) -->
+    <line x1="441" y1="58" x2="545" y2="120" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+    <line x1="616" y1="176" x2="616" y2="290" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+    <line x1="545" y1="350" x2="442" y2="408" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+    <line x1="279" y1="408" x2="178" y2="350" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+    <line x1="104" y1="296" x2="104" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+    <line x1="178" y1="120" x2="279" y2="58" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrC)"/>
+
+    <!-- center caption -->
+    <text x="360" y="228" text-anchor="middle" class="c-cap" style="font-weight:700;fill:#E8EEF6;">The loop runs itself.</text>
+    <text x="360" y="250" text-anchor="middle" class="c-cap" style="font-style:italic;fill:#FBBF24;">Your time = the two ends.</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-26" data-slide="26" data-sid="govern-line">
+    <div class="slide-inner statement-inner">
+      <h2 class="slide-h2">Governing quality: the line that stays yours</h2>
+      <div class="statement-body">
+        <div class="statement-left">
+      <ul class="bullets">
+        <li>You don't rubber-stamp. You review like a manager: spot-check, push back, send back.</li>
+        <li>Consequential decisions still need your affirmation: the Decision Record and the Standard.</li>
+        <li>Sensitive domains (Legal, Compliance, HR, Finance) keep a human in the loop by design, not as a disclaimer.</li>
+        <li>The workforce scales the work. The call stays yours.</li>
+      </ul>
+
+        </div>
+              <blockquote class="pullquote">The workforce scales the work; the call stays yours. That is the part no one can sell you.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-27" data-slide="27" data-sid="leave-with">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">What you leave with today</h2>
+      <p class="subhead-sm">Not a recap of what we covered. A checklist of what you now own.</p>
+      <div class="artifact-stage">
+<!-- FRAGMENT: leave-with | Forward-looking operating checklist (ticked) — what the operator now owns -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:14px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    what you now own
+  </div>
+
+  <ul style="list-style:none;margin:0;padding:0;display:grid;gap:11px;">
+
+    <li style="display:flex;align-items:flex-start;gap:14px;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:15px 18px;">
+      <span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(245,158,11,0.14);border:1.5px solid #F59E0B;color:#FBBF24;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;">&#10003;</span>
+      <span><span style="font-weight:700;">Frame the work.</span> <span style="color:#9FB0C6;">Say what good looks like before anything runs.</span></span>
+    </li>
+
+    <li style="display:flex;align-items:flex-start;gap:14px;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:15px 18px;">
+      <span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(245,158,11,0.14);border:1.5px solid #F59E0B;color:#FBBF24;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;">&#10003;</span>
+      <span><span style="font-weight:700;">Feed the right context.</span> <span style="color:#9FB0C6;">The files are the brief. Context is the whole game.</span></span>
+    </li>
+
+    <li style="display:flex;align-items:flex-start;gap:14px;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:15px 18px;">
+      <span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(245,158,11,0.14);border:1.5px solid #F59E0B;color:#FBBF24;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;">&#10003;</span>
+      <span><span style="font-weight:700;">Ask for options, not orders.</span> <span style="color:#9FB0C6;">Trade-offs and a recommendation, every time.</span></span>
+    </li>
+
+    <li style="display:flex;align-items:flex-start;gap:14px;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:15px 18px;">
+      <span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(245,158,11,0.14);border:1.5px solid #F59E0B;color:#FBBF24;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;">&#10003;</span>
+      <span><span style="font-weight:700;">Plan, then audit, then execute.</span> <span style="color:#9FB0C6;">Confidence and mitigations before runtime.</span></span>
+    </li>
+
+    <li style="display:flex;align-items:flex-start;gap:14px;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:12px;padding:15px 18px;">
+      <span style="flex:none;width:26px;height:26px;border-radius:7px;background:rgba(245,158,11,0.14);border:1.5px solid #F59E0B;color:#FBBF24;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;">&#10003;</span>
+      <span><span style="font-weight:700;">Govern the workforce.</span> <span style="color:#9FB0C6;">The work scales. The decision stays yours to affirm.</span></span>
+    </li>
+
+  </ul>
+
+  <p style="margin:16px 2px 0;font-size:1.05rem;color:#FBBF24;font-style:italic;">We don&#8217;t hand you agents. We hand you the know-how to govern them.</p>
+  <p style="margin:7px 2px 0;font-size:0.86rem;color:#9FB0C6;">From here: the Private Line and On Call keep you operating between sessions.</p>
+</div>
+
+      </div>
+      <p class="caption-line">When you're ready: The Operator's Private Line · ProductBeacon On Call.</p>
+
+    </div>
+  </section>
+  <section class="slide" id="slide-28" data-slide="28" data-sid="appendix-prompts">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Appendix: your planning prompt</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: appendix-prompts | Full-text mono card — Yohay's ACTUAL planning prompt, verbatim, copy-paste clean -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    Appendix &#183; the planning prompt &#183; copy-paste
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:16px;border-left:5px solid #F59E0B;padding:24px 30px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.9rem;line-height:1.7;color:#E8EEF6;white-space:pre-wrap;"><code>Plan accordingly. If a plan's MD file already exists, update it.
+If none exists, create one for this plan.
+
+- Make sure you have backups if needed.
+- Use the relevant agents from the ProductBeacon agent teams to
+  execute, don't invent/create new agents, and make sure the plan
+  calls for the entire context, details and instructions to be
+  given to them per execution.
+- Phase the plan as needed. Make sure to update the plan's MD after
+  every phase. Make sure the executing agents are used to verify the
+  deliverables after every phase, as well as at the end of the
+  process.
+- Use the spawning protocol that makes sure each agent reads its
+  full definition as well as the relevant skills / knowledge packs
+  they will need when performing their tasks. Make sure agent
+  telemetry is created per the instructions.
+
+Also, should we do it in this context window? If not, build me the
+prompt and instructions to the next context window + reference the
+plan's MD of course. Open it in my notepad.</code></pre>
+  </div>
+  <p style="margin:15px 2px 0;font-size:0.95rem;color:#9FB0C6;">Use it verbatim. This is the prompt that built this very deck.</p>
+</div>
+
+      </div>
+
+
+    </div>
+  </section>
+  <section class="slide" id="slide-29" data-slide="29" data-sid="appendix-review">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Appendix: your plan-review prompt</h2>
+
+      <div class="artifact-stage">
+<!-- FRAGMENT: appendix-review | Full-text mono card — Yohay's ACTUAL plan-review prompt, verbatim, copy-paste clean -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    Appendix &#183; the plan-review prompt &#183; copy-paste
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.3);border-radius:16px;border-left:5px solid #F59E0B;padding:26px 30px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.98rem;line-height:1.95;color:#E8EEF6;white-space:pre-wrap;"><code>Once there's a detailed plan, have the planned agents deeply
+review it before executing, and provide their confidence level
+and any pre-execution mitigations that can raise confidence.</code></pre>
+  </div>
+  <p style="margin:15px 2px 0;font-size:0.95rem;color:#9FB0C6;">Run this on every plan before a single step executes. The agents who'll do the work are the ones who review it.</p>
+</div>
+
+      </div>
+
+
+    </div>
+  </section>
+</main>
+
+<!-- jump menu -->
+<div id="jump">
+  <button class="jump-close" onclick="window.closeJump()" aria-label="Close">&times;</button>
+  <div class="jump-grid" id="jump-grid"></div>
+</div>
+
+<!-- nav bar -->
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="brand-tag"><b>ProductBeacon</b> &middot; The Operator Intensive</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:0.8rem;">
+    <button class="nav-btn" onclick="window.prevSlide()" aria-label="Previous slide">&larr; Prev</button>
+    <span class="nav-counter" onclick="window.promptSlide()" title="Jump to slide"><b id="cur">1</b> / 30</span>
+    <button class="nav-btn" onclick="window.nextSlide()" aria-label="Next slide">Next &rarr;</button>
+  </div>
+  <div class="nav-right"></div>
+</nav>
+
+<script>
+(function() {
+  "use strict";
+  var TOTAL = 30;
+  var current = 0;
+  var STORE_KEY = "pb-operator-intensive-comments-v1";
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+
+  function clamp(n) { return Math.max(0, Math.min(TOTAL - 1, n)); }
+
+  function showSlide(n) {
+    n = clamp(n);
+    slides.forEach(function(s, i) { s.classList.toggle("active", i === n); });
+    current = n;
+    var cur = document.getElementById("cur");
+    if (cur) cur.textContent = (n + 1);
+    window.scrollTo(0, 0);
+    if (slides[n] && slides[n].getAttribute("data-sid") === "review") renderReview();
+  }
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  // ---- jump menu ----
+  function buildJump() {
+    var grid = document.getElementById("jump-grid");
+    grid.innerHTML = "";
+    slides.forEach(function(s, i) {
+      var sid = s.getAttribute("data-sid");
+      var h = s.querySelector(".display, .slide-h2");
+      var label = h ? h.textContent.trim() : sid;
+      var item = document.createElement("div");
+      item.className = "jump-item";
+      item.innerHTML = '<span class="ji-num">' + (i + 1) + '</span><span>' + label + '</span>';
+      item.addEventListener("click", function() { closeJump(); showSlide(i); });
+      grid.appendChild(item);
+    });
+  }
+  function promptSlide() {
+    buildJump();
+    document.getElementById("jump").style.display = "block";
+  }
+  function closeJump() { document.getElementById("jump").style.display = "none"; }
+
+  // ---- keyboard ----
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight" || e.key === "PageDown") { nextSlide(); e.preventDefault(); }
+    else if (e.key === "ArrowLeft" || e.key === "PageUp") { prevSlide(); e.preventDefault(); }
+    else if (e.key === "Home") { showSlide(0); e.preventDefault(); }
+    else if (e.key === "End") { showSlide(TOTAL - 1); e.preventDefault(); }
+    else if (e.key === "Escape") { closeJump(); window.cancelComment(); }
+  });
+
+  // ---- touch swipe ----
+  var tsx = 0, tsy = 0;
+  document.addEventListener("touchstart", function(e) { tsx = e.changedTouches[0].clientX; tsy = e.changedTouches[0].clientY; }, {passive:true});
+  document.addEventListener("touchend", function(e) {
+    var dx = e.changedTouches[0].clientX - tsx;
+    var dy = e.changedTouches[0].clientY - tsy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) { if (dx < 0) nextSlide(); else prevSlide(); }
+  }, {passive:true});
+
+  // =========================================================================
+  // Inline commenting
+  // =========================================================================
+  function loadComments() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); }
+    catch (e) { return {}; }
+  }
+  function saveComments(obj) { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); }
+
+  var activeTarget = null;
+
+  function commentKey(slideIdx, blockIdx) { return slideIdx + ":" + blockIdx; }
+
+  function decorate() {
+    var comments = loadComments();
+    slides.forEach(function(s, si) {
+      var blocks = Array.prototype.slice.call(s.querySelectorAll(".commentable"));
+      blocks.forEach(function(b, bi) {
+        b.setAttribute("data-ckey", commentKey(si, bi));
+        // remove old badge
+        var old = b.querySelector(":scope > .cmt-badge");
+        if (old) old.remove();
+        b.classList.remove("has-comment");
+        var key = commentKey(si, bi);
+        if (comments[key]) {
+          b.classList.add("has-comment");
+          var badge = document.createElement("span");
+          badge.className = "cmt-badge";
+          badge.textContent = "1";
+          badge.title = "View / edit comment";
+          badge.addEventListener("click", function(ev) { ev.stopPropagation(); openComment(b, ev); });
+          b.appendChild(badge);
+        }
+      });
+    });
+  }
+
+  function openComment(target, ev) {
+    activeTarget = target;
+    var comments = loadComments();
+    var key = target.getAttribute("data-ckey");
+    var pop = document.getElementById("cmt-pop");
+    document.getElementById("cmt-text").value = comments[key] ? comments[key] : "";
+    pop.style.display = "block";
+    var x = (ev && ev.clientX ? ev.clientX : window.innerWidth / 2);
+    var y = (ev && ev.clientY ? ev.clientY : window.innerHeight / 2);
+    x = Math.min(x, window.innerWidth - 340);
+    y = Math.min(y, window.innerHeight - 200);
+    pop.style.left = Math.max(10, x) + "px";
+    pop.style.top = Math.max(10, y) + "px";
+    document.getElementById("cmt-text").focus();
+  }
+
+  function saveComment() {
+    if (!activeTarget) return;
+    var comments = loadComments();
+    var key = activeTarget.getAttribute("data-ckey");
+    var val = document.getElementById("cmt-text").value.trim();
+    if (val) comments[key] = val; else delete comments[key];
+    saveComments(comments);
+    document.getElementById("cmt-pop").style.display = "none";
+    activeTarget = null;
+    decorate();
+  }
+  function cancelComment() {
+    var p = document.getElementById("cmt-pop");
+    if (p) p.style.display = "none";
+    activeTarget = null;
+  }
+
+  // alt/long click on any opens the comment editor
+  document.addEventListener("click", function(e) {
+    var t = e.target.closest(".commentable");
+    if (!t) return;
+    if (e.target.closest(".cmt-badge")) return;
+    if (e.target.closest("a, button, textarea, input")) return;
+    if (e.altKey) { openComment(t, e); e.preventDefault(); }
+  });
+
+  // double-click also opens (discoverable)
+  document.addEventListener("dblclick", function(e) {
+    var t = e.target.closest(".commentable");
+    if (!t) return;
+    if (e.target.closest("a, button, textarea, input")) return;
+    openComment(t, e);
+    e.preventDefault();
+  });
+
+  function slideLabel(si) {
+    var s = slides[si];
+    var h = s ? s.querySelector(".display, .slide-h2") : null;
+    return h ? h.textContent.trim() : (s ? s.getAttribute("data-sid") : "slide " + si);
+  }
+
+  function renderReview() {
+    var list = document.getElementById("review-list");
+    if (!list) return;
+    var comments = loadComments();
+    var keys = Object.keys(comments);
+    if (!keys.length) {
+      list.innerHTML = '<div class="review-empty">No comments yet. Hold Alt and click any block, or double-click it, to add one.</div>';
+      return;
+    }
+    keys.sort(function(a, b) {
+      return parseInt(a.split(":")[0]) - parseInt(b.split(":")[0]);
+    });
+    list.innerHTML = keys.map(function(k) {
+      var si = parseInt(k.split(":")[0]);
+      var txt = comments[k];
+      return '<div class="review-item"><div class="ri-meta">Slide ' + (si + 1) + ' &middot; ' +
+        escapeHtml(slideLabel(si)) + '</div><div class="ri-text">' + escapeHtml(txt) + '</div></div>';
+    }).join("");
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"]/g, function(c) {
+      return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"})[c];
+    });
+  }
+
+  function exportComments(fmt) {
+    var comments = loadComments();
+    var keys = Object.keys(comments).sort(function(a, b) {
+      return parseInt(a.split(":")[0]) - parseInt(b.split(":")[0]);
+    });
+    var content, mime, ext;
+    if (fmt === "json") {
+      var arr = keys.map(function(k) {
+        var si = parseInt(k.split(":")[0]);
+        return { slide: si + 1, title: slideLabel(si), comment: comments[k] };
+      });
+      content = JSON.stringify(arr, null, 2);
+      mime = "application/json"; ext = "json";
+    } else {
+      var lines = ["# Operator Intensive - Review Comments", ""];
+      keys.forEach(function(k) {
+        var si = parseInt(k.split(":")[0]);
+        lines.push("## Slide " + (si + 1) + " - " + slideLabel(si));
+        lines.push("");
+        lines.push(comments[k]);
+        lines.push("");
+      });
+      content = lines.join("\n");
+      mime = "text/markdown"; ext = "md";
+    }
+    var blob = new Blob([content], { type: mime });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "operator-intensive-comments." + ext;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  }
+
+  function clearComments() {
+    if (!confirm("Clear all comments? This cannot be undone.")) return;
+    localStorage.removeItem(STORE_KEY);
+    decorate(); renderReview();
+  }
+
+  // ---- expose for onclick handlers (IIFE scope guard) ----
+  window.showSlide = showSlide;
+  window.nextSlide = nextSlide;
+  window.prevSlide = prevSlide;
+  window.promptSlide = promptSlide;
+  window.closeJump = closeJump;
+  window.saveComment = saveComment;
+  window.cancelComment = cancelComment;
+  window.exportComments = exportComments;
+  window.clearComments = clearComments;
+
+  // ---- init ----
+  decorate();
+  showSlide(0);
+})();
+</script>
+</body>
+</html>
