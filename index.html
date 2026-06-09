@@ -94,6 +94,20 @@
     background: var(--amber); flex-shrink: 0;
   }
   @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
+
+  /* NEW — identity card signature. Reuses .card.card--on-surface; adds only the amber left-border
+     motif borrowed from .govern-band / .quote so the three identity cards read as one practice. */
+  .card--identity {
+    border-left: 2px solid var(--amber);
+  }
+
+  /* NEW — capability-label variant of .metrics: the label text is now meaningful body copy,
+     so it moves OFF --muted (fails AA ~4.0:1) onto --secondary (passes ~6.9:1). Scoped so the
+     global .metric__label used elsewhere is unaffected. */
+  .metric--capability .metric__label {
+    color: var(--secondary);   /* M-D3: never --muted */
+    font-size: 0.875rem;       /* up from 0.75rem */
+  }
 </style>
 </head>
 <body>
@@ -155,6 +169,7 @@
         <span>You hold the line where it matters</span>
       </div>
       <p class="text-sm text-secondary" style="margin-top:var(--space-4);">We run real businesses on it: our founder's own, and our clients'. The exact stack we install for you.</p>
+      <p class="text-sm text-secondary" style="margin-top:var(--space-3);">The method is published: the <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value book</a> and the <a href="/decision-provenance-standard.html">Decision Provenance Standard</a>.</p>
     </div>
   </div>
   <div class="hero__visual" aria-hidden="true">
@@ -163,6 +178,37 @@
     <div class="beacon-ring"></div>
     <div class="beacon-ring"></div>
     <div class="beacon-ring"></div>
+  </div>
+</section>
+
+<!-- ====== SECTION 1.5 — IDENTITY CARDS (one practice, three ways in) ====== -->
+<section class="section section--ink" id="identity">
+  <div class="container">
+    <div class="section__header fade-in">
+      <p class="eyebrow">One practice, three ways in</p>
+      <h2>ProductBeacon is one thing seen three ways. We set you up to run an AI workforce, we run real businesses on the same setup, and the method behind it is written down so you can trust it and keep it.</h2>
+    </div>
+
+    <div class="grid grid-3 fade-in">
+      <div class="card card--on-surface card--identity">
+        <p class="eyebrow">Install</p>
+        <h4>Set you up in a day</h4>
+        <p>In a single day we install a full AI workforce inside your business and hand you the controls, so you walk out operating it, not planning to start.</p>
+        <a class="btn--ghost" href="workforce.html" onclick="pbTrack('door_click',{door:'workforce',location:'identity'})">See what the day covers &rarr;</a>
+      </div>
+      <div class="card card--on-surface card--identity fade-in-delay-1">
+        <p class="eyebrow">Operate</p>
+        <h4>Run real businesses on it</h4>
+        <p>This is not a method we teach from the sidelines. Our founder runs his own companies on this exact setup, and we run it for clients too.</p>
+        <a class="btn--ghost" href="#proof" onclick="pbTrack('door_click',{door:'proof',location:'identity'})">See how we run it &rarr;</a>
+      </div>
+      <div class="card card--on-surface card--identity fade-in-delay-2">
+        <p class="eyebrow">Publish</p>
+        <h4>Write the method down</h4>
+        <p>The way to run an AI workforce well is written down, in a book and a published standard, so the capability is yours to trust, to check, and to keep.</p>
+        <a class="btn--ghost" href="/decision-provenance-standard.html" onclick="pbTrack('door_click',{door:'standard',location:'identity'})">Read the method &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -317,6 +363,29 @@
   </div>
 </section>
 
+<!-- ====== SECTION 6.5 — WHAT CHANGES FOR YOU (numberless outcome band) ====== -->
+<section class="section section--surface" id="what-changes">
+  <div class="container">
+    <div class="split" style="align-items:flex-start;">
+      <div class="fade-in">
+        <p class="eyebrow" style="margin-bottom:16px;">What changes for you</p>
+        <h3 style="margin-bottom:24px;">You stop being the bottleneck in your own business.</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:18px;">
+          <li class="text-secondary"><strong>You take on the work you used to turn away.</strong> The capacity is there now, so the answer stops being "we can't fit it in."</li>
+          <li class="text-secondary"><strong>The business runs when you step out of the room.</strong> A workforce is doing the volume, on your real deliverables, under your direction, not waiting on you for every move.</li>
+          <li class="text-secondary"><strong>You get your evenings back.</strong> Not because you care less, but because you are no longer the single point everything routes through.</li>
+        </ul>
+        <p class="text-secondary" style="margin-top:24px;">Where you want to keep that going, the next step is a conversation, not a contract. Tell us what you are running, and we will tell you honestly what fits.</p>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="quote">
+          The work still gets done. You just stop being the only one who can do it.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ====== SECTION 7 — THE WORKFORCE TEASER ====== -->
 <section class="section section--ink" id="workforce-teaser">
   <div class="container">
@@ -330,17 +399,17 @@
       </div>
       <div class="fade-in fade-in-delay-1">
         <div class="metrics">
-          <div class="metric">
-            <div class="metric__value">~100</div>
-            <div class="metric__label">Specialist agents</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">A full bench of specialists</div>
+            <div class="metric__label">Product, design, marketing, finance, legal, operations and more, each tuned to a kind of work.</div>
           </div>
-          <div class="metric">
-            <div class="metric__value">130+</div>
-            <div class="metric__label">Ready-made skills</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">Work that lands, not chat</div>
+            <div class="metric__label">They draft, research, analyze and produce real deliverables, not just answers in a box.</div>
           </div>
-          <div class="metric">
-            <div class="metric__value">50+</div>
-            <div class="metric__label">Knowledge libraries</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">Governed by you</div>
+            <div class="metric__label">You commission, you review, you hold the line on the calls that matter.</div>
           </div>
         </div>
       </div>
