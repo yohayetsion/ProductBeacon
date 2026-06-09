@@ -8,6 +8,7 @@ Disallow: /planning/
 Disallow: /analysis/
 Disallow: /reports/
 Disallow: /internal/
+Disallow: /Product/
 # Note: /research/state-of-cyber-2026/ is the public research sub-brand — intentionally NOT disallowed.
 # Redirect stubs carry in-page "noindex, follow"; they are left crawlable so engines can read the noindex.
 
