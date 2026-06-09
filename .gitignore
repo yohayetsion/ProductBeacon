@@ -1,2 +1,7 @@
 pdf-review/
 pdf-light/
+
+# added 2026-06-09 (three-pillar work)
+__pycache__/
+*.pyc
+Product/backups/

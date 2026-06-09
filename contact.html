@@ -28,6 +28,12 @@
   gtag('js', new Date());
   gtag('config', 'G-TC1LMMGQGV');
 </script>
+<!-- Page-scoped CSS for the door-intent radio pair (legible, reuses .form-group spacing; shared style.css untouched). -->
+<style>
+  .radio-row { display: flex; flex-direction: column; gap: 10px; }
+  .radio-opt { display: flex; align-items: flex-start; gap: 8px; font-weight: 400; cursor: pointer; }
+  .radio-opt input[type="radio"] { margin-top: 3px; flex-shrink: 0; }
+</style>
 </head>
 <body>
 
@@ -46,6 +52,7 @@
       <li><a href="/index.html#intensive">The Operator Intensive</a></li>
       <li><a href="/workforce.html">The Workforce</a></li>
       <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
       <li><a href="/research/">Research</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
@@ -62,6 +69,7 @@
     <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
     <a href="/workforce.html" role="menuitem">The Workforce</a>
     <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
     <a href="/research/" role="menuitem">Research</a>
     <a href="/about.html" role="menuitem">About</a>
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
@@ -166,6 +174,19 @@
         <input type="url" id="website" name="website" required placeholder="https://acme.com">
       </div>
       <div class="form-group">
+        <label>Who runs the AI workforce?</label>
+        <div class="radio-row">
+          <label class="radio-opt">
+            <input type="radio" name="door_intent" value="run-myself" id="door-intent" required>
+            I want to run it myself (Operator Intensive)
+          </label>
+          <label class="radio-opt">
+            <input type="radio" name="door_intent" value="have-you-run">
+            I'd rather you run it for me (On Call)
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
         <label for="challenge">What product challenge are you facing?</label>
         <textarea id="challenge" name="challenge" placeholder="Tell us about your product situation, positioning questions, or strategic challenges..."></textarea>
       </div>
@@ -177,16 +198,41 @@
       // Capture which door the lead came through (?intent=apply | on-call) for attribution.
       (function () {
         var intent = new URLSearchParams(window.location.search).get('intent');
-        if (!intent) return;
-        var field = document.getElementById('intent-field');
-        if (field) field.value = intent;
-        var subj = document.querySelector('input[name="_subject"]');
-        if (subj) {
-          subj.value = intent === 'apply'
-            ? 'Operator Intensive application'
-            : intent === 'on-call'
-              ? 'ProductBeacon On Call enquiry'
-              : subj.value;
+        if (intent) {
+          var field = document.getElementById('intent-field');
+          if (field) field.value = intent;
+          var subj = document.querySelector('input[name="_subject"]');
+          if (subj) {
+            subj.value = intent === 'apply'
+              ? 'Operator Intensive application'
+              : intent === 'on-call'
+                ? 'ProductBeacon On Call enquiry'
+                : subj.value;
+          }
+          // Pre-fill the self-declared door radio from the referring link (applicant can still change it).
+          if (intent === 'apply') {
+            var rMine = document.querySelector('input[name="door_intent"][value="run-myself"]');
+            if (rMine) rMine.checked = true;
+          } else if (intent === 'on-call') {
+            var rRun = document.querySelector('input[name="door_intent"][value="have-you-run"]');
+            if (rRun) rRun.checked = true;
+          }
+        }
+
+        // Fire a GA4 conversion event when the application form is actually submitted.
+        var form = document.querySelector('form.diagnostic-form');
+        if (form) {
+          form.addEventListener('submit', function () {
+            var checked = document.querySelector('input[name="door_intent"]:checked');
+            var doorIntent = checked ? checked.value : '';                    // self-declared: 'run-myself' | 'have-you-run'
+            var linkIntent = (document.getElementById('intent-field') || {}).value || '';  // apply | on-call | ''
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'apply_submit', {
+                door_intent: doorIntent,
+                link_intent: linkIntent
+              });
+            }
+          });
         }
       })();
     </script>

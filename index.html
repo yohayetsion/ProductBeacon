@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
 <!-- ====== SEO: JSON-LD (Organization + FAQPage) ====== -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"ProductBeacon","url":"https://productbeacon.agency/","logo":"https://productbeacon.agency/og-image.png","description":"ProductBeacon installs and governs an AI workforce inside your business, and offers fractional product leadership, product builds, and product org services.","founder":{"@type":"Person","name":"Yohay Etsion"},"sameAs":["https://www.linkedin.com/in/yohayetsion/","https://www.linkedin.com/company/productbeacon"]}
+{"@context":"https://schema.org","@type":"Organization","@id":"https://productbeacon.agency/#productbeacon","name":"ProductBeacon","url":"https://productbeacon.agency/","logo":"https://productbeacon.agency/og-image.png","description":"ProductBeacon is the governed operator: a practice that installs and governs an AI workforce inside small professional-services firms, runs it for those who prefer it operated for them, and authors the open standard the method follows. One practice, three doors: install it yourself, have us run it, or adopt the method.","founder":{"@type":"Person","@id":"https://productbeacon.agency/#yohay-etsion","name":"Yohay Etsion"},"sameAs":["https://www.linkedin.com/in/yohayetsion/","https://www.linkedin.com/company/productbeacon"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -64,9 +64,14 @@
   window.dataLayer = window.dataLayer || [];
   function pbTrack(eventName, payload){
     payload = payload || {};
-    payload.event = eventName;            // e.g. 'apply_click' or 'door_click'
-    window.dataLayer.push(payload);       // GA4 picks this up
-    // TODO (go-live): once LinkedIn Insight Tag is live, also fire:
+    // 1) Reaches GA4 directly (gtag.js install, no GTM container). THIS is the path that works today.
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, payload);   // e.g. 'apply_click', {location:'hero'}
+    }
+    // 2) Keep the dataLayer push for any FUTURE GTM container (harmless without one).
+    var dlPayload = Object.assign({}, payload, { event: eventName });
+    window.dataLayer.push(dlPayload);
+    // 3) LinkedIn conversion (only once the Insight Tag is live + a conversion_id exists).
     // if (typeof window.lintrk === 'function') { window.lintrk('track', { conversion_id: /* LI conversion id */ }); }
   }
   window.pbTrack = pbTrack;
@@ -89,6 +94,20 @@
     background: var(--amber); flex-shrink: 0;
   }
   @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
+
+  /* NEW — identity card signature. Reuses .card.card--on-surface; adds only the amber left-border
+     motif borrowed from .govern-band / .quote so the three identity cards read as one practice. */
+  .card--identity {
+    border-left: 2px solid var(--amber);
+  }
+
+  /* NEW — capability-label variant of .metrics: the label text is now meaningful body copy,
+     so it moves OFF --muted (fails AA ~4.0:1) onto --secondary (passes ~6.9:1). Scoped so the
+     global .metric__label used elsewhere is unaffected. */
+  .metric--capability .metric__label {
+    color: var(--secondary);   /* M-D3: never --muted */
+    font-size: 0.875rem;       /* up from 0.75rem */
+  }
 </style>
 </head>
 <body>
@@ -108,6 +127,7 @@
       <li><a href="/index.html#intensive">The Operator Intensive</a></li>
       <li><a href="/workforce.html">The Workforce</a></li>
       <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
       <li><a href="/research/">Research</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
@@ -124,6 +144,7 @@
     <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
     <a href="/workforce.html" role="menuitem">The Workforce</a>
     <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
     <a href="/research/" role="menuitem">Research</a>
     <a href="/about.html" role="menuitem">About</a>
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
@@ -135,9 +156,9 @@
   <div class="hero__grid"></div>
   <div class="container">
     <div class="hero__content">
-      <p class="eyebrow">The know-how to govern an AI workforce</p>
+      <p class="eyebrow">There is a right way to run an AI workforce</p>
       <h1>Anyone can spin up AI agents. Almost no one can govern them. By tomorrow morning, <span>you will.</span></h1>
-      <p class="hero__sub">The agents are the easy part. In one day, ProductBeacon gives you the hard part: the know-how to put the right agent on the right job, check what it hands back, and govern the calls that matter. Installed inside your business, on the same stack our founder runs his own businesses on.</p>
+      <p class="hero__sub">We run our own businesses on a governed AI workforce, and we wrote the method down. In a single day we set you up to run yours, with you in control of the calls that matter.</p>
       <div class="btn-group">
         <a href="contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack('apply_click',{location:'hero'})">Apply for an Operator Intensive</a>
         <a href="on-call.html" class="btn btn--ghost btn--lg" onclick="pbTrack('door_click',{door:'on-call',location:'hero'})">Prefer we run it for you? See ProductBeacon On Call</a>
@@ -147,7 +168,8 @@
         <span>You review what comes back</span>
         <span>You hold the line where it matters</span>
       </div>
-      <p class="text-sm text-secondary" style="margin-top:var(--space-4);">We run real businesses on it: our founder's own, and our clients'. The exact stack we install for you.</p>
+      <p class="text-sm text-secondary" style="margin-top:var(--space-4);">The same stack we install for you, or run for you if you would rather not.</p>
+      <p class="text-sm text-secondary" style="margin-top:var(--space-3);">The method is published: the <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value book</a> and the <a href="/decision-provenance-standard.html">Decision Provenance Standard</a>.</p>
     </div>
   </div>
   <div class="hero__visual" aria-hidden="true">
@@ -156,6 +178,37 @@
     <div class="beacon-ring"></div>
     <div class="beacon-ring"></div>
     <div class="beacon-ring"></div>
+  </div>
+</section>
+
+<!-- ====== SECTION 1.5 — IDENTITY CARDS (one practice, three ways in) ====== -->
+<section class="section section--ink" id="identity">
+  <div class="container">
+    <div class="section__header fade-in">
+      <p class="eyebrow">One practice, three ways in</p>
+      <h2>ProductBeacon is one thing seen three ways. We set you up to run an AI workforce, we run real businesses on the same setup, and the method behind it is written down so you can trust it and keep it.</h2>
+    </div>
+
+    <div class="grid grid-3 fade-in">
+      <div class="card card--on-surface card--identity">
+        <p class="eyebrow">Install</p>
+        <h4>Set you up in a day</h4>
+        <p>In a single day we install a full AI workforce inside your business and hand you the controls, so you walk out operating it, not planning to start.</p>
+        <a class="btn--ghost" href="workforce.html" onclick="pbTrack('door_click',{door:'workforce',location:'identity'})">See what the day covers &rarr;</a>
+      </div>
+      <div class="card card--on-surface card--identity fade-in-delay-1">
+        <p class="eyebrow">Operate</p>
+        <h4>We run businesses on it</h4>
+        <p>This is not a method we teach from the sidelines. Our founder runs his own companies on this exact setup, and we run it for clients too.</p>
+        <a class="btn--ghost" href="on-call.html" onclick="pbTrack('door_click',{door:'on-call',location:'identity'})">See how we run it &rarr;</a>
+      </div>
+      <div class="card card--on-surface card--identity fade-in-delay-2">
+        <p class="eyebrow">Publish</p>
+        <h4>Write the method down</h4>
+        <p>The way to run an AI workforce well is written down, in a book and a published standard, so the capability is yours to trust, to check, and to keep.</p>
+        <a class="btn--ghost" href="/decision-provenance-standard.html" onclick="pbTrack('door_click',{door:'standard',location:'identity'})">Read the method &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -291,7 +344,7 @@
     <div class="grid grid-2 fade-in">
       <div class="card card--on-surface">
         <h4>We don't teach this from the sidelines. We run real businesses on it: our founder's own, and our clients'.</h4>
-        <p>We don't sell a method we have never run. The same stack we would set up for you already governs real businesses every day: our founder's own, and our clients'. Our founder runs a B2B design agency, Maad House, and a direct-to-consumer brand, SKYMOD, on it. ProductBeacon runs it for clients too, across both our Intensive and On Call routes. And none of it is improvised: the operating method is written down in the <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value book</a> and formalized in the <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">Decision Provenance Standard</a>. So when we hand it to you, you are getting something we use to govern live businesses, not a demo.</p>
+        <p>We don't sell a method we have never run. The same stack we would set up for you already governs real businesses every day: our founder's own, and our clients'. Our founder runs his own companies on it, including a design agency and a direct-to-consumer brand, and ProductBeacon runs it for clients too, across both our Intensive and On Call routes. And none of it is improvised: the operating method is written down in the <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value book</a> and formalized in the <a href="/decision-provenance-standard.html">Decision Provenance Standard</a>. So when we hand it to you, you are getting something we use to govern live businesses, not a demo.</p>
       </div>
       <div class="card card--on-surface fade-in-delay-1">
         <h4>Seventeen years building product organizations</h4>
@@ -299,7 +352,7 @@
       </div>
       <div class="card card--on-surface fade-in-delay-1">
         <h4>The method is written down</h4>
-        <p>This is not improvised. The approach is documented in a <a href="/vision-to-value/" target="_blank" rel="noopener">published book on building world-class product organizations</a>, and in a <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">published standard for governing AI work</a>. The method belongs to the practice, not to one person's memory. You can read it, which means you can trust it, and it means the capability outlives any single individual.</p>
+        <p>This is not improvised. The approach is documented in a <a href="/vision-to-value/" target="_blank" rel="noopener">published book on building world-class product organizations</a>, and in a <a href="/decision-provenance-standard.html">published standard for governing AI work</a>. The method belongs to the practice, not to one person's memory. You can read it, which means you can trust it, and it means the capability outlives any single individual.</p>
       </div>
       <div class="card card--on-surface fade-in-delay-2">
         <h4>You become the proof</h4>
@@ -310,30 +363,53 @@
   </div>
 </section>
 
+<!-- ====== SECTION 6.5 — WHAT CHANGES FOR YOU (numberless outcome band) ====== -->
+<section class="section section--surface" id="what-changes">
+  <div class="container">
+    <div class="split" style="align-items:flex-start;">
+      <div class="fade-in">
+        <p class="eyebrow" style="margin-bottom:16px;">What changes for you</p>
+        <h3 style="margin-bottom:24px;">You stop being the bottleneck in your own business.</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:18px;">
+          <li class="text-secondary"><strong>You take on the work you used to turn away.</strong> The capacity is there now, so the answer stops being "we can't fit it in."</li>
+          <li class="text-secondary"><strong>The business runs when you step out of the room.</strong> A workforce is doing the volume, on your real deliverables, under your direction, not waiting on you for every move.</li>
+          <li class="text-secondary"><strong>You get your evenings back.</strong> Not because you care less, but because you are no longer the single point everything routes through.</li>
+        </ul>
+        <p class="text-secondary" style="margin-top:24px;">Where you want to keep that going, the next step is a conversation, not a contract. Tell us what you are running, and we will tell you honestly what fits.</p>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="quote">
+          The work still gets done. You just stop being the only one who can do it.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ====== SECTION 7 — THE WORKFORCE TEASER ====== -->
 <section class="section section--ink" id="workforce-teaser">
   <div class="container">
     <div class="split">
       <div class="fade-in">
         <p class="eyebrow" style="margin-bottom:16px;">The Workforce</p>
-        <h2 style="margin-bottom:24px;">Around a hundred specialists. Governed by you.</h2>
+        <h2 style="margin-bottom:24px;">A full cross-functional workforce. Governed by you.</h2>
         <p style="color:var(--secondary); margin-bottom:20px;">The workforce we install is not a single assistant in a chat box. It is a full organization rendered in software: specialists across product, design, engineering, marketing, finance, legal, operations, and data, each tuned for a specific kind of work. One person at the keyboard, a department behind the screen.</p>
         <p style="color:var(--secondary); margin-bottom:24px;">You do not hire any of them. You operate all of them.</p>
         <a href="workforce.html" class="btn btn--outline" onclick="pbTrack('door_click',{door:'workforce',location:'teaser'})">See the workforce &rarr;</a>
       </div>
       <div class="fade-in fade-in-delay-1">
         <div class="metrics">
-          <div class="metric">
-            <div class="metric__value">~100</div>
-            <div class="metric__label">Specialist agents</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">A full bench of specialists</div>
+            <div class="metric__label">Product, design, marketing, finance, legal, operations and more, each tuned to a kind of work.</div>
           </div>
-          <div class="metric">
-            <div class="metric__value">130+</div>
-            <div class="metric__label">Ready-made skills</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">Work that lands, not chat</div>
+            <div class="metric__label">They draft, research, analyze and produce real deliverables, not just answers in a box.</div>
           </div>
-          <div class="metric">
-            <div class="metric__value">50+</div>
-            <div class="metric__label">Knowledge libraries</div>
+          <div class="metric metric--capability">
+            <div class="metric__value">Governed by you</div>
+            <div class="metric__label">You commission, you review, you hold the line on the calls that matter.</div>
           </div>
         </div>
       </div>
