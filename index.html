@@ -64,9 +64,14 @@
   window.dataLayer = window.dataLayer || [];
   function pbTrack(eventName, payload){
     payload = payload || {};
-    payload.event = eventName;            // e.g. 'apply_click' or 'door_click'
-    window.dataLayer.push(payload);       // GA4 picks this up
-    // TODO (go-live): once LinkedIn Insight Tag is live, also fire:
+    // 1) Reaches GA4 directly (gtag.js install, no GTM container). THIS is the path that works today.
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, payload);   // e.g. 'apply_click', {location:'hero'}
+    }
+    // 2) Keep the dataLayer push for any FUTURE GTM container (harmless without one).
+    var dlPayload = Object.assign({}, payload, { event: eventName });
+    window.dataLayer.push(dlPayload);
+    // 3) LinkedIn conversion (only once the Insight Tag is live + a conversion_id exists).
     // if (typeof window.lintrk === 'function') { window.lintrk('track', { conversion_id: /* LI conversion id */ }); }
   }
   window.pbTrack = pbTrack;
