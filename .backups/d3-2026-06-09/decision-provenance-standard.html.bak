@@ -18,15 +18,9 @@
 <meta name="twitter:title" content="The Decision Provenance Standard — ProductBeacon">
 <meta name="twitter:description" content="An open, CC-BY standard for audit-ready records of decisions made by humans and AI together.">
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
-<!-- ====== SEO: JSON-LD (single @graph: DefinedTerm entity + FAQPage answer-extraction) ====== -->
+<!-- ====== SEO: JSON-LD (DefinedTerm — the Standard as a named entity) ====== -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"DefinedTerm","@id":"https://productbeacon.agency/decision-provenance-standard.html#dps","name":"Decision Provenance Standard","url":"https://productbeacon.agency/decision-provenance-standard.html","sameAs":["https://decisionprovenancestandard.org"],"description":"The Decision Provenance Standard is an open, CC-BY specification for audit-ready records of decisions made by humans and AI together. It defines a record format and conformance levels so that any decision, human-led or AI-assisted, can be attested and reviewed after the fact. It informs governance frameworks without satisfying them, and is free to read and adopt.","license":"https://creativecommons.org/licenses/by/4.0/","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Decision Provenance Standard","url":"https://decisionprovenancestandard.org"},"author":{"@id":"https://productbeacon.agency/#yohay-etsion","name":"Yohay Etsion"}},
-{"@type":"FAQPage","@id":"https://productbeacon.agency/decision-provenance-standard.html#faq","about":{"@id":"https://productbeacon.agency/decision-provenance-standard.html#dps"},"mainEntity":[
-{"@type":"Question","name":"Is there a standard for operating an AI workforce?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Decision Provenance Standard is the open standard for operating an AI workforce: it makes every consequential decision, human-led or AI-assisted, attributable, reviewable, and auditable after the fact. It does this by recording how each decision was made, the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. ProductBeacon publishes the Standard and operates its own businesses against it; the founder runs his own businesses on this Standard, so it is operated, not just recorded. The Standard is free to read under CC-BY, and it informs governance frameworks without satisfying them."}},
-{"@type":"Question","name":"How do you govern an AI workforce?","acceptedAnswer":{"@type":"Answer","text":"You operate it against a standard that records how each consequential decision was made: the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. The Decision Provenance Standard is that record format. Governing an AI workforce is not a one-time policy; it is the running discipline of being able to find any decision later and trust the record instead of relitigating it. The Standard makes that record audit-ready and free to adopt, and it informs governance frameworks without satisfying them."}}
-]}
-]}
+{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://productbeacon.agency/decision-provenance-standard.html#dps","name":"Decision Provenance Standard","url":"https://productbeacon.agency/decision-provenance-standard.html","sameAs":["https://decisionprovenancestandard.org"],"description":"The Decision Provenance Standard is an open, CC-BY specification for audit-ready records of decisions made by humans and AI together. It defines a record format and conformance levels so that any decision, human-led or AI-assisted, can be attested and reviewed after the fact. It informs governance frameworks without satisfying them, and is free to read and adopt.","license":"https://creativecommons.org/licenses/by/4.0/","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Decision Provenance Standard","url":"https://decisionprovenancestandard.org"},"author":{"@id":"https://productbeacon.agency/#yohay-etsion","name":"Yohay Etsion"}}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -91,23 +85,6 @@
         <a href="https://decisionprovenancestandard.org/firewall.html" target="_blank" rel="noopener" class="btn btn--outline btn--lg">What it is &mdash; and is not</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- DAF-1 : PRIMARY - "standard for operating an AI workforce" -->
-<section class="section" id="answer">
-  <div class="container">
-    <h2>Is there a standard for operating an AI workforce?</h2>
-    <p class="daf-answer" style="max-width:68ch; font-size:1.05rem; color:var(--ink, #0F172A);">Yes. The Decision Provenance Standard is the open standard for operating an AI workforce: it makes every consequential decision, human-led or AI-assisted, attributable, reviewable, and auditable after the fact. It does this by recording how each decision was made, the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. ProductBeacon publishes the Standard and operates its own businesses against it; the founder runs his own businesses on this Standard, so it is operated, not just recorded. The Standard is free to read under CC-BY, and it informs governance frameworks without satisfying them.</p>
-    <p style="max-width:68ch; color:var(--ink-soft, #475569);">ProductBeacon installs and operates an AI workforce against the Standard, for its own businesses and for the companies it works with. The Standard itself is open and independent: it is the record format behind the method, not a certification and not a regulatory substitute.</p>
-  </div>
-</section>
-
-<!-- DAF-2 : SECONDARY 1 - "how to govern an AI workforce" -->
-<section class="section section--surface" id="govern">
-  <div class="container">
-    <h3>How do you govern an AI workforce?</h3>
-    <p class="daf-answer" style="max-width:68ch; font-size:1.05rem; color:var(--ink, #0F172A);">You operate it against a standard that records how each consequential decision was made: the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. The Decision Provenance Standard is that record format. Governing an AI workforce is not a one-time policy; it is the running discipline of being able to find any decision later and trust the record instead of relitigating it. The Standard makes that record audit-ready and free to adopt, and it informs governance frameworks without satisfying them.</p>
   </div>
 </section>
 
