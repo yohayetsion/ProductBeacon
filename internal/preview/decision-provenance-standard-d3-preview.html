@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Decision Provenance Standard — ProductBeacon</title>
+<meta name="description" content="The Decision Provenance Standard is an open, CC-BY standard for audit-ready provenance of decisions made by humans and AI together — the independent record format behind ProductBeacon's product-leadership method. Free to read; informs frameworks without satisfying them; not legal advice.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="canonical" href="https://productbeacon.agency/decision-provenance-standard.html">
+<!-- ====== SEO: Open Graph / Twitter ====== -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ProductBeacon">
+<meta property="og:title" content="The Decision Provenance Standard — ProductBeacon">
+<meta property="og:description" content="An open, CC-BY standard for audit-ready records of decisions made by humans and AI together. Free to read; informs governance frameworks without satisfying them.">
+<meta property="og:url" content="https://productbeacon.agency/decision-provenance-standard.html">
+<meta property="og:image" content="https://productbeacon.agency/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Decision Provenance Standard — ProductBeacon">
+<meta name="twitter:description" content="An open, CC-BY standard for audit-ready records of decisions made by humans and AI together.">
+<meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
+<!-- ====== SEO: JSON-LD (single @graph: DefinedTerm entity + FAQPage answer-extraction) ====== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"DefinedTerm","@id":"https://productbeacon.agency/decision-provenance-standard.html#dps","name":"Decision Provenance Standard","url":"https://productbeacon.agency/decision-provenance-standard.html","sameAs":["https://decisionprovenancestandard.org"],"description":"The Decision Provenance Standard is an open, CC-BY specification for audit-ready records of decisions made by humans and AI together. It defines a record format and conformance levels so that any decision, human-led or AI-assisted, can be attested and reviewed after the fact. It informs governance frameworks without satisfying them, and is free to read and adopt.","license":"https://creativecommons.org/licenses/by/4.0/","inDefinedTermSet":{"@type":"DefinedTermSet","name":"Decision Provenance Standard","url":"https://decisionprovenancestandard.org"},"author":{"@id":"https://productbeacon.agency/#yohay-etsion","name":"Yohay Etsion"}},
+{"@type":"FAQPage","@id":"https://productbeacon.agency/decision-provenance-standard.html#faq","about":{"@id":"https://productbeacon.agency/decision-provenance-standard.html#dps"},"mainEntity":[
+{"@type":"Question","name":"Is there a standard for operating an AI workforce?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Decision Provenance Standard is the open standard for operating an AI workforce: it makes every consequential decision, human-led or AI-assisted, attributable, reviewable, and auditable after the fact. It does this by recording how each decision was made, the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. ProductBeacon publishes the Standard and operates its own businesses against it; the founder runs his own businesses on this Standard, so it is operated, not just recorded. The Standard is free to read under CC-BY, and it informs governance frameworks without satisfying them."}},
+{"@type":"Question","name":"How do you govern an AI workforce?","acceptedAnswer":{"@type":"Answer","text":"You operate it against a standard that records how each consequential decision was made: the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. The Decision Provenance Standard is that record format. Governing an AI workforce is not a one-time policy; it is the running discipline of being able to find any decision later and trust the record instead of relitigating it. The Standard makes that record audit-ready and free to adopt, and it informs governance frameworks without satisfying them."}}
+]}
+]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TC1LMMGQGV');
+</script>
+<base href="/">
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="/index.html#intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+  </div>
+</nav>
+
+<section class="hero section--accent" id="hero">
+  <div class="container">
+    <div class="hero__content">
+      <p class="eyebrow">Open standard &middot; CC-BY 4.0 &middot; independent</p>
+      <h1>The Decision Provenance Standard</h1>
+      <p class="hero__sub">The open standard behind ProductBeacon's method &mdash; a record format for how consequential decisions get made, by humans and AI together. Originated by our founder, published independently, free for anyone to read and adopt.</p>
+      <div class="btn-group">
+        <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Read the Standard</a>
+        <a href="https://decisionprovenancestandard.org/firewall.html" target="_blank" rel="noopener" class="btn btn--outline btn--lg">What it is &mdash; and is not</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAF-1 : PRIMARY - "standard for operating an AI workforce" -->
+<section class="section" id="answer">
+  <div class="container">
+    <h2>Is there a standard for operating an AI workforce?</h2>
+    <p class="daf-answer" style="max-width:68ch; font-size:1.05rem; color:var(--ink, #0F172A);">Yes. The Decision Provenance Standard is the open standard for operating an AI workforce: it makes every consequential decision, human-led or AI-assisted, attributable, reviewable, and auditable after the fact. It does this by recording how each decision was made, the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. ProductBeacon publishes the Standard and operates its own businesses against it; the founder runs his own businesses on this Standard, so it is operated, not just recorded. The Standard is free to read under CC-BY, and it informs governance frameworks without satisfying them.</p>
+    <p style="max-width:68ch; color:var(--ink-soft, #475569);">ProductBeacon installs and operates an AI workforce against the Standard, for its own businesses and for the companies it works with. The Standard itself is open and independent: it is the record format behind the method, not a certification and not a regulatory substitute.</p>
+  </div>
+</section>
+
+<!-- DAF-2 : SECONDARY 1 - "how to govern an AI workforce" -->
+<section class="section section--surface" id="govern">
+  <div class="container">
+    <h3>How do you govern an AI workforce?</h3>
+    <p class="daf-answer" style="max-width:68ch; font-size:1.05rem; color:var(--ink, #0F172A);">You operate it against a standard that records how each consequential decision was made: the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it. The Decision Provenance Standard is that record format. Governing an AI workforce is not a one-time policy; it is the running discipline of being able to find any decision later and trust the record instead of relitigating it. The Standard makes that record audit-ready and free to adopt, and it informs governance frameworks without satisfying them.</p>
+  </div>
+</section>
+
+<section class="section section--surface" id="method">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">The discipline behind the practice</p>
+      <h2>Decisions you can find in thirty seconds and trust</h2>
+    </div>
+    <p style="max-width:64ch; color:var(--ink-soft, #475569);">ProductBeacon's product-leadership work rests on a simple discipline: record how a consequential decision was made &mdash; the inputs, the reviewers, the mode it ran in (human-led or AI-led), and the named human who affirmed it &mdash; so an organization can find and trust that record later instead of relitigating it every quarter. The <strong>Decision Provenance Standard</strong> is the open, independent expression of that discipline. The book teaches the operating model, the open-source Product Org OS runs it, and the Standard is the record format behind the method.</p>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.75rem;">
+      <a class="card card--on-surface" href="https://decisionprovenancestandard.org/dps-v1.0-rev8-core.html" target="_blank" rel="noopener" style="text-decoration:none;">
+        <h3>Read the normative Standard</h3>
+        <p>The Charter, the two modes, the human-signature lifecycle, and conformance &mdash; the full text.</p>
+      </a>
+      <a class="card card--on-surface" href="https://decisionprovenancestandard.org/dps-glossary.html" target="_blank" rel="noopener" style="text-decoration:none;">
+        <h3>Glossary</h3>
+        <p>Every load-bearing term defined once, in plain language.</p>
+      </a>
+      <a class="card card--on-surface" href="https://decisionprovenancestandard.org/dps-comparison-frameworks.html" target="_blank" rel="noopener" style="text-decoration:none;">
+        <h3>How it relates to frameworks</h3>
+        <p>EU AI Act, GDPR, NIST, ISO 42001, SOC 2 &mdash; as input that informs, never satisfies.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" id="firewall">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Read this first</p>
+      <h2>What the Standard is &mdash; and is not</h2>
+    </div>
+    <div class="card card--on-ink" style="border-left:4px solid #F59E0B;">
+      <ul style="margin:0;padding-left:1.2rem;line-height:1.7;">
+        <li>The records are <strong>input, not evidence</strong>.</li>
+        <li>The Standard <strong>informs</strong> regulatory frameworks <strong>without satisfying</strong> them.</li>
+        <li>Conformance is <strong>self-declared</strong>; <strong>no body certifies</strong> it.</li>
+        <li>It is <strong>not legal advice</strong> and <strong>not a regulatory substitute</strong>.</li>
+      </ul>
+    </div>
+    <p style="max-width:66ch;margin-top:1.5rem;font-size:.95rem;opacity:.85;">The Decision Provenance Standard is an <strong>independent</strong> open standard &mdash; its text under CC-BY 4.0, its reference implementation under MIT &mdash; originated by ProductBeacon's founder, Yohay Etsion, and stewarded institutionally by Etsion Brands Ltd. It is not a ProductBeacon product, and self-declared, non-certified use implies no endorsement. Jurisdiction-specific questions and any decision with material legal or regulatory consequence require review by a licensed professional.</p>
+    <div class="btn-group" style="margin-top:1.5rem;">
+      <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Visit decisionprovenancestandard.org</a>
+      <a href="contact.html" class="btn btn--ghost btn--lg">Talk to ProductBeacon</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/index.html" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Run an AI workforce, or have us run it for you.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="/on-call.html">ProductBeacon On Call</a>
+        <a href="/on-call.html">Fractional Product Leadership</a>
+        <a href="/on-call.html">Product Build</a>
+        <a href="/on-call.html#org">Product Org Services</a>
+      </div>
+      <div class="footer__col">
+        <h4>Capabilities</h4>
+        <a href="/index.html#intensive">The Operator Intensive</a>
+        <a href="/workforce.html">The Workforce</a>
+        <a href="/index.html#path">The Operator's Private Line</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
+        <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
