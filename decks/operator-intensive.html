@@ -2571,6 +2571,7 @@ your recommendation.</code></pre>
       <tr><td style="padding:9px 16px;">Ends on a clear <span style="color:#FBBF24;">GO / NO-GO</span></td></tr>
     </tbody>
   </table>
+  <p style="margin:13px 2px 0;font-size:0.86rem;color:#9FB0C6;">Mode-aware: it reads the context first. Auditing a <strong style="color:#E8EEF6;">result</strong> runs the checks above; auditing a <strong style="color:#E8EEF6;">plan or updated plan</strong> runs the same pre-execution review <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> uses &#8212; the agents return confidence + mitigations, ending on <span style="color:#FBBF24;">PROCEED / REWORK</span>.</p>
 </div>
         </div>
         <div class="split-right">
@@ -2662,7 +2663,7 @@ your recommendation.</code></pre>
         <div class="split-left">
       <ul class="bullets">
         <li>Your time goes to the two ends: framing and reviewing. The middle runs itself.</li>
-        <li>Three commands drive it: <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> plans and reviews, <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/audit</code> proves the result, <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/context-harvest</code> records it.</li>
+        <li>Three commands drive it: <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> plans, <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/audit</code> gates <em>both</em> ends &#8212; it re-reviews the plan before you run (PROCEED / REWORK) and proves the result after (GO / NO-GO) &#8212; and <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/context-harvest</code> records it.</li>
         <li>Every loop feeds memory and decision records, so the next loop is smarter.</li>
         <li>This loop is what you are actually buying: a repeatable way to run a company through a workforce.</li>
       </ul>
@@ -2673,7 +2674,7 @@ your recommendation.</code></pre>
 <!-- FRAGMENT: cycle | SVG loop — Frame -> Plan -> Audit -> Execute -> Review -> Record -> (back to Frame); "your time = the two ends" -->
 <div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
   <svg viewBox="0 0 720 470" width="100%" height="auto" role="img"
-       aria-label="The operating cycle is a loop: Frame, Plan (which includes the pre-execution review, run by /plan), Execute, Audit the result (/audit), Review, Record (/context-harvest), and back to Frame. Your time goes into the two human ends: framing and reviewing.">
+       aria-label="The operating cycle is a loop: Frame, Plan (which drafts and runs an internal review loop — /audit re-reviews the plan and reworks it until it is confident enough to proceed), Execute, Audit the result (/audit), Review, Record (/context-harvest), and back to Frame. /audit gates both ends: the plan before execution and the result after. Your time goes into the two human ends: framing and reviewing.">
     <defs>
       <style>
         .c-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:14px;}
@@ -2699,8 +2700,11 @@ your recommendation.</code></pre>
     <!-- UPPER-RIGHT: Plan (drafts AND runs the pre-execution review) -->
     <rect x="533" y="121" width="152" height="58" rx="12" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
     <text x="609" y="146" text-anchor="middle" class="c-node">Plan</text>
-    <text x="609" y="164" text-anchor="middle" class="c-sub">draft + agents review</text>
+    <text x="609" y="164" text-anchor="middle" class="c-sub">draft &#8594; review &#8594; revise</text>
     <text x="609" y="175" text-anchor="middle" class="c-cmd">/plan</text>
+    <!-- internal review loop: /audit the plan, rework, until PROCEED before Execute -->
+    <path d="M596,120 Q609,94 622,120" fill="none" stroke="#F59E0B" stroke-width="1.8" marker-end="url(#arrC)"/>
+    <text x="609" y="89" text-anchor="middle" class="c-cmd">/audit &#8635; rework</text>
 
     <!-- LOWER-RIGHT: Execute -->
     <rect x="531" y="289" width="156" height="62" rx="13" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
