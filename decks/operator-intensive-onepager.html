@@ -79,7 +79,7 @@
     <tbody>
       <tr><td>Node.js (LTS)</td><td class="why">Used to install the Claude Code CLI (via <code>npm</code>).</td><td>nodejs.org</td></tr>
       <tr><td>Claude Code</td><td class="why">Anthropic's official command-line app — the environment the workforce runs in.</td><td><code>npm install -g @anthropic-ai/claude-code</code></td></tr>
-      <tr><td>Claude access</td><td class="why">A Claude Pro or Max subscription, <em>or</em> an Anthropic API key. This is the only paid external dependency (the AI model itself).</td><td>claude.ai / console.anthropic.com</td></tr>
+      <tr><td>A Claude plan</td><td class="why">A paid Claude plan is required — Pro or Max (Max recommended, to run the latest Fable model and large contexts), <em>or</em> an Anthropic API key. This is the only paid external dependency (the AI model itself).</td><td>claude.ai / console.anthropic.com</td></tr>
       <tr><td>Git</td><td class="why">To receive the workforce files and pull periodic updates.</td><td>git-scm.com</td></tr>
       <tr><td>Python 3.10+</td><td class="why">Runs the small helper scripts (memory, logging, document generation). Standard-library only.</td><td>python.org</td></tr>
       <tr><td>A terminal</td><td class="why">PowerShell (Windows) or Terminal (macOS) — already built in.</td><td>Built in</td></tr>
@@ -113,8 +113,10 @@
     <li>Sign in to <strong>Claude</strong> (your Pro/Max subscription) or set your <strong>Anthropic API key</strong>.</li>
     <li>Accept the <strong>GitHub invitation</strong> we send and <strong>clone</strong> your ProductBeacon AI Workforce repository.</li>
     <li>Run <code>python install.py</code> once to set up the workforce in your working folder.</li>
+    <li>Inside Claude Code, run <code>/model fable</code> to select the latest model (needs Claude Code v2.1.170+ — run <code>claude update</code> first if older).</li>
+    <li>Tell your assistant to read <code>agent-guide.md</code> in the repo — it onboards the coding agent to operate your workforce.</li>
   </ol>
-  <div class="callout"><strong>That's the whole list.</strong> If steps 1–4 are done before the session, we complete steps 5–6 together and spend the day teaching you to operate the workforce. The morning after, you open your laptop and it's waiting for your instructions.</div>
+  <div class="callout"><strong>That's the whole list.</strong> If steps 1–4 are done before the session, we complete steps 5–8 together and spend the day teaching you to operate the workforce. The morning after, you open your laptop and it's waiting for your instructions.</div>
 
   <footer>
     <span>ProductBeacon · The practice that makes you the operator of a governed AI workforce.</span>
