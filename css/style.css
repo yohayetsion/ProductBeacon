@@ -238,7 +238,7 @@ h4 {
 .nav__inner {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 var(--space-6);
+  padding: 0 24px; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-6)=24px; mobile 16px replicated in the max-639 block) */
   height: 100%;
   display: flex;
   align-items: center;
@@ -248,7 +248,7 @@ h4 {
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 12px; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-3)=12px) */
   text-decoration: none;
   color: var(--bright);
   font-size: 1.25rem;
@@ -267,7 +267,7 @@ h4 {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: 32px; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-8)=32px — this is the nav-wrap root cause) */
   list-style: none;
 }
 
@@ -292,6 +292,19 @@ h4 {
   color: var(--ink);
   background: var(--amber-hover);
 }
+/* chrome-unify: the nav Apply button inherits .btn's padding: 0 var(--space-6). Pin it here (chrome-only — .nav__links exists only in the nav, never in page bodies) so research-page :root --space-6 overrides can't inflate it and crowd the nav links into wrapping. Global resolved = 0 24px. */
+.nav__links .btn {
+  padding: 0 24px;
+  /* chrome-unify: re-assert global .btn appearance so a research page's own page-local .btn
+     (uppercase, 0.05em tracking, 48px tall, weight 500, 1px border) can't leak onto the nav
+     Apply button. .nav__links .btn (0,2,0) outranks page-local .btn (0,1,0); on nav-group
+     pages these equal global .btn, so the render stays byte-identical. */
+  height: 40px;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  border: none;
+}
 
 .nav__hamburger {
   display: none;
@@ -299,7 +312,7 @@ h4 {
   border: none;
   color: var(--text);
   cursor: pointer;
-  padding: var(--space-2);
+  padding: 8px; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-2)=8px) */
   width: 44px;
   height: 44px;
   align-items: center;
@@ -315,7 +328,7 @@ h4 {
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  padding: var(--space-6);
+  padding: 24px; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-6)=24px; mobile 16px replicated in the max-639 block) */
   z-index: 99;
 }
 
@@ -323,7 +336,7 @@ h4 {
 
 .nav__mobile a {
   display: block;
-  padding: var(--space-3) 0;
+  padding: 12px 0; /* chrome-unify: pinned to literal so research-page :root token overrides can't leak into chrome (was var(--space-3)=12px) */
   color: var(--secondary);
   font-size: 1rem;
   font-weight: 500;
@@ -731,20 +744,20 @@ a.card:hover {
 .footer {
   background: var(--ink);
   border-top: 1px solid var(--border);
-  padding: var(--space-16) 0 var(--space-8);
+  padding: var(--space-16) 0 32px; /* chrome-unify: --space-8 pinned to literal 32px so research-page :root can't leak; --space-16 not redefined by research, left as var */
 }
 
 .footer__inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: var(--space-8);
-  margin-bottom: var(--space-12);
+  gap: 32px; /* chrome-unify: pinned to literal (was var(--space-8)=32px) so research-page :root token overrides can't leak into chrome */
+  margin-bottom: var(--space-12); /* --space-12 not redefined by research, safe */
 }
 
 .footer__brand p {
   color: var(--secondary);
   font-size: 0.875rem;
-  margin-top: var(--space-3);
+  margin-top: 12px; /* chrome-unify: pinned to literal (was var(--space-3)=12px) so research-page :root token overrides can't leak into chrome */
   max-width: 300px;
 }
 
@@ -754,21 +767,21 @@ a.card:hover {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
-  margin-bottom: var(--space-4);
+  margin-bottom: 16px; /* chrome-unify: pinned to literal (was var(--space-4)=16px) so research-page :root token overrides can't leak into chrome */
 }
 
 .footer__col a {
   display: block;
   color: var(--secondary);
   font-size: 0.875rem;
-  padding: var(--space-1) 0;
+  padding: 4px 0; /* chrome-unify: pinned to literal (was var(--space-1)=4px) so research-page :root token overrides can't leak into chrome */
 }
 
 .footer__col a:hover { color: var(--amber); }
 
 .footer__bottom {
   border-top: 1px solid rgba(51, 65, 85, 0.5);
-  padding-top: var(--space-6);
+  padding-top: 24px; /* chrome-unify: pinned to literal (was var(--space-6)=24px) so research-page :root token overrides can't leak into chrome */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -778,7 +791,7 @@ a.card:hover {
 
 .footer__social a {
   color: var(--muted);
-  margin-left: var(--space-4);
+  margin-left: 16px; /* chrome-unify: pinned to literal (was var(--space-4)=16px) so research-page :root token overrides can't leak into chrome */
 }
 
 .footer__social a:hover { color: var(--amber); }
@@ -940,8 +953,12 @@ a.card:hover {
   .btn-group { flex-direction: column; }
   .btn-group .btn { width: 100%; }
 
-  .footer__inner { grid-template-columns: 1fr; gap: var(--space-6); }
-  .footer__bottom { flex-direction: column; gap: var(--space-3); text-align: center; }
+  .footer__inner { grid-template-columns: 1fr; gap: 16px; /* chrome-unify: pinned literal (mobile --space-6=16px) so research :root can't leak */ }
+  .footer__bottom { flex-direction: column; gap: 12px; text-align: center; /* chrome-unify: gap pinned literal (--space-3=12px) so research :root can't leak */ }
+
+  /* chrome-unify: nav chrome mobile padding pinned to the global resolved value (--space-6 is 16px at <=639px) so research-page :root can't leak AND nav-group pages stay byte-identical at mobile */
+  .nav__inner { padding: 0 16px; }
+  .nav__mobile { padding: 16px; }
 
   .section { padding: var(--space-12) 0; }
   .stat__value { font-size: 2.25rem; }

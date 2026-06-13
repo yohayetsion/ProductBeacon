@@ -1,28 +1,62 @@
 #!/usr/bin/env python3
 """
-migrate-chrome.py — ProductBeacon Phase 2/3 chrome migration.
+migrate-chrome.py — ProductBeacon chrome migration.
 
-SOURCE OF TRUTH: ProductBeacon/Product/migration-phase1-spec-2026-06-08.md
-Owner: Frontend Dev (executes Phase 2/3 against the Tech Lead LOCKED spec).
+SOURCE OF TRUTH (v2, 2026-06-13): live `index.html` nav (lines 115-152) + footer
+(lines 491-530), captured byte-faithfully in
+`.backups/chrome-unify-2026-06-13/CONTRACT.md`. The pre-existing `_includes/nav.html`
+and the OLD migrator `CANONICAL_NAV`/`CANONICAL_FOOTER` constants were STALE (both
+missing the "The Standard" nav item) and are NOT trusted — they were regenerated
+from index.html in Phase 1.
+
+Original (June-8) spec: ProductBeacon/Product/migration-phase1-spec-2026-06-08.md.
+Owner: Frontend Dev executes the apply; Tech Lead owns the tooling + the spec.
+
+------------------------------------------------------------------------------
+DECISION REVERSAL — DR-2026-062 (2026-06-13)
+------------------------------------------------------------------------------
+The June-8 migration DELIBERATELY kept the research section on its own `topnav`
+chrome (dedicated CANONICAL_TOPNAV blocks; `research/state-of-cyber-2026/` on a
+never-touch list). Per Yohay's 2026-06-13 directive, EVERY public page — research
+included — must carry the SAME global `.nav`/`.footer` chrome. This reverses that
+choice: research pages move from the TOPNAV path to the global-`.nav` path.
+
+The old CANONICAL_TOPNAV* constants are retained below for historical reference
+ONLY; the research group no longer uses them. The state-of-cyber-2026 decks
+(dlp/dspm/irm/convergence/*-podcast) remain a genuinely separate, chrome-free
+surface and stay guarded — only three soc pages (index, synthesis, pre-call-brief)
+are individually carved out.
+------------------------------------------------------------------------------
 
 What it does (single pass, allowlist-driven — NEVER a recursive glob):
-  - class="nav" group: anchored replace of the nav block with the §1 canonical,
-    anchored replace of the footer block with the §2.2 canonical.
-  - topnav group (research/): anchored replace of the topnav block with the §1b canonical.
-  - GA4 injection (G-TC1LMMGQGV) on any in-scope page missing it, placed
-    immediately after the first <link rel="stylesheet" ...> line in <head>.
+  - NAV_GROUP (class="nav" marketing/vtv/insights pages): anchored replace of the
+    nav block with §1 canonical; anchored replace of the footer with §2 canonical;
+    GA4 injection.
+  - RESEARCH_GROUP (the global-`.nav` path, NEW): per-page swap of the legacy
+    `<nav class="topnav">` (or INSERT after <body> where no chrome exists) with the
+    global `.nav` carrying the correct per-page active state; ADD-or-REPLACE the
+    global `.footer`; ensure `/css/style.css` link ABOVE the inline <style>; ensure
+    `/js/main.js` before </body>; inject the fixed-nav hero offset on the page's
+    content wrapper; seed CHROME markers; GA4.
+  - TOPNAV_GROUP (LEGACY, now empty): retained structurally; the research pages it
+    used to hold have moved to RESEARCH_GROUP. process_topnav_file() is kept for
+    reference but is no longer reachable via the allowlist.
 
-Hard rules (NON-NEGOTIABLE, per spec §3):
-  - Exactly-1-match assertion per anchored nav/topnav replace. 0 or >1 -> abort
-    that file, print the path, exit non-zero. No 2>/dev/null error swallowing.
-  - Footer count is 0-or-1 (1 = replaced, 0 = reported, never silent).
+Hard rules (NON-NEGOTIABLE):
+  - Exactly-1-match assertion per anchored nav/topnav/footer replace. 0 or >1 -> abort
+    that file, print the path, exit non-zero. No error swallowing.
+  - Footer add-or-replace: research pages without a global footer get one ADDED
+    (exactly once); pages with an existing <footer class="footer"> get it REPLACED
+    (exactly once). Either way the result has exactly 1 footer.
   - GA4: after injection, content must contain G-TC1LMMGQGV at least once.
-  - Idempotent: re-running on an already-migrated file replaces canonical with
-    itself (still exactly 1 match) -> safe.
+  - Idempotent: re-running on an already-migrated file is a no-op (CHROME markers
+    detected -> replace canonical with itself, still exactly 1; css/js/offset
+    insertions are guarded on a presence check). Self-test: run twice -> zero diff.
+  - Abort if a file carries more than one CHROME:NAV:START marker.
   - Final gate: migrated_count == allowlist_count or the run is a failure.
-  - NEVER touch prospects/ planning/ reports/ research/state-of-cyber-2026/ etc.
+  - NEVER touch prospects/ planning/ reports/ the state-of-cyber-2026 DECKS, etc.
   - NEVER touch retire-bucket pages (axia-offer, gtm-engine,
-    strategic-infrastructure, services.html) — those are Phase 5 redirects.
+    strategic-infrastructure, services.html).
 """
 
 import re
@@ -34,8 +68,24 @@ REPO = Path(__file__).resolve().parent.parent
 
 GA4_ID = "G-TC1LMMGQGV"
 
+# Marker comments delimiting the stamped chrome (idempotency anchors).
+NAV_START = "<!-- CHROME:NAV:START -->"
+NAV_END = "<!-- CHROME:NAV:END -->"
+FOOTER_START = "<!-- CHROME:FOOTER:START -->"
+FOOTER_END = "<!-- CHROME:FOOTER:END -->"
+
+# Root-absolute global asset links (research pages currently link neither).
+STYLE_LINK = '<link rel="stylesheet" href="/css/style.css">'
+SCRIPT_TAG = '<script src="/js/main.js"></script>'
+
+# Hero offset: the global .nav is position:fixed, 72px tall (--nav-height). Without
+# this, the fixed nav clips the research H1. Applied to each page's content wrapper.
+HERO_OFFSET_STYLE = "padding-top: var(--nav-height);"
+
 # --------------------------------------------------------------------------
-# §1 CANONICAL class="nav" block (root-absolute, Version A, Apply button)
+# §1 CANONICAL class="nav" block (root-absolute, 7 items incl. "The Standard")
+# Byte-faithful to index.html L115-152 (CONTRACT.md §1). The INACTIVE variant —
+# the active variant adds class="active" to the Research <a> (desktop list only).
 # --------------------------------------------------------------------------
 CANONICAL_NAV = '''<!-- ====== NAV ====== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -52,6 +102,7 @@ CANONICAL_NAV = '''<!-- ====== NAV ====== -->
       <li><a href="/index.html#intensive">The Operator Intensive</a></li>
       <li><a href="/workforce.html">The Workforce</a></li>
       <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
       <li><a href="/research/">Research</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
@@ -68,14 +119,25 @@ CANONICAL_NAV = '''<!-- ====== NAV ====== -->
     <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
     <a href="/workforce.html" role="menuitem">The Workforce</a>
     <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
     <a href="/research/" role="menuitem">Research</a>
     <a href="/about.html" role="menuitem">About</a>
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
   </div>
 </nav>'''
 
+# ACTIVE variant: only research/index.html. Adds class="active" to the desktop
+# Research anchor (rendered bright via css/style.css .nav__links a.active).
+CANONICAL_NAV_ACTIVE = CANONICAL_NAV.replace(
+    '<li><a href="/research/">Research</a></li>',
+    '<li><a href="/research/" class="active">Research</a></li>',
+)
+assert CANONICAL_NAV_ACTIVE != CANONICAL_NAV, "active-variant substitution failed"
+
 # --------------------------------------------------------------------------
-# §2.2 CANONICAL footer block (root-absolute, one block every in-scope page)
+# §2 CANONICAL footer block (byte-faithful to index.html L491-530, CONTRACT.md §2)
+# Live footer uses BARE /on-call.html for Fractional + Build (the OLD constant's
+# #fractional / #build anchors were stale).
 # --------------------------------------------------------------------------
 CANONICAL_FOOTER = '''<footer class="footer">
   <div class="container">
@@ -90,8 +152,8 @@ CANONICAL_FOOTER = '''<footer class="footer">
       <div class="footer__col">
         <h4>Services</h4>
         <a href="/on-call.html">ProductBeacon On Call</a>
-        <a href="/on-call.html#fractional">Fractional Product Leadership</a>
-        <a href="/on-call.html#build">Product Build</a>
+        <a href="/on-call.html">Fractional Product Leadership</a>
+        <a href="/on-call.html">Product Build</a>
         <a href="/on-call.html#org">Product Org Services</a>
       </div>
       <div class="footer__col">
@@ -119,7 +181,10 @@ CANONICAL_FOOTER = '''<footer class="footer">
 </footer>'''
 
 # --------------------------------------------------------------------------
-# §1b CANONICAL topnav block (research/ group)
+# §1b LEGACY topnav block (research/ group) — RETAINED FOR REFERENCE ONLY.
+# Per DR-2026-062 the research group no longer uses this; kept so the historical
+# spec is legible and the regexes that DETECT a legacy topnav (to swap it out)
+# remain documented.
 # --------------------------------------------------------------------------
 CANONICAL_TOPNAV = '''<nav class="topnav" aria-label="Primary">
   <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
@@ -138,17 +203,13 @@ CANONICAL_TOPNAV = '''<nav class="topnav" aria-label="Primary">
     <li><a href="/about.html">About</a></li>
   </ul>
 </nav>'''
-
-# topnav variant for pages where Research is NOT the active page
-# (per spec §1b: remove `active` from Research on author.html / methodology.html;
-#  none of those links match those pages, so simply no `active` flag).
 CANONICAL_TOPNAV_INACTIVE = CANONICAL_TOPNAV.replace(
     '<li><a href="/research/" class="active">Research</a></li>',
     '<li><a href="/research/">Research</a></li>',
 )
 
 # --------------------------------------------------------------------------
-# GA4 snippet (§4) — injected after first <link rel="stylesheet"> in <head>
+# GA4 snippet — injected after first <link rel="stylesheet"> in <head>
 # --------------------------------------------------------------------------
 GA4_SNIPPET = '''<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
@@ -160,30 +221,33 @@ GA4_SNIPPET = '''<!-- Google tag (gtag.js) -->
 </script>'''
 
 # --------------------------------------------------------------------------
-# ANCHORED-REPLACE REGEXES (per spec §3)
+# ANCHORED-REPLACE REGEXES
 # --------------------------------------------------------------------------
-# §3.2 nav: optional leading comment marker + <nav class="nav"...> ... first </nav>
 NAV_RE = re.compile(
     r'(?:<!-- ====== NAV[^\n]*-->\s*)?<nav class="nav"[\s\S]*?</nav>'
 )
-# §3.3 footer
 FOOTER_RE = re.compile(r'<footer class="footer">[\s\S]*?</footer>')
-# §3.4 topnav
 TOPNAV_RE = re.compile(r'<nav class="topnav"[\s\S]*?</nav>')
-# GA4 placement: first stylesheet <link ...> in head, regardless of attribute order
-# (class="nav" pages use `<link rel="stylesheet" href=...>`; research/ pages use
-#  `<link href="...fonts..." rel="stylesheet">`). Match any <link> tag whose
-#  attributes include rel="stylesheet". Fallback anchor: just before </head>.
 STYLESHEET_RE = re.compile(r'<link\b[^>]*\brel="stylesheet"[^>]*>')
 HEAD_CLOSE_RE = re.compile(r'</head>', re.IGNORECASE)
+BODY_OPEN_RE = re.compile(r'<body[^>]*>')
+BODY_CLOSE_RE = re.compile(r'</body>', re.IGNORECASE)
+INLINE_STYLE_OPEN_RE = re.compile(r'<style\b[^>]*>')
+# First <main ...> or the collaterals <div class="wrap"> content wrapper.
+MAIN_OPEN_RE = re.compile(r'<main\b([^>]*)>')
+WRAP_OPEN_RE = re.compile(r'<div class="wrap">')
+
+# Wrapped (marker-delimited) chrome regexes — used for idempotent re-stamping.
+WRAPPED_NAV_RE = re.compile(
+    re.escape(NAV_START) + r'[\s\S]*?' + re.escape(NAV_END)
+)
+WRAPPED_FOOTER_RE = re.compile(
+    re.escape(FOOTER_START) + r'[\s\S]*?' + re.escape(FOOTER_END)
+)
 
 # --------------------------------------------------------------------------
 # ALLOWLISTS (explicit — NEVER a recursive glob)
 # --------------------------------------------------------------------------
-# class="nav" group: marketing root pages + vtv (index + reader) + insights index pages.
-# Includes the 3 live Version A root pages (index/on-call/workforce) — per spec §0
-# correction #1 they are re-canonicalized to root-absolute (they still carry
-# >Services< and on-call still carries "Book a Call", so they MUST be migrated).
 INSIGHTS_SLUGS = [
     "accure", "aikido-security", "blackwall", "cloover", "cybersecurity",
     "embankment", "eolas-medical", "flower-labs", "keepnet", "maia-technology",
@@ -224,25 +288,39 @@ NAV_GROUP = (
     + [f"insights/{slug}/index.html" for slug in INSIGHTS_SLUGS]
 )
 
-# topnav group: research/ pages using class="topnav".
-# research/index.html keeps Research active; author/methodology get the inactive variant.
-# collaterals.html uses an "other" nav and is excluded from the assertion batch (§3.4) —
-# it is hand-aligned separately, NOT processed here.
-TOPNAV_GROUP = {
-    "research/index.html": CANONICAL_TOPNAV,         # active Research
-    "research/author.html": CANONICAL_TOPNAV_INACTIVE,
-    "research/methodology.html": CANONICAL_TOPNAV_INACTIVE,
+# RESEARCH_GROUP (NEW per DR-2026-062): research pages on the global-.nav path.
+# Value = "active" (Research nav highlighted) or "inactive".
+RESEARCH_GROUP = {
+    "research/index.html": "active",
+    "research/author.html": "inactive",
+    "research/methodology.html": "inactive",
+    "research/state-of-cyber-2026/index.html": "inactive",
+    "research/collaterals.html": "inactive",        # no existing chrome -> ADD nav
+    "research/state-of-cyber-2026/synthesis.html": "inactive",
+    "research/state-of-cyber-2026/pre-call-brief.html": "inactive",
 }
 
-ALLOWLIST = NAV_GROUP + list(TOPNAV_GROUP.keys())
+# TOPNAV_GROUP is now EMPTY — research pages moved to RESEARCH_GROUP (DR-2026-062).
+# Retained as a dict so any downstream importer that references it keeps working.
+TOPNAV_GROUP = {}
 
-# Defensive: paths that must NEVER appear in the allowlist (assert at runtime).
+ALLOWLIST = NAV_GROUP + list(RESEARCH_GROUP.keys()) + list(TOPNAV_GROUP.keys())
+
+# Defensive: paths that must NEVER appear in the allowlist (assert at runtime),
+# EXCEPT the three soc pages individually carved out of the directory guard.
 FORBIDDEN_PREFIXES = (
     "prospects/", "planning/", "reports/",
     "research/state-of-cyber-2026/",
     "reports/state-of-cyber-2026/",
 )
-# Retire-bucket pages — Phase 5 redirects, never migrate.
+# Individual carve-outs from the research/state-of-cyber-2026/ directory guard
+# (DR-2026-062). Everything else under that dir (the dlp/dspm/irm/convergence/
+# *-podcast decks + brief.html stub) stays guarded.
+SOC_CARVE_OUTS = {
+    "research/state-of-cyber-2026/index.html",
+    "research/state-of-cyber-2026/synthesis.html",
+    "research/state-of-cyber-2026/pre-call-brief.html",
+}
 RETIRE_PAGES = {
     "axia-offer.html", "gtm-engine.html",
     "strategic-infrastructure.html", "services.html",
@@ -263,7 +341,6 @@ def inject_ga4(content, relpath):
         insert_at = m.end()
         new = content[:insert_at] + "\n" + GA4_SNIPPET + content[insert_at:]
     else:
-        # Fallback per spec intent: place GA4 in <head>, immediately before </head>.
         hm = HEAD_CLOSE_RE.search(content)
         if not hm:
             fail(f"{relpath}: GA4 needed but no stylesheet <link> and no </head> found for placement")
@@ -283,13 +360,150 @@ def replace_once(content, regex, replacement, relpath, what):
     return new
 
 
+def ensure_style_link(content, relpath):
+    """Ensure exactly one /css/style.css link exists, placed ABOVE the inline
+    <style> (so page :root tokens/body rules win the cascade). Idempotent."""
+    if "/css/style.css" in content:
+        return content, "present"
+    m = INLINE_STYLE_OPEN_RE.search(content)
+    if m:
+        insert_at = m.start()
+        new = content[:insert_at] + STYLE_LINK + "\n" + content[insert_at:]
+    else:
+        # Fallback: place before </head>.
+        hm = HEAD_CLOSE_RE.search(content)
+        if not hm:
+            fail(f"{relpath}: cannot place style link — no inline <style> and no </head>")
+        insert_at = hm.start()
+        new = content[:insert_at] + STYLE_LINK + "\n" + content[insert_at:]
+        print(f"  NOTICE {relpath}: no inline <style> — style.css placed before </head>")
+    if new.count("/css/style.css") != 1:
+        fail(f"{relpath}: style.css link count != 1 after insertion")
+    return new, "added"
+
+
+def ensure_main_js(content, relpath):
+    """Ensure exactly one /js/main.js <script> before </body>. Idempotent."""
+    if "/js/main.js" in content:
+        return content, "present"
+    m = BODY_CLOSE_RE.search(content)
+    if not m:
+        fail(f"{relpath}: cannot place main.js — no </body> found")
+    insert_at = m.start()
+    new = content[:insert_at] + SCRIPT_TAG + "\n" + content[insert_at:]
+    if new.count("/js/main.js") != 1:
+        fail(f"{relpath}: main.js count != 1 after insertion")
+    return new, "added"
+
+
+def ensure_hero_offset(content, relpath):
+    """Inject `padding-top: var(--nav-height)` onto the page's content wrapper so
+    the fixed 72px nav doesn't clip the hero. The wrapper is the first <main> on
+    topnav-derived pages, or <div class="wrap"> on collaterals. Idempotent: skip
+    if the offset token is already on that wrapper. Returns (content, status)."""
+    if HERO_OFFSET_STYLE in content:
+        return content, "present"
+
+    # Prefer <main>; fall back to <div class="wrap"> (collaterals has no <main>).
+    m = MAIN_OPEN_RE.search(content)
+    if m:
+        attrs = m.group(1)  # e.g. '' or ' class="x"' or ' style="..."'
+        style_m = re.search(r'\bstyle="([^"]*)"', attrs)
+        if style_m:
+            existing = style_m.group(1).rstrip()
+            sep = "" if existing.endswith(";") or existing == "" else ";"
+            new_style = f'{existing}{sep} {HERO_OFFSET_STYLE}'.strip()
+            new_attrs = attrs[:style_m.start()] + f'style="{new_style}"' + attrs[style_m.end():]
+        else:
+            new_attrs = attrs + f' style="{HERO_OFFSET_STYLE}"'
+        new_tag = f'<main{new_attrs}>'
+        new = content[:m.start()] + new_tag + content[m.end():]
+        return new, "main"
+
+    wm = WRAP_OPEN_RE.search(content)
+    if wm:
+        new_tag = f'<div class="wrap" style="{HERO_OFFSET_STYLE}">'
+        new = content[:wm.start()] + new_tag + content[wm.end():]
+        return new, "wrap"
+
+    fail(f"{relpath}: cannot place hero offset — no <main> and no <div class=\"wrap\">")
+
+
+def stamp_research_nav(content, relpath, state):
+    """Swap a legacy <nav class="topnav"> for the global .nav (active or inactive),
+    OR INSERT the global .nav right after <body> where no chrome exists
+    (collaterals). The stamped nav is wrapped in CHROME:NAV markers for idempotent
+    re-stamping. Returns content. Aborts on >1 START marker."""
+    canonical = CANONICAL_NAV_ACTIVE if state == "active" else CANONICAL_NAV
+    wrapped = f"{NAV_START}\n{canonical}\n{NAV_END}"
+
+    n_start = content.count(NAV_START)
+    if n_start > 1:
+        fail(f"{relpath}: {n_start} CHROME:NAV:START markers (expected 0 or 1)")
+
+    if n_start == 1:
+        # Idempotent re-stamp: replace the marker-wrapped block with itself.
+        content, c = WRAPPED_NAV_RE.subn(lambda _m: wrapped, content)
+        if c != 1:
+            fail(f"{relpath}: wrapped-nav re-stamp count == {c} (expected 1)")
+        return content
+
+    # First stamp. Two cases:
+    n_topnav = len(TOPNAV_RE.findall(content))
+    if n_topnav == 1:
+        # Swap the legacy topnav for the wrapped global nav (exactly-1).
+        content = replace_once(content, TOPNAV_RE, wrapped, relpath, "topnav->nav")
+        return content
+    if n_topnav > 1:
+        fail(f"{relpath}: topnav count == {n_topnav} (expected 0 or 1)")
+
+    # No topnav (collaterals): INSERT the wrapped nav immediately after <body>.
+    m = BODY_OPEN_RE.search(content)
+    if not m:
+        fail(f"{relpath}: no <nav class=\"topnav\"> and no <body> to insert nav after")
+    insert_at = m.end()
+    content = content[:insert_at] + "\n" + wrapped + content[insert_at:]
+    return content
+
+
+def stamp_research_footer(content, relpath):
+    """ADD-or-REPLACE the global footer, wrapped in CHROME:FOOTER markers.
+    - existing marker -> idempotent re-stamp (exactly 1).
+    - existing <footer class="footer"> (possibly a NON-global author-bio footer,
+      e.g. soc/index) -> REPLACE it (exactly 1).
+    - no footer -> ADD before </body> (after a main.js script if present, the
+      marker block goes before </body> regardless).
+    Returns content. End state: exactly 1 CHROME:FOOTER block, 1 <footer>."""
+    wrapped = f"{FOOTER_START}\n{CANONICAL_FOOTER}\n{FOOTER_END}"
+
+    n_start = content.count(FOOTER_START)
+    if n_start > 1:
+        fail(f"{relpath}: {n_start} CHROME:FOOTER:START markers (expected 0 or 1)")
+    if n_start == 1:
+        content, c = WRAPPED_FOOTER_RE.subn(lambda _m: wrapped, content)
+        if c != 1:
+            fail(f"{relpath}: wrapped-footer re-stamp count == {c} (expected 1)")
+        return content
+
+    n_footer = len(FOOTER_RE.findall(content))
+    if n_footer > 1:
+        fail(f"{relpath}: footer count == {n_footer} (expected 0 or 1)")
+    if n_footer == 1:
+        content = replace_once(content, FOOTER_RE, wrapped, relpath, "footer-replace")
+        return content
+
+    # ADD before </body>.
+    m = BODY_CLOSE_RE.search(content)
+    if not m:
+        fail(f"{relpath}: no footer and no </body> to add footer before")
+    insert_at = m.start()
+    content = content[:insert_at] + wrapped + "\n" + content[insert_at:]
+    return content
+
+
 def process_nav_file(path, relpath):
     content = path.read_text(encoding="utf-8")
-
-    # nav: exactly 1
     content = replace_once(content, NAV_RE, CANONICAL_NAV, relpath, "nav")
-
-    # footer: 0-or-1 (1=replaced, 0=reported)
     footer_count = len(FOOTER_RE.findall(content))
     if footer_count > 1:
         fail(f"{relpath}: footer match count == {footer_count} (expected 0 or 1)")
@@ -299,22 +513,47 @@ def process_nav_file(path, relpath):
     else:
         footer_status = 0
         print(f"  NOTICE {relpath}: no <footer class=\"footer\"> found — footer skipped (reported, not error)")
-
-    # GA4
     content, ga4_status = inject_ga4(content, relpath)
-
     path.write_text(content, encoding="utf-8")
     print(f"OK nav=1 footer={footer_status} ga4={ga4_status} {relpath}")
     return ga4_status
 
 
-def process_topnav_file(path, relpath, canonical):
+def process_research_file(path, relpath, state):
+    """Global-.nav path for a research page (DR-2026-062). Returns a status dict."""
     content = path.read_text(encoding="utf-8")
 
-    # topnav: exactly 1
-    content = replace_once(content, TOPNAV_RE, canonical, relpath, "topnav")
+    content = stamp_research_nav(content, relpath, state)
+    content = stamp_research_footer(content, relpath)
+    content, style_status = ensure_style_link(content, relpath)
+    content, js_status = ensure_main_js(content, relpath)
+    content, offset_status = ensure_hero_offset(content, relpath)
+    content, ga4_status = inject_ga4(content, relpath)
 
-    # research/ pages may not have a standard footer — 0-or-1, never forced
+    path.write_text(content, encoding="utf-8")
+    print(f"OK research nav={state} footer=1 css={style_status} js={js_status} "
+          f"offset={offset_status} ga4={ga4_status} {relpath}")
+    return {"ga4": ga4_status}
+
+
+def plan_research_file(content, relpath, state):
+    """Dry-run: compute the post-transform content WITHOUT writing, returning
+    (new_content, summary). Used for --dry-run diff + idempotency proof."""
+    c = stamp_research_nav(content, relpath, state)
+    c = stamp_research_footer(c, relpath)
+    c, style_status = ensure_style_link(c, relpath)
+    c, js_status = ensure_main_js(c, relpath)
+    c, offset_status = ensure_hero_offset(c, relpath)
+    c, ga4_status = inject_ga4(c, relpath)
+    summary = (f"nav={state} footer=add/replace css={style_status} js={js_status} "
+               f"offset={offset_status} ga4={ga4_status}")
+    return c, summary
+
+
+# Kept for reference (no longer reachable via allowlist; TOPNAV_GROUP is empty).
+def process_topnav_file(path, relpath, canonical):  # pragma: no cover
+    content = path.read_text(encoding="utf-8")
+    content = replace_once(content, TOPNAV_RE, canonical, relpath, "topnav")
     footer_count = len(FOOTER_RE.findall(content))
     if footer_count > 1:
         fail(f"{relpath}: footer match count == {footer_count} (expected 0 or 1)")
@@ -323,42 +562,81 @@ def process_topnav_file(path, relpath, canonical):
         footer_status = 1
     else:
         footer_status = 0
-        print(f"  NOTICE {relpath}: no <footer class=\"footer\"> found — footer skipped (reported, not error)")
-
-    # GA4
     content, ga4_status = inject_ga4(content, relpath)
-
     path.write_text(content, encoding="utf-8")
     print(f"OK topnav=1 footer={footer_status} ga4={ga4_status} {relpath}")
     return ga4_status
 
 
-def main():
-    dry_run = "--dry-run" in sys.argv
-
-    # Defensive allowlist sanity checks (no forbidden dirs, no retire pages).
+def _check_allowlist_safety():
+    """Forbidden-dir + retire-page guard, with the SOC carve-out exception."""
     for rel in ALLOWLIST:
         normrel = rel.replace("\\", "/")
+        if normrel in SOC_CARVE_OUTS:
+            continue  # individually carved out of the directory guard (DR-2026-062)
         for pref in FORBIDDEN_PREFIXES:
             if normrel.startswith(pref):
                 fail(f"allowlist contains forbidden path: {rel}")
         if normrel in RETIRE_PAGES:
             fail(f"allowlist contains retire-bucket page: {rel}")
 
+
+def _dry_run():
     print(f"Allowlist: {len(ALLOWLIST)} pages "
-          f"({len(NAV_GROUP)} class=\"nav\" + {len(TOPNAV_GROUP)} topnav)")
+          f"({len(NAV_GROUP)} class=\"nav\" + {len(RESEARCH_GROUP)} research "
+          f"+ {len(TOPNAV_GROUP)} legacy-topnav)")
+    print("\n--- existence ---")
+    for rel in ALLOWLIST:
+        exists = (REPO / rel).exists()
+        print(f"  {'EXISTS' if exists else 'MISSING'}  {rel}")
+
+    print("\n--- research-group intended transforms (no writes) ---")
+    plans = {}
+    for rel, state in RESEARCH_GROUP.items():
+        path = REPO / rel
+        if not path.exists():
+            print(f"  MISSING {rel} — cannot plan")
+            continue
+        content = path.read_text(encoding="utf-8")
+        new1, summary = plan_research_file(content, rel, state)
+        plans[rel] = new1
+        changed = "CHANGED" if new1 != content else "no-op"
+        print(f"  {rel}: {summary}  [{changed}]")
+
+    print("\n--- idempotency proof (apply plan twice -> second pass zero diff) ---")
+    all_idem = True
+    for rel, state in RESEARCH_GROUP.items():
+        if rel not in plans:
+            continue
+        once = plans[rel]
+        twice, _ = plan_research_file(once, rel, state)
+        if twice == once:
+            print(f"  IDEMPOTENT  {rel}")
+        else:
+            all_idem = False
+            print(f"  NOT-IDEMPOTENT  {rel} — second pass differs!")
+    print("-" * 60)
+    print(f"idempotency: {'ALL IDEMPOTENT' if all_idem else 'FAILURE — see above'}")
+    if not all_idem:
+        sys.exit(1)
+
+
+def main():
+    dry_run = "--dry-run" in sys.argv
+    _check_allowlist_safety()
+
     if dry_run:
-        for rel in ALLOWLIST:
-            exists = (REPO / rel).exists()
-            print(f"  {'EXISTS' if exists else 'MISSING'}  {rel}")
+        _dry_run()
         sys.exit(0)
+
+    print(f"Allowlist: {len(ALLOWLIST)} pages "
+          f"({len(NAV_GROUP)} class=\"nav\" + {len(RESEARCH_GROUP)} research)")
 
     migrated = 0
     ga4_added = 0
     nav_pages = 0
-    topnav_pages = 0
+    research_pages = 0
 
-    # Process class="nav" group
     for rel in NAV_GROUP:
         path = REPO / rel
         if not path.exists():
@@ -369,24 +647,22 @@ def main():
         if status == "added":
             ga4_added += 1
 
-    # Process topnav group
-    for rel, canonical in TOPNAV_GROUP.items():
+    for rel, state in RESEARCH_GROUP.items():
         path = REPO / rel
         if not path.exists():
             fail(f"allowlisted file does not exist: {rel}")
-        status = process_topnav_file(path, rel, canonical)
-        topnav_pages += 1
+        res = process_research_file(path, rel, state)
+        research_pages += 1
         migrated += 1
-        if status == "added":
+        if res["ga4"] == "added":
             ga4_added += 1
 
     print("-" * 60)
     print(f"class=\"nav\" pages updated: {nav_pages}")
-    print(f"topnav pages updated:      {topnav_pages}")
+    print(f"research pages updated:    {research_pages}")
     print(f"GA4 injected (new):        {ga4_added}")
     print(f"migrated_count: {migrated}  allowlist_count: {len(ALLOWLIST)}")
 
-    # Final gate (§3.5)
     if migrated != len(ALLOWLIST):
         fail(f"migrated_count ({migrated}) != allowlist_count ({len(ALLOWLIST)})")
     print("GATE PASS: migrated_count == allowlist_count")

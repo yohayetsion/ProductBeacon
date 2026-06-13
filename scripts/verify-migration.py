@@ -18,9 +18,18 @@ DESIGN PRINCIPLES (NON-NEGOTIABLE):
     contact.html copy alignment) — those are owned by Phase 4 (Content/Copy).
     The chrome gate must be able to PASS while body items remain.
 
+RESEARCH GROUP (DR-2026-062): the research section was moved off its own `topnav`
+chrome onto the GLOBAL `.nav`/`.footer` (reversing the June-8 separation). Those
+pages are gated by check_research_group_page(): exactly 1 <nav class="nav"> +
+Version-A signature; 0 × class="topnav"; 0 × topnav-brand; 0 × page-local
+.footer{ / .footer-blocks / .footer-inner CSS; exactly 1 × /css/style.css; exactly
+1 × class="nav__inner"; 0 × inverted <strong>Product</strong>Beacon wordmark;
+exactly 1 Research a.active on research/index.html (0 on inactive pages).
+NOT gated on .nav__logo-text (false-positives on the valid footer brand logo).
+
 CHECKS (per in-scope page):
-  1. Exactly ONE nav block (class="nav" group: <nav class="nav">;
-     topnav group: <nav class="topnav">).
+  1. Exactly ONE nav block (class="nav" + research groups: <nav class="nav">;
+     legacy topnav group: <nav class="topnav">).
   2. Version A signature present:
        - class="nav": "The Operator Intensive" + "The Workforce" + "On Call"
          + ">Apply</a>"  (the §1 canonical link set).
@@ -80,11 +89,13 @@ except Exception as e:  # pragma: no cover - defensive
     sys.exit(2)
 
 NAV_GROUP = mc.NAV_GROUP
-TOPNAV_GROUP = mc.TOPNAV_GROUP            # dict: relpath -> canonical topnav
+TOPNAV_GROUP = mc.TOPNAV_GROUP            # dict: relpath -> canonical topnav (LEGACY, now empty)
+RESEARCH_GROUP = mc.RESEARCH_GROUP        # dict: relpath -> "active"|"inactive" (DR-2026-062)
 ALLOWLIST = mc.ALLOWLIST
 GA4_ID = mc.GA4_ID
 FORBIDDEN_PREFIXES = mc.FORBIDDEN_PREFIXES
 RETIRE_PAGES = mc.RETIRE_PAGES
+SOC_CARVE_OUTS = getattr(mc, "SOC_CARVE_OUTS", set())
 
 # --- Regexes -----------------------------------------------------------------
 NAV_BLOCK_RE = re.compile(r'<nav class="nav"[\s\S]*?</nav>')
@@ -231,6 +242,84 @@ def check_topnav_group_page(relpath, content, rep):
     for sig in TOPNAV_SIGNATURE:
         if sig not in nav_block:
             rep.fail(relpath, "topnav-signature", f"missing signature: {sig!r}")
+
+
+def check_research_group_page(relpath, content, rep):
+    """Global-.nav gate for a research page (DR-2026-062, plan §3).
+
+    Per in-scope research page:
+      - exactly 1 <nav class="nav"> block carrying the Version-A signature;
+      - 0 × class="topnav";
+      - 0 × topnav-brand;
+      - 0 × page-local chrome CSS (.footer { / .footer-blocks / .footer-inner);
+      - exactly 1 × /css/style.css link;
+      - exactly 1 × class="nav__inner";
+      - exactly 1 × the inverted topnav wordmark <strong>Product</strong>Beacon -> 0;
+      - active state: research/index.html has exactly 1 Research a.active in the nav;
+        inactive pages have 0.
+      - (NOT gated: .nav__logo-text — it false-positives on the valid footer logo.)
+    """
+    # exactly one global nav block
+    n = len(NAV_BLOCK_RE.findall(content))
+    if n != 1:
+        rep.fail(relpath, "nav-count", f'<nav class="nav"> count = {n} (expected 1)')
+        nav_block = ""
+    else:
+        nav_block = NAV_BLOCK_RE.search(content).group(0)
+
+    # Version A signature inside the nav
+    for sig in NAV_SIGNATURE:
+        if sig not in nav_block:
+            rep.fail(relpath, "nav-signature", f"missing signature: {sig!r}")
+
+    # zero legacy topnav residue
+    nt = content.count('class="topnav"')
+    if nt != 0:
+        rep.fail(relpath, "topnav-residue", f'class="topnav" count = {nt} (expected 0)')
+    ntb = content.count("topnav-brand")
+    if ntb != 0:
+        rep.fail(relpath, "topnav-brand-residue", f'topnav-brand count = {ntb} (expected 0)')
+
+    # zero page-local chrome CSS rule definitions
+    if re.search(r'\.footer\s*\{', content):
+        rep.fail(relpath, "page-local-footer-css", 'page-local ".footer {" CSS rule present')
+    if ".footer-blocks" in content:
+        rep.fail(relpath, "page-local-footer-blocks",
+                 '".footer-blocks" CSS present (legacy chrome)')
+    if ".footer-inner" in content:
+        rep.fail(relpath, "page-local-footer-inner",
+                 '".footer-inner" CSS present (legacy chrome)')
+
+    # exactly one global stylesheet link
+    ncss = content.count("/css/style.css")
+    if ncss != 1:
+        rep.fail(relpath, "style-link-count",
+                 f'/css/style.css link count = {ncss} (expected 1)')
+
+    # exactly one nav__inner (proves the global nav markup, not just a class string)
+    nni = content.count('class="nav__inner"')
+    if nni != 1:
+        rep.fail(relpath, "nav-inner-count",
+                 f'class="nav__inner" count = {nni} (expected 1)')
+
+    # inverted topnav wordmark must be gone
+    nbad = content.count("<strong>Product</strong>Beacon")
+    if nbad != 0:
+        rep.fail(relpath, "inverted-wordmark",
+                 f'"<strong>Product</strong>Beacon" count = {nbad} (expected 0)')
+
+    # active state on the Research anchor
+    active_re = re.compile(r'<a href="/research/" class="active">Research</a>')
+    n_active = len(active_re.findall(nav_block)) if nav_block else 0
+    state = RESEARCH_GROUP.get(relpath.replace("\\", "/"))
+    if state == "active":
+        if n_active != 1:
+            rep.fail(relpath, "research-active",
+                     f'Research a.active count = {n_active} (expected 1 for active page)')
+    else:
+        if n_active != 0:
+            rep.fail(relpath, "research-active-unexpected",
+                     f'Research a.active count = {n_active} (expected 0 for inactive page)')
 
 
 def check_retired_chrome_markers(relpath, content, rep):
@@ -672,9 +761,13 @@ def run_seo_gate(verbose=False):
 def run_chrome_gate(verbose=False):
     rep = Report()
 
-    # Defensive: allowlist must not contain forbidden dirs or retire pages.
+    # Defensive: allowlist must not contain forbidden dirs or retire pages —
+    # EXCEPT the three soc pages individually carved out of the directory guard
+    # (DR-2026-062). Mirrors migrate-chrome.py's _check_allowlist_safety().
     for rel in ALLOWLIST:
         nr = rel.replace("\\", "/")
+        if nr in SOC_CARVE_OUTS:
+            continue
         for pref in FORBIDDEN_PREFIXES:
             if nr.startswith(pref):
                 print(f"ABORT: allowlist contains forbidden path: {rel}", file=sys.stderr)
@@ -692,13 +785,26 @@ def run_chrome_gate(verbose=False):
     id_index = build_id_index()
 
     print(f"verify-migration: {len(ALLOWLIST)} in-scope pages "
-          f"({len(NAV_GROUP)} class=\"nav\" + {len(TOPNAV_GROUP)} topnav)")
+          f"({len(NAV_GROUP)} class=\"nav\" + {len(RESEARCH_GROUP)} research "
+          f"+ {len(TOPNAV_GROUP)} legacy-topnav)")
 
     for rel in NAV_GROUP:
         if (REPO / rel).exists():
             content = read(rel)
             before = len(rep.violations)
             check_nav_group_page(rel, content, rep)
+            check_retired_chrome_markers(rel, content, rep)
+            check_ga4(rel, content, rep)
+            check_footer_canonical(rel, content, rep)
+            check_links_and_anchors(rel, content, id_index, rep)
+            if verbose and len(rep.violations) == before:
+                print(f"  PASS  {rel}")
+
+    for rel in RESEARCH_GROUP:
+        if (REPO / rel).exists():
+            content = read(rel)
+            before = len(rep.violations)
+            check_research_group_page(rel, content, rep)
             check_retired_chrome_markers(rel, content, rep)
             check_ga4(rel, content, rep)
             check_footer_canonical(rel, content, rep)

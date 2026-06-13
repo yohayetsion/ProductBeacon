@@ -91,6 +91,7 @@
   gtag('config', 'G-TC1LMMGQGV');
 </script>
 
+<link rel="stylesheet" href="/css/style.css">
 <style>
 /* ====================================================================
    ProductBeacon Research. Landing Page (A-7).
@@ -216,51 +217,6 @@ img { max-width: 100%; display: block; }
 /* Lockup as link hover (only when wrapped in <a>) */
 a.lockup:hover .lockup-divider { background: var(--amber); }
 a.lockup:hover .lockup-wordmark { color: var(--amber); }
-
-/* ---------- Top nav ---------- */
-.topnav {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 24px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-5);
-}
-.topnav-brand {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-family: 'Inter', sans-serif;
-  color: var(--primary-text);
-}
-.topnav-brand-icon {
-  width: 28px; height: 28px;
-  background: var(--amber);
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.topnav-brand-wordmark { font-size: 16px; font-weight: 500; }
-.topnav-brand-wordmark strong { font-weight: 700; }
-.topnav-links {
-  display: flex;
-  gap: var(--space-5);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.topnav-links a {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--primary-text);
-  transition: color var(--research-mark-hover-transition);
-}
-.topnav-links a:hover { color: var(--amber); }
-.topnav-links a.active { color: var(--amber); }
-
 /* ---------- Hero ---------- */
 .hero {
   max-width: var(--content-max);
@@ -547,81 +503,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   margin: var(--space-3) 0 0 0;
   min-height: 1.2em;
 }
-
-/* ---------- Footer (A-3 verbatim) ---------- */
-.footer {
-  border-top: 1px solid var(--slate-600);
-  background: var(--ink);
-  padding: var(--space-8) 32px var(--space-7);
-}
-.footer-inner {
-  max-width: var(--content-max);
-  margin: 0 auto;
-}
-.footer-blocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-7);
-  margin-bottom: var(--space-6);
-}
-.footer-block-lockup { margin-bottom: var(--space-4); }
-.footer-block-parent {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  color: var(--primary-text);
-}
-.footer-block-parent .parent-icon {
-  width: 28px; height: 28px;
-  background: var(--amber);
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.footer-block-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--slate-400);
-  margin: 0 0 var(--space-3) 0;
-}
-.footer-block-body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--primary-text);
-  margin: 0;
-  max-width: var(--reading-max);
-}
-.footer-block-body a {
-  color: var(--primary-text);
-  border-bottom: 1px solid var(--slate-600);
-  transition: color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
-}
-.footer-block-body a:hover { color: var(--amber); border-bottom-color: var(--amber); }
-.footer-divider {
-  height: 1px;
-  background: var(--slate-600);
-  margin: 0 0 var(--space-5) 0;
-}
-.footer-disclosure {
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--slate-400);
-  line-height: 1.6;
-  margin: 0;
-  max-width: var(--reading-max);
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero { padding: var(--space-6) 24px; }
@@ -630,12 +511,8 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   .section { padding: var(--space-7) 24px; }
   .section-title { font-size: 28px; }
   .chapter-grid { grid-template-columns: 1fr; }
-  .footer-blocks { grid-template-columns: 1fr; gap: var(--space-6); }
-  .footer { padding: var(--space-7) 24px var(--space-6); }
   .ribbon { padding: 0 16px; }
   .ribbon-continuation { display: none; }
-  .topnav { padding: 16px 24px; flex-wrap: wrap; }
-  .topnav-links { gap: var(--space-3); }
   .doors { padding: var(--space-4); }
   .subscribe { padding: var(--space-6) 24px var(--space-7); }
   .subscribe-card { padding: var(--space-5); }
@@ -643,7 +520,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 }
 @media (max-width: 480px) {
   .hero-headline { font-size: 32px; }
-  .topnav-brand-wordmark { font-size: 14px; }
   .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
   .lockup-lg .lockup-divider { height: 24px; }
   .lockup-lg .lockup-wordmark { font-size: 18px; }
@@ -661,6 +537,10 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   white-space: nowrap;
   border: 0;
 }
+
+/* chrome-unify: reset global style.css collisions on research body */
+.hero { display: block; align-items: normal; min-height: 0; overflow: visible; position: static; }
+.btn { gap: 0; }
 </style>
 </head>
 <body>
@@ -669,28 +549,51 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <!-- =====================================================================
      TOP NAV
      ===================================================================== -->
-<nav class="topnav" aria-label="Primary">
-  <a href="/" class="topnav-brand" aria-label="ProductBeacon home">
-    <span class="topnav-brand-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="8" r="4" fill="#0F172A"/>
-        <path d="M6 14 L12 22 L18 14 Z" fill="#0F172A"/>
+<!-- CHROME:NAV:START -->
+<!-- ====== NAV ====== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
       </svg>
-    </span>
-    <span class="topnav-brand-wordmark"><strong>Product</strong>Beacon</span>
-  </a>
-  <ul class="topnav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/research/">Research</a></li>
-    <li><a href="/on-call.html">On Call</a></li>
-    <li><a href="/about.html">About</a></li>
-  </ul>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="/index.html#intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+  </div>
 </nav>
+<!-- CHROME:NAV:END -->
 
 <!-- =====================================================================
      HERO (Author-first, three-audience UTM routing)
      ===================================================================== -->
-<main>
+<main style="padding-top: var(--nav-height);">
 <header class="hero">
   <div class="hero-lockup-row">
     <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
@@ -756,6 +659,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <!-- =====================================================================
      FOOTER (A-3 verbatim, two-block)
      ===================================================================== -->
+<!-- CHROME:FOOTER:START -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -796,7 +700,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     </div>
   </div>
 </footer>
+<!-- CHROME:FOOTER:END -->
 
 
+<script src="/js/main.js"></script>
 </body>
 </html>
