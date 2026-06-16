@@ -12,17 +12,41 @@ Disallow: /Product/
 # Note: /research/state-of-cyber-2026/ is the public research sub-brand — intentionally NOT disallowed.
 # Redirect stubs carry in-page "noindex, follow"; they are left crawlable so engines can read the noindex.
 
-# AI search crawlers (explicitly allowed for GEO discoverability)
+# AI search crawlers (allowed for GEO discoverability — but NOT the private/review areas)
 User-agent: GPTBot
 Allow: /
+Disallow: /internal/
+Disallow: /prospects/
+Disallow: /planning/
+Disallow: /analysis/
+Disallow: /reports/
+Disallow: /Product/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /internal/
+Disallow: /prospects/
+Disallow: /planning/
+Disallow: /analysis/
+Disallow: /reports/
+Disallow: /Product/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /internal/
+Disallow: /prospects/
+Disallow: /planning/
+Disallow: /analysis/
+Disallow: /reports/
+Disallow: /Product/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /internal/
+Disallow: /prospects/
+Disallow: /planning/
+Disallow: /analysis/
+Disallow: /reports/
+Disallow: /Product/
 
 Sitemap: https://productbeacon.agency/sitemap.xml
