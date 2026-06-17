@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ProductBeacon — State of Cyber Security Markets 2026, Part 2 Convergence: The Platform Wars Synthesis</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+@page {
+    size: A4;
+    margin: 1in 0.85in 0.9in 0.85in;
+    @bottom-center { content: counter(page); font-size: 9pt; color: #6b7280; font-family: 'Manrope', sans-serif; }
+    @top-right { content: "ProductBeacon"; font-size: 9pt; color: #9ca3af; font-family: 'Manrope', sans-serif; }
+}
+@page :first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Manrope', 'Calibri', -apple-system, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── COVER PAGE (single A4 page; disclosure pushed to footer) ── */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding: 2.4in 0.4in 0 0.4in;
+    margin: 0;
+    position: relative;
+    min-height: 9in;
+}
+.cover .brand-bar-top {
+    display: block;
+    height: 6px;
+    background: #F59E0B;
+    margin: -2.4in -0.85in 0.5in -0.85in;
+}
+.cover .brand-bar-bottom { display: none; }
+.cover .imprint { font-size: 10pt; letter-spacing: 3pt; color: #92400E; font-weight: 700; margin: 1.6in 0 0.4in 0; }
+.cover h1 {
+    color: #92400E;
+    font-size: 28pt;
+    font-weight: 800;
+    margin: 0 0 0.55in 0;
+    border: none;
+    line-height: 1.2;
+    padding: 0;
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+.cover .author-block { font-size: 11pt; color: #4a4a4a; margin-bottom: 0.15in; }
+.cover .author-block strong { display: block; font-size: 13pt; color: #1a1a1a; margin-bottom: 4pt; }
+.cover .date { font-size: 10pt; color: #6b7280; margin-top: 0.4in; }
+
+/* ── BACK-MATTER DISCLOSURES (end of document) ── */
+.back-disclosures { page-break-before: always; padding-top: 6pt; }
+.back-disclosures h2 { color: #92400E; font-size: 16pt; font-weight: 800; border-bottom: 2px solid #F59E0B; padding-bottom: 6pt; margin: 0 0 14pt 0; letter-spacing: 0.5pt; }
+.back-disclosures p { font-size: 9.5pt; line-height: 1.6; color: #374151; margin: 0 0 11pt 0; text-align: justify; font-style: italic; }
+.back-disclosures p strong { color: #92400E; font-style: normal; font-weight: 700; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; font-size: 10pt; }
+
+/* ── HEADINGS ── */
+h1 { color: #92400E; font-size: 22pt; font-weight: 800; border-bottom: 3px solid #F59E0B; padding-bottom: 6pt; margin-top: 0; margin-bottom: 16pt; page-break-before: always; page-break-after: avoid; }
+h2 { color: #1a1a1a; font-size: 16pt; font-weight: 700; margin-top: 24pt; margin-bottom: 10pt; border-bottom: 1px solid #F59E0B; padding-bottom: 4pt; page-break-after: avoid; }
+h3 { color: #92400E; font-size: 12.5pt; font-weight: 700; margin-top: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
+h4 { color: #374151; font-size: 11pt; font-weight: 700; margin-top: 12pt; margin-bottom: 4pt; page-break-after: avoid; }
+
+/* ── PROSE ── */
+p { margin: 0 0 9pt 0; text-align: justify; orphans: 3; widows: 3; }
+strong { color: #111827; }
+em { color: #374151; }
+a { color: #92400E; text-decoration: none; }
+ul, ol { margin: 6pt 0 10pt 22pt; padding: 0; }
+li { margin-bottom: 4pt; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 16pt 0; }
+
+/* ── BLOCKQUOTES (Pattern Claim callouts) ── */
+blockquote { border-left: 4px solid #F59E0B; background: #FFFBEB; padding: 12pt 16pt; margin: 14pt 0; page-break-inside: avoid; border-radius: 0 4px 4px 0; }
+blockquote h3 { color: #92400E; margin-top: 0; font-size: 12pt; }
+blockquote p { margin-bottom: 7pt; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong { color: #92400E; }
+
+/* ── TABLES ── */
+table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+thead { background: #FEF3C7; }
+th { color: #92400E; padding: 7pt 9pt; text-align: left; border-bottom: 2px solid #F59E0B; font-weight: 700; vertical-align: top; }
+td { padding: 6pt 9pt; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.45; }
+tbody tr:nth-child(even) td { background: #fafafa; }
+
+/* ── IMAGES ── */
+img { max-width: 100%; display: block; margin: 14pt auto; page-break-inside: avoid; }
+figure { margin: 14pt 0; page-break-inside: avoid; }
+figcaption { font-size: 9pt; color: #6b7280; text-align: center; margin-top: 4pt; font-style: italic; }
+
+/* ── CODE ── */
+code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; background: #f3f4f6; padding: 1pt 4pt; border-radius: 3px; color: #92400E; }
+pre { background: #f3f4f6; padding: 10pt; border-radius: 4px; font-size: 9pt; overflow-x: auto; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+
+/* ── DISCLAIMER & DISCLOSURE ── */
+.disclosure { background: #FFFBEB; border: 1px solid #FBBF24; padding: 10pt 14pt; font-size: 9.5pt; color: #92400E; margin: 14pt 0; font-style: italic; border-radius: 4px; }
+
+/* ── FOOTNOTES (markdown extension renders these as a section) ── */
+.footnote, [id^="fn-"] { font-size: 9pt; color: #4b5563; }
+.footnote ol, ol.footnote { padding-left: 18pt; }
+hr.footnote { border-top: 1px solid #e5e7eb; margin-top: 24pt; }
+sup, .footnote-ref { font-size: 7.5pt; vertical-align: super; }
+sup a { color: #92400E; font-weight: 700; }
+
+/* ── PRINT TWEAKS ── */
+@media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+</head>
+<body>
+<section class="cover">
+<div class="brand-bar-top"></div>
+<div class="imprint">PRODUCTBEACON</div>
+<h1>ProductBeacon — State of Cyber Security Markets 2026, Part 2 Convergence: The Platform Wars Synthesis</h1>
+<div class="author-block">
+<strong>Yohay Etsion</strong>
+Managing Director, ProductBeacon
+</div>
+<div class="date">2026-06-17</div>
+</section>
+
+<blockquote>
+<p><em>Impartial cyber market research, published on the open web. No vendor sponsors, no paywalled data, no analyst-firm reuse: only publicly verifiable signals. Authored by Yohay Etsion, Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment; AXIA does not compete in any of the four Part 2 fronts synthesized here (SOC / SSE / AI Security / Identity).</em> <a href="/research/methodology.html">Read the full methodology →</a></p>
+</blockquote>
+<p><em>By Yohay Etsion · Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026)</em></p>
+<hr>
+<h2>9.1 The Convergence Frame</h2>
+<p>Four things happened across the four fronts of this Part. In Detection &amp; Response, the SOC platform incumbents kept buying the adjacent control planes outright — Cisco folded Splunk&rsquo;s $28B SIEM into its network telemetry, Zscaler crossed in from the edge by acquiring the managed-detection house Red Canary for roughly $651M, and CrowdStrike and SentinelOne split the endpoint into two distinct buyer segments rather than one [cross-front: see Front 5 §5.6]. In the Secure Service Edge, the bundle pressed on the standalone vendor below it while the developer-led, identity-first access tools ported up-market on the back of the AI-agent access problem [cross-front: see Front 6 §6.6]. In AI Security, the most-funded independents exited into platforms before any could graduate to scale — Lakera into Check Point at ~$300M (closed 2025-10-22), Protect AI into Palo Alto (intent 2025-04-28) [cross-front: see Front 7 §7.6]. And in Identity, the PAM category originator itself became a platform pillar: Palo Alto Networks completed its ~$25B acquisition of CyberArk on February 11, 2026 [cross-front: see Front 8 §8.6]. Four fronts, four absorption stories, one structural moment in the platform layer of the cyber market.</p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<p>The question this chapter argues is whether those four stories are four parallel category races or one contest with four faces. I read them as one contest — and the force that makes them <em>one</em> rather than four is agentic AI, expressed as the non-human / agent-identity problem. But the gate this thesis had to pass before a word of it was written demanded that I hold it as a bounded claim, not a blanket one, and that I let two serious competing reads stand on the table with their best evidence intact. So I put all three on the table first, verbatim, and then say which one I am betting on and exactly where I am qualifying that bet.</p>
+<blockquote>
+<p><strong>The Platform-Consolidation Thesis (Chosen).</strong> The four fronts of the wider cyber theater — Detection &amp; Response, the Secure Service Edge, AI Security, and Identity — are not four parallel category races. They are a single platform-consolidation contest, and the force that makes it <em>one</em> contest rather than four is agentic AI expressed as the <strong>non-human / agent-identity</strong> problem. The platform incumbents that anchor the SOC are absorbing each adjacent category from whichever starting position they hold, and they are doing it on an explicitly stated agent-identity rationale… The buyer&rsquo;s real 2026 decision is therefore not &ldquo;which SSE&rdquo; or &ldquo;which PAM&rdquo; but <strong>consolidate-onto-a-platform versus best-of-breed</strong>, and the agent-identity vector is tilting that decision toward the platforms. The convergence is real, it is architecturally driven, and it runs through identity.</p>
+<p><strong>The Best-of-Breed Persistence Thesis (Competitor A).</strong> The four fronts stay distinct because each is a genuinely different technical discipline sold to a genuinely different buying center… the specialists keep winning the sophisticated buyer because depth beats breadth where the problem is hard, and the public record shows the standalone leaders not collapsing but <em>scaling independently</em> — CrowdStrike and Zscaler and Netskope command premium public multiples as focused platforms, SailPoint <strong>re-IPO&rsquo;d</strong> out of private equity into a $1.16B-ARR governance business, and Saviynt took a <strong>$700M KKR round at ~$3B</strong>… a platform buying a PAM vendor no more proves &ldquo;the fronts are one war&rdquo; than a car-maker buying a battery firm proves cars and batteries are one market.</p>
+<p><strong>The Bundle-Economics (Pricing-Power) Thesis (Competitor B).</strong> The convergence is driven by suite-attach economics and platform bundling pressure, not by any architectural collapse around agent identity. The mechanism is commercial: a vendor that already owns two of the four fronts pulls the third and fourth in because consolidation is cheaper per line item, easier to procure, and easier to operate — and the buyer consolidates out of <strong>CISO tool-fatigue and budget pressure</strong>, not because the underlying problems have merged… <strong>Entra&rsquo;s bundled pricing compresses standalone deal sizes</strong> regardless of which category architecturally &ldquo;wins.&rdquo;</p>
+</blockquote>
+<p><strong>My read</strong> is that the Platform-Consolidation Thesis is the better explanation of the dated record — but only in its bounded, segmented, both/and form, and I am qualifying the pre-commit in two places before I argue from it. First, where the Chosen as originally drafted said the platform is &ldquo;winning the <em>default buyer</em>,&rdquo; I read the evidence as supporting the platform winning the <strong>mid-market and the fresh-greenfield buyer</strong>, with the sophisticated enterprise tier held as genuinely contested — that is Competitor A&rsquo;s live ground, and three of the four fronts&rsquo; own pattern claims locate the platform win at the mid-market and concede the high end is &ldquo;more resistible&rdquo; [cross-front: see Front 5 §5.6, Front 6 §6.6, Front 8 §8.6]. Second, where the Chosen disclaimed the bundle mechanism — &ldquo;not because bundling is cheaper&rdquo; — I read that as a false dichotomy I have to drop. The honest synthesis is both/and: <strong>agent identity is why the contest is one contest</strong> (the Chosen&rsquo;s true contribution), and <strong>bundle economics is a second, parallel compression force</strong> that is real and powerful (Competitor B&rsquo;s true contribution). I am not denying B; I am absorbing it as a co-driver.</p>
+<p>What survives all of that — what neither competitor can absorb — is a single asymmetry in the public record: the acquirers say it themselves, and they say <em>agent identity</em>, not price and not gap-filling. That is the load-bearing evidence, and §9.2 and §9.3 build on it. The convergence frame, then, is one contest observed mid-resolution, vectored through agent identity, with bundle economics running alongside it and the enterprise tier still open.</p>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="900" height="600" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="900" height="6" fill="#F59E0B"/>
+
+  <text x="450" y="40" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Convergence Frame — Four Fronts, One Platform-Consolidation Contest</text>
+  <text x="450" y="58" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, PART 2 CONVERGENCE (FRONT 9)</text>
+  <text x="450" y="82" font-size="10.5" fill="#cbd5e1" text-anchor="middle">Detection &amp; Response, SSE, AI Security, and Identity read as one contest — the spine threading them is the agent / non-human identity vector</text>
+
+  <!-- ===== The agent-identity vector spine — single bold horizontal through-line ===== -->
+  <line x1="70" y1="300" x2="830" y2="300" stroke="#FBBF24" stroke-width="3.5" stroke-opacity="0.9"/>
+  <polygon points="830,300 814,293 814,307" fill="#FBBF24"/>
+  <rect x="276" y="282" width="348" height="36" rx="8" fill="#fbbf24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="1.6"/>
+  <text x="450" y="299" font-size="11.5" font-weight="800" fill="#fde68a" text-anchor="middle">VECTOR: human + machine + agent identity</text>
+  <text x="450" y="313" font-size="8.5" fill="#fed7aa" text-anchor="middle">the part of the enterprise growing fastest — and the part the SOC must detect, authorize, and respond to</text>
+
+  <!-- ===== The four fronts as bands above the spine — ordered by stage of resolution (Identity most-resolved → D&R least) ===== -->
+  <!-- Front 8 Identity -->
+  <rect x="70" y="120" width="180" height="150" rx="10" fill="#92400E" fill-opacity="0.18" stroke="#92400E" stroke-width="2"/>
+  <text x="160" y="144" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Identity (F8)</text>
+  <text x="160" y="162" font-size="8.5" fill="#fed7aa" text-anchor="middle">SSO · IGA · PAM · NHI</text>
+  <text x="160" y="186" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Who is this actor —</text>
+  <text x="160" y="199" font-size="9.5" fill="#cbd5e1" text-anchor="middle">and what may it authorize?</text>
+  <rect x="92" y="218" width="136" height="20" rx="4" fill="#92400E" fill-opacity="0.35"/>
+  <text x="160" y="232" font-size="8.5" font-weight="700" fill="#fef3c7" text-anchor="middle">category-leader absorption</text>
+  <text x="160" y="256" font-size="8.5" fill="#94a3b8" text-anchor="middle" font-style="italic">most resolved</text>
+
+  <!-- Front 7 AI Security -->
+  <rect x="266" y="120" width="180" height="150" rx="10" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-width="2"/>
+  <text x="356" y="144" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">AI Security (F7)</text>
+  <text x="356" y="162" font-size="8.5" fill="#fed7aa" text-anchor="middle">model · runtime · red-team</text>
+  <text x="356" y="186" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Is the model and</text>
+  <text x="356" y="199" font-size="9.5" fill="#cbd5e1" text-anchor="middle">its runtime safe?</text>
+  <rect x="288" y="218" width="136" height="20" rx="4" fill="#F59E0B" fill-opacity="0.30"/>
+  <text x="356" y="232" font-size="8.5" font-weight="700" fill="#fef3c7" text-anchor="middle">sub-scale / capability absorption</text>
+  <text x="356" y="256" font-size="8.5" fill="#94a3b8" text-anchor="middle" font-style="italic">pre-Gravity</text>
+
+  <!-- Front 6 SSE -->
+  <rect x="462" y="120" width="180" height="150" rx="10" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="2"/>
+  <text x="552" y="144" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">SSE / Edge (F6)</text>
+  <text x="552" y="162" font-size="8.5" fill="#fed7aa" text-anchor="middle">ZTNA · SWG · CASB · DLP</text>
+  <text x="552" y="186" font-size="9.5" fill="#cbd5e1" text-anchor="middle">What should this</text>
+  <text x="552" y="199" font-size="9.5" fill="#cbd5e1" text-anchor="middle">actor be allowed to reach?</text>
+  <rect x="484" y="218" width="136" height="20" rx="4" fill="#F59E0B" fill-opacity="0.26"/>
+  <text x="552" y="232" font-size="8.5" font-weight="700" fill="#fef3c7" text-anchor="middle">coexistence-compression</text>
+  <text x="552" y="256" font-size="8.5" fill="#94a3b8" text-anchor="middle" font-style="italic">compression, not collapse</text>
+
+  <!-- Front 5 D&R -->
+  <rect x="658" y="120" width="180" height="150" rx="10" fill="#F59E0B" fill-opacity="0.11" stroke="#F59E0B" stroke-width="2"/>
+  <text x="748" y="144" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">Detection &amp; Response (F5)</text>
+  <text x="748" y="162" font-size="8.5" fill="#fed7aa" text-anchor="middle">SIEM · EDR · XDR · SOC</text>
+  <text x="748" y="186" font-size="9.5" fill="#cbd5e1" text-anchor="middle">What is this</text>
+  <text x="748" y="199" font-size="9.5" fill="#cbd5e1" text-anchor="middle">actor doing?</text>
+  <rect x="680" y="218" width="136" height="20" rx="4" fill="#F59E0B" fill-opacity="0.22"/>
+  <text x="748" y="232" font-size="8.5" font-weight="700" fill="#fef3c7" text-anchor="middle">open experiment</text>
+  <text x="748" y="256" font-size="8.5" fill="#94a3b8" text-anchor="middle" font-style="italic">least resolved</text>
+
+  <!-- connectors from each front down to the spine -->
+  <line x1="160" y1="270" x2="160" y2="300" stroke="#FBBF24" stroke-width="1.4" stroke-opacity="0.6"/>
+  <line x1="356" y1="270" x2="356" y2="300" stroke="#FBBF24" stroke-width="1.4" stroke-opacity="0.6"/>
+  <line x1="552" y1="270" x2="552" y2="300" stroke="#FBBF24" stroke-width="1.4" stroke-opacity="0.6"/>
+  <line x1="748" y1="270" x2="748" y2="300" stroke="#FBBF24" stroke-width="1.4" stroke-opacity="0.6"/>
+
+  <!-- stage-axis label under the four bands -->
+  <text x="450" y="106" font-size="8.5" fill="#64748b" text-anchor="middle" letter-spacing="0.5">&#8592; ORDERED BY STAGE OF RESOLUTION: most-resolved (Identity) to least-resolved (Detection &amp; Response) &#8594;</text>
+
+  <!-- ===== The SOC platform incumbents at the gravitational center, below the spine ===== -->
+  <ellipse cx="450" cy="392" rx="262" ry="44" fill="#92400E" fill-opacity="0.20" stroke="#92400E" stroke-width="2.5"/>
+  <text x="450" y="382" font-size="12.5" font-weight="800" fill="#fde68a" text-anchor="middle">The SOC platform incumbents — the gravitational center</text>
+  <text x="450" y="400" font-size="9.5" fill="#fed7aa" text-anchor="middle">Palo Alto Networks · CrowdStrike · Cisco · Microsoft</text>
+  <text x="450" y="416" font-size="8.5" fill="#94a3b8" text-anchor="middle">each absorbing the adjacent control planes from its own starting position — the SOC is the home base from which the roll-up runs</text>
+
+  <!-- gravity arrows: fronts pulled toward the center -->
+  <line x1="160" y1="318" x2="300" y2="372" stroke="#92400E" stroke-width="1.4" stroke-opacity="0.55"/>
+  <line x1="356" y1="318" x2="392" y2="358" stroke="#92400E" stroke-width="1.4" stroke-opacity="0.55"/>
+  <line x1="552" y1="318" x2="510" y2="358" stroke="#92400E" stroke-width="1.4" stroke-opacity="0.55"/>
+  <line x1="748" y1="318" x2="604" y2="372" stroke="#92400E" stroke-width="1.4" stroke-opacity="0.55"/>
+
+  <text x="450" y="466" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">One contest observed mid-resolution, vectored through agent identity — with bundle economics running alongside it and the enterprise tier still open.</text>
+
+  <!-- caption / footer box -->
+  <rect x="70" y="486" width="760" height="80" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="450" y="508" font-size="9.5" fill="#cbd5e1" text-anchor="middle">The four fronts are not four parallel category races. They are a single platform-consolidation contest, and the force that makes it</text>
+  <text x="450" y="524" font-size="9.5" fill="#cbd5e1" text-anchor="middle">one contest rather than four is agentic AI expressed as the non-human / agent-identity problem — the spine the acquirers name in their own dated press.</text>
+  <text x="450" y="546" font-size="8.5" fill="#64748b" text-anchor="middle">Category-level read of public material, June 2026. The four named incumbents hold their primary contender slots in Front 5; they appear elsewhere only as the absorbing platform side.</text>
+  <text x="450" y="560" font-size="8" fill="#64748b" text-anchor="middle" font-style="italic">Not investment advice.</text>
+</svg>
+</div></p>
+<p><em>Caption: the four fronts (Detection &amp; Response, SSE, AI Security, Identity) read as one contest; the spine threading them is the agent / non-human identity vector that the acquirers name in their own dated press.</em></p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<hr>
+<h2>9.2 The Three Forces Driving Convergence</h2>
+<p>Three forces account for the 2026 platform wars, and the difference between the Chosen Thesis and Competitor B is precisely the difference between the first two. Each thesis bets on a different force as the dominant one. The Chosen bets on Force 1 (agent identity is why it is one contest); Competitor B bets on Force 2 (bundle economics is why it consolidates at all). My read is that both are operating at once, on different layers — which is why I am absorbing B rather than denying it.</p>
+<p><strong>Force 1 — agentic AI and the agent-identity problem (architectural — the why-it&rsquo;s-one-contest).</strong> This is the force the Chosen Thesis bets on, and it is what makes four fronts into one contest rather than four. When the subject of analysis is an autonomous agent, the questions each front was built to answer stop being separable. Detection asks <em>what is this actor doing</em>; the edge asks <em>what should it be allowed to reach</em>; AI Security asks <em>is the model and its runtime safe</em>; Identity asks <em>who is this actor and what may it authorize</em>. For a human user those were four problems with four tools. For an agent — which authenticates through machine identities that already outnumber human identities, spins up and tears down at machine speed, and operates far from human supervision — they are one problem: govern the agent&rsquo;s identity, its runtime behavior, its access, and the alert it generates, all at once. Only a platform that already sits across the SOC, the edge, the AI runtime, and the identity fabric can close that loop. This is the force that the disclosed acquirer rationale (§9.3) testifies to directly, and it is the Chosen&rsquo;s true and distinctive contribution: it explains <em>why the four are one</em>, which neither competitor does.</p>
+<p><strong>Force 2 — platform economics and bundle-attach (commercial — Competitor B&rsquo;s force, as a CO-DRIVER).</strong> This is the force Competitor B bets on, and I am explicit that it is real, powerful, and operating in parallel with Force 1 rather than instead of it. The mechanism is commercial: a vendor that already owns two fronts pulls the third and fourth in because absorption is cheaper per line item, easier to procure, and easier to operate. The chapters supply this force with hard evidence the Chosen cannot wave away. Microsoft&rsquo;s Defender/Sentinel consolidation rides the M365 E5 bundle — &ldquo;the bundle does the selling,&rdquo; and the pressure is &ldquo;sharpest at the mid-market&rdquo; where the E5 estate is already in place and &ldquo;good enough and already included&rdquo; wins [cross-front: see Front 5 §5.6, Microsoft Platform-Pressure]. In Identity, Entra Compression is the same mechanism stated outright: &ldquo;when the directory-and-SSO layer is already paid for inside an enterprise agreement, the marginal cost of &lsquo;good enough&rsquo; access management trends toward zero&rdquo; [cross-front: see Front 8 §8.6]. In SSE, bundled DLP compresses the standalone data-security vendor at the total-cost-of-ownership line [cross-front: see Front 6 §6.6]. Three of the four fronts carry a compression claim that is mechanistically Force 2, not Force 1. The honest reading is that Force 2 explains the <em>mid-market compression</em> better than the Chosen does — and that is exactly why I absorb it as a co-driver rather than treating it as a rival to be defeated. Force 1 says it is one contest; Force 2 says it consolidates fast and cheap at the mid-market. Both are true.</p>
+<p><strong>Force 3 — CISO tool-fatigue and budget compression (operational).</strong> The third force is the buyer-side pull underneath both. The 2026 CISO faces budget compression after heavy AI-infrastructure spend, reviewer fatigue across detection, edge, AI, and identity consoles that do not share context, and CFO-driven procurement consolidation. This force does not by itself decide <em>which</em> layer wins — it decides only that the buyer wants fewer consoles, fewer bills, and fewer operating models. It is the demand-side amplifier that makes Force 1&rsquo;s architectural logic and Force 2&rsquo;s commercial logic both land harder than they would in a flush budget year. Where Competitor A&rsquo;s enterprise buyer can still afford the operator burden of best-of-breed, this force is weakest; where the mid-market team is small and stretched, it is strongest — which is one more reason the platform win concentrates at the mid-market and greenfield, not the sophisticated enterprise.</p>
+<p>The three forces do not all pull the same way. Force 1 is architectural and pulls toward whichever platform spans all four fronts. Force 2 is commercial and pulls toward whichever platform has the deepest bundle and the widest installed base. Force 3 is operational and pulls toward whichever vendor offers the fewest consoles. The Chosen Thesis is the argument that Force 1 is the load-bearing one — the reason this is a single contest at all — while Forces 2 and 3 are the parallel compression and demand forces that decide <em>how fast and how cheaply</em> the consolidation runs at the mid-market. Competitor B is the argument that Force 2 is the whole story and Force 1 is marketing on top of it. The discriminator between them — do the acquirers and buyers cite agent identity or price? — is the signal I name explicitly in §9.5 and §9.7.</p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<hr>
+<h2>9.3 Who Wins the Platform War</h2>
+<p>The position that wins the platform war is the SOC-anchored platform incumbent that can absorb the adjacent control planes — and the sharpest single exhibit is Palo Alto Networks, which bought into two of the four Part-2 fronts outright and added a SOC-observability adjacency inside roughly twelve months. CyberArk into Identity (~$25B, closed 2026-02-11) and Protect AI into AI App Sec (reported &gt;$500M, officially undisclosed; intent 2025-04-28, completed 2025-07-22, folded into Prisma AIRS), plus Chronosphere into the SOC-observability adjacency (~$3.35B, closed January 2026 — a distinct deal, correctly January, not to be conflated with the February CyberArk close) <sup id="fnref:v1"><a class="footnote-ref" href="#fn:v1">1</a></sup> <sup id="fnref:v2"><a class="footnote-ref" href="#fn:v2">2</a></sup> <sup id="fnref:v3"><a class="footnote-ref" href="#fn:v3">3</a></sup>. Read by acquirer, the theater is not a scatter of unrelated tuck-ins; it is a small set of platform incumbents — Palo Alto, CrowdStrike, Cisco, Microsoft — each assembling the same stack of detection, edge, AI runtime, and identity from its own starting position, with the SOC as the home base from which the roll-up runs. I am framing the winner at the position level, not as a vendor scoreboard: the winning position is platform-with-distribution anchored at the SOC, and Palo Alto is its clearest instance, not its sole occupant.</p>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="960" height="760" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="960" height="6" fill="#F59E0B"/>
+
+  <text x="480" y="40" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Platform-Consolidation Map — One Contest, Four Fronts, One Vector</text>
+  <text x="480" y="58" font-size="9.5" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">PRODUCTBEACON — STATE OF CYBER 2026, PART 2 CONVERGENCE · DATED M&amp;A AND BUILD MOVES, 2024&#8211;2026</text>
+  <text x="480" y="78" font-size="10" fill="#cbd5e1" text-anchor="middle">Every acquirer's stated rationale points at the same problem: agent / non-human identity. A vector, not a deal scatter.</text>
+
+  <!-- ===== Four front bands as columns, ordered by stage of resolution (Identity most-resolved → D&R least) ===== -->
+  <!-- column x-centers: F8=180, F7=380, F6=580, F5=780 -->
+  <text x="180" y="104" font-size="11" font-weight="800" fill="#fde68a" text-anchor="middle">F8 IDENTITY</text>
+  <rect x="98" y="112" width="164" height="18" rx="4" fill="#92400E" fill-opacity="0.40"/>
+  <text x="180" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">category-leader absorption</text>
+
+  <text x="380" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F7 AI SECURITY</text>
+  <rect x="298" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.32"/>
+  <text x="380" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">sub-scale / capability absorption</text>
+
+  <text x="580" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F6 SSE / EDGE</text>
+  <rect x="498" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.26"/>
+  <text x="580" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">coexistence-compression</text>
+
+  <text x="780" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F5 DETECTION &amp; RESPONSE</text>
+  <rect x="698" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.20"/>
+  <text x="780" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">open experiment</text>
+
+  <text x="480" y="148" font-size="8.5" fill="#64748b" text-anchor="middle" letter-spacing="0.4">&#8592; STAGE OF RESOLUTION: most-resolved (Identity) to least-resolved (Detection &amp; Response) &#8594;</text>
+
+  <!-- faint column dividers -->
+  <line x1="280" y1="160" x2="280" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
+  <line x1="480" y1="160" x2="480" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
+  <line x1="680" y1="160" x2="680" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
+
+  <!-- ===== The agent-identity through-line spine ===== -->
+  <rect x="40" y="300" width="880" height="2.5" fill="#FBBF24" fill-opacity="0.5"/>
+  <rect x="300" y="288" width="360" height="28" rx="7" fill="#fbbf24" fill-opacity="0.18" stroke="#FBBF24" stroke-width="1.6"/>
+  <text x="480" y="306" font-size="10.5" font-weight="800" fill="#fde68a" text-anchor="middle">VECTOR: human + machine + agent identity</text>
+
+  <!-- ===== Acquirer gravitational anchors (center band, anchored in Front 5 / the SOC) ===== -->
+  <!-- Palo Alto Networks — SHARPEST NODE (spans Identity + AI Security + observability adjacency) -->
+  <circle cx="180" cy="392" r="40" fill="#92400E" fill-opacity="0.30" stroke="#92400E" stroke-width="3"/>
+  <text x="180" y="388" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">Palo Alto</text>
+  <text x="180" y="402" font-size="8" fill="#fed7aa" text-anchor="middle">Networks</text>
+  <text x="180" y="442" font-size="7.5" fill="#94a3b8" text-anchor="middle" font-style="italic">sharpest node · 2 fronts + adjacency</text>
+
+  <!-- CrowdStrike -->
+  <circle cx="380" cy="392" r="30" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
+  <text x="380" y="389" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Crowd</text>
+  <text x="380" y="401" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Strike</text>
+
+  <!-- Cisco -->
+  <circle cx="580" cy="392" r="30" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
+  <text x="580" y="396" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">Cisco</text>
+
+  <!-- Microsoft -->
+  <circle cx="780" cy="392" r="30" fill="#FBBF24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.2"/>
+  <text x="780" y="389" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">Micro</text>
+  <text x="780" y="401" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">soft</text>
+
+  <text x="480" y="476" font-size="8.5" fill="#64748b" text-anchor="middle" font-style="italic">Acquirers anchored at the SOC (Front 5 home base). All four hold primary contender slots in Front 5; arrows show the adjacent control planes they absorbed.</text>
+
+  <!-- ===== Acquirer → target arrows (each labeled value + date) ===== -->
+  <!-- PANW → CyberArk (Identity, up) -->
+  <line x1="172" y1="354" x2="150" y2="232" stroke="#92400E" stroke-width="2.4" stroke-opacity="0.85"/>
+  <polygon points="150,232 145,247 158,244" fill="#92400E"/>
+  <rect x="74" y="188" width="150" height="40" rx="5" fill="#92400E" fill-opacity="0.22" stroke="#92400E" stroke-width="1.6"/>
+  <text x="149" y="204" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">CyberArk</text>
+  <text x="149" y="218" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$25B · Feb 11, 2026</text>
+
+  <!-- PANW → Protect AI (AI Security) -->
+  <line x1="216" y1="380" x2="316" y2="232" stroke="#92400E" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="316,232 313,248 326,242" fill="#92400E"/>
+  <rect x="298" y="188" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="373" y="204" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Protect AI</text>
+  <text x="373" y="218" font-size="8.5" fill="#cbd5e1" text-anchor="middle">&gt;$500M rep. · Jul 22, 2025</text>
+
+  <!-- PANW → Chronosphere (observability ADJACENCY — distinct dotted badge, NOT a graded front) -->
+  <line x1="188" y1="432" x2="210" y2="496" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.7" stroke-dasharray="5 4"/>
+  <rect x="116" y="500" width="200" height="46" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <rect x="124" y="506" width="86" height="14" rx="3" fill="#475569" fill-opacity="0.5"/>
+  <text x="167" y="516" font-size="7.5" font-weight="700" fill="#fbbf24" text-anchor="middle">SOC-OBSERVABILITY ADJACENCY</text>
+  <text x="216" y="517" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Chronosphere</text>
+  <text x="216" y="534" font-size="8.5" fill="#94a3b8" text-anchor="middle">~$3.35B · Jan 2026 · NOT one of the four fronts</text>
+
+  <!-- CrowdStrike → SGNL (Identity) -->
+  <line x1="372" y1="362" x2="220" y2="232" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="220,232 222,248 233,238" fill="#F59E0B"/>
+  <rect x="74" y="240" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="149" y="256" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">SGNL</text>
+  <text x="149" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">$740M · Jan 8, 2026</text>
+
+  <!-- Cisco → Splunk (D&R) -->
+  <line x1="606" y1="378" x2="710" y2="232" stroke="#F59E0B" stroke-width="2.2" stroke-opacity="0.8"/>
+  <polygon points="710,232 707,248 720,242" fill="#F59E0B"/>
+  <rect x="694" y="188" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="769" y="204" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Splunk</text>
+  <text x="769" y="218" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$28B · 2024 (SIEM)</text>
+
+  <!-- Cisco → Astrix (Identity) -->
+  <line x1="556" y1="378" x2="232" y2="252" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.7"/>
+  <polygon points="232,252 234,268 245,257" fill="#F59E0B"/>
+  <rect x="234" y="240" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="309" y="256" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Astrix</text>
+  <text x="309" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$400M · May 2026</text>
+
+  <!-- Cisco → Robust Intelligence (AI Security) -->
+  <line x1="568" y1="364" x2="448" y2="252" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.65"/>
+  <polygon points="448,252 451,268 461,256" fill="#F59E0B"/>
+  <rect x="396" y="240" width="156" height="40" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="474" y="256" font-size="10.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Robust Intelligence</text>
+  <text x="474" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">2024 (AI model security)</text>
+
+  <!-- Check Point → Lakera (AI Security) -->
+  <rect x="396" y="300" width="156" height="48" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="474" y="318" font-size="9" fill="#fed7aa" text-anchor="middle">Check Point &#8594;</text>
+  <text x="474" y="333" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Lakera</text>
+  <text x="474" y="345" font-size="8" fill="#cbd5e1" text-anchor="middle">~$300M · closed Oct 22, 2025</text>
+
+  <!-- Microsoft → Entra Agent ID — BUILT, NOT BOUGHT badge (no arrow from a target) -->
+  <line x1="780" y1="362" x2="780" y2="232" stroke="#FBBF24" stroke-width="1.8" stroke-opacity="0.6" stroke-dasharray="2 3"/>
+  <rect x="700" y="188" width="160" height="44" rx="5" fill="#FBBF24" fill-opacity="0.12" stroke="#FBBF24" stroke-width="1.6"/>
+  <rect x="708" y="194" width="74" height="13" rx="3" fill="#FBBF24" fill-opacity="0.30"/>
+  <text x="745" y="203.5" font-size="7.5" font-weight="700" fill="#fde68a" text-anchor="middle">BUILT, NOT BOUGHT</text>
+  <text x="780" y="220" font-size="10.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Entra Agent ID</text>
+  <text x="780" y="231" font-size="8" fill="#cbd5e1" text-anchor="middle">GA · April 2026 (directory)</text>
+
+  <!-- Zscaler → Red Canary (F6 → F5 crossing) -->
+  <rect x="554" y="240" width="160" height="46" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="634" y="256" font-size="9" fill="#fed7aa" text-anchor="middle">Zscaler &#8594;</text>
+  <text x="634" y="270" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Red Canary</text>
+  <text x="634" y="281" font-size="7.5" fill="#cbd5e1" text-anchor="middle">~$651M · Aug 1, 2025 · F6&#8594;F5 MDR crossing</text>
+
+  <!-- ===== Identity-native field — secondary lighter band ===== -->
+  <rect x="40" y="556" width="880" height="78" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1"/>
+  <text x="56" y="574" font-size="9.5" font-weight="700" fill="#fbbf24" letter-spacing="0.4">THE IDENTITY-NATIVE FIELD — consolidation runs inside identity too (lighter weight)</text>
+  <circle cx="120" cy="600" r="5" fill="#FBBF24"/>
+  <text x="132" y="604" font-size="9" fill="#cbd5e1">Okta &#8594; Axiom · ~$100M · Aug 2025</text>
+  <circle cx="330" cy="600" r="5" fill="#FBBF24"/>
+  <text x="342" y="604" font-size="9" fill="#cbd5e1">Delinea &#8594; StrongDM · Mar 5, 2026</text>
+  <circle cx="560" cy="600" r="5" fill="#FBBF24"/>
+  <text x="572" y="604" font-size="9" fill="#cbd5e1">Saviynt · $700M @ ~$3B (KKR) · capital event</text>
+  <circle cx="120" cy="622" r="5" fill="#FBBF24"/>
+  <text x="132" y="626" font-size="9" fill="#cbd5e1">Tailscale &#8594; Border0 · Mar 2026 · developer-led ZTNA porting up-market</text>
+  <!-- BeyondTrust — dotted unconsummated node -->
+  <rect x="560" y="612" width="350" height="18" rx="4" fill="#0a0e1a" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="572" y="625" font-size="8.5" fill="#94a3b8" font-style="italic">BeyondTrust — reported sale exploration, UNCONSUMMATED (Francisco Partners, Aug 2025)</text>
+
+  <!-- ===== §2.4d falsifiable footer ===== -->
+  <rect x="40" y="644" width="880" height="106" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="480" y="664" font-size="9.5" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
+  <text x="480" y="682" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">VALIDATES</tspan> if a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft acquires identity on an explicit agent / non-human-identity rationale,</text>
+  <text x="480" y="696" font-size="9" fill="#cbd5e1" text-anchor="middle">folded into a SOC or network platform, in the acquirer's own dated press.</text>
+  <text x="480" y="714" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">WEAKENS (inverse)</tspan> if a workforce-IAM pure-play is acquired on a classic SSO rationale, OR a standalone identity vendor scales on workforce identity alone with no platform absorption.</text>
+  <text x="480" y="734" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the dated M&amp;A and earnings-disclosure record, not on any regulation's timing. Acquisitions read as consolidation / graduation exits, never casualties.</text>
+  <text x="480" y="746" font-size="8" fill="#64748b" text-anchor="middle" font-style="italic">Not investment advice.</text>
+</svg>
+</div></p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<h3>The disclosed-rationale asymmetry — the answer to the &ldquo;battery-firm&rdquo; skeptic</h3>
+<p>The strongest skeptic line in this whole analysis is Competitor A&rsquo;s, and it deserves to be stated at full strength: <em>a car-maker buying a battery firm does not prove that cars and batteries are one market.</em> Vertical integration happens for a dozen reasons — supply security, margin capture, defensive hedging — none of which require that the two products be the same contest. By that logic, a cluster of cybersecurity acquisitions could be nothing more than well-capitalized incumbents opportunistically rolling up cheap assets in a frothy market, and consolidation on its own proves nothing about whether the disciplines are converging.</p>
+<p>What breaks the analogy is not the <em>fact</em> of the deals — it is the <strong>disclosed rationale</strong>. The car-maker never announces that cars and batteries are now one problem. These acquirers announce exactly the equivalent, in their own dated press, and they name the <em>same</em> problem across four different categories: the agent / non-human identity problem. Assembled as one exhibit:</p>
+<ul>
+<li><strong>Palo Alto Networks / CyberArk</strong> — the deal lets Palo Alto &ldquo;secure every identity across the enterprise — <strong>human, machine, and agentic</strong>&rdquo; <sup id="fnref2:v1"><a class="footnote-ref" href="#fn:v1">1</a></sup> [cross-front: see Front 8 §8.6].</li>
+<li><strong>CrowdStrike / SGNL</strong> ($740M, announced 2026-01-08) — continuous grant and revocation of access for &ldquo;<strong>human, non-human (NHI), and AI identities</strong>&rdquo; in real time; CrowdStrike shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on 2026-06-15 <sup id="fnref:v4"><a class="footnote-ref" href="#fn:v4">4</a></sup> [cross-front: see Front 8 §8.6].</li>
+<li><strong>Cisco / Astrix</strong> (~$400M, announced May 2026) — to secure &ldquo;<strong>the agentic workforce</strong>&rdquo; of autonomous AI agents, folded into Cisco Identity Intelligence <sup id="fnref:v5"><a class="footnote-ref" href="#fn:v5">5</a></sup> [cross-front: see Front 8 §8.6].</li>
+<li><strong>Microsoft / Entra Agent ID</strong> (GA April 2026, a build not a buy) — makes agent identities a <strong>first-class construct in the directory</strong> inside Agent 365 <sup id="fnref:v6"><a class="footnote-ref" href="#fn:v6">6</a></sup> [cross-front: see Front 8 §8.6].</li>
+</ul>
+<p>The sell side corroborates the buy side: six of the eight identity-native vendors graded in Front 8 §8.3 lead their homepages with the human-machine-AI triad — CyberArk &ldquo;human, machine and AI,&rdquo; Okta &ldquo;from machine to human,&rdquo; SailPoint &ldquo;humans, machines, and AI,&rdquo; Saviynt &ldquo;human, non-human, and AI,&rdquo; Delinea &ldquo;human and agentic workforce,&rdquo; Aembit &ldquo;IAM for Agentic AI&rdquo; <sup id="fnref:v7"><a class="footnote-ref" href="#fn:v7">7</a></sup>. My read is the disciplined version of this: I am not asserting the acquirers are <em>correct</em> that these are one market — markets are not defined by press releases, and a stated rationale can be post-hoc narrative. I am asserting the weaker, sturdier claim that <strong>four independent acquirers converging on the same stated rationale, across four categories, in a thirteen-month window, is a dated public signal that the consolidation is vectored — pointed at one problem — rather than opportunistic.</strong> Opportunistic roll-ups share a balance sheet; vectored ones share a thesis. That is the inference the battery-firm analogy cannot touch, because the battery-buyer never tells you the two products are the same problem, and these acquirers do.</p>
+<h3>Four fronts, four stages — not four identical collapses</h3>
+<p>The single most important discipline in reading the win is that the four fronts are not four identical collapses happening in parallel. They are four <em>phases</em> of one contest, each at a different stage of resolution, each with a structurally distinct mechanic. Flattening them into &ldquo;everything is consolidating the same way&rdquo; would be wrong on the mechanics and would hand the skeptic an easy rebuttal.</p>
+<ul>
+<li><strong>Identity (Front 8) — category-leader absorption (most advanced).</strong> This is the most-resolved stage. CyberArk — the PAM category originator, a scaled public-company anchor — was absorbed at ~$25B and renamed a platform pillar. This is not the purchase of a sub-scale startup; it is the purchase of the <strong>PAM category leader</strong>, at a category-defining premium, on an explicit human-machine-agentic rationale, with CrowdStrike/SGNL, Cisco/Astrix, and Microsoft&rsquo;s Entra Agent ID build completing the stage <sup id="fnref3:v1"><a class="footnote-ref" href="#fn:v1">1</a></sup> <sup id="fnref2:v4"><a class="footnote-ref" href="#fn:v4">4</a></sup> <sup id="fnref2:v5"><a class="footnote-ref" href="#fn:v5">5</a></sup> <sup id="fnref2:v6"><a class="footnote-ref" href="#fn:v6">6</a></sup>. When the originator of a discipline becomes a pillar of a SOC platform, the contest in that front is most visibly decided.</li>
+<li><strong>AI Security (Front 7) — pre-Gravity / sub-scale absorption (structurally pre-decided, by a <em>different</em> mechanic).</strong> Structurally pre-decided, but the mechanic is distinct from Identity&rsquo;s and must not be blurred. In AI Security, <em>zero</em> pure-play reached Gravity — none public, none past the ~$100M-private threshold the report&rsquo;s rubric uses. The most-funded independents were absorbed <em>before they could graduate</em>: Protect AI into Palo Alto, Lakera into Check Point (~$300M), Robust Intelligence into Cisco, with HiddenLayer the lone visible independent left <sup id="fnref2:v3"><a class="footnote-ref" href="#fn:v3">3</a></sup> <sup id="fnref:v8"><a class="footnote-ref" href="#fn:v8">8</a></sup> [cross-front: see Front 7 §7.6]. This is <strong>capability acquisition</strong> — the category bought into existence by the platforms before any independent reached escape velocity. The contrast is load-bearing: Identity absorbed a category <em>leader</em> at category-defining scale; AI Security absorbed <em>capability</em> before any leader could form. Both are &ldquo;absorption&rdquo;; one is the purchase of an incumbent and the other the purchase of a head-start.</li>
+<li><strong>Detection &amp; Response (Front 5) — the open Splunk-absorption experiment (undecided).</strong> This is the live, <em>undecided</em> test, and it must be framed as open. Cisco&rsquo;s ~$28B Splunk absorption (closed 2024) is a still-running experiment in whether a platform can reprice SIEM telemetry economics by pairing data ingestion with the network it already owns. The validating signal — Cisco reporting a documented best-of-breed-SIEM rip-and-replace onto Splunk-on-Cisco specifically on cost-of-ingestion grounds — has not resolved, and best-of-breed is scaling <em>independently</em>: CrowdStrike (Falcon → Next-Gen SIEM) and SentinelOne are growing as standalone platforms, not being absorbed [cross-front: see Front 5 §5.6, Splunk-Absorption]. As Front 5 puts it, if Cisco cannot prove the telemetry economics, &ldquo;platform replaces best-of-breed SIEM&rdquo; stays &ldquo;a slide, not a budget reality.&rdquo;</li>
+<li><strong>SSE (Front 6) — coexistence-compression (not collapse).</strong> The gentlest mechanic, and the one most easily over-stated. Bundled DLP/SSE compresses standalone economics at the mid-market, but best-of-breed and single-stack SASE <em>coexist</em> with the bundle. Zscaler and Netskope remain the standalone SSE leaders; the developer-led identity-first ZTNA wedge climbs up-market from below [cross-front: see Front 6 §6.6]. This is compression, not collapse — the bundle squeezes margins at the boundary; it does not absorb the leaders.</li>
+</ul>
+<p>One vector, four stages of resolution: category-leader absorption where the category is mature (Identity), capability absorption where it is nascent (AI Security), an open economic experiment where the bet is largest and hardest to reverse (D&amp;R), and margin compression where best-of-breed remains defensible (SSE). That is a contest, observed mid-resolution — and it is a stronger and more interesting claim than &ldquo;all four are collapsing identically.&rdquo;</p>
+<h3>The vendor pillars, in their own words</h3>
+<p>The winning position is occupied at the front level by named platforms whose positioning I quote verbatim from the front cards rather than re-describe. From Detection &amp; Response: CrowdStrike is &ldquo;winning the commercial dimension of this war&rdquo; on Falcon Flex ending ARR up over 120% year-over-year, and Microsoft &ldquo;is winning by default-distribution&rdquo; as the Defender single-SOC-plane consolidation rides the E5 bundle to a 2027-03-31 retirement date it is in no hurry to reach [cross-front: see Front 5 §5.6]. From SSE: Zscaler is &ldquo;winning the scaled-platform dimension,&rdquo; its Red Canary acquisition showing &ldquo;it intends to expand the box rather than defend it,&rdquo; while Cato Networks is &ldquo;winning the mid-market on operational simplicity&rdquo; — explicitly the mid-market, not the enterprise [cross-front: see Front 6 §6.6]. From AI Security: &ldquo;the platform incumbents are winning the absorption race&rdquo; — the winning position is &ldquo;platform-with-distribution, not any single named acquirer&rdquo; [cross-front: see Front 7 §7.6]. From Identity: the front &ldquo;is won or lost one altitude up, at the level of platform consolidation,&rdquo; with the identity control plane converging into the SOC [cross-front: see Front 8 §8.6]. Across all four, the win is a <em>position</em> — SOC-anchored, distribution-heavy, spanning the fronts — and Palo Alto&rsquo;s multi-front spread is its sharpest single exhibit.</p>
+<p>A one-line bridge I owe the reader and then leave alone: the same incumbents that win this Part-2 platform war also appear as winners in Part-1&rsquo;s data war (Microsoft via Purview and Defender/Sentinel; Palo Alto across DSPM and the SOC). Whether that cross-report shared incumbency is itself a thesis is the <strong>Grand Unification&rsquo;s</strong> claim to argue, not this chapter&rsquo;s — here, §10.1&rsquo;s evidence is used strictly to establish that the four Part-2 fronts are one contest, and I defer the cross-report claim to the capstone.</p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<hr>
+<h2>9.4 Who Loses the Platform War</h2>
+<p>The structural loser of the platform war is a <em>position</em>, not a named vendor — and I am holding the same evidentiary discipline the four fronts held individually. A convergence-level loser would have to clear a bar that no entity meets at access time: at least two corroborating sources plus a financial-distress signal specific to the vendor&rsquo;s relevant business, not a parent-company-wide action. None of the four fronts named an individual loser at the front level, and three of them said so explicitly: AI Security found &ldquo;<em>no</em> individual casualty I am willing to name,&rdquo; reading the Lakera and Protect AI exits as graduation exits rather than failures; Identity refused to &ldquo;manufacture a winners-and-losers scoreboard at the company level,&rdquo; reading CyberArk-into-Palo Alto and Astrix-into-Cisco as &ldquo;positive-to-neutral consolidation exits&rdquo;; SSE declined to manufacture one, reading even Cloudflare&rsquo;s ~1,100-person workforce reduction as an explicitly-disclosed AI-first reorganization at a growing company, &ldquo;not a distress signal&rdquo; [cross-front: see Front 5 §5.6, Front 6 §6.6, Front 7 §7.6, Front 8 §8.6]. The convergence chapter&rsquo;s stricter bar does not lower that finding; it preserves it. Acquisitions in this theater are graduation and consolidation exits, not defeats.</p>
+<p>What the convergence does produce is a <em>structural</em> loser class: the standalone point-tool with no platform attach in a consolidating market. The loser shape is not a specific company but a market position — a single-front vendor with no cross-front distribution, no SOC anchor, and no agent-identity or AI-runtime differentiator that a platform cannot quickly replicate or buy. The four fronts each name the most exposed examples under Watch, not as losers: from Detection &amp; Response, Hunters (a four-year funding gap as a SIEM-replacement SOC platform) and the standalone-SIEM middle the Exabeam–LogRhythm merger consolidated [cross-front: see Front 5 §5.6]; from AI Security, the &ldquo;standalone-AI-security-pure-play-as-a-durable-independent path&rdquo; named outright as &ldquo;the losing structural bet of 2026&rdquo; — at the category level, not as a verdict on any well-capitalized independent [cross-front: see Front 7 §7.6]; from Identity, the standalone access-management discipline most exposed to Entra Compression, sorted by defensibility with the front door most exposed and the privilege-specific moat most defensible [cross-front: see Front 8 §8.6]; from SSE, the standalone DLP vendor compressed at the TCO line where its risk surface overlaps the SSE&rsquo;s egress [cross-front: see Front 6 §6.6]. None of these carries a distress event that survives the convergence bar. They are watch-tier positions that would convert to a loser label only if H2 2026 or 2027 produced a vendor-specific distress disclosure.</p>
+<p>One reported-but-unconsummated item must be carried as flagged, never asserted. BeyondTrust — roughly $500M in ARR, PAM, majority-owned by Francisco Partners since 2018 — is the subject of a reportedly-explored multi-billion-dollar sale, an early-stage process first reported by Bloomberg on 2025-08-13 with no transaction announced <sup id="fnref:v9"><a class="footnote-ref" href="#fn:v9">9</a></sup>. I flag it as sourced exit-pressure to watch, not as a deal and not as a distress signal: it is reportedly exploring a sale, and that is the strongest form the claim can take on the public record. It does not enter this analysis as a consummated outcome.</p>
+<p>The loser observation is therefore architectural rather than personal: any single-front specialist that does not ship cross-front integration, a SOC anchor, or an agent-identity differentiator by H2 2026 faces structural renewal-cycle pressure in a segment whose buying motion has reorganized around platforms — regardless of product quality. Whether that pressure converts to vendor-specific distress is the watch question the next two refresh cycles will answer.</p>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<hr>
+<h2>9.5 The Buyer&rsquo;s Decision</h2>
+<p>The CISO&rsquo;s real 2026 choice across these four fronts is not &ldquo;which SSE&rdquo; or &ldquo;which PAM.&rdquo; It is <strong>consolidate-onto-a-platform versus best-of-breed</strong> — and the right answer depends, more than on anything else, on which tier the enterprise sits in. This is where the Chosen Thesis must be bounded honestly: the agent-identity vector is tilting the decision toward the platforms, but it is tilting it decisively at the <em>mid-market and the greenfield buyer</em>, and it leaves the sophisticated enterprise tier genuinely contested. The buyer has three defensible choices.</p>
+<p><strong>Choice 1 — consolidate onto a platform.</strong> Anchor on a SOC platform incumbent and draw the adjacent control planes — detection, edge, AI runtime, identity — from it as modules. The argument for is the strongest where Forces 2 and 3 bite hardest: a small security team, an E5 estate already in place, budget compression, and a real appetite to retire consoles. Microsoft is the default if the enterprise is Microsoft-standardized with Agent 365 and Copilot in scope; Palo Alto is the default for the buyer who wants the broadest single-vendor spread across the fronts, with its multi-front acquisition spread as the proof of intent. The argument against is integration-depth risk: a portfolio is not yet a platform, and the buyer should press for shared-control-plane evidence rather than take the bundle&rsquo;s coherence on faith. <strong>My read: this choice wins the mid-market and the fresh-greenfield buyer in 2026, and it is winning it now.</strong></p>
+<p><strong>Choice 2 — best-of-breed across the fronts.</strong> Keep the category specialists — a focused EDR/SIEM, a pure-play SSE, an independent identity or NHI specialist, an AI-security best-of-breed — and accept the operator burden of multiple consoles and renewal cycles in exchange for feature depth and swappable layers. This is Competitor A&rsquo;s live ground, and the public record keeps it alive at the high end: CrowdStrike, Zscaler, and Netskope scale as premium-multiple public platforms; SailPoint re-IPO&rsquo;d into a $1.16B-ARR governance business; Saviynt took a $700M KKR round at ~$3B [cross-front: see Front 6 §6.6, Front 8 §8.6]. The argument for is that depth beats breadth where the problem is hard, and a board-level enterprise can afford the integration tax. The argument against is exactly Force 3 — the console and renewal burden the consolidation pitch is built to relieve. <strong>My read: this choice holds the sophisticated enterprise tier, which is genuinely contested and not the platform&rsquo;s to assume.</strong></p>
+<p><strong>Choice 3 — hybrid: a platform core with selective best-of-breed augmentation.</strong> Anchor on a platform for the SOC and the bundled adjacencies where &ldquo;good enough and already included&rdquo; is sufficient, and bring in a specialist only where the platform&rsquo;s coverage is not yet deep enough for the enterprise&rsquo;s risk profile — agentic-AI runtime defense, NHI governance, or a federal-heritage requirement. This is the path that accepts the platform-consolidation direction while refusing to assume the enterprise tier is settled. For most enterprises with a real multi-front estate and a board-level efficacy mandate, this is the more defensible 2026 posture than either pure pole.</p>
+<p>The chapter does not prescribe a choice; it bounds the platform&rsquo;s win and names the two signals that will tell the buyer — and the analyst — whether the Chosen Thesis is holding or losing. Both are discriminators, and each separates the Chosen from a different competitor:</p>
+<ul>
+<li><strong>The driver test (Chosen vs Competitor B).</strong> Do the acquirers and buyers cite <em>agent identity</em> (Chosen) or <em>price and tool-fatigue</em> (Competitor B) as the reason for consolidating? This is the only thing that separates the Chosen from B at all — both predict consolidation; they differ only on the driver. If the disclosed rationale stays agent-identity-led and the next platform identity acquisition is again justified by the human-machine-agentic problem, the Chosen holds. If buyers and acquirers increasingly cite bundle price and console fatigue with no agent-identity rationale, B is the better explanation and the convergence resolves at the commercial layer.</li>
+<li><strong>The enterprise-tier test (Chosen vs Competitor A).</strong> Does any single-stack or platform play convert to a <em>documented enterprise logo mix</em> — most cleanly, does Cato Networks file an S-1 or surface a named-outlet-documented enterprise (rather than mid-market) logo mix [cross-front: see Front 6 §6.6, Single-Stack SASE] — or does best-of-breed-around-a-core stay the default enterprise motion? If the platform/single-stack play converts the enterprise tier, the Chosen extends upward from the mid-market; if best-of-breed holds the enterprise on depth and swappability, Competitor A&rsquo;s ground is durable and the platform win stays bounded to the mid-market and greenfield.</li>
+</ul>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<h2>9.6 Cross-Front Pattern Claims</h2>
+<p>Two claims that span Detection &amp; Response, SSE, AI Security, and Identity — fronts 5 through 8 — and that could not be made inside any single Part 2 front. Each follows the Observation → My read → Conditional prediction → Sources structure with a co-located diagram and a falsifiable-test footer. The first claim answers <em>why these four fronts are one contest</em>: the platform incumbents anchoring the SOC are absorbing each adjacent control plane on a single, explicitly disclosed agent-and-machine-identity rationale — the vector. The second answers <em>how the compression sorts</em>: it runs on a second, parallel force — bundle economics — that wins the mid-market and greenfield decisively while leaving the sophisticated enterprise tier genuinely contested. Together they bracket the chapter&rsquo;s chosen thesis from two sides — Pattern Claim 1 is the vector that makes the four fronts one platform war; Pattern Claim 2 is the bounded, both/and compression that keeps best-of-breed alive at the high end.</p>
+<blockquote>
+<h3>Pattern Claim 1 — The Agent-Identity Convergence Vector</h3>
+<p><strong>Observation.</strong> Across roughly thirteen months, the platform giants that anchor the detection segment absorbed an identity or AI-runtime control plane on the <em>same</em> stated rationale — the AI-agent and non-human-identity problem — not on legacy single sign-on or opportunistic gap-filling. Palo Alto Networks completed its ~$25 billion acquisition of CyberArk on <strong>2026-02-11</strong>, stating the addition lets it &ldquo;secure every identity across the enterprise — human, machine, and agentic,&rdquo; and citing an 80-to-1 machine-vs-human identity ratio in the same closing release [cross-front: see Front 8 §8.6 PC1]. CrowdStrike announced its ~$740 million acquisition of SGNL on <strong>2026-01-08</strong>, explicitly to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time [cross-front: see Front 8 §8.6 PC1]. Cisco announced its ~$400 million acquisition of Astrix Security in <strong>May 2026</strong> to secure &ldquo;the agentic workforce&rdquo; of autonomous AI agents [cross-front: see Front 8 §8.6 PC1]. Microsoft, rather than buy, built: <strong>Entra Agent ID</strong> reached general availability in <strong>April 2026</strong>, making AI-agent identities a first-class directory construct [cross-front: see Front 8 §8.6 PC3].<sup id="fnref:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup> The same vector runs through the AI-runtime tie in Front 7 — Palo Alto folded Protect AI (acquisition intent announced 2025-04-28; reported &gt;$500M, undisclosed) into its Prisma AIRS runtime line &ldquo;to deploy autonomous AI agents safely,&rdquo; and Check Point acquired Lakera (~$300M, announced 2025-09-16, closed 2025-10-22) as the foundation of its AI-security center of excellence [cross-front: see Front 7 §7.6 PC1].<sup id="fnref:pc2"><a class="footnote-ref" href="#fn:pc2">11</a></sup> And it terminates at the SOC anchor in Front 5: the same four platforms own the detection plane the agent population now runs through [cross-front: see Front 5 §5.6].<sup id="fnref:pc3"><a class="footnote-ref" href="#fn:pc3">12</a></sup> Six of the eight identity-native vendors graded in Front 8 lead with the human-machine-AI identity triad as of 2026-06-17.<sup id="fnref2:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup></p>
+<p><strong>My read.</strong> I read this as <em>vectored</em> consolidation — pointed at one problem — not the opportunistic battery-firm roll-up a skeptic would expect. The striking fact is not that consolidation is happening; consolidation is the expected end state of any maturing security discipline. The striking fact is that four independent acquirers, buying across four nominally distinct categories — identity, AI runtime, NHI, and the directory — converge on the <em>same</em> stated rationale in their own dated press: the agent and machine identity is the part of the enterprise growing fastest, and it is the part the SOC must detect, authorize, and respond to. That is what makes the four fronts one contest rather than four adjacent races. The platforms are not buying identity to own the front door; they are buying it because the SOC&rsquo;s job now runs on identity, and the AI-runtime acquisitions in Front 7 are the same move one layer out — securing the agents themselves so the platform can govern them where they execute. This is the answer to the &ldquo;these are unrelated bolt-ons&rdquo; objection: the rationale is verbatim-consistent across acquirers, categories, and quarters.</p>
+<p><strong>Conditional prediction.</strong> <em>If the next one or two notable platform identity or AI acquisitions are again framed around agent / machine / non-human identity in the acquirers&rsquo; own dated press and named-outlet M&amp;A coverage — and in particular if a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft buys identity on an agent rationale (Front 8 §8.7 signal 1) — the single-contest thesis validates as the default resolution and the four fronts are confirmed as one platform war. If instead the M&amp;A rationale reverts to classic SSO, undifferentiated gap-filling, or pricing, OR a workforce-IAM pure-play reaches genuine disclosed scale and scales independently with no platform absorption, the vector weakens and the fronts read as adjacent-but-separate consolidations. I am grounding every threshold on the dated M&amp;A record and earnings disclosure — observable public signals an outsider can watch — not on any regulation&rsquo;s timing.</em></p>
+<p><strong>Sources.</strong> <sup id="fnref3:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup> <sup id="fnref2:pc2"><a class="footnote-ref" href="#fn:pc2">11</a></sup> <sup id="fnref2:pc3"><a class="footnote-ref" href="#fn:pc3">12</a></sup> [cross-front: Front 8 §8.6 + Front 7 §7.6 + Front 5 §5.6]</p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="600" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Agent-Identity Convergence Vector</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 1 — STATE OF CYBER 2026, PART 2 CONVERGENCE · THE VECTOR</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">In ~13 months, four platform giants absorbed an identity or AI-runtime control plane on the SAME stated rationale — across F8, F7, and F5</text>
+
+  <!-- Four acquirers, each with verbatim rationale fragment -->
+  <!-- Palo Alto -->
+  <rect x="40" y="106" width="174" height="142" fill="#92400E" fill-opacity="0.18" stroke="#92400E" stroke-width="2" rx="6"/>
+  <text x="127" y="128" font-size="12.5" font-weight="800" fill="#fde68a" text-anchor="middle">Palo Alto &#8594; CyberArk</text>
+  <text x="127" y="144" font-size="8.5" fill="#fed7aa" text-anchor="middle">F8 Identity · ~$25B · Feb 11, 2026</text>
+  <text x="127" y="172" font-size="8.5" fill="#94a3b8" text-anchor="middle">"secure every identity</text>
+  <text x="127" y="184" font-size="8.5" fill="#94a3b8" text-anchor="middle">across the enterprise —</text>
+  <text x="127" y="200" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">human, machine,</text>
+  <text x="127" y="213" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">and agentic"</text>
+  <text x="127" y="238" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">+ Protect AI into Prisma AIRS (F7)</text>
+
+  <!-- CrowdStrike -->
+  <rect x="226" y="106" width="174" height="142" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="313" y="128" font-size="12.5" font-weight="800" fill="#fef3c7" text-anchor="middle">CrowdStrike &#8594; SGNL</text>
+  <text x="313" y="144" font-size="8.5" fill="#fed7aa" text-anchor="middle">F8 Identity · ~$740M · Jan 8, 2026</text>
+  <text x="313" y="172" font-size="8.5" fill="#94a3b8" text-anchor="middle">grant / revoke access for</text>
+  <text x="313" y="190" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">"human, non-human</text>
+  <text x="313" y="203" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">(NHI), and AI identities"</text>
+  <text x="313" y="226" font-size="8.5" fill="#cbd5e1" text-anchor="middle">in real time</text>
+  <text x="313" y="240" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">Continuous Identity for AI Agents</text>
+
+  <!-- Cisco -->
+  <rect x="412" y="106" width="174" height="142" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="499" y="128" font-size="12.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Cisco &#8594; Astrix</text>
+  <text x="499" y="144" font-size="8.5" fill="#fed7aa" text-anchor="middle">F8 Identity · ~$400M · May 2026</text>
+  <text x="499" y="176" font-size="8.5" fill="#94a3b8" text-anchor="middle">to secure</text>
+  <text x="499" y="196" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">"the agentic workforce"</text>
+  <text x="499" y="212" font-size="8.5" fill="#cbd5e1" text-anchor="middle">of autonomous AI agents</text>
+  <text x="499" y="238" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">+ Robust Intelligence (F7, 2024)</text>
+
+  <!-- Microsoft -->
+  <rect x="598" y="106" width="162" height="142" fill="#FBBF24" fill-opacity="0.12" stroke="#FBBF24" stroke-width="2" rx="6"/>
+  <text x="679" y="128" font-size="12.5" font-weight="800" fill="#fde68a" text-anchor="middle">Microsoft</text>
+  <text x="679" y="144" font-size="8.5" fill="#fed7aa" text-anchor="middle">BUILT, not bought · GA Apr 2026</text>
+  <text x="679" y="172" font-size="8.5" fill="#94a3b8" text-anchor="middle">Entra Agent ID makes</text>
+  <text x="679" y="184" font-size="8.5" fill="#94a3b8" text-anchor="middle">agent identities a</text>
+  <text x="679" y="200" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">"first-class agent</text>
+  <text x="679" y="213" font-size="9" font-weight="700" fill="#f8fafc" text-anchor="middle">identity in the directory"</text>
+  <text x="679" y="238" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">inside Agent 365</text>
+
+  <!-- convergence arrows down to the shared vector -->
+  <line x1="127" y1="248" x2="330" y2="296" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="313" y1="248" x2="375" y2="294" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="499" y1="248" x2="425" y2="294" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="679" y1="248" x2="470" y2="296" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+
+  <!-- The one converging vector -->
+  <ellipse cx="400" cy="318" rx="210" ry="32" fill="#fbbf24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.5"/>
+  <text x="400" y="316" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">One vector across four nominally distinct categories — vectored, not opportunistic</text>
+  <text x="400" y="333" font-size="9" fill="#fed7aa" text-anchor="middle">Six of eight identity-native vendors lead their homepage with the human-machine-AI triad (2026-06-17)</text>
+
+  <text x="400" y="374" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Category-level claim: four independent acquirers converging on the same stated rationale in a 13-month window. PANW/CRWD/CSCO/MSFT graded in Front 5.</text>
+
+  <!-- Falsifiable footer — the DRIVER TEST (Chosen vs Competitor B) -->
+  <rect x="40" y="396" width="720" height="160" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="416" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — the driver test (agent identity vs price) · next two-to-four quarters</text>
+  <text x="400" y="436" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">VECTOR VALIDATES</tspan> if the next one or two notable platform identity or AI acquisitions are again framed around agent / machine /</text>
+  <text x="400" y="450" font-size="9" fill="#cbd5e1" text-anchor="middle">non-human identity in the acquirers' own dated press — in particular if a fourth platform giant beyond PANW, CrowdStrike, Cisco,</text>
+  <text x="400" y="464" font-size="9" fill="#cbd5e1" text-anchor="middle">and Microsoft buys identity on an agent rationale. Then the four fronts are confirmed as one platform war.</text>
+  <text x="400" y="486" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">VECTOR WEAKENS</tspan> if the M&amp;A rationale reverts to classic SSO, undifferentiated gap-filling, or pricing, OR a workforce-IAM</text>
+  <text x="400" y="500" font-size="9" fill="#cbd5e1" text-anchor="middle">pure-play reaches genuine disclosed scale and scales independently with no platform absorption — the fronts read as adjacent-but-separate.</text>
+  <text x="400" y="522" font-size="9" fill="#cbd5e1" text-anchor="middle" font-weight="700" fill-opacity="0.9">The strength of the claim is that it is not a forecast — it is dated public fact already on the record.</text>
+  <text x="400" y="544" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the public M&amp;A and earnings-disclosure record — NOT on any regulation's timing. Not investment advice.</text>
+</svg>
+</div></p>
+<blockquote>
+<h3>Pattern Claim 2 — The Two-Speed Compression: Bundle Economics Meets the Best-of-Breed High End</h3>
+<p><strong>Observation.</strong> A second, parallel compression force runs underneath the four fronts — bundle economics — and the public record shows it sorting cleanly by tier. The compression evidence clusters across three fronts. In Front 5, Microsoft&rsquo;s platform pressure rides the M365 E5 bundle: Microsoft extended the Sentinel-portal retirement to 2027-03-31 and is &ldquo;in no hurry because the bundle does the selling,&rdquo; with the front&rsquo;s read that the pressure is &ldquo;sharpest at the mid-market&rdquo; and &ldquo;more resistible&rdquo; at the high end [cross-front: see Front 5 §5.6 PC2].<sup id="fnref:pc4"><a class="footnote-ref" href="#fn:pc4">13</a></sup> In Front 6, the same shape appears at the SSE DLP module: bundled DLP inside Netskope and Zscaler &ldquo;exert[s] genuine compression on the standalone data-security vendor at the middle of the market, without yet displacing the category at the top,&rdquo; coexisting at the top &ldquo;along a coverage line&rdquo; [cross-front: see Front 6 §6.6 PC1].<sup id="fnref:pc5"><a class="footnote-ref" href="#fn:pc5">14</a></sup> In Front 8, Entra compression closes the pattern: &ldquo;when the directory-and-SSO layer is already paid for inside an enterprise agreement, the marginal cost of &lsquo;good enough&rsquo; access management trends toward zero&rdquo; [cross-front: see Front 8 §8.6 PC3].<sup id="fnref4:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup> Against that, the best-of-breed-persistence evidence is equally dated and public. Front 6&rsquo;s single-stack SASE claim leaves &ldquo;the enterprise question genuinely open&rdquo; — Cato Networks ($350M+ ARR, 43% growth, $409M Series G above $4.8B, IPO deferred) &ldquo;win[s] the operational-simplicity argument decisively in the mid-market&rdquo; while &ldquo;best-of-breed-around-an-SSE-core stays the default enterprise motion&rdquo; [cross-front: see Front 6 §6.6 PC3].<sup id="fnref:pc6"><a class="footnote-ref" href="#fn:pc6">15</a></sup> Front 5&rsquo;s bifurcation shows the standalone leaders scaling independently — SentinelOne at $1,163M ARR (+23%, ~50% non-endpoint mix) and CrowdStrike past $5.25B ending ARR (+24%, Falcon Flex +120%) [cross-front: see Front 5 §5.6 PC1].<sup id="fnref3:pc3"><a class="footnote-ref" href="#fn:pc3">12</a></sup> And Front 8 shows the governance and privileged-access disciplines holding their own budget authority — SailPoint sustaining mid-twenties ARR growth and Saviynt&rsquo;s $700M KKR round at roughly a $3B valuation [cross-front: see Front 8 §8.6 PC3 + §8.7].<sup id="fnref5:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup></p>
+<p><strong>My read.</strong> I read compression as real <em>and</em> tier-sorting — and bundle economics as a parallel force to the agent-identity vector of Pattern Claim 1, not a rival explanation. Both are true at once: the platform absorbs the adjacent control plane for the agent-identity reason, and once absorbed, the bundle does the selling on economics and convenience. That bundle wins the mid-market and the greenfield buyer decisively, because when the directory, the SSE platform, or the E5 estate is already paid for, the marginal cost of a &ldquo;good enough&rdquo; module trends toward zero and a standalone vendor has to clear a higher bar to justify a second line item. But the sophisticated enterprise tier stays genuinely contested, because depth still beats breadth where the problem is hard — the large SOC, the entrenched best-of-breed estate, the board-level preference for swappable layers. That is the both/and the chapter&rsquo;s thesis requires: consolidation is real, it runs on two forces (the vector and the bundle), and it is bounded — the platform win is a mid-market-and-greenfield win, not yet an enterprise rout. The standalone leaders scaling independently, Cato&rsquo;s deferred IPO with an open enterprise question, and the SailPoint/Saviynt governance contest are the live ground where best-of-breed has not been displaced in public material.</p>
+<p><strong>Conditional prediction.</strong> <em>If a single-stack or platform play converts to a documented enterprise logo mix in named-outlet coverage (Cato filing a public S-1 or disclosing an enterprise-tier logo mix is the cleanest such signal, per Front 6 §6.6 PC3) AND two or more standalone leaders cite bundle pressure as a named earnings headwind on mid-market deal sizes or win rates (per Front 5 §5.6 PC2), the compression-sorts-by-tier read validates and the platform win extends upward. If instead best-of-breed holds or grows enterprise deal sizes through the window with no platform share gain at the standalone vendors&rsquo; expense — standalone ARR compounding, Cato&rsquo;s traction staying concentrated below the enterprise tier, governance and PAM contenders sustaining premium disclosed growth — the high end stays best-of-breed&rsquo;s and the platform win is bounded to the mid-market and greenfield. I am grounding every threshold on earnings-disclosed metrics, dated funding and M&amp;A marks, and named-outlet enterprise-win coverage — public signals only, not a regulatory date.</em></p>
+<p><strong>Sources.</strong> <sup id="fnref6:pc1"><a class="footnote-ref" href="#fn:pc1">10</a></sup> <sup id="fnref4:pc3"><a class="footnote-ref" href="#fn:pc3">12</a></sup> <sup id="fnref2:pc4"><a class="footnote-ref" href="#fn:pc4">13</a></sup> <sup id="fnref2:pc5"><a class="footnote-ref" href="#fn:pc5">14</a></sup> <sup id="fnref2:pc6"><a class="footnote-ref" href="#fn:pc6">15</a></sup> [cross-front: Front 5 §5.6 + Front 6 §6.6 + Front 8 §8.6]</p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="600" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Two-Speed Compression</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 2 — STATE OF CYBER 2026, PART 2 CONVERGENCE · THE BOUND</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">Bundle economics — a second, parallel force — compresses the mid-market decisively, while best-of-breed persists at the contested enterprise high end</text>
+
+  <!-- LEFT: mid-market / greenfield — the bundle wins -->
+  <rect x="48" y="110" width="324" height="176" fill="#92400E" fill-opacity="0.16" stroke="#92400E" stroke-width="2" rx="6"/>
+  <text x="210" y="134" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Mid-market &amp; greenfield</text>
+  <text x="210" y="151" font-size="9" fill="#fed7aa" text-anchor="middle">the bundle wins — and is winning now</text>
+  <text x="210" y="176" font-size="9.5" fill="#cbd5e1" text-anchor="middle">When the directory, SSE platform, or E5 estate</text>
+  <text x="210" y="190" font-size="9.5" fill="#cbd5e1" text-anchor="middle">is already paid for, "good enough and included" wins</text>
+  <text x="210" y="216" font-size="9" fill="#94a3b8" text-anchor="middle">Microsoft E5 / Defender-Sentinel · the bundle does the selling</text>
+  <text x="210" y="232" font-size="9" fill="#94a3b8" text-anchor="middle">SSE-bundled DLP compresses the standalone vendor at TCO</text>
+  <text x="210" y="248" font-size="9" fill="#94a3b8" text-anchor="middle">Entra compression: marginal cost of access mgmt &#8594; zero</text>
+  <text x="210" y="272" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">Force 2 (bundle economics) bites hardest here</text>
+
+  <!-- RIGHT: enterprise high end — best-of-breed persists, contested -->
+  <rect x="428" y="110" width="324" height="176" fill="#F59E0B" fill-opacity="0.14" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="590" y="134" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">Sophisticated enterprise high end</text>
+  <text x="590" y="151" font-size="9" fill="#fed7aa" text-anchor="middle">best-of-breed persists — genuinely contested</text>
+  <text x="590" y="176" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Depth beats breadth where the problem is hard;</text>
+  <text x="590" y="190" font-size="9.5" fill="#cbd5e1" text-anchor="middle">the board-level buyer can afford the integration tax</text>
+  <text x="590" y="216" font-size="9" fill="#94a3b8" text-anchor="middle">CrowdStrike (+24% ARR) · SentinelOne ($1.16B ARR) scale independently</text>
+  <text x="590" y="232" font-size="9" fill="#94a3b8" text-anchor="middle">Cato: $409M Series G, IPO deferred — enterprise question OPEN</text>
+  <text x="590" y="248" font-size="9" fill="#94a3b8" text-anchor="middle">SailPoint re-IPO · Saviynt $700M KKR @ ~$3B — governance holds</text>
+  <text x="590" y="272" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">not the platform's to assume</text>
+
+  <!-- compression gradient bar between the two -->
+  <defs>
+    <linearGradient id="compress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#92400E" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect x="48" y="298" width="704" height="22" rx="4" fill="url(#compress)"/>
+  <text x="400" y="313" font-size="9.5" font-weight="700" fill="#0a0e1a" text-anchor="middle">COMPRESSION SORTS BY TIER &#8594;</text>
+
+  <text x="400" y="346" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Both forces are true at once: the platform absorbs the adjacent plane for the agent-identity reason (PC1), then the bundle does the selling on economics.</text>
+  <text x="400" y="364" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Both/and, not either/or — consolidation is real, runs on two forces, and is bounded to the mid-market and greenfield in public material. Category-level read.</text>
+
+  <!-- Falsifiable footer — the ENTERPRISE-TIER TEST (Chosen vs Competitor A) -->
+  <rect x="48" y="386" width="704" height="178" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="406" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — the enterprise-tier test (does the platform convert the enterprise) · next two-to-four quarters</text>
+  <text x="400" y="426" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">PLATFORM WIN EXTENDS UPWARD</tspan> if a single-stack or platform play converts to a documented enterprise logo mix in named-outlet</text>
+  <text x="400" y="440" font-size="9" fill="#cbd5e1" text-anchor="middle">coverage (Cato filing a public S-1 or disclosing an enterprise-tier logo mix is the cleanest such signal) AND two or more standalone</text>
+  <text x="400" y="454" font-size="9" fill="#cbd5e1" text-anchor="middle">leaders cite bundle pressure as a named earnings headwind on mid-market deal sizes or win rates.</text>
+  <text x="400" y="476" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">PLATFORM WIN STAYS BOUNDED</tspan> if best-of-breed holds or grows enterprise deal sizes through the window with no platform share gain —</text>
+  <text x="400" y="490" font-size="9" fill="#cbd5e1" text-anchor="middle">standalone ARR compounding, Cato's traction staying concentrated below the enterprise tier, governance and PAM contenders</text>
+  <text x="400" y="504" font-size="9" fill="#cbd5e1" text-anchor="middle">sustaining premium disclosed growth. The high end stays best-of-breed's; the platform win is a mid-market-and-greenfield win.</text>
+  <text x="400" y="526" font-size="9" fill="#cbd5e1" text-anchor="middle" font-weight="700" fill-opacity="0.9">Bundle economics is a co-driver of the agent-identity vector, not a rival explanation.</text>
+  <text x="400" y="548" font-size="8" fill="#64748b" text-anchor="middle">Grounded on earnings-disclosed metrics, dated funding and M&amp;A marks, and named-outlet enterprise-win coverage — NOT a regulatory date.</text>
+  <text x="400" y="560" font-size="8" fill="#64748b" text-anchor="middle" font-style="italic">Not investment advice.</text>
+</svg>
+</div></p>
+<p>The two Pattern Claims bracket the chapter&rsquo;s chosen thesis from opposite sides. Pattern Claim 1 is the <em>vector</em> — the verbatim-consistent agent-and-machine-identity rationale that makes fronts 5 through 8 a single platform war rather than four adjacent consolidations; it is the answer to the skeptic who reads the M&amp;A wave as opportunistic bolt-ons. Pattern Claim 2 is the <em>bound</em> — the parallel bundle-economics force that compresses the mid-market and greenfield decisively while leaving the sophisticated enterprise tier genuinely contested, the both/and the evidence itself requires: consolidation is real, it runs on two forces at once, and it is not yet a clean platform sweep. The first claim says why it is one contest; the second says how the contest sorts.</p>
+<p>Per the cross-front vendor ledger (<code>_vendor-cross-front-ledger.md</code>), the multi-front vendors named in these claims appear here only by their cross-front move and are not re-graded: Palo Alto Networks, CrowdStrike, Cisco, and Microsoft hold their primary contender slots in Front 5 (Detection &amp; Response) and are named in Fronts 7 and 8 only as the absorbing platform side of the agent-identity vector; Zscaler and Netskope hold their primary slots in Front 6 (SSE) and appear in the compression cluster only as the bundle side. No coherence flag is contradicted at access time. <em>The two acquisitions and the AI-runtime exits named above are read throughout as consolidation exits — graduation events at a premium, never casualties.</em></p>
+<blockquote>
+<p><em>Not investment advice. See Disclosures.</em></p>
+</blockquote>
+<h2>9.7 The Campaign Ahead</h2>
+<p>The platform wars will be decided in public over the next several quarters, and every signal that decides them is observable without privileged access. These are the seven I would put on the H2 2026 watchlist, spanning all four fronts, each with a falsifiable threshold and a primary source class anyone can monitor. The first two are the discriminator signals from §9.5 — they are the ones that tell you whether the Chosen Thesis is winning or losing against its two competitors.</p>
+<ol>
+<li>
+<p><strong>The driver test — agent identity versus price (Chosen vs Competitor B).</strong> Signal: the disclosed rationale of the next platform identity or adjacent-control-plane acquisition, plus how buyers and acquirers describe <em>why</em> they consolidate, in dated press and named-outlet coverage. Threshold: if the next platform identity acquisition is again justified by the human-machine-agentic / NHI problem (as PANW/CyberArk, CRWD/SGNL, and Cisco/Astrix all were), the agent-identity driver is confirmed and the Chosen holds against B; if the platform contest is increasingly justified on bundle price, procurement simplicity, and tool-fatigue with no agent-identity rationale, Competitor B is the better explanation. Primary source: acquirer press releases, SEC Form 8-K filings, named-outlet M&amp;A coverage.</p>
+</li>
+<li>
+<p><strong>The enterprise-tier test — does a platform/single-stack play convert the enterprise (Chosen vs Competitor A)?</strong> Signal: whether Cato Networks files a public S-1 or surfaces a named-outlet-documented enterprise (rather than mid-market) logo mix, versus a deferral extending through 2026 with traction concentrated below the enterprise tier [cross-front: see Front 6 §6.6]. Threshold: an S-1 or a documented enterprise logo mix validates single-stack/platform consolidation as an enterprise architecture and extends the Chosen upward from the mid-market; a continued deferral with sub-enterprise traction confirms best-of-breed-around-a-core as the default enterprise motion and bounds the platform win to the mid-market and greenfield (Competitor A&rsquo;s ground holds). Primary source: SEC EDGAR S-1 filings; named-outlet (Calcalist / SecurityWeek / Bloomberg) enterprise coverage.</p>
+</li>
+<li>
+<p><strong>Does a fourth platform giant buy identity on an agent rationale? (Identity stage)</strong> Signal: whether a SOC, network, or hyperscale platform beyond Palo Alto, CrowdStrike, Cisco, and Microsoft acquires an identity capability framed around machine/agent identity in dated, named-outlet M&amp;A coverage [cross-front: see Front 8 §8.7]. Threshold: a fourth platform acquisition on an agent-identity rationale confirms the convergence as an industry-wide default rather than a three-deal triad; a period passing with no further platform identity acquisition leaves it a striking-but-bounded triad. Primary source: acquirer press releases, SEC Form 8-K filings, named-outlet M&amp;A coverage.</p>
+</li>
+<li>
+<p><strong>NHI graduation versus absorption — Aembit&rsquo;s path (Identity/NHI stage).</strong> Signal: whether Aembit, the surviving independent NHI pure-play (CrowdStrike among its investors), is acquired by a platform incumbent or instead closes a disclosed independent up-round [cross-front: see Front 8 §8.7]. Threshold: an Aembit acquisition in dated coverage confirms the NHI sub-category resolves by acqui-graduation into platforms; a disclosed independent up-round with no further NHI absorption says the category retains a standalone-survival path (a Competitor A signal at the sub-category level). Primary source: dated funding announcements; named-outlet M&amp;A coverage.</p>
+</li>
+<li>
+<p><strong>The first &gt;$200M AI-security pure-play exit, or the first AI-security graduation (AI Security stage).</strong> Signal: whether any standalone AI-security pure-play is acquired above ~$200M as a standalone valuation, OR crosses to a public listing / a disclosed $100M-plus standalone private round [cross-front: see Front 7 §7.7]. Threshold: a &gt;$200M absorption marks the capability-acquisition pattern reaching nine-figure scale and confirms exit-before-graduation as the category default; a public listing or $100M-plus standalone round marks a pure-play graduating to Gravity and the window staying open on the graduation side. Primary source: acquirer SEC Form 8-K filings; SEC EDGAR S-1 filings; dated funding announcements in named outlets.</p>
+</li>
+<li>
+<p><strong>The Splunk-absorption economics proof point (D&amp;R stage).</strong> Signal: whether Cisco&rsquo;s FY2026–FY2027 earnings disclose Splunk-sourced platform attach as a named driver AND a named outlet documents an enterprise migrating off a standalone best-of-breed SIEM onto Splunk-on-Cisco specifically on telemetry-cost grounds [cross-front: see Front 5 §5.7]. Threshold: a documented best-of-breed-SIEM-to-Splunk-on-Cisco migration cited on cost-of-ingestion confirms platform consolidation has a credible answer to the ingestion-economics objection and the open experiment resolves toward absorption; continued logo growth without an economics proof point, or analysts seating best-of-breed independents above Cisco-Splunk on execution, leaves best-of-breed SIEM surviving on economics the platform could not beat. Primary source: Cisco (NASDAQ: CSCO) earnings transcripts; named-outlet enterprise coverage.</p>
+</li>
+<li>
+<p><strong>SSE-bundled DLP as a documented TCO consolidation (SSE stage).</strong> Signal: whether Netskope and Zscaler name DLP/DSPM attach as a disclosed growth driver in FY2026–FY2027 earnings AND a named outlet documents an enterprise consolidating off a standalone DLP product onto SSE-bundled DLP specifically on total-cost-of-ownership grounds [cross-front: see Front 6 §6.7]. Threshold: a documented standalone-DLP-to-SSE-bundled-DLP migration cited on TCO confirms the compression thesis at the mid-market (a Force 2 / Competitor B signal); continued attach growth without a documented migration, and standalone vendors holding enterprise channel-coverage wins, leaves the bundle a coexistence story bounded by channel coverage. Primary source: Netskope (NASDAQ: NTSK) and Zscaler (NASDAQ: ZS) earnings transcripts and 10-Q filings; named-outlet enterprise coverage.</p>
+</li>
+</ol>
+<p><em>Not investment advice. See Disclosures.</em></p>
+<hr>
+<h2>References &amp; Footnotes</h2>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:v1">
+<p>Palo Alto Networks completed its ~$25B acquisition of CyberArk on 2026-02-11 (CyberArk shareholders received $45.00 cash + 2.2005 PANW shares per ordinary share), naming Identity Security a core platform pillar; verbatim rationale: the addition lets PANW &ldquo;secure every identity across the enterprise — human, machine, and agentic.&rdquo; Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11, accessed 2026-06-17. https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era ; GovCon Wire, &ldquo;Palo Alto Networks Closes $25B Acquisition of Identity Security Company CyberArk,&rdquo; accessed 2026-06-17. https://www.govconwire.com/articles/palo-alto-networks-cyberark-25b-acquisition&#160;<a class="footnote-backref" href="#fnref:v1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:v1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:v1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v2">
+<p>Palo Alto Networks acquired cloud-native observability vendor Chronosphere for ~$3.35B, closed January 2026 — a distinct PANW transaction correctly dated January 2026, NOT to be conflated with the February 11, 2026 CyberArk close; cloud-native observability for the AI era, with Cortex AgentiX wired to Chronosphere telemetry for agentic find-and-fix. Palo Alto Networks, &ldquo;Palo Alto Networks Completes Chronosphere Acquisition — Unifying Observability and Security for the AI Era,&rdquo; 2026, https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-chronosphere-acquisition&ndash;unifying-observability-and-security-for-the-ai-era (accessed 2026-06-16); cross-referenced to the Front 5 chapter footnotes c13/pl1/w1, which carry the same dated PANW press release.&#160;<a class="footnote-backref" href="#fnref:v2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v3">
+<p>Palo Alto Networks announced intent to acquire ML/AI-model-security vendor Protect AI on 2025-04-28 (completed 2025-07-22, PANW fiscal Q4 FY2025); value reported above $500M but officially undisclosed (named-outlet range $500M–700M); folded into the Prisma AIRS AI-security runtime line. Palo Alto Networks press release, &ldquo;Palo Alto Networks Announces Intent to Acquire Protect AI,&rdquo; 2025-04-28, accessed 2026-06-17. https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-announces-intent-to-acquire-protect-ai&ndash;a-game-changing-security-for-ai-company&#160;<a class="footnote-backref" href="#fnref:v3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:v3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v4">
+<p>CrowdStrike announced its ~$740M acquisition of SGNL (a &ldquo;Continuous Identity&rdquo; vendor) on 2026-01-08, predominantly cash, and shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on 2026-06-15; verbatim rationale: access for &ldquo;human, non-human (NHI), and AI identities to be continuously granted and revoked based on real-time risk.&rdquo; CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08, accessed 2026-06-17. https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ ; CNBC, &ldquo;CrowdStrike buys identity security startup SGNL for $740 million,&rdquo; 2026-01-08, accessed 2026-06-17. https://www.cnbc.com/2026/01/08/crowdstrike-ai-cybersecurity-sgnl-acquisition.html&#160;<a class="footnote-backref" href="#fnref:v4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:v4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v5">
+<p>Cisco announced its acquisition of non-human-identity pure-play Astrix Security (~$400M reported) in May 2026 (announced ~2026-05-04; SecurityWeek article 2026-05-06), to secure &ldquo;the agentic workforce&rdquo; of autonomous AI agents, folded into Cisco Identity Intelligence; Astrix had raised a $45M Series B in December 2024 (Menlo Ventures; ~$85M total). SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17. https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/&#160;<a class="footnote-backref" href="#fnref:v5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:v5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v6">
+<p>Microsoft Entra Agent ID reached general availability in April 2026, making AI-agent identities a first-class construct in the directory inside Agent 365 (governance-for-agents GA early May 2026 is a distinct sub-product; previewed at RSAC March 2026). Microsoft Learn / Tech Community, &ldquo;Microsoft Entra Agent ID,&rdquo; 2026, accessed 2026-06-17. https://learn.microsoft.com/en-us/entra/identity/&#160;<a class="footnote-backref" href="#fnref:v6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:v6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v7">
+<p>As of 2026-06-17, six of the eight identity-native vendors graded in Front 8 §8.3 lead their live homepages with the human-machine-AI identity triad — Okta (&ldquo;Okta secures AI. And every other identity, from machine to human.&rdquo;), SailPoint (&ldquo;identity-first security for humans, machines, and AI&rdquo;), Saviynt (securing &ldquo;every identity — human, non-human, and AI&rdquo;), Delinea (protecting &ldquo;your human and agentic workforce&rdquo;), CyberArk (&ldquo;secure every identity — human, machine and AI&rdquo;), and Aembit (&ldquo;IAM for Agentic AI&rdquo;). Vendor homepages, accessed 2026-06-17. https://www.okta.com/ ; https://www.sailpoint.com/ ; https://saviynt.com/ ; https://delinea.com/ ; https://www.cyberark.com/ ; https://aembit.io/&#160;<a class="footnote-backref" href="#fnref:v7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v8">
+<p>Check Point Software acquired AI-application-security and red-teaming specialist Lakera (reported ~$300M), announced 2025-09-16 and closed 2025-10-22, as the foundation of Check Point&rsquo;s Global Center of Excellence for AI Security; Cisco acquired AI-model-security firm Robust Intelligence in 2024. Check Point press release, &ldquo;Check Point Acquires Lakera to Deliver End-to-End AI Security for Enterprises,&rdquo; accessed 2026-06-17. https://www.checkpoint.com/press-releases/check-point-acquires-lakera-to-deliver-end-to-end-ai-security-for-enterprises/ ; Cisco, &ldquo;Cisco Completes Acquisition of Robust Intelligence,&rdquo; accessed 2026-06-17. https://blogs.cisco.com/news/cisco-completes-acquisition-of-robust-intelligence&#160;<a class="footnote-backref" href="#fnref:v8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:v9">
+<p>BeyondTrust (private; majority-owned by Francisco Partners since 2018, Clearlake Capital a minority holder; ~$500M ARR by widely-cited reporting): Francisco Partners is reportedly exploring a multi-billion-dollar sale — an early-stage process, first reported by Bloomberg on 2025-08-13, with no transaction announced. Flagged as sourced exit-pressure to watch, not a transaction and not a distress assertion. Bloomberg / Private Equity Wire reporting on the exploration, accessed 2026-06-17. https://www.privateequitywire.co.uk/&#160;<a class="footnote-backref" href="#fnref:v9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc1">
+<p>Identity-front consolidation and Entra compression facts, drawn verbatim from the Front 8 (Identity) §8.6 Pattern Claims and §8.7 watchlist. Palo Alto Networks completed its ~USD 25 billion acquisition of CyberArk on 2026-02-11, stating the addition &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic,&rdquo; and citing an 80-to-1 machine-vs-human identity ratio. Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11, accessed 2026-06-17. https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era . CrowdStrike announced its ~USD 740 million acquisition of SGNL on 2026-01-08, to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time. CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08; CNBC, 2026-01-08. https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ . Cisco announced its ~USD 400 million acquisition of Astrix Security in May 2026 to secure the &ldquo;agentic workforce.&rdquo; SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17. https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/ . Microsoft Entra Agent ID reached general availability in April 2026, making AI-agent identities a first-class directory construct inside Agent 365. Microsoft Learn / Tech Community, &ldquo;Microsoft Entra Agent ID,&rdquo; 2026, accessed 2026-06-17. https://learn.microsoft.com/en-us/entra/identity/ . SailPoint ARR $1.163 billion (+26%) and Saviynt&rsquo;s $700 million KKR-led round at ~$3 billion valuation (December 9, 2025): SailPoint quarterly results (NASDAQ: SAIL) and named-outlet coverage of the Saviynt round, accessed 2026-06-17. Six of eight Front 8 identity-native vendors lead with the human-machine-AI triad as of 2026-06-17 (Front 8 §8.6 PC1).&#160;<a class="footnote-backref" href="#fnref:pc1" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc1" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:pc1" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:pc1" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:pc1" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:pc1" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc2">
+<p>AI-runtime acquisition tie, drawn from Front 7 (AI Security) §7.6 Pattern Claim 1 and front cards. Palo Alto Networks announced intent to acquire Protect AI on 2025-04-28 (price reported &gt;$500M, undisclosed) and completed the acquisition 2025-07-22, folding it into the Prisma AIRS runtime line, whose tagline is to &ldquo;deploy autonomous AI agents safely.&rdquo; Palo Alto Networks, &ldquo;Palo Alto Networks Announces Intent to Acquire Protect AI,&rdquo; 2025-04-28; Prisma AIRS product page, accessed 2026-06-16. https://www.paloaltonetworks.com/company/press/2025/palo-alto-networks-announces-intent-to-acquire-protect-ai&ndash;a-game-changing-security-for-ai-company ; https://www.paloaltonetworks.com/prisma/prisma-ai-runtime-security . Check Point acquired Lakera (LLM/AI application security) for a reported ~$300M, announced 2025-09-16 and closed 2025-10-22, as the foundation of Check Point&rsquo;s Global Center of Excellence for AI Security. Check Point / GlobeNewswire, &ldquo;Check Point to Acquire Lakera,&rdquo; 2025-09-16; cxotoday completion coverage, accessed 2026-06-16. https://www.globenewswire.com/news-release/2025/09/16/3150869/0/en/Check-Point-Acquires-Lakera-to-Deliver-End-to-End-AI-Security-for-Enterprises.html&#160;<a class="footnote-backref" href="#fnref:pc2" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc2" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc3">
+<p>SOC-anchor and best-of-breed-persistence facts, drawn from Front 5 (Detection &amp; Response) §5.6 Pattern Claims 1 and 2. SentinelOne reported Q1 FY27 (period ended 2026-04-30) ARR of $1,163M, up 23% year-over-year, with roughly 50% of total ARR from non-endpoint solutions (Data, AI, Cloud) and a company-record $44M net-new ARR. CrowdStrike crossed $5.25B ending ARR at 24% year-over-year growth, with Falcon Flex ending ARR reaching $1.69B (up over 120% year-over-year) across more than 1,600 customers. Both are named Leaders in the 2026 Gartner Magic Quadrant for Endpoint Protection Platforms. SentinelOne and CrowdStrike investor disclosures and Gartner MQ, as cited in Front 5 §5.6 (source footnotes wl1–wl3), accessed 2026-06-16. https://ir.crowdstrike.com/ ; https://investors.sentinelone.com/overview/default.aspx&#160;<a class="footnote-backref" href="#fnref:pc3" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc3" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:pc3" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:pc3" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc4">
+<p>Microsoft platform-pressure facts, drawn from Front 5 (Detection &amp; Response) §5.6 Pattern Claim 2. In January 2026 Microsoft extended the retirement of the Microsoft Sentinel experience in the Azure portal from 2026-07-01 to 2027-03-31, after which SIEM and SOAR capabilities operate exclusively inside the unified Microsoft Defender portal, which rides the M365 E5 commercial bundle; the front&rsquo;s read is that the pressure is &ldquo;sharpest at the mid-market&rdquo; and &ldquo;more resistible&rdquo; at the high end. Microsoft Learn / Defender portal documentation, 2026, accessed 2026-06-16, as cited in Front 5 §5.6 (source footnotes wl4–wl5). https://learn.microsoft.com/en-us/unified-secops/&#160;<a class="footnote-backref" href="#fnref:pc4" title="Jump back to footnote 13 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc4" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc5">
+<p>SSE DLP-compression facts, drawn from Front 6 (SSE) §6.6 Pattern Claim 1. Every major SSE platform ships a DLP module inside the bundle: Netskope (Nasdaq: NTSK, public September 2025, ~$8.6B debut, Q1 FY27 ARR $845M up 29% year-over-year) and Zscaler (fiscal Q3 2026 ARR ~$3,525M, up ~25% year-over-year) carry DLP alongside CASB/SSPM/DSPM and the Zero Trust Exchange respectively; the front&rsquo;s read is that bundled DLP &ldquo;exert[s] genuine compression on the standalone data-security vendor at the middle of the market, without yet displacing the category at the top,&rdquo; coexisting &ldquo;along a coverage line.&rdquo; Netskope and Zscaler investor disclosures and product pages, accessed 2026-06-16, as cited in Front 6 §6.6 (source footnotes wl1–wl3). https://www.netskope.com/ ; https://ir.zscaler.com/&#160;<a class="footnote-backref" href="#fnref:pc5" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc5" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pc6">
+<p>Single-stack SASE and best-of-breed-persistence facts, drawn from Front 6 (SSE) §6.6 Pattern Claim 3. Cato Networks surpassed $350M ARR with 43% year-over-year growth in 2025 and raised a $409M Series G at a valuation above $4.8 billion, explicitly keeping its IPO on ice, and was named to the 2026 Fortune Cyber 60 (a pre-exit cohort) for a third consecutive year; the front&rsquo;s read is that single-vendor SASE &ldquo;win[s] the operational-simplicity argument decisively in the mid-market&rdquo; while &ldquo;the enterprise question [stays] genuinely open&rdquo; and &ldquo;best-of-breed-around-an-SSE-core stays the default enterprise motion.&rdquo; Cato Networks funding announcements and Fortune Cyber 60, accessed 2026-06-16, as cited in Front 6 §6.6 (source footnotes wl7–wl9). https://www.catonetworks.com/&#160;<a class="footnote-backref" href="#fnref:pc6" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pc6" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+<section class="back-disclosures">
+<h2>Disclosures</h2>
+<p><strong>DISCLOSURE.</strong> The author is Head of Product (Fractional) at AXIA, which competes in the Data Loss Prevention (DLP) segment covered in Part 1. This chapter uses only publicly available material and reflects the author's personal view; AXIA does not compete in any of the four Part 2 segments synthesized here — Detection & Response (SOC), Secure Service Edge, AI Security, or Identity & Access.</p>
+<p><strong>NOT ADVICE.</strong> This report does not constitute investment, legal, tax, or accounting advice. No claim should be relied upon as the basis for any investment decision. The author holds no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+</section>
+</body>
+</html>
