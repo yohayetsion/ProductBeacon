@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noai,noimageai">
+<meta charset="utf-8">
+<title>ProductBeacon — State of Cyber Security Markets 2026, Front 8: The Identity Front</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+@page {
+    size: A4;
+    margin: 1in 0.85in 0.9in 0.85in;
+    @bottom-center { content: counter(page); font-size: 9pt; color: #6b7280; font-family: 'Manrope', sans-serif; }
+    @top-right { content: "ProductBeacon"; font-size: 9pt; color: #9ca3af; font-family: 'Manrope', sans-serif; }
+}
+@page :first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Manrope', 'Calibri', -apple-system, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── COVER PAGE (single A4 page; disclosure pushed to footer) ── */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding: 2.4in 0.4in 0 0.4in;
+    margin: 0;
+    position: relative;
+    min-height: 9in;
+}
+.cover .brand-bar-top {
+    display: block;
+    height: 6px;
+    background: #F59E0B;
+    margin: -2.4in -0.85in 0.5in -0.85in;
+}
+.cover .brand-bar-bottom { display: none; }
+.cover .imprint { font-size: 10pt; letter-spacing: 3pt; color: #92400E; font-weight: 700; margin: 1.6in 0 0.4in 0; }
+.cover h1 {
+    color: #92400E;
+    font-size: 28pt;
+    font-weight: 800;
+    margin: 0 0 0.55in 0;
+    border: none;
+    line-height: 1.2;
+    padding: 0;
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+.cover .author-block { font-size: 11pt; color: #4a4a4a; margin-bottom: 0.15in; }
+.cover .author-block strong { display: block; font-size: 13pt; color: #1a1a1a; margin-bottom: 4pt; }
+.cover .date { font-size: 10pt; color: #6b7280; margin-top: 0.4in; }
+
+/* ── BACK-MATTER DISCLOSURES (end of document) ── */
+.back-disclosures { page-break-before: always; padding-top: 6pt; }
+.back-disclosures h2 { color: #92400E; font-size: 16pt; font-weight: 800; border-bottom: 2px solid #F59E0B; padding-bottom: 6pt; margin: 0 0 14pt 0; letter-spacing: 0.5pt; }
+.back-disclosures p { font-size: 9.5pt; line-height: 1.6; color: #374151; margin: 0 0 11pt 0; text-align: justify; font-style: italic; }
+.back-disclosures p strong { color: #92400E; font-style: normal; font-weight: 700; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; font-size: 10pt; }
+
+/* ── HEADINGS ── */
+h1 { color: #92400E; font-size: 22pt; font-weight: 800; border-bottom: 3px solid #F59E0B; padding-bottom: 6pt; margin-top: 0; margin-bottom: 16pt; page-break-before: always; page-break-after: avoid; }
+h2 { color: #1a1a1a; font-size: 16pt; font-weight: 700; margin-top: 24pt; margin-bottom: 10pt; border-bottom: 1px solid #F59E0B; padding-bottom: 4pt; page-break-after: avoid; }
+h3 { color: #92400E; font-size: 12.5pt; font-weight: 700; margin-top: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
+h4 { color: #374151; font-size: 11pt; font-weight: 700; margin-top: 12pt; margin-bottom: 4pt; page-break-after: avoid; }
+
+/* ── PROSE ── */
+p { margin: 0 0 9pt 0; text-align: justify; orphans: 3; widows: 3; }
+strong { color: #111827; }
+em { color: #374151; }
+a { color: #92400E; text-decoration: none; }
+ul, ol { margin: 6pt 0 10pt 22pt; padding: 0; }
+li { margin-bottom: 4pt; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 16pt 0; }
+
+/* ── BLOCKQUOTES (Pattern Claim callouts) ── */
+blockquote { border-left: 4px solid #F59E0B; background: #FFFBEB; padding: 12pt 16pt; margin: 14pt 0; page-break-inside: avoid; border-radius: 0 4px 4px 0; }
+blockquote h3 { color: #92400E; margin-top: 0; font-size: 12pt; }
+blockquote p { margin-bottom: 7pt; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong { color: #92400E; }
+
+/* ── TABLES ── */
+table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+thead { background: #FEF3C7; }
+th { color: #92400E; padding: 7pt 9pt; text-align: left; border-bottom: 2px solid #F59E0B; font-weight: 700; vertical-align: top; }
+td { padding: 6pt 9pt; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.45; }
+tbody tr:nth-child(even) td { background: #fafafa; }
+
+/* ── IMAGES ── */
+img { max-width: 100%; display: block; margin: 14pt auto; page-break-inside: avoid; }
+figure { margin: 14pt 0; page-break-inside: avoid; }
+figcaption { font-size: 9pt; color: #6b7280; text-align: center; margin-top: 4pt; font-style: italic; }
+
+/* ── CODE ── */
+code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; background: #f3f4f6; padding: 1pt 4pt; border-radius: 3px; color: #92400E; }
+pre { background: #f3f4f6; padding: 10pt; border-radius: 4px; font-size: 9pt; overflow-x: auto; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+
+/* ── DISCLAIMER & DISCLOSURE ── */
+.disclosure { background: #FFFBEB; border: 1px solid #FBBF24; padding: 10pt 14pt; font-size: 9.5pt; color: #92400E; margin: 14pt 0; font-style: italic; border-radius: 4px; }
+
+/* ── FOOTNOTES (markdown extension renders these as a section) ── */
+.footnote, [id^="fn-"] { font-size: 9pt; color: #4b5563; }
+.footnote ol, ol.footnote { padding-left: 18pt; }
+hr.footnote { border-top: 1px solid #e5e7eb; margin-top: 24pt; }
+sup, .footnote-ref { font-size: 7.5pt; vertical-align: super; }
+sup a { color: #92400E; font-weight: 700; }
+
+/* ── PRINT TWEAKS ── */
+@media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+</head>
+<body>
+<section class="cover">
+<div class="brand-bar-top"></div>
+<div class="imprint">PRODUCTBEACON</div>
+<h1>ProductBeacon — State of Cyber Security Markets 2026, Front 8: The Identity Front</h1>
+<div class="author-block">
+<strong>Yohay Etsion</strong>
+Managing Director, ProductBeacon
+</div>
+<div class="date">2026-06-17</div>
+</section>
+
+<blockquote>
+<p><em>Impartial cyber market research, published on the open web. No vendor sponsors, no paywalled data, no analyst-firm reuse: only publicly verifiable signals. Authored by Yohay Etsion, Head of Product (Fractional) at AXIA; AXIA does not compete in the Identity &amp; Access Management (IAM / IGA / PAM / Non-Human Identity) segment.</em> <a href="/research/methodology.html">Read the full methodology →</a></p>
+</blockquote>
+<p><em>By Yohay Etsion · Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026)</em></p>
+<hr>
+<h2>8.1 The Playing Ground</h2>
+<p>Identity is the substrate of every alert in this report — strip any incident down and what remains is &ldquo;an identity did a thing it should not have.&rdquo; This report&rsquo;s taxonomy treats it that way, as the layer underneath the SOC, the Edge, and the data-security fronts.<sup id="fnref:pg1"><a class="footnote-ref" href="#fn:pg1">1</a></sup> But a substrate is not a market, and the buyer who owns identity is rarely the same buyer who owns data security. The IAM/PAM/IGA org sits on its own chart, with its own budget line, its own vendors, and its own procurement rhythm. So this front does something the substrate framing alone would not: it treats identity as a distinct <strong>buying center</strong> and grades the vendors who sell into it. That distinction is the first thing a reader has to hold, because the marketing language collapses it constantly.</p>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 720" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="920" height="720" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="920" height="6" fill="#F59E0B"/>
+
+  <text x="460" y="42" font-size="21" font-weight="700" fill="#FBBF24" text-anchor="middle">Where Identity Sits — Four Disciplines, One Converging Control Plane</text>
+  <text x="460" y="62" font-size="11" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 8</text>
+
+  <!-- The single demand driver tying the front together -->
+  <rect x="290" y="84" width="340" height="34" rx="8" fill="#fbbf24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="1.6"/>
+  <text x="460" y="106" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">Demand driver: AGENTIC AI (the non-human-identity explosion)</text>
+
+  <!-- ===== Discipline 1: Access Management ===== -->
+  <rect x="32" y="142" width="206" height="226" rx="12" fill="#F59E0B" fill-opacity="0.12" stroke="#F59E0B" stroke-width="2"/>
+  <text x="135" y="168" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Access Management</text>
+  <text x="135" y="186" font-size="9" fill="#fed7aa" text-anchor="middle">SSO · MFA · CIAM</text>
+  <text x="135" y="212" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Proves WHO</text>
+  <text x="135" y="234" font-size="9.5" fill="#cbd5e1" text-anchor="middle">The front door — identity</text>
+  <text x="135" y="248" font-size="9.5" fill="#cbd5e1" text-anchor="middle">proven once, carried across apps</text>
+  <text x="135" y="296" font-size="9" fill="#94a3b8" text-anchor="middle">Buyer: CISO / identity architect</text>
+  <text x="135" y="338" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">e.g. Okta</text>
+
+  <!-- ===== Discipline 2: IGA ===== -->
+  <rect x="250" y="142" width="206" height="226" rx="12" fill="#F59E0B" fill-opacity="0.12" stroke="#F59E0B" stroke-width="2"/>
+  <text x="353" y="168" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Identity Governance</text>
+  <text x="353" y="186" font-size="9" fill="#fed7aa" text-anchor="middle">IGA · certification · audit</text>
+  <text x="353" y="212" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Governs WHAT they should have</text>
+  <text x="353" y="234" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Joiner-mover-leaver · SoD ·</text>
+  <text x="353" y="248" font-size="9.5" fill="#cbd5e1" text-anchor="middle">access certification · audit evidence</text>
+  <text x="353" y="296" font-size="9" fill="#94a3b8" text-anchor="middle">Buyer: IGA / audit · risk &amp; compliance</text>
+  <text x="353" y="338" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">e.g. SailPoint · Saviynt</text>
+
+  <!-- ===== Discipline 3: PAM ===== -->
+  <rect x="468" y="142" width="206" height="226" rx="12" fill="#F59E0B" fill-opacity="0.12" stroke="#F59E0B" stroke-width="2"/>
+  <text x="571" y="168" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Privileged Access</text>
+  <text x="571" y="186" font-size="9" fill="#fed7aa" text-anchor="middle">PAM · vaults · secrets</text>
+  <text x="571" y="212" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Guards the DANGEROUS accounts</text>
+  <text x="571" y="234" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Admin credentials · root access ·</text>
+  <text x="571" y="248" font-size="9.5" fill="#cbd5e1" text-anchor="middle">secrets vaults — tightest control</text>
+  <text x="571" y="296" font-size="9" fill="#94a3b8" text-anchor="middle">Buyer: security / PAM team</text>
+  <text x="571" y="338" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">e.g. CyberArk · BeyondTrust · Delinea</text>
+
+  <!-- ===== Discipline 4: NHI ===== -->
+  <rect x="686" y="142" width="206" height="226" rx="12" fill="#FBBF24" fill-opacity="0.10" stroke="#FBBF24" stroke-width="2"/>
+  <text x="789" y="168" font-size="14" font-weight="800" fill="#fde68a" text-anchor="middle">Non-Human Identity</text>
+  <text x="789" y="186" font-size="9" fill="#fed7aa" text-anchor="middle">NHI · workload · agents</text>
+  <text x="789" y="212" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Extends to the MACHINES &amp; AGENTS</text>
+  <text x="789" y="234" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Service accounts · API keys ·</text>
+  <text x="789" y="248" font-size="9.5" fill="#cbd5e1" text-anchor="middle">tokens · autonomous AI agents</text>
+  <text x="789" y="270" font-size="9" fill="#fbbf24" text-anchor="middle">Already outnumber human identities</text>
+  <text x="789" y="296" font-size="9" fill="#94a3b8" text-anchor="middle">Buyer: platform / security engineering</text>
+  <text x="789" y="338" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">e.g. Astrix · Aembit</text>
+
+  <!-- Distinct-buying-center band -->
+  <rect x="32" y="382" width="860" height="40" fill="#1e293b" stroke="#475569" rx="6"/>
+  <text x="460" y="400" font-size="11" font-weight="700" fill="#fed7aa" text-anchor="middle">Identity is the SUBSTRATE of every alert — but a distinct BUYING CENTER, not the same buyer as data security.</text>
+  <text x="460" y="416" font-size="9.5" fill="#94a3b8" text-anchor="middle">Its own org chart, its own budget line, its own procurement rhythm. The marketing language collapses the four disciplines constantly — the buyer must not.</text>
+
+  <!-- ===== The structural finding: the consolidation triad ===== -->
+  <rect x="32" y="438" width="546" height="186" rx="10" fill="#92400E" fill-opacity="0.16" stroke="#92400E" stroke-width="2"/>
+  <text x="305" y="462" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Structural finding: the identity control plane is converging with the SOC</text>
+  <text x="305" y="480" font-size="9" fill="#fed7aa" text-anchor="middle">Observed, dated fact — the vector is non-human identity, not legacy SSO</text>
+  <text x="50" y="506" font-size="10" fill="#cbd5e1">Palo Alto &#8594; CyberArk — ~$25B, completed Feb 11, 2026</text>
+  <text x="50" y="526" font-size="10" fill="#cbd5e1">CrowdStrike &#8594; SGNL — ~$740M, Jan 8, 2026</text>
+  <text x="50" y="546" font-size="10" fill="#cbd5e1">Cisco &#8594; Astrix — ~$400M, May 2026</text>
+  <text x="50" y="566" font-size="10" fill="#cbd5e1">Microsoft &#8212; built, not bought: Entra Agent ID (GA April 2026)</text>
+  <text x="50" y="592" font-size="9" fill="#fbbf24" font-style="italic">Each deal justified in the acquirer's own words by the</text>
+  <text x="50" y="606" font-size="9" fill="#fbbf24" font-style="italic">AGENT-identity problem — not by the front door.</text>
+
+  <!-- ===== Two cross-front boundaries ===== -->
+  <rect x="592" y="438" width="300" height="88" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <text x="742" y="460" font-size="11" font-weight="800" fill="#fbbf24" text-anchor="middle">Boundary 1 — Identity vs the SOC</text>
+  <text x="742" y="479" font-size="9" fill="#cbd5e1" text-anchor="middle">Front 5 owns the SOC/platform incumbents.</text>
+  <text x="742" y="494" font-size="9" fill="#cbd5e1" text-anchor="middle">Overlap = ITDR. Here they appear only as</text>
+  <text x="742" y="509" font-size="9" fill="#cbd5e1" text-anchor="middle">identity MOVES — not graded as contenders.</text>
+
+  <rect x="592" y="536" width="300" height="88" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <text x="742" y="558" font-size="11" font-weight="800" fill="#fbbf24" text-anchor="middle">Boundary 2 — Identity vs AI Security</text>
+  <text x="742" y="577" font-size="9" fill="#cbd5e1" text-anchor="middle">Front 7 owns the AI runtime &amp; agent</text>
+  <text x="742" y="592" font-size="9" fill="#cbd5e1" text-anchor="middle">governance. This front owns the identity</text>
+  <text x="742" y="607" font-size="9" fill="#cbd5e1" text-anchor="middle">primitive that authenticates the agent.</text>
+
+  <!-- One-line summary -->
+  <rect x="32" y="640" width="860" height="62" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="52" y="662" font-size="11" fill="#fed7aa" font-weight="700">In one line: Access proves WHO · IGA governs WHAT they should have · PAM guards the DANGEROUS accounts · NHI extends it all to the machines.</text>
+  <text x="52" y="684" font-size="10" fill="#cbd5e1">The defining structural fact: <tspan font-weight="700" fill="#fbbf24">the identity control plane is converging with the SOC, and the vector of convergence is non-human identity.</tspan></text>
+</svg>
+</div></p>
+<p><em>The four identity disciplines (Access Management, IGA, PAM, Non-Human Identity), identity as a distinct buying center, and the dated consolidation vector tying this front to the SOC (Front 5) and to AI Security (Front 7).</em></p>
+<p>The battleground has four disciplines, and they are sold as four products to overlapping-but-distinct buyers. <strong>Access Management</strong> is the front door — single sign-on, multi-factor authentication, and, on the consumer side, customer identity (CIAM). This is Okta&rsquo;s home turf: who you are, proven once, then carried across applications.<sup id="fnref:pg2"><a class="footnote-ref" href="#fn:pg2">2</a></sup> <strong>Identity Governance &amp; Administration (IGA)</strong> answers a different question — not &ldquo;are you who you say&rdquo; but &ldquo;should you have this access at all, and can we prove we reviewed it.&rdquo; Joiner-mover-leaver lifecycle, access certification, segregation-of-duties, audit evidence. SailPoint and Saviynt live here.<sup id="fnref:pg3"><a class="footnote-ref" href="#fn:pg3">3</a></sup> <strong>Privileged Access Management (PAM)</strong> guards the crown-jewel accounts — the admin credentials, the root access, the secrets vaults — on the principle that the accounts that can do the most damage need the tightest control. CyberArk built the category; BeyondTrust and Delinea contest it.<sup id="fnref:pg4"><a class="footnote-ref" href="#fn:pg4">4</a></sup> And <strong>Non-Human / Workload Identity (NHI)</strong> is the newest discipline: securing the service accounts, API keys, machine tokens, and now autonomous AI agents that already outnumber human identities in most enterprises. Astrix and Aembit are the pure-plays.<sup id="fnref:pg5"><a class="footnote-ref" href="#fn:pg5">5</a></sup> In one line: Access Management proves <em>who</em>, IGA governs <em>what they should have</em>, PAM guards <em>the dangerous accounts</em>, and NHI extends all of it to <em>the machines and agents that are not people</em>.</p>
+<p>The load-bearing structural finding of this front is that <strong>the identity control plane is converging with the SOC, and the vector of convergence is non-human identity.</strong> This is not a forecast — it is observed, dated fact. In roughly thirteen months, each of the three platform giants that anchor the detection segment acquired an identity capability. <strong>Palo Alto Networks completed its ~$25 billion acquisition of CyberArk on February 11, 2026</strong>, naming Identity Security a core platform pillar and stating the deal lets it &ldquo;secure every identity across the enterprise — human, machine, and agentic.&rdquo;<sup id="fnref:pg6"><a class="footnote-ref" href="#fn:pg6">6</a></sup> <strong>CrowdStrike agreed to acquire SGNL for ~$740 million on January 8, 2026</strong>, explicitly to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time.<sup id="fnref:pg7"><a class="footnote-ref" href="#fn:pg7">7</a></sup> <strong>Cisco announced its acquisition of Astrix Security (~$400 million) in May 2026</strong> to secure &ldquo;the agentic workforce&rdquo; of autonomous AI agents.<sup id="fnref:pg8"><a class="footnote-ref" href="#fn:pg8">8</a></sup> Around these sit Microsoft&rsquo;s Entra Agent ID (GA April 2026), Okta&rsquo;s ~$100 million purchase of Axiom Security (August 2025), and Delinea&rsquo;s StrongDM acquisition (completed March 2026). My read: the striking thing is not that consolidation is happening — it is that <em>every one of these deals is justified, in the acquirer&rsquo;s own words, by the agent-identity problem</em>, not by legacy workforce SSO. The falsifiable test is public and dated: if the next two notable identity acquisitions are again framed around machine/agent identity and folded into a SOC or network platform, the thesis holds; if a workforce-IAM pure-play is acquired on a classic SSO rationale, or a standalone identity vendor reaches genuine scale on workforce identity alone, it weakens.</p>
+<p>Two cross-front boundaries must be drawn cleanly, and both are load-bearing. First, <strong>identity versus the SOC (Front 5).</strong> Identity telemetry feeds the SOC, and the overlap zone is identity threat detection and response (ITDR) — detecting privilege escalation, anomalous authentication, token theft. But the SOC and platform incumbents — Microsoft Defender and Sentinel, Palo Alto Cortex, CrowdStrike Falcon, Cisco — are characterized <em>primarily in Front 5</em>. In this front they appear only as identity <strong>moves</strong>: named by the identity product or acquisition (CyberArk inside Palo Alto, SGNL inside CrowdStrike, Astrix inside Cisco), not graded as identity contenders.<sup id="fnref:pg9"><a class="footnote-ref" href="#fn:pg9">9</a></sup> Second, <strong>identity versus AI security (Front 7).</strong> Non-human and agent identity is the shared frontier — the agentic-governance problem of Front 7 <em>is</em> an identity problem at its core. Front 7 owns the AI runtime and agent governance; this front owns the identity primitive that authenticates and authorizes the agent. The seam between them is exactly where the consolidation triad above is buying.</p>
+<p>Three buyer misconceptions are worth retiring. One, that <strong>identity is a single purchase</strong> — it is four disciplines sold to a buying center whose internals (the IAM team, the IGA/audit team, the PAM team) often do not even share a budget. Two, that <strong>PAM and IGA are the same thing</strong> — they are not; PAM controls the dangerous accounts at the moment of use, IGA governs who is <em>entitled</em> to access at all and produces the audit evidence. A buyer who deploys one still has the other gap open. Three, that <strong>non-human identity is a niche</strong> — the machine and agent population already dwarfs the human one, and the entire consolidation wave above is a bet that NHI is the <em>center</em> of identity&rsquo;s next decade, not its edge. This front inherits its substrate map and cross-Part vendor rules from the shared taxonomy (<code>taxonomy.md</code> §2.7 and §7, Part-2 Delta).<sup id="fnref2:pg9"><a class="footnote-ref" href="#fn:pg9">9</a></sup></p>
+<h2>8.2 The Terrain</h2>
+<p><strong>Market sizing — four lenses, deliberately not averaged.</strong> Because identity is four disciplines, there is no single number, and the analyst lenses below measure genuinely different things. Read them side by side, not blended. On the broad <strong>Identity &amp; Access Management</strong> lens — the whole front, dominated by access management — Grand View Research sizes the 2026 market at USD 29.68 billion (from USD 26.77 billion in 2025), reaching USD 62.90 billion by 2033 at an 11.3% CAGR; MarketsandMarkets, on its own definition, puts the market at USD 25.96 billion in 2025 growing to USD 42.61 billion by 2030 at a 10.4% CAGR.<sup id="fnref:t1"><a class="footnote-ref" href="#fn:t1">10</a></sup> On the narrower <strong>IGA</strong> lens — governance and audit, not the front door — Fortune Business Insights sizes 2026 at USD 10.7 billion reaching USD 33.1 billion by 2034 at a 15.16% CAGR, while GII Research puts 2026 at roughly USD 11.04 billion at a 13.89% CAGR.<sup id="fnref:t2"><a class="footnote-ref" href="#fn:t2">11</a></sup> On the <strong>PAM</strong> lens — the crown-jewel accounts — Mordor Intelligence sizes 2026 at USD 5.17 billion (from USD 4.25 billion in 2025) reaching USD 13.83 billion by 2031 at a 21.72% CAGR, the steepest growth of the three established disciplines.<sup id="fnref:t3"><a class="footnote-ref" href="#fn:t3">12</a></sup> And on the newest <strong>non-human / machine identity</strong> lens, Grand View Research sizes NHI access management at USD 12.44 billion in 2026 reaching USD 27.33 billion by 2033 at an 11.9% CAGR, while MarketsandMarkets sizes a more narrowly-scoped NHI market at USD 9.45 billion in 2024 reaching USD 18.71 billion by 2030, also at 11.9%.<sup id="fnref:t4"><a class="footnote-ref" href="#fn:t4">13</a></sup> The honest summary across all four: PAM is the fastest-growing of the established disciplines (its 21.72% CAGR reflects the privileged-access-everywhere problem), the broad IAM aggregate grows slowest off the largest base, and the NHI figures diverge most by definition — Grand View&rsquo;s broad &ldquo;NHI access management&rdquo; runs ten-plus billion while narrower machine-identity cuts and the agent-specific slice sit lower, because no two firms yet agree on where the machine-identity boundary falls. Averaging any of these would destroy information.</p>
+<p><strong>Buyer and user trends.</strong> The buyer for this front is not one person — it is a buying center with internal seams. The IAM team owns the front door (SSO, MFA, CIAM) and sells to the CISO and the identity architect. The IGA/audit team owns access certification and segregation-of-duties and answers to risk, compliance, and the auditors — a procurement rhythm driven by the audit calendar, not the threat calendar. The PAM team owns the privileged accounts and the secrets vaults. The dominant cross-cutting trend reshaping all three is <strong>identity-security convergence</strong>: the recognition, now backed by the consolidation triad in §8.1, that identity is no longer a directory-and-provisioning utility but a security control plane in its own right. The user-side signal worth watching is the rise of the <em>identity-security</em> practitioner — a role that did not exist on most org charts five years ago — and the analyst-category creation that follows it. The clearest public signal of where budget is migrating is the deal flow: when Palo Alto, CrowdStrike, and Cisco each spend on identity inside one year, and Saviynt raises USD 700 million at roughly a USD 3 billion valuation from KKR (December 2025) while SailPoint returns to the public markets, the capital is voting that identity security is a growth center, not a maintenance line.<sup id="fnref:t5"><a class="footnote-ref" href="#fn:t5">14</a></sup></p>
+<p><strong>Technology trend anchor — agentic AI driving the non-human-identity explosion.</strong> The single demand driver pulling this front forward is the same one pulling Front 6 and Front 7: agentic AI, and specifically the population explosion of non-human identities it creates. Every autonomous agent needs a credential to act — a service account, an API key, an OAuth token, a workload identity — and those credentials must be issued, scoped, monitored, and revoked. The grounding here is shipped product and analyst category creation, not a regulatory date. The clearest production signals are the consolidation deals themselves, each justified in the acquirer&rsquo;s own words by the agent problem: CrowdStrike&rsquo;s SGNL purchase to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time; Cisco&rsquo;s Astrix acquisition to secure &ldquo;the agentic workforce&rdquo;; Microsoft&rsquo;s Entra Agent ID reaching general availability in April 2026 to give agents first-class identities in the directory.<sup id="fnref:t6"><a class="footnote-ref" href="#fn:t6">15</a></sup> On the pure-play side, Astrix&rsquo;s acquisition by Cisco and Aembit&rsquo;s positioning as a workload-identity platform — with CrowdStrike among its investors — mark NHI&rsquo;s graduation from feature to funded category.<sup id="fnref:t7"><a class="footnote-ref" href="#fn:t7">16</a></sup> I read agent identity as the contested center of this front for the next several quarters; the falsifiable test is whether the platform incumbents report named agent-identity or NHI SKUs as disclosed growth drivers in upcoming earnings, rather than burying them as undifferentiated identity line-items.</p>
+<p><strong>Regulatory backdrop (context only).</strong> Zero-trust mandates, audit and segregation-of-duties requirements (SOX, and the access-certification obligations that drive IGA buying), and emerging AI-governance frameworks form the regulatory weather around this front. They are real, and the IGA buyer in particular buys partly to produce audit evidence. But per this report&rsquo;s discipline, they are <em>context</em>, not a market-timing mechanism: no forward claim in this front grounds on a regulatory effective date. The forward-looking reads above ground only on observable proxies — the dated consolidation triad, Saviynt&rsquo;s KKR round and SailPoint&rsquo;s re-IPO, Microsoft Entra Agent ID&rsquo;s shipped GA, and the PAM lens&rsquo;s 21.72% CAGR off a real revenue base. If the agent-identity convergence keeps showing up in dated acquisitions and earnings disclosures, the thesis holds; if a workforce-IAM pure-play scales on classic SSO alone, it weakens. The regulation is the weather, not the trade.</p>
+<h2>8.3 The Contenders</h2>
+<p>The eight vendors below are grouped by the four disciplines §8.1 laid out — Access Management, then IGA, then PAM, then non-human identity — because in identity the discipline is where the structure lives, not the tier. Within each group I note the tier each vendor carries on the report&rsquo;s standard scale: Gravity for the public-company and scaled-private anchors, Attention for the established and well-funded contenders, Wildcard for the earliest-stage non-human-identity pure-plays. But the reader should carry one structural fact through every card, because it is the through-line of this front: <strong>two of these eight are no longer independent companies.</strong> CyberArk, the PAM category originator and a Gravity-tier anchor, is now the Identity Security pillar of Palo Alto Networks following a roughly twenty-five-billion-dollar acquisition completed in February 2026. Astrix Security, the lead non-human-identity Wildcard, is now inside Cisco following a roughly four-hundred-million-dollar acquisition announced in May 2026. I treat both as <strong>acquired-unit cards</strong> — the vendor is the card, the acquisition is the descriptive fact, and the acquirer&rsquo;s strategic move belongs to the next author&rsquo;s §8.4 Plays. Neither is a casualty. A twenty-five-billion-dollar premium and a four-hundred-million-dollar exit are the strongest signals a vendor can send; they are the anchor examples of the consolidation thread §8.1 named, not evidence of distress. Each card is anchored to a dated, vendor-controlled surface with at least one verbatim messaging pillar lifted live on 2026-06-17, and no card here renders a winner-or-loser verdict — these are positioning extractions.</p>
+<p>One currency note belongs up front, because it is the most striking thing the live scan surfaced. Read the eight homepage pillars below in sequence and the convergence finding from §8.1 stops being an analyst&rsquo;s claim and becomes the vendors&rsquo; own words: Okta leads with &ldquo;Okta secures AI,&rdquo; SailPoint with &ldquo;identity-first security for humans, machines, and AI,&rdquo; Saviynt with securing &ldquo;every identity — human, non-human, and AI,&rdquo; Delinea with protecting &ldquo;your human and agentic workforce,&rdquo; CyberArk with &ldquo;secure every identity — human, machine and AI,&rdquo; and Aembit simply with &ldquo;IAM for Agentic AI.&rdquo; Six of eight identity-native vendors now lead their homepage with the human-machine-AI identity triad. That is not a coincidence of timing — it is the entire front repositioning around the same demand driver in the same window, which is exactly what a control plane converging with the SOC looks like from the vendors&rsquo; side of the glass.</p>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="880" height="600" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="880" height="6" fill="#F59E0B"/>
+
+  <text x="440" y="38" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Identity Vendor Landscape — 2026</text>
+  <text x="440" y="56" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 8</text>
+
+  <!-- Plot bounding box: x=150 to x=840, y=92 to y=470 -->
+  <line x1="150" y1="470" x2="840" y2="470" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="150" y1="92" x2="150" y2="470" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- X band dividers (quarters) -->
+  <line x1="322" y1="92" x2="322" y2="470" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+  <line x1="495" y1="92" x2="495" y2="470" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+  <line x1="667" y1="92" x2="667" y2="470" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+
+  <!-- X band header labels -->
+  <text x="236" y="108" font-size="9.5" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">ACCESS MANAGEMENT</text>
+  <text x="236" y="122" font-size="8.5" fill="#475569" text-anchor="middle">SSO / MFA / CIAM</text>
+  <text x="408" y="108" font-size="9.5" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">IDENTITY GOVERNANCE</text>
+  <text x="408" y="122" font-size="8.5" fill="#475569" text-anchor="middle">IGA</text>
+  <text x="581" y="108" font-size="9.5" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">PRIVILEGED ACCESS</text>
+  <text x="581" y="122" font-size="8.5" fill="#475569" text-anchor="middle">PAM</text>
+  <text x="753" y="108" font-size="9.5" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">NON-HUMAN IDENTITY</text>
+  <text x="753" y="122" font-size="8.5" fill="#475569" text-anchor="middle">NHI / Workload</text>
+
+  <!-- X-axis title -->
+  <text x="495" y="508" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">Identity Discipline →</text>
+
+  <!-- Y-axis title + ticks -->
+  <text x="44" y="281" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 44 281)">↑ Consolidation Status</text>
+  <text x="146" y="100" font-size="9.5" fill="#94a3b8" text-anchor="end">Independent pure-play</text>
+  <text x="146" y="462" font-size="9" fill="#94a3b8" text-anchor="end">Absorbed into a</text>
+  <text x="146" y="474" font-size="9" fill="#94a3b8" text-anchor="end">platform incumbent</text>
+
+  <!-- Tier-color legend (center, sparse mid zone) -->
+  <rect x="396" y="306" width="208" height="92" fill="#1e293b" stroke="#475569" rx="4" fill-opacity="0.95"/>
+  <text x="408" y="324" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">TIER COLOR</text>
+  <circle cx="414" cy="342" r="5" fill="#92400E"/>
+  <text x="427" y="346" font-size="10" fill="#cbd5e1">Gravity — public / scaled anchor</text>
+  <circle cx="414" cy="360" r="5" fill="#F59E0B"/>
+  <text x="427" y="364" font-size="10" fill="#cbd5e1">Attention — established, funded</text>
+  <circle cx="414" cy="378" r="5" fill="#FBBF24"/>
+  <text x="427" y="382" font-size="10" fill="#cbd5e1">Wildcard — earliest-stage NHI</text>
+
+  <!-- ============ ACCESS MANAGEMENT band (x ~150-322) ============ -->
+
+  <!-- Okta: Gravity, TOP-LEFT independent anchor -->
+  <circle cx="236" cy="162" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="236" y="148" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Okta</text>
+  <text x="236" y="136" font-size="9" fill="#cbd5e1" text-anchor="middle">front-door incumbent · ~$2.9B rev</text>
+
+  <!-- ============ IGA band (x ~322-495) ============ -->
+
+  <!-- SailPoint: Attention, top mid-left -->
+  <circle cx="385" cy="178" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="385" y="164" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">SailPoint</text>
+  <text x="385" y="196" font-size="9" fill="#94a3b8" text-anchor="middle">NASDAQ: SAIL · re-IPO</text>
+
+  <!-- Saviynt: Attention, top mid-left -->
+  <circle cx="445" cy="232" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="445" y="218" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Saviynt</text>
+  <text x="445" y="250" font-size="9" fill="#94a3b8" text-anchor="middle">$700M KKR · ~$3B</text>
+
+  <!-- ============ PAM band (x ~495-667) ============ -->
+
+  <!-- BeyondTrust: Attention, top mid-right -->
+  <circle cx="555" cy="180" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="555" y="166" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">BeyondTrust</text>
+  <text x="555" y="198" font-size="9" fill="#94a3b8" text-anchor="middle">FP-owned · sale explored</text>
+
+  <!-- Delinea: Attention, top mid-right -->
+  <circle cx="615" cy="234" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="615" y="220" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Delinea</text>
+  <text x="615" y="252" font-size="9" fill="#94a3b8" text-anchor="middle">TPG · bought StrongDM</text>
+
+  <!-- CyberArk: Gravity, ABSORBED-BOTTOM, label → Palo Alto -->
+  <circle cx="581" cy="428" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="581" y="414" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">CyberArk</text>
+  <text x="581" y="446" font-size="10" font-weight="700" fill="#fbbf24" text-anchor="middle">&#8594; Palo Alto (~$25B, Feb 2026)</text>
+
+  <!-- ============ NHI band (x ~667-840) ============ -->
+
+  <!-- Aembit: Wildcard, TOP-RIGHT independent -->
+  <circle cx="753" cy="188" r="7.5" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="753" y="174" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Aembit</text>
+  <text x="753" y="206" font-size="9" fill="#94a3b8" text-anchor="middle">independent · CrowdStrike-backed</text>
+
+  <!-- Astrix: Wildcard, ABSORBED-BOTTOM, label → Cisco -->
+  <circle cx="745" cy="430" r="7.5" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="745" y="416" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Astrix</text>
+  <text x="745" y="448" font-size="10" font-weight="700" fill="#fbbf24" text-anchor="middle">&#8594; Cisco (~$400M, May 2026)</text>
+
+  <!-- consolidation note across the absorbed-bottom row -->
+  <line x1="500" y1="464" x2="800" y2="464" stroke="#475569" stroke-dasharray="4 4" stroke-width="1"/>
+  <text x="650" y="458" font-size="8.5" fill="#64748b" text-anchor="middle" font-style="italic">2 disciplines, 2 platforms — absorption spans the front</text>
+
+  <text x="440" y="556" font-size="9" fill="#64748b" text-anchor="middle">Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived. The Y-axis surfaces the identity-consolidation thread.</text>
+</svg>
+</div></p>
+<p><em>Author&rsquo;s read of public material, June 2026. Vendor positions are conceptual, not data-derived.</em></p>
+<h3>Access Management</h3>
+<h4>Okta (Gravity)</h4>
+<blockquote>
+<p><em>&ldquo;Okta secures AI. And every other identity, from machine to human. To get AI agent security right, you have to get identity right.&rdquo;</em> — [okta.com, accessed 2026-06-17]<sup id="fnref2:c1"><a class="footnote-ref" href="#fn:c1">17</a></sup></p>
+</blockquote>
+<p>Okta is the Gravity anchor of this front and the clearest articulation of the access-management discipline §8.1 defined — the front door that proves who you are once and carries it across every application. The live homepage no longer leads with single sign-on; it leads with &ldquo;Okta secures AI,&rdquo; framing the company as the identity layer underneath the agent problem and reaching the workforce-and-customer identity story through the machine-to-human spectrum.<sup id="fnref:c1"><a class="footnote-ref" href="#fn:c1">17</a></sup> Its stated USP is breadth across both sides of the identity divide: Workforce Identity for employees and Customer Identity (the Auth0 line) for end users, now extended toward machine and AI identities. The target buyer is the CISO and identity architect at organizations standardizing on a single identity platform rather than stitching point tools — which is exactly the platform-or-best-of-breed tension that defines Okta&rsquo;s strategic position. Architecturally Okta classifies as a cloud-native access-management platform with a CIAM arm, vendor-controlled and public. The capital picture is the largest disclosed in this front: Okta reported FY2026 revenue of roughly USD 2.9 billion, up about 12% year over year, and guided FY2027 to roughly USD 3.185–3.205 billion; in August 2025 it acquired Axiom Security, a privileged-access and non-human-identity vendor, for a figure reported around USD 100 million, extending toward the PAM and NHI disciplines it did not natively own.<sup id="fnref:c2"><a class="footnote-ref" href="#fn:c2">18</a></sup> Published-material tier is the highest available — public-company financial disclosure plus vendor-controlled surfaces plus named-outlet acquisition coverage. My read: Okta is the front-door incumbent consciously repositioning as the identity control plane for the AI era, and the Axiom acquisition is the tell — the access-management leader buying into PAM and non-human identity is the same convergence pattern §8.1 traced through the platform giants, just running inside an identity-native vendor rather than a SOC platform. The open question Okta embodies for the whole front is whether the buyer wants one identity platform or the best tool per discipline.</p>
+<h3>Identity Governance &amp; Administration</h3>
+<h4>SailPoint (Attention)</h4>
+<blockquote>
+<p><em>&ldquo;The new era of adaptive identity. Identity-first security for humans, machines, and AI. One platform to secure every identity.&rdquo;</em> — [sailpoint.com, accessed 2026-06-17]<sup id="fnref2:c3"><a class="footnote-ref" href="#fn:c3">19</a></sup></p>
+</blockquote>
+<p>SailPoint is the IGA leader and the budget-anchor of identity programs — the governance discipline that answers not &ldquo;are you who you say&rdquo; but &ldquo;should you have this access at all, and can we prove we reviewed it.&rdquo; Its live homepage frames &ldquo;the new era of adaptive identity&rdquo; and &ldquo;identity-first security for humans, machines, and AI,&rdquo; positioning the governance platform as a single control point spanning the joiner-mover-leaver lifecycle, access certification, segregation-of-duties, and the audit evidence that IGA exists to produce.<sup id="fnref:c3"><a class="footnote-ref" href="#fn:c3">19</a></sup> The stated USP is governance depth delivered as a unified platform with AI-driven access decisioning — &ldquo;adaptive identity security, powered in real time.&rdquo; The target buyer skews toward the IGA and audit team answering to risk and compliance, with a procurement rhythm set by the audit calendar rather than the threat calendar. Architecturally SailPoint classifies as a cloud IGA platform, vendor-controlled and public. The capital picture is unusually well-disclosed for a recently re-public company: SailPoint returned to the public markets and trades on NASDAQ under SAIL (around USD 14.80 on 2026-06-15), reported first-quarter FY2027 revenue of USD 280 million, up 22% year over year, and annual recurring revenue of USD 1.163 billion, up 26%; the company is led by CEO Mark McClain and CPO Levent Besik.<sup id="fnref:c4"><a class="footnote-ref" href="#fn:c4">20</a></sup> A June 2026 board change (a Thoma Bravo designee seat) is routine and explicitly not a disagreement — it is noted here only to retire it as a non-signal. Published-material tier is public-company financial disclosure plus vendor-controlled. My read: SailPoint is the governance budget-anchor whose re-IPO and ARR trajectory make it the best-evidenced growth story among the identity-native independents — and its &ldquo;humans, machines, and AI&rdquo; framing puts the governance discipline, not just access management, squarely inside the convergence story, which matters because governance is where the audit evidence for agent access will eventually have to live.</p>
+<h4>Saviynt (Attention)</h4>
+<blockquote>
+<p><em>&ldquo;We Deliver Enterprise Control Over AI. Saviynt secures every identity — human, non-human, and AI. See. Enforce. Govern. Every AI agent, everywhere, for every action.&rdquo;</em> — [saviynt.com, accessed 2026-06-17]<sup id="fnref2:c5"><a class="footnote-ref" href="#fn:c5">21</a></sup></p>
+</blockquote>
+<p>Saviynt is the cloud-IGA challenger to SailPoint and the most explicitly AI-forward governance pitch in this set. Its live homepage leads not with governance language but with &ldquo;we deliver enterprise control over AI,&rdquo; framing the platform as the layer that secures &ldquo;every identity — human, non-human, and AI&rdquo; and the governance loop as &ldquo;see, enforce, govern — every AI agent, everywhere, for every action,&rdquo; signed off with the tagline &ldquo;identity security for AI. AI for identity security.&rdquo;<sup id="fnref:c5"><a class="footnote-ref" href="#fn:c5">21</a></sup> The stated USP is converged cloud-native identity governance — a single platform spanning IGA, application access governance, and privileged-access management — differentiated from SailPoint on cloud-first architecture and an unusually direct agent-identity message. The target buyer is the enterprise IGA and compliance owner consolidating identity governance onto a cloud platform, with a clear lean toward organizations governing AI deployment. Architecturally Saviynt classifies as a cloud-native converged identity-governance platform, private. The capital picture is a war-chest positive: Saviynt raised USD 700 million at a roughly USD 3 billion valuation in a round led by KKR that closed December 9, 2025, with Sixth Street, TenEleven, and Carrick participating.<sup id="fnref:c6"><a class="footnote-ref" href="#fn:c6">22</a></sup> Published-material tier is vendor-controlled plus named-outlet funding coverage. My read: Saviynt is the strongly-capitalized cloud-IGA challenger making the most aggressive AI-identity claim of the governance pair — the KKR round is the single largest fresh private raise in this front, and it is explicitly a bet on the AI-identity thesis, which makes Saviynt the clearest test of whether governance, not just access, becomes a venture-scale growth center inside the convergence wave.</p>
+<h3>Privileged Access Management</h3>
+<h4>CyberArk / Palo Alto Networks (acquired unit, Gravity)</h4>
+<blockquote>
+<p><em>&ldquo;Secure every identity — human, machine and AI — with the right level of privilege controls.&rdquo;</em> — [cyberark.com Identity Security Platform, accessed 2026-06-17]<sup id="fnref2:c7"><a class="footnote-ref" href="#fn:c7">23</a></sup></p>
+</blockquote>
+<p>CyberArk is no longer an independent contender, and that is the descriptive fact this card carries: <strong>Palo Alto Networks completed its acquisition of CyberArk on February 11, 2026, in a transaction valued at roughly USD 25 billion</strong> — USD 45.00 in cash plus 2.2005 PANW shares per ordinary share, approved by 99.8% of voting shareholders — and made CyberArk its Identity Security pillar, stating the deal &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic.&rdquo;<sup id="fnref:c8"><a class="footnote-ref" href="#fn:c8">24</a></sup> On the live CyberArk surface the PAM heritage now reads through the platform pillar &ldquo;secure every identity — human, machine and AI — with the right level of privilege controls,&rdquo; carrying the category-defining privileged-access DNA up into a network-and-platform security company.<sup id="fnref:c7"><a class="footnote-ref" href="#fn:c7">23</a></sup> Because the acquisition is the descriptive fact, this card extracts positioning from the now-owned surface; CyberArk&rsquo;s pre-acquisition identity is the PAM category originator — the vault, the privileged session, the secrets management — expanded into broader workforce identity after its 2024 Venafi acquisition (machine-identity / certificate management). The target buyer is the security organization extending privileged-access control across the full identity estate, now inside Palo Alto&rsquo;s platform relationship. Architecturally CyberArk classifies as a privileged-access and identity-security platform embedded inside a larger security platform. Published-material tier is the highest available — public-company acquisition disclosure (Palo Alto Networks) plus named-outlet coverage plus vendor-controlled. My read: CyberArk is the anchor example of the consolidation thread — the PAM category leader absorbed at a roughly twenty-five-billion-dollar premium and renamed a &ldquo;pillar,&rdquo; with the acquirer&rsquo;s own justification being the human-machine-agentic identity problem, not legacy privileged access. That is strength expressed as exit, and it is the single largest data point behind §8.1&rsquo;s convergence finding: when the PAM originator becomes a network-platform pillar on an agent-identity rationale, the identity control plane and the SOC are converging in public, dated fact.</p>
+<h4>BeyondTrust (Attention)</h4>
+<blockquote>
+<p><em>&ldquo;BeyondTrust discovers agentic identities across AWS, Azure, Google, OpenAI, Salesforce, and ServiceNow, then enforces the same privilege controls that secure your human administrators.&rdquo;</em> — [beyondtrust.com, accessed 2026-06-17]<sup id="fnref2:c9"><a class="footnote-ref" href="#fn:c9">25</a></sup></p>
+</blockquote>
+<p>BeyondTrust is the PAM challenger that contests the privileged-access category against the now-absorbed CyberArk, and its live messaging shows it making the same convergence move — extending privileged-access control from human administrators to the agentic-identity population. The homepage pillar describes discovering &ldquo;agentic identities across AWS, Azure, Google, OpenAI, Salesforce, and ServiceNow&rdquo; and enforcing &ldquo;the same privilege controls that secure your human administrators,&rdquo; which frames BeyondTrust&rsquo;s USP as a single privilege-control plane spanning human and machine/agent identities — the &ldquo;paths to privilege&rdquo; thesis carried into the AI era.<sup id="fnref:c9"><a class="footnote-ref" href="#fn:c9">25</a></sup> The target buyer is the security and PAM team consolidating privileged-access management across a hybrid estate. Architecturally BeyondTrust classifies as a privileged-access and identity-security platform, private. The capital and ownership picture is the single flagged watch item of this front, sourced but not asserted: BeyondTrust has been majority-owned by Francisco Partners since 2018 (with Clearlake Capital a minority holder), carries roughly USD 500 million in ARR by widely-cited reporting, and Francisco Partners is reportedly <em>exploring</em> a multi-billion-dollar sale of the company — an early-stage, no-deal-announced process consistent with a hold now past the typical private-equity duration.<sup id="fnref:c10"><a class="footnote-ref" href="#fn:c10">26</a></sup> I flag that as sourced exit-pressure to watch, not a casualty or distress signal; no transaction has been announced. Published-material tier is vendor-controlled plus named-outlet ownership-and-process reporting. My read: BeyondTrust is the credible PAM challenger whose live homepage proves the convergence thesis from the contender side — it is extending privilege controls to agentic identities in the same window CyberArk became a PANW pillar — and the Francisco Partners exit-exploration is the open ownership question that makes BeyondTrust the most likely next moving piece in the identity-consolidation board, which is precisely why it is flagged as a watch item rather than scored.</p>
+<h4>Delinea (Attention)</h4>
+<blockquote>
+<p><em>&ldquo;The future of identity security is continuous. Access granted isn&rsquo;t access secured. Delinea continuously authorizes every identity, session, and action — protecting your human and agentic workforce with control that goes far beyond login.&rdquo;</em> — [delinea.com, accessed 2026-06-17]<sup id="fnref2:c11"><a class="footnote-ref" href="#fn:c11">27</a></sup></p>
+</blockquote>
+<p>Delinea is the PAM consolidator of this set — the Thycotic-plus-Centrify merger, TPG-backed — and its live homepage reframes privileged access as continuous authorization rather than a one-time login gate. The pillar &ldquo;the future of identity security is continuous&rdquo; and the supporting line &ldquo;access granted isn&rsquo;t access secured… continuously authorizes every identity, session, and action — protecting your human and agentic workforce&rdquo; position Delinea&rsquo;s USP as runtime, just-in-time authorization across human and agent identities, powered by what the company brands &ldquo;Iris AI.&rdquo;<sup id="fnref:c11"><a class="footnote-ref" href="#fn:c11">27</a></sup> The strategic move behind that messaging is the descriptive fact worth naming: Delinea acquired StrongDM (announced January 15, completed March 5, 2026, terms undisclosed), unifying its PAM heritage with StrongDM&rsquo;s just-in-time runtime-authorization layer for non-human and AI-agent access. The target buyer is the mid-market-to-enterprise PAM team modernizing privileged access toward continuous, identity-aware authorization. Architecturally Delinea classifies as a privileged-access and runtime-authorization platform, private. The capital picture is TPG ownership with the StrongDM acquisition as the recent capital event; deal terms were not disclosed.<sup id="fnref:c12"><a class="footnote-ref" href="#fn:c12">28</a></sup> Published-material tier is vendor-controlled plus named-outlet acquisition coverage. My read: Delinea is consolidating, not consolidated — where CyberArk and Astrix became units of larger platforms, Delinea is the identity-native vendor doing its own acquiring, buying StrongDM to fold just-in-time runtime authorization for agents into PAM. Its &ldquo;continuous authorization for the human and agentic workforce&rdquo; framing is the same convergence bet as everyone else&rsquo;s on this page, expressed as a buy-side rather than sell-side move, which makes Delinea a useful counterweight to the absorbed-into-a-platform pattern: the consolidation wave has acquirers inside the identity-native field too, not only at the SOC-platform tier.</p>
+<h3>Non-Human / Workload Identity</h3>
+<h4>Astrix Security / Cisco (acquired unit, Wildcard)</h4>
+<blockquote>
+<p><em>&ldquo;Discover, secure, and deploy AI agents responsibly across the enterprise. AI Agents + NHIs &gt; Humans. Secure the Identities that Matter.&rdquo;</em> — [astrix.security, accessed 2026-06-17]<sup id="fnref2:c13"><a class="footnote-ref" href="#fn:c13">29</a></sup></p>
+</blockquote>
+<p>Astrix Security is the lead non-human-identity Wildcard, and like CyberArk it is no longer independent — the descriptive fact this card carries is that <strong>Cisco completed its acquisition of Astrix, at a figure reported around USD 400 million, announced in May 2026</strong>, folding NHI discovery, lifecycle, and threat detection into Cisco Identity Intelligence alongside Duo, Secure Access, and Splunk.<sup id="fnref:c14"><a class="footnote-ref" href="#fn:c14">30</a></sup> On the live Astrix surface the NHI pure-play story still reads in its own voice: &ldquo;discover, secure, and deploy AI agents responsibly across the enterprise,&rdquo; anchored on the population claim &ldquo;AI Agents + NHIs &gt; Humans&rdquo; and the framing that the vast majority of non-human identities are ungoverned and overprivileged — the discovery-to-governance loop for service accounts, API keys, OAuth tokens, and now autonomous agents.<sup id="fnref:c13"><a class="footnote-ref" href="#fn:c13">29</a></sup> Because the acquisition is the descriptive fact, this card extracts positioning from the still-live Astrix surface and states the Cisco deal as context. Astrix&rsquo;s pre-acquisition capital picture was a Wildcard&rsquo;s: roughly USD 85 million raised in total, anchored by a USD 45 million Series B in December 2024 with Menlo Ventures among the investors.<sup id="fnref2:c14"><a class="footnote-ref" href="#fn:c14">30</a></sup> The target buyer is the security team confronting a machine and agent population that already dwarfs the human one; architecturally Astrix classifies as a non-human-identity discovery-and-governance platform, now embedded inside Cisco&rsquo;s identity platform. Published-material tier is named-outlet acquisition coverage plus vendor-controlled. This is a Wildcard-tier card under the report&rsquo;s descriptive-only discipline for the earliest-stage names — positioning extraction only, no winner-or-loser verdict, and the acquisition is treated as an exit, not a death. My read: Astrix is the resolved-Wildcard case study of §8.1&rsquo;s central thesis made literal — a non-human-identity pure-play graduating directly into a platform, justified in the acquirer&rsquo;s own words by the &ldquo;agentic workforce,&rdquo; which is the exact pattern of NHI being bought into existence by the platform players before any independent reaches escape velocity. The four-hundred-million-dollar exit is the validation of the category and the demonstration that, in identity right now, the NHI Wildcard&rsquo;s most likely next step is to become a platform module.</p>
+<h4>Aembit (Wildcard)</h4>
+<blockquote>
+<p><em>&ldquo;IAM for Agentic AI. Aembit enforces access to sensitive data and accelerates AI use with confidence through policy, context, and audit based on unique agent identities.&rdquo;</em> — [aembit.io, accessed 2026-06-17]<sup id="fnref2:c15"><a class="footnote-ref" href="#fn:c15">31</a></sup></p>
+</blockquote>
+<p>Aembit is the surviving independent non-human-identity Wildcard — the workload-identity pure-play that, where Astrix exited into Cisco, remains standalone and is the cleanest live read of what an independent NHI company sounds like in its own voice. Its homepage leads with &ldquo;IAM for Agentic AI,&rdquo; framing the product as access enforcement &ldquo;based on unique agent identities&rdquo; through &ldquo;policy, context, and audit,&rdquo; and organizes around secretless authentication (&ldquo;short-lived access without stored credentials&rdquo;), secure autonomy for AI agents, and a policy-driven rather than script-driven model — the workload-identity-and-access-management discipline applied to agents, MCP servers, and CI/CD workloads.<sup id="fnref:c15"><a class="footnote-ref" href="#fn:c15">31</a></sup> The stated USP is access without stored secrets or certificates, granted to workload and agent identities in real time per task. The target buyer is the platform and security engineering team securing machine-to-machine and agent-to-resource access across distributed cloud and on-premise environments. Architecturally Aembit classifies as a non-human / workload identity-and-access platform, cloud-native, SOC 2 and ISO 27001 certified, private. The capital picture is a Wildcard&rsquo;s, with a notable strategic-investor signal: Aembit has raised approximately USD 45 million in total, anchored by a USD 25 million Series A in September 2024 led by Acrew Capital, with CrowdStrike among its investors alongside Ballistic Ventures and Ten Eleven Ventures — and it positions its &ldquo;IAM for Agentic AI&rdquo; offering as generally available in 2026.<sup id="fnref:c16"><a class="footnote-ref" href="#fn:c16">32</a></sup> Published-material tier is vendor-controlled plus named-outlet funding coverage. This is a Wildcard-tier card under the report&rsquo;s descriptive-only discipline for the earliest-stage names — positioning extraction only, no verdict. My read: Aembit is the independent counterpart to the now-absorbed Astrix, and the most strategically interesting thing about it is the investor list — CrowdStrike, which separately agreed to acquire SGNL for a sum reported around USD 740 million in January 2026, is on Aembit&rsquo;s cap table, which places the surviving NHI Wildcard one degree of separation from the same SOC-platform consolidation wave that already claimed Astrix. Aembit is the live test of whether a non-human-identity pure-play can stay independent through the convergence, or whether the NHI Wildcard&rsquo;s gravitational endpoint really is a platform.</p>
+<h2>8.4 Their Plays</h2>
+<p>The plays of the identity front do not read like the plays of the older theaters in this report. There is no installed base being slowly displaced, no decade-old standoff being renegotiated. Instead there is a single dominant motion — consolidation into platforms — and three sub-motions resolving underneath it. The four plays below are stated as public observations, named participants, and conditional outcomes that resolve against a signal an outsider can watch and date. The first is the spine: it is the most heavily evidenced move in this entire front, and it is the cross-front exhibit for the report&rsquo;s &ldquo;identity converges with the SOC&rdquo; thesis. The other three are the disciplines underneath — privileged access becoming a platform, governance modernizing into the cloud, and the non-human-identity category resolving by acquisition. Throughout, the SOC and network incumbents (Palo Alto, CrowdStrike, Cisco, Microsoft) are characterized primarily in Front 5; here they appear only as identity moves, named by the identity asset they bought or built, not graded as identity contenders.</p>
+<h3>Play 1: The Platform-Absorbs-Identity Consolidation Play</h3>
+<ul>
+<li><strong>Observation.</strong> In roughly thirteen months, each of the three platform giants that anchor the detection segment bought an identity capability, and Microsoft built one — and every one of those moves is justified, in the acquirer&rsquo;s own words, by the AI-agent / non-human-identity problem, not by legacy workforce single sign-on. Palo Alto Networks <strong>completed its ~$25 billion acquisition of CyberArk on February 11, 2026</strong>, naming Identity Security a core platform pillar and stating the addition lets it &ldquo;secure every identity across the enterprise — human, machine, and agentic.&rdquo;<sup id="fnref:pl1"><a class="footnote-ref" href="#fn:pl1">33</a></sup> CrowdStrike <strong>announced its ~$740 million acquisition of SGNL on January 8, 2026</strong>, explicitly to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time, and shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on <strong>June 15, 2026</strong>.<sup id="fnref:pl2"><a class="footnote-ref" href="#fn:pl2">34</a></sup> Cisco <strong>announced its ~$400 million acquisition of Astrix Security in May 2026</strong> to secure &ldquo;the agentic workforce&rdquo; of autonomous AI agents, folding it into Cisco Identity Intelligence.<sup id="fnref:pl3"><a class="footnote-ref" href="#fn:pl3">35</a></sup> Microsoft, rather than buy, built: <strong>Entra Agent ID</strong> reached general availability in <strong>April 2026</strong>, making agent identities a first-class construct inside Agent 365.<sup id="fnref:pl4"><a class="footnote-ref" href="#fn:pl4">36</a></sup> The vector is unmistakable and dated: the three SOC/platform giants each now own an identity control plane, and the rationale each gave is the machine-and-agent identity explosion, not the front door.</li>
+<li><strong>Participants.</strong> Palo Alto Networks (CyberArk → Identity Security pillar), CrowdStrike (SGNL → Next-Gen Identity / Continuous Identity for AI Agents), and Cisco (Astrix → Identity Intelligence) as the absorbing SOC/platform giants — each holding its primary contender slot in Front 5; Microsoft (Entra Agent ID) as the build-not-buy incumbent, also characterized primarily in Front 5; CyberArk and Astrix as the absorbed identity assets, now platform pillars rather than independents.</li>
+<li><strong>Conditional outcome.</strong> <em>If the next one or two notable identity acquisitions are again framed around machine / agent / non-human identity and folded into a SOC or network platform — observable in the acquirers&rsquo; own dated press and analyst coverage over the next two-to-four quarters — we expect the platform-absorbs-identity pattern to validate as the default resolution for the identity control plane, and the independent identity layer to keep thinning at its NHI edge; if instead a workforce-IAM pure-play is acquired on a classic SSO rationale, or a standalone identity vendor reaches genuine scale on workforce identity alone with no platform absorption, the consolidation-via-agent-identity thesis weakens and identity holds as a distinct, defensible buying center.</em></li>
+<li><strong>Evidence.</strong> Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; February 11, 2026 (paloaltonetworks.com, accessed 2026-06-17);<sup id="fnref2:pl1"><a class="footnote-ref" href="#fn:pl1">33</a></sup> CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; January 8, 2026, and Identiverse product coverage June 15, 2026 (crowdstrike.com, accessed 2026-06-17);<sup id="fnref2:pl2"><a class="footnote-ref" href="#fn:pl2">34</a></sup> SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security,&rdquo; May 6, 2026 (securityweek.com, accessed 2026-06-17);<sup id="fnref2:pl3"><a class="footnote-ref" href="#fn:pl3">35</a></sup> Microsoft Entra Agent ID GA documentation, April 2026 (learn.microsoft.com, accessed 2026-06-17).<sup id="fnref2:pl4"><a class="footnote-ref" href="#fn:pl4">36</a></sup></li>
+</ul>
+<h3>Play 2: The PAM-Becomes-a-Platform Play</h3>
+<ul>
+<li><strong>Observation.</strong> Privileged Access Management — the discipline that guards the crown-jewel admin accounts and secrets vaults — is no longer being sold as a standalone vault. It is becoming a platform, and the expansion vector is runtime authorization for non-human and AI-agent access. CyberArk, the category originator, is the clearest case: it did not stay a standalone PAM vendor but became the <strong>Identity Security pillar inside Palo Alto Networks</strong> via the ~$25 billion deal completed February 11, 2026 — privileged access absorbed into a platform rather than defended as a category.<sup id="fnref3:pl1"><a class="footnote-ref" href="#fn:pl1">33</a></sup> Delinea, the TPG-backed PAM incumbent, is consolidating rather than being consolidated: it <strong>completed its acquisition of StrongDM on March 5, 2026</strong> (announced January 15), unifying PAM with just-in-time runtime authorization for NHI and AI-agent access under the &ldquo;Delinea Iris AI&rdquo; banner.<sup id="fnref:pl5"><a class="footnote-ref" href="#fn:pl5">37</a></sup> BeyondTrust, the third established PAM contender (Francisco Partners majority since 2018), sits at the other end of the same motion: it is reportedly the subject of a multi-billion-dollar sale exploration by its private-equity owner — sourced but unconsummated, and a sign that even the standalone PAM contenders are being pulled toward a platform outcome.<sup id="fnref:pl6"><a class="footnote-ref" href="#fn:pl6">38</a></sup> The common thread is that PAM&rsquo;s defensible perimeter is moving from &ldquo;vault the password&rdquo; to &ldquo;broker every privileged action, human or machine, at the moment of use.&rdquo;</li>
+<li><strong>Participants.</strong> CyberArk (now Palo Alto Networks&rsquo; Identity Security pillar) as the category originator absorbed into a platform; Delinea (StrongDM acquisition, JIT runtime authorization for NHI/AI agents) as the actively-consolidating PAM incumbent; BeyondTrust (Francisco Partners majority; reportedly exploring a sale) as the standalone contender under exit pressure. Palo Alto Networks appears here only as the acquirer of CyberArk, its primary characterization being in Front 5.</li>
+<li><strong>Conditional outcome.</strong> <em>If a PAM contender ships or acquires a named non-human / agent runtime-authorization capability and discloses it as a growth driver, or if BeyondTrust&rsquo;s sale exploration converts into a dated transaction over the next two-to-four quarters, we expect PAM-becomes-a-platform to validate as the discipline&rsquo;s resolution — privileged access surviving only as a function inside a broader identity-and-runtime platform; if PAM contenders instead keep selling standalone vaulting with no NHI/agent runtime expansion and BeyondTrust&rsquo;s exploration lapses with the company independent and unchanged, PAM holds as a defensible standalone discipline rather than a platform feature.</em></li>
+<li><strong>Evidence.</strong> Palo Alto Networks, &ldquo;Completes Acquisition of CyberArk,&rdquo; February 11, 2026 (paloaltonetworks.com, accessed 2026-06-17);<sup id="fnref4:pl1"><a class="footnote-ref" href="#fn:pl1">33</a></sup> Delinea / GlobeNewswire, StrongDM acquisition completed March 5, 2026 (delinea.com, accessed 2026-06-17);<sup id="fnref2:pl5"><a class="footnote-ref" href="#fn:pl5">37</a></sup> Private Equity Wire / CyberExperts, Francisco Partners BeyondTrust sale-exploration first reported August 2025 (Bloomberg, 2025-08-13), coverage accessed 2026-06-17.<sup id="fnref2:pl6"><a class="footnote-ref" href="#fn:pl6">38</a></sup></li>
+</ul>
+<h3>Play 3: The IGA Cloud-Modernization Contest</h3>
+<ul>
+<li><strong>Observation.</strong> Identity Governance &amp; Administration — the discipline that answers &ldquo;should you have this access at all, and can we prove we reviewed it&rdquo; — is being contested as a cloud-modernization race between a re-scaled incumbent and a heavily-capitalized cloud-first challenger. SailPoint, the governance category leader, returned to the public markets after its Thoma Bravo ownership period and trades as <strong>NASDAQ: SAIL</strong>, reporting Q1 FY2027 revenue of $280 million (up 22% year over year) and ARR of <strong>$1.163 billion, up 26%</strong> — the scale incumbent re-establishing itself in public view.<sup id="fnref:pl7"><a class="footnote-ref" href="#fn:pl7">39</a></sup> Against it, Saviynt, the cloud-first IGA challenger, <strong>raised $700 million at roughly a $3 billion valuation in a KKR-led round that closed December 9, 2025</strong> (Sixth Street, TenEleven, and Carrick also participating), with the AI-identity governance thesis as its explicit pitch.<sup id="fnref:pl8"><a class="footnote-ref" href="#fn:pl8">40</a></sup> The contest is not whether governance matters — the audit calendar guarantees it does — but whether the modern, AI-driven, cloud-native governance buyer goes to the re-scaled public incumbent or to the freshly-capitalized challenger that built cloud-first. Both are arming for the same enterprise governance budget at the same moment.</li>
+<li><strong>Participants.</strong> SailPoint (NASDAQ: SAIL; re-IPO&rsquo;d from Thoma Bravo; ARR $1.163B, +26%) as the scale incumbent; Saviynt ($700M raise at ~$3B, KKR-led, December 2025; cloud-first, AI-identity-governance pitch) as the capitalized cloud challenger contesting the same IGA buying center.</li>
+<li><strong>Conditional outcome.</strong> <em>If Saviynt converts its $700 million war chest into disclosed ARR growth, named enterprise displacements of legacy governance, or analyst-category share gains over the next two-to-four quarters while SailPoint&rsquo;s growth rate compresses, we expect the cloud-modernization challenger to validate as a genuine contender for the governance buyer rather than a well-funded follower; if SailPoint instead sustains its mid-twenties ARR growth and Saviynt&rsquo;s capital does not surface as disclosed traction beyond the round itself, the re-scaled incumbent holds the governance center and the challenger&rsquo;s raise reads as runway, not displacement.</em></li>
+<li><strong>Evidence.</strong> SailPoint, Q1 FY2027 results and NASDAQ: SAIL trading data, June 2026 (stockanalysis.com / company IR, accessed 2026-06-17);<sup id="fnref2:pl7"><a class="footnote-ref" href="#fn:pl7">39</a></sup> Saviynt / SecurityWeek, &ldquo;$700M raise at ~$3B led by KKR,&rdquo; December 9, 2025 (saviynt.com, securityweek.com, accessed 2026-06-17).<sup id="fnref2:pl8"><a class="footnote-ref" href="#fn:pl8">40</a></sup></li>
+</ul>
+<h3>Play 4: The Non-Human-Identity Wave</h3>
+<ul>
+<li><strong>Observation.</strong> Non-Human Identity — securing the service accounts, API keys, machine tokens, and autonomous AI agents that already outnumber human identities — is the newest discipline of this front, and it is resolving not by an independent vendor reaching scale but by acqui-graduation into platform incumbents. Astrix Security, one of the two NHI pure-plays, <strong>graduated into Cisco via the ~$400 million acquisition announced May 2026</strong>, after having raised a $45 million Series B in December 2024 (Menlo Ventures; ~$85 million total) — the canonical &ldquo;NHI startup graduates into a platform&rdquo; data point, resolved in real time.<sup id="fnref3:pl3"><a class="footnote-ref" href="#fn:pl3">35</a></sup> Aembit, the other pure-play, remains independent on roughly $45 million raised (Series A $25 million, September 2024), but with a telling tie: <strong>CrowdStrike is among its investors</strong> — and CrowdStrike has just bought SGNL in the same identity space, which makes Aembit a forward M&amp;A watch item — the cleanest live test of whether an NHI pure-play stays independent through the consolidation wave.<sup id="fnref:pl9"><a class="footnote-ref" href="#fn:pl9">41</a></sup> The pattern the §8.2 terrain anticipated — one or two NHI pure-plays graduate into platforms while the rest get absorbed — is tracking, but faster and at higher prices than a &ldquo;Series B by late 2026&rdquo; framing would have implied. The category is resolving by acquisition, not by an independent reaching escape velocity.</li>
+<li><strong>Participants.</strong> Astrix Security (acquired by Cisco, ~$400 million, May 2026; Menlo Ventures backers) as the graduated NHI pure-play; Aembit (independent; ~$45M raised; CrowdStrike a strategic investor) as the surviving independent under forward-acquisition watch; Cisco and CrowdStrike as the platform acquirers, both characterized primarily in Front 5. <em>(Astrix appears as a Wildcard card in §8.3 as the vendor and here as the Cisco/Astrix Play as the acquirer&rsquo;s move — the same May 2026 ~$400M event read from two angles, not two events.)</em></li>
+<li><strong>Conditional outcome.</strong> <em>If a second NHI pure-play is acquired by a platform incumbent in dated coverage — Aembit by CrowdStrike being the most-telegraphed candidate given the existing investor tie — over the next two-to-four quarters, we expect the NHI wave to validate as a category that resolves by acqui-graduation rather than by independent scaling; if Aembit instead closes a disclosed independent up-round and no further NHI pure-play absorption surfaces, the NHI category holds a path to standalone survival rather than being a feeder for platform identity portfolios.</em></li>
+<li><strong>Evidence.</strong> SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; May 6, 2026 (securityweek.com, accessed 2026-06-17);<sup id="fnref4:pl3"><a class="footnote-ref" href="#fn:pl3">35</a></sup> Aembit Series A coverage and CrowdStrike investor disclosure, September 2024 (aembit.io, accessed 2026-06-17);<sup id="fnref2:pl9"><a class="footnote-ref" href="#fn:pl9">41</a></sup> CrowdStrike, SGNL acquisition, January 8, 2026 (crowdstrike.com, accessed 2026-06-17).<sup id="fnref3:pl2"><a class="footnote-ref" href="#fn:pl2">34</a></sup></li>
+</ul>
+<hr>
+<h2>8.5 War Chests &amp; Casualties</h2>
+<p>The capital picture of the identity front tells the same story the plays do, and it tells it with money. The defining motion here is not distress — there is no entity-level distress event among the eight identity-native vendors that clears this report&rsquo;s two-source bar for a casualty claim. The defining motion is consolidation into platforms, and the two largest &ldquo;exits&rdquo; are premium acquisitions, not collapses. Read the two acquired names below as graduation events — positive-or-neutral platform exits — not as distress.</p>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Most Recent Round / Status</th>
+<th>Valuation</th>
+<th>Strategic Investor</th>
+<th>Distress Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Okta</strong> (NASDAQ: OKTA)</td>
+<td>Independent public co.; FY2026 revenue ~$2.919B (+12% YoY); acquired Axiom Security (PAM/NHI, ~$100M, Aug 2025)<sup id="fnref:w1"><a class="footnote-ref" href="#fn:w1">42</a></sup></td>
+<td>Public (market-cap, not disclosed here)</td>
+<td>Public-market investors</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>CyberArk → Palo Alto Networks</strong> (exit)</td>
+<td>Acquired ~$25B, completed Feb 11, 2026; now PANW Identity Security pillar<sup id="fnref:w2"><a class="footnote-ref" href="#fn:w2">43</a></sup></td>
+<td>Premium exit (~$25B)</td>
+<td>Palo Alto Networks</td>
+<td>(empty — premium platform exit, not distress)</td>
+</tr>
+<tr>
+<td><strong>SailPoint</strong> (NASDAQ: SAIL)</td>
+<td>Re-IPO&rsquo;d from Thoma Bravo; Q1 FY2027 revenue $280M (+22% YoY), ARR $1.163B (+26%)<sup id="fnref:w3"><a class="footnote-ref" href="#fn:w3">44</a></sup></td>
+<td>Public</td>
+<td>Public-market investors (Thoma Bravo designee on board)</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>BeyondTrust</strong> (private)</td>
+<td>Francisco Partners majority since 2018; ~$500M ARR; FP reportedly exploring a multi-billion sale (sourced, unconsummated)<sup id="fnref:w4"><a class="footnote-ref" href="#fn:w4">45</a></sup></td>
+<td>Not disclosed</td>
+<td>Francisco Partners (majority), Clearlake (minority)</td>
+<td>Flagged watch: owner reportedly exploring a sale — sourced exit-pressure, NOT a distress assertion</td>
+</tr>
+<tr>
+<td><strong>Saviynt</strong> (private)</td>
+<td>$700M raised at ~$3B valuation, KKR-led; closed Dec 9, 2025<sup id="fnref:w5"><a class="footnote-ref" href="#fn:w5">46</a></sup></td>
+<td>~$3B (private)</td>
+<td>KKR (lead), Sixth Street, TenEleven, Carrick</td>
+<td>(empty — war-chest high mark, opposite of distress)</td>
+</tr>
+<tr>
+<td><strong>Delinea</strong> (private)</td>
+<td>TPG-backed; acquired StrongDM (JIT runtime auth for NHI/AI), completed Mar 5, 2026<sup id="fnref:w6"><a class="footnote-ref" href="#fn:w6">47</a></sup></td>
+<td>Not disclosed</td>
+<td>TPG</td>
+<td>(empty — active acquirer, not distress)</td>
+</tr>
+<tr>
+<td><strong>Astrix Security → Cisco</strong> (exit)</td>
+<td>Acquired ~$400M, announced May 2026; had raised $45M Series B (Dec 2024), ~$85M total<sup id="fnref:w7"><a class="footnote-ref" href="#fn:w7">48</a></sup></td>
+<td>Premium exit (~$400M)</td>
+<td>Cisco (acquirer); Menlo Ventures (prior)</td>
+<td>(empty — graduation / platform exit, not distress)</td>
+</tr>
+<tr>
+<td><strong>Aembit</strong> (private)</td>
+<td>~$45M raised; Series A $25M (Sep 2024)<sup id="fnref:w8"><a class="footnote-ref" href="#fn:w8">49</a></sup></td>
+<td>Not disclosed</td>
+<td>Acrew Capital (lead), CrowdStrike, TenEleven, Ballistic Ventures</td>
+<td>(empty — no public distress event; forward M&amp;A watch)</td>
+</tr>
+</tbody>
+</table>
+<p>The capital is voting that identity security is a growth center, not a maintenance line. The single highest war-chest mark in the front is Saviynt&rsquo;s $700 million KKR-led round at roughly a $3 billion valuation (December 2025) — a heavily-capitalized challenger arming for the governance contest, the exact opposite of a distress story. Around it, the established public names are scaling, not contracting: Okta at ~$2.9 billion FY2026 revenue and SailPoint back in public view with $1.163 billion ARR growing 26%. Delinea is an active acquirer, not a target, having pulled StrongDM in to extend PAM into NHI runtime authorization. The two largest exits — CyberArk into Palo Alto Networks at ~$25 billion (February 11, 2026) and Astrix into Cisco at ~$400 million (May 2026) — are precisely that: premium events that graduate the asset into a platform. CyberArk was acquired at a ~$25 billion price; that is a strength signal, not a distress signal, and it anchors the consolidation thread of §8.4 Play 1. The only entry carrying any exit-pressure caveat is BeyondTrust, and it carries it carefully: its owner Francisco Partners is reportedly exploring a multi-billion-dollar sale, but that is a sourced, unconsummated report past a typical private-equity hold — a flagged watch item, framed as exit pressure, not asserted as distress. None of the eight identity-native vendors is a casualty. The defining motion of this front is platform absorption, and the war chests confirm it: capital is flowing toward identity, the strongest assets are being bought at premiums, and the challengers are being funded, not buried.</p>
+<blockquote>
+<p><em>Not investment advice. See Disclosures.</em></p>
+</blockquote>
+<h2>8.6 Winning &amp; Losing</h2>
+<p>This front is not won or lost vendor-versus-vendor, and the cards in §8.3 make plain why: two of the eight contenders are already inside platforms, the two largest &ldquo;exits&rdquo; are premium acquisitions rather than collapses, and there is no entity-level casualty I am willing to name. So I am not going to manufacture a winners-and-losers scoreboard at the company level — that would be the exact directional verdict on individual vendors&rsquo; fates this report&rsquo;s discipline forbids, and in a front whose defining motion is consolidation it would also be wrong. This front is won or lost one altitude up, at the level of <em>platform consolidation</em>: the contest that decides it is whether the identity control plane stays a distinct, defensible buying center, or gets absorbed into the SOC and network platforms the enterprise already owns. Every claim below is therefore stated about the market&rsquo;s <em>motion</em> — how the disciplines are consolidating, where the capital is voting, which structural pattern the dated public record supports — never as a survival call on any one company. The two acquisitions of the period (CyberArk into Palo Alto, Astrix into Cisco) are read here as positive-to-neutral consolidation exits, because a ~$25 billion premium and a ~$400 million graduation are the strongest signals a vendor can send, not casualties.</p>
+<p>Three category-level patterns explain the motion. The first is the spine of the entire front, and the single most important claim of this chapter — it is the M8 evidence the report&rsquo;s later cross-front syntheses lean on: the identity control plane is converging with the SOC. The second is the discipline doing the converging fastest: non-human identity, resolving by acqui-graduation into platforms rather than by independent scaling. The third is the compression pressure shaping who survives as an independent: Microsoft&rsquo;s bundled Entra economics, now extending to agent identity. Each is stated as a dated public observation, a labeled read, and a falsifiable conditional that resolves against a market signal — an M&amp;A event, a funding round, an earnings-disclosed metric, or an analyst category — that an outsider can watch and date. None of them grounds on a regulatory effective date; this front&rsquo;s analytic trap is to mistake a policy deadline for a market event, and I am holding every threshold to a public market signal instead.</p>
+<h3>Pattern Claim 1 — The Identity-Converges-with-the-SOC Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 1 — The Identity-Converges-with-the-SOC Thesis</h3>
+<p><strong>Observation.</strong> In roughly thirteen months, each of the three platform giants that anchor the detection segment acquired an identity capability, and a fourth built one — and every one of those moves is justified, in the acquirer&rsquo;s own words, by the AI-agent / non-human-identity problem, not by legacy workforce single sign-on. Palo Alto Networks <strong>completed its ~$25 billion acquisition of CyberArk on February 11, 2026</strong>, naming Identity Security a core platform pillar and stating the addition lets it &ldquo;secure every identity across the enterprise — human, machine, and agentic.&rdquo;<sup id="fnref:wl1"><a class="footnote-ref" href="#fn:wl1">50</a></sup> CrowdStrike <strong>announced its ~$740 million acquisition of SGNL on January 8, 2026</strong>, explicitly to grant and revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time, and shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on <strong>June 15, 2026</strong>.<sup id="fnref:wl2"><a class="footnote-ref" href="#fn:wl2">51</a></sup> Cisco <strong>announced its ~$400 million acquisition of Astrix Security in May 2026</strong> to secure &ldquo;the agentic workforce&rdquo; of autonomous AI agents, folding it into Cisco Identity Intelligence.<sup id="fnref:wl3"><a class="footnote-ref" href="#fn:wl3">52</a></sup> Microsoft, rather than buy, built: <strong>Entra Agent ID</strong> reached general availability in <strong>April 2026</strong>, making agent identities a first-class construct in the directory.<sup id="fnref:wl4"><a class="footnote-ref" href="#fn:wl4">53</a></sup> Around these sit Okta&rsquo;s ~$100 million purchase of Axiom Security (August 2025) and Delinea&rsquo;s StrongDM acquisition (completed March 5, 2026) — the same vector running inside the identity-native field.<sup id="fnref:wl5"><a class="footnote-ref" href="#fn:wl5">54</a></sup> The vendors&rsquo; own homepages now say it out loud: six of the eight identity-native vendors graded in §8.3 lead with the human-machine-AI identity triad as of June 17, 2026.<sup id="fnref:wl6"><a class="footnote-ref" href="#fn:wl6">55</a></sup></p>
+<p><strong>My read.</strong> I read this as the load-bearing structural finding of the entire front, and I want to be precise about what makes it strong: it is not a forecast, it is dated fact already on the public record. The striking thing is not that consolidation is happening — consolidation is the expected end state of any maturing security discipline. The striking thing is the <em>vector</em>: every one of these deals is justified by the acquirer in its own words by the agent-identity problem, not by legacy SSO. That tells me the platforms are not buying identity to own the front door; they are buying it because the SOC&rsquo;s job — detect, authorize, respond — now runs on identity, and the agent population is the part of identity growing fastest. When the PAM category originator becomes a network-platform &ldquo;pillar&rdquo; on a human-machine-agentic rationale, the identity control plane and the SOC are not adjacent markets converging slowly; they are merging in public, on dated press releases. I am stating this at the category level: the claim is about the <em>control plane&rsquo;s</em> motion toward the SOC, not a bet on any single platform winning. And per the cross-front rule, Palo Alto, CrowdStrike, Cisco, and Microsoft are characterized as contenders in Front 5 — here they appear only as the platform side of the convergence, named by their identity move.</p>
+<p><strong>Conditional prediction.</strong> If the next one or two notable identity acquisitions are again framed around machine / agent / non-human identity and folded into a SOC or network platform — observable in the acquirers&rsquo; own dated press and named-outlet M&amp;A coverage over the next two-to-four quarters — the convergence thesis validates as the default resolution for the identity control plane. The inverse signal that would weaken it is equally concrete and watchable: a workforce-IAM pure-play acquired on a classic SSO rationale, OR a standalone identity vendor reaching genuine disclosed scale on workforce identity alone with no platform absorption. A second confirming proxy is whether the SOC-platform acquirers begin reporting named agent-identity or NHI SKUs as disclosed growth drivers in earnings, rather than burying them as undifferentiated identity line-items. I am grounding this on the M&amp;A and earnings-disclosure record, not on any regulation&rsquo;s timing.</p>
+<p><strong>Sources.</strong> <sup id="fnref2:wl1"><a class="footnote-ref" href="#fn:wl1">50</a></sup> <sup id="fnref2:wl2"><a class="footnote-ref" href="#fn:wl2">51</a></sup> <sup id="fnref2:wl3"><a class="footnote-ref" href="#fn:wl3">52</a></sup> <sup id="fnref2:wl4"><a class="footnote-ref" href="#fn:wl4">53</a></sup> <sup id="fnref2:wl5"><a class="footnote-ref" href="#fn:wl5">54</a></sup> <sup id="fnref2:wl6"><a class="footnote-ref" href="#fn:wl6">55</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="580" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Identity-Converges-with-the-SOC Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 1 — STATE OF CYBER 2026, FRONT 8 · THE LOAD-BEARING CLAIM</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">In ~13 months, each of the three SOC/platform giants bought identity — and a fourth built it — every move justified by the AGENT-identity problem</text>
+
+  <!-- Four platform tiles buying/building identity -->
+  <!-- Palo Alto -->
+  <rect x="40" y="108" width="174" height="150" fill="#92400E" fill-opacity="0.18" stroke="#92400E" stroke-width="2" rx="6"/>
+  <text x="127" y="132" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Palo Alto</text>
+  <text x="127" y="150" font-size="9" fill="#fed7aa" text-anchor="middle">BOUGHT</text>
+  <text x="127" y="176" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">&#8594; CyberArk</text>
+  <text x="127" y="196" font-size="10" fill="#cbd5e1" text-anchor="middle">~$25B · Feb 11, 2026</text>
+  <text x="127" y="220" font-size="8.5" fill="#94a3b8" text-anchor="middle">"secure every identity —</text>
+  <text x="127" y="232" font-size="8.5" fill="#94a3b8" text-anchor="middle">human, machine, and agentic"</text>
+  <text x="127" y="250" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">Identity Security pillar</text>
+
+  <!-- CrowdStrike -->
+  <rect x="226" y="108" width="174" height="150" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="313" y="132" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">CrowdStrike</text>
+  <text x="313" y="150" font-size="9" fill="#fed7aa" text-anchor="middle">BOUGHT</text>
+  <text x="313" y="176" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">&#8594; SGNL</text>
+  <text x="313" y="196" font-size="10" fill="#cbd5e1" text-anchor="middle">~$740M · Jan 8, 2026</text>
+  <text x="313" y="220" font-size="8.5" fill="#94a3b8" text-anchor="middle">grant/revoke access for "human,</text>
+  <text x="313" y="232" font-size="8.5" fill="#94a3b8" text-anchor="middle">non-human (NHI), and AI identities"</text>
+  <text x="313" y="250" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">Continuous Identity for AI Agents</text>
+
+  <!-- Cisco -->
+  <rect x="412" y="108" width="174" height="150" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="499" y="132" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">Cisco</text>
+  <text x="499" y="150" font-size="9" fill="#fed7aa" text-anchor="middle">BOUGHT</text>
+  <text x="499" y="176" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">&#8594; Astrix</text>
+  <text x="499" y="196" font-size="10" fill="#cbd5e1" text-anchor="middle">~$400M · May 2026</text>
+  <text x="499" y="220" font-size="8.5" fill="#94a3b8" text-anchor="middle">to secure "the agentic</text>
+  <text x="499" y="232" font-size="8.5" fill="#94a3b8" text-anchor="middle">workforce" of autonomous agents</text>
+  <text x="499" y="250" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">Cisco Identity Intelligence</text>
+
+  <!-- Microsoft -->
+  <rect x="598" y="108" width="162" height="150" fill="#FBBF24" fill-opacity="0.12" stroke="#FBBF24" stroke-width="2" rx="6"/>
+  <text x="679" y="132" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Microsoft</text>
+  <text x="679" y="150" font-size="9" fill="#fed7aa" text-anchor="middle">BUILT, not bought</text>
+  <text x="679" y="176" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Entra Agent ID</text>
+  <text x="679" y="196" font-size="10" fill="#cbd5e1" text-anchor="middle">GA · April 2026</text>
+  <text x="679" y="220" font-size="8.5" fill="#94a3b8" text-anchor="middle">agent identities as a</text>
+  <text x="679" y="232" font-size="8.5" fill="#94a3b8" text-anchor="middle">first-class directory construct</text>
+  <text x="679" y="250" font-size="8.5" fill="#fbbf24" text-anchor="middle" font-style="italic">inside Agent 365</text>
+
+  <!-- convergence arrows down to the control plane -->
+  <line x1="127" y1="258" x2="320" y2="298" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="313" y1="258" x2="370" y2="296" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="499" y1="258" x2="430" y2="296" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+  <line x1="679" y1="258" x2="480" y2="298" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.7"/>
+
+  <!-- The merging control plane -->
+  <ellipse cx="400" cy="320" rx="200" ry="32" fill="#fbbf24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.5"/>
+  <text x="400" y="318" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">The identity control plane and the SOC are merging — in public, on dated press releases</text>
+  <text x="400" y="335" font-size="9" fill="#fed7aa" text-anchor="middle">Six of eight identity-native vendors now lead their homepage with the human-machine-AI triad (2026-06-17)</text>
+
+  <text x="400" y="376" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Category-level claim about the control plane's MOTION toward the SOC — not a bet on any single platform winning. PANW/CRWD/CSCO/MSFT graded in Front 5.</text>
+
+  <!-- Falsifiable test footer — mirrors §8.6 Pattern Claim 1 conditional prediction -->
+  <rect x="40" y="398" width="720" height="156" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="418" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
+  <text x="400" y="438" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONVERGENCE VALIDATES</tspan> if the next one or two notable identity acquisitions are again framed around machine / agent /</text>
+  <text x="400" y="452" font-size="9" fill="#cbd5e1" text-anchor="middle">non-human identity and folded into a SOC or network platform, in the acquirers' own dated press and named-outlet M&amp;A coverage.</text>
+  <text x="400" y="466" font-size="9" fill="#cbd5e1" text-anchor="middle">Confirming proxy: SOC-platform acquirers reporting named agent-identity / NHI SKUs as disclosed earnings growth drivers.</text>
+  <text x="400" y="486" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">THESIS WEAKENS</tspan> if a workforce-IAM pure-play is acquired on a classic SSO rationale, OR a standalone identity vendor</text>
+  <text x="400" y="500" font-size="9" fill="#cbd5e1" text-anchor="middle">reaches genuine disclosed scale on workforce identity alone with no platform absorption.</text>
+  <text x="400" y="520" font-size="9" fill="#cbd5e1" text-anchor="middle" font-weight="700" fill-opacity="0.9">The strength of the claim is that it is not a forecast — it is dated fact already on the public record.</text>
+  <text x="400" y="544" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the M&amp;A and earnings-disclosure record — NOT on any regulatory date.</text>
+</svg>
+</div></p>
+<h3>Pattern Claim 2 — The Non-Human-Identity Wave Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 2 — The Non-Human-Identity Wave Thesis</h3>
+<p><strong>Observation.</strong> Non-human identity — securing the service accounts, API keys, machine tokens, and autonomous AI agents that already outnumber human identities — is the hottest sub-category of this front, and the public record shows it resolving by <em>acqui-graduation into platforms</em> faster than by independent graduation. Astrix Security, one of the two NHI pure-plays graded in §8.3, <strong>graduated into Cisco via the ~$400 million acquisition announced May 2026</strong>, after a $45 million Series B in December 2024 (Menlo Ventures; ~$85 million total) — a Wildcard exiting into a platform before reaching scale.<sup id="fnref3:wl3"><a class="footnote-ref" href="#fn:wl3">52</a></sup> SGNL, the continuous-identity vendor CrowdStrike bought for ~$740 million in January 2026, sits in the same machine-and-agent identity space.<sup id="fnref3:wl2"><a class="footnote-ref" href="#fn:wl2">51</a></sup> Aembit, the surviving independent NHI pure-play, remains standalone on roughly $45 million raised (Series A $25 million, September 2024) — but carries a telling tie: <strong>CrowdStrike is among its investors</strong>, and CrowdStrike has separately just bought SGNL in the same space.<sup id="fnref:wl7"><a class="footnote-ref" href="#fn:wl7">56</a></sup> The capital framing the wave is unambiguous: Saviynt raised $700 million at roughly a $3 billion valuation (KKR-led, December 9, 2025) on an explicit AI-identity-governance pitch, and the analyst lenses size NHI access management in the ten-billion-plus range by 2026 with the figures diverging most by definition — proof no two firms yet agree where the machine-identity boundary falls.<sup id="fnref:wl8"><a class="footnote-ref" href="#fn:wl8">57</a></sup></p>
+<p><strong>My read.</strong> I read NHI as the discipline where the convergence of Pattern Claim 1 is happening first and fastest, and as a category that is resolving by absorption rather than by an independent reaching escape velocity. My view is that the economics favor the platform: a SOC or network incumbent can fold NHI discovery-and-governance into a platform the enterprise already runs and cross-sell it instantly, whereas a venture-funded NHI specialist has to build distribution from zero against exactly that bundling pressure. Astrix is the resolved case study — a pure-play graduating directly into a platform, justified in the acquirer&rsquo;s own words by the &ldquo;agentic workforce.&rdquo; That makes Aembit the watch item that defines the category&rsquo;s open question: it is the cleanest live test of whether an NHI pure-play can stay independent through the wave, and the CrowdStrike-on-the-cap-table tie places it one degree of separation from the same absorption that already claimed Astrix. I am stating this at the category level — the claim is about how the NHI <em>category</em> resolves, not a directional bet that any one Wildcard lives or dies. The two acquisitions are graduation exits, never casualties.</p>
+<p><strong>Conditional prediction.</strong> If a second NHI pure-play is acquired by a platform incumbent in dated, named-outlet coverage over the next two-to-four quarters — Aembit by CrowdStrike being the most-telegraphed candidate given the existing investor tie — the NHI wave validates as a category that resolves by acqui-graduation rather than by independent scaling. The inverse, weakening signal is equally watchable: Aembit closing a disclosed independent up-round and no further NHI pure-play absorption surfacing, which would mean the category holds a path to standalone survival. A confirming secondary proxy is whether an analyst firm formalizes a named &ldquo;non-human identity&rdquo; or &ldquo;machine identity&rdquo; market segment with its own Magic Quadrant or Market Guide, signaling the category has cohered enough to be tracked as more than a sub-feature of legacy IAM. I am grounding this on the M&amp;A record, disclosed funding rounds, and analyst category creation — not on any regulatory date.</p>
+<p><strong>Sources.</strong> <sup id="fnref4:wl2"><a class="footnote-ref" href="#fn:wl2">51</a></sup> <sup id="fnref4:wl3"><a class="footnote-ref" href="#fn:wl3">52</a></sup> <sup id="fnref2:wl7"><a class="footnote-ref" href="#fn:wl7">56</a></sup> <sup id="fnref2:wl8"><a class="footnote-ref" href="#fn:wl8">57</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="560" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Non-Human-Identity Wave Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 2 — STATE OF CYBER 2026, FRONT 8</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">NHI is resolving by acqui-graduation into platforms — faster than any independent reaches escape velocity</text>
+
+  <!-- LEFT: the graduated case (absorption into a platform) -->
+  <rect x="55" y="108" width="320" height="290" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Graduated into a platform</text>
+  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">the resolved case study — exit, not casualty</text>
+
+  <text x="215" y="184" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Astrix &#8594; Cisco</text>
+  <text x="215" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">~$400M acquisition, announced May 2026</text>
+  <text x="215" y="222" font-size="9.5" fill="#94a3b8" text-anchor="middle">into Cisco Identity Intelligence</text>
+  <text x="215" y="246" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Prior: $45M Series B (Dec 2024)</text>
+  <text x="215" y="260" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Menlo Ventures · Anthropic Anthology Fund</text>
+  <text x="215" y="274" font-size="9.5" fill="#94a3b8" text-anchor="middle">~$85M total — a Wildcard exiting before scale</text>
+  <text x="215" y="302" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Plus SGNL &#8594; CrowdStrike (~$740M, Jan 2026)</text>
+  <text x="215" y="316" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">— same machine-and-agent identity space</text>
+  <text x="215" y="344" font-size="9" fill="#94a3b8" text-anchor="middle">Economics favor the platform: fold NHI into a</text>
+  <text x="215" y="358" font-size="9" fill="#94a3b8" text-anchor="middle">platform the enterprise already runs + cross-sell</text>
+  <text x="215" y="372" font-size="9" fill="#94a3b8" text-anchor="middle">instantly vs a specialist building distribution from zero</text>
+
+  <!-- RIGHT: the surviving independent (the watch item) -->
+  <rect x="425" y="108" width="320" height="290" fill="#FBBF24" fill-opacity="0.10" stroke="#fbbf24" stroke-width="2" rx="6"/>
+  <text x="585" y="134" font-size="14" font-weight="800" fill="#fde68a" text-anchor="middle">Surviving independent</text>
+  <text x="585" y="152" font-size="9" fill="#cbd5e1" text-anchor="middle">the watch item that defines the open question</text>
+
+  <text x="585" y="184" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Aembit (standalone)</text>
+  <text x="585" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">~$45&#8211;60M raised · Series A $25M (Sep 2024)</text>
+  <text x="585" y="222" font-size="9.5" fill="#94a3b8" text-anchor="middle">"IAM for Agentic AI" — GA in 2026</text>
+  <text x="585" y="250" font-size="10" font-weight="700" fill="#fbbf24" text-anchor="middle">The telling tie:</text>
+  <text x="585" y="268" font-size="9.5" fill="#cbd5e1" text-anchor="middle">CrowdStrike is among Aembit's investors</text>
+  <text x="585" y="284" font-size="9.5" fill="#cbd5e1" text-anchor="middle">— and CrowdStrike just bought SGNL</text>
+  <text x="585" y="298" font-size="9.5" fill="#94a3b8" text-anchor="middle">in the same NHI space</text>
+  <text x="585" y="326" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">One degree of separation from the same</text>
+  <text x="585" y="340" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">absorption that already claimed Astrix</text>
+  <text x="585" y="368" font-size="9" fill="#94a3b8" text-anchor="middle">The cleanest live test: can an NHI pure-play</text>
+  <text x="585" y="382" font-size="9" fill="#94a3b8" text-anchor="middle">stay independent through the wave?</text>
+
+  <!-- pressure marker -->
+  <line x1="400" y1="116" x2="400" y2="390" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
+  <line x1="372" y1="253" x2="428" y2="253" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="424,246 438,253 424,260" fill="#F59E0B" fill-opacity="0.85"/>
+  <text x="400" y="232" font-size="9" font-weight="800" fill="#fbbf24" text-anchor="middle">absorption</text>
+  <text x="400" y="280" font-size="8" font-weight="700" fill="#fbbf24" text-anchor="middle">pull</text>
+
+  <!-- Falsifiable test footer — mirrors §8.6 Pattern Claim 2 conditional prediction -->
+  <rect x="55" y="410" width="690" height="138" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="430" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
+  <text x="400" y="450" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">NHI WAVE VALIDATES (resolves by acqui-graduation)</tspan> if a second NHI pure-play is acquired by a platform incumbent in</text>
+  <text x="400" y="464" font-size="9" fill="#cbd5e1" text-anchor="middle">dated, named-outlet coverage — Aembit by CrowdStrike the most-telegraphed candidate given the existing investor tie.</text>
+  <text x="400" y="478" font-size="9" fill="#cbd5e1" text-anchor="middle">Confirming proxy: an analyst firm formalizes a named NHI / machine-identity segment (Magic Quadrant / Market Guide).</text>
+  <text x="400" y="498" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">CATEGORY HOLDS A STANDALONE-SURVIVAL PATH</tspan> if Aembit instead closes a disclosed independent up-round and no</text>
+  <text x="400" y="512" font-size="9" fill="#cbd5e1" text-anchor="middle">further NHI pure-play absorption surfaces.</text>
+  <text x="400" y="528" font-size="8.5" fill="#64748b" text-anchor="middle" font-style="italic">Category-level claim about how the NHI category resolves — never a directional bet on any one Wildcard. Both acquisitions are graduation exits, not casualties.</text>
+  <text x="400" y="543" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the M&amp;A record, disclosed funding rounds, and analyst category creation — NOT on any regulatory date.</text>
+</svg>
+</div></p>
+<h3>Pattern Claim 3 — The Entra Compression Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 3 — The Entra Compression Thesis</h3>
+<p><strong>Observation.</strong> Microsoft Entra ID is the access-management layer most enterprises already pay for inside their Microsoft 365 and E5 licensing, and Microsoft is now extending that bundled position to agent identity rather than buying its way in: <strong>Entra Agent ID reached general availability in April 2026</strong>, making AI-agent identities a first-class directory construct inside Agent 365 — the build-not-buy move alongside the three platform acquisitions of Pattern Claim 1.<sup id="fnref3:wl4"><a class="footnote-ref" href="#fn:wl4">53</a></sup> The standalone identity-native vendors selling into the same buying center carry the structural counterweight in their disclosures. Okta, the access-management Gravity anchor, reported FY2026 revenue of roughly $2.9 billion up about 12% year over year, and bought Axiom Security (~$100 million, August 2025) to extend toward the PAM and NHI disciplines it did not natively own — an access-management leader reaching for adjacent privilege and machine-identity ground.<sup id="fnref3:wl5"><a class="footnote-ref" href="#fn:wl5">54</a></sup> On the PAM side, the privilege-specific vendors retain their own moat: CyberArk became a ~$25 billion platform pillar, Delinea is an active consolidator (StrongDM, completed March 5, 2026), and BeyondTrust carries roughly $500 million in ARR with its owner reportedly exploring a sale — a privileged-access perimeter that the front-door bundle does not natively reach.<sup id="fnref3:wl1"><a class="footnote-ref" href="#fn:wl1">50</a></sup><sup id="fnref:wl9"><a class="footnote-ref" href="#fn:wl9">58</a></sup> Analyst lenses corroborate the structural split: PAM grows fastest of the established disciplines at a 21.72% CAGR off a real revenue base, while the broad IAM aggregate — the access-management home turf — grows slowest off the largest base.<sup id="fnref:wl10"><a class="footnote-ref" href="#fn:wl10">59</a></sup></p>
+<p><strong>My read.</strong> I read Entra&rsquo;s bundled economics as a standing compression force on standalone identity deal sizes, concentrated on the access-management discipline and now extending to agent identity. My view is structural, not a knock on any vendor: when the directory-and-SSO layer is already paid for inside an enterprise agreement, the marginal cost of &ldquo;good enough&rdquo; access management trends toward zero, and a standalone access-management vendor has to clear a higher bar to justify a separate line item — a bar that gets higher, not lower, once Entra gives agents first-class directory identities too. That pressure lands hardest on the front door (access management, Okta&rsquo;s home turf) and lightest on the privilege-specific moat: PAM controls the dangerous accounts at the moment of use, produces a distinct control surface the bundle does not natively cover, and the public record bears this out — PAM is the fastest-growing established discipline, its category originator commanded a ~$25 billion premium, and its contenders are consolidating rather than commoditizing. The category-level claim I will stand behind is that compression sorts the front by <em>defensibility of the discipline</em>: access management is the most exposed to the bundle, governance sits in the middle (the audit calendar gives it independent budget authority), and privileged access is the most structurally defensible. I am grounding this on vendor and analyst proxies, explicitly not on any regulation&rsquo;s timing.</p>
+<p><strong>Conditional prediction.</strong> If, over the next two-to-four quarters, the standalone access-management discipline shows compression in disclosed signals — Okta&rsquo;s revenue growth rate decelerating in earnings, a workforce-IAM pure-play acquired below prior-round marks, or analyst coverage noting Entra Agent ID displacing standalone agent-identity spend — while the PAM contenders sustain premium valuations and disclosed growth (CyberArk-in-Palo Alto, Delinea, a BeyondTrust sale clearing at a multi-billion mark), the compression-sorts-by-defensibility thesis validates. The inverse, weakening signal: a standalone access-management vendor posting accelerating disclosed growth against the Entra bundle, or a PAM contender commoditizing into a flat or down round, which would say the bundle&rsquo;s compression is either weaker or more uniform than the discipline-by-discipline read implies. I am grounding every threshold on earnings-disclosed metrics, dated M&amp;A marks, and analyst category coverage — observable public proxies, not a regulatory effective date.</p>
+<p><strong>Sources.</strong> <sup id="fnref4:wl1"><a class="footnote-ref" href="#fn:wl1">50</a></sup> <sup id="fnref4:wl4"><a class="footnote-ref" href="#fn:wl4">53</a></sup> <sup id="fnref4:wl5"><a class="footnote-ref" href="#fn:wl5">54</a></sup> <sup id="fnref2:wl9"><a class="footnote-ref" href="#fn:wl9">58</a></sup> <sup id="fnref2:wl10"><a class="footnote-ref" href="#fn:wl10">59</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="580" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Entra Compression Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 3 — STATE OF CYBER 2026, FRONT 8</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">Entra's bundled M365/E5 economics — now extending to agent identity — compress standalone deal sizes by discipline-defensibility</text>
+
+  <!-- The compression force -->
+  <rect x="220" y="104" width="360" height="48" fill="#FBBF24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="2" rx="6"/>
+  <text x="400" y="125" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">Microsoft Entra ID — already paid for inside M365 / E5</text>
+  <text x="400" y="142" font-size="9" fill="#fed7aa" text-anchor="middle">Entra Agent ID (GA April 2026) extends the bundle to agent identity — build-not-buy</text>
+
+  <!-- compression arrows down -->
+  <line x1="300" y1="152" x2="200" y2="186" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.75"/>
+  <polygon points="204,179 188,189 207,192" fill="#F59E0B" fill-opacity="0.85"/>
+  <line x1="400" y1="152" x2="400" y2="184" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.7"/>
+  <polygon points="392,178 400,194 408,178" fill="#F59E0B" fill-opacity="0.8"/>
+  <line x1="500" y1="152" x2="600" y2="186" stroke="#92400E" stroke-width="2" stroke-opacity="0.6"/>
+  <polygon points="596,179 612,189 593,192" fill="#92400E" fill-opacity="0.8"/>
+
+  <text x="400" y="178" font-size="9" font-weight="800" fill="#fbbf24" text-anchor="middle">COMPRESSION — heaviest on the left, lightest on the right</text>
+
+  <!-- Three discipline columns sorted by defensibility -->
+  <!-- MOST EXPOSED: Access Management -->
+  <rect x="40" y="198" width="230" height="206" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="155" y="222" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">Access Management</text>
+  <text x="155" y="240" font-size="10" font-weight="700" fill="#fca5a5" text-anchor="middle">MOST EXPOSED to the bundle</text>
+  <text x="155" y="264" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Okta's home turf — the front door</text>
+  <text x="155" y="282" font-size="9.5" fill="#cbd5e1" text-anchor="middle">When the directory + SSO is already</text>
+  <text x="155" y="296" font-size="9.5" fill="#cbd5e1" text-anchor="middle">paid for, "good enough" AM trends to $0</text>
+  <text x="155" y="320" font-size="9.5" fill="#94a3b8" text-anchor="middle">Okta: ~$2.9B FY26 rev, +12% YoY;</text>
+  <text x="155" y="334" font-size="9.5" fill="#94a3b8" text-anchor="middle">bought Axiom (~$100M) reaching for</text>
+  <text x="155" y="348" font-size="9.5" fill="#94a3b8" text-anchor="middle">PAM / NHI ground it didn't natively own</text>
+  <text x="155" y="376" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Broad IAM aggregate grows SLOWEST,</text>
+  <text x="155" y="390" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">off the largest base</text>
+
+  <!-- MIDDLE: IGA -->
+  <rect x="285" y="198" width="230" height="206" fill="#F59E0B" fill-opacity="0.12" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="400" y="222" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">Identity Governance</text>
+  <text x="400" y="240" font-size="10" font-weight="700" fill="#fde68a" text-anchor="middle">MIDDLE — sits in between</text>
+  <text x="400" y="264" font-size="9.5" fill="#cbd5e1" text-anchor="middle">SailPoint · Saviynt</text>
+  <text x="400" y="282" font-size="9.5" fill="#cbd5e1" text-anchor="middle">The audit calendar gives IGA</text>
+  <text x="400" y="296" font-size="9.5" fill="#cbd5e1" text-anchor="middle">independent budget authority —</text>
+  <text x="400" y="310" font-size="9.5" fill="#cbd5e1" text-anchor="middle">audit evidence the bundle doesn't produce</text>
+  <text x="400" y="338" font-size="9.5" fill="#94a3b8" text-anchor="middle">Where agent-access audit evidence</text>
+  <text x="400" y="352" font-size="9.5" fill="#94a3b8" text-anchor="middle">will eventually have to live</text>
+  <text x="400" y="382" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Buying driven by the audit calendar,</text>
+  <text x="400" y="396" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">not the threat calendar</text>
+
+  <!-- MOST DEFENSIBLE: PAM -->
+  <rect x="530" y="198" width="230" height="206" fill="#92400E" fill-opacity="0.18" stroke="#92400E" stroke-width="2" rx="6"/>
+  <text x="645" y="222" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">Privileged Access</text>
+  <text x="645" y="240" font-size="10" font-weight="700" fill="#86efac" text-anchor="middle">MOST DEFENSIBLE</text>
+  <text x="645" y="264" font-size="9.5" fill="#cbd5e1" text-anchor="middle">CyberArk · Delinea · BeyondTrust</text>
+  <text x="645" y="282" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Controls the dangerous accounts at the</text>
+  <text x="645" y="296" font-size="9.5" fill="#cbd5e1" text-anchor="middle">moment of use — a distinct control surface</text>
+  <text x="645" y="310" font-size="9.5" fill="#cbd5e1" text-anchor="middle">the front-door bundle does not reach</text>
+  <text x="645" y="338" font-size="9.5" fill="#94a3b8" text-anchor="middle">~$25B CyberArk premium; Delinea an</text>
+  <text x="645" y="352" font-size="9.5" fill="#94a3b8" text-anchor="middle">active consolidator; PAM consolidating,</text>
+  <text x="645" y="366" font-size="9.5" fill="#94a3b8" text-anchor="middle">not commoditizing</text>
+  <text x="645" y="390" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">PAM grows FASTEST — 21.72% CAGR</text>
+
+  <text x="400" y="426" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Category-level claim: compression sorts the front by defensibility of the DISCIPLINE — not a knock on any vendor. Structural, not a survival call.</text>
+
+  <!-- Falsifiable test footer — mirrors §8.6 Pattern Claim 3 conditional prediction -->
+  <rect x="40" y="438" width="720" height="120" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="458" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
+  <text x="400" y="478" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">COMPRESSION-SORTS-BY-DEFENSIBILITY VALIDATES</tspan> if standalone AM shows compression in disclosed signals — Okta's</text>
+  <text x="400" y="492" font-size="9" fill="#cbd5e1" text-anchor="middle">growth decelerating, a workforce-IAM pure-play acquired below prior marks, or analyst coverage noting Entra Agent ID displacing</text>
+  <text x="400" y="506" font-size="9" fill="#cbd5e1" text-anchor="middle">standalone agent-identity spend — WHILE PAM contenders sustain premium valuations and disclosed growth.</text>
+  <text x="400" y="524" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">THESIS WEAKENS</tspan> if a standalone AM vendor posts accelerating disclosed growth against the bundle, OR a PAM contender commoditizes into a flat/down round.</text>
+  <text x="400" y="546" font-size="8" fill="#64748b" text-anchor="middle">Grounded on earnings-disclosed metrics, dated M&amp;A marks, and analyst category coverage — NOT on any regulatory effective date.</text>
+</svg>
+</div></p>
+<h2>8.7 The Campaign Ahead</h2>
+<p>The decisive signals in this front are unusually easy to watch, because the front&rsquo;s defining motion is M&amp;A and capital allocation — and those move in public, dated press releases, SEC filings, funding announcements, earnings disclosures, and analyst category reports. None of the seven signals below requires privileged access, and not one of them is a regulatory date: this front&rsquo;s analytic trap is to mistake a zero-trust mandate or an AI-governance deadline for a market event, and I am holding every threshold to a public <em>market</em> signal an outsider can monitor through H2 2026.</p>
+<ol>
+<li>
+<p><strong>Does a fourth platform giant buy identity?</strong> Signal: whether a SOC, network, or hyperscale platform beyond Palo Alto, CrowdStrike, Cisco, and Microsoft acquires an identity capability in dated, named-outlet M&amp;A coverage. Threshold: a fourth platform acquisition framed around machine/agent identity confirms the convergence of Pattern Claim 1 as an industry-wide default rather than a three-deal coincidence; a period passing with no further platform identity acquisition leaves the convergence as a striking-but-bounded triad. Primary source: acquirer press releases, SEC Form 8-K filings, and named-outlet M&amp;A coverage.<sup id="fnref:wl11"><a class="footnote-ref" href="#fn:wl11">60</a></sup></p>
+</li>
+<li>
+<p><strong>NHI graduation versus absorption — Aembit&rsquo;s path.</strong> Signal: whether Aembit, the surviving independent NHI pure-play, is acquired by a platform incumbent (CrowdStrike being the most-telegraphed candidate given its existing investor tie) or instead closes a disclosed independent up-round. Threshold: an Aembit acquisition in dated coverage confirms the NHI wave resolves by acqui-graduation (Pattern Claim 2); a disclosed independent up-round with no further NHI absorption says the category retains a standalone-survival path. Primary source: dated funding announcements and named-outlet M&amp;A coverage.<sup id="fnref3:wl7"><a class="footnote-ref" href="#fn:wl7">56</a></sup></p>
+</li>
+<li>
+<p><strong>The Entra agent-identity compression signal.</strong> Signal: whether Entra Agent ID&rsquo;s general availability shows up as compression on standalone access-management economics — Okta&rsquo;s disclosed revenue-growth rate decelerating, a workforce-IAM pure-play acquired below prior marks, or analyst coverage citing Entra displacing standalone agent-identity spend. Threshold: any of those disclosed signals confirms the Entra Compression thesis (Pattern Claim 3) landing on the access-management discipline; accelerating standalone-AM growth against the bundle weakens it. Primary source: Okta and Microsoft earnings disclosures, dated M&amp;A marks, and analyst commentary.<sup id="fnref5:wl5"><a class="footnote-ref" href="#fn:wl5">54</a></sup><sup id="fnref5:wl4"><a class="footnote-ref" href="#fn:wl4">53</a></sup></p>
+</li>
+<li>
+<p><strong>The SailPoint-versus-Saviynt IGA cloud contest.</strong> Signal: whether Saviynt converts its $700 million KKR war chest into disclosed ARR growth, named enterprise displacements, or analyst-category share gains, while SailPoint sustains or compresses its mid-twenties ARR growth (ARR $1.163 billion, +26%). Threshold: disclosed Saviynt traction beyond the round itself validates the cloud-first challenger as a genuine contender for the governance buyer; SailPoint sustaining growth with Saviynt&rsquo;s capital not surfacing as disclosed traction reads the raise as runway, not displacement. Primary source: SailPoint quarterly results (NASDAQ: SAIL) and Saviynt disclosed metrics in named outlets.<sup id="fnref3:wl8"><a class="footnote-ref" href="#fn:wl8">57</a></sup></p>
+</li>
+<li>
+<p><strong>The BeyondTrust sale resolution.</strong> Signal: whether Francisco Partners&rsquo; reportedly-explored multi-billion-dollar sale of BeyondTrust (sourced, unconsummated as of June 2026) converts into a dated transaction, and at what mark. Threshold: a closed BeyondTrust sale into a platform confirms PAM consolidation pulling in even the standalone contenders; a clearing at a premium mark reinforces PAM&rsquo;s defensibility (Pattern Claim 3); the exploration lapsing with the company independent and unchanged says PAM holds as a standalone discipline. Primary source: named-outlet M&amp;A coverage and any acquirer filing.<sup id="fnref3:wl9"><a class="footnote-ref" href="#fn:wl9">58</a></sup></p>
+</li>
+<li>
+<p><strong>Does identity ITDR surface as a disclosed SOC-platform attach metric?</strong> Signal: whether the platform acquirers begin reporting named agent-identity, NHI, or identity-threat-detection-and-response (ITDR) SKUs as disclosed growth drivers in earnings, rather than burying them as undifferentiated identity line-items. Threshold: a named identity/ITDR attach metric disclosed in a platform&rsquo;s earnings confirms the control plane is converging with the SOC at the revenue level, not just the deal level (Pattern Claim 1); continued non-disclosure leaves the convergence visible in M&amp;A but not yet in the P&amp;L. Primary source: Palo Alto, CrowdStrike, Cisco, and Microsoft earnings disclosures and investor materials.<sup id="fnref:wl12"><a class="footnote-ref" href="#fn:wl12">61</a></sup></p>
+</li>
+<li>
+<p><strong>Does an analyst firm formalize a non-human / agent identity market category?</strong> Signal: whether Gartner, Forrester, or a peer publishes a named Magic Quadrant or Market Guide for non-human / machine / agent identity, where today the market lenses diverge most by definition. Threshold: a named, consolidated NHI/agent-identity analyst category confirms the discipline has cohered enough to be tracked as a market in its own right (Pattern Claim 2); continued fragmentation across broad-IAM and machine-identity lenses says the boundary is still being drawn. Primary source: published analyst category reports and vendor announcements citing placement.<sup id="fnref3:wl10"><a class="footnote-ref" href="#fn:wl10">59</a></sup></p>
+</li>
+</ol>
+<hr>
+<h2>References &amp; Footnotes</h2>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:pg1">
+<p>Identity as the substrate of every alert (&ldquo;every alert is an identity did a thing&rdquo;) and the rule that Front 8 treats identity as a distinct buying center (the IAM/PAM org chart is often separate from the data-security org chart) rather than a horizontal layer. State of Cyber Security Markets 2026, taxonomy.md §2.7 and §7 (Part-2 Delta, Layer 1 — Identity).&#160;<a class="footnote-backref" href="#fnref:pg1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg2">
+<p>Access Management (SSO/MFA/CIAM) defined as the front-door identity discipline — proving identity once and carrying it across applications — with Okta as the category anchor (Okta Workforce Identity and Customer Identity / Auth0). Okta, &ldquo;What is Identity and Access Management (IAM)?&rdquo;, accessed 2026-06-17. https://www.okta.com/identity-101/&#160;<a class="footnote-backref" href="#fnref:pg2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg3">
+<p>IGA (Identity Governance &amp; Administration) defined as joiner-mover-leaver lifecycle, access certification, segregation-of-duties, and audit evidence — distinct from the access-management front door. Grand View Research, &ldquo;Identity Governance And Administration Market Report, 2033,&rdquo; accessed 2026-06-17. https://www.grandviewresearch.com/industry-analysis/identity-governance-administration-market-report&#160;<a class="footnote-backref" href="#fnref:pg3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg4">
+<p>PAM (Privileged Access Management) defined as control of crown-jewel/admin accounts, root access, and secrets vaults on a least-privilege-for-the-most-dangerous-accounts principle, with CyberArk as category originator and BeyondTrust/Delinea as contenders. Mordor Intelligence, &ldquo;Privileged Access Management (PAM) Market,&rdquo; accessed 2026-06-17. https://www.mordorintelligence.com/industry-reports/privileged-access-management-pam-market&#160;<a class="footnote-backref" href="#fnref:pg4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg5">
+<p>Non-Human / Workload Identity (NHI) defined as securing service accounts, API keys, machine tokens, and autonomous AI agents — which already outnumber human identities in most enterprises — with Astrix and Aembit as pure-plays. Grand View Research, &ldquo;Non-Human Identity Access Management Market,&rdquo; accessed 2026-06-17. https://www.grandviewresearch.com/industry-analysis/non-human-identity-access-management-market-report&#160;<a class="footnote-backref" href="#fnref:pg5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg6">
+<p>Palo Alto Networks completed its ~USD 25 billion acquisition of CyberArk on 2026-02-11, naming Identity Security a core platform pillar. Verbatim: the addition of the CyberArk Identity Security Platform &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic&rdquo;; CyberArk shareholders received USD 45.00 in cash plus 2.2005 PANW shares per ordinary share; the transaction closed following U.S., EU, UK and Israel regulatory clearances. Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11, accessed 2026-06-17. https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era&#160;<a class="footnote-backref" href="#fnref:pg6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg7">
+<p>CrowdStrike agreed to acquire SGNL (a &ldquo;Continuous Identity&rdquo; vendor) for ~USD 740 million, announced 2026-01-08, predominantly cash. Verbatim rationale: the deal accelerates &ldquo;Next-Gen Identity Security, enabling access for human, non-human (NHI), and AI identities to be continuously granted and revoked based on real-time risk.&rdquo; CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08, accessed 2026-06-17. https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ ; CNBC, &ldquo;CrowdStrike buys identity security startup SGNL for $740 million,&rdquo; 2026-01-08, accessed 2026-06-17, https://www.cnbc.com/2026/01/08/crowdstrike-ai-cybersecurity-sgnl-acquisition.html&#160;<a class="footnote-backref" href="#fnref:pg7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg8">
+<p>Cisco announced its acquisition of Astrix Security (~USD 400 million), a non-human-identity pure-play, in May 2026, to secure the &ldquo;agentic workforce&rdquo; of autonomous AI agents and fold NHI discovery, lifecycle, and threat detection into the Cisco Identity Intelligence platform. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17. https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/&#160;<a class="footnote-backref" href="#fnref:pg8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg9">
+<p>Cross-front boundary policy — SOC/platform incumbents (Microsoft Defender/Sentinel, Palo Alto Cortex, CrowdStrike Falcon, Cisco) are characterized primarily in Front 5 and appear in Front 8 only as identity &ldquo;moves&rdquo; named by their identity product/acquisition, not graded as identity contenders; the consolidation throughline (Palo Alto→CyberArk, CrowdStrike→SGNL, Cisco→Astrix) is a cross-front coherence fact. State of Cyber Security Markets 2026, taxonomy.md §2.7, §7.2 (Boundary Policy §3.5) and §7.3 (Consolidation Throughline).&#160;<a class="footnote-backref" href="#fnref:pg9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pg9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t1">
+<p>Broad IAM lens — Grand View Research sizes the 2026 market at USD 29.68B (from USD 26.77B in 2025) reaching USD 62.90B by 2033 at 11.3% CAGR; MarketsandMarkets puts it at USD 25.96B (2025) → USD 42.61B (2030) at 10.4% CAGR. Grand View Research, &ldquo;Identity And Access Management Market Size Report, 2033,&rdquo; accessed 2026-06-17, https://www.grandviewresearch.com/industry-analysis/identity-and-access-management-iam ; MarketsandMarkets, &ldquo;Identity and Access Management (IAM) Market worth $42.61 billion by 2030,&rdquo; accessed 2026-06-17, https://www.marketsandmarkets.com/PressReleases/identity-access-management-iam.asp&#160;<a class="footnote-backref" href="#fnref:t1" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t2">
+<p>IGA lens (governance/audit, not the front door) — Fortune Business Insights sizes 2026 at USD 10.7B reaching USD 33.1B by 2034 at 15.16% CAGR; GII Research puts 2026 at ~USD 11.04B at 13.89% CAGR. Fortune Business Insights, &ldquo;Identity Governance and Administration Market,&rdquo; accessed 2026-06-17, https://www.fortunebusinessinsights.com/identity-governance-and-administration-market-110229 ; GII Research, &ldquo;Identity Governance &amp; Administration Market — Global Forecast 2026-2032,&rdquo; accessed 2026-06-17, https://www.giiresearch.com/report/ires1978803-identity-governance-administration-market-by.html&#160;<a class="footnote-backref" href="#fnref:t2" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t3">
+<p>PAM lens (crown-jewel accounts) — Mordor Intelligence sizes 2026 at USD 5.17B (from USD 4.25B in 2025) reaching USD 13.83B by 2031 at 21.72% CAGR; North America led with 38.10% share in 2025. Mordor Intelligence, &ldquo;Privileged Access Management (PAM) Market,&rdquo; accessed 2026-06-17. https://www.mordorintelligence.com/industry-reports/privileged-access-management-pam-market&#160;<a class="footnote-backref" href="#fnref:t3" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t4">
+<p>Non-human / machine identity lens — Grand View Research sizes NHI access management at USD 12.44B (2026, from USD 11.14B in 2025) reaching USD 27.33B by 2033 at 11.9% CAGR; MarketsandMarkets, on a narrower scope, sizes NHI access management at USD 9.45B (2024) → USD 18.71B (2030) at 11.9% CAGR. The figures diverge most by definition (no firm-level agreement on the machine-identity boundary). Grand View Research, &ldquo;Non-Human Identity Access Management Market,&rdquo; accessed 2026-06-17, https://www.grandviewresearch.com/industry-analysis/non-human-identity-access-management-market-report ; MarketsandMarkets, &ldquo;Non-Human Identity (NHI) Access Management Market worth USD 18.71 billion by 2030,&rdquo; accessed 2026-06-17, https://www.marketsandmarkets.com/PressReleases/non-human-identity-nhi-access-management.asp&#160;<a class="footnote-backref" href="#fnref:t4" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t5">
+<p>Capital-allocation signal that identity security is a growth center — the §8.1 consolidation triad (Palo Alto→CyberArk ~$25B, CrowdStrike→SGNL ~$740M, Cisco→Astrix ~$400M, all within ~13 months), plus Saviynt&rsquo;s ~USD 700M raise at ~USD 3B valuation led by KKR (December 2025) and SailPoint&rsquo;s return to the public markets (NASDAQ: SAIL). SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17, https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/ ; CNBC, &ldquo;CrowdStrike buys identity security startup SGNL for $740 million,&rdquo; 2026-01-08, accessed 2026-06-17, https://www.cnbc.com/2026/01/08/crowdstrike-ai-cybersecurity-sgnl-acquisition.html&#160;<a class="footnote-backref" href="#fnref:t5" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t6">
+<p>Agentic-AI / NHI demand driver grounded on shipped product and stated acquisition rationale (not regulatory dates) — CrowdStrike&rsquo;s SGNL deal to grant/revoke access for &ldquo;human, non-human (NHI), and AI identities&rdquo; in real time, Cisco&rsquo;s Astrix deal for &ldquo;the agentic workforce,&rdquo; and Microsoft Entra Agent ID reaching general availability in April 2026 to give AI agents first-class directory identities. CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08, accessed 2026-06-17, https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ ; Cisco / SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17, https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/&#160;<a class="footnote-backref" href="#fnref:t6" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t7">
+<p>NHI pure-plays graduating from feature to funded category — Astrix Security (acquired by Cisco, ~$400M, May 2026) and Aembit (workload-identity platform; CrowdStrike among its investors), illustrating that non-human / workload identity has become a standalone funded discipline rather than a sub-feature of legacy IAM. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17. https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/&#160;<a class="footnote-backref" href="#fnref:t7" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c1">
+<p>Okta homepage, hero &ldquo;Okta secures AI&rdquo; with sub-headline &ldquo;And every other identity, from machine to human.&rdquo; and pillar &ldquo;To get AI agent security right, you have to get identity right.&rdquo; https://www.okta.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c1" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c1" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c2">
+<p>Okta reported FY2026 revenue of ~USD 2.9B (up ~12% YoY) and guided FY2027 to ~USD 3.185–3.205B; in August 2025 Okta acquired Axiom Security (privileged access / non-human identity) for a figure reported at ~USD 100M, extending toward the PAM and NHI disciplines. Okta Investor Relations / FY2026 results, https://investor.okta.com/overview/default.aspx ; TechCrunch / named-outlet coverage of the Axiom Security acquisition (August 2025) (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c2" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c3">
+<p>SailPoint homepage, hero &ldquo;The new era of adaptive identity,&rdquo; sub-headline &ldquo;Identity-first security for humans, machines, and AI,&rdquo; and section pillar &ldquo;One platform to secure every identity&rdquo;; body &ldquo;Adaptive identity security, powered in real time.&rdquo; https://www.sailpoint.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c3" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c3" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c4">
+<p>SailPoint trades on NASDAQ under SAIL (~USD 14.80 on 2026-06-15) following its return to the public markets; Q1 FY2027 revenue USD 280M (up 22% YoY) and ARR USD 1.163B (up 26%); CEO Mark McClain, CPO Levent Besik; a June 8, 2026 board change (a Thoma Bravo designee seat) is routine and not a disagreement. SailPoint Investor Relations / Q1 FY2027 results, https://investors.sailpoint.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c4" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c5">
+<p>Saviynt homepage, hero &ldquo;We Deliver Enterprise Control Over AI.&rdquo; with sub-headline &ldquo;Build and deploy AI innovation with complete confidence. Saviynt secures every identity — human, non-human, and AI.&rdquo;; section pillar &ldquo;See. Enforce. Govern. Every AI agent, everywhere, for every action.&rdquo;; tagline &ldquo;Identity security for AI. AI for Identity Security.&rdquo; https://saviynt.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c5" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c5" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c6">
+<p>Saviynt raised USD 700M at a ~USD 3B valuation in a round led by KKR that closed 2025-12-09, with Sixth Street, TenEleven, and Carrick participating. Named-outlet funding coverage (December 2025); https://saviynt.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c6" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c7">
+<p>CyberArk Identity Security Platform, platform pillar &ldquo;Secure every identity — human, machine and AI — with the right level of privilege controls.&rdquo;; supporting line &ldquo;Seamlessly secure identities throughout the cycle of accessing any resource across any infrastructure, including hybrid, SaaS and multi-cloud.&rdquo; https://www.cyberark.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c7" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c7" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c8">
+<p>Palo Alto Networks completed its acquisition of CyberArk on 2026-02-11 in a transaction valued at ~USD 25B (USD 45.00 cash plus 2.2005 PANW shares per CyberArk ordinary share; 99.8% shareholder approval), naming CyberArk its Identity Security pillar; verbatim rationale: the addition &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic.&rdquo; Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11. https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c8" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c9">
+<p>BeyondTrust homepage, verbatim pillar &ldquo;BeyondTrust discovers agentic identities across AWS, Azure, Google, OpenAI, Salesforce, and ServiceNow, then enforces the same privilege controls that secure your human administrators.&rdquo; https://www.beyondtrust.com/ (live homepage pillar retrieved via search index 2026-06-17; the vendor surface returns HTTP 403 to direct automated fetch) (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c9" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c9" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c10">
+<p>BeyondTrust has been majority-owned by Francisco Partners since 2018 (Clearlake Capital minority); ~USD 500M ARR by widely-cited reporting; Francisco Partners is reportedly <em>exploring</em> a multi-billion-dollar sale of the company — an early-stage process, no transaction announced, consistent with a hold past the typical PE duration. Flagged per §2.4b as sourced exit-pressure to watch, not a casualty or distress assertion. Named-outlet reporting (Reuters / Bloomberg-type coverage of the exploration); https://www.beyondtrust.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c10" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c11">
+<p>Delinea homepage, hero &ldquo;The future of identity security is continuous&rdquo; and tagline &ldquo;Access granted isn&rsquo;t access secured. Delinea continuously authorizes every identity, session, and action — protecting your human and agentic workforce with control that goes far beyond login.&rdquo;; platform &ldquo;powered by Iris AI.&rdquo; https://delinea.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c11" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c11" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c12">
+<p>Delinea (Thycotic + Centrify post-merger, TPG-backed) acquired StrongDM — announced 2026-01-15, completed 2026-03-05, terms undisclosed — unifying its PAM heritage with StrongDM&rsquo;s just-in-time runtime-authorization layer for non-human and AI-agent access (&ldquo;Delinea Iris AI&rdquo;). Named-outlet acquisition coverage (January–March 2026); https://delinea.com/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c12" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c13">
+<p>Astrix Security homepage, hero &ldquo;Discover, secure, and deploy AI agents responsibly across the enterprise&rdquo;; tagline &ldquo;AI Agents + NHIs &gt; Humans&rdquo;; pillars &ldquo;Discover. Secure. Deploy.&rdquo; and &ldquo;Secure the Identities that Matter&rdquo;; framing that the vast majority of non-human identities are ungoverned. https://astrix.security/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c13" title="Jump back to footnote 29 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c13" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c14">
+<p>Cisco completed its acquisition of Astrix Security (a non-human-identity pure-play) at a figure reported at ~USD 400M, announced May 2026, folding NHI discovery, lifecycle, and threat detection into Cisco Identity Intelligence (alongside Duo, Secure Access, and Splunk); Astrix had raised ~USD 85M total, anchored by a USD 45M Series B (December 2024) with Menlo Ventures among investors. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/ ; https://www.crunchbase.com/organization/astrix-security (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c14" title="Jump back to footnote 30 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c14" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c15">
+<p>Aembit homepage, hero &ldquo;IAM for Agentic AI&rdquo; with line &ldquo;Aembit enforces access to sensitive data and accelerates AI use with confidence through policy, context, and audit based on unique agent identities.&rdquo;; pillars &ldquo;Secretless Authentication,&rdquo; &ldquo;Secure Autonomy,&rdquo; &ldquo;Access, Not Secrets or Certs,&rdquo; &ldquo;Policy-Driven, Not Script-Driven,&rdquo; &ldquo;Cloud-Native, Enterprise-Grade&rdquo; (SOC 2 and ISO 27001 certified). https://aembit.io/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c15" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c15" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c16">
+<p>Aembit has raised approximately ~USD 45M in total, anchored by a USD 25M Series A (September 2024) led by Acrew Capital, with CrowdStrike among its investors alongside Ballistic Ventures and Ten Eleven Ventures; &ldquo;IAM for Agentic AI&rdquo; positioned as generally available in 2026. CrowdStrike separately agreed to acquire SGNL for a sum reported at ~USD 740M (announced 2026-01-08). Named-outlet funding coverage (September 2024); https://aembit.io/ ; https://www.crunchbase.com/organization/aembit (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:c16" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl1">
+<p>Palo Alto Networks completed its ~USD 25 billion acquisition of CyberArk on 2026-02-11, naming Identity Security a core platform pillar. Verbatim: the addition of the CyberArk Identity Security Platform &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic.&rdquo; CyberArk shareholders received USD 45.00 in cash plus 2.2005 PANW shares per ordinary share; closed following U.S., EU, UK, and Israel regulatory clearances. Palo Alto Networks is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of CyberArk. Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11, https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl1" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl1" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:pl1" title="Jump back to footnote 33 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:pl1" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl2">
+<p>CrowdStrike announced its ~USD 740 million acquisition of SGNL on 2026-01-08 (predominantly cash) and shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on 2026-06-15. Verbatim rationale: the deal accelerates &ldquo;Next-Gen Identity Security, enabling access for human, non-human (NHI), and AI identities to be continuously granted and revoked based on real-time risk.&rdquo; CrowdStrike is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of SGNL. CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08, https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ (accessed 2026-06-17); CNBC, &ldquo;CrowdStrike buys identity security startup SGNL for $740 million,&rdquo; 2026-01-08, https://www.cnbc.com/2026/01/08/crowdstrike-ai-cybersecurity-sgnl-acquisition.html (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl2" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl2" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:pl2" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl3">
+<p>Cisco announced its acquisition of Astrix Security (~USD 400 million), a non-human-identity pure-play, in May 2026 (announced 2026-05-04), to secure the &ldquo;agentic workforce&rdquo; of autonomous AI agents and fold NHI discovery, lifecycle, and threat detection into Cisco Identity Intelligence (with Duo, Secure Access, and Splunk). Astrix had raised a $45M Series B in December 2024 (Menlo Ventures; ~$85M total). Cisco is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of Astrix. This same event is referenced as a §8.3 Wildcard card (Astrix the vendor) and here as a §8.4 Play (the Cisco/Astrix move) — one event, two angles. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl3" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl3" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:pl3" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:pl3" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl4">
+<p>Microsoft Entra Agent ID reached general availability in April 2026, making AI-agent identities a first-class construct inside Agent 365 (governance-for-agents GA early May 2026; previewed at RSAC March 2026). Microsoft is characterized primarily in Front 5; in Front 8 it appears only as the build-not-buy identity move. Microsoft Learn / Tech Community, &ldquo;Microsoft Entra Agent ID,&rdquo; 2026, https://learn.microsoft.com/en-us/entra/identity/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl4" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl4" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl5">
+<p>Delinea (private; Thycotic + Centrify; TPG-backed) completed its acquisition of StrongDM (announced 2026-01-15, completed 2026-03-05; terms undisclosed), unifying PAM with just-in-time runtime authorization for non-human and AI-agent access under the &ldquo;Delinea Iris AI&rdquo; banner. Delinea / GlobeNewswire, StrongDM acquisition, completed 2026-03-05, https://delinea.com/news (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl5" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl5" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl6">
+<p>BeyondTrust (private; Francisco Partners majority since 2018, Clearlake minority; ~$500M ARR): Francisco Partners is reportedly exploring a multi-billion-dollar sale of BeyondTrust (early-stage, no deal announced) — sourced but unconsummated, framed here as a §2.4b exit-pressure watch item, not a distress assertion. First reported by Bloomberg (2025-08-13); Private Equity Wire and CyberExperts coverage, https://www.privateequitywire.co.uk/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl6" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl6" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl7">
+<p>SailPoint (NASDAQ: SAIL): returned to the public markets after its Thoma Bravo ownership period; Q1 FY2027 revenue $280M (+22% YoY), ARR $1.163B (+26% YoY); ~$14.80/share as of 2026-06-15 (52-week range $10.30–24.95). SailPoint investor relations and stockanalysis.com/stocks/sail, June 2026 (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl7" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl7" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl8">
+<p>Saviynt (private; cloud-first IGA): raised USD 700 million at roughly a USD 3 billion valuation in a KKR-led round that closed 2025-12-09 (Sixth Street, TenEleven, and Carrick also participating), with the AI-identity-governance thesis as its explicit pitch. Saviynt press release and SecurityWeek, &ldquo;Saviynt Raises $700M,&rdquo; 2025-12-09, https://saviynt.com/press-release (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl8" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl8" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl9">
+<p>Aembit (private; &ldquo;IAM for Agentic AI&rdquo; / workload-identity platform): ~$45M raised (Series A $25M, September 2024); investors include CrowdStrike, TenEleven, and Ballistic Ventures. The CrowdStrike strategic-investor tie is noted as a forward-looking M&amp;A watch item given CrowdStrike&rsquo;s own SGNL acquisition. Aembit, company and funding pages, September 2024, https://aembit.io/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:pl9" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:pl9" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w1">
+<p>Okta (NASDAQ: OKTA): independent public company; FY2026 revenue ~USD 2.919 billion (+12% YoY); FY2027 guide $3.185–3.205B. Acquired Axiom Security (PAM/NHI) for ~$100M in August 2025. Okta FY2026 8-K, sec.gov/Archives/edgar/data/0001660134 (accessed 2026-06-17); Okta newsroom, Axiom Security acquisition, August 2025, https://www.okta.com/newsroom/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w1" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w2">
+<p>CyberArk (was NASDAQ: CYBR): acquired by Palo Alto Networks for ~USD 25 billion, completed 2026-02-11 (99.8% shareholder approval); now PANW&rsquo;s Identity Security pillar. A consolidation exit at a premium price, not a distress event. Palo Alto Networks, &ldquo;Completes Acquisition of CyberArk,&rdquo; 2026-02-11, https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w2" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w3">
+<p>SailPoint (NASDAQ: SAIL): re-IPO&rsquo;d from Thoma Bravo; Q1 FY2027 revenue $280M (+22% YoY), ARR $1.163B (+26% YoY). A June 8, 2026 board change (Thoma Bravo designee) is routine and explicitly not a disagreement. SailPoint IR and stockanalysis.com/stocks/sail, June 2026 (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w3" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w4">
+<p>BeyondTrust (private): Francisco Partners majority since 2018 (Clearlake minority); ~$500M ARR. Francisco Partners reportedly exploring a multi-billion-dollar sale — sourced, unconsummated, past a typical 3–7 year PE hold. Framed as a §2.4b exit-pressure flag, not a distress assertion. First reported by Bloomberg (2025-08-13); Private Equity Wire and CyberExperts coverage, https://www.privateequitywire.co.uk/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w4" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w5">
+<p>Saviynt (private): raised USD 700 million at ~USD 3 billion valuation, KKR-led, closed 2025-12-09 (Sixth Street, TenEleven, Carrick). The war-chest high mark of the front. Saviynt press release and SecurityWeek, 2025-12-09, https://saviynt.com/press-release (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w5" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w6">
+<p>Delinea (private; TPG-backed): acquired StrongDM (announced 2026-01-15, completed 2026-03-05; terms undisclosed) to unify PAM with JIT runtime authorization for NHI/AI-agent access. An active acquirer, not a target. Delinea / GlobeNewswire, completed 2026-03-05, https://delinea.com/news (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w6" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w7">
+<p>Astrix Security (was independent NHI pure-play): acquired by Cisco for ~USD 400 million, announced May 2026 (2026-05-04); had raised a $45M Series B in December 2024 (Menlo Ventures; ~$85M total). A consolidation exit / graduation into a platform, not a distress event. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security,&rdquo; 2026-05-06, https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w7" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w8">
+<p>Aembit (private): ~$45M raised; Series A $25M (September 2024); investors include CrowdStrike, TenEleven, and Ballistic Ventures. Still independent; the CrowdStrike tie is a forward M&amp;A watch item. Aembit, company and funding pages, September 2024, https://aembit.io/ (accessed 2026-06-17).&#160;<a class="footnote-backref" href="#fnref:w8" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl1">
+<p>Palo Alto Networks completed its ~USD 25 billion acquisition of CyberArk on 2026-02-11, naming Identity Security a core platform pillar. Verbatim: the addition of the CyberArk Identity Security Platform &ldquo;enables Palo Alto Networks to secure every identity across the enterprise — human, machine, and agentic.&rdquo; CyberArk shareholders received USD 45.00 in cash plus 2.2005 PANW shares per ordinary share; the transaction closed following U.S., EU, UK, and Israel regulatory clearances. Palo Alto Networks is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of CyberArk. Palo Alto Networks, &ldquo;Palo Alto Networks Completes Acquisition of CyberArk to Secure the AI Era,&rdquo; 2026-02-11, accessed 2026-06-17. https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era&#160;<a class="footnote-backref" href="#fnref:wl1" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl1" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl1" title="Jump back to footnote 50 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl1" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl2">
+<p>CrowdStrike announced its ~USD 740 million acquisition of SGNL (a &ldquo;Continuous Identity&rdquo; vendor) on 2026-01-08, predominantly cash, and shipped &ldquo;Continuous Identity for AI Agents&rdquo; at Identiverse on 2026-06-15. Verbatim rationale: the deal accelerates &ldquo;Next-Gen Identity Security, enabling access for human, non-human (NHI), and AI identities to be continuously granted and revoked based on real-time risk.&rdquo; CrowdStrike is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of SGNL. CrowdStrike, &ldquo;CrowdStrike to Acquire SGNL to Transform Identity Security for the AI Era,&rdquo; 2026-01-08, accessed 2026-06-17. https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-sgnl-to-transform-identity-security-for-ai-era/ ; CNBC, &ldquo;CrowdStrike buys identity security startup SGNL for $740 million,&rdquo; 2026-01-08, accessed 2026-06-17, https://www.cnbc.com/2026/01/08/crowdstrike-ai-cybersecurity-sgnl-acquisition.html&#160;<a class="footnote-backref" href="#fnref:wl2" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl2" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl2" title="Jump back to footnote 51 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl2" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl3">
+<p>Cisco announced its acquisition of Astrix Security (~USD 400 million), a non-human-identity pure-play, in May 2026 (announced 2026-05-04), to secure the &ldquo;agentic workforce&rdquo; of autonomous AI agents and fold NHI discovery, lifecycle, and threat detection into Cisco Identity Intelligence (alongside Duo, Secure Access, and Splunk). Astrix had raised a $45M Series B in December 2024 (Menlo Ventures; ~$85M total). Cisco is characterized primarily in Front 5; in Front 8 it appears only as the acquirer of Astrix. SecurityWeek, &ldquo;Cisco Moves to Acquire Astrix Security to Tackle Non-Human Identity Risks,&rdquo; 2026-05-06, accessed 2026-06-17. https://www.securityweek.com/cisco-moves-to-acquire-astrix-security-to-tackle-non-human-identity-risks/&#160;<a class="footnote-backref" href="#fnref:wl3" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl3" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl3" title="Jump back to footnote 52 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl3" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl4">
+<p>Microsoft Entra Agent ID reached general availability in April 2026, making AI-agent identities a first-class construct inside Agent 365 (governance-for-agents GA early May 2026; previewed at RSAC March 2026). Microsoft is characterized primarily in Front 5; in Front 8 it appears only as the build-not-buy identity move. Microsoft Learn / Tech Community, &ldquo;Microsoft Entra Agent ID,&rdquo; 2026, accessed 2026-06-17. https://learn.microsoft.com/en-us/entra/identity/&#160;<a class="footnote-backref" href="#fnref:wl4" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl4" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl4" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl4" title="Jump back to footnote 53 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:wl4" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl5">
+<p>Okta reported FY2026 revenue of ~USD 2.9 billion (up ~12% YoY) and guided FY2027 to ~USD 3.185–3.205 billion; in August 2025 Okta acquired Axiom Security (privileged access / non-human identity) for a figure reported at ~USD 100 million, extending toward the PAM and NHI disciplines. Okta Investor Relations / FY2026 results, https://investor.okta.com/overview/default.aspx ; named-outlet coverage of the Axiom Security acquisition (August 2025), accessed 2026-06-17.&#160;<a class="footnote-backref" href="#fnref:wl5" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl5" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl5" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl5" title="Jump back to footnote 54 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:wl5" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl6">
+<p>As of 2026-06-17, six of the eight identity-native vendors graded in §8.3 lead their live homepages with the human-machine-AI identity triad — Okta (&ldquo;Okta secures AI. And every other identity, from machine to human.&rdquo;), SailPoint (&ldquo;identity-first security for humans, machines, and AI&rdquo;), Saviynt (securing &ldquo;every identity — human, non-human, and AI&rdquo;), Delinea (protecting &ldquo;your human and agentic workforce&rdquo;), CyberArk (&ldquo;secure every identity — human, machine and AI&rdquo;), and Aembit (&ldquo;IAM for Agentic AI&rdquo;). Vendor homepages, accessed 2026-06-17. https://www.okta.com/ ; https://www.sailpoint.com/ ; https://saviynt.com/ ; https://delinea.com/ ; https://www.cyberark.com/ ; https://aembit.io/&#160;<a class="footnote-backref" href="#fnref:wl6" title="Jump back to footnote 55 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl6" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl7">
+<p>Aembit (private; &ldquo;IAM for Agentic AI&rdquo; / workload-identity platform): ~USD 45 million raised, anchored by a USD 25 million Series A (September 2024); investors include CrowdStrike, Ten Eleven Ventures, and Ballistic Ventures; &ldquo;IAM for Agentic AI&rdquo; positioned as generally available in 2026. The CrowdStrike strategic-investor tie is noted as a forward-looking M&amp;A watch item given CrowdStrike&rsquo;s own ~$740 million SGNL acquisition (announced 2026-01-08). Aembit Series A coverage, September 2024, https://aembit.io/ ; https://www.crunchbase.com/organization/aembit, accessed 2026-06-17.&#160;<a class="footnote-backref" href="#fnref:wl7" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl7" title="Jump back to footnote 56 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl7" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl8">
+<p>Saviynt raised USD 700 million at a ~USD 3 billion valuation in a KKR-led round that closed 2025-12-09 (Sixth Street, TenEleven, and Carrick participating), on an explicit AI-identity-governance pitch. SailPoint (NASDAQ: SAIL) returned to the public markets and reported Q1 FY2027 revenue of USD 280 million (+22% YoY) and ARR of USD 1.163 billion (+26% YoY). On the NHI lens, Grand View Research sizes non-human identity access management at USD 12.44 billion in 2026 reaching USD 27.33 billion by 2033 at 11.9% CAGR, while MarketsandMarkets sizes a narrower NHI scope at USD 9.45 billion (2024) → USD 18.71 billion (2030); the figures diverge most by definition. Named-outlet funding coverage (December 2025); SailPoint Investor Relations / Q1 FY2027 results, https://investors.sailpoint.com/ ; Grand View Research, &ldquo;Non-Human Identity Access Management Market,&rdquo; https://www.grandviewresearch.com/industry-analysis/non-human-identity-access-management-market-report, accessed 2026-06-17.&#160;<a class="footnote-backref" href="#fnref:wl8" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl8" title="Jump back to footnote 57 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl8" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl9">
+<p>BeyondTrust (private): majority-owned by Francisco Partners since 2018 (Clearlake Capital a minority holder); ~USD 500 million in ARR by widely-cited reporting; Francisco Partners is reportedly exploring a multi-billion-dollar sale of the company — an early-stage process, no transaction announced, consistent with a hold past a typical 3–7 year private-equity duration. Flagged per §2.4b as sourced exit-pressure to watch, not a casualty or distress assertion. Delinea (TPG-backed) separately completed its acquisition of StrongDM (announced 2026-01-15, completed 2026-03-05; terms undisclosed), unifying PAM with just-in-time runtime authorization for non-human and AI-agent access. Named-outlet reporting (Private Equity Wire / Reuters-type coverage of the exploration), https://www.privateequitywire.co.uk/ ; Delinea / GlobeNewswire, StrongDM acquisition, https://delinea.com/news, accessed 2026-06-17.&#160;<a class="footnote-backref" href="#fnref:wl9" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl9" title="Jump back to footnote 58 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl9" title="Jump back to footnote 58 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl10">
+<p>PAM grows fastest of the established disciplines — Mordor Intelligence sizes the PAM market at USD 5.17 billion in 2026 (from USD 4.25 billion in 2025) reaching USD 13.83 billion by 2031 at a 21.72% CAGR; the broad IAM aggregate (access-management-dominated) grows slowest off the largest base (Grand View Research: USD 29.68 billion in 2026 → USD 62.90 billion by 2033 at 11.3% CAGR). Mordor Intelligence, &ldquo;Privileged Access Management (PAM) Market,&rdquo; https://www.mordorintelligence.com/industry-reports/privileged-access-management-pam-market ; Grand View Research, &ldquo;Identity And Access Management Market Size Report, 2033,&rdquo; https://www.grandviewresearch.com/industry-analysis/identity-and-access-management-iam, accessed 2026-06-17.&#160;<a class="footnote-backref" href="#fnref:wl10" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl10" title="Jump back to footnote 59 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl10" title="Jump back to footnote 59 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl11">
+<p>Acquirer press releases, SEC Form 8-K filings, and named-outlet M&amp;A coverage are the public source class for any fourth-platform identity acquisition. SEC EDGAR full-text search, accessed 2026-06-17. https://www.sec.gov/edgar/search/&#160;<a class="footnote-backref" href="#fnref:wl11" title="Jump back to footnote 60 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl12">
+<p>Quarterly earnings disclosures and investor materials from Palo Alto Networks, CrowdStrike, Cisco, and Microsoft are the public source class for any named agent-identity / NHI / ITDR attach metric reported as a disclosed growth driver. Company investor-relations pages and SEC filings, accessed 2026-06-17. https://investors.paloaltonetworks.com/ ; https://ir.crowdstrike.com/ ; https://investor.cisco.com/overview/default.aspx ; https://www.microsoft.com/en-us/investor/default&#160;<a class="footnote-backref" href="#fnref:wl12" title="Jump back to footnote 61 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+<section class="back-disclosures">
+<h2>Disclosures</h2>
+<p><strong>DISCLOSURE.</strong> The author is Head of Product (Fractional) at AXIA. This chapter uses only publicly available material and reflects the author's personal view; AXIA does not compete in the Identity & Access Management (IAM / IGA / PAM / Non-Human Identity) segment.</p>
+<p><strong>NOT ADVICE.</strong> This report does not constitute investment, legal, tax, or accounting advice. No claim should be relied upon as the basis for any investment decision. The author holds no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+</section>
+</body>
+</html>

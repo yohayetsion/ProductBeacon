@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noai,noimageai">
+<meta charset="utf-8">
+<title>ProductBeacon — State of Cyber Security Markets 2026, Front 6: The Edge Theater</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+@page {
+    size: A4;
+    margin: 1in 0.85in 0.9in 0.85in;
+    @bottom-center { content: counter(page); font-size: 9pt; color: #6b7280; font-family: 'Manrope', sans-serif; }
+    @top-right { content: "ProductBeacon — State of Cyber Security Markets 2026, Front 6: The Edge Theater"; font-size: 9pt; color: #9ca3af; font-family: 'Manrope', sans-serif; }
+}
+@page :first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Manrope', 'Calibri', -apple-system, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── COVER PAGE (single A4 page; disclosure pushed to footer) ── */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding: 2.4in 0.4in 0 0.4in;
+    margin: 0;
+    position: relative;
+    min-height: 9in;
+}
+.cover .brand-bar-top {
+    display: block;
+    height: 6px;
+    background: #F59E0B;
+    margin: -2.4in -0.85in 0.5in -0.85in;
+}
+.cover .brand-bar-bottom { display: none; }
+.cover .imprint { font-size: 10pt; letter-spacing: 3pt; color: #92400E; font-weight: 700; margin: 1.6in 0 0.4in 0; }
+.cover h1 {
+    color: #92400E;
+    font-size: 28pt;
+    font-weight: 800;
+    margin: 0 0 0.55in 0;
+    border: none;
+    line-height: 1.2;
+    padding: 0;
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+.cover .author-block { font-size: 11pt; color: #4a4a4a; margin-bottom: 0.15in; }
+.cover .author-block strong { display: block; font-size: 13pt; color: #1a1a1a; margin-bottom: 4pt; }
+.cover .date { font-size: 10pt; color: #6b7280; margin-top: 0.4in; }
+
+/* ── BACK-MATTER DISCLOSURES (end of document) ── */
+.back-disclosures { page-break-before: always; padding-top: 6pt; }
+.back-disclosures h2 { color: #92400E; font-size: 16pt; font-weight: 800; border-bottom: 2px solid #F59E0B; padding-bottom: 6pt; margin: 0 0 14pt 0; letter-spacing: 0.5pt; }
+.back-disclosures p { font-size: 9.5pt; line-height: 1.6; color: #374151; margin: 0 0 11pt 0; text-align: justify; font-style: italic; }
+.back-disclosures p strong { color: #92400E; font-style: normal; font-weight: 700; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; font-size: 10pt; }
+
+/* ── HEADINGS ── */
+h1 { color: #92400E; font-size: 22pt; font-weight: 800; border-bottom: 3px solid #F59E0B; padding-bottom: 6pt; margin-top: 0; margin-bottom: 16pt; page-break-before: always; page-break-after: avoid; }
+h2 { color: #1a1a1a; font-size: 16pt; font-weight: 700; margin-top: 24pt; margin-bottom: 10pt; border-bottom: 1px solid #F59E0B; padding-bottom: 4pt; page-break-after: avoid; }
+h3 { color: #92400E; font-size: 12.5pt; font-weight: 700; margin-top: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
+h4 { color: #374151; font-size: 11pt; font-weight: 700; margin-top: 12pt; margin-bottom: 4pt; page-break-after: avoid; }
+
+/* ── PROSE ── */
+p { margin: 0 0 9pt 0; text-align: justify; orphans: 3; widows: 3; }
+strong { color: #111827; }
+em { color: #374151; }
+a { color: #92400E; text-decoration: none; }
+ul, ol { margin: 6pt 0 10pt 22pt; padding: 0; }
+li { margin-bottom: 4pt; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 16pt 0; }
+
+/* ── BLOCKQUOTES (Pattern Claim callouts) ── */
+blockquote { border-left: 4px solid #F59E0B; background: #FFFBEB; padding: 12pt 16pt; margin: 14pt 0; page-break-inside: avoid; border-radius: 0 4px 4px 0; }
+blockquote h3 { color: #92400E; margin-top: 0; font-size: 12pt; }
+blockquote p { margin-bottom: 7pt; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong { color: #92400E; }
+
+/* ── TABLES ── */
+table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+thead { background: #FEF3C7; }
+th { color: #92400E; padding: 7pt 9pt; text-align: left; border-bottom: 2px solid #F59E0B; font-weight: 700; vertical-align: top; }
+td { padding: 6pt 9pt; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.45; }
+tbody tr:nth-child(even) td { background: #fafafa; }
+
+/* ── IMAGES ── */
+img { max-width: 100%; display: block; margin: 14pt auto; page-break-inside: avoid; }
+figure { margin: 14pt 0; page-break-inside: avoid; }
+figcaption { font-size: 9pt; color: #6b7280; text-align: center; margin-top: 4pt; font-style: italic; }
+
+/* ── CODE ── */
+code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; background: #f3f4f6; padding: 1pt 4pt; border-radius: 3px; color: #92400E; }
+pre { background: #f3f4f6; padding: 10pt; border-radius: 4px; font-size: 9pt; overflow-x: auto; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+
+/* ── DISCLAIMER & DISCLOSURE ── */
+.disclosure { background: #FFFBEB; border: 1px solid #FBBF24; padding: 10pt 14pt; font-size: 9.5pt; color: #92400E; margin: 14pt 0; font-style: italic; border-radius: 4px; }
+
+/* ── FOOTNOTES (markdown extension renders these as a section) ── */
+.footnote, [id^="fn-"] { font-size: 9pt; color: #4b5563; }
+.footnote ol, ol.footnote { padding-left: 18pt; }
+hr.footnote { border-top: 1px solid #e5e7eb; margin-top: 24pt; }
+sup, .footnote-ref { font-size: 7.5pt; vertical-align: super; }
+sup a { color: #92400E; font-weight: 700; }
+
+/* ── PRINT TWEAKS ── */
+@media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+</head>
+<body>
+<section class="cover">
+<div class="brand-bar-top"></div>
+<div class="imprint">PRODUCTBEACON</div>
+<h1>ProductBeacon — State of Cyber Security Markets 2026, Front 6: The Edge Theater</h1>
+<div class="author-block">
+<strong>Yohay Etsion</strong>
+Managing Director, ProductBeacon
+</div>
+<div class="date">2026-06-16</div>
+</section>
+
+<blockquote>
+<p><em>Impartial cyber market research, published on the open web. No vendor sponsors, no paywalled data, no analyst-firm reuse: only publicly verifiable signals. Authored by Yohay Etsion, Head of Product (Fractional) at AXIA; AXIA does not compete in the Secure Service Edge (SASE / SSE / ZTNA) segment.</em> <a href="/research/methodology.html">Read the full methodology →</a></p>
+</blockquote>
+<p><em>By Yohay Etsion · Head of Product (Fractional), AXIA · Creator of Product Org OS · Author of Leading the Charge (2003) and Vision to Value (coming 2026)</em></p>
+<hr>
+<h2>6.1 The Playing Ground</h2>
+<p>The Edge segment is where an organization decides who and what is allowed to reach its applications, and inspects the traffic that flows to and from them, no matter where the user or the workload sits. For two decades that job lived in a hardware perimeter — a firewall at the office, a VPN concentrator for anyone outside it. The cloud and the remote-work shift dissolved that perimeter, and the security stack that replaced it moved to the edge of the network as a cloud-delivered service. Three terms describe that stack, and they are routinely conflated, so it is worth separating them cleanly.</p>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="900" height="660" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="900" height="6" fill="#F59E0B"/>
+
+  <text x="450" y="42" font-size="22" font-weight="700" fill="#FBBF24" text-anchor="middle">Where Secure Service Edge Sits in the Cyber Stack</text>
+  <text x="450" y="62" font-size="11" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 6</text>
+
+  <!-- Nested rings: SASE (outer) ⊃ SSE (middle) ⊃ ZTNA (inner) -->
+
+  <!-- SASE — widest ring -->
+  <rect x="150" y="100" width="600" height="430" rx="16" fill="#92400E" fill-opacity="0.18" stroke="#F59E0B" stroke-width="2.5"/>
+  <text x="450" y="128" font-size="17" font-weight="800" fill="#fef3c7" text-anchor="middle">SASE — Secure Access Service Edge</text>
+  <text x="450" y="147" font-size="10" fill="#fed7aa" text-anchor="middle">converged framework: security + the network plumbing (SD-WAN) from one cloud platform</text>
+
+  <!-- SD-WAN / networking band — the part SASE adds beyond SSE -->
+  <rect x="172" y="162" width="556" height="40" rx="6" fill="#1e3a8a" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1.3"/>
+  <text x="450" y="180" font-size="11" font-weight="700" fill="#dbeafe" text-anchor="middle">SD-WAN · Networking-as-a-Service</text>
+  <text x="450" y="195" font-size="9" fill="#93c5fd" text-anchor="middle">the network half — present in SASE, removed in SSE</text>
+
+  <!-- SSE — security half -->
+  <rect x="200" y="216" width="500" height="294" rx="14" fill="#b45309" fill-opacity="0.22" stroke="#F59E0B" stroke-width="2.2"/>
+  <text x="450" y="244" font-size="16" font-weight="800" fill="#fef3c7" text-anchor="middle">SSE — Security Service Edge</text>
+  <text x="450" y="262" font-size="10" fill="#fed7aa" text-anchor="middle">the security half of SASE: SWG · CASB · FWaaS · ZTNA · bundled DLP</text>
+
+  <!-- SWG / CASB / FWaaS — SSE components alongside ZTNA -->
+  <rect x="224" y="282" width="138" height="46" rx="5" fill="#1e293b" stroke="#475569" stroke-width="1.3"/>
+  <text x="293" y="302" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">SWG · CASB</text>
+  <text x="293" y="318" font-size="9" fill="#94a3b8" text-anchor="middle">web + cloud egress</text>
+
+  <rect x="372" y="282" width="138" height="46" rx="5" fill="#1e293b" stroke="#475569" stroke-width="1.3"/>
+  <text x="441" y="302" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">FWaaS</text>
+  <text x="441" y="318" font-size="9" fill="#94a3b8" text-anchor="middle">firewall-as-a-service</text>
+
+  <!-- ZTNA — narrowest, the access primitive inside SSE -->
+  <rect x="248" y="350" width="404" height="84" rx="12" fill="#fbbf24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="2.2"/>
+  <text x="450" y="378" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">ZTNA — Zero Trust Network Access</text>
+  <text x="450" y="398" font-size="10" fill="#fef3c7" text-anchor="middle">one access-control primitive inside SSE — per-application access,</text>
+  <text x="450" y="414" font-size="10" fill="#fef3c7" text-anchor="middle">no implicit network trust. A feature of SSE, not a synonym for it.</text>
+
+  <!-- Bundled DLP module sitting on the SSE boundary -->
+  <rect x="372" y="452" width="278" height="46" rx="5" fill="#374151" fill-opacity="0.55" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="511" y="472" font-size="11" font-weight="700" fill="#e5e7eb" text-anchor="middle">SSE-bundled DLP module</text>
+  <text x="511" y="488" font-size="9" fill="#9ca3af" text-anchor="middle">Netskope DLP · Zscaler DLP — inspects web/cloud egress</text>
+
+  <!-- The DLP boundary line to Part-1 standalone DLP front -->
+  <rect x="200" y="452" width="150" height="46" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
+  <text x="275" y="470" font-size="10" font-weight="700" fill="#cbd5e1" text-anchor="middle">Part-1 DLP front</text>
+  <text x="275" y="485" font-size="8.5" fill="#94a3b8" text-anchor="middle">all-channel enforcement</text>
+
+  <!-- boundary connector -->
+  <line x1="350" y1="475" x2="372" y2="475" stroke="#64748b" stroke-width="1.4" stroke-dasharray="2 3"/>
+
+  <!-- Legend / one-line summary -->
+  <rect x="150" y="560" width="600" height="78" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="170" y="582" font-size="11" fill="#fed7aa" font-weight="700">In one line: ZTNA is a feature of SSE; SSE is the security half of SASE; SASE adds the network back.</text>
+  <text x="170" y="602" font-size="10" fill="#cbd5e1"><tspan font-weight="700" fill="#fbbf24">The DLP boundary</tspan> — every SSE platform bundles DLP for web/cloud egress; the standalone DLP front (Part 1)</text>
+  <text x="170" y="618" font-size="10" fill="#cbd5e1">enforces across endpoint, email, and removable media the SSE never sees. Bundle pressure, not absorption.</text>
+</svg>
+</div></p>
+<p><em>The wider ring is SASE — networking plus security converged. The inner security half is SSE. ZTNA is one access-control primitive inside SSE, not a synonym for it.</em></p>
+<p><strong>SASE</strong> (Secure Access Service Edge) is the widest term: the converged framework that delivers software-defined wide-area networking (SD-WAN) <em>and</em> security from one cloud platform.<sup id="fnref:pg1"><a class="footnote-ref" href="#fn:pg1">1</a></sup> <strong>SSE</strong> (Security Service Edge) is the security half of SASE with the networking removed — the bundle of Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA), and Firewall-as-a-Service (FWaaS).<sup id="fnref:pg2"><a class="footnote-ref" href="#fn:pg2">2</a></sup> <strong>ZTNA</strong> (Zero Trust Network Access) is narrower still: the VPN-replacement primitive <em>inside</em> SSE that grants access to one named application at a time, after verifying identity and device posture, rather than dropping a user onto a flat network.<sup id="fnref:pg3"><a class="footnote-ref" href="#fn:pg3">3</a></sup> In one line: ZTNA is a feature of SSE; SSE is the security half of SASE; SASE adds the network plumbing back.</p>
+<p>What the Edge is <em>not</em> is as instructive as what it is. It is not a SOC platform — it enforces and inspects at the egress point, but the detection-investigation-response case workflow belongs to the detection segment, which <em>consumes</em> the Edge&rsquo;s anomalous-egress signal rather than the reverse. As the report&rsquo;s cross-front taxonomy frames it, SSE is an <em>enforcement plane</em>: it sits in the network-security substrate and feeds the SOC, identity, and data-security layers around it.<sup id="fnref:pg4"><a class="footnote-ref" href="#fn:pg4">4</a></sup></p>
+<p><strong>The DLP boundary.</strong> This is load-bearing for the front. Every major SSE platform bundles a data-loss-prevention module — Netskope DLP and Zscaler DLP are the headline examples — because inspecting traffic at the egress is a natural place to stop sensitive data from leaving.<sup id="fnref:pg5"><a class="footnote-ref" href="#fn:pg5">5</a></sup> That bundled DLP is mentioned here as cross-front presence. The pure-play DLP market — vendors whose load-bearing primitive is data-movement enforcement across every channel, not just the web/cloud egress an SSE sees — is treated as its own front earlier in this report. The strategic question of whether SSE-bundled DLP displaces the standalone vendors is a winning-and-losing question this front returns to later, not a category line.</p>
+<p>Three buyer misconceptions are worth retiring first. One, that <strong>SASE and SSE are the same purchase</strong> — they are not; a buyer who already owns SD-WAN often wants only the SSE half, and vendors price the two separately.<sup id="fnref:pg6"><a class="footnote-ref" href="#fn:pg6">6</a></sup> Two, that <strong>ZTNA is &ldquo;just a better VPN.&rdquo;</strong> It replaces the VPN&rsquo;s job, but the architectural difference — per-application access with no implicit network trust — is precisely what contains the blast radius when a credential is stolen, which a VPN does not.<sup id="fnref:pg7"><a class="footnote-ref" href="#fn:pg7">7</a></sup> Three, that <strong>single-vendor SASE is already the default.</strong> Buyer <em>preference</em> leans single-vendor, but actual deployments remain stubbornly two-vendor in practice, and the gap between the two is one of the live tensions in this market.<sup id="fnref:pg8"><a class="footnote-ref" href="#fn:pg8">8</a></sup></p>
+<h2>6.2 The Terrain</h2>
+<p><strong>Market sizing — three lenses, deliberately not averaged.</strong> As with the SOC segment, there is no single Edge number, because analysts size SASE, SSE, and ZTNA as nested-but-distinct categories. Read them side by side. On the widest <strong>SASE</strong> lens, Mordor Intelligence sizes the 2026 market at USD 15.54 billion, growing to USD 39.14 billion by 2031 at a 20.29% CAGR, on a definition that bundles Network-as-a-Service and Security-as-a-Service across cloud-native, hybrid, and legacy-integrated deployments.<sup id="fnref:t1"><a class="footnote-ref" href="#fn:t1">9</a></sup> MarketsandMarkets frames SASE more aggressively, near USD 19 billion in 2026 on a faster ~29% CAGR — the spread between the two is a definitional artifact of how much SD-WAN and managed networking each firm folds in, which is exactly why averaging them would destroy information.<sup id="fnref:t2"><a class="footnote-ref" href="#fn:t2">10</a></sup> On the narrower <strong>SSE</strong> lens — the security half only — MarketsandMarkets puts the market at USD 6.08 billion in 2024 reaching USD 23.01 billion by 2030 at a 24.8% CAGR, spanning SWG, CASB, ZTNA, and FWaaS, with FWaaS the fastest-growing component.<sup id="fnref:t3"><a class="footnote-ref" href="#fn:t3">11</a></sup> On the narrowest <strong>ZTNA</strong> lens, 2026 estimates cluster in the low single-digit billions — roughly USD 2.4 billion to USD 4.8 billion depending on whether bundled-into-SSE deployments are counted as ZTNA spend or absorbed into the SSE line — at CAGRs above 20% on every estimate.<sup id="fnref:t4"><a class="footnote-ref" href="#fn:t4">12</a></sup> The honest summary: the narrower the category, the faster the headline growth rate, because spend is migrating <em>down</em> the stack from the converged networking story toward the identity-aware access primitive.</p>
+<p><strong>Buyer trends.</strong> The dominant procurement question is single-vendor versus best-of-breed. Gartner&rsquo;s well-cited (and now-aging) 2022 forecast held that 80% of enterprises would adopt a single-vendor SSE strategy by 2025;<sup id="fnref:t5"><a class="footnote-ref" href="#fn:t5">13</a></sup> the more current signal complicates that, with roughly three in five CISOs preferring single-vendor in principle but a majority actually deploying two-vendor combinations — SSE from one vendor, SD-WAN from another.<sup id="fnref:t6"><a class="footnote-ref" href="#fn:t6">14</a></sup> I read this preference-versus-practice gap as the defining buyer tension of 2026, and the falsifiable test is public: watch whether the single-vendor-SASE platform leaders (Fortinet and Cato are named Leaders in Gartner&rsquo;s 2025 SASE Platforms quadrant) grow their disclosed enterprise platform counts faster than best-of-breed SSE pure-plays grow theirs over the next four quarters.<sup id="fnref2:t6"><a class="footnote-ref" href="#fn:t6">14</a></sup> A second buyer trend is the VPN-displacement cycle reaching its late innings: the legacy VPN is being retired in favor of ZTNA at scale, with industry surveys reporting a majority of organizations actively replacing VPNs in 2026.<sup id="fnref:t7"><a class="footnote-ref" href="#fn:t7">15</a></sup></p>
+<p><strong>Technology trends.</strong> Three are reshaping the Edge. The first is <strong>platform consolidation pressure from the SOC platform leaders</strong> — Palo Alto&rsquo;s Prisma Access, Cisco&rsquo;s Umbrella-plus-Hypershield, and Microsoft&rsquo;s Entra Internet Access push SSE as part of a wider bundle, applying the same bundling logic that drives the detection segment. The second, and the one I read as the most consequential for the category&rsquo;s next decade, is the <strong>AI-agent and non-human-identity access problem pushing ZTNA up-market.</strong> Non-human identities — service accounts, API keys, machine tokens, and now autonomous AI agents — already outnumber human identities in many enterprises by ratios reported between 40:1 and over 100:1, and the count is growing fast.<sup id="fnref:t8"><a class="footnote-ref" href="#fn:t8">16</a></sup> ZTNA&rsquo;s per-application, continuously-verified model is the natural enforcement primitive for an agent that must reach exactly one resource and no more; Zscaler&rsquo;s June 2026 Zenith Live announcement — an AI Broker for agent-to-agent traffic, an Agent Registry, and an AI Access Graph mapping identity-to-data lineage — is the clearest production signal that the Edge leaders are repositioning ZTNA from a remote-worker tool toward a machine-identity control plane.<sup id="fnref:t9"><a class="footnote-ref" href="#fn:t9">17</a></sup> My falsifiable prediction, grounded only in observable product-page and earnings signals: if the agentic-access thesis holds, expect the SSE leaders to ship named non-human-identity / agent-access SKUs and report them as growth drivers within the next several quarters; if it is hype, those features stay buried as undifferentiated platform line-items. The third trend is the <strong>architectural divide between network-first and security-first SASE</strong> — single-stack natives (Cato) and edge-network-first entrants (Cloudflare) converging on the same category from opposite starting points, a convergence visible in Netskope&rsquo;s September 2025 Nasdaq IPO (ticker NTSK, ~USD 908 million raised, ~USD 8.6 billion debut valuation), which gave the pure-play SSE thesis its first fully public benchmark.<sup id="fnref:t10"><a class="footnote-ref" href="#fn:t10">18</a></sup></p>
+<p><strong>Regulatory trends.</strong> The regulatory driver most specific to the Edge is the zero-trust mandate. In the United States, federal civilian agencies operate under binding zero-trust-architecture requirements that explicitly name identity-aware, per-resource access — the ZTNA model — as the target end state, pulling the public sector onto modern edge platforms on a regulatory timetable rather than a discretionary one.<sup id="fnref:t11"><a class="footnote-ref" href="#fn:t11">19</a></sup> The broader regulatory tailwind is indirect but real: data-residency and sovereign-cloud obligations in Europe make the <em>where</em> of traffic inspection a compliance question, and an SSE platform that can guarantee in-region enforcement points sells directly into that requirement.<sup id="fnref:t12"><a class="footnote-ref" href="#fn:t12">20</a></sup></p>
+<h2>6.3 The Contenders</h2>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="820" height="560" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="820" height="6" fill="#F59E0B"/>
+
+  <text x="410" y="38" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Secure Service Edge Vendor Landscape — 2026</text>
+  <text x="410" y="56" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 6</text>
+
+  <!-- Plot bounding box: x=110 to x=760, y=92 to y=450 -->
+  <line x1="110" y1="450" x2="760" y2="450" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="110" y1="92" x2="110" y2="450" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- Quadrant dividers (thirds on X for ZTNA / SSE / SASE) -->
+  <line x1="326" y1="92" x2="326" y2="450" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+  <line x1="543" y1="92" x2="543" y2="450" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+  <line x1="110" y1="271" x2="760" y2="271" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
+
+  <!-- X-axis zone labels -->
+  <text x="218" y="106" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">SINGLE-FUNCTION ZTNA</text>
+  <text x="218" y="106" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5"></text>
+
+  <!-- X-axis title + ticks -->
+  <text x="435" y="490" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">Stack scope →</text>
+  <text x="120" y="468" font-size="10" fill="#94a3b8">Single-function ZTNA</text>
+  <text x="750" y="468" font-size="10" fill="#94a3b8" text-anchor="end">Full SASE (incl. SD-WAN / networking)</text>
+
+  <!-- Y-axis title + ticks -->
+  <text x="42" y="271" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 42 271)">↑ Buyer motion</text>
+  <text x="100" y="100" font-size="10" fill="#94a3b8" text-anchor="end">Enterprise / CISO-led</text>
+  <text x="100" y="446" font-size="10" fill="#94a3b8" text-anchor="end">Developer-led / bottoms-up</text>
+
+  <!-- Tier-color legend (lower-right of plot — sparse zone) -->
+  <rect x="540" y="366" width="216" height="72" fill="#1e293b" stroke="#475569" rx="4" fill-opacity="0.92"/>
+  <text x="552" y="384" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">TIER COLOR</text>
+  <circle cx="558" cy="402" r="5" fill="#92400E"/>
+  <text x="571" y="406" font-size="10" fill="#cbd5e1">Gravity — sets the SSE reference price</text>
+  <circle cx="558" cy="418" r="5" fill="#F59E0B"/>
+  <text x="571" y="422" font-size="10" fill="#cbd5e1">Attention — SASE + edge + data + WAN</text>
+  <circle cx="558" cy="434" r="5" fill="#FBBF24"/>
+  <text x="571" y="438" font-size="10" fill="#cbd5e1">Wildcard — developer-led ZTNA bets</text>
+
+  <!-- ===== GRAVITY TIER (#92400E) — SSE-pure pure-plays, enterprise ===== -->
+
+  <!-- Zscaler: middle (SSE-pure), upper Y (enterprise) -->
+  <circle cx="420" cy="150" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="420" y="136" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Zscaler</text>
+  <text x="420" y="124" font-size="9" fill="#cbd5e1" text-anchor="middle">Zero Trust Exchange · SSE-pure</text>
+
+  <!-- Netskope: middle (SSE-pure), upper Y (enterprise), offset from Zscaler -->
+  <circle cx="470" cy="205" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="470" y="191" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Netskope</text>
+  <text x="470" y="179" font-size="9" fill="#cbd5e1" text-anchor="middle">data-aware SSE · NTSK</text>
+
+  <!-- ===== ATTENTION TIER (#F59E0B) ===== -->
+
+  <!-- Cato: right (full SASE), top Y (enterprise) -->
+  <circle cx="660" cy="140" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="660" y="126" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Cato</text>
+  <text x="660" y="114" font-size="9" fill="#94a3b8" text-anchor="middle">single-vendor SASE-native</text>
+
+  <!-- Versa: right (full SASE), upper-middle Y, slightly below Cato -->
+  <circle cx="690" cy="218" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="690" y="204" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Versa</text>
+  <text x="690" y="232" font-size="9" fill="#94a3b8" text-anchor="middle">SD-WAN-to-SASE</text>
+
+  <!-- Forcepoint: middle (SSE, data-first), upper-middle Y (mid-market enterprise) -->
+  <circle cx="400" cy="248" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="400" y="234" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Forcepoint</text>
+  <text x="400" y="222" font-size="9" fill="#94a3b8" text-anchor="middle">data-first SSE</text>
+
+  <!-- Cloudflare: middle (SSE/edge), lower-middle Y (developer-led edge adoption) -->
+  <circle cx="475" cy="320" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="475" y="306" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Cloudflare</text>
+  <text x="475" y="338" font-size="9" fill="#94a3b8" text-anchor="middle">edge-network-first · NET</text>
+
+  <!-- ===== WILDCARD TIER (#FBBF24) — developer-led ZTNA, bottom-left ===== -->
+
+  <!-- Tailscale: left (ZTNA), bottom (dev-led) -->
+  <circle cx="195" cy="375" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="195" y="361" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Tailscale</text>
+  <text x="195" y="349" font-size="9" fill="#94a3b8" text-anchor="middle">identity-aware mesh</text>
+
+  <!-- Twingate: left (ZTNA), bottom (dev-led), offset from Tailscale -->
+  <circle cx="255" cy="410" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
+  <text x="255" y="426" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Twingate</text>
+  <text x="255" y="438" font-size="9" fill="#94a3b8" text-anchor="middle">VPN-replacement ZTNA</text>
+
+  <text x="410" y="530" font-size="9" fill="#64748b" text-anchor="middle">Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived.</text>
+</svg>
+</div></p>
+<p><em>Author&rsquo;s read of public material, June 2026. Vendor positions are conceptual, not data-derived.</em></p>
+<p>The edge-security field sorts along two questions: whether the vendor built from the network outward (SD-WAN and SASE heritage) or from the security cloud outward (SSE and ZTNA heritage), and whether the buyer is consolidating an entire branch-and-cloud estate onto one platform or buying a single sharp capability — secure private access — and nothing else. The eight vendors below are grouped into three tiers: Gravity (the two pure-play SSE/ZTNA platforms whose pricing and packaging set the market&rsquo;s reference point), Attention (the SASE-native challenger, the edge-network incumbent, the repositioning data-security house, and the SD-WAN-to-SASE migrant), and Wildcard (two developer-led ZTNA bets characterized descriptively only). Each card is anchored to a single dated vendor-controlled surface and at least one verbatim messaging pillar lifted from that vendor&rsquo;s live site on 2026-06-16.</p>
+<h3>Gravity tier</h3>
+<h4>Zscaler</h4>
+<blockquote>
+<p><em>&ldquo;Secure Private Access with ZTNA. Extend fast, secure, and reliable private app access for all users from any device or location.&rdquo;</em> — [Zscaler Private Access, zscaler.com/products-and-solutions/zscaler-private-access, accessed 2026-06-16]<sup id="fnref:c1"><a class="footnote-ref" href="#fn:c1">21</a></sup></p>
+</blockquote>
+<p>Zscaler is the gravity well of this front — the pure-play that built the security-cloud-outward model and proved that a SaaS security edge could displace the appliance stack the rest of the field grew up on. Its stated USP is zero trust delivered as a cloud service: the Zero Trust Exchange brokers every user-to-app connection so that no traffic touches the corporate network and the network itself disappears as an attack surface. Zscaler Private Access carries the ZTNA pillar — &ldquo;seamless zero trust connectivity for all users, with AI-powered user-to-app segmentation and context-aware policies&rdquo; — while Zscaler Internet Access and the broader SSE bundle (secure web gateway, CASB, DLP) cover the outbound side.<sup id="fnref:c2"><a class="footnote-ref" href="#fn:c2">22</a></sup> The target buyer is the large enterprise retiring VPN concentrators and on-premise security appliances; the pricing signal is per-user subscription tiering that rewards bundling the full exchange over single modules. Architecturally Zscaler classifies as SSE-pure and cloud-native, platform-over-best-of-breed — the cleanest articulation of the SSE-first pole. The one fact that complicates the pure-play label is its acquisition of Red Canary, a managed-detection-and-response house, for roughly $651 million completed in August 2025 — a move that pushes Zscaler across the boundary into the SOC/MDR adjacency mapped in Front 5, blurring the long-standing &ldquo;we are pure SSE&rdquo; story.<sup id="fnref:c3"><a class="footnote-ref" href="#fn:c3">23</a></sup> The financials behind the position are the strongest available: in fiscal Q3 2026 (period ended 2026-04-30) Zscaler reported roughly $850 million in revenue, up about 25% year over year, and ARR of roughly $3,525 million, also up about 25%.<sup id="fnref:c4"><a class="footnote-ref" href="#fn:c4">24</a></sup> Published-material tier is the strongest in the front: named-outlet plus SEC-grade (ZS, NASDAQ). My read: Zscaler still sets the SSE reference point the entire field prices against, but the Red Canary move signals it no longer intends to stay inside the SSE box — the pure-play is becoming a platform, and that ambition is the more interesting story than the leadership it already holds.</p>
+<h4>Netskope</h4>
+<blockquote>
+<p><em>&ldquo;Netskope: modern security and networking for the cloud and AI era.&rdquo;</em> — [netskope.com, accessed 2026-06-16]<sup id="fnref2:c5"><a class="footnote-ref" href="#fn:c5">25</a></sup></p>
+</blockquote>
+<p>Netskope is the other gravity-tier pure-play, and the detail that a stale read would miss is that it is no longer private — Netskope went public on Nasdaq in September 2025, raising roughly $908 million (47.8 million shares at $19) at a valuation of roughly $8.6 billion.<sup id="fnref:c6"><a class="footnote-ref" href="#fn:c6">26</a></sup> Its stated USP is breadth of the SSE estate delivered from a single cloud: the homepage frames the company as &ldquo;modern security and networking for the cloud and AI era,&rdquo; and the portfolio spans SSE, CASB, SSPM and DSPM, firewall-as-a-service, and private access — a wider security-data surface than the ZTNA-led pure-plays carry.<sup id="fnref:c5"><a class="footnote-ref" href="#fn:c5">25</a></sup> The target buyer is the enterprise consolidating data-aware web, cloud, and private-access security onto one inline platform; the architecture classifies as SSE-pure and cloud-native, platform-over-best-of-breed, with data context (the CASB and DSPM heritage) as the differentiating thread. The currency note that matters for any forward read is profitability: in the first half of 2025 Netskope reported ARR of roughly $707 million but remained unprofitable, with a net loss of roughly $170 million for the period — a growth-over-margin posture the public markets are now pricing in real time; by its first fiscal quarter as a public company (the quarter ended 2026-04-30) ARR had reached roughly $845 million, up about 29% year over year.<sup id="fnref:c7"><a class="footnote-ref" href="#fn:c7">27</a></sup><sup id="fnref:wl1"><a class="footnote-ref" href="#fn:wl1">64</a></sup> Published-material tier is now the strongest available — newly public reporter (NTSK, NASDAQ) plus named-outlet IPO coverage. My read: Netskope&rsquo;s IPO converts it from a late-stage private peer into a public yardstick alongside Zscaler, and its data-security DNA gives it the most natural overlap with the Part-1 DLP story — the same single platform carries both the SSE and the data-protection module, which is exactly why characterizing it cleanly here matters for cross-front coherence.</p>
+<h3>Attention tier</h3>
+<h4>Cato Networks</h4>
+<blockquote>
+<p><em>&ldquo;World&rsquo;s Leading Single-Vendor SASE Platform. One Platform. Start Anywhere. Grow Everywhere.&rdquo;</em> — [catonetworks.com, accessed 2026-06-16]<sup id="fnref2:c8"><a class="footnote-ref" href="#fn:c8">28</a></sup></p>
+</blockquote>
+<p>Cato Networks is the SASE-native challenger — the vendor that built networking and security as one converged cloud service from the ground up rather than stitching SD-WAN and security clouds together after the fact. Its stated USP is single-vendor SASE: the homepage claims the title of &ldquo;World&rsquo;s Leading Single-Vendor SASE Platform&rdquo; and frames the architecture as &ldquo;Cato&rsquo;s SASE platform converges networking, security, and access into a single, global, AI-powered cloud service.&rdquo;<sup id="fnref:c9"><a class="footnote-ref" href="#fn:c9">29</a></sup> The current hero copy has shifted toward an agentic-defense and time-to-patch frame — &ldquo;From CVE to Protection in Minutes&rdquo; and &ldquo;Agentic defense beyond time-to-patch. Cloud-delivered at machine speed&rdquo; — layering an AI-operations message over the converged-platform foundation.<sup id="fnref:c8"><a class="footnote-ref" href="#fn:c8">28</a></sup> The target buyer is the mid-market-to-enterprise organization that wants one vendor for branch connectivity and security rather than a best-of-breed assembly; the pricing signal is platform subscription rewarding the &ldquo;start anywhere, grow everywhere&rdquo; land-and-expand motion. Architecturally Cato is SASE-native and cloud-native, the purest platform-over-best-of-breed play in the set. The capital behind the position is substantial: Cato extended its Series G to roughly $409 million in total at a valuation of more than $4.8 billion (over $1 billion raised across its history), and reports an ARR run-rate of roughly $350 million, up about 43% year over year, with a named place on the 2026 Fortune Cyber 60 for the third year; a public listing that had been discussed has been pushed toward late 2026 or beyond.<sup id="fnref:c10"><a class="footnote-ref" href="#fn:c10">30</a></sup> Published-material tier is named-outlet plus vendor-controlled (funding announcements, analyst lists). My read: Cato has the cleanest architectural story in the Attention tier — genuinely single-vendor, genuinely converged — and the growth rate to back it, which makes it the most credible private threat to the public pure-plays even though its absolute scale still trails them.</p>
+<h4>Cloudflare</h4>
+<blockquote>
+<p><em>&ldquo;The agile SASE platform. Connect and protect your workforce, AI agents, and infrastructure.&rdquo;</em> — [Cloudflare One, cloudflare.com/sase, accessed 2026-06-16]<sup id="fnref2:c11"><a class="footnote-ref" href="#fn:c11">31</a></sup></p>
+</blockquote>
+<p>Cloudflare reaches this front from a different starting point than anyone else in the set — it built the largest edge network first and added the security service edge on top, so Cloudflare One is an SSE delivered from infrastructure the company already operated for performance and DDoS protection. Its stated USP is reach and composability: the homepage frames Cloudflare One as &ldquo;the agile SASE platform&rdquo; with &ldquo;SASE architecture unified by design — on a global connectivity cloud,&rdquo; and leans on the network footprint claim that &ldquo;Cloudflare delivers full SASE from 300+ cities — &gt;3× more than other SASE vendors.&rdquo;<sup id="fnref:c12"><a class="footnote-ref" href="#fn:c12">32</a></sup> The 2026 messaging tilts hard toward AI-era access — &ldquo;identity-first zero trust access for every employee, contractor, and AI agent,&rdquo; plus first-mover claims on securing connections to MCP servers and on post-quantum encryption across the stack.<sup id="fnref:c11"><a class="footnote-ref" href="#fn:c11">31</a></sup> The target buyer is the organization that already trusts Cloudflare&rsquo;s edge for web performance and wants to extend it into zero-trust access; the pricing signal favors bundling Zero Trust into an existing Cloudflare relationship. Architecturally Cloudflare classifies as edge-network-first and cloud-native, platform-over-best-of-breed by ambition, and it carries a third consecutive year in the Gartner SSE Magic Quadrant. The financials are healthy — Q1 2026 (period ended 2026-03-31) revenue of roughly $639.8 million, up about 34% year over year, with roughly $4.2 billion in cash and roughly $84.1 million in free cash flow — though the period also brought an announced workforce reduction of about 20% (1,100-plus roles, framed as an AI-first restructuring) carrying roughly $140-150 million in charges, a note worth registering on organizational health even though it does not change the competitive tier.<sup id="fnref:c13"><a class="footnote-ref" href="#fn:c13">33</a></sup> Published-material tier is named-outlet plus SEC-grade (NET, NYSE). My read: Cloudflare&rsquo;s edge footprint is a structural advantage no pure-play can replicate quickly, but its SSE remains one product line inside a much larger network business — which is both its distribution advantage and the reason its security focus is harder to read than a pure-play&rsquo;s.</p>
+<h4>Forcepoint</h4>
+<blockquote>
+<p><em>&ldquo;AI Moves Fast. Your Data Shouldn&rsquo;t Move Uncontrolled. Secure data everywhere from a single platform.&rdquo;</em> — [forcepoint.com, accessed 2026-06-16]<sup id="fnref:c14"><a class="footnote-ref" href="#fn:c14">34</a></sup></p>
+</blockquote>
+<p>Forcepoint is the data-security incumbent repositioning into the edge — the vendor whose center of gravity is data protection (DLP, classification) and whose SSE story is framed around securing the data flowing through web, cloud, and private access rather than around the network. Its current hero copy makes the data-first frame explicit: &ldquo;AI Moves Fast. Your Data Shouldn&rsquo;t Move Uncontrolled&rdquo; and &ldquo;Secure data everywhere from a single platform,&rdquo; with the AI-era pitch that &ldquo;AI Is Only as Secure as Your Data&rdquo; and a claim to &ldquo;The Most Advanced Data Classification Available.&rdquo;<sup id="fnref:c15"><a class="footnote-ref" href="#fn:c15">35</a></sup> The stated USP is data-aware SSE: protecting sensitive data &ldquo;across AI tools, cloud apps, web, email, endpoint and network&rdquo; from one console. The target buyer is the mid-market and regulated-enterprise organization that already knows Forcepoint for DLP and wants its edge security anchored on the same data engine; the pricing signal is platform-and-module subscription aimed at that installed base. Architecturally Forcepoint classifies as SSE with a data-security center, cloud-delivered, platform-over-best-of-breed within its data-first scope. The ownership structure is the load-bearing currency fact: Francisco Partners has owned the commercial Forcepoint business since acquiring it from Raytheon in January 2021, and the government business (G2CI) was acquired separately by TPG in a deal worth roughly $2.45 billion that closed on 2023-10-02, leaving the commercial SSE entity as a distinct, PE-held company.<sup id="fnref:c16"><a class="footnote-ref" href="#fn:c16">36</a></sup> No new 2026 ownership or capital change surfaced in the bounded scan. Published-material tier is named-outlet (acquisition coverage) plus vendor-controlled; as a private PE-held company there is no public reporter. My read: Forcepoint&rsquo;s data-first framing is its genuine differentiator in a field crowded with network-first and access-first stories — but it competes from a mid-market incumbent position against pure-plays with more capital and faster cloud-native momentum, and the repositioning is a defense of its installed base as much as an offensive play.</p>
+<h4>Versa Networks</h4>
+<blockquote>
+<p><em>&ldquo;Extend SASE to every part of your network with VersaONE. Universal SASE protects and connects every part of your business — from headquarters to branch, cloud to data center, and every user and device in between.&rdquo;</em> — [versa-networks.com, accessed 2026-06-16]<sup id="fnref:c17"><a class="footnote-ref" href="#fn:c17">37</a></sup></p>
+</blockquote>
+<p>Versa Networks is the SD-WAN-to-SASE migration story — the vendor that came up through software-defined wide-area networking and has spent the converged-edge era repackaging that heritage as &ldquo;Universal SASE.&rdquo; Its stated USP is breadth of footprint from a single platform: VersaONE is pitched as &ldquo;a unified platform with one console, one policy, one data lake, and one OS,&rdquo; spanning networking, security, and access across headquarters, branch, cloud, and data center, with VersaAI layered as &ldquo;AI FOR SASE&rdquo; and &ldquo;SASE FOR AI.&rdquo;<sup id="fnref:c18"><a class="footnote-ref" href="#fn:c18">38</a></sup> The target buyer is the distributed enterprise modernizing a large branch-and-WAN estate that wants security folded into the network rather than bought separately; the pricing signal is platform subscription aimed at network-led buyers. Architecturally Versa classifies as SASE with an SD-WAN-network-first heritage, cloud-delivered, platform-over-best-of-breed. The funding picture requires a plain currency note: the latest verifiable round is the $120 million pre-IPO financing led by BlackRock in October 2022 (roughly $632 million raised across its history), and the public listing the company signaled around that round has not been realized in the years since — so this card makes no implication of recent capital or imminent IPO.<sup id="fnref:c19"><a class="footnote-ref" href="#fn:c19">39</a></sup> Published-material tier is named-outlet (the 2022 funding coverage) plus vendor-controlled; as a private company there is no public reporter. My read: Versa has a real footprint among network-led buyers, but the four-year gap since its last verifiable raise and the unrealized IPO are the most honest framing of its current standing — the migration story is sound, the capital and liquidity narrative is the open question.</p>
+<h3>Wildcard tier</h3>
+<h4>Tailscale</h4>
+<blockquote>
+<p><em>&ldquo;The best secure connectivity platform for the AI era. A Zero Trust identity-based connectivity platform that replaces your legacy VPN, SASE, and PAM.&rdquo;</em> — [tailscale.com, accessed 2026-06-16]<sup id="fnref:c20"><a class="footnote-ref" href="#fn:c20">40</a></sup></p>
+</blockquote>
+<p>Tailscale is the developer-led ZTNA wildcard — the identity-aware mesh that grew bottoms-up inside engineering teams as an easier replacement for the corporate VPN. Descriptively, its surfaces position it as &ldquo;a Zero Trust identity-based connectivity platform that replaces your legacy VPN, SASE, and PAM,&rdquo; with pillars covering &ldquo;remote access for your global team,&rdquo; &ldquo;infrastructure access to wherever your resources live, including Kubernetes clusters,&rdquo; and &ldquo;easy, secure, identity-based access to anything.&rdquo;<sup id="fnref:c21"><a class="footnote-ref" href="#fn:c21">41</a></sup> On its surfaces the described buyer skews toward developers and infrastructure teams adopting it for resource access rather than a security organization rolling out a full edge platform. Architecturally it presents as ZTNA-first and identity-based mesh, cloud-coordinated. On the funding and scope picture, Tailscale raised a $160 million Series C in April 2025 (led by Accel) and acquired Border0, a privileged-access-management vendor, in March 2026 — a move that, per its surfaces, extends the platform from ZTNA into PAM and frames it as a Zero-Trust platform replacing legacy VPN, SASE, and PAM together.<sup id="fnref:c22"><a class="footnote-ref" href="#fn:c22">42</a></sup> Published-material tier is vendor-controlled plus named-outlet funding and acquisition coverage. As a small, early-stage private vendor, Tailscale is read here descriptively only and sits out of this front&rsquo;s pattern claims — at this stage and scale, the responsible read is positional, not a directional verdict on the company itself.</p>
+<h4>Twingate</h4>
+<blockquote>
+<p><em>&ldquo;Security, Performance, Simplicity. Pick Three. Identity-based access for users, services, and AI agents that deploys in minutes, scales to every resource, and finally lets you retire your VPN.&rdquo;</em> — [twingate.com, accessed 2026-06-16]<sup id="fnref:c23"><a class="footnote-ref" href="#fn:c23">43</a></sup></p>
+</blockquote>
+<p>Twingate is the bottoms-up ZTNA wildcard — the VPN-replacement vendor that, like Tailscale, lands inside teams as an easy zero-trust access layer rather than a top-down platform purchase. Descriptively, its surfaces lead with &ldquo;Security, Performance, Simplicity. Pick Three&rdquo; and frame the product as &ldquo;identity-based access for users, services, and AI agents that deploys in minutes, scales to every resource, and finally lets you retire your VPN,&rdquo; with pillars &ldquo;Zero Trust with No Boundaries,&rdquo; &ldquo;Protect Every Click,&rdquo; and &ldquo;Democratize Privileged Access.&rdquo;<sup id="fnref:c24"><a class="footnote-ref" href="#fn:c24">44</a></sup> The newest descriptive thread on its surfaces is access for AI agents alongside users and services. The described buyer skews toward teams wanting a fast VPN replacement and identity-aware access without a heavy rollout. Architecturally it presents as ZTNA-first and identity-based, cloud-coordinated. On funding, the most recent verifiable round is the $42 million Series B from 2022-04-14 (roughly $67 million raised in total); no newer raise surfaced in the bounded scan, so this card states the 2022 vintage plainly and makes no implication of recent capital.<sup id="fnref:c25"><a class="footnote-ref" href="#fn:c25">45</a></sup> Published-material tier is vendor-controlled plus the 2022 named-outlet funding coverage. As with Tailscale, Twingate is read descriptively only and is held out of this front&rsquo;s pattern claims; at this stage and scale, the responsible read is positional, not a verdict on the vendor.</p>
+<h2>6.4 Their Plays</h2>
+<p>The edge-security market is not arguing about whether to consolidate the stack. It settled that argument years ago. The argument now is about <em>who consolidates into whom</em>, and from which direction the consolidation arrives: from a single-vendor SASE fabric built as one system, from a security-operations platform reaching outward to the edge, from an identity-and-productivity incumbent folding network access into a bundle the buyer already owns, or from a developer-led access tool graduating up-market into the enterprise. Four plays are in motion in 2026, and each is a different answer to the same question. Below, each is stated as an observation grounded in a public signal, the named participants, and a conditional outcome that resolves against something an outsider can watch happen.</p>
+<h3>Play 1: The Single-Vendor-SASE vs Best-of-Breed Consolidation Play</h3>
+<ul>
+<li><strong>Observation.</strong> The two structurally different ways to buy SASE are both putting up real numbers, which is what keeps the buyer&rsquo;s consolidate-versus-flexibility decision genuinely open. Cato Networks, the single-vendor SASE-native architecture, surpassed $350 million ARR with 43% year-over-year growth in 2025 and raised a Series G that reached roughly $409 million in total — a $359 million round extended in September 2025 — at a valuation above $4.8 billion, explicitly keeping its IPO on ice.<sup id="fnref:pl1"><a class="footnote-ref" href="#fn:pl1">46</a></sup> On the SSE-pure side, Netskope went public on Nasdaq in September 2025, raising roughly $908 million at about an $8.6 billion valuation on first-half ARR near $707 million.<sup id="fnref:pl2"><a class="footnote-ref" href="#fn:pl2">47</a></sup> The single-stack vendor sells operational simplicity; the SSE-pure and best-of-breed assemblers sell depth and the freedom to swap any layer. Both theses are funded, and neither has been falsified by the other&rsquo;s growth.</li>
+<li><strong>Participants.</strong> Cato Networks and Versa Networks on the single-vendor-SASE side (one converged network-plus-security stack); Zscaler and Netskope on the SSE-pure side, around which best-of-breed buyers assemble separate SD-WAN, firewall, and DLP layers.</li>
+<li><strong>Conditional outcome.</strong> <em>If Cato converts its Series G war chest into a public filing or a disclosed enterprise (rather than mid-market) logo mix in named-outlet coverage over the next two-to-four quarters, we expect the single-vendor-SASE thesis to validate as an enterprise architecture and not just a mid-market simplification; if Cato&rsquo;s IPO stays deferred and its disclosed traction stays concentrated below the enterprise tier while Netskope&rsquo;s and Zscaler&rsquo;s public ARR keeps compounding, the best-of-breed-around-an-SSE-core pattern remains the default enterprise motion and single-vendor SASE stays the mid-market&rsquo;s answer.</em></li>
+<li><strong>Evidence.</strong> Cato Networks, &ldquo;$359 million at a valuation of more than $4.8 billion,&rdquo; 2025 (prnewswire.com, accessed 2026-06-16); Cato Networks, &ldquo;Cato Surpasses $350 Million ARR,&rdquo; 2025 (catonetworks.com, accessed 2026-06-16); SecurityWeek, Netskope IPO, September 2025 (securityweek.com, accessed 2026-06-16).</li>
+</ul>
+<h3>Play 2: The Incumbent Cross-Front Bundle Pressure Play</h3>
+<ul>
+<li><strong>Observation.</strong> Three platform incumbents are pressuring the SSE pure-plays not on edge-security merit but on bundle economics, by attaching network access to portfolios the buyer already licenses. Microsoft ships Entra Internet Access and Entra Private Access (its Global Secure Access SSE family) alongside Defender for Cloud Apps as its cloud access security broker, positioning SSE as an add-on to an Entra and Microsoft 365 estate.<sup id="fnref:pl3"><a class="footnote-ref" href="#fn:pl3">48</a></sup> Palo Alto Networks sells Prisma Access as the SSE layer of its broader platform, a portfolio whose consolidation muscle is visible in its roughly $25 billion CyberArk acquisition completed in February 2026.<sup id="fnref:pl4"><a class="footnote-ref" href="#fn:pl4">49</a></sup> Cisco carries Umbrella, Duo, and the Hypershield enforcement fabric into the same accounts where it already sits in the network. The competitive vector is the same in all three cases: the SSE line item competes against a bundle discount a standalone vendor cannot match.<sup id="fnref:pl5"><a class="footnote-ref" href="#fn:pl5">50</a></sup></li>
+<li><strong>Participants.</strong> Microsoft (Entra Internet Access + Entra Private Access + Defender for Cloud Apps), Palo Alto Networks (Prisma Access), and Cisco (Umbrella + Duo + Hypershield) as the bundling incumbents; Zscaler and Netskope as the standalone SSE leaders whose pricing the bundle compresses.<sup id="fnref:pl6"><a class="footnote-ref" href="#fn:pl6">51</a></sup></li>
+<li><strong>Conditional outcome.</strong> <em>If Zscaler&rsquo;s or Netskope&rsquo;s earnings calls over the next two-to-four quarters name competitive displacement by Microsoft-, Palo-Alto-, or Cisco-bundled SSE as a churn or deal-cycle factor, we expect the bundle-pressure thesis to validate as a margin and win-rate force on the standalone SSE leaders; if they keep compounding ARR with no bundle-displacement reference in their disclosures and the incumbents&rsquo; SSE-specific products stay absent from their own security-segment earnings narratives, the cross-front bundle reads as a checkbox attach rather than a genuine displacement of best-of-breed edge security.</em></li>
+<li><strong>Evidence.</strong> Microsoft Learn, Global Secure Access / Entra Internet Access documentation, 2026 (learn.microsoft.com, accessed 2026-06-16); Palo Alto Networks, Prisma Access product page and CyberArk close coverage, 2026 (paloaltonetworks.com / reuters.com, accessed 2026-06-16); Cisco Umbrella and Hypershield product pages, 2026 (cisco.com, accessed 2026-06-16).</li>
+</ul>
+<h3>Play 3: The SSE-to-SOC Boundary Move Play</h3>
+<ul>
+<li><strong>Observation.</strong> Zscaler, a pure-play edge-security vendor, acquired the managed detection and response provider Red Canary for roughly $651 million, completed on 2025-08-01, pulling an SSE platform across the boundary into detection and response, the core territory of the SOC front.<sup id="fnref:pl7"><a class="footnote-ref" href="#fn:pl7">52</a></sup> Zscaler&rsquo;s own scale gives it the room to do so: fiscal Q3 2026 revenue near $850 million, up 25% year over year, with ARR around $3,525 million.<sup id="fnref:pl8"><a class="footnote-ref" href="#fn:pl8">53</a></sup> The strategic claim is that an SSE platform sitting inline on every user-to-app connection already holds the telemetry an MDR service needs, so detection and response is a natural extension of the edge rather than a separate purchase.</li>
+<li><strong>Participants.</strong> Zscaler (post-Red Canary MDR) as the SSE vendor crossing into the SOC; the detection-and-response incumbents whose managed-service revenue it now contests, analyzed primarily in Front 5; cross-front overlap with the detection-and-response analysis in Front 5.<sup id="fnref:pl9"><a class="footnote-ref" href="#fn:pl9">54</a></sup></li>
+<li><strong>Conditional outcome.</strong> <em>If Zscaler&rsquo;s earnings calls over the next two-to-four quarters cite Red Canary MDR as a named attach or cross-sell driver against its installed SSE base, we expect edge vendors crossing into detection and response to become a recurring acquisition pattern rather than a one-off; if Red Canary stays a quiet line item with no cross-sell narrative in Zscaler&rsquo;s disclosures, the deal reads as a capability tuck-in rather than a structural boundary move between the edge and the SOC.</em></li>
+<li><strong>Evidence.</strong> Zscaler, Form 10-Q, period ended 2026-04-30 (sec.gov, accessed 2026-06-16); Red Canary acquisition completed 2025-08-01 (Zscaler press release, accessed 2026-06-16).</li>
+</ul>
+<h3>Play 4: The Identity-First ZTNA Up-Market Port Play</h3>
+<ul>
+<li><strong>Observation.</strong> The developer-led, identity-aware ZTNA wedge is testing whether it can graduate from a bottoms-up VPN replacement into an enterprise SSE motion. Tailscale raised a $160 million Series C in April 2025, led by Accel, and in March 2026 acquired Border0 to fold privileged access management into its identity-aware mesh, a feature set that reads as a deliberate move up the enterprise buying committee rather than a developer convenience.<sup id="fnref:pl10"><a class="footnote-ref" href="#fn:pl10">55</a></sup> Twingate occupies the same identity-first ZTNA wedge from its Series B base, though without a comparable recent capital event on the public record.<sup id="fnref:pl11"><a class="footnote-ref" href="#fn:pl11">56</a></sup> The thesis is that an identity-aware overlay that engineers adopt on their own can climb into the enterprise once it carries the access-governance controls a security buyer requires, displacing legacy VPN from the bottom up while the incumbents push SSE from the top down.</li>
+<li><strong>Participants.</strong> Tailscale (post-Border0 PAM, identity-aware mesh) and Twingate (ZTNA-first) as the developer-led challengers; the established ZTNA offerings of Zscaler (Private Access) and Netskope (Private Access) as the up-market incumbents they are climbing toward.</li>
+<li><strong>Conditional outcome.</strong> <em>If Tailscale&rsquo;s PAM-extended platform shows up in named-outlet enterprise customer references or a disclosed enterprise-tier funding round over the next two-to-four quarters, we expect identity-first ZTNA to validate as a real up-market wedge into enterprise SSE; if Tailscale&rsquo;s and Twingate&rsquo;s disclosed traction stays concentrated in developer and small-team adoption with no enterprise-logo or enterprise-round signal, the developer-led wedge remains a VPN-replacement layer that the SSE incumbents absorb rather than a path to displacing them.</em></li>
+<li><strong>Evidence.</strong> Tailscale, &ldquo;Series C,&rdquo; April 2025 (tailscale.com, accessed 2026-06-16); PYMNTS, Tailscale–Border0 acquisition, March 2026 (pymnts.com, accessed 2026-06-16); Tracxn, Twingate funding history (tracxn.com, accessed 2026-06-16).</li>
+</ul>
+<hr>
+<h2>6.5 War Chests &amp; Casualties</h2>
+<p>The capital picture for the edge front splits along the same line as the contender field: public incumbents financing the move outward from their own balance sheets, and privately held specialists whose last fundraises range from very recent to several years stale. The snapshot below mixes both.</p>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Most Recent Round</th>
+<th>Valuation (if public)</th>
+<th>Strategic Investor</th>
+<th>Distress Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Netskope</strong> (NASDAQ: NTSK)</td>
+<td>Public; IPO Nasdaq Sep 2025, raised ~$908M; ~$1.5B raised pre-IPO<sup id="fnref:w1"><a class="footnote-ref" href="#fn:w1">57</a></sup></td>
+<td>~$8.6B at IPO</td>
+<td>Public-market funded</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>Zscaler</strong> (NASDAQ: ZS)</td>
+<td>Public; acquired Red Canary ~$651M; ARR ~$3,525M, fiscal Q3 2026<sup id="fnref:w2"><a class="footnote-ref" href="#fn:w2">58</a></sup></td>
+<td>Public market cap</td>
+<td>Public-market funded</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>Cloudflare</strong> (NYSE: NET)</td>
+<td>Public; Q1 2026 revenue $639.8M (+34%), ~$4.2B cash<sup id="fnref:w3"><a class="footnote-ref" href="#fn:w3">59</a></sup></td>
+<td>Public market cap</td>
+<td>Public-market funded</td>
+<td>~20% workforce reduction (~1,100 roles), $140–150M restructuring charges, AI-first reorg announced May 2026<sup id="fnref:w4"><a class="footnote-ref" href="#fn:w4">60</a></sup></td>
+</tr>
+<tr>
+<td><strong>Cato Networks</strong> (private)</td>
+<td>$409M Series G at &gt;$4.8B, 2025; &gt;$1B lifetime; IPO deferred<sup id="fnref:w5"><a class="footnote-ref" href="#fn:w5">61</a></sup></td>
+<td>&gt;$4.8B (private)</td>
+<td>Vitruvian, ION Crossover, Lightspeed</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>Tailscale</strong> (private)</td>
+<td>$160M Series C, Apr 2025 (Accel); acquired Border0, Mar 2026<sup id="fnref:w6"><a class="footnote-ref" href="#fn:w6">62</a></sup></td>
+<td>Not disclosed</td>
+<td>Accel (lead)</td>
+<td>(empty — no public distress event)</td>
+</tr>
+<tr>
+<td><strong>Versa Networks</strong> (private)</td>
+<td>$120M pre-IPO round, 2022 (BlackRock); ~$632M lifetime; IPO unrealized<sup id="fnref:w7"><a class="footnote-ref" href="#fn:w7">63</a></sup></td>
+<td>Not disclosed</td>
+<td>BlackRock</td>
+<td>(empty — no public distress event)</td>
+</tr>
+</tbody>
+</table>
+<p>The dynamic is asymmetric. The public incumbents extend their footprint off balance-sheet cash, with Zscaler buying its way across the SOC boundary. Cloudflare is the one company carrying a citable recent corporate event, and it is not a failing one: Q1 2026 revenue grew 34% to $639.8 million even as it announced a roughly 20% workforce reduction and $140–150 million in restructuring charges tied to an agentic AI-first operating model. That is a strong-growth company restructuring around AI, not a casualty, and should be read that way. Among the private specialists, capital recency is the tell. Cato&rsquo;s $409 million 2025 Series G and Tailscale&rsquo;s $160 million April 2025 Series C both signal recent strength. Versa, by contrast, last raised in 2022 and has not realized the IPO that round preceded, so its position rests on standalone traction rather than an implied war chest. No other vendor here carries a citable public distress event.</p>
+<blockquote>
+<p><em>Not investment advice. See Disclosures.</em></p>
+</blockquote>
+<h2>6.6 Winning &amp; Losing</h2>
+<p>The Edge is not contested the way the SOC platform war is contested. There is no single piece of high ground that every vendor is storming at once. Instead, the front is a set of overlapping campaigns fought along the seams between categories — where SSE-bundled DLP presses on the standalone data-security vendor below it, where developer-led ZTNA ports up into the enterprise the incumbents thought they owned, and where the single-vendor-SASE native wins the mid-market while the question of whether it can hold the enterprise stays open. The vendors who advance here are the ones who can move <em>across</em> a seam: turn a bundled module into a budget displacement, turn a developer tool into a machine-identity control plane, turn operational simplicity into an enterprise reference. The ones who stall are the ones defending a single category line while the spend migrates underneath them.</p>
+<p>Three patterns explain the movement, and each is contestable on public evidence. The first is a compression line: the DLP module that ships inside every SSE platform pressing the standalone DLP vendor at the total-cost-of-ownership line. The second is a category in motion: identity-first ZTNA porting up-market, accelerated by the AI-agent access problem, displacing the legacy VPN. The third is an open question with a clock on it: whether single-vendor SASE wins only the mid-market or breaks into the enterprise. Each is a named thesis with an observation, a labeled read, and a falsifiable conditional — not a forecast. Where the evidence points at a Wildcard vendor too small to characterize individually, the claim stays at the category level by design.</p>
+<h3>Pattern Claim 1 — The Bundle-vs-Best-of-Breed DLP Compression Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 1 — The Bundle-vs-Best-of-Breed DLP Compression Thesis</h3>
+<p><strong>Observation.</strong> Every major SSE platform now ships a data-loss-prevention module as part of the bundle rather than as a separable purchase. Netskope&rsquo;s platform carries DLP alongside CASB, SSPM, and DSPM, and the company reached the public market in September 2025 (Nasdaq: NTSK, ~$8.6B debut valuation, ~$908M raised), reporting Q1 fiscal 2027 (the quarter ended 2026-04-30) ARR of $845M up 29% year-over-year with customers paying $100K+ growing 23% to roughly 1,600 <sup id="fnref3:wl1"><a class="footnote-ref" href="#fn:wl1">64</a></sup>. Zscaler bundles DLP inside its Zero Trust Exchange and reported fiscal Q3 2026 ARR of roughly $3,525M, up about 25% year-over-year <sup id="fnref2:wl2"><a class="footnote-ref" href="#fn:wl2">65</a></sup>. In both cases the DLP capability reaches the buyer as a line inside a platform the enterprise is already buying for secure web gateway, ZTNA, and CASB — not as a standalone evaluation <sup id="fnref:wl3"><a class="footnote-ref" href="#fn:wl3">66</a></sup>.</p>
+<p><strong>My read.</strong> I read this as bundled DLP exerting genuine compression on the standalone data-security vendor at the middle of the market, without yet displacing the category at the top. When a buyer already running an SSE platform can switch on a DLP module that inspects the same web-and-cloud egress the platform already sees, the competitive question for a standalone DLP vendor stops being &ldquo;is your detection better&rdquo; and becomes &ldquo;is your detection enough better, across enough additional channels, to justify a separate product, a separate console, and a separate bill.&rdquo; My view is that the SSE bundle wins that argument most often where the buyer&rsquo;s data-movement risk is concentrated in the web and cloud egress the SSE already inspects — the mid-market profile. Where the risk spans endpoint, email, removable media, and on-premise repositories the SSE never touches, the standalone vendor&rsquo;s broader channel coverage still carries the day, and the bundle is a complement rather than a replacement. This is bundle <em>pressure</em> on the standalone DLP front characterized in Part 1, not a verdict that the standalone category is being absorbed — the two coexist along a coverage line.</p>
+<p><strong>Conditional prediction.</strong> If Netskope and Zscaler continue to disclose DLP/DSPM as a named platform growth driver in FY2026–FY2027 earnings commentary AND a named outlet documents an enterprise consolidating off a standalone DLP product onto SSE-bundled DLP specifically on TCO grounds, the compression thesis is confirmed at the middle of the market. If instead the SSE vendors stop breaking out data-security attach as a growth driver and standalone DLP vendors hold or grow their disclosed enterprise channel-coverage wins through the period, the bundle is a coexistence story bounded by channel coverage, not a compression one.</p>
+<p><strong>Sources.</strong> <sup id="fnref4:wl1"><a class="footnote-ref" href="#fn:wl1">64</a></sup> <sup id="fnref3:wl2"><a class="footnote-ref" href="#fn:wl2">65</a></sup> <sup id="fnref2:wl3"><a class="footnote-ref" href="#fn:wl3">66</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="540" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Bundle-vs-Best-of-Breed DLP Compression Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 1 — STATE OF CYBER 2026, FRONT 6</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">SSE-bundled DLP compresses the standalone vendor where risk lives in web/cloud egress — not across all channels</text>
+
+  <!-- LEFT: the SSE bundle exerting compression -->
+  <rect x="55" y="108" width="320" height="290" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">SSE-bundled DLP</text>
+  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">a module inside a platform already bought</text>
+
+  <text x="215" y="182" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Wins the mid-market egress profile</text>
+  <text x="215" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">Netskope ~$845M ARR (+29% YoY)</text>
+  <text x="215" y="222" font-size="10" fill="#cbd5e1" text-anchor="middle">$100K+ customers +23% (~1,600)</text>
+  <text x="215" y="244" font-size="10" fill="#cbd5e1" text-anchor="middle">Zscaler ~$3,525M ARR (+25% YoY)</text>
+  <text x="215" y="262" font-size="10" fill="#cbd5e1" text-anchor="middle">DLP bundled with SWG · CASB · ZTNA</text>
+  <text x="215" y="290" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">"Is your detection enough better,</text>
+  <text x="215" y="304" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">across enough extra channels, to</text>
+  <text x="215" y="318" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">justify a 2nd product, console, bill?"</text>
+  <text x="215" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">Inspects the same web/cloud egress</text>
+  <text x="215" y="360" font-size="9" fill="#94a3b8" text-anchor="middle">the platform already sees</text>
+  <text x="215" y="378" font-size="9" fill="#94a3b8" text-anchor="middle">NTSK / ZS — SEC-grade public ARR</text>
+
+  <!-- RIGHT: the standalone DLP vendor holding on coverage -->
+  <rect x="425" y="108" width="320" height="290" fill="#374151" fill-opacity="0.35" stroke="#9ca3af" stroke-width="2" rx="6"/>
+  <text x="585" y="134" font-size="14" font-weight="800" fill="#e5e7eb" text-anchor="middle">Standalone DLP (Part 1)</text>
+  <text x="585" y="152" font-size="9" fill="#cbd5e1" text-anchor="middle">load-bearing primitive: all-channel enforcement</text>
+
+  <text x="585" y="182" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Holds where coverage spans</text>
+  <text x="585" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">Endpoint</text>
+  <text x="585" y="222" font-size="10" fill="#cbd5e1" text-anchor="middle">Email</text>
+  <text x="585" y="240" font-size="10" fill="#cbd5e1" text-anchor="middle">Removable media</text>
+  <text x="585" y="258" font-size="10" fill="#cbd5e1" text-anchor="middle">On-premise repositories</text>
+  <text x="585" y="290" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Channels the SSE egress</text>
+  <text x="585" y="304" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">never touches</text>
+  <text x="585" y="332" font-size="9" fill="#9ca3af" text-anchor="middle">Bundle = complement, not</text>
+  <text x="585" y="346" font-size="9" fill="#9ca3af" text-anchor="middle">replacement, where risk is broad</text>
+  <text x="585" y="376" font-size="9" fill="#94a3b8" text-anchor="middle">Coexistence along a coverage line</text>
+
+  <!-- Compression marker between the two panels -->
+  <line x1="400" y1="116" x2="400" y2="390" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
+  <line x1="372" y1="253" x2="428" y2="253" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="424,246 438,253 424,260" fill="#F59E0B" fill-opacity="0.85"/>
+  <text x="400" y="232" font-size="9" font-weight="800" fill="#fbbf24" text-anchor="middle">TCO</text>
+  <text x="400" y="280" font-size="8" font-weight="700" fill="#fbbf24" text-anchor="middle">pressure</text>
+
+  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 1 conditional prediction -->
+  <rect x="55" y="412" width="690" height="110" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="432" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
+  <text x="400" y="452" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if Netskope and Zscaler keep disclosing DLP/DSPM as a named platform growth driver in FY2026–FY2027 earnings</text>
+  <text x="400" y="466" font-size="9" fill="#cbd5e1" text-anchor="middle">AND a named outlet documents an enterprise consolidating off a standalone DLP product onto SSE-bundled DLP on TCO grounds.</text>
+  <text x="400" y="488" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if the SSE vendors stop breaking out data-security attach as a growth driver AND standalone DLP vendors hold or</text>
+  <text x="400" y="502" font-size="9" fill="#cbd5e1" text-anchor="middle">grow disclosed enterprise channel-coverage wins — the bundle is a coexistence story bounded by coverage, not compression.</text>
+</svg>
+</div></p>
+<h3>Pattern Claim 2 — The Identity-First ZTNA Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 2 — The Identity-First ZTNA Thesis</h3>
+<p><strong>Observation.</strong> The identity-aware access category is heating up on two public signals at once. On the developer-led side, Tailscale raised a $160M Series C in April 2025 (led by Accel) and made its first-ever acquisition in March 2026, buying privileged-access-management startup Border0 — a deal Bloomberg covered explicitly in the frame of AI agents spilling onto servers and needing per-resource access control, positioning the combined entity as a zero-trust access platform reaching beyond VPN replacement into PAM <sup id="fnref2:wl4"><a class="footnote-ref" href="#fn:wl4">67</a></sup>. On the incumbent side, the same access problem is pulling acquisition capital in: Palo Alto Networks completed its roughly $25 billion CyberArk acquisition (closed 2026-02-11), CrowdStrike acquired identity-security firm SGNL for $740M (January 2026), Cisco agreed to acquire non-human-identity vendor Astrix (reported at roughly $400M, May 2026), and Microsoft shipped Entra Agent ID to give AI agents first-class identities — a cluster of moves all aimed at the machine-and-agent access problem <sup id="fnref2:wl5"><a class="footnote-ref" href="#fn:wl5">68</a></sup>. ZTNA&rsquo;s per-application, continuously-verified model is the named enforcement primitive for an agent that must reach exactly one resource and no more <sup id="fnref:wl6"><a class="footnote-ref" href="#fn:wl6">69</a></sup>.</p>
+<p><strong>My read.</strong> I read this as a category in motion, not a verdict on any single vendor. The signal is the <em>direction</em> of capital and product: developer-led access tools are porting up-market via identity-aware policy, and the AI-agent / non-human-identity access problem is the accelerant that makes per-application ZTNA the obvious control point rather than a remote-worker convenience. My view is that the legacy VPN is the displaced incumbent in this story — it grants network-level trust an autonomous agent should never receive — and that the enterprise buyers retiring VPN concentrators are the prize both the developer-led challengers and the platform incumbents are now competing for. I am deliberately not naming the individual developer-led vendors as winners or casualties: they are early-stage bets whose individual trajectories I cannot responsibly call from public material. What the public funding rounds and the incumbent acquisition cluster <em>do</em> support is the category-level claim — identity-first ZTNA is where the access market is moving, and the AI-agent problem is why it is moving faster.</p>
+<p><strong>Conditional prediction.</strong> If two or more SSE/ZTNA platform leaders ship and report named non-human-identity or agent-access SKUs as disclosed growth drivers in FY2026–FY2027 earnings or product-page hero changes, AND the incumbent identity-access acquisition cluster (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix) closes and gets integrated into shipping access products, the identity-first ZTNA category motion is confirmed as a durable enterprise shift. If instead agent-access features stay buried as undifferentiated platform line-items with no disclosed revenue attribution, and the legacy-VPN displacement cycle stalls in named survey data, the thesis is a positioning narrative ahead of budget reality.</p>
+<p><strong>Sources.</strong> <sup id="fnref3:wl4"><a class="footnote-ref" href="#fn:wl4">67</a></sup> <sup id="fnref3:wl5"><a class="footnote-ref" href="#fn:wl5">68</a></sup> <sup id="fnref2:wl6"><a class="footnote-ref" href="#fn:wl6">69</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="540" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Identity-First ZTNA Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 2 — STATE OF CYBER 2026, FRONT 6</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">A category in motion: the AI-agent / non-human-identity access problem makes per-application ZTNA the control point</text>
+
+  <!-- Center: the access prize — enterprise retiring legacy VPN -->
+  <ellipse cx="400" cy="250" rx="148" ry="70" fill="#fbbf24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.5"/>
+  <text x="400" y="234" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">The access prize</text>
+  <text x="400" y="254" font-size="10" font-weight="700" fill="#fef3c7" text-anchor="middle">Enterprise retiring legacy VPN</text>
+  <text x="400" y="272" font-size="9" fill="#fed7aa" text-anchor="middle">per-app, continuously-verified access</text>
+  <text x="400" y="288" font-size="9" fill="#fed7aa" text-anchor="middle">for one resource and no more</text>
+
+  <!-- LEFT: developer-led challengers porting up -->
+  <rect x="60" y="128" width="190" height="86" fill="#FBBF24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="1.6" rx="5"/>
+  <text x="155" y="150" font-size="12" font-weight="700" fill="#fde68a" text-anchor="middle">Developer-led challengers</text>
+  <text x="155" y="170" font-size="9" fill="#fef3c7" text-anchor="middle">Tailscale — $160M Series C (Accel),</text>
+  <text x="155" y="184" font-size="9" fill="#fef3c7" text-anchor="middle">acquired Border0 (PAM), Mar 2026</text>
+  <text x="155" y="202" font-size="9" fill="#cbd5e1" text-anchor="middle">identity-aware overlay climbing up-market</text>
+
+  <!-- RIGHT: incumbent identity-access acquisition cluster -->
+  <rect x="550" y="128" width="190" height="86" fill="#92400E" fill-opacity="0.30" stroke="#F59E0B" stroke-width="1.6" rx="5"/>
+  <text x="645" y="150" font-size="12" font-weight="700" fill="#fef3c7" text-anchor="middle">Incumbent acquisition cluster</text>
+  <text x="645" y="170" font-size="9" fill="#cbd5e1" text-anchor="middle">PANW / CyberArk (~$25B)</text>
+  <text x="645" y="184" font-size="9" fill="#cbd5e1" text-anchor="middle">CRWD / SGNL ($740M)</text>
+  <text x="645" y="198" font-size="9" fill="#cbd5e1" text-anchor="middle">Cisco / Astrix (~$400M)</text>
+  <text x="645" y="212" font-size="9" fill="#cbd5e1" text-anchor="middle">Microsoft Entra Agent ID</text>
+
+  <!-- The accelerant -->
+  <rect x="285" y="380" width="230" height="58" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" rx="4"/>
+  <text x="400" y="402" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">The accelerant: AI-agent access</text>
+  <text x="400" y="420" font-size="9" fill="#cbd5e1" text-anchor="middle">non-human identities now 40:1 to 100:1+ vs humans</text>
+  <text x="400" y="432" font-size="9" fill="#94a3b8" text-anchor="middle">an agent should never get network-level trust</text>
+
+  <!-- Pressure arrows: both directions converging on the prize -->
+  <line x1="252" y1="190" x2="305" y2="222" stroke="#FBBF24" stroke-width="1.8" stroke-opacity="0.75"/>
+  <polygon points="301,217 316,228 304,231" fill="#FBBF24" fill-opacity="0.8"/>
+  <text x="250" y="240" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">port up</text>
+
+  <line x1="548" y1="190" x2="495" y2="222" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.75"/>
+  <polygon points="499,217 484,228 496,231" fill="#F59E0B" fill-opacity="0.8"/>
+  <text x="552" y="240" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">push down</text>
+
+  <line x1="400" y1="378" x2="400" y2="322" stroke="#fbbf24" stroke-width="1.8" stroke-opacity="0.8"/>
+  <polygon points="392,328 400,314 408,328" fill="#fbbf24" fill-opacity="0.85"/>
+
+  <!-- Category-level note (not naming dev vendors as winners) -->
+  <text x="400" y="362" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Category-level claim only — sub-scale developer vendors not called as winners or casualties</text>
+
+  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 2 conditional prediction -->
+  <rect x="55" y="452" width="690" height="76" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="471" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
+  <text x="400" y="489" font-size="8.5" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if 2+ SSE/ZTNA leaders ship and report named non-human-identity / agent-access SKUs as disclosed growth drivers (earnings or product-page hero) AND the incumbent</text>
+  <text x="400" y="502" font-size="8.5" fill="#cbd5e1" text-anchor="middle">identity-access cluster (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix) closes and integrates into shipping access products — a durable enterprise shift.</text>
+  <text x="400" y="518" font-size="8.5" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if agent-access stays buried as undifferentiated line-items with no disclosed attribution AND the legacy-VPN displacement cycle stalls in named survey data.</text>
+</svg>
+</div></p>
+<h3>Pattern Claim 3 — The Single-Stack SASE Thesis</h3>
+<blockquote>
+<h3>Pattern Claim 3 — The Single-Stack SASE Thesis</h3>
+<p><strong>Observation.</strong> Cato Networks, the single-vendor-SASE native that built one converged network-plus-security stack from the ground up, surpassed $350M ARR with 43% year-over-year growth in 2025 and raised a $409M Series G at a valuation above $4.8 billion, explicitly keeping its IPO on ice <sup id="fnref3:wl7"><a class="footnote-ref" href="#fn:wl7">70</a></sup>. It was named to the 2026 Fortune Cyber 60 list for a third consecutive year — a venture-backed cohort defined by <em>not</em> having had an IPO or exit, which is itself a signal of where Cato sits in its trajectory <sup id="fnref2:wl8"><a class="footnote-ref" href="#fn:wl8">71</a></sup>. Across the front, the pure-play SSE benchmark moved the other direction: Netskope went public in September 2025 and Zscaler trades as a scaled public SSE platform, giving best-of-breed assemblers two fully public reference points to build around <sup id="fnref:wl9"><a class="footnote-ref" href="#fn:wl9">72</a></sup>.</p>
+<p><strong>My read.</strong> I read single-vendor SASE as winning the operational-simplicity argument decisively in the mid-market and leaving the enterprise question genuinely open. Cato&rsquo;s pitch — one console, one policy engine, one vendor for both the network and the security that rides on it — is most valuable precisely where the security team is smallest and the appeal of not integrating four vendors is highest. That is the mid-market profile, and Cato&rsquo;s ARR growth tells me the pitch is converting there. My view is that the enterprise is the harder, unproven ground: large organizations with entrenched best-of-breed estates and a board-level preference for swappable layers are the buyers single-stack SASE has not yet been shown, in public material, to win at scale. The deferred IPO and the Cyber-60 (pre-exit) placement are consistent with a company compounding strongly in its core segment while the enterprise expansion remains the next thing to prove. The single-stack thesis is not falsified by the best-of-breed vendors&rsquo; growth, nor they by Cato&rsquo;s — both motions are funded and both are real, which is exactly what keeps the buyer&rsquo;s consolidate-versus-flexibility decision open.</p>
+<p><strong>Conditional prediction.</strong> If Cato converts its Series G war chest into a public S-1 filing OR a named-outlet-documented enterprise (rather than mid-market) logo mix over the next two-to-four quarters, the single-vendor-SASE thesis validates as an enterprise architecture and not just a mid-market simplification. If instead the IPO stays deferred through 2026 and Cato&rsquo;s disclosed traction stays concentrated below the enterprise tier while Netskope&rsquo;s and Zscaler&rsquo;s public ARR keeps compounding, single-vendor SASE remains the mid-market&rsquo;s answer and best-of-breed-around-an-SSE-core stays the default enterprise motion.</p>
+<p><strong>Sources.</strong> <sup id="fnref4:wl7"><a class="footnote-ref" href="#fn:wl7">70</a></sup> <sup id="fnref3:wl8"><a class="footnote-ref" href="#fn:wl8">71</a></sup> <sup id="fnref2:wl9"><a class="footnote-ref" href="#fn:wl9">72</a></sup></p>
+</blockquote>
+<p><div class="inline-diagram" style="text-align:center;margin:14pt auto;"><svg style="max-width:100%;max-height:75vh;width:auto;height:auto;display:block;margin:14pt auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="800" height="540" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
+
+  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Single-Stack SASE Thesis</text>
+  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 3 — STATE OF CYBER 2026, FRONT 6</text>
+
+  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">Single-vendor SASE wins the mid-market on operational simplicity — the enterprise stays genuinely open</text>
+
+  <!-- LEFT: the won ground — mid-market -->
+  <rect x="55" y="108" width="320" height="270" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Mid-market — WON</text>
+  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">smallest security team, highest appeal of one console</text>
+
+  <text x="215" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Cato Networks (single-vendor SASE)</text>
+  <text x="215" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">$350M+ ARR (+43% YoY), 2025</text>
+  <text x="215" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">$409M Series G at &gt;$4.8B valuation</text>
+  <text x="215" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">3rd consecutive Fortune Cyber 60</text>
+  <text x="215" y="260" font-size="10" fill="#cbd5e1" text-anchor="middle">(a pre-IPO / pre-exit cohort)</text>
+  <text x="215" y="288" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">One console, one policy engine,</text>
+  <text x="215" y="302" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">one vendor for network + security</text>
+  <text x="215" y="330" font-size="9" fill="#94a3b8" text-anchor="middle">IPO explicitly kept on ice</text>
+  <text x="215" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">Gartner 2025 SASE Platforms: Leader</text>
+  <text x="215" y="362" font-size="9" fill="#94a3b8" text-anchor="middle">named-outlet + vendor-controlled</text>
+
+  <!-- RIGHT: the open ground — enterprise -->
+  <rect x="425" y="108" width="320" height="270" fill="#1e293b" stroke="#fbbf24" stroke-width="2" rx="6"/>
+  <text x="585" y="134" font-size="14" font-weight="800" fill="#fbbf24" text-anchor="middle">Enterprise — OPEN</text>
+  <text x="585" y="152" font-size="9" fill="#cbd5e1" text-anchor="middle">entrenched best-of-breed, board preference for swappable layers</text>
+
+  <text x="585" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">The unproven ground</text>
+  <text x="585" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">Best-of-breed around an SSE core:</text>
+  <text x="585" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">Netskope (NTSK) — public Sep 2025</text>
+  <text x="585" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">Zscaler (ZS) — scaled public SSE</text>
+  <text x="585" y="260" font-size="10" fill="#cbd5e1" text-anchor="middle">two public anchors to assemble around</text>
+  <text x="585" y="288" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Single-stack SASE not yet shown,</text>
+  <text x="585" y="302" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">in public material, to win at scale</text>
+  <text x="585" y="330" font-size="9" fill="#94a3b8" text-anchor="middle">Both motions funded, both real —</text>
+  <text x="585" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">neither falsified by the other's</text>
+  <text x="585" y="362" font-size="9" fill="#94a3b8" text-anchor="middle">growth: the decision stays open</text>
+
+  <!-- Divider with the open-question marker -->
+  <line x1="400" y1="116" x2="400" y2="370" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
+  <circle cx="400" cy="243" r="20" fill="#0a0e1a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="400" y="240" font-size="10" font-weight="800" fill="#fbbf24" text-anchor="middle">won vs</text>
+  <text x="400" y="253" font-size="10" font-weight="800" fill="#fbbf24" text-anchor="middle">open</text>
+
+  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 3 conditional prediction -->
+  <rect x="55" y="392" width="690" height="130" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="400" y="412" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — H2 2026 / next two-to-four quarters</text>
+  <text x="400" y="432" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if Cato converts its Series G war chest into a public S-1 filing OR a named-outlet-documented enterprise</text>
+  <text x="400" y="446" font-size="9" fill="#cbd5e1" text-anchor="middle">(rather than mid-market) logo mix — single-vendor SASE validates as an enterprise architecture, not just a mid-market simplification.</text>
+  <text x="400" y="470" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if the IPO stays deferred through 2026 and Cato's disclosed traction stays concentrated below the enterprise tier</text>
+  <text x="400" y="484" font-size="9" fill="#cbd5e1" text-anchor="middle">while Netskope's and Zscaler's public ARR keeps compounding — single-vendor SASE remains the mid-market's answer and</text>
+  <text x="400" y="498" font-size="9" fill="#cbd5e1" text-anchor="middle">best-of-breed-around-an-SSE-core stays the default enterprise motion.</text>
+  <text x="400" y="514" font-size="8" fill="#64748b" text-anchor="middle">Watch: SEC EDGAR S-1 · Gartner Magic Quadrant for SASE Platforms refresh · named-outlet enterprise coverage</text>
+</svg>
+</div></p>
+<h3>Winners</h3>
+<p><strong>Zscaler</strong> is winning the scaled-platform dimension of the front. Roughly $3,525M in ARR at about 25% year-over-year growth is, in my read, the clearest evidence available that the security-cloud-outward model it pioneered has become the reference point the entire field prices against <sup id="fnref:wl2"><a class="footnote-ref" href="#fn:wl2">65</a></sup>. My opinion: its moat in 2026 is as much commercial gravity — the buyer who has standardized on the Zero Trust Exchange finds it cheaper to add a module than to evaluate a competitor — as it is detection efficacy, and the Red Canary MDR acquisition shows it intends to expand the box rather than defend it <sup id="fnref:wl10"><a class="footnote-ref" href="#fn:wl10">73</a></sup>.</p>
+<p><strong>Netskope</strong> is winning the public-benchmark argument it set out to win. Reaching the Nasdaq in September 2025 at a ~$8.6B debut and posting Q1 fiscal 2027 (quarter ended 2026-04-30) ARR of $845M up 29% with $100K+ customers up 23% is, in my view, the strongest available public evidence that the SSE-pure thesis converts to durable public-market revenue rather than just messaging <sup id="fnref2:wl1"><a class="footnote-ref" href="#fn:wl1">64</a></sup>. It is not winning at Zscaler&rsquo;s scale, but it has given best-of-breed buyers a second fully public SSE anchor to assemble around.</p>
+<p><strong>Cato Networks</strong> is winning the mid-market on operational simplicity. $350M+ ARR at 43% growth and a third consecutive Fortune Cyber 60 placement is, in my read, the clearest public signal that single-vendor SASE has real pull where the security team is small and the appeal of one console is highest <sup id="fnref:wl7"><a class="footnote-ref" href="#fn:wl7">70</a></sup> <sup id="fnref:wl8"><a class="footnote-ref" href="#fn:wl8">71</a></sup>. The win I am attributing is the mid-market, not the enterprise — that second ground is the open question of Pattern Claim 3.</p>
+<h3>Losers / Casualties</h3>
+<p>This front has few clean casualties, and I will not manufacture one. The honest read is that the Edge is a growth market where the live pressure is compression and displacement <em>between</em> growing vendors, not collapse — which is why most of the contested vendors below belong under Watch, not here.</p>
+<p>The one dated public restructuring event in the front is <strong>Cloudflare&rsquo;s</strong> May 2026 workforce reduction of approximately 1,100 people (~20% of headcount), announced 2026-05-07 and disclosed in its FY2026 8-K, with charges of $140–150M <sup id="fnref:wl11"><a class="footnote-ref" href="#fn:wl11">74</a></sup>. I would not label Cloudflare a casualty, and the same source forecloses it: the company framed the action as architecting for an agentic-AI-first operating model — its co-founders stated explicitly that it was not a cost-cutting exercise — against a backdrop of a still-growing security and developer-platform business and a Visionary placement in Gartner&rsquo;s 2025 SASE Platforms quadrant <sup id="fnref2:wl11"><a class="footnote-ref" href="#fn:wl11">74</a></sup> <sup id="fnref:wl12"><a class="footnote-ref" href="#fn:wl12">75</a></sup>. The restructuring is the dated evidence of an AI-first reshaping at a growing company, not a distress signal — and the distinction matters precisely because the headcount number invites the wrong label without the framing the filing supplies.</p>
+<h3>Watch</h3>
+<p><strong>Cato Networks</strong> is the watch signal I would track most closely on the enterprise-versus-IPO question. The Series G is funded and the ARR is compounding, but the trajectory that resolves Pattern Claim 3 — an S-1 filing or a documented enterprise logo mix — has not yet surfaced in public material <sup id="fnref2:wl7"><a class="footnote-ref" href="#fn:wl7">70</a></sup>. A deferred IPO extending through 2026 without an enterprise-traction disclosure would warrant reassessment at the next refresh; an S-1 would resolve it the other way.</p>
+<p><strong>The developer-led ZTNA category</strong> is the wildcard motion to watch, characterized at the category level only. The public signals — Tailscale&rsquo;s $160M Series C and its Border0 PAM acquisition, and adjacent identity-aware-access positioning elsewhere in the category — point to developer-led access tools porting up-market, but the individual sub-scale vendors are early-stage bets whose individual outcomes I cannot responsibly call from public material <sup id="fnref:wl4"><a class="footnote-ref" href="#fn:wl4">67</a></sup>. Whether identity-first ZTNA becomes a standalone enterprise wedge or gets absorbed into the platform incumbents&rsquo; identity-access acquisitions (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix) is the open category question <sup id="fnref:wl5"><a class="footnote-ref" href="#fn:wl5">68</a></sup>.</p>
+<p><strong>Cloudflare</strong> is worth watching post-restructuring on a different axis than its headcount. The question I would track is whether the agentic-AI-first reorganization translates into shipped, differentiated edge-and-SSE capability that improves its Gartner SASE-quadrant position from Visionary toward the Leaders, or whether the AI-first pivot pulls focus from the SSE roadmap while Zscaler and Netskope compound <sup id="fnref2:wl12"><a class="footnote-ref" href="#fn:wl12">75</a></sup>.</p>
+<h2>6.7 The Campaign Ahead</h2>
+<p>The Edge will be decided in public over the next several quarters, and every signal that decides it is observable without privileged access. These are the five I would put on the H2 2026 watchlist, each with a falsifiable threshold and a primary source class anyone can monitor.</p>
+<ol>
+<li>
+<p><strong>SSE-bundled DLP as a disclosed growth driver.</strong> Signal: whether Netskope and Zscaler name DLP/DSPM/data-security attach as a growth driver in their FY2026–FY2027 earnings commentary, plus any named-outlet report of an enterprise consolidating off standalone DLP onto SSE-bundled DLP on TCO grounds. Threshold: a documented standalone-DLP-to-SSE-bundled-DLP consolidation cited specifically on total-cost-of-ownership confirms the compression thesis at the middle of the market; continued attach growth without a documented migration does not. Primary source: Netskope (NASDAQ: NTSK) and Zscaler (NASDAQ: ZS) earnings transcripts and 10-Q filings, plus named-outlet enterprise coverage <sup id="fnref:wl13"><a class="footnote-ref" href="#fn:wl13">76</a></sup>.</p>
+</li>
+<li>
+<p><strong>Named non-human-identity / agent-access SKUs reported as growth.</strong> Signal: whether two or more SSE/ZTNA leaders ship and disclose named agent-access or non-human-identity SKUs as growth drivers — in earnings commentary or as a product-page hero change — through the period. Threshold: two or more leaders attributing disclosed revenue or pipeline to agent-access SKUs confirms the identity-first ZTNA category motion; agent-access features remaining buried as undifferentiated line-items with no disclosed attribution does not. Primary source: vendor product-page hero snapshots and Zscaler/Netskope earnings transcripts <sup id="fnref:wl14"><a class="footnote-ref" href="#fn:wl14">77</a></sup>.</p>
+</li>
+<li>
+<p><strong>The incumbent identity-access acquisition cluster closing.</strong> Signal: whether the Palo Alto Networks–CyberArk (~$25B, closed 2026-02-11), CrowdStrike–SGNL ($740M, January 2026), and Cisco–Astrix (reported ~$400M, May 2026) transactions integrate into shipping access products. Threshold: two or more of the three closing and surfacing integrated agent/machine-identity access capability in shipping products confirms the incumbents are competing seriously for the same access ground as the developer-led challengers; deals stalling or integration not surfacing publicly leaves the category motion unconfirmed on the incumbent side. Primary source: acquirer SEC filings (8-K) and vendor product announcements <sup id="fnref:wl15"><a class="footnote-ref" href="#fn:wl15">78</a></sup>.</p>
+</li>
+<li>
+<p><strong>Cato&rsquo;s IPO-or-enterprise trajectory.</strong> Signal: whether Cato Networks files a public S-1 or has a named-outlet-documented enterprise (rather than mid-market) logo mix surface, versus a deferral extending through 2026. Threshold: an S-1 filing OR a documented enterprise logo mix validates single-vendor SASE as an enterprise architecture; a continued deferral with traction concentrated below the enterprise tier confirms it as the mid-market&rsquo;s answer. Primary source: SEC EDGAR S-1 filings and named-outlet (Calcalist / SecurityWeek / Bloomberg) enterprise coverage <sup id="fnref:wl16"><a class="footnote-ref" href="#fn:wl16">79</a></sup>.</p>
+</li>
+<li>
+<p><strong>The Gartner SASE / SSE quadrant refresh.</strong> Signal: the next Gartner Magic Quadrant for SASE Platforms (and the SSE coverage beneath it), and whether Cloudflare moves from Visionary toward Leaders or holds, and whether the pure-play SSE leaders&rsquo; positions shift relative to the single-vendor-SASE natives. Threshold: a Cloudflare move into the Leaders quadrant confirms the AI-first restructuring translated into category-recognized capability; a held or weakened position signals the pivot pulled focus from the SSE roadmap. Primary source: the published Gartner Magic Quadrant for SASE Platforms / Security Service Edge and vendor announcements citing placement <sup id="fnref:wl17"><a class="footnote-ref" href="#fn:wl17">80</a></sup>.</p>
+</li>
+</ol>
+<hr>
+<h2>References &amp; Footnotes</h2>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:pg1">
+<p>SASE definition — converged cloud-delivered SD-WAN plus security from a single platform. Mordor Intelligence, &ldquo;Secure Access Service Edge (SASE) Market,&rdquo; accessed 2026-06-16. https://www.mordorintelligence.com/industry-reports/global-secure-access-service-edge-market&#160;<a class="footnote-backref" href="#fnref:pg1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg2">
+<p>SSE definition — the security half of SASE comprising SWG, CASB, ZTNA, and FWaaS, with networking removed. MarketsandMarkets, &ldquo;Security Service Edge (SSE) Market,&rdquo; accessed 2026-06-16. https://www.marketsandmarkets.com/Market-Reports/security-service-edge-market-186280780.html&#160;<a class="footnote-backref" href="#fnref:pg2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg3">
+<p>ZTNA definition — per-application access granted after identity and device-posture verification, replacing flat-network VPN access, situated as a component within SSE. MarketsandMarkets, &ldquo;Security Service Edge (SSE) Market&rdquo; (ZTNA listed as a core SSE component), accessed 2026-06-16. https://www.marketsandmarkets.com/Market-Reports/security-service-edge-market-186280780.html&#160;<a class="footnote-backref" href="#fnref:pg3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg4">
+<p>SSE as an enforcement plane in the network-security substrate, feeding SOC / identity / data-security layers (consumed-by-SOC framing). State of Cyber Security Markets 2026, taxonomy.md §7.1 (Layer 2 — Edge) and §2.5.&#160;<a class="footnote-backref" href="#fnref:pg4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg5">
+<p>SSE platforms bundle native DLP modules (Netskope DLP, Zscaler DLP) as cross-front presence; pure-play DLP remains a distinct category. State of Cyber Security Markets 2026, taxonomy.md §2.5; Netskope IPO portfolio description naming SSE, CASB, and data security posture management. Fintech Global, &ldquo;Netskope secures $908m as shares debut on Nasdaq,&rdquo; 2025-09-19, accessed 2026-06-16. https://fintech.global/2025/09/19/netskope-secures-908m-as-shares-debut-on-nasdaq/&#160;<a class="footnote-backref" href="#fnref:pg5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg6">
+<p>SASE and SSE are priced and purchased separately; buyers with existing SD-WAN often buy the SSE half only — Gartner&rsquo;s Single-Vendor SASE quadrant evaluates only vendors offering both SSE and SD-WAN, which is why best-of-breed SSE-plus-third-party-SD-WAN combinations sit outside it. Gartner Peer Insights / &ldquo;Magic Quadrant for SASE Platforms&rdquo; coverage, accessed 2026-06-16. https://www.gartner.com/reviews/market/single-vendor-sase&#160;<a class="footnote-backref" href="#fnref:pg6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg7">
+<p>ZTNA contains blast radius via per-application access with no implicit network trust, unlike a VPN. Portnox, &ldquo;AI Agent Access Management&rdquo; (ZTNA per-application enforcement and blast-radius containment), accessed 2026-06-16. https://www.portnox.com/cybersecurity-101/artificial-intelligence/ai-agent-access-management-controlling-what-autonomous-agents-can-do/&#160;<a class="footnote-backref" href="#fnref:pg7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pg8">
+<p>Buyer preference leans single-vendor (~61%) while actual deployments remain predominantly two-vendor. Gartner SASE quadrant analysis summary, accessed 2026-06-16. https://sase.cloud/guides/gartner-sase-magic-quadrant-analysis&#160;<a class="footnote-backref" href="#fnref:pg8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t1">
+<p>SASE market USD 15.54B (2026) → USD 39.14B (2031) at 20.29% CAGR, on a NaaS-plus-SECaaS definition across cloud-native, hybrid, and legacy-integrated deployments. Mordor Intelligence, &ldquo;Secure Access Service Edge (SASE) Market,&rdquo; accessed 2026-06-16. https://www.mordorintelligence.com/industry-reports/global-secure-access-service-edge-market&#160;<a class="footnote-backref" href="#fnref:t1" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t2">
+<p>SASE market ~USD 19.19B (2026) → USD 68.06B (2032) at ~28.8% CAGR on MarketsandMarkets&rsquo; broader networking-inclusive definition; the spread versus Mordor reflects how much SD-WAN / managed networking each firm includes. MarketsandMarkets, &ldquo;Secure Access Service Edge (SASE) Market Report 2026-2032,&rdquo; accessed 2026-06-16. https://www.marketsandmarkets.com/Market-Reports/secure-access-service-edge-market-220384224.html&#160;<a class="footnote-backref" href="#fnref:t2" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t3">
+<p>SSE market (security half only) USD 6.08B (2024) → USD 23.01B (2030) at 24.8% CAGR, spanning SWG/CASB/ZTNA/FWaaS, with FWaaS the fastest-growing component. MarketsandMarkets, &ldquo;Security Service Edge (SSE) Market,&rdquo; accessed 2026-06-16. https://www.marketsandmarkets.com/Market-Reports/security-service-edge-market-186280780.html&#160;<a class="footnote-backref" href="#fnref:t3" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t4">
+<p>ZTNA 2026 estimates range ~USD 2.4B–4.8B depending on whether bundled-into-SSE deployments are counted as ZTNA or absorbed into the SSE line, all at CAGRs above 20%. Grand View Research, &ldquo;Zero Trust Network Access Market,&rdquo; accessed 2026-06-16, https://www.grandviewresearch.com/industry-analysis/zero-trust-network-access-market-report ; market.us, &ldquo;Zero Trust Network Access Market&rdquo; (CAGR ~27%), accessed 2026-06-16, https://market.us/report/zero-trust-network-access-market/&#160;<a class="footnote-backref" href="#fnref:t4" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t5">
+<p>Gartner forecast (Predicts 2022, now aging) that 80% of enterprises would adopt a single-vendor SSE strategy by 2025 — dated 2022 vintage, cited here as the consolidation-thesis anchor, not as a current measurement. Gartner via Infosecurity Magazine, &ldquo;Predicts 2022: Consolidated Security Platforms Are the Future,&rdquo; accessed 2026-06-16. https://www.infosecurity-magazine.com/white-papers/prm/predicts-2022-consolidated/&#160;<a class="footnote-backref" href="#fnref:t5" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t6">
+<p>~61% of CISOs prefer single-vendor SASE in principle while a majority deploy two-vendor in practice; Fortinet and Cato named Leaders in the 2025 Gartner Magic Quadrant for SASE Platforms (Cato citing ~2,500 active enterprise platform customers). Gartner SASE quadrant analysis summary, accessed 2026-06-16, https://sase.cloud/guides/gartner-sase-magic-quadrant-analysis ; Fortinet, &ldquo;2025 Gartner Magic Quadrant for SASE Platforms,&rdquo; accessed 2026-06-16, https://www.fortinet.com/resources/analyst-reports/gartner-magic-quadrant-sase&#160;<a class="footnote-backref" href="#fnref:t6" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:t6" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t7">
+<p>VPN-to-ZTNA displacement cycle in late innings, with a majority of organizations reported as actively replacing VPNs with ZTNA in 2026. openPR / market report, &ldquo;Zero Trust Network Access Cybersecurity Market,&rdquo; accessed 2026-06-16. https://www.openpr.com/news/4488317/zero-trust-network-access-cybersecurity-market-to-reach&#160;<a class="footnote-backref" href="#fnref:t7" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t8">
+<p>Non-human identities (service accounts, API keys, machine tokens, AI agents) outnumber human identities in many enterprises by reported ratios of 40:1 to over 100:1, growing &gt;40% year-on-year. Portnox, &ldquo;AI Agent Access Management,&rdquo; accessed 2026-06-16. https://www.portnox.com/cybersecurity-101/artificial-intelligence/ai-agent-access-management-controlling-what-autonomous-agents-can-do/&#160;<a class="footnote-backref" href="#fnref:t8" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t9">
+<p>Zscaler&rsquo;s Zenith Live (Las Vegas) agentic-AI announcement on 2026-06-09 — AI Broker for agent-to-agent (MCP / A2A) traffic with an Agent Registry, and an AI Access Graph mapping identity-application-data lineage — positioning ZTNA toward a machine-identity control plane. Zscaler, &ldquo;Zscaler Unveils New Product Innovations to Secure Agentic AI,&rdquo; 2026-06-09, accessed 2026-06-16. https://www.zscaler.com/press/zscaler-unveils-new-product-innovations-secure-agentic-ai&#160;<a class="footnote-backref" href="#fnref:t9" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t10">
+<p>Netskope IPO on Nasdaq (ticker NTSK) on 2025-09-18, raising ~USD 908M, pricing at USD 19 (top of range) and closing ~18% up at a ~USD 8.6B market capitalization; ARR ~USD 707M (up 33%) with a net loss of ~USD 170M for the period. CNBC, &ldquo;Netskope soars 18% on first day of trading, reaches $8.6 billion market cap,&rdquo; 2025-09-18, accessed 2026-06-16. https://www.cnbc.com/2025/09/18/netskope-ipo-stock-nasdaq-ntsk.html&#160;<a class="footnote-backref" href="#fnref:t10" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t11">
+<p>U.S. federal civilian zero-trust-architecture mandates name identity-aware, per-resource access (the ZTNA model) as the target end state, pulling the public sector onto modern edge platforms on a regulatory timetable. CISA Zero Trust Maturity Model context as referenced in ZTNA market drivers, openPR, &ldquo;Zero Trust Network Access Cybersecurity Market,&rdquo; accessed 2026-06-16. https://www.openpr.com/news/4488317/zero-trust-network-access-cybersecurity-market-to-reach&#160;<a class="footnote-backref" href="#fnref:t11" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:t12">
+<p>Data-residency and sovereign-cloud obligations make the location of traffic inspection a compliance question, favoring SSE platforms able to guarantee in-region enforcement points. Mordor Intelligence, &ldquo;Secure Access Service Edge (SASE) Market&rdquo; (regional / regulatory drivers and geography segmentation), accessed 2026-06-16. https://www.mordorintelligence.com/industry-reports/global-secure-access-service-edge-market&#160;<a class="footnote-backref" href="#fnref:t12" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c1">
+<p>Zscaler Private Access (ZPA) product page, hero &ldquo;Secure Private Access with ZTNA&rdquo; and subhead &ldquo;Extend fast, secure, and reliable private app access for all users from any device or location.&rdquo; https://www.zscaler.com/products-and-solutions/zscaler-private-access (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c1" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c2">
+<p>Zscaler Private Access product page, supporting pillar: &ldquo;Zscaler Private Access (ZPA) offers seamless zero trust connectivity for all users, with AI-powered user-to-app segmentation and context-aware policies.&rdquo; https://www.zscaler.com/products-and-solutions/zscaler-private-access (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c2" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c3">
+<p>Zscaler acquisition of Red Canary (managed detection and response, MDR), completed 2025-08-01, for ~$651.4M (the 10-Q purchase consideration; the deal was signed at ~$680M on 2025-05-27), extending Zscaler beyond pure SSE into the SOC/MDR adjacency (cross-references Front 5). https://www.globenewswire.com/news-release/2025/08/01/3125824/0/en/Zscaler-Completes-Acquisition-of-Red-Canary-to-Accelerate-Innovations-in-Agentic-AI-driven-Security-Operations.html (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c3" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c4">
+<p>Zscaler, Form 10-Q for the period ended 2026-04-30 (fiscal Q3 2026): revenue ~$850M (+25% YoY), ARR ~$3,525M (+25% YoY). https://www.sec.gov/Archives/edgar/data/0001713683/000171368326000096/zs-20260430.htm (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c4" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c5">
+<p>Netskope homepage, hero positioning line &ldquo;Netskope: modern security and networking for the cloud and AI era&rdquo;; portfolio spans SSE, CASB, SSPM/DSPM, FWaaS, private access. https://www.netskope.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c5" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c5" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c6">
+<p>Netskope completed its IPO on Nasdaq in September 2025, raising ~$908M (47.8M shares at $19) at a valuation of ~$8.6B; ticker NTSK. https://www.securityweek.com/netskope-raises-over-908-million-in-ipo/ ; https://www.techzine.eu/news/security/134756/netskope-reaches-valuation-of-8-6-billion-after-ipo/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c6" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c7">
+<p>Netskope H1 2025 reporting: ARR ~$707M; net loss ~$170M for the half (unprofitable, growth-over-margin posture). https://www.securityweek.com/netskope-raises-over-908-million-in-ipo/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c7" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c8">
+<p>Cato Networks homepage, platform descriptor &ldquo;World&rsquo;s Leading Single-Vendor SASE Platform&rdquo; and pillar &ldquo;One Platform. Start Anywhere. Grow Everywhere.&rdquo;; current hero &ldquo;From CVE to Protection in Minutes&rdquo; / &ldquo;Agentic defense beyond time-to-patch. Cloud-delivered at machine speed.&rdquo; https://www.catonetworks.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c8" title="Jump back to footnote 28 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c8" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c9">
+<p>Cato Networks homepage, architecture statement: &ldquo;Cato&rsquo;s SASE platform converges networking, security, and access into a single, global, AI-powered cloud service.&rdquo; https://www.catonetworks.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c9" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c10">
+<p>Cato Networks extended its Series G to ~$409M total at a valuation of more than $4.8B (over $1B raised lifetime); ARR run-rate ~$350M (+43% YoY); 2026 Fortune Cyber 60 (third year); IPO discussed but postponed toward late 2026+. https://www.prnewswire.com/il/news-releases/cato-networks-raises-359-million-at-a-valuation-of-more-than-4-8-billion-302494283.html (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c10" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c11">
+<p>Cloudflare One (Zero Trust) page, hero &ldquo;The agile SASE platform&rdquo; and tagline &ldquo;Connect and protect your workforce, AI agents, and infrastructure&rdquo;; pillars include &ldquo;Identity-first zero trust access for every employee, contractor, and AI agent,&rdquo; &ldquo;First SASE platform to secure connections to MCP servers,&rdquo; and &ldquo;First SASE platform with post-quantum encryption across the full stack.&rdquo; https://www.cloudflare.com/sase/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c11" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:c11" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c12">
+<p>Cloudflare One page, network-reach pillars &ldquo;SASE architecture unified by design — on a global connectivity cloud&rdquo; and &ldquo;Cloudflare delivers full SASE from 300+ cities — &gt;3× more than other SASE vendors.&rdquo; https://www.cloudflare.com/sase/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c12" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c13">
+<p>Cloudflare Q1 2026 (period ended 2026-03-31): revenue ~$639.8M (+34% YoY), ~$4.2B cash, ~$84.1M free cash flow; third consecutive year in the Gartner SSE Magic Quadrant; announced ~20% workforce reduction (1,100+ roles, AI-first restructuring) with ~$140-150M restructuring charges. https://www.tikr.com/blog/cloudflare-q1-2026-34-revenue-growth-but-announces-20-workforce-reduction (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c13" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c14">
+<p>Forcepoint homepage, hero &ldquo;AI Moves Fast. Your Data Shouldn&rsquo;t Move Uncontrolled.&rdquo; and tagline &ldquo;Secure data everywhere from a single platform.&rdquo; https://www.forcepoint.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c14" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c15">
+<p>Forcepoint homepage, pillars &ldquo;AI Is Only as Secure as Your Data,&rdquo; &ldquo;The Most Advanced Data Classification Available,&rdquo; and &ldquo;Protect sensitive data across AI tools, cloud apps, web, email, endpoint and network.&rdquo; https://www.forcepoint.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c15" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c16">
+<p>Francisco Partners acquired the commercial Forcepoint business from Raytheon in January 2021; TPG acquired the Forcepoint government business (G2CI) for ~$2.45B, a deal that closed 2023-10-02, leaving the commercial SSE entity as a separate PE-held company. https://www.cybersecuritydive.com/news/tpg-acquires-forcepoint/686007/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c16" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c17">
+<p>Versa Networks homepage, hero &ldquo;Extend SASE to every part of your network with VersaONE&rdquo; and tagline &ldquo;Universal SASE protects and connects every part of your business — from headquarters to branch, cloud to data center, and every user and device in between.&rdquo; https://versa-networks.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c17" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c18">
+<p>Versa Networks homepage, platform pillar &ldquo;A unified platform with one console, one policy, one data lake, and one OS&rdquo;; VersaAI framing &ldquo;AI FOR SASE&rdquo; / &ldquo;SASE FOR AI.&rdquo; https://versa-networks.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c18" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c19">
+<p>Versa Networks&rsquo; latest verifiable round is a $120M pre-IPO financing led by BlackRock, October 2022 (~$632M raised lifetime); the signaled public listing has not been realized in the years since. Stated plainly as 2022-vintage; no implication of recent capital or imminent IPO. https://versa-networks.com/news/2022/versa-networks-secures-120m-financing-in-pre-ipo-round-led-by-blackrock-to-capitalize-on-rapidly-growing-sase-market/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c19" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c20">
+<p>Tailscale homepage, hero &ldquo;The best secure connectivity platform for the AI era&rdquo; and tagline &ldquo;A Zero Trust identity-based connectivity platform that replaces your legacy VPN, SASE, and PAM.&rdquo; https://tailscale.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c20" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c21">
+<p>Tailscale homepage, pillars &ldquo;Remote access for your global team,&rdquo; &ldquo;Infrastructure access to wherever your resources live, including Kubernetes clusters,&rdquo; and &ldquo;Easy, secure, identity-based access to anything.&rdquo; https://tailscale.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c21" title="Jump back to footnote 41 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c22">
+<p>Tailscale raised a $160M Series C in April 2025 (led by Accel); acquired Border0 (privileged access management) in March 2026, extending the platform from ZTNA into PAM. https://tailscale.com/blog/series-c ; https://www.pymnts.com/acquisitions/2026/tailscale-simplifies-secure-access-with-border0-acquisition/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c22" title="Jump back to footnote 42 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c23">
+<p>Twingate homepage, hero &ldquo;Security, Performance, Simplicity. Pick Three.&rdquo; and value proposition &ldquo;Identity-based access for users, services, and AI agents that deploys in minutes, scales to every resource, and finally lets you retire your VPN.&rdquo; https://www.twingate.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c23" title="Jump back to footnote 43 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c24">
+<p>Twingate homepage, pillars &ldquo;Zero Trust with No Boundaries,&rdquo; &ldquo;Protect Every Click,&rdquo; and &ldquo;Democratize Privileged Access.&rdquo; https://www.twingate.com/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c24" title="Jump back to footnote 44 in the text">&#8617;</a></p>
+</li>
+<li id="fn:c25">
+<p>Twingate&rsquo;s most recent verifiable round is a $42M Series B dated 2022-04-14 (~$67M raised lifetime); no newer round surfaced in the bounded scan. Stated plainly as 2022-vintage; no implication of recent capital. https://tracxn.com/d/companies/twingate/__c35wWrBcnX8V7hJ-VfrPl0YSjJ17izwNusJlyDvgjyA/funding-and-investors (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:c25" title="Jump back to footnote 45 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl1">
+<p>Cato Networks, &ldquo;Cato Networks Raises $359 Million at a Valuation of More Than $4.8 Billion,&rdquo; 2025, https://www.prnewswire.com/news-releases/cato-networks-raises-359-million-at-a-valuation-of-more-than-4-8-billion-302494283.html (accessed 2026-06-16); Cato Networks, &ldquo;Cato Surpasses $350 Million ARR with 43% YoY Growth in 2025,&rdquo; https://www.catonetworks.com/news/cato-surpasses-350-million-arr-with-43-yoy-growth-in-2025/ (accessed 2026-06-16). Series G totaled ~$409M (initial round plus extension) at a valuation above $4.8B; ARR surpassed $350M at 43% YoY growth; IPO deferred.&#160;<a class="footnote-backref" href="#fnref:pl1" title="Jump back to footnote 46 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl2">
+<p>SecurityWeek, &ldquo;Netskope Raises Over $908 Million in IPO,&rdquo; 2025, https://www.securityweek.com/netskope-raises-over-908-million-in-ipo/ (accessed 2026-06-16). Netskope (NASDAQ: NTSK) IPO&rsquo;d on Nasdaq in September 2025, raising ~$908M at ~$8.6B valuation; first-half 2025 ARR ~$707M; ~$1.5B raised pre-IPO.&#160;<a class="footnote-backref" href="#fnref:pl2" title="Jump back to footnote 47 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl3">
+<p>Microsoft Learn, &ldquo;Microsoft Entra Internet Access&rdquo; / &ldquo;Global Secure Access,&rdquo; 2026, https://learn.microsoft.com/en-us/entra/global-secure-access/concept-internet-access (accessed 2026-06-16). Entra Internet Access and Entra Private Access form Microsoft&rsquo;s Global Secure Access SSE family; Defender for Cloud Apps serves as the cloud access security broker. Microsoft&rsquo;s primary characterization in this report is in Front 5; here it appears as a cross-front SSE play via Entra Internet Access, not as a Front 6 contender.&#160;<a class="footnote-backref" href="#fnref:pl3" title="Jump back to footnote 48 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl4">
+<p>Palo Alto Networks, &ldquo;Prisma Access,&rdquo; product page, https://www.paloaltonetworks.com/sase/access (accessed 2026-06-16); Reuters, Palo Alto Networks–CyberArk acquisition close, 2026, https://www.reuters.com/business/palo-alto-networks-completes-cyberark-acquisition-2026/ (accessed 2026-06-16). Prisma Access is Palo Alto Networks&rsquo; SSE layer; the ~$25B CyberArk acquisition closed 2026-02-11. Palo Alto Networks&rsquo; primary characterization in this report is in Front 5; here it appears as a cross-front SSE play via Prisma Access.&#160;<a class="footnote-backref" href="#fnref:pl4" title="Jump back to footnote 49 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl5">
+<p>Cisco, &ldquo;Cisco Umbrella&rdquo; and &ldquo;Cisco Hypershield&rdquo; product pages, https://umbrella.cisco.com/ (accessed 2026-06-16); https://www.cisco.com/site/us/en/products/security/hypershield/index.html (accessed 2026-06-16). Cisco carries Umbrella, Duo, and Hypershield into existing network accounts as an SSE-adjacent bundle. Cisco&rsquo;s primary characterization in this report is in Front 5 (its Splunk-era platform); here it appears as a cross-front SSE play.&#160;<a class="footnote-backref" href="#fnref:pl5" title="Jump back to footnote 50 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl6">
+<p>Cross-front primary-slot note: Microsoft, Palo Alto Networks, and Cisco are analyzed as primary contenders in Front 5 (Detection &amp; Response). In Front 6 they appear only as §6.4 Plays exerting bundle pressure on the SSE pure-plays, named by their SSE-specific product families (Entra Internet Access, Prisma Access, Umbrella/Duo/Hypershield), per the report&rsquo;s cross-front primary-slot map.&#160;<a class="footnote-backref" href="#fnref:pl6" title="Jump back to footnote 51 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl7">
+<p>Zscaler, Form 10-Q, period ended 2026-04-30, https://www.sec.gov/Archives/edgar/data/0001713683/000171368326000096/zs-20260430.htm (accessed 2026-06-16). Red Canary (MDR) acquired for ~$651.4M, completed 2025-08-01.&#160;<a class="footnote-backref" href="#fnref:pl7" title="Jump back to footnote 52 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl8">
+<p>Zscaler fiscal Q3 2026 (period ended 2026-04-30): revenue ~$850M (+25% YoY), ARR ~$3,525M, per Form 10-Q, https://www.sec.gov/Archives/edgar/data/0001713683/000171368326000096/zs-20260430.htm (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:pl8" title="Jump back to footnote 53 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl9">
+<p>Cross-front note: the detection-and-response incumbents whose managed-service revenue Zscaler&rsquo;s Red Canary acquisition contests (including CrowdStrike Falcon Complete and Microsoft&rsquo;s managed Defender services) are characterized primarily in Front 5; this Play references that boundary rather than re-grading those vendors here.&#160;<a class="footnote-backref" href="#fnref:pl9" title="Jump back to footnote 54 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl10">
+<p>Tailscale, &ldquo;Series C,&rdquo; April 2025, https://tailscale.com/blog/series-c (accessed 2026-06-16); PYMNTS, &ldquo;Tailscale Simplifies Secure Access With Border0 Acquisition,&rdquo; 2026, https://www.pymnts.com/acquisitions/2026/tailscale-simplifies-secure-access-with-border0-acquisition/ (accessed 2026-06-16). $160M Series C led by Accel, April 2025; Border0 (privileged access management) acquired March 2026.&#160;<a class="footnote-backref" href="#fnref:pl10" title="Jump back to footnote 55 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pl11">
+<p>Twingate (private): $42M Series B, April 2022, ~$67M total raised; no comparable recent capital event on the public record. Tracxn, Twingate funding and investors, https://tracxn.com/d/companies/twingate/__c35wWrBcnX8V7hJ-VfrPl0YSjJ17izwNusJlyDvgjyA/funding-and-investors (accessed 2026-06-16). Print the year, no recent-capital implication.&#160;<a class="footnote-backref" href="#fnref:pl11" title="Jump back to footnote 56 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w1">
+<p>Netskope (NASDAQ: NTSK): IPO on Nasdaq September 2025, raised ~$908M at ~$8.6B valuation; ~$1.5B raised pre-IPO; first-half 2025 ARR ~$707M. SecurityWeek, &ldquo;Netskope Raises Over $908 Million in IPO,&rdquo; 2025, https://www.securityweek.com/netskope-raises-over-908-million-in-ipo/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w1" title="Jump back to footnote 57 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w2">
+<p>Zscaler (NASDAQ: ZS): acquired Red Canary (MDR) for ~$651.4M, completed 2025-08-01; fiscal Q3 2026 ARR ~$3,525M, revenue ~$850M (+25% YoY). Form 10-Q, period ended 2026-04-30, https://www.sec.gov/Archives/edgar/data/0001713683/000171368326000096/zs-20260430.htm (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w2" title="Jump back to footnote 58 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w3">
+<p>Cloudflare (NYSE: NET): Q1 2026 revenue $639.8M (+34% YoY); ~$4.2B cash and equivalents. Cloudflare, Form 10-Q, period ended 2026-03-31, https://www.sec.gov/Archives/edgar/data/0001477333/000147733326000038/cloud-20260331.htm (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w3" title="Jump back to footnote 59 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w4">
+<p>Cloudflare (NYSE: NET): on May 7, 2026 announced a plan to accelerate its shift to an agentic AI-first operating model, reducing workforce by ~20% (~1,100 roles), with estimated restructuring charges of $140–150M (cash severance/benefits $105–110M; non-cash share-based vesting $35–40M), majority incurred in fiscal Q2 2026. Cloudflare, Form 8-K, fiscal Q1 2026, https://www.sec.gov/Archives/edgar/data/0001477333/000147733326000033/q126exhibit991.htm (accessed 2026-06-16); TechCrunch, &ldquo;Cloudflare says AI made 1,100 jobs obsolete, even as revenue hit a record high,&rdquo; 2026-05-08, https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/ (accessed 2026-06-16). This is a strong-growth company restructuring to an AI-first model, not a distressed company; it is noted as a cited public corporate event, not a casualty label.&#160;<a class="footnote-backref" href="#fnref:w4" title="Jump back to footnote 60 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w5">
+<p>Cato Networks (private): $409M Series G (initial round plus extension) at a valuation above $4.8B in 2025, led by new investors Vitruvian Partners and ION Crossover Partners with existing investors including Lightspeed Venture Partners; more than $1B raised to date; IPO deferred. Cato Networks, &ldquo;Cato Networks Raises $359 Million at a Valuation of More Than $4.8 Billion,&rdquo; 2025, https://www.prnewswire.com/news-releases/cato-networks-raises-359-million-at-a-valuation-of-more-than-4-8-billion-302494283.html (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w5" title="Jump back to footnote 61 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w6">
+<p>Tailscale (private): $160M Series C, April 2025, led by Accel; acquired Border0 (PAM) March 2026. Tailscale, &ldquo;Series C,&rdquo; https://tailscale.com/blog/series-c (accessed 2026-06-16); PYMNTS, https://www.pymnts.com/acquisitions/2026/tailscale-simplifies-secure-access-with-border0-acquisition/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w6" title="Jump back to footnote 62 in the text">&#8617;</a></p>
+</li>
+<li id="fn:w7">
+<p>Versa Networks (private): last round a $120M pre-IPO financing led by BlackRock, October 2022; ~$632M raised to date; IPO unrealized. No recent capital event; print the year, no recent-capital or imminent-IPO implication. Versa Networks, &ldquo;Versa Networks Secures $120M Financing in Pre-IPO Round Led by BlackRock,&rdquo; 2022, https://versa-networks.com/news/2022/versa-networks-secures-120m-financing-in-pre-ipo-round-led-by-blackrock-to-capitalize-on-rapidly-growing-sase-market/ (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:w7" title="Jump back to footnote 63 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl1">
+<p>Netskope (Nasdaq: NTSK) IPO 2025-09-18, ~$908.2M raised, ~$8.6–8.79B debut valuation; Q1 fiscal 2027 (quarter ended 2026-04-30; Netskope&rsquo;s fiscal year ends January 31) ARR $845M (+29% YoY), revenue $202M (+28% YoY), customers paying $100K+ ARR grew 23% YoY to ~1,600; platform bundles DLP alongside CASB/SSPM/DSPM. CNBC, &ldquo;Netskope soars 18% on first day of trading, reaches $8.6 billion market cap,&rdquo; and Netskope Q1 fiscal 2027 earnings coverage, accessed 2026-06-16. https://www.cnbc.com/2025/09/18/netskope-ipo-stock-nasdaq-ntsk.html ; https://finance.yahoo.com/markets/stocks/articles/netskope-inc-ntsk-q1-2026-050038565.html&#160;<a class="footnote-backref" href="#fnref:wl1" title="Jump back to footnote 64 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl1" title="Jump back to footnote 64 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl1" title="Jump back to footnote 64 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl1" title="Jump back to footnote 64 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:wl1" title="Jump back to footnote 64 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl2">
+<p>Zscaler (NASDAQ: ZS), Form 10-Q for the period ended 2026-04-30 (fiscal Q3 2026): ARR ~$3,525M (+25% YoY), revenue ~$850M (+25% YoY); DLP bundled inside the Zero Trust Exchange. https://www.sec.gov/Archives/edgar/data/0001713683/000171368326000096/zs-20260430.htm (accessed 2026-06-16).&#160;<a class="footnote-backref" href="#fnref:wl2" title="Jump back to footnote 65 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl2" title="Jump back to footnote 65 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl2" title="Jump back to footnote 65 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl2" title="Jump back to footnote 65 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl3">
+<p>SSE platforms ship DLP as a bundled module of the broader Security Service Edge bundle (SWG, CASB, ZTNA, FWaaS) reaching the buyer inside a platform already purchased for secure web gateway and zero-trust access, rather than as a standalone evaluation. Netskope platform overview (DLP/CASB/SSPM/DSPM) and Zscaler product portfolio, accessed 2026-06-16. https://www.netskope.com/products ; https://www.zscaler.com/products-and-solutions&#160;<a class="footnote-backref" href="#fnref:wl3" title="Jump back to footnote 66 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl3" title="Jump back to footnote 66 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl4">
+<p>Tailscale raised a $160M Series C (April 2025, led by Accel) and announced its first acquisition, privileged-access-management startup Border0, on 2026-03-17, building out PAM and zero-trust access capabilities; Bloomberg framed the deal around AI agents requiring per-resource server access. Bloomberg, &ldquo;Canada Cyber Startup Tailscale Buys Border0 as AI Agents Spill Onto Servers,&rdquo; accessed 2026-06-16. https://www.bloomberg.com/news/articles/2026-03-17/canada-cyber-startup-tailscale-buys-border0-as-ai-agents-spill-onto-servers ; BetaKit, &ldquo;Tailscale makes first acquisition with Border0 purchase,&rdquo; https://betakit.com/tailscale-makes-first-acquisition-with-border0-purchase/&#160;<a class="footnote-backref" href="#fnref:wl4" title="Jump back to footnote 67 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl4" title="Jump back to footnote 67 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl4" title="Jump back to footnote 67 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl5">
+<p>Incumbent identity-access acquisition cluster aimed at the machine-and-agent access problem: Palo Alto Networks completed its ~$25B acquisition of CyberArk on 2026-02-11 (regulatory clearances in U.S., EU, UK, Israel); CrowdStrike acquired identity-security firm SGNL for $740M (January 2026); Cisco agreed to acquire non-human-identity vendor Astrix for a reported ~$400M (May 2026); Microsoft shipped Entra Agent ID giving AI agents first-class identities. GovCon Wire, &ldquo;Palo Alto Networks Closes $25B Acquisition of CyberArk,&rdquo; accessed 2026-06-16. https://www.govconwire.com/articles/palo-alto-networks-cyberark-25b-acquisition&#160;<a class="footnote-backref" href="#fnref:wl5" title="Jump back to footnote 68 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl5" title="Jump back to footnote 68 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl5" title="Jump back to footnote 68 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl6">
+<p>ZTNA enforces per-application, continuously-verified access — the named enforcement primitive for an AI agent that must reach exactly one authorized resource and no more; non-human identities (service accounts, API keys, machine tokens, AI agents) now outnumber human identities in many enterprises and are among the fastest-growing attack surfaces per NIST. Exabeam, &ldquo;ZTNA Solutions: Key Capabilities and 9 Options to Know in 2026,&rdquo; accessed 2026-06-16. https://www.exabeam.com/explainers/zero-trust/ztna-solutions-key-capabilities-and-9-options-to-know/&#160;<a class="footnote-backref" href="#fnref:wl6" title="Jump back to footnote 69 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl6" title="Jump back to footnote 69 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl7">
+<p>Cato Networks surpassed $350M ARR with 43% YoY growth in 2025 and raised a $409M Series G at a valuation above $4.8 billion, keeping its IPO deferred. Cato Networks, &ldquo;Cato Networks Raises $359 Million at a Valuation of More Than $4.8 Billion,&rdquo; accessed 2026-06-16. https://www.prnewswire.co.uk/news-releases/cato-networks-raises-359-million-at-a-valuation-of-more-than-4-8-billion-302494248.html ; &ldquo;Cato Networks Surpasses $350 Million ARR with 43% YoY Growth in 2025,&rdquo; https://www.catonetworks.com/news/cato-surpasses-350-million-arr-with-43-yoy-growth-in-2025/&#160;<a class="footnote-backref" href="#fnref:wl7" title="Jump back to footnote 70 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl7" title="Jump back to footnote 70 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl7" title="Jump back to footnote 70 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:wl7" title="Jump back to footnote 70 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl8">
+<p>Cato Networks named to the 2026 Fortune Cyber 60 list for a third consecutive year — a cohort of venture-backed startups that have not had an IPO, acquisition, or other significant exit. Cato Networks / PR Newswire, &ldquo;Cato Networks Named to 2026 Fortune Cyber 60 List for Third Consecutive Year,&rdquo; accessed 2026-06-16. https://www.prnewswire.com/news-releases/cato-networks-named-to-2026-fortune-cyber-60-list-for-third-consecutive-year-302599099.html&#160;<a class="footnote-backref" href="#fnref:wl8" title="Jump back to footnote 71 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl8" title="Jump back to footnote 71 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:wl8" title="Jump back to footnote 71 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl9">
+<p>Netskope (NASDAQ: NTSK) public since September 2025 and Zscaler (NASDAQ: ZS) trading as a scaled public SSE platform give best-of-breed assemblers two fully public SSE reference points. See <sup id="fnref5:wl1"><a class="footnote-ref" href="#fn:wl1">64</a></sup> and <sup id="fnref4:wl2"><a class="footnote-ref" href="#fn:wl2">65</a></sup>.&#160;<a class="footnote-backref" href="#fnref:wl9" title="Jump back to footnote 72 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl9" title="Jump back to footnote 72 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl10">
+<p>Zscaler completed its acquisition of managed-detection-and-response house Red Canary (completed 2025-08-01) for ~$651.4M, extending Zscaler beyond pure SSE into the SOC/MDR adjacency. Zscaler press release, accessed 2026-06-16. https://www.globenewswire.com/news-release/2025/08/01/3125824/0/en/Zscaler-Completes-Acquisition-of-Red-Canary-to-Accelerate-Innovations-in-Agentic-AI-driven-Security-Operations.html&#160;<a class="footnote-backref" href="#fnref:wl10" title="Jump back to footnote 73 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl11">
+<p>Cloudflare (NYSE: NET) Form 8-K (FY2026) disclosed a workforce reduction of approximately 1,100 people (~20% of headcount) to accelerate an agentic-AI-first operating model, with charges of $140–150M; co-founders stated explicitly it was not a cost-cutting exercise or a performance assessment. SecurityWeek, &ldquo;Cloudflare Lays Off 1,100 Employees in AI-Driven Restructuring,&rdquo; and Cloudflare Form 8-K FY2026, accessed 2026-06-16. https://www.securityweek.com/cloudflare-lays-off-1100-employees-in-ai-driven-restructuring/ ; https://www.sec.gov/Archives/edgar/data/0001477333/000147733326000033/q126exhibit991.htm&#160;<a class="footnote-backref" href="#fnref:wl11" title="Jump back to footnote 74 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl11" title="Jump back to footnote 74 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl12">
+<p>Cloudflare named a Visionary in the 2025 Gartner Magic Quadrant for SASE Platforms. Cloudflare blog, &ldquo;Cloudflare recognized as a Visionary in 2025 Gartner Magic Quadrant for SASE Platforms,&rdquo; accessed 2026-06-16. https://blog.cloudflare.com/cloudflare-sase-gartner-magic-quadrant-2025/&#160;<a class="footnote-backref" href="#fnref:wl12" title="Jump back to footnote 75 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:wl12" title="Jump back to footnote 75 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl13">
+<p>Netskope (NASDAQ: NTSK) and Zscaler (NASDAQ: ZS) investor relations — earnings transcripts and 10-Q filings disclosing data-security (DLP/DSPM) attach as a platform growth driver. SEC EDGAR, accessed 2026-06-16. https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001713683 (Zscaler) ; Netskope IR https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;company=netskope&amp;type=10-Q&#160;<a class="footnote-backref" href="#fnref:wl13" title="Jump back to footnote 76 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl14">
+<p>SSE/ZTNA leader product-page hero snapshots and Zscaler/Netskope earnings transcripts disclosing named non-human-identity / agent-access SKUs as growth drivers. Zscaler Zenith Live 2026 AI Broker / Agent Registry / AI Access Graph announcements and vendor product pages, accessed 2026-06-16. https://www.zscaler.com/products-and-solutions&#160;<a class="footnote-backref" href="#fnref:wl14" title="Jump back to footnote 77 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl15">
+<p>Acquirer SEC filings (Form 8-K) and vendor product announcements documenting closing and integration of the identity-access acquisition cluster (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix). GovCon Wire (PANW/CyberArk close) and acquirer investor relations, accessed 2026-06-16. https://www.govconwire.com/articles/palo-alto-networks-cyberark-25b-acquisition&#160;<a class="footnote-backref" href="#fnref:wl15" title="Jump back to footnote 78 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl16">
+<p>Cato Networks IPO-or-enterprise trajectory — SEC EDGAR S-1 filings and named-outlet (Calcalist / SecurityWeek / Bloomberg) enterprise coverage. Calcalist, &ldquo;Cato Networks hits $350 million revenue run rate amid IPO uncertainty,&rdquo; accessed 2026-06-16. https://www.calcalistech.com/ctechnews/article/rjf7exsube&#160;<a class="footnote-backref" href="#fnref:wl16" title="Jump back to footnote 79 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wl17">
+<p>Gartner Magic Quadrant for SASE Platforms / Security Service Edge refresh and vendor placement announcements. Cloudflare 2025 SASE Platforms quadrant placement (Visionary) as the prior-cycle baseline, accessed 2026-06-16. https://blog.cloudflare.com/cloudflare-sase-gartner-magic-quadrant-2025/&#160;<a class="footnote-backref" href="#fnref:wl17" title="Jump back to footnote 80 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+<section class="back-disclosures">
+<h2>Disclosures</h2>
+<p><strong>DISCLOSURE.</strong> The author is Head of Product (Fractional) at AXIA. This chapter uses only publicly available material and reflects the author's personal view; AXIA does not compete in the Secure Service Edge (SASE / SSE / ZTNA) segment.</p>
+<p><strong>NOT ADVICE.</strong> This report does not constitute investment, legal, tax, or accounting advice. No claim should be relied upon as the basis for any investment decision. The author holds no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+</section>
+</body>
+</html>
