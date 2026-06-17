@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="robots" content="noindex, nofollow">
-<!-- UNLISTED DRAFT for owner review — not published; not on research index; no SEO head. -->
+<!-- UNLISTED DRAFT for owner review — not published. -->
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +61,67 @@ html[dir="rtl"] .bottombar { direction: ltr; }
   flex-direction: column;
 }
 .slide.active { display: flex; }
+
+/* Print / Save as PDF — render as a FLOWING DOCUMENT, not slide screenshots */
+@media print {
+  @page { margin: 18mm 16mm; }
+  /* Re-map theme variables so every var(--...) reference resolves to light-on-white */
+  :root {
+    --bg-dark: #ffffff; --bg-card: #ffffff; --bg-elevated: #f4f4f4;
+    --text-primary: #111111; --text-secondary: #2a2a2a; --text-muted: #555555;
+    --border: #cccccc;
+  }
+  html, body {
+    height: auto !important; overflow: visible !important;
+    background: #ffffff !important; color: #111111 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    font-size: 11pt; line-height: 1.55;
+  }
+  /* Continuous flow: slides become document sections, NOT one-per-page screenshots */
+  .slide {
+    display: block !important; min-height: 0 !important; height: auto !important;
+    padding: 0 !important; margin: 0 0 6pt !important; overflow: visible !important;
+    page-break-after: auto !important; break-after: auto !important;
+    page-break-before: auto !important; break-before: auto !important;
+  }
+  .slide > div[style] { display: block !important; }   /* flatten the centered hero wrapper */
+  /* Brand logo ONCE at the top; drop the repeated logos + redundant per-slide labels */
+  .slide:not([data-slide="1"]) .brand-bar { display: none !important; }
+  .slide[data-slide="1"] .brand-bar { border: none !important; margin-bottom: 10pt !important; }
+  .section-label { display: none !important; }
+  .slide[data-slide="review"] { display: none !important; }   /* drop the interactive Review slide */
+  /* Document title (hero) — solid ink, left-aligned, normal document size */
+  .hero-title {
+    background: none !important; -webkit-text-fill-color: var(--primary) !important;
+    color: var(--primary) !important; font-size: 22pt !important; line-height: 1.15 !important;
+    text-align: left !important; margin: 0 0 6pt !important;
+  }
+  .hero-subtitle { color: #1a1a1a !important; font-size: 12pt !important; max-width: none !important; }
+  /* Section headings — solid ink, kept with the text that follows */
+  h1, h2 {
+    background: none !important; -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: var(--primary) !important; color: var(--primary) !important;
+    font-size: 15pt !important; margin: 14pt 0 6pt !important;
+    page-break-after: avoid !important; break-after: avoid !important;
+  }
+  h3 { color: #222222 !important; font-size: 12.5pt !important; margin: 10pt 0 4pt !important;
+       page-break-after: avoid !important; break-after: avoid !important; }
+  p, li, td, .hero-subtitle, .timeline-text { color: #1a1a1a !important; orphans: 3; widows: 3; }
+  p, li, blockquote, tr, .card, .kpi-card, .table-container { page-break-inside: avoid; break-inside: avoid; }
+  strong { color: #000000 !important; }
+  em { color: #0b6f66 !important; }            /* darker teal — the cyan accent is too light on white */
+  a { color: var(--primary) !important; }
+  blockquote { background: #f4f4f4 !important; border-left: 3px solid var(--primary) !important; }
+  blockquote p { color: #111111 !important; }
+  .card, .kpi-card, .table-container { background: #ffffff !important; border: 1px solid #cccccc !important; box-shadow: none !important; }
+  table, th, td { border-color: #bbbbbb !important; }
+  th { background: #eeeeee !important; color: #111111 !important; }
+  /* Hide all interactive chrome */
+  .nav-bar, .nav-arrow, .comment-badge, #jumpOverlay, .comment-popover, #feedbackPanel,
+  .scroll-nav-pill, .print-btn, .nav-dots, .mode-toggle { display: none !important; }
+  .commentable::after { display: none !important; content: none !important; }
+}
 
 /* Desktop padding */
 @media (min-width: 768px) {
@@ -1202,7 +1263,7 @@ svg:not(.nav-bar svg) {
 <h3>Gravity (3)</h3>
 <p><strong>1. NICE — CXone Mpower Performance Management + Workforce Empowerment (Enlighten).</strong> Native module that <strong>"aggregates data from NiCE and third-party systems… into one centralized view"</strong> where <strong>"managers, supervisors, and agents gain actionable insights supported by personalized coaching and gamification"</strong> (nice.com/resources/cxone-mpower-performance-management-native, accessed 2026-06-16). The 2026 <strong>Workforce Empowerment / Enlighten Actions</strong> pillar reframes it for the AI era — <strong>"manage performance across human and AI agents operating on the same queues,"</strong> with <strong>"personalized coaching assignments generated from interaction and performance data"</strong> (nice.com/products/workforce-empowerment, accessed 2026-06-16). <em>AI positioning:</em> GenAI "Copilot for Supervisors" + AI coaching on the legacy suite; wellbeing surfaces as supervisor-alerting, not biometric inference. <strong>Playvox</strong> (acquired 1 Oct 2024) is a capability <em>inside</em> this card. A Convergence P1 proxy.</p>
 <p><strong>2. Thoma Bravo CX — Verint + Calabrio engagement (Cogito inside).</strong> Calabrio's engagement line leads with <strong>"Retain Great Agents and Unleash Their Full Potential"</strong> / <strong>"Your contact center only thrives when its agents do,"</strong> with gamification, leaderboards, an agent-centric coaching portal, and a vendor-claimed <strong>"agents who receive regular performance insights are 33% more likely to stay"</strong> (calabrio.com/employee-engagement-platform, accessed 2026-06-16). Verint adds the <strong>TimeFlex Bot</strong> (vendor-claimed "up to 30% decreased attrition"). <strong>Cogito — the real-time emotion/EX-coaching vendor — is now <em>inside</em> this entity</strong> (Verint acquired it 11 Oct 2024, $38.2M + up to $23.2M contingent; verint.com/cogito + CX Today Oct 2024, accessed 2026-06-16), delivering "a real-time score for both customer experience (CX) and employee experience (EX)." <em>Note (the emotion-AI wall): Cogito's acoustic emotion/burnout-inference line is the capability EU AI Act Art. 5(1)(f) is widely read to reach in EU workplace deployment — and the prohibition binds the deploying employer's use, not the vendor's sale.</em> The flagship PE-roll-up datapoint on this front.</p>
-<p><strong>3. Genesys — Cloud Workforce Engagement.</strong> Native gamification/performance/development "built into the overall platform rather than as a bolt-on" (genesys.com/capabilities/employee-engagement, accessed 2026-06-16) — the lighter-surfaced of the three Gravity suites on this front, but it clears the bar on dated native positioning. A Convergence P1 proxy.</p>
+<p><strong>3. Genesys — Cloud Workforce Engagement.</strong> Native gamification/performance/development "built into the overall platform rather than as a bolt-on" (genesys.com/genesys-cloud, accessed 2026-06-16) — the lighter-surfaced of the three Gravity suites on this front, but it clears the bar on dated native positioning. A Convergence P1 proxy.</p>
 </div>
 <div class="slide" data-slide="36" data-title="Attention (4)">
 <div class="brand-bar">
@@ -2316,7 +2377,7 @@ svg:not(.nav-bar svg) {
 
 <button class="nav-btn" id="nextBtn" aria-label="Next">&rarr;</button>
 </div>
-<div></div>
+<div style="justify-self:end;"><button class="nav-btn print-btn" onclick="window.print()" title="Print / Save as PDF" aria-label="Save as PDF" style="width:auto;padding:0 12px;font-size:13px;white-space:nowrap;">&#11015; PDF</button></div>
 </div>
 
 <div id="jumpOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;align-items:center;justify-content:center;">
