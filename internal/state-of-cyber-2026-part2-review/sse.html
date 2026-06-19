@@ -583,64 +583,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 </div>
 <h2>6.1 The Playing Ground</h2>
 <p>The Edge segment is where an organization decides who and what is allowed to reach its applications, and inspects the traffic that flows to and from them, no matter where the user or the workload sits. For two decades that job lived in a hardware perimeter — a firewall at the office, a VPN concentrator for anyone outside it. The cloud and the remote-work shift dissolved that perimeter, and the security stack that replaced it moved to the edge of the network as a cloud-delivered service. Three terms describe that stack, and they are routinely conflated, so it is worth separating them cleanly.</p>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="900" height="660" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="900" height="6" fill="#F59E0B"/>
-
-  <text x="450" y="42" font-size="22" font-weight="700" fill="#FBBF24" text-anchor="middle">Where Secure Service Edge Sits in the Cyber Stack</text>
-  <text x="450" y="62" font-size="11" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 6</text>
-
-  <!-- Nested rings: SASE (outer) ⊃ SSE (middle) ⊃ ZTNA (inner) -->
-
-  <!-- SASE — widest ring -->
-  <rect x="150" y="100" width="600" height="430" rx="16" fill="#92400E" fill-opacity="0.18" stroke="#F59E0B" stroke-width="2.5"/>
-  <text x="450" y="128" font-size="17" font-weight="800" fill="#fef3c7" text-anchor="middle">SASE — Secure Access Service Edge</text>
-  <text x="450" y="147" font-size="10" fill="#fed7aa" text-anchor="middle">converged framework: security + the network plumbing (SD-WAN) from one cloud platform</text>
-
-  <!-- SD-WAN / networking band — the part SASE adds beyond SSE -->
-  <rect x="172" y="162" width="556" height="40" rx="6" fill="#1e3a8a" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1.3"/>
-  <text x="450" y="180" font-size="11" font-weight="700" fill="#dbeafe" text-anchor="middle">SD-WAN · Networking-as-a-Service</text>
-  <text x="450" y="195" font-size="9" fill="#93c5fd" text-anchor="middle">the network half — present in SASE, removed in SSE</text>
-
-  <!-- SSE — security half -->
-  <rect x="200" y="216" width="500" height="294" rx="14" fill="#b45309" fill-opacity="0.22" stroke="#F59E0B" stroke-width="2.2"/>
-  <text x="450" y="244" font-size="16" font-weight="800" fill="#fef3c7" text-anchor="middle">SSE — Security Service Edge</text>
-  <text x="450" y="262" font-size="10" fill="#fed7aa" text-anchor="middle">the security half of SASE: SWG · CASB · FWaaS · ZTNA · bundled DLP</text>
-
-  <!-- SWG / CASB / FWaaS — SSE components alongside ZTNA -->
-  <rect x="224" y="282" width="138" height="46" rx="5" fill="#1e293b" stroke="#475569" stroke-width="1.3"/>
-  <text x="293" y="302" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">SWG · CASB</text>
-  <text x="293" y="318" font-size="9" fill="#94a3b8" text-anchor="middle">web + cloud egress</text>
-
-  <rect x="372" y="282" width="138" height="46" rx="5" fill="#1e293b" stroke="#475569" stroke-width="1.3"/>
-  <text x="441" y="302" font-size="11" font-weight="700" fill="#e2e8f0" text-anchor="middle">FWaaS</text>
-  <text x="441" y="318" font-size="9" fill="#94a3b8" text-anchor="middle">firewall-as-a-service</text>
-
-  <!-- ZTNA — narrowest, the access-control feature inside SSE -->
-  <rect x="248" y="350" width="404" height="84" rx="12" fill="#fbbf24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="2.2"/>
-  <text x="450" y="378" font-size="15" font-weight="800" fill="#fde68a" text-anchor="middle">ZTNA — Zero Trust Network Access</text>
-  <text x="450" y="398" font-size="10" fill="#fef3c7" text-anchor="middle">one access-control feature inside SSE — per-application access,</text>
-  <text x="450" y="414" font-size="10" fill="#fef3c7" text-anchor="middle">no implicit network trust. A feature of SSE, not a synonym for it.</text>
-
-  <!-- Bundled DLP module sitting on the SSE boundary -->
-  <rect x="372" y="452" width="278" height="46" rx="5" fill="#374151" fill-opacity="0.55" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <text x="511" y="472" font-size="11" font-weight="700" fill="#e5e7eb" text-anchor="middle">SSE-bundled DLP module</text>
-  <text x="511" y="488" font-size="9" fill="#9ca3af" text-anchor="middle">Netskope DLP · Zscaler DLP — inspects web/cloud egress</text>
-
-  <!-- The DLP boundary line to Part-1 standalone DLP front -->
-  <rect x="200" y="452" width="150" height="46" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3 3"/>
-  <text x="275" y="470" font-size="10" font-weight="700" fill="#cbd5e1" text-anchor="middle">Part-1 DLP front</text>
-  <text x="275" y="485" font-size="8.5" fill="#94a3b8" text-anchor="middle">all-channel enforcement</text>
-
-  <!-- boundary connector -->
-  <line x1="350" y1="475" x2="372" y2="475" stroke="#64748b" stroke-width="1.4" stroke-dasharray="2 3"/>
-
-  <!-- Legend / one-line summary -->
-  <rect x="150" y="560" width="600" height="78" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="170" y="582" font-size="11" fill="#fed7aa" font-weight="700">In one line: ZTNA is a feature of SSE; SSE is the security half of SASE; SASE adds the network back.</text>
-  <text x="170" y="602" font-size="10" fill="#cbd5e1"><tspan font-weight="700" fill="#fbbf24">The DLP boundary</tspan> — every SSE platform bundles DLP for web/cloud egress; the standalone DLP front (Part 1)</text>
-  <text x="170" y="618" font-size="10" fill="#cbd5e1">enforces across endpoint, email, and removable media the SSE never sees. Bundle pressure, not absorption.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 <p><em>The wider ring is SASE — networking plus security converged. The inner security half is SSE. ZTNA is one access-control building block inside SSE, not a synonym for it.</em></p>
 <p><strong>SASE</strong> (Secure Access Service Edge) is the widest term: the converged framework that delivers software-defined wide-area networking (SD-WAN) <em>and</em> security from one cloud platform.<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup> <strong>SSE</strong> (Security Service Edge) is the security half of SASE with the networking removed — the bundle of Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Zero Trust Network Access (ZTNA), and Firewall-as-a-Service (FWaaS).<sup class="fn-ref" id="fnref-2"><a href="#fn-2">2</a></sup> <strong>ZTNA</strong> (Zero Trust Network Access) is narrower still: the VPN-replacement building block <em>inside</em> SSE that grants access to one named application at a time, after verifying identity and device posture, rather than dropping a user onto a flat network.<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup> In one line: ZTNA is a feature of SSE; SSE is the security half of SASE; SASE adds the network plumbing back.</p>
 <p>What the Edge is <em>not</em> is as instructive as what it is. It is not a SOC platform — it enforces and inspects at the egress point, but the detection-investigation-response case workflow belongs to the detection segment, which <em>consumes</em> the Edge's anomalous-egress signal rather than the reverse. As the report's cross-front taxonomy frames it, SSE is an <em>enforcement plane</em>: it sits in the network-security layer and feeds the SOC, identity, and data-security layers around it.<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup></p>
@@ -670,94 +613,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <span class="section-label">6.3 The Contenders</span>
 </div>
 <h2>6.3 The Contenders</h2>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="820" height="560" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="820" height="6" fill="#F59E0B"/>
-
-  <text x="410" y="38" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Secure Service Edge Vendor Landscape — 2026</text>
-  <text x="410" y="56" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 6</text>
-
-  <!-- Plot bounding box: x=110 to x=760, y=92 to y=450 -->
-  <line x1="110" y1="450" x2="760" y2="450" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="110" y1="92" x2="110" y2="450" stroke="#64748b" stroke-width="1.5"/>
-
-  <!-- Quadrant dividers (thirds on X for ZTNA / SSE / SASE) -->
-  <line x1="326" y1="92" x2="326" y2="450" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-  <line x1="543" y1="92" x2="543" y2="450" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-  <line x1="110" y1="271" x2="760" y2="271" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-
-  <!-- X-axis zone labels -->
-  <text x="218" y="106" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">SINGLE-FUNCTION ZTNA</text>
-  <text x="218" y="106" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5"></text>
-
-  <!-- X-axis title + ticks -->
-  <text x="435" y="490" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">Stack scope →</text>
-  <text x="120" y="468" font-size="10" fill="#94a3b8">Single-function ZTNA</text>
-  <text x="750" y="468" font-size="10" fill="#94a3b8" text-anchor="end">Full SASE (incl. SD-WAN / networking)</text>
-
-  <!-- Y-axis title + ticks -->
-  <text x="42" y="271" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 42 271)">↑ Buyer motion</text>
-  <text x="8" y="100" font-size="10" fill="#94a3b8" text-anchor="start">Enterprise / CISO-led</text>
-  <text x="8" y="446" font-size="10" fill="#94a3b8" text-anchor="start">Developer-led / bottoms-up</text>
-
-  <!-- Tier-color legend (lower-right of plot — sparse zone) -->
-  <rect x="536" y="366" width="228" height="80" fill="#1e293b" stroke="#475569" rx="4" fill-opacity="0.92"/>
-  <text x="552" y="384" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">TIER COLOR</text>
-  <circle cx="558" cy="402" r="5" fill="#92400E"/>
-  <text x="571" y="406" font-size="10" fill="#cbd5e1">Gravity — sets the SSE reference price</text>
-  <circle cx="558" cy="418" r="5" fill="#F59E0B"/>
-  <text x="571" y="422" font-size="10" fill="#cbd5e1">Attention — SASE + edge + data + WAN</text>
-  <circle cx="558" cy="434" r="5" fill="#FBBF24"/>
-  <text x="571" y="438" font-size="10" fill="#cbd5e1">Wildcard — developer-led ZTNA bets</text>
-
-  <!-- ===== GRAVITY TIER (#92400E) — SSE-pure pure-plays, enterprise ===== -->
-
-  <!-- Zscaler: middle (SSE-pure), upper Y (enterprise) -->
-  <circle cx="420" cy="150" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="420" y="136" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Zscaler</text>
-  <text x="420" y="124" font-size="9" fill="#cbd5e1" text-anchor="middle">Zero Trust Exchange · SSE-pure</text>
-
-  <!-- Netskope: middle (SSE-pure), upper Y (enterprise), offset from Zscaler -->
-  <circle cx="470" cy="205" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="470" y="191" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Netskope</text>
-  <text x="470" y="179" font-size="9" fill="#cbd5e1" text-anchor="middle">data-aware SSE · NTSK</text>
-
-  <!-- ===== ATTENTION TIER (#F59E0B) ===== -->
-
-  <!-- Cato: right (full SASE), top Y (enterprise) -->
-  <circle cx="660" cy="140" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="660" y="126" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Cato</text>
-  <text x="660" y="114" font-size="9" fill="#94a3b8" text-anchor="middle">single-vendor SASE-native</text>
-
-  <!-- Versa: right (full SASE), upper-middle Y, slightly below Cato -->
-  <circle cx="690" cy="218" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="690" y="204" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Versa</text>
-  <text x="690" y="232" font-size="9" fill="#94a3b8" text-anchor="middle">SD-WAN-to-SASE</text>
-
-  <!-- Forcepoint: middle (SSE, data-first), upper-middle Y (mid-market enterprise) -->
-  <circle cx="400" cy="248" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="400" y="234" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Forcepoint</text>
-  <text x="400" y="222" font-size="9" fill="#94a3b8" text-anchor="middle">data-first SSE</text>
-
-  <!-- Cloudflare: middle (SSE/edge), lower-middle Y (developer-led edge adoption) -->
-  <circle cx="475" cy="320" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="475" y="306" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Cloudflare</text>
-  <text x="475" y="338" font-size="9" fill="#94a3b8" text-anchor="middle">edge-network-first · NET</text>
-
-  <!-- ===== WILDCARD TIER (#FBBF24) — developer-led ZTNA, bottom-left ===== -->
-
-  <!-- Tailscale: left (ZTNA), bottom (dev-led) -->
-  <circle cx="195" cy="375" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="195" y="361" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Tailscale</text>
-  <text x="195" y="349" font-size="9" fill="#94a3b8" text-anchor="middle">identity-aware mesh</text>
-
-  <!-- Twingate: left (ZTNA), bottom (dev-led), offset from Tailscale -->
-  <circle cx="255" cy="410" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="255" y="426" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Twingate</text>
-  <text x="255" y="438" font-size="9" fill="#94a3b8" text-anchor="middle">VPN-replacement ZTNA</text>
-
-  <text x="410" y="530" font-size="9" fill="#64748b" text-anchor="middle">Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 <p><em>Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived.</em></p>
 <p>The edge-security field sorts along two questions. The first is whether the vendor built from the network outward (SD-WAN and SASE heritage) or from the security cloud outward (SSE and ZTNA heritage). The second is whether the buyer is consolidating an entire branch-and-cloud estate onto one platform or buying a single sharp capability — secure private access — and nothing else. The eight vendors below are grouped into three tiers. Gravity holds the two pure-play SSE/ZTNA platforms whose pricing and packaging set the market's reference point. Attention holds the SASE-native challenger, the edge-network incumbent, the repositioning data-security house, and the SD-WAN-to-SASE migrant. Wildcard holds two developer-led ZTNA bets characterized descriptively only. Each card is anchored to a single dated vendor-controlled surface and at least one verbatim messaging pillar lifted from that vendor's live site on 2026-06-16.</p>
 </div>
@@ -931,63 +787,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read this as bundled DLP exerting genuine compression on the standalone data-security vendor at the middle of the market, without yet displacing the category at the top. When a buyer already runs an SSE platform, it can switch on a DLP module that inspects the same web-and-cloud egress the platform already sees. So the competitive question for a standalone DLP vendor stops being "is your detection better" and becomes "is your detection enough better, across enough additional channels, to justify a separate product, a separate console, and a separate bill." My view is that the SSE bundle wins that argument most often where the buyer's data-movement risk is concentrated in the web and cloud egress the SSE already inspects, which is the mid-market profile. Where the risk spans endpoint, email, removable media, and on-premise repositories the SSE never touches, the standalone vendor's broader channel coverage still carries the day, and the bundle is a complement rather than a replacement. This is bundle <em>pressure</em> on the standalone DLP front characterized in Part 1, not a verdict that the standalone category is being absorbed. The two coexist along a coverage line.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> Two conditions confirm the thesis at the middle of the market. First, Netskope and Zscaler continue to disclose DLP/DSPM as a named platform growth driver in FY2026–FY2027 earnings commentary. And second, a named outlet documents an enterprise consolidating off a standalone DLP product onto SSE-bundled DLP specifically on TCO grounds. If instead the SSE vendors stop breaking out data-security attach as a growth driver, and standalone DLP vendors hold or grow their disclosed enterprise channel-coverage wins through the period, the bundle is a coexistence story bounded by channel coverage, not a compression one.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup> <sup class="fn-ref" id="fnref-65"><a href="#fn-65">65</a></sup> <sup class="fn-ref" id="fnref-66"><a href="#fn-66">66</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Bundle-vs-Best-of-Breed DLP Compression Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 1 — STATE OF CYBER 2026, FRONT 6</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">SSE-bundled DLP compresses the standalone vendor where risk lives in web/cloud egress — not across all channels</text>
-
-  <!-- LEFT: the SSE bundle exerting compression -->
-  <rect x="55" y="108" width="320" height="290" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
-  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">SSE-bundled DLP</text>
-  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">a module inside a platform already bought</text>
-
-  <text x="215" y="182" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Wins the mid-market egress profile</text>
-  <text x="215" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">Netskope ~$845M ARR (+29% YoY)</text>
-  <text x="215" y="222" font-size="10" fill="#cbd5e1" text-anchor="middle">$100K+ customers +23% (~1,600)</text>
-  <text x="215" y="244" font-size="10" fill="#cbd5e1" text-anchor="middle">Zscaler ~$3,525M ARR (+25% YoY)</text>
-  <text x="215" y="262" font-size="10" fill="#cbd5e1" text-anchor="middle">DLP bundled with SWG · CASB · ZTNA</text>
-  <text x="215" y="290" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">"Is your detection enough better,</text>
-  <text x="215" y="304" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">across enough extra channels, to</text>
-  <text x="215" y="318" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">justify a 2nd product, console, bill?"</text>
-  <text x="215" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">Inspects the same web/cloud egress</text>
-  <text x="215" y="360" font-size="9" fill="#94a3b8" text-anchor="middle">the platform already sees</text>
-  <text x="215" y="378" font-size="9" fill="#94a3b8" text-anchor="middle">NTSK / ZS — SEC-grade public ARR</text>
-
-  <!-- RIGHT: the standalone DLP vendor holding on coverage -->
-  <rect x="425" y="108" width="320" height="290" fill="#374151" fill-opacity="0.35" stroke="#9ca3af" stroke-width="2" rx="6"/>
-  <text x="585" y="134" font-size="14" font-weight="800" fill="#e5e7eb" text-anchor="middle">Standalone DLP (Part 1)</text>
-  <text x="585" y="152" font-size="9" fill="#cbd5e1" text-anchor="middle">the standalone strength: all-channel enforcement</text>
-
-  <text x="585" y="182" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Holds where coverage spans</text>
-  <text x="585" y="204" font-size="10" fill="#cbd5e1" text-anchor="middle">Endpoint</text>
-  <text x="585" y="222" font-size="10" fill="#cbd5e1" text-anchor="middle">Email</text>
-  <text x="585" y="240" font-size="10" fill="#cbd5e1" text-anchor="middle">Removable media</text>
-  <text x="585" y="258" font-size="10" fill="#cbd5e1" text-anchor="middle">On-premise repositories</text>
-  <text x="585" y="290" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Channels the SSE egress</text>
-  <text x="585" y="304" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">never touches</text>
-  <text x="585" y="332" font-size="9" fill="#9ca3af" text-anchor="middle">Bundle = complement, not</text>
-  <text x="585" y="346" font-size="9" fill="#9ca3af" text-anchor="middle">replacement, where risk is broad</text>
-  <text x="585" y="376" font-size="9" fill="#94a3b8" text-anchor="middle">Coexistence along a coverage line</text>
-
-  <!-- Compression marker between the two panels -->
-  <line x1="400" y1="116" x2="400" y2="390" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
-  <line x1="372" y1="253" x2="428" y2="253" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
-  <polygon points="424,246 438,253 424,260" fill="#F59E0B" fill-opacity="0.85"/>
-  <text x="400" y="232" font-size="9" font-weight="800" fill="#fbbf24" text-anchor="middle">TCO</text>
-  <text x="400" y="280" font-size="8" font-weight="700" fill="#fbbf24" text-anchor="middle">pressure</text>
-
-  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 1 conditional prediction -->
-  <rect x="55" y="412" width="690" height="110" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="432" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
-  <text x="400" y="452" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if Netskope and Zscaler keep disclosing DLP/DSPM as a named platform growth driver in FY2026–FY2027 earnings</text>
-  <text x="400" y="466" font-size="9" fill="#cbd5e1" text-anchor="middle">AND a named outlet documents an enterprise consolidating off a standalone DLP product onto SSE-bundled DLP on TCO grounds.</text>
-  <text x="400" y="488" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if the SSE vendors stop breaking out data-security attach as a growth driver AND standalone DLP vendors hold or</text>
-  <text x="400" y="502" font-size="9" fill="#cbd5e1" text-anchor="middle">grow disclosed enterprise channel-coverage wins — the bundle is a coexistence story bounded by coverage, not compression.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="16" data-title="Pattern Claim 2 — The Identity...">
 <div class="brand-bar">
@@ -1003,65 +803,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read this as a category in motion, not a verdict on any single vendor. The signal is the <em>direction</em> of capital and product. Developer-led access tools are climbing up-market through identity-aware policy, and the AI-agent and non-human-identity access problem is the accelerant that makes per-application ZTNA the obvious control point rather than a remote-worker convenience. My view is that the legacy VPN is the displaced incumbent in this story, because it grants network-level trust an autonomous agent should never receive. The enterprise buyers retiring VPN concentrators are the prize both the developer-led challengers and the platform incumbents are now competing for. I am deliberately not naming the individual developer-led vendors as winners or casualties. They are early-stage bets whose individual trajectories I cannot responsibly call from public material. What the public funding rounds and the incumbent acquisition cluster <em>do</em> support is the category-level claim: identity-first ZTNA is where the access market is moving, and the AI-agent problem is why it is moving faster.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> Watch two tests. First, whether two or more SSE/ZTNA platform leaders ship and report named non-human-identity or agent-access SKUs as disclosed growth drivers in FY2026–FY2027 earnings or product-page hero changes. Second, whether the incumbent identity-access acquisition cluster (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix) closes and gets integrated into shipping access products. If both land, the identity-first ZTNA category motion is confirmed as a durable enterprise shift. If instead agent-access features stay buried as undifferentiated platform line-items with no disclosed revenue attribution, and the legacy-VPN displacement cycle stalls in named survey data, the thesis is a positioning narrative ahead of budget reality.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-67"><a href="#fn-67">67</a></sup> <sup class="fn-ref" id="fnref-68"><a href="#fn-68">68</a></sup> <sup class="fn-ref" id="fnref-69"><a href="#fn-69">69</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Identity-First ZTNA Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 2 — STATE OF CYBER 2026, FRONT 6</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">A category in motion: the AI-agent / non-human-identity access problem makes per-application ZTNA the control point</text>
-
-  <!-- Center: the access prize — enterprise retiring legacy VPN -->
-  <ellipse cx="400" cy="250" rx="148" ry="70" fill="#fbbf24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.5"/>
-  <text x="400" y="234" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">The access prize</text>
-  <text x="400" y="254" font-size="10" font-weight="700" fill="#fef3c7" text-anchor="middle">Enterprise retiring legacy VPN</text>
-  <text x="400" y="272" font-size="9" fill="#fed7aa" text-anchor="middle">per-app, continuously-verified access</text>
-  <text x="400" y="288" font-size="9" fill="#fed7aa" text-anchor="middle">for one resource and no more</text>
-
-  <!-- LEFT: developer-led challengers porting up -->
-  <rect x="60" y="128" width="190" height="86" fill="#FBBF24" fill-opacity="0.14" stroke="#FBBF24" stroke-width="1.6" rx="5"/>
-  <text x="155" y="150" font-size="12" font-weight="700" fill="#fde68a" text-anchor="middle">Developer-led challengers</text>
-  <text x="155" y="170" font-size="9" fill="#fef3c7" text-anchor="middle">Tailscale — $160M Series C (Accel),</text>
-  <text x="155" y="184" font-size="9" fill="#fef3c7" text-anchor="middle">acquired Border0 (PAM), Mar 2026</text>
-  <text x="155" y="202" font-size="9" fill="#cbd5e1" text-anchor="middle">identity-aware overlay climbing up-market</text>
-
-  <!-- RIGHT: incumbent identity-access acquisition cluster -->
-  <rect x="550" y="128" width="190" height="92" fill="#92400E" fill-opacity="0.30" stroke="#F59E0B" stroke-width="1.6" rx="5"/>
-  <text x="645" y="150" font-size="12" font-weight="700" fill="#fef3c7" text-anchor="middle">Incumbent acquisition cluster</text>
-  <text x="645" y="170" font-size="9" fill="#cbd5e1" text-anchor="middle">PANW / CyberArk (~$25B)</text>
-  <text x="645" y="184" font-size="9" fill="#cbd5e1" text-anchor="middle">CRWD / SGNL ($740M)</text>
-  <text x="645" y="198" font-size="9" fill="#cbd5e1" text-anchor="middle">Cisco / Astrix (~$400M)</text>
-  <text x="645" y="212" font-size="9" fill="#cbd5e1" text-anchor="middle">Microsoft Entra Agent ID</text>
-
-  <!-- The accelerant -->
-  <rect x="285" y="380" width="230" height="58" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" rx="4"/>
-  <text x="400" y="402" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">The accelerant: AI-agent access</text>
-  <text x="400" y="420" font-size="9" fill="#cbd5e1" text-anchor="middle">non-human identities now 40:1 to 100:1+ vs humans</text>
-  <text x="400" y="432" font-size="9" fill="#94a3b8" text-anchor="middle">an agent should never get network-level trust</text>
-
-  <!-- Pressure arrows: both directions converging on the prize -->
-  <line x1="252" y1="190" x2="305" y2="222" stroke="#FBBF24" stroke-width="1.8" stroke-opacity="0.75"/>
-  <polygon points="301,217 316,228 304,231" fill="#FBBF24" fill-opacity="0.8"/>
-  <text x="250" y="240" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">port up</text>
-
-  <line x1="548" y1="190" x2="495" y2="222" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.75"/>
-  <polygon points="499,217 484,228 496,231" fill="#F59E0B" fill-opacity="0.8"/>
-  <text x="552" y="240" font-size="8" fill="#fbbf24" text-anchor="middle" font-style="italic">push down</text>
-
-  <line x1="400" y1="378" x2="400" y2="322" stroke="#fbbf24" stroke-width="1.8" stroke-opacity="0.8"/>
-  <polygon points="392,328 400,314 408,328" fill="#fbbf24" fill-opacity="0.85"/>
-
-  <!-- Category-level note (not naming dev vendors as winners) -->
-  <text x="400" y="362" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">Category-level claim only — sub-scale developer vendors not called as winners or casualties</text>
-
-  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 2 conditional prediction -->
-  <rect x="55" y="452" width="690" height="76" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="471" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
-  <text x="400" y="489" font-size="8.5" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if 2+ SSE/ZTNA leaders ship and report named non-human-identity / agent-access SKUs as disclosed growth drivers (earnings or product-page hero) AND the incumbent</text>
-  <text x="400" y="502" font-size="8.5" fill="#cbd5e1" text-anchor="middle">identity-access cluster (PANW/CyberArk, CRWD/SGNL, Cisco/Astrix) closes and integrates into shipping access products — a durable enterprise shift.</text>
-  <text x="400" y="518" font-size="8.5" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if agent-access stays buried as undifferentiated line-items with no disclosed attribution AND the legacy-VPN displacement cycle stalls in named survey data.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="17" data-title="Pattern Claim 3 — The Single-S...">
 <div class="brand-bar">
@@ -1077,63 +819,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read single-vendor SASE as winning the operational-simplicity argument decisively in the mid-market and leaving the enterprise question genuinely open. Cato's pitch — one console, one policy engine, one vendor for both the network and the security that rides on it — is most valuable precisely where the security team is smallest and the appeal of not integrating four vendors is highest. That is the mid-market profile, and Cato's ARR growth tells me the pitch is converting there. My view is that the enterprise is the harder, unproven ground. Large organizations with entrenched best-of-breed estates and a board-level preference for swappable layers are the buyers single-stack SASE has not yet been shown, in public material, to win at scale. The deferred IPO and the Cyber-60 (pre-exit) placement are consistent with a company compounding strongly in its core segment while the enterprise expansion remains the next thing to prove. The single-stack thesis is not falsified by the best-of-breed vendors' growth, nor they by Cato's. Both motions are funded and both are real, which is exactly what keeps the buyer's consolidate-versus-flexibility decision open.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> One signal validates the thesis: Cato converts its Series G war chest into a public S-1 filing OR a named-outlet-documented enterprise (rather than mid-market) logo mix over the next two-to-four quarters. That would establish single-vendor SASE as an enterprise architecture and not just a mid-market simplification. The opposite signal is the IPO staying deferred through 2026, with Cato's disclosed traction concentrated below the enterprise tier while Netskope's and Zscaler's public ARR keeps compounding. In that case single-vendor SASE remains the mid-market's answer, and best-of-breed-around-an-SSE-core stays the default enterprise motion.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-70"><a href="#fn-70">70</a></sup> <sup class="fn-ref" id="fnref-71"><a href="#fn-71">71</a></sup> <sup class="fn-ref" id="fnref-72"><a href="#fn-72">72</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Single-Stack SASE Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 3 — STATE OF CYBER 2026, FRONT 6</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">Single-vendor SASE wins the mid-market on operational simplicity — the enterprise stays genuinely open</text>
-
-  <!-- LEFT: the won ground — mid-market -->
-  <rect x="55" y="108" width="320" height="270" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
-  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">Mid-market — WON</text>
-  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">smallest security team, highest appeal of one console</text>
-
-  <text x="215" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Cato Networks (single-vendor SASE)</text>
-  <text x="215" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">$350M+ ARR (+43% YoY), 2025</text>
-  <text x="215" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">$409M Series G at &gt;$4.8B valuation</text>
-  <text x="215" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">3rd consecutive Fortune Cyber 60</text>
-  <text x="215" y="260" font-size="10" fill="#cbd5e1" text-anchor="middle">(a pre-IPO / pre-exit cohort)</text>
-  <text x="215" y="288" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">One console, one policy engine,</text>
-  <text x="215" y="302" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">one vendor for network + security</text>
-  <text x="215" y="330" font-size="9" fill="#94a3b8" text-anchor="middle">IPO explicitly kept on ice</text>
-  <text x="215" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">Gartner 2025 SASE Platforms: Leader</text>
-  <text x="215" y="362" font-size="9" fill="#94a3b8" text-anchor="middle">named-outlet + vendor-controlled</text>
-
-  <!-- RIGHT: the open ground — enterprise -->
-  <rect x="425" y="108" width="320" height="270" fill="#1e293b" stroke="#fbbf24" stroke-width="2" rx="6"/>
-  <text x="585" y="134" font-size="14" font-weight="800" fill="#fbbf24" text-anchor="middle">Enterprise — OPEN</text>
-  <text x="585" y="152" font-size="9" fill="#cbd5e1" text-anchor="middle">entrenched best-of-breed, board preference for swappable layers</text>
-
-  <text x="585" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">The unproven ground</text>
-  <text x="585" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">Best-of-breed around an SSE core:</text>
-  <text x="585" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">Netskope (NTSK) — public Sep 2025</text>
-  <text x="585" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">Zscaler (ZS) — scaled public SSE</text>
-  <text x="585" y="260" font-size="10" fill="#cbd5e1" text-anchor="middle">two public anchors to assemble around</text>
-  <text x="585" y="288" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Single-stack SASE not yet shown,</text>
-  <text x="585" y="302" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">in public material, to win at scale</text>
-  <text x="585" y="330" font-size="9" fill="#94a3b8" text-anchor="middle">Both motions funded, both real —</text>
-  <text x="585" y="346" font-size="9" fill="#94a3b8" text-anchor="middle">neither falsified by the other's</text>
-  <text x="585" y="362" font-size="9" fill="#94a3b8" text-anchor="middle">growth: the decision stays open</text>
-
-  <!-- Divider with the open-question marker -->
-  <line x1="400" y1="116" x2="400" y2="370" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
-  <circle cx="400" cy="243" r="20" fill="#0a0e1a" stroke="#fbbf24" stroke-width="2"/>
-  <text x="400" y="240" font-size="10" font-weight="800" fill="#fbbf24" text-anchor="middle">won vs</text>
-  <text x="400" y="253" font-size="10" font-weight="800" fill="#fbbf24" text-anchor="middle">open</text>
-
-  <!-- Falsifiable test footer — mirrors §6.6 Pattern Claim 3 conditional prediction -->
-  <rect x="55" y="392" width="690" height="130" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="412" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — H2 2026 / next two-to-four quarters</text>
-  <text x="400" y="432" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if Cato converts its Series G war chest into a public S-1 filing OR a named-outlet-documented enterprise</text>
-  <text x="400" y="446" font-size="9" fill="#cbd5e1" text-anchor="middle">(rather than mid-market) logo mix — single-vendor SASE validates as an enterprise architecture, not just a mid-market simplification.</text>
-  <text x="400" y="470" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if the IPO stays deferred through 2026 and Cato's disclosed traction stays concentrated below the enterprise tier</text>
-  <text x="400" y="484" font-size="9" fill="#cbd5e1" text-anchor="middle">while Netskope's and Zscaler's public ARR keeps compounding — single-vendor SASE remains the mid-market's answer and</text>
-  <text x="400" y="498" font-size="9" fill="#cbd5e1" text-anchor="middle">best-of-breed-around-an-SSE-core stays the default enterprise motion.</text>
-  <text x="400" y="514" font-size="8" fill="#64748b" text-anchor="middle">Watch: SEC EDGAR S-1 · Gartner Magic Quadrant for SASE Platforms refresh · named-outlet enterprise coverage</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="18" data-title="Winners">
 <div class="brand-bar">

@@ -589,67 +589,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <p>Three buyer misconceptions are worth retiring before we map the market. The first is that <strong>"XDR replaces SIEM."</strong> It does not, cleanly. XDR correlates a curated set of high-fidelity sources well. But the compliance-grade log retention and arbitrary-source ingestion that SIEM provides remain a distinct requirement, which is precisely why the platform leaders are building data lakes underneath their XDR rather than retiring the SIEM tier.<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup></p>
 <p>The second is that <strong>"more telemetry means better detection."</strong> Volume without curation raises both cost and analyst noise. The analyst-facing metric is signal quality, not gigabytes ingested, and the entire repricing tension described below flows from telemetry volume being a cost driver rather than a value driver.<sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup></p>
 <p>The third is that <strong>"the SIEM is just a log store."</strong> Treating it as passive storage misses where the product value — and the vendor lock-in — actually live: in the correlation, the detection-engineering, and increasingly the AI-investigation layer riding on top.<sup class="fn-ref" id="fnref-7"><a href="#fn-7">7</a></sup></p>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="900" height="660" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="900" height="6" fill="#F59E0B"/>
-
-  <text x="450" y="42" font-size="22" font-weight="700" fill="#FBBF24" text-anchor="middle">Where the SOC Platform Sits in the Cyber Stack</text>
-  <text x="450" y="62" font-size="11" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 5</text>
-
-  <!-- Plot area: x=120 to x=800, y=110 to y=500 -->
-  <line x1="120" y1="500" x2="800" y2="500" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="120" y1="110" x2="120" y2="500" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="460" y1="110" x2="460" y2="500" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-  <line x1="120" y1="305" x2="800" y2="305" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-
-  <!-- Quadrant labels -->
-  <text x="290" y="128" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">SINGLE-LANE DEPTH, NARROW TELEMETRY</text>
-  <text x="630" y="128" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">CASE DEPTH ACROSS BROAD TELEMETRY</text>
-  <text x="290" y="490" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">SINGLE-SIGNAL DETECTION</text>
-  <text x="630" y="490" font-size="9" fill="#475569" text-anchor="middle" letter-spacing="0.5">BROAD INGEST, SHALLOW WORKFLOW</text>
-
-  <!-- Axis titles -->
-  <text x="460" y="540" font-size="13" font-weight="700" fill="#cbd5e1" text-anchor="middle">Telemetry Breadth (sources unified) →</text>
-  <text x="130" y="520" font-size="10" fill="#94a3b8">Single source</text>
-  <text x="790" y="520" font-size="10" fill="#94a3b8" text-anchor="end">Endpoint + Identity + Network + Cloud + Email + Logs</text>
-
-  <text x="48" y="305" font-size="13" font-weight="700" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 48 305)">↑ Detection / Case Depth</text>
-  <text x="8" y="118" font-size="10" fill="#94a3b8" text-anchor="start">Analyst-grade case timeline</text>
-  <text x="110" y="496" font-size="10" fill="#94a3b8" text-anchor="end">Raw alert / log</text>
-
-  <!-- EDR: deep on the endpoint lane, narrow telemetry (upper-left) -->
-  <ellipse cx="250" cy="200" rx="92" ry="42" fill="#1e3a8a" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1.5"/>
-  <text x="250" y="196" font-size="14" font-weight="700" fill="#dbeafe" text-anchor="middle">EDR</text>
-  <text x="250" y="216" font-size="9" fill="#93c5fd" text-anchor="middle">deep on the endpoint lane</text>
-
-  <!-- SIEM: very broad ingest, shallow native workflow (lower-right) -->
-  <ellipse cx="640" cy="410" rx="100" ry="46" fill="#1e3a8a" fill-opacity="0.4" stroke="#3b82f6" stroke-width="1.5"/>
-  <text x="640" y="406" font-size="14" font-weight="700" fill="#dbeafe" text-anchor="middle">SIEM</text>
-  <text x="640" y="426" font-size="9" fill="#93c5fd" text-anchor="middle">log ingest + retention</text>
-
-  <!-- XDR: mid breadth, mid-high depth — the bridge toward the SOC platform -->
-  <ellipse cx="470" cy="248" rx="80" ry="38" fill="#1e3a8a" fill-opacity="0.35" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="470" y="244" font-size="13" font-weight="700" fill="#dbeafe" text-anchor="middle">XDR</text>
-  <text x="470" y="263" font-size="9" fill="#93c5fd" text-anchor="middle">curated cross-domain</text>
-
-  <!-- Adjacent fronts (consumed signals) — muted, lower-left band -->
-  <ellipse cx="232" cy="420" rx="110" ry="48" fill="#374151" fill-opacity="0.35" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="232" y="406" font-size="11" font-weight="600" fill="#d1d5db" text-anchor="middle">IRM · DLP · DSPM</text>
-  <text x="232" y="424" font-size="11" font-weight="600" fill="#d1d5db" text-anchor="middle">SSE · Identity</text>
-  <text x="232" y="442" font-size="9" fill="#9ca3af" text-anchor="middle">adjacent fronts — signals consumed</text>
-
-  <!-- SOC PLATFORM: THE FOCUS — broad telemetry + deep case timeline (upper-right) -->
-  <ellipse cx="640" cy="205" rx="135" ry="62" fill="#92400e" fill-opacity="0.6" stroke="#F59E0B" stroke-width="3"/>
-  <text x="640" y="198" font-size="18" font-weight="800" fill="#fef3c7" text-anchor="middle">SOC PLATFORM</text>
-  <text x="640" y="220" font-size="11" fill="#fed7aa" text-anchor="middle">unified case timeline</text>
-  <text x="640" y="236" font-size="9" fill="#fed7aa" text-anchor="middle">EDR + XDR + SIEM, one plane</text>
-
-  <!-- Legend BELOW the plot area -->
-  <rect x="120" y="566" width="680" height="74" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="140" y="588" font-size="11" fill="#fed7aa" font-weight="700">The fault line: orchestration depth vs. depth in a single lane</text>
-  <text x="140" y="608" font-size="10" fill="#cbd5e1"><tspan font-weight="700" fill="#fed7aa">SOC platform</tspan> — owns the case across origins (what happened, in what order, everywhere)</text>
-  <text x="140" y="626" font-size="10" fill="#cbd5e1"><tspan font-weight="700" fill="#93c5fd">Per-front specialists</tspan> — own the depth inside their own lane (EDR on the box, SIEM on the log)</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 <p><em>The vertical axis is how deeply a platform reasons over a single data type; the horizontal axis is how many telemetry sources it unifies. SOC platforms claim the upper-right — broad ingestion plus a case timeline deep enough for an analyst to work — while per-front specialists hold the depth corners in their own lanes.</em></p>
 </div>
 <div class="slide" data-slide="3" data-title="5.2 The Terrain">
@@ -679,91 +619,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <span class="section-label">5.3 The Contenders</span>
 </div>
 <h2>5.3 The Contenders</h2>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="820" height="560" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="820" height="6" fill="#F59E0B"/>
-
-  <text x="410" y="38" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The SOC Platform Vendor Landscape 2026</text>
-  <text x="410" y="56" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PRODUCTBEACON — STATE OF CYBER SECURITY MARKETS 2026, FRONT 5</text>
-
-  <!-- Plot bounding box: x=110 to x=760, y=92 to y=450 -->
-  <line x1="110" y1="450" x2="760" y2="450" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="110" y1="92" x2="110" y2="450" stroke="#64748b" stroke-width="1.5"/>
-
-  <!-- Quadrant dividers -->
-  <line x1="435" y1="92" x2="435" y2="450" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-  <line x1="110" y1="271" x2="760" y2="271" stroke="#1e293b" stroke-dasharray="3 4" stroke-width="1"/>
-
-  <!-- X-axis tick labels -->
-  <text x="120" y="468" font-size="10" fill="#94a3b8">AI-native detection core</text>
-  <text x="750" y="468" font-size="10" fill="#94a3b8" text-anchor="end">Retrofitted / acquired-engine integrator</text>
-
-  <!-- X-axis title -->
-  <text x="435" y="490" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">Detection-engine origin →</text>
-
-  <!-- Y-axis title + ticks -->
-  <text x="42" y="271" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle" transform="rotate(-90 42 271)">↑ Buyer-spend gravity (installed base + bundling)</text>
-  <text x="100" y="100" font-size="10" fill="#94a3b8" text-anchor="end">Owns the budget</text>
-  <text x="100" y="446" font-size="10" fill="#94a3b8" text-anchor="end">Earning the seat</text>
-
-  <!-- Tier-color legend (lower-right of plot — sparse zone) -->
-  <rect x="540" y="366" width="216" height="80" fill="#1e293b" stroke="#475569" rx="4" fill-opacity="0.92"/>
-  <text x="552" y="384" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">TIER COLOR</text>
-  <circle cx="558" cy="402" r="5" fill="#92400E"/>
-  <text x="571" y="406" font-size="10" fill="#cbd5e1">Gravity — bends the market</text>
-  <circle cx="558" cy="418" r="5" fill="#F59E0B"/>
-  <text x="571" y="422" font-size="10" fill="#cbd5e1">Attention — incumbents + contender</text>
-  <circle cx="558" cy="434" r="5" fill="#FBBF24"/>
-  <text x="571" y="438" font-size="10" fill="#cbd5e1">Wildcard — private agentic bets</text>
-
-  <!-- ===== GRAVITY TIER (#92400E) ===== -->
-
-  <!-- Microsoft: far-right (bundled, not AI-detection-led), top gravity -->
-  <circle cx="690" cy="135" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="690" y="121" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Microsoft</text>
-  <text x="690" y="109" font-size="9" fill="#cbd5e1" text-anchor="middle">Defender + Sentinel (E5)</text>
-
-  <!-- CrowdStrike: right-of-center (established core, agentic on top), top gravity -->
-  <circle cx="560" cy="150" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="560" y="136" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">CrowdStrike</text>
-  <text x="560" y="124" font-size="9" fill="#cbd5e1" text-anchor="middle">Falcon · established leader</text>
-
-  <!-- SentinelOne: left (AI-native pure-play), mid-high gravity -->
-  <circle cx="250" cy="200" r="9" fill="#92400E" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="250" y="186" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">SentinelOne</text>
-  <text x="250" y="174" font-size="9" fill="#cbd5e1" text-anchor="middle">Singularity · AI-native pole</text>
-
-  <!-- ===== ATTENTION TIER (#F59E0B) ===== -->
-
-  <!-- Palo Alto: mid-left (AI-native analytics), high gravity (war chest) -->
-  <circle cx="400" cy="178" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="400" y="164" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Palo Alto</text>
-  <text x="400" y="152" font-size="9" fill="#94a3b8" text-anchor="middle">Cortex XSIAM</text>
-
-  <!-- Cisco: right (integrator stitching acquired engines), high gravity (networking base) -->
-  <circle cx="650" cy="225" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="650" y="211" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Cisco</text>
-  <text x="650" y="199" font-size="9" fill="#94a3b8" text-anchor="middle">Splunk data-OS</text>
-
-  <!-- Vectra AI: far-left (AI-native best-of-breed), low gravity (least bundled) -->
-  <circle cx="200" cy="330" r="8" fill="#F59E0B" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="200" y="316" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Vectra AI</text>
-  <text x="200" y="304" font-size="9" fill="#94a3b8" text-anchor="middle">behavior-first NDR</text>
-
-  <!-- ===== WILDCARD TIER (#FBBF24) ===== -->
-
-  <!-- Hunters: left-mid (AI-driven next-gen SIEM), low gravity -->
-  <circle cx="320" cy="370" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="320" y="389" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Hunters</text>
-  <text x="320" y="401" font-size="9" fill="#94a3b8" text-anchor="middle">next-gen SIEM</text>
-
-  <!-- Dropzone AI: far-left (agentic by construction), lowest gravity -->
-  <circle cx="185" cy="400" r="7" fill="#FBBF24" stroke="#0a0e1a" stroke-width="2"/>
-  <text x="185" y="386" font-size="11" font-weight="600" fill="#f8fafc" text-anchor="middle">Dropzone AI</text>
-  <text x="185" y="416" font-size="9" fill="#94a3b8" text-anchor="middle">agentic SOC analyst</text>
-
-  <text x="410" y="530" font-size="9" fill="#64748b" text-anchor="middle">Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 <p><em>Author's read of public material, June 2026. Vendor positions are conceptual, not data-derived.</em></p>
 <p>The SOC platform field divides cleanly along two questions: who already owns the buyer's spend, and whether the detection engine was built AI-native or retrofitted onto a signature-and-correlation core. The eight vendors below are grouped into three tiers — Gravity (the three platforms that bend the market around them), Attention (the consolidating incumbents and the analytical contender flanking the leaders), and Wildcard (two private agentic-SOC bets characterized descriptively only). Each card is anchored to a single dated vendor-controlled surface and at least one verbatim messaging pillar.</p>
 </div>
@@ -950,63 +806,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read this as the two vendors no longer competing for the same buyer with the same pitch. CrowdStrike is selling scale and consolidation-by-consumption: Falcon Flex is a land-and-expand instrument that lets a large enterprise pre-commit a budget and draw down modules. The 120%+ Flex growth tells me the incumbent's moat is increasingly commercial — the buyer who has standardized on Falcon finds it cheaper to add a module than to evaluate a competitor. SentinelOne's 50%-non-endpoint mix is a different bet: it is trying to win the buyer who is choosing a SOC platform fresh, on AI-native architecture and data/cloud breadth, rather than the buyer defending an installed Falcon estate. These are becoming two distinct buyer segments, and the AI-native-versus-incumbent framing is starting to function as a clean segmentation line rather than a feature war.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> The bifurcation is real and durable if SentinelOne's H2 2026 and FY27 earnings continue to disclose a rising non-endpoint ARR mix (above the ~50% Q1 mark) AND it converts that into named-outlet enterprise reference wins displacing an incumbent EDR estate. That would show the AI-native segment is large enough to sustain a public pure-play. If instead the non-endpoint mix plateaus, and CrowdStrike's Falcon Flex ending ARR keeps compounding above 80% year-over-year while SentinelOne's net-new ARR growth decelerates, then the "bifurcation" is a transitional artifact, and the incumbent's consumption-model scale reabsorbs the contested middle.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-60"><a href="#fn-60">60</a></sup> <sup class="fn-ref" id="fnref-61"><a href="#fn-61">61</a></sup> <sup class="fn-ref" id="fnref-62"><a href="#fn-62">62</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The SentinelOne–CrowdStrike Bifurcation Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 1 — STATE OF CYBER 2026, FRONT 5</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">The two leaders stop competing for the same buyer — a segmentation line, not a feature war</text>
-
-  <!-- Split-screen: two diverging buyer segments -->
-
-  <!-- LEFT side: SentinelOne — AI-native, fresh-choice buyer -->
-  <rect x="55" y="108" width="320" height="290" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
-  <text x="215" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">SentinelOne</text>
-  <text x="215" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">the AI-native pole</text>
-
-  <text x="215" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Wins the fresh-choice buyer</text>
-  <text x="215" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">~$1,163M ARR (+23% YoY)</text>
-  <text x="215" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">~50% of ARR now non-endpoint</text>
-  <text x="215" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">(Data / AI / Cloud)</text>
-  <text x="215" y="266" font-size="10" fill="#cbd5e1" text-anchor="middle">$44M net-new ARR (+55% YoY)</text>
-  <text x="215" y="288" font-size="10" fill="#cbd5e1" text-anchor="middle">Purple AI Auto-Investigations</text>
-  <text x="215" y="318" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Bet: choosing a SOC platform fresh,</text>
-  <text x="215" y="332" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">on AI-native architecture</text>
-  <text x="215" y="360" font-size="9" fill="#94a3b8" text-anchor="middle">Q1 FY27, period ended 2026-04-30</text>
-  <text x="215" y="376" font-size="9" fill="#94a3b8" text-anchor="middle">SEC 10-Q (NYSE: S)</text>
-
-  <!-- RIGHT side: CrowdStrike — incumbent consumption moat -->
-  <rect x="425" y="108" width="320" height="290" fill="#92400E" fill-opacity="0.32" stroke="#F59E0B" stroke-width="2" rx="6"/>
-  <text x="585" y="134" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">CrowdStrike</text>
-  <text x="585" y="152" font-size="9" fill="#fed7aa" text-anchor="middle">the scaled incumbent</text>
-
-  <text x="585" y="184" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Defends the installed estate</text>
-  <text x="585" y="206" font-size="10" fill="#cbd5e1" text-anchor="middle">$5.25B ending ARR (+24% YoY)</text>
-  <text x="585" y="224" font-size="10" fill="#cbd5e1" text-anchor="middle">Falcon Flex: $1.69B ending ARR</text>
-  <text x="585" y="242" font-size="10" fill="#cbd5e1" text-anchor="middle">(+120% YoY)</text>
-  <text x="585" y="266" font-size="10" fill="#cbd5e1" text-anchor="middle">1,600+ customers &gt; $1M ARR each</text>
-  <text x="585" y="288" font-size="10" fill="#cbd5e1" text-anchor="middle">Consumption-based land-and-expand</text>
-  <text x="585" y="318" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">Moat: cheaper to add a module</text>
-  <text x="585" y="332" font-size="9" fill="#fbbf24" text-anchor="middle" font-style="italic">than to evaluate a competitor</text>
-  <text x="585" y="360" font-size="9" fill="#94a3b8" text-anchor="middle">7th consecutive Gartner EPP Leader</text>
-  <text x="585" y="376" font-size="9" fill="#94a3b8" text-anchor="middle">highest on both axes</text>
-
-  <!-- Divergence marker between the two panels -->
-  <line x1="400" y1="116" x2="400" y2="390" stroke="#475569" stroke-dasharray="4 4" stroke-width="1.5"/>
-  <circle cx="400" cy="253" r="18" fill="#0a0e1a" stroke="#fbbf24" stroke-width="2"/>
-  <text x="400" y="250" font-size="11" font-weight="800" fill="#fbbf24" text-anchor="middle">two</text>
-  <text x="400" y="263" font-size="9" font-weight="700" fill="#fbbf24" text-anchor="middle">segments</text>
-
-  <!-- Falsifiable test footer — mirrors §5.6 conditional prediction -->
-  <rect x="55" y="412" width="690" height="110" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="432" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — H2 2026 / FY27</text>
-  <text x="400" y="452" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if SentinelOne keeps disclosing non-endpoint ARR mix rising above ~50% AND converts it into a</text>
-  <text x="400" y="466" font-size="9" fill="#cbd5e1" text-anchor="middle">named-outlet enterprise reference win displacing an incumbent EDR estate — the AI-native segment is durable.</text>
-  <text x="400" y="488" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if the non-endpoint mix plateaus while CrowdStrike Falcon Flex ending ARR keeps compounding above</text>
-  <text x="400" y="502" font-size="9" fill="#cbd5e1" text-anchor="middle">80% YoY and SentinelOne net-new ARR growth decelerates — the incumbent's consumption scale reabsorbs the middle.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="16" data-title="Pattern Claim 2 — The Microsof...">
 <div class="brand-bar">
@@ -1022,65 +822,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read the deadline extension not as a retreat but as the opposite — Microsoft is in no hurry because the bundle does the selling. When a SOC plane arrives effectively pre-paid inside an E5 agreement, the competitive question for a standalone EDR or SIEM vendor stops being "is your product better" and becomes "is your product enough better to justify a second line item the buyer could fold into a license they already hold." My view is that this pressure is sharpest at the mid-market, where security teams are smaller, the E5 estate is already in place, and the marginal appeal of "good enough and already included" is highest. At the high end, where SOC teams are large and best-of-breed detection efficacy is a board-level concern, the bundle pressure is real but more resistible. The extended runway to 2027-03-31 simply gives Microsoft a longer window to convert E5 holders to the single Defender plane before standalone vendors can reprice against it.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> The thesis is confirmed if two conditions hold together: two or more standalone EDR/SIEM vendors cite Microsoft bundling as a named headwind in their FY2026–FY2027 earnings commentary on deal sizes or mid-market win rates, AND Microsoft discloses accelerating adoption of the unified Defender SOC plane through the 2027-03-31 retirement. In that case the standalone mid-market deal economics compress. If instead standalone vendors hold or grow mid-market deal sizes through the retirement window, and analyst share data shows no Microsoft share gain at the standalone vendors' expense, the bundle is a coexistence story, not a displacement one, and the pressure thesis is overstated.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-63"><a href="#fn-63">63</a></sup> <sup class="fn-ref" id="fnref-64"><a href="#fn-64">64</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Microsoft Platform-Pressure Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 2 — STATE OF CYBER 2026, FRONT 5</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">A SOC plane pre-paid inside the M365 E5 bundle compresses every standalone deal below it</text>
-
-  <!-- Center: the E5 bundle as gravity well -->
-  <ellipse cx="400" cy="250" rx="140" ry="66" fill="#92400E" fill-opacity="0.55" stroke="#F59E0B" stroke-width="2.5"/>
-  <text x="400" y="240" font-size="14" font-weight="800" fill="#fef3c7" text-anchor="middle">M365 E5 bundle</text>
-  <text x="400" y="260" font-size="11" font-weight="700" fill="#fef3c7" text-anchor="middle">Defender + Sentinel</text>
-  <text x="400" y="278" font-size="9" fill="#fed7aa" text-anchor="middle">unified Defender portal · "already paid for"</text>
-
-  <!-- Pressure arrows pointing inward from standalone vendors -->
-
-  <!-- Top-left: standalone EDR -->
-  <rect x="80" y="120" width="180" height="50" fill="#1e293b" stroke="#475569" stroke-width="1.5" rx="4"/>
-  <text x="170" y="142" font-size="12" font-weight="700" fill="#e2e8f0" text-anchor="middle">Standalone EDR</text>
-  <text x="170" y="158" font-size="8" fill="#94a3b8" text-anchor="middle">"is it enough better to be a 2nd line item?"</text>
-
-  <!-- Top-right: standalone SIEM -->
-  <rect x="540" y="120" width="180" height="50" fill="#1e293b" stroke="#475569" stroke-width="1.5" rx="4"/>
-  <text x="630" y="142" font-size="12" font-weight="700" fill="#e2e8f0" text-anchor="middle">Standalone SIEM</text>
-  <text x="630" y="158" font-size="8" fill="#94a3b8" text-anchor="middle">repriced against "good enough + included"</text>
-
-  <!-- Bottom: mid-market — sharpest pressure -->
-  <rect x="270" y="392" width="260" height="52" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" rx="4"/>
-  <text x="400" y="414" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">Mid-market SOC (sharpest pressure)</text>
-  <text x="400" y="430" font-size="9" fill="#cbd5e1" text-anchor="middle">small team · E5 estate in place · "already included" wins</text>
-
-  <!-- Pressure arrows: the bundle COMPRESSES the standalone deals → arrows flow OUT from the E5 bundle toward each target -->
-  <line x1="322" y1="217" x2="256" y2="167" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.7"/>
-  <polygon points="256,167 269.7,170.5 263.0,179.2" fill="#F59E0B" fill-opacity="0.85"/>
-
-  <line x1="478" y1="217" x2="544" y2="167" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.7"/>
-  <polygon points="544,167 537.0,179.2 530.3,170.5" fill="#F59E0B" fill-opacity="0.85"/>
-
-  <line x1="400" y1="318" x2="400" y2="390" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.8"/>
-  <polygon points="400,390 394.5,377.0 405.5,377.0" fill="#F59E0B" fill-opacity="0.9"/>
-
-  <!-- Timeline note: retirement runway -->
-  <text x="760" y="262" font-size="9" fill="#fbbf24" text-anchor="end" font-style="italic">Sentinel-in-Azure retires 2027-03-31</text>
-  <text x="760" y="276" font-size="9" fill="#fbbf24" text-anchor="end" font-style="italic">(extended from 2026-07-01) — a longer</text>
-  <text x="760" y="290" font-size="9" fill="#fbbf24" text-anchor="end" font-style="italic">runway, not a retreat</text>
-
-  <!-- High-end note (resistible) -->
-  <text x="40" y="262" font-size="9" fill="#94a3b8" text-anchor="start" font-style="italic">High-end SOC: pressure real but</text>
-  <text x="40" y="276" font-size="9" fill="#94a3b8" text-anchor="start" font-style="italic">more resistible (efficacy is a</text>
-  <text x="40" y="290" font-size="9" fill="#94a3b8" text-anchor="start" font-style="italic">board-level concern)</text>
-
-  <!-- Falsifiable test footer — mirrors §5.6 conditional prediction -->
-  <rect x="55" y="460" width="690" height="78" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="478" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
-  <text x="400" y="496" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if 2+ standalone EDR/SIEM vendors cite Microsoft bundling as a named headwind on mid-market deal sizes/win rates</text>
-  <text x="400" y="510" font-size="9" fill="#cbd5e1" text-anchor="middle">AND Microsoft discloses accelerating unified-Defender SOC-plane adoption through the 2027-03-31 retirement.</text>
-  <text x="400" y="528" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if standalone vendors hold or grow mid-market deal sizes and analyst share data shows no Microsoft share gain — coexistence, not displacement.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="17" data-title="Pattern Claim 3 — The Splunk-A...">
 <div class="brand-bar">
@@ -1096,66 +838,7 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 <blockquote class="card"><strong>My read.</strong> I read the Cisco-Splunk integration as the single most important live experiment in the SIEM market. It tests the proposition the entire consolidation pitch rests on: that a platform vendor can absorb a best-of-breed SIEM and reprice telemetry economics in the buyer's favor by pairing data ingestion with the network it already owns. My view is that the logo growth is real but not yet the proof point — adding 500 new Splunk logos shows Cisco can sell Splunk, not that Cisco has solved the cost-of-ingestion problem that makes standalone SIEM painful. The thesis is decided not by how many logos the combined entity wins, but by whether Cisco can credibly tell a buyer that running Splunk on Cisco telemetry costs materially less per gigabyte than running a best-of-breed SIEM standalone. If it can, every other platform consolidation story in this front gets a tailwind. If it cannot, "platform replaces best-of-breed SIEM" stays a slide, not a budget reality.</blockquote>
 <blockquote class="card"><strong>Conditional prediction.</strong> The absorption is working if two things hold: Cisco's FY2026–FY2027 earnings disclosures continue to show Splunk ARR and the combined security portfolio compounding double digits, AND a named outlet documents an enterprise migrating off a standalone best-of-breed SIEM onto Splunk-on-Cisco specifically on telemetry-cost grounds. In that case platform consolidation has a credible answer to the ingestion-economics objection. If instead Splunk logo growth decelerates, Cisco stops breaking out Splunk momentum in its security commentary, or Gartner's SIEM/SecOps coverage continues to seat best-of-breed independents above the Cisco-Splunk combination on execution, the absorption has stalled, and best-of-breed SIEM survives the consolidation wave on economics the platform could not beat.</blockquote>
 <blockquote class="card"><strong>Sources.</strong> <sup class="fn-ref" id="fnref-65"><a href="#fn-65">65</a></sup> <sup class="fn-ref" id="fnref-66"><a href="#fn-66">66</a></sup></blockquote>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="800" height="540" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="800" height="6" fill="#F59E0B"/>
-
-  <text x="400" y="42" font-size="18" font-weight="700" fill="#FBBF24" text-anchor="middle">The Splunk-Absorption Thesis</text>
-  <text x="400" y="60" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">PATTERN CLAIM 3 — STATE OF CYBER 2026, FRONT 5</text>
-
-  <text x="400" y="84" font-size="10" fill="#cbd5e1" text-anchor="middle">The live experiment: can a platform vendor absorb a best-of-breed SIEM and reprice telemetry economics?</text>
-
-  <!-- The proposition flow: telemetry + network -> data-OS -> the open question -->
-
-  <!-- Left input: Splunk data engine -->
-  <rect x="55" y="138" width="180" height="64" fill="#1e3a8a" fill-opacity="0.45" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
-  <text x="145" y="162" font-size="12" font-weight="800" fill="#dbeafe" text-anchor="middle">Splunk data engine</text>
-  <text x="145" y="180" font-size="9" fill="#93c5fd" text-anchor="middle">$28B acquisition (closed 2024)</text>
-  <text x="145" y="194" font-size="9" fill="#93c5fd" text-anchor="middle">+500 logos H1 FY26</text>
-
-  <!-- Left input: Cisco network telemetry -->
-  <rect x="55" y="240" width="180" height="64" fill="#1e3a8a" fill-opacity="0.45" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
-  <text x="145" y="264" font-size="12" font-weight="800" fill="#dbeafe" text-anchor="middle">Cisco telemetry</text>
-  <text x="145" y="282" font-size="9" fill="#93c5fd" text-anchor="middle">XDR · Hypershield · AI Defense</text>
-  <text x="145" y="296" font-size="9" fill="#93c5fd" text-anchor="middle">Talos threat intel · the network</text>
-
-  <!-- Center: the data-OS bet -->
-  <ellipse cx="420" cy="221" rx="118" ry="64" fill="#92400E" fill-opacity="0.55" stroke="#F59E0B" stroke-width="2.5"/>
-  <text x="420" y="210" font-size="13" font-weight="800" fill="#fef3c7" text-anchor="middle">SOC "data OS"</text>
-  <text x="420" y="228" font-size="9" fill="#fed7aa" text-anchor="middle">Splunk on Cisco's network</text>
-  <text x="420" y="244" font-size="9" fill="#fed7aa" text-anchor="middle">$8.09B FY25 security rev (+59%)</text>
-
-  <!-- Arrows into the center -->
-  <line x1="235" y1="170" x2="305" y2="200" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.7"/>
-  <polygon points="301,195 315,205 303,209" fill="#F59E0B" fill-opacity="0.75"/>
-  <line x1="235" y1="272" x2="305" y2="242" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.7"/>
-  <polygon points="301,247 315,237 303,233" fill="#F59E0B" fill-opacity="0.75"/>
-
-  <!-- Right: the open question -->
-  <rect x="585" y="168" width="170" height="106" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" rx="4"/>
-  <text x="670" y="190" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">The open question</text>
-  <text x="670" y="212" font-size="9" fill="#cbd5e1" text-anchor="middle">Lower cost-per-GB than</text>
-  <text x="670" y="226" font-size="9" fill="#cbd5e1" text-anchor="middle">a best-of-breed SIEM</text>
-  <text x="670" y="240" font-size="9" fill="#cbd5e1" text-anchor="middle">standalone?</text>
-  <text x="670" y="262" font-size="9" fill="#94a3b8" text-anchor="middle" font-style="italic">logos ≠ economics proof</text>
-
-  <line x1="538" y1="221" x2="582" y2="221" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.8"/>
-  <polygon points="576,214 590,221 576,228" fill="#F59E0B" fill-opacity="0.85"/>
-
-  <!-- The stakes line -->
-  <text x="400" y="330" font-size="10" font-weight="700" fill="#fed7aa" text-anchor="middle">If it works, every platform-consolidation story gets a tailwind.</text>
-  <text x="400" y="348" font-size="10" font-weight="700" fill="#fed7aa" text-anchor="middle">If not, "platform replaces best-of-breed SIEM" stays a slide, not a budget reality.</text>
-
-  <!-- Falsifiable test footer — mirrors §5.6 conditional prediction -->
-  <rect x="55" y="382" width="690" height="140" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="400" y="402" font-size="9" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — FY2026–FY2027</text>
-  <text x="400" y="424" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">CONFIRMED</tspan> if Cisco's earnings keep showing Splunk ARR + the combined security portfolio compounding double</text>
-  <text x="400" y="438" font-size="9" fill="#cbd5e1" text-anchor="middle">digits AND a named outlet documents an enterprise migrating off a standalone best-of-breed SIEM onto</text>
-  <text x="400" y="452" font-size="9" fill="#cbd5e1" text-anchor="middle">Splunk-on-Cisco specifically on telemetry-cost grounds.</text>
-  <text x="400" y="476" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">REFUTED</tspan> if Splunk logo growth decelerates, Cisco stops breaking out Splunk momentum in its security commentary,</text>
-  <text x="400" y="490" font-size="9" fill="#cbd5e1" text-anchor="middle">or Gartner's SIEM/SecOps coverage keeps best-of-breed independents seated above the Cisco-Splunk combination</text>
-  <text x="400" y="504" font-size="9" fill="#cbd5e1" text-anchor="middle">on execution — best-of-breed SIEM survives the consolidation wave on economics the platform could not beat.</text>
-</svg>
+<p><strong>SVG_PLACEHOLDER_0</strong></p>
 </div>
 <div class="slide" data-slide="18" data-title="Winners">
 <div class="brand-bar">
