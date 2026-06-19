@@ -703,161 +703,169 @@ ol.references li { margin: 0.4rem 0; word-break: break-word; }
 </div>
 <h2>9.3 Who Wins the Platform War</h2>
 <p>The position that wins the platform war is the SOC-anchored platform incumbent that can absorb the adjacent control planes. The sharpest single exhibit is Palo Alto Networks, which bought into two of the four Part-2 fronts outright and added a SOC-observability adjacency inside roughly twelve months. It bought CyberArk into Identity (~$25B, closed 2026-02-11) and Protect AI into AI App Sec (reported >$500M, officially undisclosed; intent 2025-04-28, completed 2025-07-22, folded into Prisma AIRS). It added Chronosphere into the SOC-observability adjacency (~$3.35B, closed January 2026 — a distinct deal, correctly January, not to be conflated with the February CyberArk close) <sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup> <sup class="fn-ref" id="fnref-2"><a href="#fn-2">2</a></sup> <sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup>. Read by acquirer, the theater is not a scatter of unrelated tuck-ins. It is a small set of platform incumbents — Palo Alto, CrowdStrike, Cisco, Microsoft — each assembling the same stack of detection, edge, AI runtime, and identity from its own starting position, with the SOC as the home base from which the roll-up runs. I am framing the winner at the position level, not as a vendor scoreboard. The winning position is platform-with-distribution anchored at the SOC, and Palo Alto is its clearest instance, not its sole occupant.</p>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" font-family="Manrope, system-ui, -apple-system, sans-serif">
-  <rect width="960" height="760" fill="#0a0e1a"/>
-  <rect x="0" y="0" width="960" height="6" fill="#F59E0B"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 940" font-family="Manrope, system-ui, -apple-system, sans-serif">
+  <rect width="1000" height="940" fill="#0a0e1a"/>
+  <rect x="0" y="0" width="1000" height="6" fill="#F59E0B"/>
 
-  <text x="480" y="40" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Platform-Consolidation Map — One Contest, Four Fronts, One Vector</text>
-  <text x="480" y="58" font-size="9.5" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">PRODUCTBEACON — STATE OF CYBER 2026, PART 2 CONVERGENCE · DATED M&amp;A AND BUILD MOVES, 2024&#8211;2026</text>
-  <text x="480" y="78" font-size="10" fill="#cbd5e1" text-anchor="middle">Every acquirer's stated rationale points at the same problem: agent / non-human identity. A vector, not a deal scatter.</text>
+  <text x="500" y="42" font-size="20" font-weight="700" fill="#FBBF24" text-anchor="middle">The Platform-Consolidation Map — One Contest, Four Fronts, One Vector</text>
+  <text x="500" y="60" font-size="9.5" fill="#94a3b8" text-anchor="middle" letter-spacing="0.4">PRODUCTBEACON — STATE OF CYBER 2026, PART 2 CONVERGENCE · DATED M&amp;A AND BUILD MOVES, 2024&#8211;2026</text>
+  <text x="500" y="80" font-size="10" fill="#cbd5e1" text-anchor="middle">Every acquirer's stated rationale points at the same problem: agent / non-human identity. A vector, not a deal scatter.</text>
 
-  <!-- ===== Four front bands as columns, ordered by stage of resolution (Identity most-resolved → D&R least) ===== -->
-  <!-- column x-centers: F8=180, F7=380, F6=580, F5=780 -->
-  <text x="180" y="104" font-size="11" font-weight="800" fill="#fde68a" text-anchor="middle">F8 IDENTITY</text>
-  <rect x="98" y="112" width="164" height="18" rx="4" fill="#92400E" fill-opacity="0.40"/>
-  <text x="180" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">category-leader absorption</text>
+  <!-- ===== Four front band labels (columns above each acquirer cluster) ===== -->
+  <text x="195" y="110" font-size="11" font-weight="800" fill="#fde68a" text-anchor="middle">F8 IDENTITY</text>
+  <rect x="113" y="118" width="164" height="18" rx="4" fill="#92400E" fill-opacity="0.40"/>
+  <text x="195" y="131" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">category-leader absorption</text>
 
-  <text x="380" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F7 AI SECURITY</text>
-  <rect x="298" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.32"/>
-  <text x="380" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">sub-scale / capability absorption</text>
+  <text x="440" y="110" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F7 AI SECURITY</text>
+  <rect x="358" y="118" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.32"/>
+  <text x="440" y="131" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">sub-scale / capability absorption</text>
 
-  <text x="580" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F6 SSE / EDGE</text>
-  <rect x="498" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.26"/>
-  <text x="580" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">coexistence-compression</text>
+  <text x="680" y="110" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F6 SSE / EDGE</text>
+  <rect x="598" y="118" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.26"/>
+  <text x="680" y="131" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">coexistence-compression</text>
 
-  <text x="780" y="104" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">F5 DETECTION &amp; RESPONSE</text>
-  <rect x="698" y="112" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.20"/>
-  <text x="780" y="125" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">open experiment</text>
+  <text x="888" y="110" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">F5 DETECTION &amp; RESPONSE</text>
+  <rect x="806" y="118" width="164" height="18" rx="4" fill="#F59E0B" fill-opacity="0.20"/>
+  <text x="888" y="131" font-size="8" font-weight="700" fill="#fef3c7" text-anchor="middle">open experiment</text>
 
-  <text x="480" y="148" font-size="8.5" fill="#64748b" text-anchor="middle" letter-spacing="0.4">&#8592; STAGE OF RESOLUTION: most-resolved (Identity) to least-resolved (Detection &amp; Response) &#8594;</text>
+  <text x="500" y="158" font-size="8.5" fill="#64748b" text-anchor="middle" letter-spacing="0.4">&#8592; STAGE OF RESOLUTION: most-resolved (Identity) to least-resolved (Detection &amp; Response) &#8594;</text>
 
-  <!-- faint column dividers -->
-  <line x1="280" y1="160" x2="280" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
-  <line x1="480" y1="160" x2="480" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
-  <line x1="680" y1="160" x2="680" y2="540" stroke="#1e293b" stroke-dasharray="3 5" stroke-width="1"/>
-
-  <!-- ===== The agent-identity through-line spine ===== -->
-  <rect x="40" y="300" width="880" height="2.5" fill="#FBBF24" fill-opacity="0.5"/>
-  <rect x="300" y="288" width="360" height="28" rx="7" fill="#fbbf24" fill-opacity="0.18" stroke="#FBBF24" stroke-width="1.6"/>
-  <text x="480" y="306" font-size="10.5" font-weight="800" fill="#fde68a" text-anchor="middle">VECTOR: human + machine + agent identity</text>
-
-  <!-- ===== Acquirer gravitational anchors (center band, anchored in Front 5 / the SOC) ===== -->
-  <!-- Palo Alto Networks — SHARPEST NODE (spans Identity + AI Security + observability adjacency) -->
-  <circle cx="180" cy="392" r="40" fill="#92400E" fill-opacity="0.30" stroke="#92400E" stroke-width="3"/>
-  <text x="180" y="388" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">Palo Alto</text>
-  <text x="180" y="402" font-size="8" fill="#fed7aa" text-anchor="middle">Networks</text>
-  <text x="180" y="442" font-size="7.5" fill="#94a3b8" text-anchor="middle" font-style="italic">sharpest node · 2 fronts + adjacency</text>
-
-  <!-- CrowdStrike -->
-  <circle cx="380" cy="392" r="30" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
-  <text x="380" y="389" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Crowd</text>
-  <text x="380" y="401" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Strike</text>
-
-  <!-- Cisco -->
-  <circle cx="580" cy="392" r="30" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
-  <text x="580" y="396" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">Cisco</text>
-
-  <!-- Microsoft -->
-  <circle cx="780" cy="392" r="30" fill="#FBBF24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.2"/>
-  <text x="780" y="389" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">Micro</text>
-  <text x="780" y="401" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">soft</text>
-
-  <text x="480" y="476" font-size="8.5" fill="#64748b" text-anchor="middle" font-style="italic">Acquirers anchored at the SOC (Front 5 home base). All four hold primary contender slots in Front 5; arrows show the adjacent control planes they absorbed.</text>
-
-  <!-- ===== Acquirer → target arrows (each labeled value + date) ===== -->
-  <!-- PANW → CyberArk (Identity, up) -->
-  <line x1="172" y1="354" x2="150" y2="232" stroke="#92400E" stroke-width="2.4" stroke-opacity="0.85"/>
-  <polygon points="150,232 145,247 158,244" fill="#92400E"/>
-  <rect x="74" y="188" width="150" height="40" rx="5" fill="#92400E" fill-opacity="0.22" stroke="#92400E" stroke-width="1.6"/>
-  <text x="149" y="204" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">CyberArk</text>
-  <text x="149" y="218" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$25B · Feb 11, 2026</text>
-
-  <!-- PANW → Protect AI (AI Security) -->
-  <line x1="216" y1="380" x2="316" y2="232" stroke="#92400E" stroke-width="2" stroke-opacity="0.8"/>
-  <polygon points="316,232 313,248 326,242" fill="#92400E"/>
-  <rect x="298" y="188" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="373" y="204" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Protect AI</text>
-  <text x="373" y="218" font-size="8.5" fill="#cbd5e1" text-anchor="middle">&gt;$500M rep. · Jul 22, 2025</text>
-
-  <!-- PANW → Chronosphere (observability ADJACENCY — distinct dotted badge, NOT a graded front) -->
-  <line x1="188" y1="432" x2="210" y2="496" stroke="#64748b" stroke-width="1.8" stroke-opacity="0.7" stroke-dasharray="5 4"/>
-  <rect x="116" y="498" width="208" height="54" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 3"/>
-  <rect x="124" y="504" width="192" height="13" rx="3" fill="#475569" fill-opacity="0.5"/>
-  <text x="220" y="513.5" font-size="7.5" font-weight="700" fill="#fbbf24" text-anchor="middle">SOC-OBSERVABILITY ADJACENCY</text>
-  <text x="220" y="530" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Chronosphere</text>
-  <text x="220" y="545" font-size="8" fill="#94a3b8" text-anchor="middle">~$3.35B · Jan 2026 · NOT one of the four fronts</text>
+  <!-- ===== Target rows (absorbed control planes), stacked in each acquirer's column ===== -->
+  <!-- ROW A (y 196-244): top targets -->
+  <!-- PANW → CyberArk (Identity) -->
+  <rect x="115" y="196" width="160" height="48" rx="5" fill="#92400E" fill-opacity="0.22" stroke="#92400E" stroke-width="1.6"/>
+  <text x="195" y="216" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">CyberArk</text>
+  <text x="195" y="232" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$25B · Feb 11, 2026</text>
 
   <!-- CrowdStrike → SGNL (Identity) -->
-  <line x1="372" y1="362" x2="220" y2="232" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
-  <polygon points="220,232 235,237 227,246" fill="#F59E0B"/>
-  <rect x="74" y="240" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="149" y="256" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">SGNL</text>
-  <text x="149" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">$740M · Jan 8, 2026</text>
+  <rect x="360" y="196" width="160" height="48" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="440" y="216" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">SGNL</text>
+  <text x="440" y="232" font-size="8.5" fill="#cbd5e1" text-anchor="middle">$740M · Jan 8, 2026</text>
 
-  <!-- Cisco → Splunk (D&R) — placed in the F5 column second row to clear the Microsoft/Entra box -->
-  <line x1="600" y1="384" x2="826" y2="288" stroke="#F59E0B" stroke-width="2.2" stroke-opacity="0.8"/>
-  <polygon points="826,288 812,283 816,296" fill="#F59E0B"/>
-  <rect x="770" y="246" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="845" y="262" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Splunk</text>
-  <text x="845" y="276" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$28B · 2024 (SIEM)</text>
+  <!-- Cisco → Splunk (D&R) -->
+  <rect x="600" y="196" width="160" height="48" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="680" y="216" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Splunk</text>
+  <text x="680" y="232" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$28B · 2024 (SIEM)</text>
+
+  <!-- Microsoft → Entra Agent ID — BUILT, NOT BOUGHT badge -->
+  <rect x="808" y="192" width="162" height="52" rx="5" fill="#FBBF24" fill-opacity="0.12" stroke="#FBBF24" stroke-width="1.6"/>
+  <rect x="816" y="198" width="80" height="13" rx="3" fill="#FBBF24" fill-opacity="0.30"/>
+  <text x="856" y="207.5" font-size="7.5" font-weight="700" fill="#fde68a" text-anchor="middle">BUILT, NOT BOUGHT</text>
+  <text x="889" y="226" font-size="10.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Entra Agent ID</text>
+  <text x="889" y="238" font-size="8" fill="#cbd5e1" text-anchor="middle">GA · April 2026 (directory)</text>
+
+  <!-- ROW B (y 300-348): second-row targets -->
+  <!-- PANW → Protect AI (AI Security) -->
+  <rect x="148" y="300" width="160" height="48" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="228" y="320" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Protect AI</text>
+  <text x="228" y="336" font-size="8.5" fill="#cbd5e1" text-anchor="middle">&gt;$500M rep. · Jul 22, 2025</text>
 
   <!-- Cisco → Astrix (Identity) -->
-  <line x1="556" y1="378" x2="232" y2="252" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.7"/>
-  <polygon points="232,252 248,252 244,263" fill="#F59E0B"/>
-  <rect x="234" y="240" width="150" height="40" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="309" y="256" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Astrix</text>
-  <text x="309" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$400M · May 2026</text>
+  <rect x="540" y="300" width="148" height="48" rx="5" fill="#F59E0B" fill-opacity="0.16" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="614" y="320" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Astrix</text>
+  <text x="614" y="336" font-size="8.5" fill="#cbd5e1" text-anchor="middle">~$400M · May 2026</text>
 
   <!-- Cisco → Robust Intelligence (AI Security) -->
-  <line x1="568" y1="364" x2="448" y2="252" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.65"/>
-  <polygon points="448,252 451,268 461,256" fill="#F59E0B"/>
-  <rect x="396" y="240" width="156" height="40" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="474" y="256" font-size="10.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Robust Intelligence</text>
-  <text x="474" y="270" font-size="8.5" fill="#cbd5e1" text-anchor="middle">2024 (AI model security)</text>
+  <rect x="700" y="300" width="172" height="48" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="786" y="320" font-size="10" font-weight="700" fill="#f8fafc" text-anchor="middle">Robust Intelligence</text>
+  <text x="786" y="336" font-size="8.5" fill="#cbd5e1" text-anchor="middle">2024 (AI model security)</text>
 
+  <!-- ===== Acquirer gravitational anchors (row at y=530, anchored in Front 5 / the SOC) ===== -->
+  <!-- Palo Alto Networks — SHARPEST NODE -->
+  <circle cx="190" cy="530" r="44" fill="#92400E" fill-opacity="0.30" stroke="#92400E" stroke-width="3"/>
+  <text x="190" y="526" font-size="12" font-weight="800" fill="#fde68a" text-anchor="middle">Palo Alto</text>
+  <text x="190" y="540" font-size="8" fill="#fed7aa" text-anchor="middle">Networks</text>
+  <text x="190" y="588" font-size="7.5" fill="#94a3b8" text-anchor="middle" font-style="italic">sharpest node · 2 fronts + adjacency</text>
+
+  <!-- CrowdStrike -->
+  <circle cx="440" cy="530" r="32" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
+  <text x="440" y="527" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Crowd</text>
+  <text x="440" y="539" font-size="10.5" font-weight="800" fill="#fef3c7" text-anchor="middle">Strike</text>
+
+  <!-- Cisco -->
+  <circle cx="680" cy="530" r="32" fill="#F59E0B" fill-opacity="0.20" stroke="#F59E0B" stroke-width="2.2"/>
+  <text x="680" y="534" font-size="11" font-weight="800" fill="#fef3c7" text-anchor="middle">Cisco</text>
+
+  <!-- Microsoft -->
+  <circle cx="888" cy="530" r="32" fill="#FBBF24" fill-opacity="0.16" stroke="#FBBF24" stroke-width="2.2"/>
+  <text x="888" y="527" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">Micro</text>
+  <text x="888" y="539" font-size="10" font-weight="800" fill="#fde68a" text-anchor="middle">soft</text>
+
+  <!-- ===== Acquirer → target arrows (flow OUT from acquirer UP to each absorbed target) ===== -->
+  <!-- PANW → CyberArk -->
+  <line x1="178" y1="488" x2="168" y2="244" stroke="#92400E" stroke-width="2.4" stroke-opacity="0.85"/>
+  <polygon points="168.0,244.0 174.6,257.7 162.6,258.2" fill="#92400E"/>
+  <!-- PANW → Protect AI -->
+  <line x1="208" y1="490" x2="228" y2="348" stroke="#92400E" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="228.0,348.0 232.0,362.7 220.1,361.0" fill="#92400E"/>
+
+  <!-- CrowdStrike → SGNL -->
+  <line x1="440" y1="498" x2="440" y2="244" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
+  <polygon points="440.0,244.0 446.0,258.0 434.0,258.0" fill="#F59E0B"/>
+
+  <!-- Cisco → Splunk -->
+  <line x1="680" y1="498" x2="680" y2="244" stroke="#F59E0B" stroke-width="2.2" stroke-opacity="0.8"/>
+  <polygon points="680.0,244.0 686.0,258.0 674.0,258.0" fill="#F59E0B"/>
+  <!-- Cisco → Astrix -->
+  <line x1="662" y1="500" x2="614" y2="348" stroke="#F59E0B" stroke-width="1.8" stroke-opacity="0.7"/>
+  <polygon points="614.0,348.0 623.9,359.5 612.5,363.2" fill="#F59E0B"/>
+  <!-- Cisco → Robust Intelligence -->
+  <line x1="700" y1="500" x2="786" y2="348" stroke="#F59E0B" stroke-width="1.6" stroke-opacity="0.65"/>
+  <polygon points="786.0,348.0 784.3,363.1 773.9,357.2" fill="#F59E0B"/>
+
+  <!-- Microsoft → Entra Agent ID — BUILT, dotted, no arrowhead (no acquired target) -->
+  <line x1="888" y1="498" x2="888" y2="244" stroke="#FBBF24" stroke-width="1.8" stroke-opacity="0.55" stroke-dasharray="2 3"/>
+
+  <text x="500" y="616" font-size="8.5" fill="#64748b" text-anchor="middle" font-style="italic">Acquirers anchored at the SOC (Front 5 home base). All four hold primary contender slots in Front 5; arrows show the adjacent control planes they absorbed.</text>
+
+  <!-- ===== The agent-identity through-line spine (placed below the acquirer band) ===== -->
+  <rect x="40" y="640" width="920" height="2.5" fill="#FBBF24" fill-opacity="0.5"/>
+  <rect x="320" y="628" width="360" height="28" rx="7" fill="#fbbf24" fill-opacity="0.18" stroke="#FBBF24" stroke-width="1.6"/>
+  <text x="500" y="646" font-size="10.5" font-weight="800" fill="#fde68a" text-anchor="middle">VECTOR: human + machine + agent identity</text>
+
+  <!-- ===== Other absorptions (acquirer named inside the box; no separate node) ===== -->
   <!-- Check Point → Lakera (AI Security) -->
-  <rect x="396" y="300" width="156" height="48" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="474" y="318" font-size="9" fill="#fed7aa" text-anchor="middle">Check Point &#8594;</text>
-  <text x="474" y="333" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Lakera</text>
-  <text x="474" y="345" font-size="8" fill="#cbd5e1" text-anchor="middle">~$300M · closed Oct 22, 2025</text>
-
-  <!-- Microsoft → Entra Agent ID — BUILT, NOT BOUGHT badge (no arrow from a target) -->
-  <line x1="780" y1="362" x2="780" y2="232" stroke="#FBBF24" stroke-width="1.8" stroke-opacity="0.6" stroke-dasharray="2 3"/>
-  <rect x="700" y="188" width="160" height="44" rx="5" fill="#FBBF24" fill-opacity="0.12" stroke="#FBBF24" stroke-width="1.6"/>
-  <rect x="708" y="194" width="74" height="13" rx="3" fill="#FBBF24" fill-opacity="0.30"/>
-  <text x="745" y="203.5" font-size="7.5" font-weight="700" fill="#fde68a" text-anchor="middle">BUILT, NOT BOUGHT</text>
-  <text x="780" y="220" font-size="10.5" font-weight="700" fill="#f8fafc" text-anchor="middle">Entra Agent ID</text>
-  <text x="780" y="231" font-size="8" fill="#cbd5e1" text-anchor="middle">GA · April 2026 (directory)</text>
+  <rect x="115" y="680" width="170" height="52" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="200" y="698" font-size="9" fill="#fed7aa" text-anchor="middle">Check Point &#8594;</text>
+  <text x="200" y="713" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Lakera</text>
+  <text x="200" y="725" font-size="8" fill="#cbd5e1" text-anchor="middle">~$300M · closed Oct 22, 2025</text>
 
   <!-- Zscaler → Red Canary (F6 → F5 crossing) -->
-  <rect x="554" y="240" width="160" height="46" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
-  <text x="634" y="256" font-size="9" fill="#fed7aa" text-anchor="middle">Zscaler &#8594;</text>
-  <text x="634" y="270" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Red Canary</text>
-  <text x="634" y="281" font-size="7.5" fill="#cbd5e1" text-anchor="middle">~$651M · Aug 1, 2025 · F6&#8594;F5 MDR crossing</text>
+  <rect x="310" y="680" width="180" height="52" rx="5" fill="#F59E0B" fill-opacity="0.13" stroke="#F59E0B" stroke-width="1.4"/>
+  <text x="400" y="698" font-size="9" fill="#fed7aa" text-anchor="middle">Zscaler &#8594;</text>
+  <text x="400" y="712" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Red Canary</text>
+  <text x="400" y="724" font-size="7.5" fill="#cbd5e1" text-anchor="middle">~$651M · Aug 1, 2025 · F6&#8594;F5 MDR crossing</text>
+
+  <!-- PANW → Chronosphere (observability ADJACENCY — distinct dotted badge, NOT a graded front) -->
+  <rect x="515" y="680" width="220" height="52" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <rect x="523" y="686" width="204" height="13" rx="3" fill="#475569" fill-opacity="0.5"/>
+  <text x="625" y="695.5" font-size="7.5" font-weight="700" fill="#fbbf24" text-anchor="middle">PALO ALTO · SOC-OBSERVABILITY ADJACENCY</text>
+  <text x="625" y="712" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">Chronosphere</text>
+  <text x="625" y="725" font-size="8" fill="#94a3b8" text-anchor="middle">~$3.35B · Jan 2026 · NOT one of the four fronts</text>
 
   <!-- ===== Identity-native field — secondary lighter band ===== -->
-  <rect x="40" y="556" width="880" height="78" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1"/>
-  <text x="56" y="574" font-size="9.5" font-weight="700" fill="#fbbf24" letter-spacing="0.4">THE IDENTITY-NATIVE FIELD — consolidation runs inside identity too (lighter weight)</text>
-  <circle cx="120" cy="600" r="5" fill="#FBBF24"/>
-  <text x="132" y="604" font-size="9" fill="#cbd5e1">Okta &#8594; Axiom · ~$100M · Aug 2025</text>
-  <circle cx="330" cy="600" r="5" fill="#FBBF24"/>
-  <text x="342" y="604" font-size="9" fill="#cbd5e1">Delinea &#8594; StrongDM · Mar 5, 2026</text>
-  <circle cx="560" cy="600" r="5" fill="#FBBF24"/>
-  <text x="572" y="604" font-size="9" fill="#cbd5e1">Saviynt · $700M @ ~$3B (KKR) · capital event</text>
-  <circle cx="120" cy="622" r="5" fill="#FBBF24"/>
-  <text x="132" y="626" font-size="9" fill="#cbd5e1">Tailscale &#8594; Border0 · Mar 2026 · developer-led ZTNA porting up-market</text>
+  <rect x="40" y="748" width="920" height="76" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#475569" stroke-width="1"/>
+  <text x="56" y="766" font-size="9.5" font-weight="700" fill="#fbbf24" letter-spacing="0.4">THE IDENTITY-NATIVE FIELD — consolidation runs inside identity too (lighter weight)</text>
+  <circle cx="120" cy="790" r="5" fill="#FBBF24"/>
+  <text x="132" y="794" font-size="9" fill="#cbd5e1">Okta &#8594; Axiom · ~$100M · Aug 2025</text>
+  <circle cx="360" cy="790" r="5" fill="#FBBF24"/>
+  <text x="372" y="794" font-size="9" fill="#cbd5e1">Delinea &#8594; StrongDM · Mar 5, 2026</text>
+  <circle cx="610" cy="790" r="5" fill="#FBBF24"/>
+  <text x="622" y="794" font-size="9" fill="#cbd5e1">Saviynt · $700M @ ~$3B (KKR) · capital event</text>
+  <circle cx="120" cy="812" r="5" fill="#FBBF24"/>
+  <text x="132" y="816" font-size="9" fill="#cbd5e1">Tailscale &#8594; Border0 · Mar 2026 · developer-led ZTNA porting up-market</text>
   <!-- BeyondTrust — dotted unconsummated node -->
-  <rect x="560" y="612" width="350" height="18" rx="4" fill="#0a0e1a" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5 3"/>
-  <text x="572" y="625" font-size="8.5" fill="#94a3b8" font-style="italic">BeyondTrust — reported sale exploration, UNCONSUMMATED (Francisco Partners, Aug 2025)</text>
+  <rect x="560" y="804" width="388" height="16" rx="4" fill="#0a0e1a" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="572" y="815.5" font-size="8.5" fill="#94a3b8" font-style="italic">BeyondTrust — reported sale exploration, UNCONSUMMATED (Francisco Partners, Aug 2025)</text>
 
   <!-- ===== §2.4d falsifiable footer ===== -->
-  <rect x="40" y="644" width="880" height="106" fill="#1e293b" stroke="#475569" rx="4"/>
-  <text x="480" y="664" font-size="9.5" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
-  <text x="480" y="682" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">VALIDATES</tspan> if a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft acquires identity on an explicit agent / non-human-identity rationale,</text>
-  <text x="480" y="696" font-size="9" fill="#cbd5e1" text-anchor="middle">folded into a SOC or network platform, in the acquirer's own dated press.</text>
-  <text x="480" y="714" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">WEAKENS (inverse)</tspan> if a workforce-IAM pure-play is acquired on a classic SSO rationale, OR a standalone identity vendor scales on workforce identity alone with no platform absorption.</text>
-  <text x="480" y="734" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the dated M&amp;A and earnings-disclosure record, not on any regulation's timing. Acquisitions read as consolidation / graduation exits, never casualties.</text>
-  <text x="480" y="746" font-size="8" fill="#64748b" text-anchor="middle" font-style="italic">Not investment advice.</text>
+  <rect x="40" y="834" width="920" height="100" fill="#1e293b" stroke="#475569" rx="4"/>
+  <text x="500" y="854" font-size="9.5" font-weight="700" fill="#fef3c7" text-anchor="middle">FALSIFIABLE TEST — next two-to-four quarters</text>
+  <text x="500" y="872" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#86efac">VALIDATES</tspan> if a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft acquires identity on an explicit agent / non-human-identity rationale,</text>
+  <text x="500" y="886" font-size="9" fill="#cbd5e1" text-anchor="middle">folded into a SOC or network platform, in the acquirer's own dated press.</text>
+  <text x="500" y="904" font-size="9" fill="#cbd5e1" text-anchor="middle"><tspan font-weight="700" fill="#fca5a5">WEAKENS (inverse)</tspan> if a workforce-IAM pure-play is acquired on a classic SSO rationale, OR a standalone identity vendor scales on workforce identity alone with no platform absorption.</text>
+  <text x="500" y="922" font-size="8" fill="#64748b" text-anchor="middle">Grounded on the dated M&amp;A and earnings-disclosure record, not on any regulation's timing. Acquisitions read as consolidation / graduation exits, never casualties.</text>
+  <text x="500" y="932" font-size="8" fill="#64748b" text-anchor="middle" font-style="italic">Not investment advice.</text>
 </svg>
 <p><em>Not investment advice. See Disclosures.</em></p>
 </div>
