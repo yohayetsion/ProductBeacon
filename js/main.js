@@ -59,7 +59,8 @@
       if (target) {
         e.preventDefault();
         var navHeight = document.querySelector('.nav') ? document.querySelector('.nav').offsetHeight : 0;
-        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        var scrollMargin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - Math.max(navHeight, scrollMargin);
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });

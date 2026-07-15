@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Workforce | The Work It Does For You | ProductBeacon</title>
-<meta name="description" content="Not a list of agents. A catalogue of finished work: launch plans, financial models, contracts triaged, landing pages, research, dashboards. Around 100 specialists, with Legal and Compliance available under supervised terms, 250 skills, and 120 knowledge libraries, governed by you.">
+<meta name="description" content="A workforce of 96 specialists across 15 teams, every one named. Legal and compliance under supervised terms. 250 skills, 120 libraries, governed by you.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -17,12 +17,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ProductBeacon">
 <meta property="og:title" content="The Workforce | The Work It Does For You | ProductBeacon">
-<meta property="og:description" content="Not a list of agents. A catalogue of finished work: launch plans, financial models, contracts triaged, landing pages, research, dashboards. Around 100 specialists, 250 skills, governed by you.">
+<meta property="og:description" content="15 teams, 96 specialists, every one named. Finished, professional-grade work in hours, not weeks, governed by you. Legal and compliance under supervised terms.">
 <meta property="og:url" content="https://productbeacon.agency/workforce.html">
 <meta property="og:image" content="https://productbeacon.agency/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Workforce | The Work It Does For You | ProductBeacon">
-<meta name="twitter:description" content="A catalogue of finished work, not a list of agents. Around 100 specialists, 250 skills, governed by you.">
+<meta name="twitter:description" content="15 teams · 96 specialists, every one named, governed by you. Legal and compliance under supervised terms.">
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
@@ -275,6 +275,9 @@
   .cat-skill__name { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--amber); }
   .cat-skill__desc { font-size: 0.8125rem; color: var(--secondary); line-height: 1.4; }
   .cat-skill__more { font-size: 0.8125rem; color: var(--muted); font-style: italic; margin-top: var(--space-1); }
+  /* NEW (skills rework): collapsed-card teaser + open-body also-run — typography cloned from .org-tile__roles */
+  .pack-card__teaser { font-size: 0.8125rem; color: var(--muted); margin-top: var(--space-2); line-height: 1.5; }
+  .cat-skill-run { font-size: 0.8125rem; color: var(--secondary); line-height: 1.5; margin: var(--space-2) 0 0; }
   @media (max-width: 1023px) { .pack-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 639px)  { .pack-grid { grid-template-columns: 1fr; } }
   @media (prefers-reduced-motion: reduce) {
@@ -340,8 +343,8 @@
     <div class="hero__content">
       <p class="eyebrow">The Workforce</p>
       <h1>A workforce you govern. Here is everything it can do.</h1>
-      <p class="hero__sub">Everyone wants to talk about how many agents you get. Here is the question that actually matters: what shows up on your desk, and who decides whether to trust it? This page is the answer. Not a roster. A catalogue of finished, professional-grade work, the kind that used to take a department to produce, arriving in hours instead of weeks, with you governing every call that matters.</p>
-      <p class="text-sm" style="font-family:var(--font-mono); color:var(--secondary); margin-top:16px;">~100 specialists, with Legal &amp; Compliance under supervised terms &middot; 250 skills &middot; 120 libraries behind every deliverable</p>
+      <p class="hero__sub">A workforce you govern should be one you can inspect. So the whole thing is on this page: every team, every specialist, and the work each one hands you. It arrives finished, in hours instead of weeks, and the decisions stay yours.</p>
+      <p class="text-sm" style="font-family:var(--font-mono); color:var(--secondary); margin-top:16px;">15 teams &middot; 96 specialists, with Legal &amp; Compliance under supervised terms &middot; 250 skills &middot; 120 libraries behind every deliverable</p>
       <div class="govern-band">
         <span>You commission the work</span>
         <span>You review what comes back</span>
@@ -363,7 +366,7 @@
   <div class="container">
     <div class="section__header fade-in">
       <h2>Here is what you ask for, and here is what comes back.</h2>
-      <p>The reason it arrives finished is not that the work is shallow. Behind every deliverable sits a specialist working from a proven method, well over a hundred ready-made skills and more than fifty libraries of frameworks and hard-won patterns. So the output comes out shaped like work a professional would hand you, not a rough first draft you have to rebuild.</p>
+      <p>The reason it arrives finished is not that the work is shallow. Behind every deliverable sits a specialist working from a proven method, 250 ready-made skills and 120 libraries of frameworks and hard-won patterns. So the output comes out shaped like work a professional would hand you, not a rough first draft you have to rebuild.</p>
       <p>The premise is simple: the workforce produces, you govern. Every row below names where the call stays yours.</p>
     </div>
 
@@ -431,7 +434,7 @@
           <summary>
             <span class="job-row__job">Help sizing a decision</span>
             <span class="job-row__back">A structured decision write-up: the options, the trade-offs, the recommendation, and the reasoning</span>
-            <span class="job-row__who">VP Product + BizOps</span>
+            <span class="job-row__who">VP Product + Business Operations</span>
             <span class="job-row__decide"><span class="you-decide">The call is yours, and it is recorded</span></span>
           </summary>
           <div class="job-row__detail">The product lead is working from a real decision framework. The decision is written down so it is traceable back to you.</div>
@@ -439,8 +442,8 @@
         <details class="job-row">
           <summary>
             <span class="job-row__job">A landing page</span>
-            <span class="job-row__back">Copy, layout, and a build-ready page, on brand, written to convert</span>
-            <span class="job-row__who">UI Designer + Copywriter + Frontend</span>
+            <span class="job-row__back">Copy, layout, and a build-ready page spec, on brand, written to convert</span>
+            <span class="job-row__who">UI Designer + Copywriter + Conversion Specialist</span>
             <span class="job-row__decide"><span class="you-decide">You approve the design direction</span></span>
           </summary>
         </details>
@@ -448,16 +451,16 @@
           <summary>
             <span class="job-row__job">A feature scoped and specced</span>
             <span class="job-row__back">A clear specification: what it does, how it behaves, what to build</span>
-            <span class="job-row__who">Product Manager + UX + Architecture</span>
+            <span class="job-row__who">Product Manager + Interaction Designer + Architecture</span>
             <span class="job-row__decide"><span class="you-decide">You approve the scope</span></span>
           </summary>
         </details>
         <details class="job-row">
           <summary>
-            <span class="job-row__job">Something that needs to actually run</span>
-            <span class="job-row__back">Working frontend and backend, reviewed for quality before it reaches you</span>
-            <span class="job-row__who">Frontend + Backend + QA</span>
-            <span class="job-row__decide"><span class="you-decide">You sign off on what ships</span></span>
+            <span class="job-row__job">A technical call de-risked</span>
+            <span class="job-row__back">An architecture recommendation: the options, the trade-offs, the security read, and a plan your builders can execute</span>
+            <span class="job-row__who">Chief Architect + Security Architect</span>
+            <span class="job-row__decide"><span class="you-decide">You sign off on what gets built</span></span>
           </summary>
         </details>
       </div>
@@ -474,7 +477,7 @@
           <summary>
             <span class="job-row__job">A financial model</span>
             <span class="job-row__back">A built model: the structure, the assumptions, the scenarios, ready to pressure-test</span>
-            <span class="job-row__who">FP&amp;A + BizOps</span>
+            <span class="job-row__who">Financial Planning &amp; Analysis + Business Operations</span>
             <span class="job-row__decide"><span class="you-decide">The numbers are yours; you set the inputs</span></span>
           </summary>
           <div class="job-row__detail">The workforce builds the structure and the scenarios. The figures are the founder's. We never invent the numbers.</div>
@@ -482,7 +485,7 @@
         <details class="job-row">
           <summary>
             <span class="job-row__job">A contract looked at</span>
-            <span class="job-row__back">A first-pass review and triage: the clauses that matter, the flags, the questions to ask</span>
+            <span class="job-row__back">A first-pass triage: the clauses that matter, the flags, the questions to ask</span>
             <span class="job-row__who">Contracts Counsel (drafting and triage)<span class="supervised-access">Supervised</span></span>
             <span class="job-row__decide"><span class="you-decide">Your lawyer's call: real legal weight goes to your own lawyer</span></span>
           </summary>
@@ -499,7 +502,7 @@
           <summary>
             <span class="job-row__job">A program coordinated</span>
             <span class="job-row__back">A plan with owners, milestones, and the rhythm to keep it shipping</span>
-            <span class="job-row__who">Program Manager + ProdOps</span>
+            <span class="job-row__who">Program Manager + Product Operations</span>
             <span class="job-row__decide"><span class="you-decide">You hold the priorities</span></span>
           </summary>
         </details>
@@ -520,7 +523,7 @@
           <summary>
             <span class="job-row__job">To know what your numbers say</span>
             <span class="job-row__back">A dashboard and an analysis that turns activity into something you can act on</span>
-            <span class="job-row__who">Data Analyst + BI Engineer</span>
+            <span class="job-row__who">Data Analyst + Business Intelligence Engineer</span>
             <span class="job-row__decide"><span class="you-decide">You decide what to do with it</span></span>
           </summary>
         </details>
@@ -536,7 +539,7 @@
           <summary>
             <span class="job-row__job">Your customers understood</span>
             <span class="job-row__back">Health scores, segments, and the signals that tell you who is about to leave or buy</span>
-            <span class="job-row__who">CSM + CS Ops</span>
+            <span class="job-row__who">Customer Success Manager + Customer Success Operations</span>
             <span class="job-row__decide"><span class="you-decide">You decide where to focus</span></span>
           </summary>
         </details>
@@ -552,7 +555,7 @@
           <summary>
             <span class="job-row__job">A product roadmap</span>
             <span class="job-row__back">A prioritized roadmap tied to outcomes, not a wish list</span>
-            <span class="job-row__who">Director of PM + Product Manager</span>
+            <span class="job-row__who">Director of Product Management + Product Manager</span>
             <span class="job-row__decide"><span class="you-decide">You set the priorities</span></span>
           </summary>
         </details>
@@ -600,8 +603,8 @@
 
     <div class="metrics fade-in">
       <div class="metric">
-        <div class="metric__value">~100</div>
-        <div class="metric__label">Specialist agents, with Legal &amp; Compliance under supervised terms</div>
+        <div class="metric__value">96</div>
+        <div class="metric__label">Specialists across 15 teams, with Legal &amp; Compliance under supervised terms</div>
       </div>
       <div class="metric">
         <div class="metric__value">250</div>
@@ -619,33 +622,41 @@
 
     <!-- Org map -->
     <div class="org-grid fade-in" style="margin-top:48px;">
-      <a class="org-tile" href="#fn-product"><h4>Product &amp; Strategy</h4><p class="org-tile__roles">VP Product &middot; PM &middot; Director PM &middot; Product Marketing &middot; Competitive Intelligence &middot; BizOps &middot; BizDev</p></a>
-      <a class="org-tile" href="#fn-design"><h4>Design</h4><p class="org-tile__roles">Design Director &middot; UI &middot; Visual &middot; Interaction &middot; Motion &middot; User Researcher</p></a>
-      <a class="org-tile" href="#fn-eng"><h4>Engineering &amp; Architecture</h4><p class="org-tile__roles">Tech Lead &middot; Frontend &middot; Backend &middot; DevOps &middot; QA &middot; Chief Architect</p></a>
-      <a class="org-tile" href="#fn-marketing"><h4>Marketing</h4><p class="org-tile__roles">Marketing Director &middot; Copywriter &middot; Content &middot; SEO &middot; Paid Media &middot; Email &middot; Social &middot; PR</p></a>
-      <a class="org-tile" href="#fn-sales"><h4>Sales</h4><p class="org-tile__roles">Sales Director &middot; Account Exec &middot; SDR &middot; Sales Engineer &middot; Sales Ops &middot; Proposal Writer</p></a>
-      <a class="org-tile" href="#fn-cs"><h4>Customer Success</h4><p class="org-tile__roles">CS Director &middot; CSM &middot; Support Lead &middot; Onboarding &middot; KB Specialist &middot; CS Ops</p></a>
-      <a class="org-tile" href="#fn-data"><h4>Data</h4><p class="org-tile__roles">Data Lead &middot; Data Analyst &middot; BI Engineer &middot; ML Engineer &middot; Experimentation</p></a>
-      <a class="org-tile" href="#fn-finance"><h4>Finance</h4><p class="org-tile__roles">CFO &middot; FP&amp;A &middot; Revenue &middot; Treasury &middot; Controller &middot; Tax &middot; Procurement</p></a>
-      <a class="org-tile" href="#fn-legal"><h4>Legal &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="org-tile__roles">General Counsel &middot; Contracts &middot; Privacy &middot; IP &middot; Employment &middot; Compliance. Available under supervised terms.</p></a>
-      <a class="org-tile" href="#fn-ops"><h4>Operations</h4><p class="org-tile__roles">COO &middot; Program Manager &middot; Project Manager &middot; Process Engineer &middot; Risk</p></a>
-      <a class="org-tile" href="#fn-exec"><h4>Executive</h4><p class="org-tile__roles">CEO &middot; senior leadership bench</p></a>
-      <a class="org-tile" href="#fn-staff"><h4>People &amp; Staff</h4><p class="org-tile__roles">HR &middot; People Ops &middot; Personal Assistant &middot; Analyst &middot; Coach</p></a>
+      <a class="org-tile" href="#fn-product"><h4>Product &amp; Strategy</h4><p class="org-tile__roles">11 specialists &middot; Decides what to build, how to position it, and where to place your bets.</p></a>
+      <a class="org-tile" href="#fn-design"><h4>Design</h4><p class="org-tile__roles">6 specialists &middot; Makes the work come out looking like a real studio produced it.</p></a>
+      <a class="org-tile" href="#fn-arch"><h4>Architecture</h4><p class="org-tile__roles">6 specialists &middot; The technical calls that keep what you build sound, secure, and ready to scale.</p></a>
+      <a class="org-tile" href="#fn-marketing"><h4>Marketing</h4><p class="org-tile__roles">14 specialists &middot; A full marketing department, on call.</p></a>
+      <a class="org-tile" href="#fn-finance"><h4>Finance</h4><p class="org-tile__roles">7 specialists &middot; Keeps the numbers honest and the decisions paid for.</p></a>
+      <a class="org-tile" href="#fn-legal"><h4>Legal &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="org-tile__roles">6 specialists &middot; First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p></a>
+      <a class="org-tile" href="#fn-ops"><h4>Operations</h4><p class="org-tile__roles">6 specialists &middot; Makes sure the work actually ships and keeps shipping.</p></a>
+      <a class="org-tile" href="#fn-exec"><h4>Executive</h4><p class="org-tile__roles">8 specialists &middot; Sets direction and makes the trade-offs that shape everything below.</p></a>
+      <a class="org-tile" href="#fn-corpdev"><h4>Corp Dev</h4><p class="org-tile__roles">3 specialists &middot; Deals, investments, and the partnerships that change your company's shape.</p></a>
+      <a class="org-tile" href="#fn-it"><h4>IT Governance</h4><p class="org-tile__roles">4 specialists &middot; Keeps systems, data, and security policies in order as you grow.</p></a>
+      <a class="org-tile" href="#fn-hr"><h4>HR / People Ops</h4><p class="org-tile__roles">6 specialists &middot; Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p></a>
+      <a class="org-tile" href="#fn-cs"><h4>Customer Success</h4><p class="org-tile__roles">6 specialists &middot; Keeps customers after you win them.</p></a>
+      <a class="org-tile" href="#fn-sales"><h4>Sales</h4><p class="org-tile__roles">6 specialists &middot; The motion that turns interest into signed business.</p></a>
+      <a class="org-tile" href="#fn-data"><h4>Data Science</h4><p class="org-tile__roles">5 specialists &middot; Turns what is happening in your business into something you can act on.</p></a>
+      <a class="org-tile" href="#fn-staff"><h4>Personal Staff</h4><p class="org-tile__roles">2 specialists &middot; Your own office: daily support and research on call.</p></a>
     </div>
 
-    <!-- Function blocks + role cards -->
+    <!-- Function blocks + role cards (generated from workforce-copy-pack-2026-07-14.md) -->
     <div class="function-block" id="fn-product">
       <div class="function-block__header">
         <h3>Product &amp; Strategy</h3>
         <p>Decides what to build, how to position it, and where to place your bets.</p>
       </div>
       <div class="role-grid">
+        <details class="role-card"><summary><h4>Chief Product Officer</h4><p class="role-card__job">The senior product voice: strategy, portfolio, and the hardest calls.</p></summary><div class="role-card__detail"><p>Ask it for: a product strategy read, a portfolio view, a hard trade-off argued out.</p><p class="role-card__control">You stay in control of: the strategy is yours.</p></div></details>
         <details class="role-card"><summary><h4>VP Product</h4><p class="role-card__job">Owns vision, portfolio, and pricing strategy.</p></summary><div class="role-card__detail"><p>Ask it for: a strategic bet, a roadmap theme, a pricing approach.</p><p class="role-card__control">You stay in control of: where to play.</p></div></details>
-        <details class="role-card"><summary><h4>Product Manager</h4><p class="role-card__job">Turns direction into specs and delivery.</p></summary><div class="role-card__detail"><p>Ask it for: a PRD, user stories, a feature spec.</p><p class="role-card__control">You stay in control of: scope.</p></div></details>
-        <details class="role-card"><summary><h4>Competitive Intelligence</h4><p class="role-card__job">Tracks rivals, runs win/loss, sizes the market.</p></summary><div class="role-card__detail"><p>Ask it for: a battlecard, a competitive teardown, a win/loss readout.</p><p class="role-card__control">You stay in control of: how to respond.</p></div></details>
-        <details class="role-card"><summary><h4>Product Marketing</h4><p class="role-card__job">Positions and launches the work.</p></summary><div class="role-card__detail"><p>Ask it for: positioning, messaging, a launch narrative.</p></div></details>
-        <details class="role-card"><summary><h4>BizOps</h4><p class="role-card__job">Business cases, KPIs, and the numbers behind a call.</p></summary><div class="role-card__detail"><p>Ask it for: a business case, a KPI model.</p></div></details>
+        <details class="role-card"><summary><h4>Director of Product Management</h4><p class="role-card__job">Roadmaps, prioritization, and the delivery rhythm.</p></summary><div class="role-card__detail"><p>Ask it for: a prioritized roadmap, a planning cycle.</p><p class="role-card__control">You stay in control of: the priorities.</p></div></details>
+        <details class="role-card"><summary><h4>Director of Product Marketing</h4><p class="role-card__job">Owns go-to-market strategy and competitive response.</p></summary><div class="role-card__detail"><p>Ask it for: a go-to-market strategy, a market segmentation, a competitive response plan.</p></div></details>
+        <details class="role-card"><summary><h4>Product Manager</h4><p class="role-card__job">Turns direction into specs and delivery.</p></summary><div class="role-card__detail"><p>Ask it for: a product requirements doc, user stories, a feature spec.</p><p class="role-card__control">You stay in control of: scope.</p></div></details>
+        <details class="role-card"><summary><h4>Product Marketing Manager</h4><p class="role-card__job">Positions and launches the work.</p></summary><div class="role-card__detail"><p>Ask it for: positioning, messaging, a launch narrative.</p></div></details>
+        <details class="role-card"><summary><h4>Business Operations</h4><p class="role-card__job">Business cases, KPIs, and the numbers behind a call.</p></summary><div class="role-card__detail"><p>Ask it for: a business case, a KPI model.</p></div></details>
         <details class="role-card"><summary><h4>Business Development</h4><p class="role-card__job">Partnerships, market expansion, channel deals.</p></summary><div class="role-card__detail"><p>Ask it for: a partnership map, an expansion read.</p></div></details>
+        <details class="role-card"><summary><h4>Competitive Intelligence</h4><p class="role-card__job">Tracks rivals, runs win/loss, sizes the market.</p></summary><div class="role-card__detail"><p>Ask it for: a battlecard, a competitive teardown, a win/loss readout.</p><p class="role-card__control">You stay in control of: how to respond.</p></div></details>
+        <details class="role-card"><summary><h4>Product Operations</h4><p class="role-card__job">Launch readiness, process, and tooling for the product org.</p></summary><div class="role-card__detail"><p>Ask it for: a launch-readiness checklist, a process fix.</p></div></details>
+        <details class="role-card"><summary><h4>Value Realization</h4><p class="role-card__job">Proves customers are getting the value they paid for.</p></summary><div class="role-card__detail"><p>Ask it for: a value report, an adoption read, a renewal-risk view.</p><p class="role-card__control">You stay in control of: where to focus.</p></div></details>
       </div>
     </div>
 
@@ -655,25 +666,27 @@
         <p>Makes the work come out looking like a real studio produced it.</p>
       </div>
       <div class="role-grid">
+        <details class="role-card"><summary><h4>Design Director</h4><p class="role-card__job">Holds the system together.</p></summary><div class="role-card__detail"><p>Ask it for: a design review, system direction.</p></div></details>
         <details class="role-card"><summary><h4>UI Designer</h4><p class="role-card__job">Interface and component design.</p></summary><div class="role-card__detail"><p>Ask it for: component specs, a UI layout.</p></div></details>
         <details class="role-card"><summary><h4>Visual Designer</h4><p class="role-card__job">Brand and graphic systems.</p></summary><div class="role-card__detail"><p>Ask it for: a visual direction, brand assets.</p></div></details>
+        <details class="role-card"><summary><h4>Interaction Designer</h4><p class="role-card__job">Flows and how the product behaves.</p></summary><div class="role-card__detail"><p>Ask it for: a user flow, an interaction spec.</p></div></details>
+        <details class="role-card"><summary><h4>Motion Designer</h4><p class="role-card__job">Motion that makes the product feel alive.</p></summary><div class="role-card__detail"><p>Ask it for: a motion spec, an animation direction.</p></div></details>
         <details class="role-card"><summary><h4>User Researcher</h4><p class="role-card__job">Studies, interviews, usability.</p></summary><div class="role-card__detail"><p>Ask it for: an interview guide, a synthesis.</p></div></details>
-        <details class="role-card"><summary><h4>Interaction &amp; Motion</h4><p class="role-card__job">Flows and motion.</p></summary><div class="role-card__detail"><p>Ask it for: a flow, a motion spec.</p></div></details>
-        <details class="role-card"><summary><h4>Design Director</h4><p class="role-card__job">Holds the system together.</p></summary><div class="role-card__detail"><p>Ask it for: a design review, system direction.</p></div></details>
       </div>
     </div>
 
-    <div class="function-block" id="fn-eng">
+    <div class="function-block" id="fn-arch"><span id="fn-eng" style="scroll-margin-top: calc(var(--nav-height) + 52px);" aria-hidden="true"></span>
       <div class="function-block__header">
-        <h3>Engineering &amp; Architecture</h3>
-        <p>Turns an idea into something that actually runs.</p>
+        <h3>Architecture</h3>
+        <p>The technical calls that keep what you build sound, secure, and ready to scale.</p>
       </div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>Tech Lead</h4><p class="role-card__job">Plans and reviews the build.</p></summary><div class="role-card__detail"><p>Ask it for: an implementation plan, a code review.</p></div></details>
-        <details class="role-card"><summary><h4>Frontend &amp; Backend</h4><p class="role-card__job">Builds the product.</p></summary><div class="role-card__detail"><p>Ask it for: a working page, an API.</p></div></details>
-        <details class="role-card"><summary><h4>DevOps</h4><p class="role-card__job">Deployment and monitoring.</p></summary><div class="role-card__detail"><p>Ask it for: a CI/CD setup, a runbook.</p></div></details>
-        <details class="role-card"><summary><h4>Architects</h4><p class="role-card__job">Systems, API, cloud, security, data, AI.</p></summary><div class="role-card__detail"><p>Ask it for: an architecture review, a threat model.</p></div></details>
-        <details class="role-card"><summary><h4>QA Engineer</h4><p class="role-card__job">Pressure-tests before it ships.</p></summary><div class="role-card__detail"><p>Ask it for: a test plan, a QA pass.</p></div></details>
+        <details class="role-card"><summary><h4>Chief Architect</h4><p class="role-card__job">Holds the technical big picture together.</p></summary><div class="role-card__detail"><p>Ask it for: an architecture review, a technical strategy read.</p><p class="role-card__control">You stay in control of: the direction.</p></div></details>
+        <details class="role-card"><summary><h4>AI Architect</h4><p class="role-card__job">How AI fits into your product, safely.</p></summary><div class="role-card__detail"><p>Ask it for: an AI feature architecture, a model-integration read.</p></div></details>
+        <details class="role-card"><summary><h4>API Architect</h4><p class="role-card__job">The contracts between your systems.</p></summary><div class="role-card__detail"><p>Ask it for: an API design, a versioning approach.</p></div></details>
+        <details class="role-card"><summary><h4>Cloud Architect</h4><p class="role-card__job">Infrastructure, deployment, and scale decisions.</p></summary><div class="role-card__detail"><p>Ask it for: a cloud architecture, a scaling plan.</p></div></details>
+        <details class="role-card"><summary><h4>Data Architect</h4><p class="role-card__job">How your data is modeled and stored.</p></summary><div class="role-card__detail"><p>Ask it for: a data model, a schema design.</p></div></details>
+        <details class="role-card"><summary><h4>Security Architect</h4><p class="role-card__job">Finds the holes before someone else does.</p></summary><div class="role-card__detail"><p>Ask it for: a threat model, a security architecture read.</p></div></details>
       </div>
     </div>
 
@@ -681,52 +694,23 @@
       <div class="function-block__header">
         <h3>Marketing</h3>
         <p>A full marketing department, on call.</p>
+        <p><a href="#fn-exec">Led by the Chief Marketing Officer — on the Executive team</a></p>
       </div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>Copywriter</h4><p class="role-card__job">Headlines, pages, ads.</p></summary><div class="role-card__detail"><p>Ask it for: landing copy, an email, a tagline.</p></div></details>
+        <details class="role-card"><summary><h4>Marketing Director</h4><p class="role-card__job">Runs the marketing org and its budget calls.</p></summary><div class="role-card__detail"><p>Ask it for: a marketing plan, a channel-mix read.</p><p class="role-card__control">You stay in control of: the budget.</p></div></details>
         <details class="role-card"><summary><h4>Content Strategist</h4><p class="role-card__job">Editorial and calendars.</p></summary><div class="role-card__detail"><p>Ask it for: a content calendar, a content strategy.</p></div></details>
-        <details class="role-card"><summary><h4>SEO &amp; Paid Media</h4><p class="role-card__job">Organic and paid reach.</p></summary><div class="role-card__detail"><p>Ask it for: an SEO plan, a paid campaign.</p></div></details>
-        <details class="role-card"><summary><h4>Email &amp; Social</h4><p class="role-card__job">Sequences and social content.</p></summary><div class="role-card__detail"><p>Ask it for: an email sequence, a social calendar.</p></div></details>
-        <details class="role-card"><summary><h4>Growth &amp; PR</h4><p class="role-card__job">Loops and comms.</p></summary><div class="role-card__detail"><p>Ask it for: a growth model, a press release.</p></div></details>
-      </div>
-    </div>
-
-    <div class="function-block" id="fn-sales">
-      <div class="function-block__header">
-        <h3>Sales</h3>
-        <p>The motion that turns interest into signed business.</p>
-      </div>
-      <div class="role-grid">
-        <details class="role-card"><summary><h4>Account Executive</h4><p class="role-card__job">Negotiation and closing.</p></summary><div class="role-card__detail"><p>Ask it for: a deal strategy, objection handling.</p></div></details>
-        <details class="role-card"><summary><h4>Sales Engineer</h4><p class="role-card__job">Technical demos and POCs.</p></summary><div class="role-card__detail"><p>Ask it for: a demo script, an RFP response.</p></div></details>
-        <details class="role-card"><summary><h4>SDR</h4><p class="role-card__job">Outbound and qualification.</p></summary><div class="role-card__detail"><p>Ask it for: an outbound sequence.</p></div></details>
-        <details class="role-card"><summary><h4>Proposal Writer</h4><p class="role-card__job">Proposals and SOWs.</p></summary><div class="role-card__detail"><p>Ask it for: a proposal, a pricing presentation.</p></div></details>
-      </div>
-    </div>
-
-    <div class="function-block" id="fn-cs">
-      <div class="function-block__header">
-        <h3>Customer Success</h3>
-        <p>Keeps customers after you win them.</p>
-      </div>
-      <div class="role-grid">
-        <details class="role-card"><summary><h4>CSM</h4><p class="role-card__job">Account health and retention.</p></summary><div class="role-card__detail"><p>Ask it for: a health scorecard, a QBR deck.</p></div></details>
-        <details class="role-card"><summary><h4>Support Lead</h4><p class="role-card__job">Tickets and SLAs.</p></summary><div class="role-card__detail"><p>Ask it for: a support workflow.</p></div></details>
-        <details class="role-card"><summary><h4>Onboarding CSM</h4><p class="role-card__job">Time-to-value.</p></summary><div class="role-card__detail"><p>Ask it for: an onboarding playbook.</p></div></details>
-        <details class="role-card"><summary><h4>KB Specialist</h4><p class="role-card__job">Help docs and self-service.</p></summary><div class="role-card__detail"><p>Ask it for: a KB article.</p></div></details>
-      </div>
-    </div>
-
-    <div class="function-block" id="fn-data">
-      <div class="function-block__header">
-        <h3>Data</h3>
-        <p>Turns what is happening in your business into something you can act on.</p>
-      </div>
-      <div class="role-grid">
-        <details class="role-card"><summary><h4>Data Analyst</h4><p class="role-card__job">Ad-hoc analysis and queries.</p></summary><div class="role-card__detail"><p>Ask it for: a cohort analysis, a SQL query.</p></div></details>
-        <details class="role-card"><summary><h4>BI Engineer</h4><p class="role-card__job">Dashboards and reporting.</p></summary><div class="role-card__detail"><p>Ask it for: a dashboard, a metric tree.</p></div></details>
-        <details class="role-card"><summary><h4>ML Engineer</h4><p class="role-card__job">Models and evaluation.</p></summary><div class="role-card__detail"><p>Ask it for: a model approach, an eval.</p></div></details>
-        <details class="role-card"><summary><h4>Experimentation Analyst</h4><p class="role-card__job">A/B test reads.</p></summary><div class="role-card__detail"><p>Ask it for: an experiment design, a result read.</p></div></details>
+        <details class="role-card"><summary><h4>Copywriter</h4><p class="role-card__job">Headlines, pages, ads.</p></summary><div class="role-card__detail"><p>Ask it for: landing copy, an email, a tagline.</p></div></details>
+        <details class="role-card"><summary><h4>Conversion Specialist</h4><p class="role-card__job">Turns more visitors into customers.</p></summary><div class="role-card__detail"><p>Ask it for: a conversion audit, an A/B test plan.</p></div></details>
+        <details class="role-card"><summary><h4>Email Marketer</h4><p class="role-card__job">Sequences that get opened.</p></summary><div class="role-card__detail"><p>Ask it for: an email sequence, a nurture flow.</p></div></details>
+        <details class="role-card"><summary><h4>Growth Marketer</h4><p class="role-card__job">Loops that compound.</p></summary><div class="role-card__detail"><p>Ask it for: a growth model, a referral loop.</p></div></details>
+        <details class="role-card"><summary><h4>Infographic Designer</h4><p class="role-card__job">Data turned into visuals people share.</p></summary><div class="role-card__detail"><p>Ask it for: an infographic, a visual data story.</p></div></details>
+        <details class="role-card"><summary><h4>Market Researcher</h4><p class="role-card__job">Sizes markets and reads demand.</p></summary><div class="role-card__detail"><p>Ask it for: a market sizing, a demand read.</p></div></details>
+        <details class="role-card"><summary><h4>Paid Media Manager</h4><p class="role-card__job">Paid reach that pays back.</p></summary><div class="role-card__detail"><p>Ask it for: a paid campaign, a channel budget split.</p></div></details>
+        <details class="role-card"><summary><h4>PR &amp; Communications</h4><p class="role-card__job">The story the press tells about you.</p></summary><div class="role-card__detail"><p>Ask it for: a press release, a communications plan.</p></div></details>
+        <details class="role-card"><summary><h4>Presentation Designer</h4><p class="role-card__job">Decks that carry the room.</p></summary><div class="role-card__detail"><p>Ask it for: a pitch deck, a board deck.</p></div></details>
+        <details class="role-card"><summary><h4>SEO Specialist</h4><p class="role-card__job">Shows up in search, organic first.</p></summary><div class="role-card__detail"><p>Ask it for: an SEO plan, optimized page copy.</p></div></details>
+        <details class="role-card"><summary><h4>Social Media Manager</h4><p class="role-card__job">Social content and calendars.</p></summary><div class="role-card__detail"><p>Ask it for: a social calendar, a month of posts.</p></div></details>
+        <details class="role-card"><summary><h4>Video Producer</h4><p class="role-card__job">Scripts and video content plans.</p></summary><div class="role-card__detail"><p>Ask it for: a video script, a storyboard.</p></div></details>
       </div>
     </div>
 
@@ -734,13 +718,17 @@
       <div class="function-block__header">
         <h3>Finance</h3>
         <p>Keeps the numbers honest and the decisions paid for.</p>
+        <p><a href="#fn-exec">Led by the Chief Financial Officer — on the Executive team</a></p>
       </div>
       <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> First-pass drafting and triage only. The figures in any model are yours; the workforce builds the structure and the scenarios. Anything carrying real weight goes to your own finance professional. This is not financial advice.</div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>CFO &amp; FP&amp;A</h4><p class="role-card__job">Planning and modeling structure.</p></summary><div class="role-card__detail"><p>Ask it for: a model structure, a budget framework.</p><p class="role-card__control">You stay in control of: the numbers.</p></div></details>
-        <details class="role-card"><summary><h4>Revenue &amp; Treasury</h4><p class="role-card__job">Revenue and cash structure.</p></summary><div class="role-card__detail"><p>Ask it for: a revenue model framework.</p></div></details>
+        <details class="role-card"><summary><h4>Finance Director</h4><p class="role-card__job">Runs the finance function day to day.</p></summary><div class="role-card__detail"><p>Ask it for: a budget framework, a finance operating rhythm.</p><p class="role-card__control">You stay in control of: the numbers.</p></div></details>
         <details class="role-card"><summary><h4>Controller</h4><p class="role-card__job">Close and controls structure.</p></summary><div class="role-card__detail"><p>Ask it for: a close checklist.</p></div></details>
-        <details class="role-card"><summary><h4>Tax &amp; Procurement</h4><p class="role-card__job">Planning and vendor support.</p></summary><div class="role-card__detail"><p>Ask it for: a procurement checklist.</p></div></details>
+        <details class="role-card"><summary><h4>Financial Planning &amp; Analysis</h4><p class="role-card__job">Planning and modeling structure.</p></summary><div class="role-card__detail"><p>Ask it for: a model structure, a budget framework.</p><p class="role-card__control">You stay in control of: the numbers.</p></div></details>
+        <details class="role-card"><summary><h4>Investor Relations</h4><p class="role-card__job">How you talk to the people who fund you.</p></summary><div class="role-card__detail"><p>Ask it for: an investor update draft, a data-room checklist.</p></div></details>
+        <details class="role-card"><summary><h4>Revenue Analyst</h4><p class="role-card__job">Revenue structure and what drives it.</p></summary><div class="role-card__detail"><p>Ask it for: a revenue model framework.</p></div></details>
+        <details class="role-card"><summary><h4>Tax Planning</h4><p class="role-card__job">Tax questions structured before your accountant decides.</p></summary><div class="role-card__detail"><p>Ask it for: a tax-question first pass, the questions for your accountant.</p><p class="role-card__control">You stay in control of: your tax professional makes the tax calls. This is not tax advice.</p></div></details>
+        <details class="role-card"><summary><h4>Treasury Analyst</h4><p class="role-card__job">Cash position and runway structure.</p></summary><div class="role-card__detail"><p>Ask it for: a cash-flow framework, a runway view.</p></div></details>
       </div>
     </div>
 
@@ -748,12 +736,16 @@
       <div class="function-block__header">
         <h3>Legal &amp; Compliance<span class="supervised-access">Available under supervised terms</span></h3>
         <p>First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p>
+        <p><a href="#fn-exec">Led by the General Counsel — on the Executive team</a></p>
       </div>
       <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> Drafting and triage only, conveyed under supervised terms. Anything with real legal weight still goes to your own lawyer, and the workforce is built to hand it over cleanly. No attorney-client relationship is created, and this is not legal advice.</div>
       <div class="role-grid">
+        <details class="role-card"><summary><h4>Legal Director<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Runs the legal drafting-and-triage work, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a legal-workload triage, the right questions for your lawyer.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
         <details class="role-card"><summary><h4>Contracts Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">First-pass contract triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a clause-level triage, the questions to ask.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
-        <details class="role-card"><summary><h4>Privacy &amp; IP<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Privacy and IP triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a privacy-policy first pass, an IP triage.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
-        <details class="role-card"><summary><h4>Employment &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Employment and compliance triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a compliance readiness first pass.</p><p class="role-card__control">You stay in control of: anything with weight goes to your qualified professional.</p></div></details>
+        <details class="role-card"><summary><h4>Privacy Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Privacy triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a privacy-policy first pass, a data-flow triage.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>IP Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Intellectual-property triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: an IP triage, a licensing first pass.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>Employment Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Employment-law triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: an employment-question first pass, the questions to ask.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>Compliance Officer<span class="supervised-access">Supervised</span></h4><p class="role-card__job">Compliance readiness triage, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a compliance readiness first pass.</p><p class="role-card__control">You stay in control of: anything with weight goes to your qualified professional.</p></div></details>
       </div>
     </div>
 
@@ -763,9 +755,12 @@
         <p>Makes sure the work actually ships and keeps shipping.</p>
       </div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>Program &amp; Project Managers</h4><p class="role-card__job">Coordination and governance.</p></summary><div class="role-card__detail"><p>Ask it for: a program plan, a project schedule.</p></div></details>
+        <details class="role-card"><summary><h4>Operations Director</h4><p class="role-card__job">Runs the operating rhythm across functions.</p></summary><div class="role-card__detail"><p>Ask it for: an operating cadence, a cross-team process read.</p></div></details>
+        <details class="role-card"><summary><h4>Program Manager</h4><p class="role-card__job">Cross-team programs kept on track.</p></summary><div class="role-card__detail"><p>Ask it for: a program plan, a governance rhythm.</p></div></details>
+        <details class="role-card"><summary><h4>Project Manager</h4><p class="role-card__job">Single projects, planned and driven.</p></summary><div class="role-card__detail"><p>Ask it for: a project schedule, a status rhythm.</p></div></details>
         <details class="role-card"><summary><h4>Process Engineer</h4><p class="role-card__job">Maps and fixes processes.</p></summary><div class="role-card__detail"><p>Ask it for: a process map, a bottleneck fix.</p></div></details>
-        <details class="role-card"><summary><h4>Risk &amp; Systems</h4><p class="role-card__job">Risk and enterprise systems.</p></summary><div class="role-card__detail"><p>Ask it for: a risk register.</p></div></details>
+        <details class="role-card"><summary><h4>Procurement Specialist</h4><p class="role-card__job">Vendors, chosen and managed on your terms.</p></summary><div class="role-card__detail"><p>Ask it for: a procurement checklist, a vendor comparison.</p></div></details>
+        <details class="role-card"><summary><h4>Risk Manager</h4><p class="role-card__job">Names the risks before they name you.</p></summary><div class="role-card__detail"><p>Ask it for: a risk register, a mitigation plan.</p></div></details>
       </div>
     </div>
 
@@ -775,18 +770,113 @@
         <p>Sets direction and makes the trade-offs that shape everything below.</p>
       </div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>CEO &amp; leadership</h4><p class="role-card__job">Direction and the calls at the top.</p></summary><div class="role-card__detail"><p>Ask it for: a strategic alignment read, an annual plan.</p><p class="role-card__control">You stay in control of: the final call.</p></div></details>
+        <details class="role-card"><summary><h4>CEO</h4><p class="role-card__job">Direction and the calls at the top.</p></summary><div class="role-card__detail"><p>Ask it for: a strategic alignment read, an annual plan.</p><p class="role-card__control">You stay in control of: the final call.</p></div></details>
+        <details class="role-card"><summary><h4>Chief Financial Officer</h4><p class="role-card__job">The financial strategy voice at the top.</p></summary><div class="role-card__detail"><p>Ask it for: a financial strategy read, a fundraise framework.</p><p class="role-card__control">You stay in control of: the figures are yours, always.</p></div></details>
+        <details class="role-card"><summary><h4>Chief Operating Officer</h4><p class="role-card__job">Makes the whole operation run as one.</p></summary><div class="role-card__detail"><p>Ask it for: an operating-model read, an org-process view.</p></div></details>
+        <details class="role-card"><summary><h4>Chief Marketing Officer</h4><p class="role-card__job">The marketing strategy voice at the top.</p></summary><div class="role-card__detail"><p>Ask it for: a brand strategy read, a channel portfolio view.</p></div></details>
+        <details class="role-card"><summary><h4>Chief People Officer</h4><p class="role-card__job">People strategy, org design, culture.</p></summary><div class="role-card__detail"><p>Ask it for: an org design read, a people strategy view.</p><p class="role-card__control">You stay in control of: every hiring and pay decision is made by you.</p></div></details>
+        <details class="role-card"><summary><h4>Chief Information Officer</h4><p class="role-card__job">Technology governance at the top.</p></summary><div class="role-card__detail"><p>Ask it for: an IT governance read, a systems strategy view.</p></div></details>
+        <details class="role-card"><summary><h4>General Counsel<span class="supervised-access">Supervised</span></h4><p class="role-card__job">The senior legal lens: drafting and triage only, under supervised terms.</p></summary><div class="role-card__detail"><p>Ask it for: a legal-risk triage, the brief for your outside counsel.</p><p class="role-card__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="role-card"><summary><h4>Head of Corporate Development</h4><p class="role-card__job">Deals, acquisitions, and strategic moves.</p></summary><div class="role-card__detail"><p>Ask it for: a deal thesis, an acquisition screen.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-corpdev">
+      <div class="function-block__header">
+        <h3>Corp Dev</h3>
+        <p>Deals, investments, and the partnerships that change your company's shape.</p>
+        <p><a href="#fn-exec">Led by the Head of Corporate Development — on the Executive team</a></p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>M&amp;A Analyst</h4><p class="role-card__job">Mergers and acquisitions, analyzed before you commit.</p></summary><div class="role-card__detail"><p>Ask it for: a target evaluation, a diligence checklist.</p><p class="role-card__control">You stay in control of: the deal decision.</p></div></details>
+        <details class="role-card"><summary><h4>Corporate Venture</h4><p class="role-card__job">Investments and venture moves, structured.</p></summary><div class="role-card__detail"><p>Ask it for: an investment thesis, a venture screen.</p></div></details>
+        <details class="role-card"><summary><h4>Strategic Partnerships</h4><p class="role-card__job">Partnerships with company-level weight.</p></summary><div class="role-card__detail"><p>Ask it for: a partnership structure, an alliance read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-it">
+      <div class="function-block__header">
+        <h3>IT Governance</h3>
+        <p>Keeps systems, data, and security policies in order as you grow.</p>
+        <p><a href="#fn-exec">Led by the Chief Information Officer — on the Executive team</a></p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>IT Director</h4><p class="role-card__job">Runs IT governance day to day.</p></summary><div class="role-card__detail"><p>Ask it for: an IT policy framework, a governance maturity read.</p></div></details>
+        <details class="role-card"><summary><h4>Data Governance</h4><p class="role-card__job">Rules for your data before regulators write them for you.</p></summary><div class="role-card__detail"><p>Ask it for: a data governance framework, a retention policy draft.</p></div></details>
+        <details class="role-card"><summary><h4>Enterprise Systems</h4><p class="role-card__job">The business systems that run the company.</p></summary><div class="role-card__detail"><p>Ask it for: a systems landscape read, a tool consolidation plan.</p></div></details>
+        <details class="role-card"><summary><h4>IT Security Policy</h4><p class="role-card__job">Security policies that hold up to scrutiny.</p></summary><div class="role-card__detail"><p>Ask it for: a security policy draft, an access-control framework.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-hr">
+      <div class="function-block__header">
+        <h3>HR / People Ops</h3>
+        <p>Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p>
+        <p><a href="#fn-exec">Led by the Chief People Officer — on the Executive team</a></p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> The people work here is drafting and triage: job descriptions, interview guides, pay-band structures, and structured first passes that get you to a decision faster. It never screens, scores, or ranks a person. Every hiring and pay decision is made by a human: you.</div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>HR Director</h4><p class="role-card__job">Hiring, performance, comp: drafted for your decisions.</p></summary><div class="role-card__detail"><p>Ask it for: a job description, an interview guide.</p><p class="role-card__control">You stay in control of: every hiring and pay decision.</p></div></details>
+        <details class="role-card"><summary><h4>Recruiter</h4><p class="role-card__job">Hiring pipelines, drafted and structured; you decide on every candidate.</p></summary><div class="role-card__detail"><p>Ask it for: a job description, an interview plan, a structured candidate summary for your decision.</p><p class="role-card__control">You stay in control of: every hiring decision is yours. It never screens, scores, or ranks a person.</p></div></details>
+        <details class="role-card"><summary><h4>Onboarding Specialist</h4><p class="role-card__job">New hires productive fast.</p></summary><div class="role-card__detail"><p>Ask it for: a 30-60-90 plan, an onboarding checklist.</p></div></details>
+        <details class="role-card"><summary><h4>Performance Specialist</h4><p class="role-card__job">Performance cycles, structured; the judgments stay yours.</p></summary><div class="role-card__detail"><p>Ask it for: a goals framework, a feedback-cycle structure.</p><p class="role-card__control">You stay in control of: every performance judgment is yours.</p></div></details>
+        <details class="role-card"><summary><h4>Compensation Analyst</h4><p class="role-card__job">Pay structures, benchmarked and drafted; you set the pay.</p></summary><div class="role-card__detail"><p>Ask it for: a compensation band structure, a benchmark summary.</p><p class="role-card__control">You stay in control of: every pay decision is yours.</p></div></details>
+        <details class="role-card"><summary><h4>People Analyst</h4><p class="role-card__job">Workforce numbers that tell you something.</p></summary><div class="role-card__detail"><p>Ask it for: an attrition read, a headcount plan structure.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-cs">
+      <div class="function-block__header">
+        <h3>Customer Success</h3>
+        <p>Keeps customers after you win them.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Customer Success Director</h4><p class="role-card__job">Runs the retention motion.</p></summary><div class="role-card__detail"><p>Ask it for: a customer success strategy, a segmentation model.</p></div></details>
+        <details class="role-card"><summary><h4>Customer Success Manager</h4><p class="role-card__job">Account health and retention.</p></summary><div class="role-card__detail"><p>Ask it for: a health scorecard, a business-review deck.</p></div></details>
+        <details class="role-card"><summary><h4>Customer Success Operations</h4><p class="role-card__job">The metrics and tooling behind retention.</p></summary><div class="role-card__detail"><p>Ask it for: a churn-analysis structure, a retention metrics read.</p></div></details>
+        <details class="role-card"><summary><h4>Support Lead</h4><p class="role-card__job">Tickets and SLAs.</p></summary><div class="role-card__detail"><p>Ask it for: a support workflow.</p></div></details>
+        <details class="role-card"><summary><h4>Knowledge Base Specialist</h4><p class="role-card__job">Help docs and self-service.</p></summary><div class="role-card__detail"><p>Ask it for: a help-center article.</p></div></details>
+        <details class="role-card"><summary><h4>Customer Onboarding Manager</h4><p class="role-card__job">Time-to-value.</p></summary><div class="role-card__detail"><p>Ask it for: an onboarding playbook.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-sales">
+      <div class="function-block__header">
+        <h3>Sales</h3>
+        <p>The motion that turns interest into signed business.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Sales Director</h4><p class="role-card__job">Pipeline, quota, and the sales operating rhythm.</p></summary><div class="role-card__detail"><p>Ask it for: a pipeline forecast structure, a territory plan.</p></div></details>
+        <details class="role-card"><summary><h4>Account Executive</h4><p class="role-card__job">Negotiation and closing.</p></summary><div class="role-card__detail"><p>Ask it for: a deal strategy, objection handling.</p></div></details>
+        <details class="role-card"><summary><h4>Sales Engineer</h4><p class="role-card__job">Technical demos and POCs.</p></summary><div class="role-card__detail"><p>Ask it for: a demo script, an RFP response.</p></div></details>
+        <details class="role-card"><summary><h4>Sales Development Rep</h4><p class="role-card__job">Outbound and qualification.</p></summary><div class="role-card__detail"><p>Ask it for: an outbound sequence.</p></div></details>
+        <details class="role-card"><summary><h4>Sales Operations</h4><p class="role-card__job">The numbers and hygiene behind the pipeline.</p></summary><div class="role-card__detail"><p>Ask it for: a pipeline analytics read, a sales-data hygiene checklist.</p></div></details>
+        <details class="role-card"><summary><h4>Proposal Writer</h4><p class="role-card__job">Proposals and SOWs.</p></summary><div class="role-card__detail"><p>Ask it for: a proposal, a pricing presentation.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-data">
+      <div class="function-block__header">
+        <h3>Data Science</h3>
+        <p>Turns what is happening in your business into something you can act on.</p>
+      </div>
+      <div class="role-grid">
+        <details class="role-card"><summary><h4>Data Science Lead</h4><p class="role-card__job">Analytics strategy and the metrics that matter.</p></summary><div class="role-card__detail"><p>Ask it for: a metrics strategy, a north-star metric definition.</p></div></details>
+        <details class="role-card"><summary><h4>Data Analyst</h4><p class="role-card__job">Ad-hoc analysis and queries.</p></summary><div class="role-card__detail"><p>Ask it for: a cohort analysis, a SQL query.</p></div></details>
+        <details class="role-card"><summary><h4>Business Intelligence Engineer</h4><p class="role-card__job">Dashboards and reporting.</p></summary><div class="role-card__detail"><p>Ask it for: a dashboard, a metric tree.</p></div></details>
+        <details class="role-card"><summary><h4>Machine Learning Engineer</h4><p class="role-card__job">Models and evaluation.</p></summary><div class="role-card__detail"><p>Ask it for: a model approach, an eval.</p></div></details>
+        <details class="role-card"><summary><h4>Experimentation Analyst</h4><p class="role-card__job">A/B test reads.</p></summary><div class="role-card__detail"><p>Ask it for: an experiment design, a result read.</p></div></details>
       </div>
     </div>
 
     <div class="function-block" id="fn-staff">
       <div class="function-block__header">
-        <h3>People &amp; Staff</h3>
-        <p>The supporting functions that hold a growing organization together.</p>
+        <h3>Personal Staff</h3>
+        <p>Your own office: daily support and research on call.</p>
       </div>
       <div class="role-grid">
-        <details class="role-card"><summary><h4>HR &amp; People Ops</h4><p class="role-card__job">Hiring, performance, comp.</p></summary><div class="role-card__detail"><p>Ask it for: a job description, an interview guide.</p></div></details>
-        <details class="role-card"><summary><h4>Personal Staff</h4><p class="role-card__job">Day-to-day support and research.</p></summary><div class="role-card__detail"><p>Ask it for: a daily briefing, a research synthesis.</p></div></details>
+        <details class="role-card"><summary><h4>Personal Assistant</h4><p class="role-card__job">Day-to-day support.</p></summary><div class="role-card__detail"><p>Ask it for: a daily briefing, an organized week.</p></div></details>
+        <details class="role-card"><summary><h4>Analyst</h4><p class="role-card__job">Research on anything, synthesized.</p></summary><div class="role-card__detail"><p>Ask it for: a research synthesis, a sourced answer.</p></div></details>
       </div>
     </div>
   </div>
@@ -809,58 +899,67 @@
       <h3>250 ready-made skills</h3>
       <button class="btn btn--ghost" data-expand-target="skills-grid" aria-pressed="false">Expand all</button>
     </div>
-    <p class="text-secondary fade-in" style="margin-top:8px;">A skill is a proven recipe for producing one specific thing well. You never see the skills working. You just see the finished work that comes out the other side. Here is the range of what they cover.</p>
+    <p class="text-secondary fade-in" style="margin-top:8px;">A skill is a proven recipe for producing one specific thing well. You never see the skills working. You just see the finished work that comes out the other side. Here is the range of what they cover. Each card shows a sample.</p>
 
     <div class="pack-grid" id="skills-grid">
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C4;</span><h4>Plans &amp; documents</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C4;</span><h4>Plans &amp; documents</h4><span class="badge">12 shown</span></div>
           <p class="pack-card__gloss">The core deliverables a business runs on: plans, briefs, specs, write-ups.</p>
+          <p class="pack-card__teaser">Launch plan &middot; Product requirements &middot; Business case &middot; +9 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Launch plan</span><span class="cat-skill__desc">A full go-to-market and launch plan, built on a real launch method.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Product requirements</span><span class="cat-skill__desc">A clear PRD a builder can work from.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Business case</span><span class="cat-skill__desc">The case for and against a move before you commit money.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Roadmap</span><span class="cat-skill__desc">A prioritized roadmap tied to outcomes.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Launch plan</span><span class="cat-skill__desc">A full launch plan, built on method</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Product requirements</span><span class="cat-skill__desc">A clear PRD a builder works from</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Business case</span><span class="cat-skill__desc">The case for and against, before money moves</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Roadmap</span><span class="cat-skill__desc">A prioritized roadmap tied to outcomes</span></div>
+          <p class="cat-skill-run">Also in this category: Business plan &middot; Business model canvas &middot; Lean canvas &middot; Goals &amp; OKRs &middot; Stakeholder brief &middot; Press release &amp; FAQ &middot; Go-to-market brief &middot; Pricing model</p>
           <p class="cat-skill__more">When you ask for a launch plan, it is built on a real product-launch method, not a blank page.</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9ED;</span><h4>Strategy &amp; decisions</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9ED;</span><h4>Strategy &amp; decisions</h4><span class="badge">11 shown</span></div>
           <p class="pack-card__gloss">Deciding where to play and where to bet, recorded so the call is yours and traceable.</p>
+          <p class="pack-card__teaser">Strategic bet &middot; Decision record &middot; Positioning &middot; +8 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Strategic bet</span><span class="cat-skill__desc">A structured bet with the reasoning written down.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Decision record</span><span class="cat-skill__desc">Options, trade-offs, recommendation, traceable back to you.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Positioning</span><span class="cat-skill__desc">How you sit in the market and why.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Market analysis</span><span class="cat-skill__desc">A read on the market and where the openings are.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Strategic bet</span><span class="cat-skill__desc">A structured bet, reasoning written down</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Decision record</span><span class="cat-skill__desc">Options, trade-offs, traceable back to you</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Positioning</span><span class="cat-skill__desc">How you sit in the market, and why</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market analysis</span><span class="cat-skill__desc">Where the market is, where the openings are</span></div>
+          <p class="cat-skill-run">Also in this category: Vision statement &middot; Strategic intent &middot; Portfolio trade-off &middot; Decision charter &middot; Pre-mortem &middot; Decision roles (DACI) &middot; Decision quality audit</p>
           <p class="cat-skill__more">Decisions are made in the open and recorded, on a published standard for governing AI work.</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F50D;</span><h4>Research &amp; discovery</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F50D;</span><h4>Research &amp; discovery</h4><span class="badge">11 shown</span></div>
           <p class="pack-card__gloss">Turning questions into sourced answers, not a pile of links.</p>
+          <p class="pack-card__teaser">Interview synthesis &middot; Competitive teardown &middot; Win/loss analysis &middot; +8 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Interview synthesis</span><span class="cat-skill__desc">Customer interviews turned into findings.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Market &amp; segment research</span><span class="cat-skill__desc">Who the market is and how it splits.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Competitive teardown</span><span class="cat-skill__desc">A rival's moves and your openings.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Interview synthesis</span><span class="cat-skill__desc">Customer interviews turned into findings</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market &amp; segment research</span><span class="cat-skill__desc">Who the market is, how it splits</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Competitive teardown</span><span class="cat-skill__desc">A rival's moves and your openings</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Win/loss analysis</span><span class="cat-skill__desc">Why deals are won and lost</span></div>
+          <p class="cat-skill-run">Also in this category: Interview guide &middot; Customer journey map &middot; Opportunity tree &middot; Assumption map &middot; Competitive landscape map &middot; Deep research report &middot; Feedback capture</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C8;</span><h4>Growth &amp; go-to-market</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C8;</span><h4>Growth &amp; go-to-market</h4><span class="badge">14 shown</span></div>
           <p class="pack-card__gloss">Campaigns, content, search, and the motion to launch.</p>
+          <p class="pack-card__teaser">Campaign brief &middot; Content strategy &middot; Paid ads plan &middot; +11 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Campaign brief</span><span class="cat-skill__desc">A full campaign with the assets to run it.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Content strategy</span><span class="cat-skill__desc">Weeks of planned, on-voice content.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">SEO &amp; GEO</span><span class="cat-skill__desc">A plan to show up in search and AI answers.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Campaign brief</span><span class="cat-skill__desc">A full campaign with assets to run it</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Content strategy</span><span class="cat-skill__desc">Weeks of planned, on-voice content</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">SEO &amp; showing up in AI answers</span><span class="cat-skill__desc">Found in search, and in AI answers</span></div>
+          <p class="cat-skill-run">Also in this category: SEO audit &middot; Email sequence &middot; Referral program &middot; Paid ads plan &middot; Social content calendar &middot; Subject lines &middot; A/B test setup &middot; Landing-page conversion &middot; Signup-flow conversion &middot; Onboarding conversion &middot; Analytics tracking plan</p>
         </div>
       </details>
 
@@ -868,78 +967,136 @@
         <summary>
           <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9E9;</span><h4>Strategy frameworks</h4><span class="badge">20+</span></div>
           <p class="pack-card__gloss">The named methods serious operators reach for, ready to apply to your situation.</p>
+          <p class="pack-card__teaser">Growth loops &middot; Pricing strategy &middot; Blue Ocean strategy &middot; +11 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Growth loops</span><span class="cat-skill__desc">Map the loops that compound your reach.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Market expansion</span><span class="cat-skill__desc">Where to grow next and how.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Competitive forces</span><span class="cat-skill__desc">A structured read on the competitive landscape.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Pricing strategy</span><span class="cat-skill__desc">How to price and structure tiers.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Growth loops</span><span class="cat-skill__desc">Map the loops that compound reach</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market expansion</span><span class="cat-skill__desc">Where to grow next, and how</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Competitive forces</span><span class="cat-skill__desc">A structured read on the landscape</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Pricing strategy</span><span class="cat-skill__desc">How to price and structure tiers</span></div>
+          <p class="cat-skill-run">Also in this category: Blue Ocean strategy &middot; Porter's Five Forces &middot; Portfolio matrix &middot; Wardley mapping &middot; 7 Powers &middot; Kano analysis &middot; Pirate metrics &middot; North Star metric &middot; OODA loop &middot; Theory of constraints</p>
           <p class="cat-skill__more">When you are sizing a hard call, it can run it through a named, proven framework instead of a gut guess.</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4DD;</span><h4>Assets &amp; deliverables</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4DD;</span><h4>Assets &amp; deliverables</h4><span class="badge">8 shown</span></div>
           <p class="pack-card__gloss">The things you take to market: page copy, presentations, briefs, specs.</p>
+          <p class="pack-card__teaser">Page copy &middot; Presentation &middot; Sales enablement &middot; +5 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Page copy</span><span class="cat-skill__desc">On-brand copy written to convert.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Presentation</span><span class="cat-skill__desc">A deck that tells the story.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Sales enablement</span><span class="cat-skill__desc">The briefs that turn a plan into action.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Page copy</span><span class="cat-skill__desc">On-brand copy written to convert</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Presentation</span><span class="cat-skill__desc">A deck that tells the story</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Sales enablement</span><span class="cat-skill__desc">Briefs that turn plan into action</span></div>
+          <p class="cat-skill-run">Also in this category: Copy editing &middot; Messaging architecture &middot; Launch narrative &middot; Competitive battlecard &middot; Quarterly business review deck</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2699;&#xFE0F;</span><h4>Requirements &amp; quality</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2699;&#xFE0F;</span><h4>Requirements &amp; quality</h4><span class="badge">8 shown</span></div>
           <p class="pack-card__gloss">Turning a fuzzy idea into a clear spec, then pressure-testing it before it reaches you.</p>
+          <p class="pack-card__teaser">Feature spec &middot; User stories &middot; Pre-launch readiness check &middot; +5 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Feature spec</span><span class="cat-skill__desc">What it does, how it behaves, what to build.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">User stories</span><span class="cat-skill__desc">Requirements a builder can work from.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Quality checks</span><span class="cat-skill__desc">Built-in checks so the output holds up on contact.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Feature spec</span><span class="cat-skill__desc">What it does, how it behaves</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">User stories</span><span class="cat-skill__desc">Requirements a builder works from</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Pre-launch readiness check</span><span class="cat-skill__desc">What is solid, what still is not</span></div>
+          <p class="cat-skill-run">Also in this category: PRD outline &middot; Four-risks check &middot; Bias check &middot; Experiment design &middot; Pretotype test</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F501;</span><h4>Operations &amp; assessment</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F501;</span><h4>Operations &amp; assessment</h4><span class="badge">10 shown</span></div>
           <p class="pack-card__gloss">Keeping things shipping, and honest read-outs on where something stands.</p>
+          <p class="pack-card__teaser">Retrospective &middot; Outcome review &middot; SaaS health check &middot; +7 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Program plan</span><span class="cat-skill__desc">Owners, milestones, the rhythm to keep it shipping.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Process improvement</span><span class="cat-skill__desc">The bottleneck named and the fix specified.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Readiness &amp; health checks</span><span class="cat-skill__desc">What is solid and what still needs work.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Retrospective</span><span class="cat-skill__desc">What worked, what did not, what to change.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Retrospective</span><span class="cat-skill__desc">What worked, what did not, what changes</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Outcome review</span><span class="cat-skill__desc">Did the initiative deliver what it promised</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">SaaS health check</span><span class="cat-skill__desc">An honest read on the business</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Customer health scorecard</span><span class="cat-skill__desc">Who is thriving, who is at risk</span></div>
+          <p class="cat-skill-run">Also in this category: Maturity check &middot; Operating calendar &middot; Cadence check &middot; Escalation rules &middot; Onboarding playbook &middot; Ownership map</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9E0;</span><h4>Memory of your business</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F9E0;</span><h4>Memory of your business</h4><span class="badge">4 shown</span></div>
           <p class="pack-card__gloss">A working record of what you decided, learned, and why.</p>
+          <p class="pack-card__teaser">Context recall &middot; Handoff briefing &middot; +2 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Context recall</span><span class="cat-skill__desc">What you decided and why, on demand.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Handoff briefing</span><span class="cat-skill__desc">Brief a specialist without re-explaining.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Context recall</span><span class="cat-skill__desc">What you decided and why, on demand</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Handoff briefing</span><span class="cat-skill__desc">Brief a specialist without re-explaining</span></div>
+          <p class="cat-skill-run">Also in this category: Feedback capture and recall &middot; Lessons-learned recall</p>
           <p class="cat-skill__more">The workforce builds on yesterday instead of starting from scratch every morning.</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F517;</span><h4>Cross-domain specialist work</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F517;</span><h4>Cross-domain specialist work</h4><span class="badge">12 shown</span></div>
           <p class="pack-card__gloss">The deeper, technical jobs that cut across functions, the work you would normally go outside to buy.</p>
+          <p class="pack-card__teaser">Contract triage &middot; Risk analysis &middot; Deal diligence checklist &middot; +9 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__name">Specialist deep-dives</span><span class="cat-skill__desc">Detailed technical work across domains.</span></div>
-          <div class="cat-skill"><span class="cat-skill__name">Setup &amp; utility</span><span class="cat-skill__desc">Gets the workforce running inside your business and keeps it tidy.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Risk analysis</span><span class="cat-skill__desc">Findings prepared for the accountable owner</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Deal diligence checklist</span><span class="cat-skill__desc">Structured diligence, input to your deal counsel</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Contract triage</span><span class="cat-skill__desc">A structured first pass your lawyer reviews</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">AI control audit</span><span class="cat-skill__desc">First-pass audit scaffold for your compliance owner</span></div>
+          <p class="cat-skill-run">Also in this category: NDA triage &middot; Privacy-policy first pass &middot; Compliance readiness scan &middot; Resume extraction &middot; Compensation benchmark &middot; Job descriptions &middot; Tax-planning first pass &middot; AI-regulation readiness</p>
         </div>
       </details>
     </div>
 
     <p class="text-secondary fade-in" style="margin-top:24px;">None of this is improvised. Every category above is a body of method the workforce already has the day you start. You are not teaching it how to do the job. You are pointing it at yours.</p>
+
+    <!-- Spotlights: two skills opened up (generated from workforce-copy-pack-2026-07-14.md Addendum 4) -->
+    <div class="pack-subhead fade-in">
+      <h3>What a skill looks like from the inside.</h3>
+    </div>
+    <p class="text-secondary fade-in" style="margin-top:8px;">Two of the 250, opened up.</p>
+    <h4 class="fade-in" style="margin-top:32px;">Launch plan</h4>
+    <div class="flow-strip fade-in">
+      <div class="flow-step">
+        <p class="eyebrow">You bring</p>
+        <p>The product, the date you want, and what you already know about your market.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">It runs the method</p>
+        <p>Readiness gates, channel and messaging plan, a pre-mortem on what could sink the launch, then the day-one and week-one motion.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">What lands</p>
+        <p>A launch plan with owners, milestones, and a go/no-go recommendation. The call stays yours.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">Drawing on</p>
+        <p>The go-to-market playbooks library, built from how launches actually win.</p>
+      </div>
+    </div>
+    <h4 class="fade-in" style="margin-top:32px;">Contract triage</h4>
+    <div class="flow-strip fade-in">
+      <div class="flow-step">
+        <p class="eyebrow">You bring</p>
+        <p>The contract and what the deal is supposed to do.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">It runs the method</p>
+        <p>A structured first pass: clause-by-clause flags, severity on each finding, the questions your lawyer will want answered, and a list of what it deliberately did not opine on.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">What lands</p>
+        <p>A triage brief your own lawyer reviews and signs off on. The handoff to a qualified human is not a caveat. It is the last step of the method.</p>
+      </div>
+      <div class="flow-step">
+        <p class="eyebrow">Drawing on</p>
+        <p>The contract-law library. Drafting and triage only, never legal advice.</p>
+      </div>
+    </div>
 
     <!-- Sub-block B: libraries by domain -->
     <div class="pack-subhead fade-in">
@@ -947,87 +1104,133 @@
       <button class="btn btn--ghost" data-expand-target="libs-grid" aria-pressed="false">Expand all</button>
     </div>
     <p class="text-secondary fade-in" style="margin-top:8px;">Skills are how the work gets done. Libraries are what the work knows: the accumulated frameworks, patterns, and hard-won lessons of each field. A skill knows how to build the deliverable. The library makes sure it is built the way an expert in that field would build it.</p>
+    <p class="text-secondary fade-in" style="margin-top:8px;"><strong>These libraries cite their sources.</strong> The methods inside are named and published, not improvised: MITRE ATLAS and the NIST AI Risk Management Framework in the security libraries, MEDDPICC in the sales library, van Westendorp price-sensitivity methodology in the pricing library. A method with a name can be checked.</p>
 
     <div class="pack-grid" id="libs-grid">
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4B0;</span><h4>Product &amp; growth</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4B0;</span><h4>Product &amp; growth</h4><span class="badge">8 shown</span></div>
           <p class="pack-card__gloss">Prioritization, pricing, discovery, metrics, and go-to-market playbooks.</p>
+          <p class="pack-card__teaser">Pricing frameworks &middot; Go-to-market playbooks &middot; Prioritization methods &middot; +5 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">Pricing and packaging: how to price, how to structure tiers, how to think about value and willingness to pay. So the pricing work is grounded in method, not a number pulled from the air.</span></div>
-          <div class="cat-skill"><span class="cat-skill__desc">Go-to-market and launch: proven launch motions, channel thinking, positioning frameworks. So a launch plan reflects how launches actually win.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Pricing frameworks</span><span class="cat-skill__desc">how to price, tiers, willingness to pay</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Go-to-market playbooks</span><span class="cat-skill__desc">how launches actually win</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Prioritization methods</span><span class="cat-skill__desc">what to build first, defensibly</span></div>
+          <p class="cat-skill-run">Also in this category: Discovery methods &middot; Metrics frameworks &middot; Growth frameworks &middot; SaaS metrics &middot; Conversion frameworks</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4E3;</span><h4>Marketing</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4E3;</span><h4>Marketing</h4><span class="badge">8 shown</span></div>
           <p class="pack-card__gloss">Content, growth, SaaS metrics, and market research.</p>
+          <p class="pack-card__teaser">Content marketing &middot; Market research &middot; Paid media &middot; +5 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">Competitive strategy: how to read a competitor, find the openings, and respond. So the competitive work has teeth.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Content marketing</span><span class="cat-skill__desc">what to publish, where, why</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Market research</span><span class="cat-skill__desc">how to actually read a market</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Paid media</span><span class="cat-skill__desc">spend that can defend itself</span></div>
+          <p class="cat-skill-run">Also in this category: Email marketing &middot; PR &amp; communications &middot; Retention marketing &middot; SEO frameworks &middot; Hook writing</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4CA;</span><h4>Finance</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4CA;</span><h4>Finance</h4><span class="badge">6 shown</span></div>
           <p class="pack-card__gloss">Business-case and financial-modeling frameworks.</p>
+          <p class="pack-card__teaser">Financial modeling &middot; FP&amp;A frameworks &middot; Investor-relations frameworks &middot; +3 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">Finance and modeling: how sound forecasts and models are built, the assumptions that matter, the scenarios worth running. So the structure is honest. The numbers are yours.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Financial modeling</span><span class="cat-skill__desc">honest structure; the numbers are yours</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">FP&amp;A frameworks</span><span class="cat-skill__desc">plans, forecasts, variance</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Investor-relations frameworks</span><span class="cat-skill__desc">what investors ask, how to prepare</span></div>
+          <p class="cat-skill-run">Also in this category: Accounting workflows &middot; Financial governance &middot; Tax planning</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2696;&#xFE0F;</span><h4>Legal &amp; compliance</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x2696;&#xFE0F;</span><h4>Legal &amp; compliance</h4><span class="badge">7 shown</span></div>
           <p class="pack-card__gloss">Contract, privacy, IP, employment, and compliance frameworks.</p>
+          <p class="pack-card__teaser">Contract law &middot; Privacy frameworks &middot; Compliance frameworks &middot; +4 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">The structure and the questions that frame a first-pass review. This is drafting and triage that gets you to a decision faster.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Contract law</span><span class="cat-skill__desc">the structure of a clean first pass</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Privacy frameworks</span><span class="cat-skill__desc">data obligations, mapped</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Compliance frameworks</span><span class="cat-skill__desc">what regulators expect, organized</span></div>
+          <p class="cat-skill-run">Also in this category: Contract templates &middot; Employment law &middot; IP law &middot; NDA playbook</p>
         </div>
         <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> Drafting and triage only, available under supervised terms. Anything carrying real legal weight still goes to your own lawyer, and the workforce is built to hand it over cleanly. This is not legal advice.</div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3A8;</span><h4>Design &amp; research</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3A8;</span><h4>Design &amp; research</h4><span class="badge">7 shown</span></div>
           <p class="pack-card__gloss">Design systems, user-research methods, and accessibility.</p>
+          <p class="pack-card__teaser">Design systems &middot; User research &middot; Accessibility &middot; +4 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">What good interface, brand, and product work looks like, and how it is shaped. So the design output looks like it came from a real studio.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Design systems</span><span class="cat-skill__desc">why the output looks like a studio's</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">User research</span><span class="cat-skill__desc">methods, not guesses</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Accessibility</span><span class="cat-skill__desc">built in, not bolted on</span></div>
+          <p class="cat-skill-run">Also in this category: UI patterns &middot; Visual brand &middot; Research methodology &middot; Design-dev handoff</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3D7;&#xFE0F;</span><h4>Architecture &amp; engineering</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F3D7;&#xFE0F;</span><h4>Architecture &amp; engineering</h4><span class="badge">7 shown</span></div>
           <p class="pack-card__gloss">How systems are designed to actually hold up.</p>
+          <p class="pack-card__teaser">API design &middot; Cloud patterns &middot; Security patterns &middot; +4 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">How systems are designed to actually hold up. So what gets built is built on sound footing.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">API design</span><span class="cat-skill__desc">contracts that hold up</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Cloud patterns</span><span class="cat-skill__desc">built to scale, priced to run</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Security patterns</span><span class="cat-skill__desc">safe by design</span></div>
+          <p class="cat-skill-run">Also in this category: Data modeling &middot; System patterns &middot; Code review &middot; Enterprise systems</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C9;</span><h4>Data &amp; analytics</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F4C9;</span><h4>Data &amp; analytics</h4><span class="badge">6 shown</span></div>
           <p class="pack-card__gloss">Analytics methods, experimentation, and data governance.</p>
+          <p class="pack-card__teaser">Analytics methodology &middot; Experimentation &middot; LLM evaluation &middot; +3 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">How to turn activity into a decision, how to read a test, how to know what the numbers are really saying.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Analytics methodology</span><span class="cat-skill__desc">turn activity into a decision</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Experimentation</span><span class="cat-skill__desc">how to read a test honestly</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">LLM evaluation</span><span class="cat-skill__desc">how to judge AI output itself</span></div>
+          <p class="cat-skill-run">Also in this category: Data governance &middot; Data visualization &amp; BI &middot; Marketing-mix modeling</p>
         </div>
       </details>
 
       <details class="pack-card">
         <summary>
-          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F31F;</span><h4>Sales &amp; customer success</h4></div>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F31F;</span><h4>Sales &amp; customer success</h4><span class="badge">6 shown</span></div>
           <p class="pack-card__gloss">Sales methodology, onboarding, and support operations.</p>
+          <p class="pack-card__teaser">Sales methodology &middot; Customer-success methodology &middot; Customer onboarding &middot; +3 more</p>
         </summary>
         <div class="cat-skill-list">
-          <div class="cat-skill"><span class="cat-skill__desc">How to read account health, spot who is about to leave or buy, and act on it.</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Sales methodology</span><span class="cat-skill__desc">how enterprise deals are actually qualified and won</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Customer-success methodology</span><span class="cat-skill__desc">read account health, act on it</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">Customer onboarding</span><span class="cat-skill__desc">time-to-value, engineered</span></div>
+          <p class="cat-skill-run">Also in this category: Sales operations &middot; Support operations &middot; Proposal &amp; demo</p>
+        </div>
+      </details>
+
+      <details class="pack-card">
+        <summary>
+          <div class="pack-card__head"><span class="pack-card__icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</span><h4>AI governance</h4><span class="badge">6 shown</span></div>
+          <p class="pack-card__gloss">How to run AI safely: the newest body of method, already loaded.</p>
+          <p class="pack-card__teaser">Agentic security &middot; AI-regulation readiness &middot; AI controls matrix &middot; +3 more</p>
+        </summary>
+        <div class="cat-skill-list">
+          <div class="cat-skill"><span class="cat-skill__name">Agentic security</span><span class="cat-skill__desc">how AI agents are attacked, and defended</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">AI-regulation readiness</span><span class="cat-skill__desc">what the new AI laws require</span></div>
+          <div class="cat-skill"><span class="cat-skill__name">AI controls matrix</span><span class="cat-skill__desc">the control set, mapped and auditable</span></div>
+          <p class="cat-skill-run">Also in this category: MCP governance &middot; HR AI governance &middot; Agent supervision</p>
         </div>
       </details>
     </div>
