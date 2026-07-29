@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Citations Ledger — State of WFO/WEM 2026</title>
+<link rel="canonical" href="https://productbeacon.agency/research/state-of-wfo-2026/citations.html">
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+@page {
+    size: A4;
+    margin: 1in 0.85in 0.9in 0.85in;
+    @bottom-center { content: counter(page); font-size: 9pt; color: #6b7280; font-family: 'Manrope', sans-serif; }
+    @top-right { content: "ProductBeacon — State of WFO/WEM 2026"; font-size: 9pt; color: #9ca3af; font-family: 'Manrope', sans-serif; }
+}
+@page :first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Manrope', 'Calibri', -apple-system, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── COVER PAGE (single A4 page; disclosure pushed to footer) ── */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding: 2.4in 0.4in 0 0.4in;
+    margin: 0;
+    position: relative;
+    min-height: 9in;
+}
+.cover .brand-bar-top {
+    display: block;
+    height: 6px;
+    background: #F59E0B;
+    margin: -2.4in -0.85in 0.5in -0.85in;
+}
+.cover .brand-bar-bottom { display: none; }
+.cover .imprint { font-size: 10pt; letter-spacing: 3pt; color: #92400E; font-weight: 700; margin: 1.6in 0 0.4in 0; }
+.cover h1 {
+    color: #92400E;
+    font-size: 28pt;
+    font-weight: 800;
+    margin: 0 0 0.55in 0;
+    border: none;
+    line-height: 1.2;
+    padding: 0;
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+.cover .author-block { font-size: 11pt; color: #4a4a4a; margin-bottom: 0.15in; }
+.cover .author-block strong { display: block; font-size: 13pt; color: #1a1a1a; margin-bottom: 4pt; }
+.cover .date { font-size: 10pt; color: #6b7280; margin-top: 0.4in; }
+
+/* ── BACK-MATTER DISCLOSURES (end of document) ── */
+.back-disclosures { page-break-before: always; padding-top: 6pt; }
+.back-disclosures h2 { color: #92400E; font-size: 16pt; font-weight: 800; border-bottom: 2px solid #F59E0B; padding-bottom: 6pt; margin: 0 0 14pt 0; letter-spacing: 0.5pt; }
+.back-disclosures p { font-size: 9.5pt; line-height: 1.6; color: #374151; margin: 0 0 11pt 0; text-align: justify; font-style: italic; }
+.back-disclosures p strong { color: #92400E; font-style: normal; font-weight: 700; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; font-size: 10pt; }
+
+/* ── HEADINGS ── */
+h1 { color: #92400E; font-size: 22pt; font-weight: 800; border-bottom: 3px solid #F59E0B; padding-bottom: 6pt; margin-top: 0; margin-bottom: 16pt; page-break-before: always; page-break-after: avoid; }
+h2 { color: #1a1a1a; font-size: 16pt; font-weight: 700; margin-top: 24pt; margin-bottom: 10pt; border-bottom: 1px solid #F59E0B; padding-bottom: 4pt; page-break-after: avoid; }
+h3 { color: #92400E; font-size: 12.5pt; font-weight: 700; margin-top: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
+h4 { color: #374151; font-size: 11pt; font-weight: 700; margin-top: 12pt; margin-bottom: 4pt; page-break-after: avoid; }
+
+/* ── PROSE ── */
+p { margin: 0 0 9pt 0; text-align: justify; orphans: 3; widows: 3; }
+strong { color: #111827; }
+em { color: #374151; }
+a { color: #92400E; text-decoration: none; }
+ul, ol { margin: 6pt 0 10pt 22pt; padding: 0; }
+li { margin-bottom: 4pt; }
+hr { border: none; border-top: 1px solid #e5e7eb; margin: 16pt 0; }
+
+/* ── BLOCKQUOTES (Pattern Claim callouts) ── */
+blockquote { border-left: 4px solid #F59E0B; background: #FFFBEB; padding: 12pt 16pt; margin: 14pt 0; page-break-inside: avoid; border-radius: 0 4px 4px 0; }
+blockquote h3 { color: #92400E; margin-top: 0; font-size: 12pt; }
+blockquote p { margin-bottom: 7pt; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong { color: #92400E; }
+
+/* ── TABLES ── */
+table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+thead { background: #FEF3C7; }
+th { color: #92400E; padding: 7pt 9pt; text-align: left; border-bottom: 2px solid #F59E0B; font-weight: 700; vertical-align: top; }
+td { padding: 6pt 9pt; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.45; }
+tbody tr:nth-child(even) td { background: #fafafa; }
+
+/* ── IMAGES ── */
+img { max-width: 100%; display: block; margin: 14pt auto; page-break-inside: avoid; }
+figure { margin: 14pt 0; page-break-inside: avoid; }
+figcaption { font-size: 9pt; color: #6b7280; text-align: center; margin-top: 4pt; font-style: italic; }
+
+/* ── CODE ── */
+code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; background: #f3f4f6; padding: 1pt 4pt; border-radius: 3px; color: #92400E; }
+pre { background: #f3f4f6; padding: 10pt; border-radius: 4px; font-size: 9pt; overflow-x: auto; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+
+/* ── DISCLAIMER & DISCLOSURE ── */
+.disclosure { background: #FFFBEB; border: 1px solid #FBBF24; padding: 10pt 14pt; font-size: 9.5pt; color: #92400E; margin: 14pt 0; font-style: italic; border-radius: 4px; }
+.cover-disclosure { margin: 40pt auto 0; max-width: 80%; font-size: 8.5pt; line-height: 1.5; color: #4b5563; font-style: italic; text-align: left; }
+.cover-disclosure strong { color: #92400E; font-style: normal; }
+.cover-disclosure a { color: #92400E; }
+
+/* ── FOOTNOTES (markdown extension renders these as a section) ── */
+.footnote, [id^="fn-"] { font-size: 9pt; color: #4b5563; }
+.footnote ol, ol.footnote { padding-left: 18pt; }
+hr.footnote { border-top: 1px solid #e5e7eb; margin-top: 24pt; }
+sup, .footnote-ref { font-size: 7.5pt; vertical-align: super; }
+sup a { color: #92400E; font-weight: 700; }
+
+/* ── PRINT TWEAKS ── */
+@media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+
+<style>
+/* ===== WFO Path-A magazine polish (WFO-scoped; injected post-render) ===== */
+:root { --pb-amber:#F59E0B; --pb-amber-dark:#B45309; --pb-ink:#1a1a1a; --pb-slate:#4b5563; }
+
+/* --- inline diagram framing (folds in the prior FIG_CSS + adds a panel) --- */
+.inline-diagram { margin: 26pt 0; page-break-inside: avoid; text-align: center;
+  border: 1px solid #e5e7eb; border-radius: 8px; padding: 14pt 14pt 10pt;
+  background: #fcfcfb; }
+.inline-diagram svg { width: 100%; height: auto; display: block; margin: 0 auto;
+  border-radius: 4px; }
+
+/* --- heading hierarchy: make the ## N.x market sections visually distinct --- */
+h2 { position: relative; margin-top: 30pt !important; padding-top: 12pt;
+  border-top: 1px solid #ececec; border-bottom: 1px solid var(--pb-amber) !important;
+  letter-spacing: 0.1pt; }
+h2::before { content: ""; display: block; position: absolute; top: -1px; left: 0;
+  width: 42px; height: 3px; background: var(--pb-amber); }
+h3 { color: var(--pb-amber-dark) !important; letter-spacing: 0.1pt; }
+h4 { letter-spacing: 0.2pt; }
+
+/* --- Pattern-Claim blockquote callouts: richer amber treatment --- */
+blockquote { border-left: 5px solid var(--pb-amber) !important;
+  background: #fffdf7 !important; box-shadow: inset 0 0 0 1px #f6ead0; }
+
+/* --- lead-in / drop-cap on the opening body paragraph --- */
+p.wfo-lead { font-size: 11.5pt; color: #222; }
+p.wfo-lead::first-letter { float: left; font-size: 46pt; line-height: 0.82;
+  font-weight: 800; color: var(--pb-amber-dark); margin: 4pt 8pt 0 0; }
+
+/* --- pull-quote aside (duplicates an existing safe framing line) --- */
+.wfo-pullquote { position: relative; margin: 20pt 0 20pt; padding: 6pt 4pt 6pt 22pt;
+  border-left: 3px solid var(--pb-amber); color: var(--pb-amber-dark);
+  font-size: 15pt; line-height: 1.35; font-weight: 700; font-style: italic;
+  page-break-inside: avoid; }
+.wfo-pullquote::before { content: "\201C"; position: absolute; left: 2pt; top: -6pt;
+  font-size: 30pt; color: var(--pb-amber); font-style: normal; opacity: 0.5; }
+
+/* --- figure caption styling (if any present) --- */
+figcaption { font-size: 9pt; color: #6b7280; font-style: italic; }
+
+/* ===== SCREEN-ONLY: magazine reading page (does NOT touch the A4 PDF) ===== */
+@media screen {
+  html { scrollbar-width: thin; }
+  body { background: #f4f2ee; color: #23201c; font-size: 17px; line-height: 1.75;
+    padding: 0 0 64px 0; }
+  /* wrap the flowing document in a centered reading card via the cover + siblings:
+     constrain the effective measure by padding the body and boxing content width */
+  body > *:not(.wfo-runhead):not(.cover) { max-width: 760px; margin-left: auto;
+    margin-right: auto; padding-left: 22px; padding-right: 22px; }
+  .cover { max-width: 900px; margin: 0 auto 10px; background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding-top: 64px !important;
+    min-height: 0 !important; }
+  h1, h2, h3, h4, p, ul, ol, table, blockquote, .inline-diagram, .wfo-pullquote,
+  .back-disclosures { background: transparent; }
+  p { font-size: 17px; line-height: 1.78; text-align: left; }
+  h2 { font-size: 21pt; }
+  .inline-diagram:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+  .back-disclosures { border-top: 2px solid var(--pb-amber); margin-top: 40px;
+    padding-top: 18px; }
+  /* running header */
+  .wfo-runhead { position: sticky; top: 0; z-index: 50; display: flex;
+    align-items: center; gap: 12px; padding: 9px 20px;
+    background: rgba(26,23,20,0.96); color: #f8fafc;
+    font-family: 'Manrope', sans-serif; font-size: 12.5px; letter-spacing: 0.3px;
+    border-bottom: 2px solid var(--pb-amber); backdrop-filter: blur(6px); }
+  .wfo-runhead .rh-dot { width: 8px; height: 8px; border-radius: 50%;
+    background: var(--pb-amber); flex: 0 0 auto; }
+  .wfo-runhead .rh-title { font-weight: 800; }
+  .wfo-runhead .rh-sep { color: #94a3b8; }
+  .wfo-runhead .rh-chapter { color: #fcd9a0; font-weight: 600; }
+}
+
+/* ===== PRINT: keep the base A4 document; hide screen-only furniture ===== */
+@media print {
+  .wfo-runhead { display: none !important; }
+  .inline-diagram { box-shadow: none; }
+}
+</style>
+</head>
+<body>
+<div class="wfo-runhead"><span class="rh-dot"></span><span class="rh-title">State of WEM 2026</span><span class="rh-sep">&middot;</span><span class="rh-chapter">Citations Ledger</span></div>
+
+<section class="cover">
+<div class="brand-bar-top"></div>
+<div class="imprint">PRODUCTBEACON</div>
+<h1>Citations Ledger — State of WFO/WEM 2026</h1>
+<div class="author-block">
+<strong>Yohay Etsion</strong>
+Managing Director, ProductBeacon
+</div>
+<div class="date">2026-07-20</div>
+<div class="cover-disclosure"><strong>Disclosure:</strong> Consolidated dated-URL ledger across 6 chapters + research files. 223 unique sources. Link-audit 2026-07-21: <strong>0 dead (404/410)</strong>, 1 transient-5xx (live page, flaky server), 43 bot-blocked (acceptable), 163 OK, 16 timeout. SOP-1 LA-1 gate (zero dead) = PASS.</div>
+</section>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>URL</th>
+<th>Cited in</th>
+<th>Live</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://callminer.com/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://callminer.com/news/press-releases/callminer-secures-75m-investment-from-goldman-sachs</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://capacity.com/blog/ai-agent-assist-software/</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://capacity.com/blog/real-time-agent-assist-for-contact-centers/</td>
+<td>agent-assist, performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://centrical.com/platform/gamification/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://centrical.com/platform/performance-management/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://centrical.com/resources/contact-center-performance-management/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://centrical.com/resources/gamification-software-for-employee-engagement/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>9</td>
+<td>https://cresta.com/agent-assist</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>10</td>
+<td>https://cresta.com/ai-platform</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>11</td>
+<td>https://cresta.com/conversation-intelligence</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>12</td>
+<td>https://cresta.com/press/cresta-closes-125m-series-d-to-accelerate-adoption-of-human-centric-ai-in-the-contact-center</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>13</td>
+<td>https://cresta.com/press/cresta-launches-intelligent-omnichannel-ai-agent-delivering-seamless-customer-experience-across-voice-and-digital-channels</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>14</td>
+<td>https://cxfoundation.com/blog/agent-assist</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>15</td>
+<td>https://cxfoundation.com/blog/contact-center-workforce-management-software-providers</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>16</td>
+<td>https://decagon.ai/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>17</td>
+<td>https://decagon.ai/glossary/what-is-resolution-based-pricing</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>18</td>
+<td>https://decagon.ai/resources/series-c-announcement</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>19</td>
+<td>https://deepgram.com/learn/call-center-compliance-regulations-2026</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>20</td>
+<td>https://entrepreneurquarterly.com/balto-software-raises-3-million-in-seed-funding/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>21</td>
+<td>https://fin.ai/help/en/articles/10772642-fin-ai-agent-resolutions</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>22</td>
+<td>https://fin.ai/learn/ai-customer-service-agent-pricing-comparison</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>23</td>
+<td>https://fpf.org/blog/red-lines-under-eu-ai-act-unpacking-the-prohibition-of-emotion-recognition-in-the-workplace-and-education-institutions/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>24</td>
+<td>https://help.genesys.cloud/articles/about-quality-management/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>25</td>
+<td>https://help.webex.com/en-us/article/l5eu0c/Improve-agent-wellbeing-and-performance-with-burnout-detection-and-wellnessbreaks</td>
+<td>performance-engagement</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>26</td>
+<td>https://intradiem.com/resources/blog/the-cost-of-attrition-in-contact-centers/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>27</td>
+<td>https://investors.five9.com/news-releases/news-release-details/five9-launches-new-genius-ai-innovations-accelerate-agentic-cx/</td>
+<td>agent-assist, quality-analytics</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>28</td>
+<td>https://investors.sprinklr.com/news/press-releases/detail/252/sprinklr-unveils-next-wave-of-ainative-customer</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>29</td>
+<td>https://market.us/report/real-time-ai-agent-assist-market/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>30</td>
+<td>https://menlovc.com/perspective/welcome-to-the-ai-powered-era-for-contact-centers/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>https://news.bloomberglaw.com/business-and-practice/three-firms-aid-1-billion-aspect-noble-contact-center-merger</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>32</td>
+<td>https://openai.com/index/klarna/</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>33</td>
+<td>https://ottoqa.com/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>34</td>
+<td>https://sierra.ai/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>35</td>
+<td>https://sierra.ai/blog/outcome-based-pricing-for-ai-agents</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>36</td>
+<td>https://siliconangle.com/2024/10/15/dialpad-expands-workforce-management-capabilities-surfboard-acquisition/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>37</td>
+<td>https://spinify.com/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>38</td>
+<td>https://sqmagazine.co.uk/ai-agent-autonomy-statistics/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>39</td>
+<td>https://stateofsurveillance.org/news/eu-ai-act-august-2026-biometric-surveillance-explainer/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>40</td>
+<td>https://symtrain.ai/contact-center-turnover-costs/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>41</td>
+<td>https://techcrunch.com/2018/07/23/cogito-scores-37-million-series-c-as-customer-service-sentiment-analysis-biz-grows/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>42</td>
+<td>https://techcrunch.com/2023/06/27/zenarate-an-ai-powered-agent-coaching-platform-raises-15m/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>43</td>
+<td>https://techcrunch.com/2025/09/04/bret-taylors-sierra-raises-350m-at-a-10b-valuation/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>44</td>
+<td>https://techcrunch.com/2025/11/11/wonderful-raised-100m-series-a-to-put-ai-agents-on-the-front-lines-of-customer-service/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>45</td>
+<td>https://techcrunch.com/2026/01/15/parloa-triples-its-valuation-in-8-months-to-3b-with-350m-raise/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>46</td>
+<td>https://techcrunch.com/2026/03/12/wonderful-raises-150m-series-b-at-2b-valuation/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>47</td>
+<td>https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>48</td>
+<td>https://techrseries.com/hrtechnology/assembled-raises-51-million-led-by-nea-to-accelerate-workforce-management-platform/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>49</td>
+<td>https://thelevel.ai/agents/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>50</td>
+<td>https://thelevel.ai/blog/conversational-intelligence-software/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>51</td>
+<td>https://thelevel.ai/blog/levelai-series-c-funding/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>52</td>
+<td>https://tracxn.com/d/companies/echoai/__2MHPvc_Jvbm6zvMoRgJ6hczOleG6OzUqKQY_ug_xDr8</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>53</td>
+<td>https://tracxn.com/d/companies/invision-wfm/__MRCZOk5B_R1Y3JJSL_BDk3PTAqTfVRZ7P0I8yPZ4XDg</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>54</td>
+<td>https://tracxn.com/d/companies/spinify/__1BxPLzgz80oG&ndash;PYBEqetZERrNOVq_Ne4VaLZpeinCU</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>55</td>
+<td>https://tracxn.com/d/companies/the-level/__9QQyz9_m8Lhfoj2fKfCUEf2bhK0LQuvR8Is_VH6_Npo</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>56</td>
+<td>https://uktech.news/news/uk-ai-employee-engagement-company-centrical-funding-20210312</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>57</td>
+<td>https://venturebeat.com/2018/07/23/cogito-raises-37-million-to-analyze-call-center-data-with-ai/</td>
+<td>agent-assist, performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>58</td>
+<td>https://venturebeat.com/2021/03/10/employee-engagement-startup-centrical-raises-32m/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>59</td>
+<td>https://venturebeat.com/ai/callminer-raises-75-million-to-derive-insights-from-phone-calls-with-ai</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>60</td>
+<td>https://www.adamsstreetpartners.com/insights/why-we-invested-in-level-ai/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>61</td>
+<td>https://www.amplifai.com/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>62</td>
+<td>https://www.amplifai.com/blog/call-center-quality-assurance-software</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>63</td>
+<td>https://www.amplifai.com/blog/call-center-turnover</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>64</td>
+<td>https://www.amplifai.com/blog/contact-center-ai-software-platforms</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>65</td>
+<td>https://www.amplifai.com/blog/gamification-statistics</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>66</td>
+<td>https://www.amplifai.com/solutions/coaching</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>67</td>
+<td>https://www.andrewreise.com/the-complete-guide-to-ai-powered-coaching-for-contact-centers</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>68</td>
+<td>https://www.aspect.com/resources/alvarias-workforce-enterprise-suite-becomes-aspect</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>69</td>
+<td>https://www.assembled.com/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>70</td>
+<td>https://www.assembled.com/blog/assembled-brings-ai-powered-workforce-management-to-genesys-cloud</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>71</td>
+<td>https://www.assemblyai.com/blog/best-agent-assist-software</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>72</td>
+<td>https://www.balto.ai/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>73</td>
+<td>https://www.balto.ai/blog/balto-raises-37-5m-pushes-to-close-execution-gap-for-contact-centers/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>74</td>
+<td>https://www.balto.ai/blog/best-contact-center-ai-automation-software/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>75</td>
+<td>https://www.balto.ai/competitors/observe-ai-alternatives/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>76</td>
+<td>https://www.bloomberg.com/news/articles/2024-10-02/ai-startup-hits-500-million-valuation-to-rival-contact-centers</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>77</td>
+<td>https://www.bryq.com/blog/eu-ai-act-2026</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>78</td>
+<td>https://www.businessresearchinsights.com/market-reports/gig-economy-platforms-market-106156</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>79</td>
+<td>https://www.businesswire.com/news/home/20180724005244/en/Cogito-Raises-37M-in-Growth-Equity-Funding</td>
+<td>agent-assist</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>80</td>
+<td>https://www.businesswire.com/news/home/20230222006068/en/Level-AI-Introduces-the-Future-of-Customer-Service-with-First-of-its-Kind-Generative-AI-Solution-AgentGPT</td>
+<td>agent-assist</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>81</td>
+<td>https://www.businesswire.com/news/home/20241029035498/en/Salesforces-Agentforce-Is-Here-Trusted-Autonomous-AI-Agents-to-Scale-Your-Workforce</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>82</td>
+<td>https://www.businesswire.com/news/home/20241205133623/en/Uniphore-Acquiring-ActionIQ-and-Infoworks-to-Deliver-the-Industrys-First-Zero-Data-AI-Cloud</td>
+<td>agent-assist</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>83</td>
+<td>https://www.businesswire.com/news/home/20250506194825/en/Parloa-Raises-$120M-Series-C-to-Reinvent-Customer-Service-with-Agentic-AI</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>84</td>
+<td>https://www.businesswire.com/news/home/20250610324767/en/Five9-Launches-Agentic-CX-with-AI-Agents-that-can-Reason-Decide-and-Take-Action</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>85</td>
+<td>https://www.businesswire.com/news/home/20250617282648/en/NiCE-Launches-CXone-Mpower-Agents-Enterprise-Grade-Agentic-AI-Agents-Built-for-CX-to-Deliver-Automated-Fulfillment</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>86</td>
+<td>https://www.businesswire.com/news/home/20250623894798/en/Decagon-Raises-$131M-at-$1.5B-Valuation-to-Deliver-Concierge-Customer-Experience-with-AI-Agents</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>87</td>
+<td>https://www.businesswire.com/news/home/20250909495245/en/Genesys-Launches-AI-Agents-with-Greater-Autonomy-to-Drive-Enterprise-Wide-Customer-Experience-Orchestration</td>
+<td>autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>88</td>
+<td>https://www.businesswire.com/news/home/20251118106683/en/Aspect-Expands-Cloud-Workforce-Experience-and-Developer-Tools-to-New-Regions-and-Introduces-AI-Powered-Forecasting</td>
+<td>wfm</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>89</td>
+<td>https://www.businesswire.com/news/home/20260407515870/en/Sprinklr-Unveils-Next-Wave-of-AINative-Customer-Experience-Innovation-with-Spring-26-26.4-Release</td>
+<td>agent-assist, autonomous-cx</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>90</td>
+<td>https://www.businesswire.com/news/home/20260505830567/en/</td>
+<td>quality-analytics</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>91</td>
+<td>https://www.businesswire.com/news/home/20260526581014/en/CallMiner-Named-a-Leader-in-the-SPARK-Matrix-Conversational-Intelligence-2026-Report</td>
+<td>quality-analytics</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>92</td>
+<td>https://www.calabrio.com/blog/automated-quality-management/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>93</td>
+<td>https://www.calabrio.com/employee-engagement-platform/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>94</td>
+<td>https://www.calabrio.com/press/thoma-bravo-acquires-verint/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>95</td>
+<td>https://www.calabrio.com/products/workforce-management/</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>96</td>
+<td>https://www.capterra.com/p/155500/Spinify/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>97</td>
+<td>https://www.cbinsights.com/company/ottoqa</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>98</td>
+<td>https://www.channelfutures.com/mergers-acquisitions/in-major-ccaas-play-nice-to-acquire-livevox-for-350-million</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>99</td>
+<td>https://www.cmswire.com/contact-center/cresta-launches-knowledge-agent-for-contact-centers/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>100</td>
+<td>https://www.cmswire.com/contact-center/decagon-triples-valuation-to-45b-with-250m-series-d/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>101</td>
+<td>https://www.cmswire.com/customer-experience/sprinklr-ships-spring-26-update-with-ai-agents-copilots-and-governance-tools-across-cx-suite/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>102</td>
+<td>https://www.cmswire.com/the-wire/cogito-secures-new-funding-to-empower-better-agent-and-customer-experiences/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>103</td>
+<td>https://www.constellationr.com/insights/news/salesforce-revamps-agentforce-pricing-flex-credits-what-you-need-know</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>104</td>
+<td>https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>105</td>
+<td>https://www.cxtoday.com/contact-center/verint-acquires-cogito-develops-a-bot-that-scores-live-customer-conversations/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>106</td>
+<td>https://www.cxtoday.com/crm/salesforce-resolves-85-of-its-customer-queries-with-agentforce/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>107</td>
+<td>https://www.cxtoday.com/workforce-engagement-management/playvox-confirms-nice-takeover-with-a-name-change/</td>
+<td>performance-engagement, quality-analytics, wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>108</td>
+<td>https://www.datainsightsmarket.com/reports/call-center-gamification-software-1433914</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>109</td>
+<td>https://www.digitalapplied.com/blog/ai-customer-support-statistics-2026-adoption-roi-data</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>110</td>
+<td>https://www.dmgconsult.com/2025-contact-center-goals-and-investment-priority-trends-embracing-ai-for-an-enhanced-cx-and-ex/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>111</td>
+<td>https://www.dmgconsult.com/dmg-consulting-releases-workforce-management-in-the-age-of-ai-2026-cx-market-report/</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>112</td>
+<td>https://www.dmgconsult.com/reports/</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>113</td>
+<td>https://www.dmgconsult.com/reports/2025-2026-conversation-analytics-for-the-enterprise/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>114</td>
+<td>https://www.eesel.ai/blog/decagon-pricing</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>115</td>
+<td>https://www.five9.com/blog/want-increase-agent-productivity-start-automated-call-summarization</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>116</td>
+<td>https://www.five9.com/products/capabilities/agent-assist</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>117</td>
+<td>https://www.five9.com/products/capabilities/ai-agents</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>118</td>
+<td>https://www.fortunebusinessinsights.com/call-center-ai-market-109249</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>119</td>
+<td>https://www.fortunebusinessinsights.com/employee-engagement-software-market-107130</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>120</td>
+<td>https://www.fortunebusinessinsights.com/industry-reports/contact-center-software-market-100840</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>121</td>
+<td>https://www.g2.com/products/salesforce-agentforce/pricing</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>122</td>
+<td>https://www.gartner.com/en/articles/customer-service-ai</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>123</td>
+<td>https://www.gartner.com/en/articles/hype-cycle-for-agentic-ai</td>
+<td>agent-assist, autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>124</td>
+<td>https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290</td>
+<td>agent-assist, autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>125</td>
+<td>https://www.genesys.com/capabilities/agent-assist</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>126</td>
+<td>https://www.genesys.com/capabilities/copilots</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>127</td>
+<td>https://www.genesys.com/capabilities/speech-and-text-analytics</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>128</td>
+<td>https://www.genesys.com/capabilities/virtual-agents</td>
+<td>agent-assist, autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>129</td>
+<td>https://www.genesys.com/capabilities/workforce-scheduling-forecasting</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>130</td>
+<td>https://www.genesys.com/company/newsroom/announcements/genesys-announces-1-5-billion-investment-by-salesforce-and-servicenow</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>131</td>
+<td>https://www.genesys.com/genesys-cloud</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>132</td>
+<td>https://www.genesys.com/workforce-management-software</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>133</td>
+<td>https://www.globenewswire.com/news-release/2024/03/20/2849474/0/en/Speech-Analytics-Market-worth-7-3-billion-by-2029-growing-at-a-CAGR-of-17-5-Report-by-MarketsandMarkets.html</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>134</td>
+<td>https://www.globenewswire.com/news-release/2024/08/05/2924276/0/en/Global-Speech-Analytics-Market-Size-is-Worth-US-11-452-66-million-by-2032-at-a-CAGR-of-17-1-from-2024-to-2032-Polaris-Market-Research-PMR.html</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>135</td>
+<td>https://www.globenewswire.com/news-release/2024/10/02/2957176/0/en/Crescendo-Closes-50-million-in-Total-Financing-with-Latest-Round-Led-by-General-Catalyst.html</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>136</td>
+<td>https://www.globenewswire.com/news-release/2025/03/26/3049671/0/en/Observe-AI-Introduces-VoiceAI-Agents-to-Revolutionize-Customer-Experience-with-a-Unified-AI-Platform.html</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>137</td>
+<td>https://www.globenewswire.com/news-release/2026/02/20/3241974/0/en/Workforce-Management-Market-Surges-to-13-03-billion-by-2030-CAGR-9-2.html</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>138</td>
+<td>https://www.gong.io/blog/what-is-conversation-intelligence</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>139</td>
+<td>https://www.grandviewresearch.com/industry-analysis/call-center-artificial-intelligence-market-report</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>140</td>
+<td>https://www.grandviewresearch.com/industry-analysis/conversational-ai-market-report</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>141</td>
+<td>https://www.grandviewresearch.com/industry-analysis/workforce-management-market</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>142</td>
+<td>https://www.grandviewresearch.com/press-release/global-speech-analytics-market</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>143</td>
+<td>https://www.insigniaresource.com/research/call-center-turnover-rates/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>144</td>
+<td>https://www.jitendrazaa.com/blog/salesforce/salesforce-agentforce-credits-cost-model-complete-guide-2026/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>145</td>
+<td>https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>146</td>
+<td>https://www.lawandtheworkplace.com/2026/05/major-developments-put-colorados-ai-law-on-ice-ahead-of-implementation/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>147</td>
+<td>https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>148</td>
+<td>https://www.linkedin.com/company/loris-ai/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>149</td>
+<td>https://www.littler.com/news-analysis/asap/colorado-amends-its-artificial-intelligence-law-substantially-reducing</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>150</td>
+<td>https://www.lorikeetcx.ai/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>151</td>
+<td>https://www.marketsandmarkets.com/Market-Reports/agentic-ai-market-208190735.html</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>152</td>
+<td>https://www.marketsandmarkets.com/PressReleases/ai-for-customer-service.asp</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>153</td>
+<td>https://www.mediapost.com/publications/article/363143/aspect-software-and-noble-systems-merge-to-form-al.html</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>154</td>
+<td>https://www.mordorintelligence.com/industry-reports/agentic-ai-market</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>155</td>
+<td>https://www.mordorintelligence.com/industry-reports/gamification-market</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>156</td>
+<td>https://www.mordorintelligence.com/industry-reports/global-speech-analytics-market-industry</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>157</td>
+<td>https://www.mordorintelligence.com/industry-reports/workforce-management-software-market-industry</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>158</td>
+<td>https://www.mostlymetrics.com/p/how-intercom-reaccelerated-growth-with-outcome-based-pricing</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>159</td>
+<td>https://www.nandann.com/blog/eu-ai-act-autonomous-agent-compliance</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>160</td>
+<td>https://www.nice.com/agentic-ai/agentic-ai-tools</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>161</td>
+<td>https://www.nice.com/announcements/2025-customer-contact-center-award-nice-cxone-mpower-autopilot-powers-smart-self-service-cx</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>162</td>
+<td>https://www.nice.com/platform/enlighten-ai</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>163</td>
+<td>https://www.nice.com/press-releases/nice-closes-acquisition-of-cognigy-transforming-customer-experience-with-best-in-class-data-driven-cx-ai-platform</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>164</td>
+<td>https://www.nice.com/press-releases/nice-to-acquire-cognigy-advancing-the-leading-cx-ai-platform-to-accelerate-ai-first-customer-experience</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>165</td>
+<td>https://www.nice.com/products/copilot-for-agents</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>166</td>
+<td>https://www.nice.com/products/enlighten-copilot</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>167</td>
+<td>https://www.nice.com/products/interaction-analytics</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>168</td>
+<td>https://www.nice.com/products/workforce-empowerment</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>169</td>
+<td>https://www.nice.com/products/workforce-management</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>170</td>
+<td>https://www.nice.com/products/workforce-management/nice-iex-wfm</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>171</td>
+<td>https://www.nice.com/products/workforce-management/nice-iex-wfm/planning</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>172</td>
+<td>https://www.nice.com/resources/cxone-mpower-performance-management-native</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>173</td>
+<td>https://www.observe.ai/post-interaction/auto-qa</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>174</td>
+<td>https://www.observe.ai/press-releases/observe-ai-launches-auto-qa-the-industrys-first-adaptive-automation-solution-for-boosting-agent-performance-in-contact-centers</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>175</td>
+<td>https://www.observe.ai/press-releases/observe-ai-raises-125m-series-c-to-usher-in-ai-empowered-era-for-contact-centers</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>176</td>
+<td>https://www.openpr.com/news/4496954/call-center-ai-market-is-expected-to-hit-us-12-7-billion-by-2033</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>177</td>
+<td>https://www.parloa.com/parloa-in-the-press/parloa-raises-120m-series-c-to-reinvent-customer-service-with-agentic-ai/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>178</td>
+<td>https://www.parloa.com/parloa-in-the-press/parloa-valued-at-3-billion-with-350m-series-d/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>179</td>
+<td>https://www.peopleware.com/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>180</td>
+<td>https://www.precedenceresearch.com/ai-agents-market</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>181</td>
+<td>https://www.precedenceresearch.com/call-center-ai-market</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>182</td>
+<td>https://www.prnewswire.com/il/news-releases/employee-centric-success-platform-centrical-closes-32-million-funding-round-led-by-intel-capital-and-jvp-301244427.html</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>183</td>
+<td>https://www.prnewswire.com/news-releases/assembled-raises-51-million-led-by-nea-to-accelerate-workforce-management-platform-301555838.html</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>184</td>
+<td>https://www.prnewswire.com/news-releases/balto-raises-37-5m-pushes-to-close-execution-gap-for-contact-centers-301358544.html</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>185</td>
+<td>https://www.prnewswire.com/news-releases/conversation-intelligence-leader-balto-secures-10-million-series-a-funding-301152942.html</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>186</td>
+<td>https://www.prnewswire.com/news-releases/lorikeet-raises-35-million-usd-series-a-to-deliver-ai-powered-universal-customer-concierges-able-to-solve-real-challenges-not-just-chatbots-302522821.html</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>187</td>
+<td>https://www.prnewswire.com/news-releases/playvox-caps-record-breaking-year-with-acquisition-of-agyle-time-workforce-management-and-additional-25-million-funding-raise-301215955.html</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>188</td>
+<td>https://www.prnewswire.com/news-releases/thoma-bravo-completes-acquisition-of-verint-a-leader-in-ai-driven-customer-experience-automation-302636053.html</td>
+<td>performance-engagement, quality-analytics, wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>189</td>
+<td>https://www.qia.qa/en/Newsroom/Pages/QIA-co-leads-Series-D-funding-round-for-Cresta,-the-generative-AI-platform-for-contact-centers-.aspx</td>
+<td>quality-analytics</td>
+<td>timeout</td>
+</tr>
+<tr>
+<td>190</td>
+<td>https://www.researchandmarkets.com/report/call-center-ai</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>191</td>
+<td>https://www.researchandmarkets.com/reports/4904698/employee-engagement-software-market-global</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>192</td>
+<td>https://www.researchandmarkets.com/reports/6084049/speech-analytics-market-global-forecast</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>193</td>
+<td>https://www.saksoft.com/post/the-evolution-of-salesforce-agentforce-pricing-what-changed-and-what-it-means-for-you/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>194</td>
+<td>https://www.salesforce.com/agentforce/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>195</td>
+<td>https://www.salesforce.com/agentforce/pricing/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>196</td>
+<td>https://www.salesforce.com/news/stories/agentforce-customer-support-lessons-learned/</td>
+<td>autonomous-cx</td>
+<td>transient(ok)</td>
+</tr>
+<tr>
+<td>197</td>
+<td>https://www.sec.gov/Archives/edgar/data/0001003935/000100393506000020/sixk7june2006.htm</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>198</td>
+<td>https://www.sec.gov/Archives/edgar/data/0001003935/000117891325002467/exhibit_99-1.htm</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>199</td>
+<td>https://www.sec.gov/Archives/edgar/data/0001166388/000116638824000176/vrnt-20241031.htm</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>200</td>
+<td>https://www.sec.gov/Archives/edgar/data/0001288847/000128884725000227/a093025ex991earningsrelease.htm</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>201</td>
+<td>https://www.securityworldmarket.com/int/Newsarchive/nice-acquires-iex-corporation-and-performix-technologies</td>
+<td>wfm</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>202</td>
+<td>https://www.skyquestt.com/report/speech-analytics-market</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>203</td>
+<td>https://www.sprinklr.com/newsroom/sprinklr-introduces-the-next-generation-of-unified-customer-service/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>204</td>
+<td>https://www.sprinklr.com/products/customer-service/agent-copilot/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>205</td>
+<td>https://www.sprinklr.com/products/customer-service/quality-management/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>206</td>
+<td>https://www.superbcrew.com/uniphore-closes-260-million-series-f-funding-round/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>207</td>
+<td>https://www.techpolicy.press/the-eu-ai-act-is-not-ready-for-agents/</td>
+<td>autonomous-cx</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>208</td>
+<td>https://www.thomabravo.com/press-releases/thoma-bravo-completes-acquisition-of-verint-a-leader-in-ai-driven-customer-experience-automation</td>
+<td>performance-engagement, quality-analytics, wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>209</td>
+<td>https://www.tredence.com/blog/eu-ai-act-compliance-guide-us-companies</td>
+<td>autonomous-cx</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>210</td>
+<td>https://www.uctoday.com/workplace-management/eu-ai-act-shock-emotion-recognition-is-now-illegal-at-work-so-why-is-your-vendor-still-selling-it/</td>
+<td>agent-assist</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>211</td>
+<td>https://www.uniphore.com/press-releases/uniphore-raises-400-million-to-support-explosive-growth-and-global-demand-for-automating-conversations-across-the-enterprise/</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>212</td>
+<td>https://www.uniphore.com/products/customer-service-ai/real-time-guidance-agent/</td>
+<td>agent-assist</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>213</td>
+<td>https://www.uniphore.com/resources/analyst-reports/the-forrester-wave-conversational-ai-platforms-for-customer-service-q2-2026/</td>
+<td>quality-analytics</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>214</td>
+<td>https://www.verifiedmarketresearch.com/product/on-demand-staffing-platform-market/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>215</td>
+<td>https://www.verint.com/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>216</td>
+<td>https://www.verint.com/automated-quality-management/</td>
+<td>quality-analytics</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>217</td>
+<td>https://www.verint.com/cogito/</td>
+<td>agent-assist, performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>218</td>
+<td>https://www.verint.com/press-room/2025/verint-agrees-to-be-acquired-by-thoma-bravo-for-2-billion/</td>
+<td>performance-engagement, quality-analytics, wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>219</td>
+<td>https://www.verint.com/workforce-management-software-wfm-solutions/forecasting-and-scheduling/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>220</td>
+<td>https://www.vonage.com/resources/articles/call-center-agent-attrition/</td>
+<td>performance-engagement</td>
+<td>blocked(ok)</td>
+</tr>
+<tr>
+<td>221</td>
+<td>https://www.workforcemanagementtoday.com/articles/448625-nice-ranked-wfm-market-share-leader-dmg-consulting.htm</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>222</td>
+<td>https://www.zenarate.com/</td>
+<td>performance-engagement</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>223</td>
+<td>https://www.zendesk.com/blog/product-news/zendesk-tymeshift/</td>
+<td>wfm</td>
+<td>OK</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Disclosures</h2>
+<p><em>Disclosure: This is ProductBeacon&rsquo;s independent, impartial market research, based solely on publicly verifiable signals, published on the open web. No vendor sponsors, no paywalled data, no analyst-firm reuse. It reflects ProductBeacon&rsquo;s independent view and is not investment advice. Full independence and sourcing methodology: <a href="/research/methodology.html">Methodology →</a>.</em></p>
+<p><em>By Yohay Etsion · Managing Director, ProductBeacon · former NICE product leader (Recording / Workforce Optimization), 2008–2021.</em></p>
+<p><em>Former-employer independence: The author was employed by NICE (9 April 2008 to 20 May 2021), holding senior product-leadership responsibility for the Recording / Workforce-Optimization line of business — the very domain this report grades NICE on — and remains bound by a confidentiality and trade-secret undertaking from that employment; this report relies solely on published material and contains no information derived from that employment, and the author holds no NICE equity.</em></p>
+
+<section class="back-disclosures">
+<h2>Disclosures</h2>
+<p><strong>DISCLOSURE.</strong> Consolidated dated-URL ledger across 6 chapters + research files. 223 unique sources. Link-audit 2026-07-21: <strong>0 dead (404/410)</strong>, 1 transient-5xx (live page, flaky server), 43 bot-blocked (acceptable), 163 OK, 16 timeout. SOP-1 LA-1 gate (zero dead) = PASS.</p>
+<p><strong>NOT ADVICE.</strong> This report does not constitute investment, legal, tax, or accounting advice. No claim should be relied upon as the basis for any investment decision. The author holds no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+</section>
+</body>
+</html>
