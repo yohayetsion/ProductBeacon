@@ -1,180 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow, noai, noimageai">
-<meta charset="utf-8">
-<title>The State of Digital Intelligence 2026 — Pre-Call Companion</title>
-<link rel="canonical" href="https://productbeacon.agency/research/digital-intelligence-2026/companion.html">
-<meta property="og:title" content="The State of Digital Intelligence 2026 — Pre-Call Companion">
-<meta property="og:url" content="https://productbeacon.agency/research/digital-intelligence-2026/companion.html">
-<!-- SEO-DI-INJECTED -->
-<meta name="description" content="Pre-call companion to The State of Digital Intelligence 2026: a concise reader's guide to the five intelligence-software markets and their convergence. Independent research, zero vendor sponsors.">
-<meta property="og:type" content="article">
-<meta property="og:description" content="Pre-call companion to The State of Digital Intelligence 2026: a concise reader's guide to the five intelligence-software markets and their convergence. Independent research, zero vendor sponsors.">
-<meta property="og:image" content="https://productbeacon.agency/research/digital-intelligence-2026/og/landing.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The State of Digital Intelligence 2026 by Yohay Etsion. ProductBeacon Research. Five markets and their convergence, zero vendor sponsors.">
-<meta property="og:site_name" content="ProductBeacon Research">
-<meta property="article:author" content="https://www.linkedin.com/in/yohayetsion/">
-<meta property="article:published_time" content="2026-08-01">
-<meta property="article:modified_time" content="2026-08-01">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@productbeacon">
-<meta name="twitter:creator" content="@yohayetsion">
-<meta name="twitter:title" content="The State of Digital Intelligence 2026 — Pre-Call Companion">
-<meta name="twitter:description" content="Pre-call companion to The State of Digital Intelligence 2026: a concise reader's guide to the five intelligence-software markets and their convergence. Independent research, zero vendor sponsors.">
-<meta name="twitter:image" content="https://productbeacon.agency/research/digital-intelligence-2026/og/landing.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The State of Digital Intelligence 2026 — Pre-Call Companion", "name": "The State of Digital Intelligence 2026 — Pre-Call Companion", "description": "Pre-call companion to The State of Digital Intelligence 2026: a concise reader's guide to the five intelligence-software markets and their convergence. Independent research, zero vendor sponsors.", "url": "https://productbeacon.agency/research/digital-intelligence-2026/companion.html", "datePublished": "2026-08-01", "dateModified": "2026-08-01", "inLanguage": "en", "author": {"@type": "Person", "name": "Yohay Etsion", "jobTitle": "Managing Director, ProductBeacon", "url": "https://productbeacon.agency/research/author.html", "sameAs": ["https://www.linkedin.com/in/yohayetsion/"]}, "publisher": {"@type": "Organization", "name": "ProductBeacon Research", "url": "https://productbeacon.agency/research/", "logo": {"@type": "ImageObject", "url": "https://productbeacon.agency/research/favicon-research.svg"}}, "image": "https://productbeacon.agency/research/digital-intelligence-2026/og/landing.png", "isPartOf": {"@type": "PublicationIssue", "name": "The State of Digital Intelligence 2026", "url": "https://productbeacon.agency/research/digital-intelligence-2026/"}}</script>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18L16 28L22 18' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>The State of Digital Intelligence 2026 — Pre-Call Briefing Pack</title>
+<meta name="description" content="Independent research on the government and national-security intelligence-software market. Five markets: national agencies, lawful interception, tactical intelligence, fusion/decision intelligence, and OSINT, plus their convergence. Zero vendor sponsors.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 <style>
+/* ====================================================================
+   ProductBeacon Research. Landing Page (A-7).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3
+   ==================================================================== */
 
-@page {
-    size: A4;
-    margin: 1in 0.85in 0.9in 0.85in;
-    @bottom-center { content: counter(page); font-size: 9pt; color: #6b7280; font-family: 'Manrope', sans-serif; }
-    @top-right { content: "ProductBeacon — Pre-Call Companion"; font-size: 9pt; color: #9ca3af; font-family: 'Manrope', sans-serif; }
+:root {
+  /* Color tokens */
+  --ink: #0F172A;            /* Default Research surface background */
+  --surface: #1E293B;        /* Card / elevated section bg */
+  --bright: #F8FAFC;         /* Maximum-contrast hero copy + chapter titles */
+  --primary-text: #F1F5F9;   /* Body copy, wordmark on dark */
+  --slate-400: #94A3B8;      /* Mono small-caps, eyebrow, disclosure */
+  --slate-600: #475569;      /* Dividers */
+  --amber: #F59E0B;          /* Primary accent */
+  --amber-60: #F59E0B99;     /* Lockup divider default */
+  --amber-12: #F59E0B1F;     /* Ribbon background */
+  --amber-20: #F59E0B33;     /* Ribbon border-bottom */
+  --amber-light: #FBBF24;    /* Hover / active */
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
 }
-@page :first {
-    @top-right { content: ""; }
-    @bottom-center { content: ""; }
-}
 
-* { box-sizing: border-box; }
-
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: 'Manrope', 'Calibri', -apple-system, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.55;
-    color: #1a1a1a;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* ── COVER PAGE (single A4 page; disclosure pushed to footer) ── */
-.cover {
-    page-break-after: always;
-    text-align: center;
-    padding: 2.4in 0.4in 0 0.4in;
-    margin: 0;
-    position: relative;
-    min-height: 9in;
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
 }
-.cover .brand-bar-top {
-    display: block;
-    height: 6px;
-    background: #F59E0B;
-    margin: -2.4in -0.85in 0.5in -0.85in;
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.cover .brand-bar-bottom { display: none; }
-.cover .imprint { font-size: 10pt; letter-spacing: 3pt; color: #92400E; font-weight: 700; margin: 1.6in 0 0.4in 0; }
-.cover h1 {
-    color: #92400E;
-    font-size: 28pt;
-    font-weight: 800;
-    margin: 0 0 0.55in 0;
-    border: none;
-    line-height: 1.2;
-    padding: 0;
-    page-break-before: avoid;
-    page-break-after: avoid;
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
 }
-.cover .author-block { font-size: 11pt; color: #4a4a4a; margin-bottom: 0.15in; }
-.cover .author-block strong { display: block; font-size: 13pt; color: #1a1a1a; margin-bottom: 4pt; }
-.cover .date { font-size: 10pt; color: #6b7280; margin-top: 0.4in; }
-
-/* ── BACK-MATTER DISCLOSURES (end of document) ── */
-.back-disclosures { page-break-before: always; padding-top: 6pt; }
-.back-disclosures h2 { color: #92400E; font-size: 16pt; font-weight: 800; border-bottom: 2px solid #F59E0B; padding-bottom: 6pt; margin: 0 0 14pt 0; letter-spacing: 0.5pt; }
-.back-disclosures p { font-size: 9.5pt; line-height: 1.6; color: #374151; margin: 0 0 11pt 0; text-align: justify; font-style: italic; }
-.back-disclosures p strong { color: #92400E; font-style: normal; font-weight: 700; letter-spacing: 0.5pt; display: block; margin-bottom: 2pt; font-size: 10pt; }
-
-/* ── HEADINGS ── */
-h1 { color: #92400E; font-size: 22pt; font-weight: 800; border-bottom: 3px solid #F59E0B; padding-bottom: 6pt; margin-top: 0; margin-bottom: 16pt; page-break-before: always; page-break-after: avoid; }
-h2 { color: #1a1a1a; font-size: 16pt; font-weight: 700; margin-top: 24pt; margin-bottom: 10pt; border-bottom: 1px solid #F59E0B; padding-bottom: 4pt; page-break-after: avoid; }
-h3 { color: #92400E; font-size: 12.5pt; font-weight: 700; margin-top: 16pt; margin-bottom: 6pt; page-break-after: avoid; }
-h4 { color: #374151; font-size: 11pt; font-weight: 700; margin-top: 12pt; margin-bottom: 4pt; page-break-after: avoid; }
-
-/* ── PROSE ── */
-p { margin: 0 0 9pt 0; text-align: justify; orphans: 3; widows: 3; }
-strong { color: #111827; }
-em { color: #374151; }
-a { color: #92400E; text-decoration: none; }
-ul, ol { margin: 6pt 0 10pt 22pt; padding: 0; }
-li { margin-bottom: 4pt; }
-hr { border: none; border-top: 1px solid #e5e7eb; margin: 16pt 0; }
-
-/* ── BLOCKQUOTES (Pattern Claim callouts) ── */
-blockquote { border-left: 4px solid #F59E0B; background: #FFFBEB; padding: 12pt 16pt; margin: 14pt 0; page-break-inside: avoid; border-radius: 0 4px 4px 0; }
-blockquote h3 { color: #92400E; margin-top: 0; font-size: 12pt; }
-blockquote p { margin-bottom: 7pt; }
-blockquote p:last-child { margin-bottom: 0; }
-blockquote strong { color: #92400E; }
-
-/* ── TABLES ── */
-table { width: 100%; border-collapse: collapse; margin: 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
-thead { background: #FEF3C7; }
-th { color: #92400E; padding: 7pt 9pt; text-align: left; border-bottom: 2px solid #F59E0B; font-weight: 700; vertical-align: top; }
-td { padding: 6pt 9pt; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.45; }
-tbody tr:nth-child(even) td { background: #fafafa; }
-
-/* ── IMAGES ── */
-img { max-width: 100%; display: block; margin: 14pt auto; page-break-inside: avoid; }
-figure { margin: 14pt 0; page-break-inside: avoid; }
-figcaption { font-size: 9pt; color: #6b7280; text-align: center; margin-top: 4pt; font-style: italic; }
-
-/* ── CODE ── */
-code { font-family: 'Consolas', 'Courier New', monospace; font-size: 9.5pt; background: #f3f4f6; padding: 1pt 4pt; border-radius: 3px; color: #92400E; }
-pre { background: #f3f4f6; padding: 10pt; border-radius: 4px; font-size: 9pt; overflow-x: auto; page-break-inside: avoid; }
-pre code { background: none; padding: 0; }
-
-/* ── DISCLAIMER & DISCLOSURE ── */
-.disclosure { background: #FFFBEB; border: 1px solid #FBBF24; padding: 10pt 14pt; font-size: 9.5pt; color: #92400E; margin: 14pt 0; font-style: italic; border-radius: 4px; }
-.cover-disclosure { margin: 40pt auto 0; max-width: 80%; font-size: 8.5pt; line-height: 1.5; color: #4b5563; font-style: italic; text-align: left; }
-.cover-disclosure strong { color: #92400E; font-style: normal; }
-.cover-disclosure a { color: #92400E; }
-
-/* ── FOOTNOTES (markdown extension renders these as a section) ── */
-.footnote, [id^="fn-"] { font-size: 9pt; color: #4b5563; }
-.footnote ol, ol.footnote { padding-left: 18pt; }
-hr.footnote { border-top: 1px solid #e5e7eb; margin-top: 24pt; }
-sup, .footnote-ref { font-size: 7.5pt; vertical-align: super; }
-sup a { color: #92400E; font-weight: 700; }
-
-/* ── PRINT TWEAKS ── */
-@media print {
-    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
 }
 
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+/* ---------- Breadcrumb (Round 16 D-3) ---------- */
+.breadcrumb {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 32px var(--space-3);
+}
+.breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+.breadcrumb li { display: flex; align-items: center; gap: var(--space-2); }
+.breadcrumb a { color: var(--slate-400); transition: color var(--research-mark-hover-transition); }
+.breadcrumb a:hover { color: var(--amber); }
+.breadcrumb li[aria-current="page"] { color: var(--amber-light); }
+.breadcrumb .sep { color: var(--slate-600); }
+@media (max-width: 480px) { .breadcrumb { padding: 0 24px var(--space-3); } }
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-5);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-6) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Three-doors card */
+.doors {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  border: 1px solid #334155;
+}
+.doors-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.doors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.doors-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.doors-list li strong { color: var(--bright); font-weight: 500; }
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--research-mark-hover-transition), color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn-primary:hover { background: var(--amber-light); }
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-text);
+  border-color: var(--slate-600);
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- Section: chapters ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+}
+.chapter-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--primary-text);
+  margin: 0;
+}
+.chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.chapter-links a:hover { color: var(--amber-light); }
+.chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Methodology link ---------- */
+.methodology-block {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) 32px;
+  text-align: left;
+}
+.methodology-block a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.methodology-block a:hover { color: var(--amber-light); }
+.methodology-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--slate-400);
+  margin: 4px 0 0 0;
+}
+
+/* ---------- Email-capture form (E-1) ---------- */
+.subscribe {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-8);
+}
+.subscribe-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  max-width: 720px;
+}
+.subscribe-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+}
+.subscribe-cadence {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 280px;
+  height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--ink);
+  border: 1px solid var(--slate-600);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--research-mark-hover-transition);
+}
+.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
+.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
+.subscribe-form button { min-width: 160px; }
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: var(--space-3) 0 0 0;
+  min-height: 1.2em;
+}
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-7) 24px; }
+  .section-title { font-size: 28px; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .doors { padding: var(--space-4); }
+  .subscribe { padding: var(--space-6) 24px var(--space-7); }
+  .subscribe-card { padding: var(--space-5); }
+  .methodology-block { padding: var(--space-5) 24px; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* chrome-unify: reset global style.css collisions on research body */
+.hero { display: block; align-items: normal; min-height: 0; overflow: visible; position: static; }
+.btn { gap: 0; }
+
+/* Methodology-content readability bullets (scannable digest) */
+.methodology-content ul {
+  margin: var(--space-3) 0 var(--space-4);
+  padding-left: var(--space-4);
+  list-style: disc;
+}
+.methodology-content ul li {
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.methodology-content ul li::marker { color: var(--amber); }
+.methodology-content ul li strong { color: var(--bright); font-weight: 700; }
 </style>
 
 <style>
-.inline-diagram { margin: 22pt 0; page-break-inside: avoid; text-align: center; }
-.inline-diagram svg { width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 6px; }
+/* ---- companion dark editorial body (md->web generator; WEM-parity port) ---- */
+.methodology-content { color: var(--primary-text); }
+.methodology-content > p,
+.methodology-content li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.methodology-content h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--bright);
+  margin: var(--space-7) 0 var(--space-3);
+  letter-spacing: -0.01em;
+}
+.methodology-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--bright);
+  margin: var(--space-6) 0 var(--space-3);
+  letter-spacing: -0.01em;
+}
+.methodology-content h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--bright);
+  margin: var(--space-5) 0 var(--space-2);
+}
+.methodology-content strong { color: var(--bright); font-weight: 700; }
+.methodology-content a { color: var(--amber); text-decoration: none; }
+.methodology-content a:hover { color: var(--amber-light); }
+.methodology-content ul, .methodology-content ol {
+  margin: var(--space-3) 0 var(--space-4);
+  padding-left: var(--space-4);
+}
+.methodology-content ul { list-style: disc; }
+.methodology-content ul li::marker { color: var(--amber); }
+.methodology-content li { margin: 0 0 var(--space-2) 0; }
+.methodology-content hr {
+  border: none;
+  border-top: 1px solid var(--slate-600);
+  margin: var(--space-6) 0;
+}
+.methodology-content blockquote {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--amber);
+  background: var(--surface);
+  border-radius: 0 8px 8px 0;
+  color: var(--bright);
+  font-size: 19px;
+  line-height: 1.55;
+}
+.methodology-content blockquote p { color: var(--bright); font-weight: 500; }
+.methodology-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-4) 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+.methodology-content th, .methodology-content td {
+  border: 1px solid #334155;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--primary-text);
+}
+.methodology-content thead th {
+  background: var(--surface);
+  color: var(--bright);
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.methodology-content em { color: var(--primary-text); }
+
+/* DI-ONLY adaptation (checklist item T-13): the DI companion carries a five-markets
+   table; the WEM reference companion has ZERO tables (verified @390 2026-08-01:
+   WEM scrollW=390), so the reference system never exercises table-on-mobile. On
+   narrow viewports the table scrolls INSIDE its own box — the page itself must
+   never scroll horizontally (the pre-port print-doc overflowed the page to 433px). */
+@media (max-width: 700px) {
+  .methodology-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* ---- front-loaded disclosure block (§RPD-I dark front-load) ---- */
+.front-disclosure {
+  max-width: 760px;
+  margin: 0 auto var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+}
+.front-disclosure p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.front-disclosure p:last-child { margin-bottom: 0; }
+.front-disclosure em { font-style: italic; color: var(--slate-400); }
+.front-disclosure strong { color: var(--primary-text); }
+.front-disclosure a { color: var(--amber); }
+
+/* the SVG diagrams (if any) inline literal-colored; keep them centered on dark */
+.methodology-content figure.inline-diagram { margin: var(--space-5) auto; }
+</style>
+
+
+<style>
+@media screen { body { padding-top: 0; } }
 </style>
 
 </head>
 <body>
-<section class="cover">
-<div class="brand-bar-top"></div>
-<div class="imprint">PRODUCTBEACON</div>
-<h1>The State of Digital Intelligence 2026 — Pre-Call Companion</h1>
-<div class="author-block">
-<strong>Yohay Etsion</strong>
-Managing Director, ProductBeacon
-</div>
-<div class="date">2026-08-01</div>
-<div class="cover-disclosure"><strong>Disclosure:</strong> This is independent ProductBeacon research by Yohay Etsion, Managing Director of ProductBeacon, based solely on publicly available material; it reflects the author's personal analysis, not any vendor's position. The author served as VP Product at Cognyte, which competes across several of the fronts covered here (its NEXYTE and LUMINAR platforms); this analysis rests only on publicly available material, and no former-employer confidential or trade-secret information informed it. No vendor sponsors this research and no paywalled data underpins it. This report does not constitute investment, legal, tax, or accounting advice; no claim here should be relied upon as the basis for any investment decision. As of June 2026, the author holds no position in any named public security, directly or via a cybersecurity-sector ETF, and is not compensated by any named vendor. Full method: <a href="/research/methodology.html">Methodology →</a>.</div>
-</section>
 
+
+<!-- CHROME:NAV:START -->
+<!-- ====== NAV ====== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/index.html" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="/index.html#intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="/index.html#intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+  </div>
+</nav>
+<!-- CHROME:NAV:END -->
+
+<main style="padding-top: var(--nav-height);">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/research/">ProductBeacon Research</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <a href="/research/digital-intelligence-2026/">State of Digital Intelligence 2026</a></li>
+    <li><span class="sep" aria-hidden="true">&rsaquo;</span> <span aria-current="page">Pre-Call Briefing Pack</span></li>
+  </ol>
+</nav>
+<header class="hero">
+  <p class="hero-eyebrow">ProductBeacon Research &middot; State of Digital Intelligence 2026</p>
+  <h1 class="hero-headline">Pre-Call Briefing Pack</h1>
+  <p class="hero-subhead" id="hero-subhead">This is the pre-call digest of <em>The State of Digital Intelligence 2026</em> — a briefing you can read end to end before a conversation. As of June 2026.</p>
+  <p class="hero-byline" style="margin-top: var(--space-3); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--slate-400); letter-spacing: 0.05em;">As of June 2026 &middot; By Yohay Etsion</p>
+</header>
+<section class="front-disclosure" aria-label="Disclosure">
+<p><em>Disclosure: This is independent ProductBeacon research by Yohay Etsion, Managing Director of ProductBeacon, based solely on publicly available material; it reflects the author's personal analysis, not any vendor's position. The author served as VP Product at Cognyte, which competes across several of the fronts covered here (its NEXYTE and LUMINAR platforms); this analysis rests only on publicly available material, and no former-employer confidential or trade-secret information informed it. No vendor sponsors this research and no paywalled data underpins it. This report does not constitute investment, legal, tax, or accounting advice; no claim here should be relied upon as the basis for any investment decision. As of June 2026, the author holds no position in any named public security, directly or via a cybersecurity-sector ETF, and is not compensated by any named vendor. Full method: <a href="/research/methodology.html">Methodology →</a>.</em></p>
 <p><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes in fronts covered here.</em></p>
-<hr>
-<h2>How to Read This Companion</h2>
+</section>
+<section class="methodology-content" style="max-width: 760px; margin: 0 auto; padding: var(--space-4) var(--space-5) var(--space-7);">
+<h2>How to read this companion</h2>
 <p>This is the pre-call digest of <em>The State of Digital Intelligence 2026</em> — a briefing you can read end to end before a conversation. The full report grades the government and national-security intelligence software market across five markets and then reads them as one. This companion carries the shape of each market, who leads it, what is moving, and the bet — plus the cross-market synthesis. It sources every figure and claim from the full chapters; it digests them rather than re-deriving them. Capability throughout is reported as what a vendor publicly markets, never as verified architecture, which cannot be confirmed from outside.</p>
 <p>The one idea to hold while reading: <strong>the market is a single stack, and value is migrating up it.</strong> Four of the five markets are collection — strategic network collection, warrant-scoped interception, tactical field collection, and open-source collection. The fifth, fusion, is not a collection silo at all; it is the analytical layer every other market feeds. That asymmetry is the master fact. Collection is fragmenting and commoditizing market by market, while the value migrates to the layer that resolves, links, and decides. The vendors winning the decade are climbing toward that layer; the ones being squeezed are stuck in commoditizing collection beneath a free or sanctioned floor.</p>
-<p>A word on the five markets and their boundaries, because the report&rsquo;s grading discipline turns on them. National Agencies is mass-scale, standing collection at the network backbone — defined by volume plus standing infrastructure. Law Enforcement Monitoring Centers is the same kind of traffic under a fundamentally different trigger: a per-target warrant, delivered over certified handover. Tactical Intelligence collects in the field against a present target, defined by physical proximity. Open-Source Intelligence collects from openly available sources, with no privileged access. And Fusion sits on top of all four, ingesting already-collected data and turning it into a decision. Every grade in the report follows the deployment posture and the buyer, never the underlying technology — because the same technology (deep-packet inspection, for instance) lives in more than one market.</p>
-<h2>The Five Markets at a Glance</h2>
+<p>A word on the five markets and their boundaries, because the report's grading discipline turns on them. National Agencies is mass-scale, standing collection at the network backbone — defined by volume plus standing infrastructure. Law Enforcement Monitoring Centers is the same kind of traffic under a fundamentally different trigger: a per-target warrant, delivered over certified handover. Tactical Intelligence collects in the field against a present target, defined by physical proximity. Open-Source Intelligence collects from openly available sources, with no privileged access. And Fusion sits on top of all four, ingesting already-collected data and turning it into a decision. Every grade in the report follows the deployment posture and the buyer, never the underlying technology — because the same technology (deep-packet inspection, for instance) lives in more than one market.</p>
+<h2>The five markets at a glance</h2>
 <table>
 <thead>
 <tr>
@@ -217,67 +738,109 @@ Managing Director, ProductBeacon
 </tr>
 </tbody>
 </table>
-<p>The rest of this companion takes each market in turn, in the same shape — the playing ground, who leads, what&rsquo;s moving, the verdict, and the figures that anchor it — then closes on the convergence synthesis and the cross-front watchlist.</p>
-<hr>
-<h2>Market One — National Agencies (SIGINT and Network Intelligence at Mass Scale)</h2>
-<p><strong>The playing ground.</strong> This is the top of the collection stack: an agency collecting and analysing communications at the scale of a country&rsquo;s network backbone, standing, continuously, and remotely. The sensor is wired into the infrastructure itself — a passive probe at a carrier core, an international gateway, or an internet exchange point, sized in terabits per second and petabytes of retention. The buyer is a national-security, national-intelligence, or military-intelligence agency. The defining property is volume plus standing infrastructure, and the vendors name it themselves: &ldquo;terabit-speed,&rdquo; &ldquo;petabyte-scale,&rdquo; &ldquo;national networks.&rdquo; The bright line against Law Enforcement Monitoring Centers is the legal trigger plus the scale, not the technology — deep-packet inspection lives in both markets.</p>
+<p>The rest of this companion takes each market in turn, in the same shape — the playing ground, who leads, what's moving, the verdict, and the figures that anchor it — then closes on the convergence synthesis and the cross-front watchlist.</p>
+<hr />
+<h2>Market One — National Agencies (SIGINT and network intelligence at mass scale)</h2>
+<p><strong>The playing ground.</strong> This is the top of the collection stack: an agency collecting and analysing communications at the scale of a country's network backbone, standing, continuously, and remotely. The sensor is wired into the infrastructure itself — a passive probe at a carrier core, an international gateway, or an internet exchange point, sized in terabits per second and petabytes of retention. The buyer is a national-security, national-intelligence, or military-intelligence agency. The defining property is volume plus standing infrastructure, and the vendors name it themselves: "terabit-speed," "petabyte-scale," "national networks." The bright line against Law Enforcement Monitoring Centers is the legal trigger plus the scale, not the technology — deep-packet inspection lives in both markets.</p>
 <p><strong>Who leads.</strong> Eight vendors are graded against a cap of eight, plus a non-vendor Tier-0 force. In the Gravity tier: <strong>BAE Systems</strong>, the prime-scale communications-intelligence anchor; <strong>Vehere</strong>, the explicit mass-network-intelligence specialist; and <strong>ClearTrail Technologies</strong>, the mass-monitoring specialist. The Attention tier holds <strong>Cognyte</strong> — graded strictly on its own dated public network-intelligence and SIGINT glossary, with no internal knowledge used, and read against its VANTAGE trademark and 20-F lawful-interception origin as inherited Verint-era lineage, never as a present capability — plus <strong>Trovicor</strong>, <strong>Kommlabs Dezign</strong>, and <strong>ipoque</strong> (a Rohde and Schwarz company, graded as the DPI-engine layer beneath the front). The Wildcard is <strong>Allot</strong>, whose telecom quality-of-experience versus intelligence straddle is itself the finding. Above every vendor sits the Tier-0 in-house build — the NSA-class sovereign program, publicly anchored to XKEYSCORE — which caps how much of the top tier any commercial vendor can address. Palantir and Sandvine/AppLogic are referenced, not graded, on their current public positioning.</p>
-<p><strong>What&rsquo;s moving.</strong> Three plays, each anchored to a dated public event. First, the encrypted-traffic-erosion pivot: TLS 1.3 with Perfect Forward Secrecy, Encrypted Client Hello, and QUIC are removing the cleartext fields classic passive inspection read, so every serious vendor has repositioned from &ldquo;inspect content&rdquo; to machine-learning encrypted-traffic intelligence that fingerprints flows by behaviour. Second, the accountability and sanctions reset: the Sandvine case, where a single 2024 Entity-List designation attached to roughly 45 percent of the company&rsquo;s disclosed revenue base, followed by a cured removal, restructuring, and rebrand to AppLogic Networks — a market-structure event carried on the official and named-outlet record. Third, the build-versus-buy ceiling: the most sophisticated buyers build their own, so the commercial market is the addressable remainder. Crypto de-anonymization at national scale is treated strictly as vendor positioning throughout, never asserted.</p>
+<p><strong>What's moving.</strong> Three plays, each anchored to a dated public event. First, the encrypted-traffic-erosion pivot: TLS 1.3 with Perfect Forward Secrecy, Encrypted Client Hello, and QUIC are removing the cleartext fields classic passive inspection read, so every serious vendor has repositioned from "inspect content" to machine-learning encrypted-traffic intelligence that fingerprints flows by behaviour. Second, the accountability and sanctions reset: the Sandvine case, where a single 2024 Entity-List designation attached to roughly 45 percent of the company's disclosed revenue base, followed by a cured removal, restructuring, and rebrand to AppLogic Networks — a market-structure event carried on the official and named-outlet record. Third, the build-versus-buy ceiling: the most sophisticated buyers build their own, so the commercial market is the addressable remainder. Crypto de-anonymization at national scale is treated strictly as vendor positioning throughout, never asserted.</p>
 <p><strong>The verdict.</strong> Winners are BAE Systems and ipoque, both on disclosed evidence rather than asserted capability — BAE on the prime-scale multi-source posture, ipoque on the engine that decides whether the front can still classify anything as encryption rises. On the Watch line: Allot, on the quality-of-experience versus intelligence straddle, and AppLogic Networks, the cured-and-repositioned subject of the accountability reset. No contender is graded a Loser; the public events are growth and a cured regulatory episode.</p>
-<p><strong>The figures that anchor it.</strong> No research publisher isolates this front&rsquo;s mass-collection slice, so the report walls four adjacent markets side by side and never sums them: lawful interception (roughly $5.5B–8.2B, 2025/26), deep-packet inspection (roughly $5.7B–38B, a six-to-seven-fold publisher spread, overwhelmingly commercial), SIGINT (roughly $17.7B–18.5B, prime-and-platform-dominated), and telecom/network analytics (roughly $4.1B–9.3B). The two hardest anchors are the issuers who disclose: <strong>Allot</strong> (NASDAQ/TASE: ALLT) at $102.0M FY2025 revenue (up 11 percent), its first GAAP net income in over a decade at $3.7M, with Security-as-a-Service ARR of $30.8M (up 69 percent); and <strong>BAE Systems</strong> (LSE: BA.L), Cyber and Intelligence segment sales of £2.4B inside group sales of £30.7B, with the SIGINT sub-line not broken out.</p>
-<hr>
-<h2>Market Two — Law Enforcement Monitoring Centers (Lawful Interception)</h2>
-<p><strong>The playing ground.</strong> This is the market where interception happens inside the law. It is defined not by a technology or a place but by two instruments: a published lawful-interception standard and a warrant. The buyer is a law-enforcement agency, and in many jurisdictions a domestic-security service under judicial or ministerial authorization. The job is to intercept a named target&rsquo;s communications, served through the carrier under lawful authorization, and delivered into a Law Enforcement Monitoring Facility. Take either instrument away and it becomes a different market — without the warrant it is mass collection, without the certified handover it is not a saleable carrier-grade product at all. More than any other front, this one is graded from the standards themselves (the ETSI handover and internal families, 3GPP 5G lawful interception, US CALEA and J-STD-025), which are statute-grade, not slideware.</p>
-<p><strong>Who leads.</strong> Seven vendors are graded — the market comes in under the eight-per-front cap, and that gap is itself the finding. In the Gravity tier: <strong>JSI Telecom</strong>, the accountability anchor leading on immutable audit trails and jurisdiction-aware controls; <strong>ClearTrail Technologies</strong>, the analytics-led anchor differentiating above the certified handover; and <strong>Trovicor</strong>, the multi-network mediation anchor. The Attention tier holds <strong>Vehere</strong>, the passive packet-based specialist with a public metadata-over-content pivot; <strong>Septier</strong>, the clearest case of a vendor selling the mediation function itself as a discrete product; and <strong>Cognyte</strong>, placed in Attention precisely because it publishes no standalone monitoring-centre product page — that absence is the finding, and the grade rests on Cognyte&rsquo;s own dated public record (the 20-F lawful-interception-origin language, the registered VANTAGE trademark, and the NEXYTE LEA page that reframes interception as one data source among several), with the inherited Verint-era RELIANT and VANTAGE lineage carried strictly as lineage, never as current Cognyte conduct. The Wildcard is <strong>Dígitro</strong>, the Brazil-centric Guardião platform. The Italian spyware cohort (RCS Lab, Hacking Team/Memento Labs, Cy4Gate, the Paragon matter) is never graded — it is a distinct implant modality, carried only as named-outlet-attributed context.</p>
-<p><strong>What&rsquo;s moving.</strong> Three dated plays. First, the 5G-core lawful-interception standards refresh: every operator migrating to a standalone 5G core must re-instantiate the interception functions, because 4G-era architecture &ldquo;will simply stop working&rdquo; — turning conformance breadth and currency into the real axis. Second, private-equity consolidation of the monitoring-centre and mediation layer, with SS8 Networks acquired by Mill Point Capital on 27 June 2025 as the clearest public anchor. Third, the accountability and litigation overhang reshaping the market&rsquo;s legitimacy frame, including Commission Recommendation (EU) 2024/2659 on cyber-surveillance export controls. The three pattern claims share one throughline: the moat here is not collection but conformance to a public standard, and the legitimacy that lets a vendor sell at all.</p>
+<p><strong>The figures that anchor it.</strong> No research publisher isolates this front's mass-collection slice, so the report walls four adjacent markets side by side and never sums them: lawful interception (roughly $5.5B–8.2B, 2025/26), deep-packet inspection (roughly $5.7B–38B, a six-to-seven-fold publisher spread, overwhelmingly commercial), SIGINT (roughly $17.7B–18.5B, prime-and-platform-dominated), and telecom/network analytics (roughly $4.1B–9.3B). The two hardest anchors are the issuers who disclose: <strong>Allot</strong> (NASDAQ/TASE: ALLT) at $102.0M FY2025 revenue (up 11 percent), its first GAAP net income in over a decade at $3.7M, with Security-as-a-Service ARR of $30.8M (up 69 percent); and <strong>BAE Systems</strong> (LSE: BA.L), Cyber and Intelligence segment sales of £2.4B inside group sales of £30.7B, with the SIGINT sub-line not broken out.</p>
+<hr />
+<h2>Market Two — Law Enforcement Monitoring Centers (lawful interception)</h2>
+<p><strong>The playing ground.</strong> This is the market where interception happens inside the law. It is defined not by a technology or a place but by two instruments: a published lawful-interception standard and a warrant. The buyer is a law-enforcement agency, and in many jurisdictions a domestic-security service under judicial or ministerial authorization. The job is to intercept a named target's communications, served through the carrier under lawful authorization, and delivered into a Law Enforcement Monitoring Facility. Take either instrument away and it becomes a different market — without the warrant it is mass collection, without the certified handover it is not a saleable carrier-grade product at all. More than any other front, this one is graded from the standards themselves (the ETSI handover and internal families, 3GPP 5G lawful interception, US CALEA and J-STD-025), which are statute-grade, not slideware.</p>
+<p><strong>Who leads.</strong> Seven vendors are graded — the market comes in under the eight-per-front cap, and that gap is itself the finding. In the Gravity tier: <strong>JSI Telecom</strong>, the accountability anchor leading on immutable audit trails and jurisdiction-aware controls; <strong>ClearTrail Technologies</strong>, the analytics-led anchor differentiating above the certified handover; and <strong>Trovicor</strong>, the multi-network mediation anchor. The Attention tier holds <strong>Vehere</strong>, the passive packet-based specialist with a public metadata-over-content pivot; <strong>Septier</strong>, the clearest case of a vendor selling the mediation function itself as a discrete product; and <strong>Cognyte</strong>, placed in Attention precisely because it publishes no standalone monitoring-centre product page — that absence is the finding, and the grade rests on Cognyte's own dated public record (the 20-F lawful-interception-origin language, the registered VANTAGE trademark, and the NEXYTE LEA page that reframes interception as one data source among several), with the inherited Verint-era RELIANT and VANTAGE lineage carried strictly as lineage, never as current Cognyte conduct. The Wildcard is <strong>Dígitro</strong>, the Brazil-centric Guardião platform. The Italian spyware cohort (RCS Lab, Hacking Team/Memento Labs, Cy4Gate, the Paragon matter) is never graded — it is a distinct implant modality, carried only as named-outlet-attributed context.</p>
+<p><strong>What's moving.</strong> Three dated plays. First, the 5G-core lawful-interception standards refresh: every operator migrating to a standalone 5G core must re-instantiate the interception functions, because 4G-era architecture "will simply stop working" — turning conformance breadth and currency into the real axis. Second, private-equity consolidation of the monitoring-centre and mediation layer, with SS8 Networks acquired by Mill Point Capital on 27 June 2025 as the clearest public anchor. Third, the accountability and litigation overhang reshaping the market's legitimacy frame, including Commission Recommendation (EU) 2024/2659 on cyber-surveillance export controls. The three pattern claims share one throughline: the moat here is not collection but conformance to a public standard, and the legitimacy that lets a vendor sell at all.</p>
 <p><strong>The verdict.</strong> Winners are JSI Telecom on the accountability axis and the standards-conformant set — ClearTrail, Septier, Vehere — on the conformance axis the 5G transition is re-pricing; all private, so the label is positioning-and-axis, never a numbers grade. On the Watch line: Cy4Gate, growing on the numbers but carrying, on the named-outlet record, the spyware-cohort accountability overhang on its own RCS Lab engine (a distinct mobile-implant line), and SS8, gone dark post-take-private. No contender is graded a Loser.</p>
-<p><strong>The figures that anchor it.</strong> This is the report&rsquo;s hardest sizing problem: no publisher isolates warrant-scoped monitoring-centre software. Five publishers bracket the 2025/26 lawful-interception market at roughly $5.5B–8.9B, with the LEA and government end-user share (the closest proxy for this slice) running from about 58 percent (Fortune) to 67 percent (Mordor) — set side by side, never averaged, and never multiplied together into a fabricated number. There is no near-pure-play public monitoring-centre issuer. The one listed adjacent anchor is <strong>Cy4Gate</strong> (Euronext STAR Milan: CY4), parent of RCS Lab, at FY2025 value of production €101.5M (up 35 percent), EBITDA €20.8M, and a €120M backlog — even here the lawful-interception sub-line is not broken out. The single dated public dollar figure in the entire private tail: a 2014 US ICE procurement to JSI reported at over $19.7M, a contract, not a valuation.</p>
-<hr>
+<p><strong>The figures that anchor it.</strong> This is the report's hardest sizing problem: no publisher isolates warrant-scoped monitoring-centre software. Five publishers bracket the 2025/26 lawful-interception market at roughly $5.5B–8.9B, with the LEA and government end-user share (the closest proxy for this slice) running from about 58 percent (Fortune) to 67 percent (Mordor) — set side by side, never averaged, and never multiplied together into a fabricated number. There is no near-pure-play public monitoring-centre issuer. The one listed adjacent anchor is <strong>Cy4Gate</strong> (Euronext STAR Milan: CY4), parent of RCS Lab, at FY2025 value of production €101.5M (up 35 percent), EBITDA €20.8M, and a €120M backlog — even here the lawful-interception sub-line is not broken out. The single dated public dollar figure in the entire private tail: a 2014 US ICE procurement to JSI reported at over $19.7M, a contract, not a valuation.</p>
+<hr />
 <h2>Market Three — Tactical Intelligence</h2>
 <p><strong>The playing ground.</strong> This is where collection comes off the network backbone and into the field. Every market above it collects at a distance; this one is different in a single defining way — the collector is physically present. The buyer is a deployed team: a surveillance unit, a counter-terror element, a border or prison authority, a military tactical cell. The defining line is physical proximity, portability, and operational tempo, not the radio technology it touches. What the market is: field-deployable RF and proximity collection against a present target — IMSI and IMEI catchers, tactical cellular interception, Wi-Fi and Bluetooth collection, direction finding — plus the device-in-hand modality of edge forensics. Decisively, it is <em>not</em> remote mobile-implant exploitation: the NSO/Candiru/Intellexa/Pegasus/Predator class is a distinct modality, carved out of grading entirely and named only as market-force context, tracking the export-control split (intrusion software under Wassenaar Category 4, RF and IP-network surveillance under Category 5 Part 1).</p>
-<p><strong>Who leads.</strong> Seven vendors are graded, not eight — the candidate list is shortest before you even start, because the most-named cohort in the popular discourse sits outside the boundary. In the Gravity tier, the device-in-hand forensics anchors: <strong>Cellebrite</strong>, the category-defining device-extraction standard (UFED) and the only contender with fully disclosed, audited public financials; <strong>MSAB</strong>, the field-first anchor moving extraction &ldquo;to the field&rdquo;; and <strong>Magnet Forensics</strong>, the analysis-led anchor (AXIOM), taken private by Thoma Bravo and combined with Grayshift. The Attention tier holds the tactical-SIGINT specialists <strong>Rayzone Group</strong> and <strong>Septier Communication</strong>, plus <strong>Cognyte</strong>, graded on its own dated border-protection page (fusing border sensors with SIGINT, OSINT and VISINT sources) and corroborated by a dated roughly $5M tactical-SIGINT military-intelligence contract, built strictly from that public material with no internal knowledge and never asserted as a present capability. The Wildcard is <strong>Cellxion</strong>, a marketing-thin cellular-interception vendor held with explicit caution.</p>
-<p><strong>What&rsquo;s moving.</strong> Three plays, held to three by the strictest evidence floor in the report. First, the lab-to-field shift: the forensics anchors are relocating extraction out of the central lab to the point of seizure. Second, consolidation under private equity: Thoma Bravo taking Magnet private and folding in Grayshift. Third, the encryption headwind plus export-control overhang: end-to-end and device-OS encryption compress the classic catcher&rsquo;s content yield toward identity and location, and the 2G/3G sunset removes the downgrade target. The three pattern claims are the edge-forensics ascendancy (the growth is in the seized device, not the catcher), the lab-to-field collapse (extraction moving to the border and the arrest), and the surveillance-market reckoning (sanctions reshaping who may buy and sell, pressing hardest on the cohort the report never grades).</p>
+<p><strong>Who leads.</strong> Seven vendors are graded, not eight — the candidate list is shortest before you even start, because the most-named cohort in the popular discourse sits outside the boundary. In the Gravity tier, the device-in-hand forensics anchors: <strong>Cellebrite</strong>, the category-defining device-extraction standard (UFED) and the only contender with fully disclosed, audited public financials; <strong>MSAB</strong>, the field-first anchor moving extraction "to the field"; and <strong>Magnet Forensics</strong>, the analysis-led anchor (AXIOM), taken private by Thoma Bravo and combined with Grayshift. The Attention tier holds the tactical-SIGINT specialists <strong>Rayzone Group</strong> and <strong>Septier Communication</strong>, plus <strong>Cognyte</strong>, graded on its own dated border-protection page (fusing border sensors with SIGINT, OSINT and VISINT sources) and corroborated by a dated roughly $5M tactical-SIGINT military-intelligence contract, built strictly from that public material with no internal knowledge and never asserted as a present capability. The Wildcard is <strong>Cellxion</strong>, a marketing-thin cellular-interception vendor held with explicit caution.</p>
+<p><strong>What's moving.</strong> Three plays, held to three by the strictest evidence floor in the report. First, the lab-to-field shift: the forensics anchors are relocating extraction out of the central lab to the point of seizure. Second, consolidation under private equity: Thoma Bravo taking Magnet private and folding in Grayshift. Third, the encryption headwind plus export-control overhang: end-to-end and device-OS encryption compress the classic catcher's content yield toward identity and location, and the 2G/3G sunset removes the downgrade target. The three pattern claims are the edge-forensics ascendancy (the growth is in the seized device, not the catcher), the lab-to-field collapse (extraction moving to the border and the arrest), and the surveillance-market reckoning (sanctions reshaping who may buy and sell, pressing hardest on the cohort the report never grades).</p>
 <p><strong>The verdict.</strong> Winners are Cellebrite and MSAB, momentum winners on audited public-issuer financials, both riding the edge-forensics ascendancy — winning the modality war, not a share war against each other. On the Watch line: Rayzone, Septier, and Cellxion, the RF specialists in the modality encryption is compressing, plus Magnet as a capability winner gone dark on disclosure since the take-private. No contender is graded a Loser; the structurally pressured force is the never-graded remote-implant cohort.</p>
-<p><strong>The figures that anchor it.</strong> Four adjacent markets are walled and never summed: lawful interception (roughly $5.5B–7.5B, the carrier-mediated outer envelope), IMSI-catcher and cellular interception (roughly $183M–695M, 2025, with CAGRs of 4.6–9.8 percent running well below interception&rsquo;s roughly 20 percent), mobile forensics (roughly $5.7B, 2026) and digital forensics (roughly $13.5B–14.9B, 2025), and SIGINT (roughly $17.7B–19.8B, the strategic ceiling). The hardest anchor is <strong>Cellebrite</strong> (NASDAQ: CLBT): Q1 FY2026 total revenue of $128.3M (up 19 percent), Annual Recurring Revenue of $493.0M (up 21 percent), 82.5 percent GAAP gross margin, and 115 percent net revenue retention. The corroborating pure-play, <strong>MSAB</strong> (MSAB B), reported FY2025 net sales of SEK 461.8M (up 14.1 percent) and its first profitable first half in H1 2026. <strong>Magnet Forensics</strong> was taken private by Thoma Bravo at roughly C$1.8B (closed April 2023). The demand story underneath: US Customs and Border Protection searched roughly 47,000 devices in 2024, up from roughly 8,500 in 2015.</p>
-<hr>
+<p><strong>The figures that anchor it.</strong> Four adjacent markets are walled and never summed: lawful interception (roughly $5.5B–7.5B, the carrier-mediated outer envelope), IMSI-catcher and cellular interception (roughly $183M–695M, 2025, with CAGRs of 4.6–9.8 percent running well below interception's roughly 20 percent), mobile forensics (roughly $5.7B, 2026) and digital forensics (roughly $13.5B–14.9B, 2025), and SIGINT (roughly $17.7B–19.8B, the strategic ceiling). The hardest anchor is <strong>Cellebrite</strong> (NASDAQ: CLBT): Q1 FY2026 total revenue of $128.3M (up 19 percent), Annual Recurring Revenue of $493.0M (up 21 percent), 82.5 percent GAAP gross margin, and 115 percent net revenue retention. The corroborating pure-play, <strong>MSAB</strong> (MSAB B), reported FY2025 net sales of SEK 461.8M (up 14.1 percent) and its first profitable first half in H1 2026. <strong>Magnet Forensics</strong> was taken private by Thoma Bravo at roughly C$1.8B (closed April 2023). The demand story underneath: US Customs and Border Protection searched roughly 47,000 devices in 2024, up from roughly 8,500 in 2015.</p>
+<hr />
 <h2>Market Four — Fusion / Decision Intelligence</h2>
 <p><strong>The playing ground.</strong> Fusion is where intelligence stops being about getting the data and starts being about making sense of it. Every other market produces material; that material has to be correlated, de-duplicated, resolved into real-world people and organizations, mapped into relationships, placed in space and time, and turned into something an analyst can act on. That work is fusion — the analytical layer on top of collection, not a peer collection silo. The grading test is strict and unforgiving: a vendor earns a grade here only if it sells the fusion-and-analytics layer standalone to a buyer who brings their own sources. A vendor whose analytics are inseparable from its own collection is graded in its collection market and merely referenced here. That single discipline is what keeps this market from becoming a double-counting catch-all.</p>
 <p><strong>Who leads.</strong> Five vendors are graded, not eight — and the gap is the point; the vendors that fell out fell out on architecture-fit, not material scarcity. In the Gravity tier: <strong>Palantir</strong>, the category-defining decision-intelligence platform and the <em>de facto</em> standard every rival is positioned against; and <strong>i2 Group</strong>, the decades-old link-analysis standard the AI-native disruptors are positioned to displace (owned by N. Harris Computer within Constellation Software, not IBM). The Attention tier holds <strong>Nuix</strong>, the processing-first contender buying the graph layer inorganically (via Linkurious); and <strong>Cognyte</strong>, graded strictly on its publicly-marketed NEXYTE decision-intelligence platform, which passes the layer test directly by marketing data fusion, identity resolution, and relation analytics to bring-your-own-source buyers — read as positioning, not verified architecture. The Wildcard is <strong>Siren</strong>, the federated-fusion bet against the central data lake. Microsoft, BAE Systems (NetReveal divested to SymphonyAI in 2022), and the primes (Leidos, GDIT, RTX, Oracle) are referenced as market structure, not graded — they fail the standalone-fusion-to-bring-your-own-source test.</p>
-<p><strong>What&rsquo;s moving.</strong> Five plays, and three pattern claims carry the verdict. The Palantir-gravity thesis: in a 9 March 2026 letter the US Deputy Secretary of Defense directed that Palantir&rsquo;s Maven Smart System be designated a Pentagon program of record across all military branches — converting pilots into locked-in, multi-year core infrastructure, though the DIA &ldquo;Prometheus&rdquo; sole-source protest keeps the in-house build a genuine Tier-0 competitor at the very top. The layer-consolidation thesis: challengers completing the stack by buying or federating the graph and entity-resolution layer (Nuix acquiring Linkurious, Siren federating over Elasticsearch with a strategic investment from Elastic). And the incumbent-standard stress test: whether the AI-native platforms displace i2&rsquo;s link-analysis standard or it modernizes and holds — scored MIXED, because both the disruptor and the incumbent are growing double digits.</p>
-<p><strong>The verdict.</strong> Winners are Palantir, the scale and momentum outlier reinforced by the Maven designation, and Nuix, winning the &ldquo;assemble the complete stack inorganically&rdquo; position on ASX-disclosed financials. On the Watch line: Cognyte, graded public-only and placed on Watch rather than labeled a winner precisely because of the author&rsquo;s former-employer conflict, on a constructive public posture of GAAP profitability and growth guidance; and Siren, the federated-architecture bet whose momentum is partnership-led. No contender is graded a Loser.</p>
+<p><strong>What's moving.</strong> Five plays, and three pattern claims carry the verdict. The Palantir-gravity thesis: in a 9 March 2026 letter the US Deputy Secretary of Defense directed that Palantir's Maven Smart System be designated a Pentagon program of record across all military branches — converting pilots into locked-in, multi-year core infrastructure, though the DIA "Prometheus" sole-source protest keeps the in-house build a genuine Tier-0 competitor at the very top. The layer-consolidation thesis: challengers completing the stack by buying or federating the graph and entity-resolution layer (Nuix acquiring Linkurious, Siren federating over Elasticsearch with a strategic investment from Elastic). And the incumbent-standard stress test: whether the AI-native platforms displace i2's link-analysis standard or it modernizes and holds — scored MIXED, because both the disruptor and the incumbent are growing double digits.</p>
+<p><strong>The verdict.</strong> Winners are Palantir, the scale and momentum outlier reinforced by the Maven designation, and Nuix, winning the "assemble the complete stack inorganically" position on ASX-disclosed financials. On the Watch line: Cognyte, graded public-only and placed on Watch rather than labeled a winner precisely because of the author's former-employer conflict, on a constructive public posture of GAAP profitability and growth guidance; and Siren, the federated-architecture bet whose momentum is partnership-led. No contender is graded a Loser.</p>
 <p><strong>The figures that anchor it.</strong> No publisher sells a methodology-disclosed government-fusion figure, so three adjacent markets are walled (decision intelligence bracketed around $15.2B–17.4B in 2025, CAGRs clustering 15.4–19.1 percent). The public issuers anchor it. <strong>Palantir</strong> (NYSE: PLTR): Government-segment revenue of $858M for the quarter ended 31 March 2026 (up 76 percent; US Government $687M, up 84 percent), total revenue $1.63B (up 85 percent), against a more-than-$4B-cash, zero-debt balance sheet, plus a US Army TITAN award reported at roughly $178M. <strong>Nuix</strong> (ASX: NXL): first-half FY2026 revenue of A$121.2M (up 15 percent), statutory net profit of A$11.1M, and Nuix Neo ACV up 148 percent year-over-year to roughly 20 percent of total ACV (A$234.4M); the Linkurious acquisition was signed for up to €20M. <strong>i2 Group</strong> disclosed a 40 percent year-on-year increase in bookings across a base spanning more than 140 countries. <strong>Cognyte</strong> (NASDAQ: CGNT): FY2026 revenue of $400.0M (up 14.1 percent, total group revenue) and a return to GAAP operating income of $13.3M from a prior-year operating loss; Q1 FYE27 revenue of $105.5M (up 10.4 percent), with FY2027 revenue guidance reaffirmed at roughly $448M.</p>
-<hr>
+<hr />
 <h2>Market Five — Open-Source Intelligence (OSINT / WEBINT)</h2>
 <p><strong>The playing ground.</strong> Open-source intelligence is the discipline of gathering and exploiting information that is already in the open — the web, social platforms, public records, breach corpora, satellite imagery, and the technical exhaust of the internet itself. The work is turning that raw material into something an analyst can act on. The buyer is a national-intelligence or national-security agency, a law-enforcement investigations unit, a defense or military-intelligence cell, a corporate-security or threat-intelligence function, or a financial-crime and due-diligence team. This is the market where the candidate list overflows the cap rather than struggling to fill it, so the discipline is cutting: the structural map surfaces sixteen-plus public vendors with quotable self-positioning.</p>
 <p><strong>Who leads.</strong> Eight vendors are graded across three tiers. In the Gravity tier, the structural anchors: <strong>Recorded Future</strong>, the category anchor now inside Mastercard; <strong>Dataminr</strong>, the speed archetype leading on earliest signal; and <strong>Babel Street</strong>, the multilingual-and-licensed-data anchor. The Attention tier holds <strong>Flashpoint</strong>, the primary-source-depth contender; <strong>Cognyte</strong>, graded strictly on its publicly-marketed LUMINAR external-threat-intelligence product, which sits on the boundary between OSINT and Fusion; <strong>Maltego</strong>, the analyst-workbench and link-analysis archetype other data providers plug into; and <strong>Fivecast</strong>, the clearest mission-built-for-government OSINT collector. The Wildcard is <strong>Strider Technologies</strong>, which reframes what OSINT is <em>for</em> — nation-state and economic-espionage risk from public data. Eight further public candidates (Cybersixgill, ZeroFox, PenLink, Primer, Social Links, ShadowDragon, Skopenow) are cut and placed as cross-references or plays; Voyager Labs sits in the locked never-graded surveillance set.</p>
-<p><strong>What&rsquo;s moving.</strong> Five plays and three pattern claims. The strategic-acquirer absorption thesis: in an eighteen-month window the market lost three of its most prominent independent brands to acquirers, with Mastercard&rsquo;s $2.65B purchase of Recorded Future the signature deal — the independent-brand path is closing. The agentic repositioning: the contenders converged on near-identical &ldquo;agentic AI&rdquo; homepage language, but as of mid-2026 no vendor has published a named reference attributing a specific decision to autonomous agentic action, so the word signals table stakes, not a moat, until one of them does. And the contestable-lane-and-free-floor squeeze: US government OSINT is bought predominantly through commercial-off-the-shelf subscriptions on federal vehicles (GSA, Carahsoft), while a free floor — Maltego community editions, open-source toolkits, general-purpose language models — presses up from below, putting a vise on the commodity middle.</p>
+<p><strong>What's moving.</strong> Five plays and three pattern claims. The strategic-acquirer absorption thesis: in an eighteen-month window the market lost three of its most prominent independent brands to acquirers, with Mastercard's $2.65B purchase of Recorded Future the signature deal — the independent-brand path is closing. The agentic repositioning: the contenders converged on near-identical "agentic AI" homepage language, but as of mid-2026 no vendor has published a named reference attributing a specific decision to autonomous agentic action, so the word signals table stakes, not a moat, until one of them does. And the contestable-lane-and-free-floor squeeze: US government OSINT is bought predominantly through commercial-off-the-shelf subscriptions on federal vehicles (GSA, Carahsoft), while a free floor — Maltego community editions, open-source toolkits, general-purpose language models — presses up from below, putting a vise on the commodity middle.</p>
 <p><strong>The verdict.</strong> Winners are Recorded Future (sold at the top of the cycle), Dataminr (the lone independent still acting as a consolidator rather than a target), and Strider Technologies (winning the net-new nation-state vertical, a budget line rather than a share war). On the Watch line: Babel Street, the most active independent build-and-hire of 2026 but with ownership and funding that could not be cleanly resolved; and Fivecast, the clearest government-mission pure-play, pursuing a partnership stack. No contender is graded a Loser; the public events are consolidation and strategic exit, not failure.</p>
 <p><strong>The figures that anchor it.</strong> Three publishers size the broad market and diverge widely enough that the disagreement is the finding: Mordor at $18.20B, The Business Research Company at $18.07B, and Global Market Insights at $12.7B for 2025, with CAGRs from 15.6 percent to 27 percent. The deal record is the harder currency. Mastercard acquired <strong>Recorded Future</strong> (more than 1,900 clients across 75 countries, including the governments of 45 countries) for $2.65B (announced September 2024, closed December 2024). <strong>Dataminr</strong> announced a $290M acquisition of ThreatConnect (closed 25 November 2025) and took a $100M Fortress convertible in April 2025, against a last priced mark of $4.1B (Series F, 2021, carried as historical). <strong>Strider</strong> raised a $55M Series C led by Pelion in September 2024 (roughly $117M total). Bitsight agreed to acquire Cybersixgill (roughly $115M), and Haveli took ZeroFox private (roughly $350M enterprise value).</p>
-<hr>
-<h2>The Convergence — The Market as One Battlefield</h2>
+<hr />
+<h2>The Convergence — the market as one battlefield</h2>
 <p>Read the five markets together and the government-intelligence software market resolves into a single battlefield with a clear shape. Four cross-market patterns recur with enough public evidence to name.</p>
-<p><strong>First, breadth is a stack position, not a verified suite.</strong> Most vendors hold one practice; a network-interception cluster (ClearTrail, Vehere, Trovicor) spans the two interception markets on public pages; and exactly one vendor — <strong>Cognyte</strong> — carries graded public-page pillars across all five practices, on distinct dated surfaces (a network-intelligence glossary for National Agencies, the NEXYTE-LEA &ldquo;lawful interception … data source&rdquo; line for Monitoring Centers, a border-protection page for Tactical, NEXYTE for Fusion, and LUMINAR for OSINT). On this report&rsquo;s own reading of the public pages, that is the only full collection-to-fusion span. But it is breadth of public positioning assembled across separate pages, a SEC filing, and a registered trademark — not evidence of an integrated, verified five-front product suite. Palantir holds a narrower fusion-anchored breadth from the analytics-prime side. The pattern: vendors are broad because they sit at or climb toward the fusion layer that touches everything, not because they publish one verified product spanning every collection silo.</p>
-<p><strong>Second, the AI-native repositioning is concentrated, not universal.</strong> &ldquo;Agentic&rdquo; is now the lead homepage word in fusion and OSINT — Palantir, Cognyte, Dataminr, Babel Street, Strider. In SIGINT, AI is defensive — encrypted-traffic intelligence to recover visibility lost to TLS 1.3 and QUIC. In lawful interception and tactical, the front is not AI-led at all; it is led by standards and by encryption-and-hardware physics. And the agentic line has not yet been drawn: no vendor has published a named reference attributing an outcome to autonomous agentic action, so the repositioning is real as positioning and unproven as differentiated capability.</p>
+<p><strong>First, breadth is a stack position, not a verified suite.</strong> Most vendors hold one practice; a network-interception cluster (ClearTrail, Vehere, Trovicor) spans the two interception markets on public pages; and exactly one vendor — <strong>Cognyte</strong> — carries graded public-page pillars across all five practices, on distinct dated surfaces (a network-intelligence glossary for National Agencies, the NEXYTE-LEA "lawful interception … data source" line for Monitoring Centers, a border-protection page for Tactical, NEXYTE for Fusion, and LUMINAR for OSINT). On this report's own reading of the public pages, that is the only full collection-to-fusion span. But it is breadth of public positioning assembled across separate pages, a SEC filing, and a registered trademark — not evidence of an integrated, verified five-front product suite. Palantir holds a narrower fusion-anchored breadth from the analytics-prime side. The pattern: vendors are broad because they sit at or climb toward the fusion layer that touches everything, not because they publish one verified product spanning every collection silo.</p>
+<p><strong>Second, the AI-native repositioning is concentrated, not universal.</strong> "Agentic" is now the lead homepage word in fusion and OSINT — Palantir, Cognyte, Dataminr, Babel Street, Strider. In SIGINT, AI is defensive — encrypted-traffic intelligence to recover visibility lost to TLS 1.3 and QUIC. In lawful interception and tactical, the front is not AI-led at all; it is led by standards and by encryption-and-hardware physics. And the agentic line has not yet been drawn: no vendor has published a named reference attributing an outcome to autonomous agentic action, so the repositioning is real as positioning and unproven as differentiated capability.</p>
 <p><strong>Third, consolidation runs on two engines pulling the same direction — up and out.</strong> Strategic acquirers are absorbing the OSINT and analytical layer into adjacent platforms (Mastercard/Recorded Future at $2.65B, Bitsight/Cybersixgill, Dataminr/ThreatConnect at $290M). Private equity is rolling up the collection and interception layer off the public market (Thoma Bravo/Magnet-Grayshift at roughly C$1.8B, Mill Point/SS8, Haveli/ZeroFox at roughly $350M, PenLink/Cobwebs at roughly $200M). A regulatory-restructuring strand (the Sandvine episode) and a fusion-accretion strand (Nuix/Linkurious, Elastic/Siren) run alongside. All vectors move value toward the analytical layer and roll up or constrain collection beneath it.</p>
 <p><strong>Fourth, the markets are not equally in play.</strong> Ranked by competitive and structural pressure: Open-Source Intelligence is first (the fastest deal tempo, lowest barrier, agentic arms race, and a rising commodity floor); Fusion is second (the highest-value layer and AI-native battleground, but accreditation-defended, so value concentrates at the top); National Agencies is third (an existential but slow-moving encryption technology shift, export-control-gated); Tactical is fourth (bifurcating as device forensics rises and RF interception declines); and Law Enforcement Monitoring Centers is last on pressure precisely because it is first on defensibility — the standards-conformance moat is the hardest in the study, and the market adapts to 5G inside the standards rather than being displaced from outside.</p>
 <p><strong>The strategic reading.</strong> The floor is rising under collection and the ceiling is rising over fusion. The defensible positions in 2026 are three: the analytical layer, if you can pass accreditation and prove AI actually compresses time-to-decision; the standards-gated interception niche, if you can afford the 5G conformance bar; and government-anchored mission depth, if the free OSINT floor cannot follow you up-stack. The exposed positions are commodity open-web collection, content-interception value propositions that encryption is hollowing out, and any vendor whose breadth is asserted rather than visible on a public page.</p>
-<h2>What to Watch — The Cross-Front Signals for H2 2026</h2>
+<h2>What to watch — the cross-front signals for H2 2026</h2>
 <p>Five falsifiable signals, each spanning more than one market, will tell whether this reading holds through the back half of 2026:</p>
 <ol>
-<li><strong>A named agentic-outcome reference win</strong> in fusion or OSINT — one named government or enterprise reference attributing a decision to autonomous agentic action, with competitors silent, would begin separating AI-native into a real differentiator. Uniform &ldquo;agentic&rdquo; language with no named win demotes it to table stakes.</li>
+<li><strong>A named agentic-outcome reference win</strong> in fusion or OSINT — one named government or enterprise reference attributing a decision to autonomous agentic action, with competitors silent, would begin separating AI-native into a real differentiator. Uniform "agentic" language with no named win demotes it to table stakes.</li>
 <li><strong>A third strategic-acquirer absorption</strong> of an OSINT or analytics pure-play by a non-defense platform (payments, cloud, identity, ratings) — or a further roll-up after Dataminr/ThreatConnect — hardens the absorption engine. A fresh named-lead primary mega-round on a pure-play would show independent collection is still financeable.</li>
-<li><strong>A verified-suite move</strong> — a vendor publishing an integrated, single-platform reference unifying three or more collection-and-fusion practices as one verified product — would weaken the &ldquo;public-span-not-a-suite&rdquo; reading toward a real integrated suite.</li>
+<li><strong>A verified-suite move</strong> — a vendor publishing an integrated, single-platform reference unifying three or more collection-and-fusion practices as one verified product — would weaken the "public-span-not-a-suite" reading toward a real integrated suite.</li>
 <li><strong>An encryption-erosion or 5G-standalone inflection</strong> — a public demonstration of durable 5G-standalone content interception at scale, or accelerating ECH/QUIC adoption reported as breaking deployed interception — would re-rank the technology-shift pressure on the three collection markets.</li>
 <li><strong>A further export-control or accountability action</strong> against a named collection or surveillance vendor — a new Entity-List designation, EU dual-use enforcement, or a cured-and-restructured re-entry on the Sandvine model — would extend the regulatory-restructuring strand and narrow the legitimate gradeable set further.</li>
 </ol>
-<p>The throughline of all five is the same one this companion opened on: value is migrating up the stack, the floor is rising under collection, and the contest in 2026 is for the analytical layer. Where a vendor sits relative to that migration — climbing toward fusion, defending a standards-gated niche, or stuck in commoditizing collection — is the single best public predictor of which side of this market&rsquo;s consolidation it will be on.</p>
-<h2>Method and Sources</h2>
-<p>Every claim in this companion is built only from each vendor&rsquo;s own public product pages, public filings, and dated named-outlet reporting — the same material the full five-market report and its convergence synthesis cite. Market-size figures are cited to their publishers and are never averaged; where publishers disagree, the spread is treated as the finding. Capability is reported as what a vendor publicly markets (&ldquo;markets itself as&rdquo;), not as verified architecture, which cannot be confirmed from outside. Where a vendor is a former employer of the author, its material is carried on public sources only, with any lineage framed as inherited rather than as a current product, and attributed rather than asserted. This is a digest of the full report; the complete chapters, figures, footnotes, and methodology live at productbeacon.agency/research. This companion does not constitute investment, legal, tax, or accounting advice.</p>
-
-<section class="back-disclosures">
-<h2>Disclosures</h2>
-<p><strong>DISCLOSURE.</strong> This is independent ProductBeacon research by Yohay Etsion, Managing Director of ProductBeacon, based solely on publicly available material; it reflects the author's personal analysis, not any vendor's position. The author served as VP Product at Cognyte, which competes across several of the fronts covered here (its NEXYTE and LUMINAR platforms); this analysis rests only on publicly available material, and no former-employer confidential or trade-secret information informed it. No vendor sponsors this research and no paywalled data underpins it. This report does not constitute investment, legal, tax, or accounting advice; no claim here should be relied upon as the basis for any investment decision. As of June 2026, the author holds no position in any named public security, directly or via a cybersecurity-sector ETF, and is not compensated by any named vendor. Full method: <a href="/research/methodology.html">Methodology →</a>.</p>
-<p><strong>NOT ADVICE.</strong> This report does not constitute investment, legal, tax, or accounting advice. No claim should be relied upon as the basis for any investment decision. The author holds no trading position in any named public security and is not compensated by any named vendor. Readers who use this report in investment contexts bear sole responsibility for their decisions.</p>
+<p>The throughline of all five is the same one this companion opened on: value is migrating up the stack, the floor is rising under collection, and the contest in 2026 is for the analytical layer. Where a vendor sits relative to that migration — climbing toward fusion, defending a standards-gated niche, or stuck in commoditizing collection — is the single best public predictor of which side of this market's consolidation it will be on.</p>
+<h2>Methodology &amp; sourcing</h2>
+<p>Every claim in this companion is built only from each vendor's own public product pages, public filings, and dated named-outlet reporting — the same material the full five-market report and its convergence synthesis cite. Market-size figures are cited to their publishers and are never averaged; where publishers disagree, the spread is treated as the finding. Capability is reported as what a vendor publicly markets ("markets itself as"), not as verified architecture, which cannot be confirmed from outside. Where a vendor is a former employer of the author, its material is carried on public sources only, with any lineage framed as inherited rather than as a current product, and attributed rather than asserted. This is a digest of the full report; the complete chapters, figures, footnotes, and methodology live at productbeacon.agency/research. This companion does not constitute investment, legal, tax, or accounting advice.</p>
+<p><em>Factual corrections: yohay@productbeacon.agency within five business days of publication.</em></p>
+<p><em>ProductBeacon Research · The State of Digital Intelligence 2026 · Pre-Call Briefing Pack · As of June 2026 · Not investment advice.</em></p>
 </section>
+</main>
+
+<!-- CHROME:FOOTER:START -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/index.html" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Run an AI workforce, or have us run it for you.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="/on-call.html">ProductBeacon On Call</a>
+        <a href="/on-call.html">Fractional Product Leadership</a>
+        <a href="/on-call.html">Product Build</a>
+        <a href="/on-call.html#org">Product Org Services</a>
+      </div>
+      <div class="footer__col">
+        <h4>Capabilities</h4>
+        <a href="/index.html#intensive">The Operator Intensive</a>
+        <a href="/workforce.html">The Workforce</a>
+        <a href="/index.html#path">The Operator's Private Line</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
+        <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- CHROME:FOOTER:END -->
+<script src="/js/main.js"></script>
 </body>
 </html>
