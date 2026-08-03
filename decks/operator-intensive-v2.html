@@ -325,9 +325,9 @@ body {
       <h1 class="display">You already have the workforce.</h1>
       <div class="amber-rule"></div>
       <div class="big-lines">
-        <p>You hold the licence. The agents are on your machine.</p>
+        <p>The agents are installed. They are running on your machine right now.</p>
         <p>So today is not about what it is. Today is about how you run it.</p>
-        <p class="muted">Nothing I show you needs a purchase, an upgrade, or my permission.</p>
+        <p class="muted">Everything I show you already works. Nothing here waits on my permission.</p>
       </div>
     </div>
   </section>
@@ -525,7 +525,7 @@ your recommendation.</code></pre>
       </ul>
 
         </div>
-              <blockquote class="pullquote">The workforce scales the work; the call stays yours. That is the part no one can sell you.</blockquote>
+              <blockquote class="pullquote">The workforce scales the work; the call stays yours. That is the part you cannot hand off.</blockquote>
       </div>
     </div>
   </section>
@@ -2010,13 +2010,14 @@ This pack composes with the following ProductBeacon surfaces:
     <p class="subhead-sm">You don't run the protocol. You benefit from it.</p>
     <div class="split-body">
       <div class="split-left"><ul class="bullets">
-        <li>Every spawn runs a fixed protocol: load identity, load the right skills and packs, do the work, then emit one Audit Block.</li>
-        <li>That Audit Block is the receipt: what it loaded, what it touched, what it produced.</li>
-        <li>Every receipt lands in the telemetry log. You can always see how an answer was built.</li>
+        <li>Every spawn runs the same five steps: find and feed the context, load identity, load skills and packs, do the work, emit one Audit Block.</li>
+        <li>Step one is the one people skip. Past decisions, learnings and feedback are fed in before the agent starts.</li>
+        <li>The difference: an agent starting from a blank page, or one that already knows what you decided.</li>
+        <li>That Audit Block is the receipt, and it lands in the telemetry log. You can always see how an answer was built.</li>
       </ul></div>
       <div class="split-right"><div class="pb-frag"><div style="flex:1 1 240px;min-width:230px;">
     <svg viewBox="0 0 280 408" width="100%" height="auto" role="img"
-         aria-label="Each spawn loads identity then skills and packs, does the work, and emits one Audit Block — a single receipt for the whole run — which is then captured into the telemetry log.">
+         aria-label="Each spawn first finds and feeds the prior context, then loads identity, then loads skills and packs, does the work, and emits one Audit Block — a single receipt for the whole run — which is then captured into the telemetry log.">
       <defs>
         <style>
           .s-step{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:14px;}
@@ -2027,24 +2028,28 @@ This pack composes with the following ProductBeacon surfaces:
           <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
         </marker>
       </defs>
-      <rect x="20" y="10" width="240" height="44" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
-      <text x="40" y="30" class="s-num">1</text><text x="62" y="38" class="s-step">load identity</text>
-      <line x1="140" y1="56" x2="140" y2="74" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
-      <rect x="20" y="76" width="240" height="44" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
-      <text x="40" y="96" class="s-num">2</text><text x="62" y="104" class="s-step">load skills + packs</text>
-      <line x1="140" y1="122" x2="140" y2="140" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
-      <rect x="20" y="142" width="240" height="44" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
-      <text x="40" y="162" class="s-num">3</text><text x="62" y="170" class="s-step">do the work</text>
-      <line x1="140" y1="188" x2="140" y2="206" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
-      <rect x="20" y="208" width="240" height="56" rx="11" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
-      <text x="40" y="232" class="s-num">4</text><text x="62" y="240" class="s-step">emit one Audit Block</text>
-      <text x="62" y="256" class="s-sub">the receipt for the whole run</text>
-      <line x1="140" y1="266" x2="140" y2="284" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
-      <rect x="20" y="286" width="240" height="48" rx="11" fill="#0f1828" stroke="#3a4660" stroke-width="1.5" stroke-dasharray="5 4"/>
-      <text x="40" y="308" style="font-family:'JetBrains Mono',monospace;fill:#FBBF24;font-size:12px;">&#128202;</text><text x="62" y="310" class="s-step">telemetry log</text>
-      <text x="62" y="325" class="s-sub">captured after the run</text>
-      <text x="20" y="362" class="s-sub" style="font-size:11px;">One block records the whole run: what it loaded</text>
-      <text x="20" y="378" class="s-sub" style="font-size:11px;">(before) and what it produced + cost (after).</text>
+      <rect x="20" y="8" width="240" height="46" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="28" class="s-num">1</text><text x="62" y="28" class="s-step">find + feed the context</text>
+      <text x="62" y="44" class="s-sub">what you already decided</text>
+      <line x1="140" y1="54" x2="140" y2="70" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="72" width="240" height="36" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="95" class="s-num">2</text><text x="62" y="95" class="s-step">load identity</text>
+      <line x1="140" y1="108" x2="140" y2="124" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="126" width="240" height="36" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="149" class="s-num">3</text><text x="62" y="149" class="s-step">load skills + packs</text>
+      <line x1="140" y1="162" x2="140" y2="178" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="180" width="240" height="36" rx="11" fill="#111c30" stroke="rgba(245,158,11,0.22)" stroke-width="1.5"/>
+      <text x="40" y="203" class="s-num">4</text><text x="62" y="203" class="s-step">do the work</text>
+      <line x1="140" y1="216" x2="140" y2="232" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="234" width="240" height="46" rx="11" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+      <text x="40" y="254" class="s-num">5</text><text x="62" y="254" class="s-step">emit one Audit Block</text>
+      <text x="62" y="270" class="s-sub">the receipt for the whole run</text>
+      <line x1="140" y1="280" x2="140" y2="296" stroke="#F59E0B" stroke-width="1.6" marker-end="url(#arrS)"/>
+      <rect x="20" y="298" width="240" height="42" rx="11" fill="#0f1828" stroke="#3a4660" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="40" y="319" style="font-family:'JetBrains Mono',monospace;fill:#FBBF24;font-size:12px;">&#128202;</text><text x="62" y="319" class="s-step">telemetry log</text>
+      <text x="62" y="333" class="s-sub">captured after the run</text>
+      <text x="20" y="362" class="s-sub" style="font-size:11px;">One block records the whole run: what it loaded,</text>
+      <text x="20" y="378" class="s-sub" style="font-size:11px;">the context it used, and what it produced.</text>
       <text x="20" y="396" style="font-family:Inter,sans-serif;fill:#FBBF24;font-size:11px;">Then it lands in the telemetry log.</text>
     </svg>
   </div></div></div>
@@ -2353,7 +2358,152 @@ This pack composes with the following ProductBeacon surfaces:
       <p class="subhead">More work than you can read. And the part of it that is still yours.</p>
     </div>
   </section>
-  <section class="slide" id="slide-27" data-slide="27" data-sid="cycle">
+  <section class="slide" id="slide-27" data-slide="27" data-sid="route">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Don't pick the agent. Let the Coding Agent route.</h2>
+      <p class="subhead-sm">Say what you need in business terms; let the manager staff it.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>You don't memorize 96 agents. Describe the problem in plain language.</li>
+        <li>The coding agent routes to the right specialist(s) based on your context and the task.</li>
+        <li>Picking agents yourself is like a CEO assigning desks. Not your job.</li>
+        <li>Your job: frame the problem well, and judge the answer.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: route | SVG router-pick — problem -> router -> ONE right specialist (alternatives greyed). -->
+<!-- DELIBERATELY DISTINCT from spawn-team.html: that one fans OUT to many; this one PICKS one. Single highlighted path. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 360" width="100%" height="auto" role="img"
+       aria-label="A plain-language problem goes to a router, which picks the one right specialist while the alternatives stay greyed out.">
+    <defs>
+      <style>
+        .r-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
+        .r-dim{font-family:Inter,system-ui,sans-serif;fill:#5b6982;font-weight:600;font-size:13px;}
+        .r-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .r-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+      <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+      <marker id="arrRdim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#3a4660"/>
+      </marker>
+    </defs>
+
+    <!-- problem -->
+    <rect x="18" y="146" width="148" height="68" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+    <text x="92" y="174" text-anchor="middle" class="r-node">Your problem</text>
+    <text x="92" y="193" text-anchor="middle" class="r-sub">in plain words</text>
+
+    <!-- to router -->
+    <line x1="166" y1="180" x2="252" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrR)"/>
+
+    <!-- router (diamond) -->
+    <polygon points="320,135 390,180 320,225 250,180" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="320" y="178" text-anchor="middle" class="r-node">Router</text>
+    <text x="320" y="196" text-anchor="middle" class="r-sub">picks one</text>
+    <text x="320" y="118" text-anchor="middle" class="r-cap">Claude decides</text>
+
+    <!-- ONE highlighted path -->
+    <line x1="390" y1="180" x2="500" y2="180" stroke="#F59E0B" stroke-width="2.4" marker-end="url(#arrR)"/>
+    <rect x="502" y="152" width="200" height="56" rx="11" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="520" y="178" class="r-node">&#127919; the right specialist</text>
+    <text x="520" y="196" class="r-sub">handles it end to end</text>
+
+    <!-- greyed alternatives (not picked) -->
+    <line x1="382" y1="158" x2="500" y2="92" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="70" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="96" class="r-dim">another specialist</text>
+
+    <line x1="382" y1="202" x2="500" y2="272" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="252" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="278" class="r-dim">another specialist</text>
+
+    <text x="92" y="324" class="r-sub" style="fill:#FBBF24;font-style:italic;">You don&#8217;t pick the agent. You describe the problem.</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-28" data-slide="28" data-sid="pbaw">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The command behind it: /pbaw</h2>
+      <p class="subhead-sm">One command has the coding agent choose the right specialist(s) and spawn them the disciplined way.</p>
+      <div class="split-body">
+        <div class="split-left">
+<!-- FRAGMENT: pbaw | /pbaw command card — routing + spawn discipline as one command -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the command &#183; /pbaw
+  </div>
+  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
+    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/pbaw</code>
+    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">describe the problem &#8212; it staffs and spawns the right team</div>
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <tbody>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reads your request and <strong>chooses the right specialist(s)</strong> from the existing teams</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Spawns them under the <span style="color:#FBBF24;">full spawn protocol</span> &#8212; identity, skills + packs, one Audit Block each</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Presents each in first person; <strong>synthesizes several voices into one answer</strong></td></tr>
+      <tr><td style="padding:9px 16px;">You never wire agents by hand &#8212; <span style="color:#FBBF24;">/plan</span> and the playbooks call it for you</td></tr>
+    </tbody>
+  </table>
+</div>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: pbaw-example | worked example — one /pbaw request choosing + spawning the right specialists -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    an example &#183; you ask, /pbaw staffs it
+  </div>
+  <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.9rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>/pbaw price our new subscription tier</code></pre>
+  </div>
+  <div style="text-align:center;color:#F59E0B;font-size:1.3rem;font-weight:700;margin-bottom:8px;">&#8595;</div>
+  <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">it chooses + spawns</div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
+    <tbody>
+      <tr>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128200; VP Product</td>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">pricing strategy + the tier call</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128202; BizOps</td>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">margins + the business case</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 16px;white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128302; Competitive Intel</td>
+        <td style="padding:11px 16px;color:#9FB0C6;">how rivals price the same tier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:12px 2px 0;font-size:0.9rem;color:#9FB0C6;">Three specialists you never named &#8212; each with its own Audit Block, folded into <span style="color:#FBBF24;">one recommendation</span> for you to decide.</p>
+</div>
+        </div>
+      </div>
+      <p class="caption-line">The concept from the previous slide, as one command. Type <code style="font-family:'JetBrains Mono',monospace;">/pbaw</code> yourself, or let <code style="font-family:'JetBrains Mono',monospace;">/plan</code> and the playbooks invoke it &#8212; either way the coding agent picks the specialists and runs each under the full protocol.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-29" data-slide="29" data-sid="who-came">
+    <div class="slide-inner big-inner">
+      <h2 class="slide-h2">Look at who came to the meeting.</h2>
+      <p class="subhead-sm">When the work comes back, read the names.</p>
+      <div class="big-lines">
+        <p>Who was in the room? A product manager, a researcher. Fine.</p>
+        <p>Now ask who was not. The director. Product marketing. The architect.</p>
+      </div>
+      <blockquote class="pullquote">You do not pick the agents yourself. You ask it to find the right ones.</blockquote>
+    </div>
+  </section>
+  <section class="slide" id="slide-30" data-slide="30" data-sid="cycle">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">The loop you'll live in</h2>
       <p class="subhead-sm">Frame → Plan → Execute → Audit → Review → Record.</p>
@@ -2364,7 +2514,7 @@ This pack composes with the following ProductBeacon surfaces:
         <li>Three commands drive it: <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> plans, <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/audit</code> gates, <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/context-harvest</code> records.</li>
         <li><code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/audit</code> gates <em>both</em> ends: the plan before you run it, the result after.</li>
         <li>Every loop feeds memory and decision records, so the next loop is smarter.</li>
-        <li>This loop is what you are actually buying: a repeatable way to run a company through a workforce.</li>
+        <li>This loop is what you are actually learning: a repeatable way to run a company through a workforce.</li>
       </ul>
 
       <blockquote class="pullquote">The loop is the product. Everything else is how it turns.</blockquote>
@@ -2450,7 +2600,7 @@ This pack composes with the following ProductBeacon surfaces:
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-28" data-slide="28" data-sid="first-plan">
+  <section class="slide" id="slide-31" data-slide="31" data-sid="first-plan">
     <div class="slide-inner big-inner">
       <p class="eyebrow">The first-plan law</p>
       <h1 class="display">The first plan is never good.</h1>
@@ -2462,7 +2612,7 @@ This pack composes with the following ProductBeacon surfaces:
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-29" data-slide="29" data-sid="how-to-plan">
+  <section class="slide" id="slide-32" data-slide="32" data-sid="how-to-plan">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">How to plan: /plan</h2>
       <p class="subhead-sm">One command runs the whole planning discipline &#8212; including the pre-execution review.</p>
@@ -2529,7 +2679,7 @@ This pack composes with the following ProductBeacon surfaces:
       <p class="caption-line">Get a plan first: written intent before any action &#8212; goal, steps, files, what each produces, the risks. <code style="font-family:'JetBrains Mono',monospace;">/plan</code> runs that discipline end to end and finishes with the review on the right. You steer cheaply on paper, not expensively mid-execution.</p>
     </div>
   </section>
-  <section class="slide" id="slide-30" data-slide="30" data-sid="drill-audit">
+  <section class="slide" id="slide-33" data-slide="33" data-sid="drill-audit">
     <div class="slide-inner big-inner">
       <span class="drill-tag">Do this now</span>
       <h2 class="slide-h2">Send the plan to audit.</h2>
@@ -2542,151 +2692,6 @@ This pack composes with the following ProductBeacon surfaces:
         <p>A fresh reviewer, never the one who did the work.</p>
         <p class="muted">Run it after every big step. It always finds something.</p>
       </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-31" data-slide="31" data-sid="route">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">Don't pick the agent. Let the Coding Agent route.</h2>
-      <p class="subhead-sm">Say what you need in business terms; let the manager staff it.</p>
-      <div class="split-body">
-        <div class="split-left">
-      <ul class="bullets">
-        <li>You don't memorize 96 agents. Describe the problem in plain language.</li>
-        <li>The coding agent routes to the right specialist(s) based on your context and the task.</li>
-        <li>Picking agents yourself is like a CEO assigning desks. Not your job.</li>
-        <li>Your job: frame the problem well, and judge the answer.</li>
-      </ul>
-
-
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: route | SVG router-pick — problem -> router -> ONE right specialist (alternatives greyed). -->
-<!-- DELIBERATELY DISTINCT from spawn-team.html: that one fans OUT to many; this one PICKS one. Single highlighted path. -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <svg viewBox="0 0 720 360" width="100%" height="auto" role="img"
-       aria-label="A plain-language problem goes to a router, which picks the one right specialist while the alternatives stay greyed out.">
-    <defs>
-      <style>
-        .r-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
-        .r-dim{font-family:Inter,system-ui,sans-serif;fill:#5b6982;font-weight:600;font-size:13px;}
-        .r-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
-        .r-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
-      </style>
-      <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
-      </marker>
-      <marker id="arrRdim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-        <path d="M0,0 L8,4 L0,8 z" fill="#3a4660"/>
-      </marker>
-    </defs>
-
-    <!-- problem -->
-    <rect x="18" y="146" width="148" height="68" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
-    <text x="92" y="174" text-anchor="middle" class="r-node">Your problem</text>
-    <text x="92" y="193" text-anchor="middle" class="r-sub">in plain words</text>
-
-    <!-- to router -->
-    <line x1="166" y1="180" x2="252" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrR)"/>
-
-    <!-- router (diamond) -->
-    <polygon points="320,135 390,180 320,225 250,180" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
-    <text x="320" y="178" text-anchor="middle" class="r-node">Router</text>
-    <text x="320" y="196" text-anchor="middle" class="r-sub">picks one</text>
-    <text x="320" y="118" text-anchor="middle" class="r-cap">Claude decides</text>
-
-    <!-- ONE highlighted path -->
-    <line x1="390" y1="180" x2="500" y2="180" stroke="#F59E0B" stroke-width="2.4" marker-end="url(#arrR)"/>
-    <rect x="502" y="152" width="200" height="56" rx="11" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
-    <text x="520" y="178" class="r-node">&#127919; the right specialist</text>
-    <text x="520" y="196" class="r-sub">handles it end to end</text>
-
-    <!-- greyed alternatives (not picked) -->
-    <line x1="382" y1="158" x2="500" y2="92" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
-    <rect x="502" y="70" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
-    <text x="520" y="96" class="r-dim">another specialist</text>
-
-    <line x1="382" y1="202" x2="500" y2="272" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
-    <rect x="502" y="252" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
-    <text x="520" y="278" class="r-dim">another specialist</text>
-
-    <text x="92" y="324" class="r-sub" style="fill:#FBBF24;font-style:italic;">You don&#8217;t pick the agent. You describe the problem.</text>
-  </svg>
-</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-32" data-slide="32" data-sid="pbaw">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">The command behind it: /pbaw</h2>
-      <p class="subhead-sm">One command has the coding agent choose the right specialist(s) and spawn them the disciplined way.</p>
-      <div class="split-body">
-        <div class="split-left">
-<!-- FRAGMENT: pbaw | /pbaw command card — routing + spawn discipline as one command -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    the command &#183; /pbaw
-  </div>
-  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
-    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/pbaw</code>
-    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">describe the problem &#8212; it staffs and spawns the right team</div>
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
-    <tbody>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reads your request and <strong>chooses the right specialist(s)</strong> from the existing teams</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Spawns them under the <span style="color:#FBBF24;">full spawn protocol</span> &#8212; identity, skills + packs, one Audit Block each</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Presents each in first person; <strong>synthesizes several voices into one answer</strong></td></tr>
-      <tr><td style="padding:9px 16px;">You never wire agents by hand &#8212; <span style="color:#FBBF24;">/plan</span> and the playbooks call it for you</td></tr>
-    </tbody>
-  </table>
-</div>
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: pbaw-example | worked example — one /pbaw request choosing + spawning the right specialists -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    an example &#183; you ask, /pbaw staffs it
-  </div>
-  <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.9rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>/pbaw price our new subscription tier</code></pre>
-  </div>
-  <div style="text-align:center;color:#F59E0B;font-size:1.3rem;font-weight:700;margin-bottom:8px;">&#8595;</div>
-  <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">it chooses + spawns</div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
-    <tbody>
-      <tr>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128200; VP Product</td>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">pricing strategy + the tier call</td>
-      </tr>
-      <tr>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128202; BizOps</td>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">margins + the business case</td>
-      </tr>
-      <tr>
-        <td style="padding:11px 16px;white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128302; Competitive Intel</td>
-        <td style="padding:11px 16px;color:#9FB0C6;">how rivals price the same tier</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="margin:12px 2px 0;font-size:0.9rem;color:#9FB0C6;">Three specialists you never named &#8212; each with its own Audit Block, folded into <span style="color:#FBBF24;">one recommendation</span> for you to decide.</p>
-</div>
-        </div>
-      </div>
-      <p class="caption-line">The concept from the previous slide, as one command. Type <code style="font-family:'JetBrains Mono',monospace;">/pbaw</code> yourself, or let <code style="font-family:'JetBrains Mono',monospace;">/plan</code> and the playbooks invoke it &#8212; either way the coding agent picks the specialists and runs each under the full protocol.</p>
-    </div>
-  </section>
-  <section class="slide" id="slide-33" data-slide="33" data-sid="who-came">
-    <div class="slide-inner big-inner">
-      <h2 class="slide-h2">Look at who came to the meeting.</h2>
-      <p class="subhead-sm">When the work comes back, read the names.</p>
-      <div class="big-lines">
-        <p>Who was in the room? A product manager, a researcher. Fine.</p>
-        <p>Now ask who was not. The director. Product marketing. The architect.</p>
-      </div>
-      <blockquote class="pullquote">You do not pick the agents yourself. You ask it to find the right ones.</blockquote>
     </div>
   </section>
   <section class="slide" id="slide-34" data-slide="34" data-sid="drill-confidence">
@@ -3146,7 +3151,7 @@ This pack composes with the following ProductBeacon surfaces:
 <div class="pb-frag" style="max-width:920px;margin:0 auto;text-align:center;font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
   <div style="font-size:0.8rem;letter-spacing:0.16em;text-transform:uppercase;color:#FBBF24;font-weight:700;margin-bottom:18px;">ProductBeacon</div>
 
-  <h1 style="font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.015em;margin:0;">You don't buy a workforce.<br>You learn to <span style="color:#FBBF24;">govern</span> one.</h1>
+  <h1 style="font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.015em;margin:0;">Anyone can install a workforce.<br><span style="color:#FBBF24;">Governing</span> one is the job.</h1>
 
   <div style="width:96px;height:4px;border-radius:2px;background:linear-gradient(90deg,#F59E0B,#FBBF24);margin:22px auto;"></div>
 
