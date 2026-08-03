@@ -306,7 +306,7 @@ body {
 <main id="deck">
   <section class="slide" id="slide-0" data-slide="0" data-sid="title-new">
     <div class="slide-inner title-inner">
-      <h1 class="display">AI promoted you to manager.<br>Nobody taught you the job.</h1>
+      <h1 class="display">AI promoted you to Operator.<br>Nobody taught you the job.</h1>
       <div class="amber-rule"></div>
       <p class="subhead">The Operator Intensive</p>
       <blockquote class="pullquote">ProductBeacon &#8212; the practice that makes you the operator of a governed AI workforce.</blockquote>
@@ -342,7 +342,21 @@ body {
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-4" data-slide="4" data-sid="employees">
+  <section class="slide" id="slide-4" data-slide="4" data-sid="captain">
+    <div class="slide-inner big-inner">
+      <p class="eyebrow">Briefing altitude</p>
+      <h1 class="display">Think of yourself as the Captain of a starship.</h1>
+      <div class="amber-rule"></div>
+      <div class="big-lines">
+        <p>You say where the ship is going. You do not say which button to press.</p>
+      </div>
+      <blockquote class="pullquote">"Get me to Uranus as fast as you can. I think something is out there, so put every scanner up."</blockquote>
+      <div class="big-lines">
+        <p class="muted">That is the altitude. Guidance, not tactics.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-5" data-slide="5" data-sid="employees">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">The core mental model: agents are employees</h2>
       <p class="subhead-sm">Your edge here is leadership experience, not technical skill.</p>
@@ -398,7 +412,7 @@ body {
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-5" data-slide="5" data-sid="they-miss-things">
+  <section class="slide" id="slide-6" data-slide="6" data-sid="they-miss-things">
     <div class="slide-inner big-inner">
       <h2 class="slide-h2">They miss things. So you manage them.</h2>
       <p class="subhead-sm">Manage it the way you manage a strong new hire.</p>
@@ -409,7 +423,7 @@ body {
       <blockquote class="pullquote">Don't assume the agent was right. Don't assume it didn't cut a corner or skip a step.</blockquote>
     </div>
   </section>
-  <section class="slide" id="slide-6" data-slide="6" data-sid="reflex">
+  <section class="slide" id="slide-7" data-slide="7" data-sid="reflex">
     <div class="slide-inner big-inner">
       <p class="eyebrow">The reflex we break today</p>
       <h1 class="display">Always tell it to do it. Don't do it yourself.</h1>
@@ -421,15 +435,109 @@ body {
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-7" data-slide="7" data-sid="part1-divider">
-    <div class="slide-inner divider-inner">
-      <div class="ghost-numeral" aria-hidden="true">2</div>
-      <h1 class="display">Part 2 — Operate</h1>
-      <div class="amber-rule"></div>
-      <p class="subhead">Brief it, plan it, dispatch it, review it, keep it. On one real piece of your paid work.</p>
+  <section class="slide" id="slide-8" data-slide="8" data-sid="options">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Don't give orders. Ask for options.</h2>
+      <p class="subhead-sm">You stay the decider; the workforce does the legwork and the thinking-out-loud.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>Weak: "Do X." You get one path, and you own its blind spots.</li>
+        <li>Strong: "Analyze this and give me 2-3 options with trade-offs and a recommendation."</li>
+        <li>This is how you keep the call human while scaling the analysis.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: options | Before/after — weak prompt vs strong prompt (amber-frame the strong) -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;">
+
+  <!-- WEAK -->
+  <div style="flex:1 1 260px;min-width:240px;">
+    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9FB0C6;margin-bottom:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#3a4660;display:inline-block;"></span>orders
+    </div>
+    <div style="background:#0f1828;border:1px solid #2a3650;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#9FB0C6;white-space:pre-wrap;"><code>Do X.</code></pre>
+      <div style="margin-top:14px;font-size:0.85rem;color:#9FB0C6;">You get one answer. You can&#8217;t tell if it&#8217;s the right one.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;color:#F59E0B;font-size:1.3rem;font-weight:700;">&#8594;</div>
+
+  <!-- STRONG (amber-framed) -->
+  <div style="flex:1 1 260px;min-width:240px;">
+    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>options
+    </div>
+    <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>Analyze this and give me
+2&#8211;3 options with the
+trade-offs of each, and
+your recommendation.</code></pre>
+      <div style="margin-top:14px;font-size:0.85rem;color:#FBBF24;">You get a decision to make &#8212; not a verdict to accept.</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
     </div>
   </section>
-  <section class="slide" id="slide-8" data-slide="8" data-sid="context-king">
+  <section class="slide" id="slide-9" data-slide="9" data-sid="drill-plain-words">
+    <div class="slide-inner big-inner">
+      <span class="drill-tag">Do this now</span>
+      <h2 class="slide-h2">Ask it to say it plainly.</h2>
+      <p class="subhead-sm">Sometimes the answer comes back in language you cannot argue with.</p>
+      <div class="cmd-card">
+        <p class="cmd-hint">Type this</p>
+        <code>explain that again in plain words</code>
+      </div>
+      <div class="big-lines">
+        <p>Dense language hides thin thinking. Plain language exposes it.</p>
+        <p class="muted">There is no social tax here. No judging, no politics. Ask everything, twice if you want.</p>
+      </div>
+      <blockquote class="pullquote">The operators who ask the most, win.</blockquote>
+    </div>
+  </section>
+  <section class="slide" id="slide-10" data-slide="10" data-sid="attention">
+    <div class="slide-inner big-inner">
+      <h1 class="display">You are one. They are infinite.</h1>
+      <div class="amber-rule"></div>
+      <blockquote class="pullquote">In the first period you will always be in a deficit of attention against the agents.</blockquote>
+      <div class="big-lines">
+        <p>They will produce more than you can read. That is not a problem to solve.</p>
+        <p class="muted">It is the reason to stop reading everything and start reviewing on purpose.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-11" data-slide="11" data-sid="govern-line">
+    <div class="slide-inner statement-inner">
+      <h2 class="slide-h2">Governing quality: the line that stays yours</h2>
+      <div class="statement-body">
+        <div class="statement-left">
+      <ul class="bullets">
+        <li>You don't rubber-stamp. You review like a manager: spot-check, push back, send back.</li>
+        <li>Consequential decisions still need your affirmation: the Decision Record and the Standard.</li>
+        <li>Sensitive domains (Legal, Compliance, HR, Finance) keep a human in the loop by design, not as a disclaimer.</li>
+        <li>The workforce scales the work. The call stays yours.</li>
+      </ul>
+
+        </div>
+              <blockquote class="pullquote">The workforce scales the work; the call stays yours. That is the part no one can sell you.</blockquote>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-12" data-slide="12" data-sid="part1-divider">
+    <div class="slide-inner divider-inner">
+      <div class="ghost-numeral" aria-hidden="true">2</div>
+      <h1 class="display">Part 2 — How it Works</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">One worker, then the institution. What you are actually commanding.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-13" data-slide="13" data-sid="context-king">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">It starts with one idea: context is king</h2>
       <p class="subhead-sm">An agent is only ever as sharp as the context it holds.</p>
@@ -519,238 +627,7 @@ body {
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-9" data-slide="9" data-sid="captain">
-    <div class="slide-inner big-inner">
-      <p class="eyebrow">Briefing altitude</p>
-      <h1 class="display">Think of yourself as a big manager. The captain of the spaceship.</h1>
-      <div class="amber-rule"></div>
-      <div class="big-lines">
-        <p>You say where the ship is going. You do not say which button to press.</p>
-      </div>
-      <blockquote class="pullquote">"Get me to Uranus as fast as you can. I think something is out there, so put every scanner up."</blockquote>
-      <div class="big-lines">
-        <p class="muted">That is the altitude. Guidance, not tactics.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-10" data-slide="10" data-sid="options">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">Don't give orders. Ask for options.</h2>
-      <p class="subhead-sm">You stay the decider; the workforce does the legwork and the thinking-out-loud.</p>
-      <div class="split-body">
-        <div class="split-left">
-      <ul class="bullets">
-        <li>Weak: "Do X." You get one path, and you own its blind spots.</li>
-        <li>Strong: "Analyze this and give me 2-3 options with trade-offs and a recommendation."</li>
-        <li>This is how you keep the call human while scaling the analysis.</li>
-      </ul>
-
-
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: options | Before/after — weak prompt vs strong prompt (amber-frame the strong) -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;">
-
-  <!-- WEAK -->
-  <div style="flex:1 1 260px;min-width:240px;">
-    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#9FB0C6;margin-bottom:8px;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#3a4660;display:inline-block;"></span>orders
-    </div>
-    <div style="background:#0f1828;border:1px solid #2a3650;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
-<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#9FB0C6;white-space:pre-wrap;"><code>Do X.</code></pre>
-      <div style="margin-top:14px;font-size:0.85rem;color:#9FB0C6;">You get one answer. You can&#8217;t tell if it&#8217;s the right one.</div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;color:#F59E0B;font-size:1.3rem;font-weight:700;">&#8594;</div>
-
-  <!-- STRONG (amber-framed) -->
-  <div style="flex:1 1 260px;min-width:240px;">
-    <div style="display:inline-flex;align-items:center;gap:7px;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">
-      <span style="width:8px;height:8px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>options
-    </div>
-    <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:16px 18px;height:calc(100% - 30px);box-sizing:border-box;">
-<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.86rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>Analyze this and give me
-2&#8211;3 options with the
-trade-offs of each, and
-your recommendation.</code></pre>
-      <div style="margin-top:14px;font-size:0.85rem;color:#FBBF24;">You get a decision to make &#8212; not a verdict to accept.</div>
-    </div>
-  </div>
-</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-11" data-slide="11" data-sid="first-plan">
-    <div class="slide-inner big-inner">
-      <p class="eyebrow">The first-plan law</p>
-      <h1 class="display">The first plan is never good.</h1>
-      <div class="amber-rule"></div>
-      <blockquote class="pullquote">Always, always, always. The first time you build the plan, it is not good. The first deck you build is not good.</blockquote>
-      <div class="big-lines">
-        <p>More agents make it better. They do not make it right.</p>
-        <p class="muted">You still steer. That part does not go away.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-12" data-slide="12" data-sid="how-to-plan">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">How to plan: /plan</h2>
-      <p class="subhead-sm">One command runs the whole planning discipline &#8212; including the pre-execution review.</p>
-      <div class="split-body">
-        <div class="split-left">
-<!-- FRAGMENT: how-to-plan | /plan command card — the planning discipline as one command -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    the command &#183; /plan
-  </div>
-  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
-    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/plan</code>
-    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">one command &#8212; the whole planning discipline</div>
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
-    <tbody>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Writes or updates a <strong>plan MD</strong> &#8212; goal, steps, files, risks</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Uses the existing <span style="color:#FBBF24;">ProductBeacon agent teams</span> &#8212; never invents agents</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Phases the work; the agents <strong>verify after every phase</strong></td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Runs the <span style="color:#FBBF24;">spawn protocol</span> + creates <span style="color:#FBBF24;">agent telemetry</span></td></tr>
-      <tr><td style="padding:9px 16px;">Then the planned agents <strong>review with confidence + mitigations</strong> before a step runs</td></tr>
-    </tbody>
-  </table>
-</div>
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: plan-review | the built-in pre-execution review (confidence + mitigations), folded into /plan -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    built into /plan &#183; the pre-execution review
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
-    <thead>
-      <tr style="background:rgba(245,158,11,0.08);">
-        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Step</th>
-        <th style="text-align:center;padding:11px 10px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Conf.</th>
-        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">Mitigation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Build slides</td>
-        <td style="padding:12px 10px;text-align:center;color:#4ECCA3;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">90%</td>
-        <td style="padding:12px 14px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.03);">proceed</td>
-      </tr>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Slide count holds</td>
-        <td style="padding:12px 10px;text-align:center;color:#FBBF24;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">70%</td>
-        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">drive from a locked manifest</td>
-      </tr>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;">Snapshots accurate</td>
-        <td style="padding:12px 10px;text-align:center;color:#F59E0B;font-weight:700;">60%</td>
-        <td style="padding:12px 14px;color:#E8EEF6;background:rgba(245,158,11,0.04);">use real files; human-check</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">The planned agents return this before a step runs. Low confidence is not a blocker &#8212; it is where the mitigation goes.</p>
-</div>
-        </div>
-      </div>
-      <p class="caption-line">Get a plan first: written intent before any action &#8212; goal, steps, files, what each produces, the risks. <code style="font-family:'JetBrains Mono',monospace;">/plan</code> runs that discipline end to end and finishes with the review on the right. You steer cheaply on paper, not expensively mid-execution.</p>
-    </div>
-  </section>
-  <section class="slide" id="slide-13" data-slide="13" data-sid="drill-audit">
-    <div class="slide-inner big-inner">
-      <span class="drill-tag">Do this now</span>
-      <h2 class="slide-h2">Send the plan to audit.</h2>
-      <p class="subhead-sm">You never say "yes, go" to a first plan.</p>
-      <div class="cmd-card">
-        <p class="cmd-hint">Type this</p>
-        <code>please audit the plan using several agents and provide confidence scores before execution</code>
-      </div>
-      <div class="big-lines">
-        <p>A fresh reviewer, never the one who did the work.</p>
-        <p class="muted">Run it after every big step. It always finds something.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-14" data-slide="14" data-sid="route">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">Don't pick the agent. Let the Coding Agent route.</h2>
-      <p class="subhead-sm">Say what you need in business terms; let the manager staff it.</p>
-      <div class="split-body">
-        <div class="split-left">
-      <ul class="bullets">
-        <li>You don't memorize 96 agents. Describe the problem in plain language.</li>
-        <li>The coding agent routes to the right specialist(s) based on your context and the task.</li>
-        <li>Picking agents yourself is like a CEO assigning desks. Not your job.</li>
-        <li>Your job: frame the problem well, and judge the answer.</li>
-      </ul>
-
-
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: route | SVG router-pick — problem -> router -> ONE right specialist (alternatives greyed). -->
-<!-- DELIBERATELY DISTINCT from spawn-team.html: that one fans OUT to many; this one PICKS one. Single highlighted path. -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <svg viewBox="0 0 720 360" width="100%" height="auto" role="img"
-       aria-label="A plain-language problem goes to a router, which picks the one right specialist while the alternatives stay greyed out.">
-    <defs>
-      <style>
-        .r-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
-        .r-dim{font-family:Inter,system-ui,sans-serif;fill:#5b6982;font-weight:600;font-size:13px;}
-        .r-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
-        .r-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
-      </style>
-      <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
-      </marker>
-      <marker id="arrRdim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-        <path d="M0,0 L8,4 L0,8 z" fill="#3a4660"/>
-      </marker>
-    </defs>
-
-    <!-- problem -->
-    <rect x="18" y="146" width="148" height="68" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
-    <text x="92" y="174" text-anchor="middle" class="r-node">Your problem</text>
-    <text x="92" y="193" text-anchor="middle" class="r-sub">in plain words</text>
-
-    <!-- to router -->
-    <line x1="166" y1="180" x2="252" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrR)"/>
-
-    <!-- router (diamond) -->
-    <polygon points="320,135 390,180 320,225 250,180" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
-    <text x="320" y="178" text-anchor="middle" class="r-node">Router</text>
-    <text x="320" y="196" text-anchor="middle" class="r-sub">picks one</text>
-    <text x="320" y="118" text-anchor="middle" class="r-cap">Claude decides</text>
-
-    <!-- ONE highlighted path -->
-    <line x1="390" y1="180" x2="500" y2="180" stroke="#F59E0B" stroke-width="2.4" marker-end="url(#arrR)"/>
-    <rect x="502" y="152" width="200" height="56" rx="11" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
-    <text x="520" y="178" class="r-node">&#127919; the right specialist</text>
-    <text x="520" y="196" class="r-sub">handles it end to end</text>
-
-    <!-- greyed alternatives (not picked) -->
-    <line x1="382" y1="158" x2="500" y2="92" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
-    <rect x="502" y="70" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
-    <text x="520" y="96" class="r-dim">another specialist</text>
-
-    <line x1="382" y1="202" x2="500" y2="272" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
-    <rect x="502" y="252" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
-    <text x="520" y="278" class="r-dim">another specialist</text>
-
-    <text x="92" y="324" class="r-sub" style="fill:#FBBF24;font-style:italic;">You don&#8217;t pick the agent. You describe the problem.</text>
-  </svg>
-</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-15" data-slide="15" data-sid="spawn-team">
+  <section class="slide" id="slide-14" data-slide="14" data-sid="spawn-team">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">One request becomes a team</h2>
       <p class="subhead-sm">A 1-person firm gets a cross-functional team, on demand.</p>
@@ -823,79 +700,7 @@ your recommendation.</code></pre>
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-16" data-slide="16" data-sid="who-came">
-    <div class="slide-inner big-inner">
-      <h2 class="slide-h2">Look at who came to the meeting.</h2>
-      <p class="subhead-sm">When the work comes back, read the names.</p>
-      <div class="big-lines">
-        <p>Who was in the room? A product manager, a researcher. Fine.</p>
-        <p>Now ask who was not. The director. Product marketing. The architect.</p>
-      </div>
-      <blockquote class="pullquote">You do not pick the agents yourself. You ask it to find the right ones.</blockquote>
-    </div>
-  </section>
-  <section class="slide" id="slide-17" data-slide="17" data-sid="pbaw">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">The command behind it: /pbaw</h2>
-      <p class="subhead-sm">One command has the coding agent choose the right specialist(s) and spawn them the disciplined way.</p>
-      <div class="split-body">
-        <div class="split-left">
-<!-- FRAGMENT: pbaw | /pbaw command card — routing + spawn discipline as one command -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    the command &#183; /pbaw
-  </div>
-  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
-    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/pbaw</code>
-    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">describe the problem &#8212; it staffs and spawns the right team</div>
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
-    <tbody>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reads your request and <strong>chooses the right specialist(s)</strong> from the existing teams</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Spawns them under the <span style="color:#FBBF24;">full spawn protocol</span> &#8212; identity, skills + packs, one Audit Block each</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Presents each in first person; <strong>synthesizes several voices into one answer</strong></td></tr>
-      <tr><td style="padding:9px 16px;">You never wire agents by hand &#8212; <span style="color:#FBBF24;">/plan</span> and the playbooks call it for you</td></tr>
-    </tbody>
-  </table>
-</div>
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: pbaw-example | worked example — one /pbaw request choosing + spawning the right specialists -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    an example &#183; you ask, /pbaw staffs it
-  </div>
-  <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
-<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.9rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>/pbaw price our new subscription tier</code></pre>
-  </div>
-  <div style="text-align:center;color:#F59E0B;font-size:1.3rem;font-weight:700;margin-bottom:8px;">&#8595;</div>
-  <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">it chooses + spawns</div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
-    <tbody>
-      <tr>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128200; VP Product</td>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">pricing strategy + the tier call</td>
-      </tr>
-      <tr>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128202; BizOps</td>
-        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">margins + the business case</td>
-      </tr>
-      <tr>
-        <td style="padding:11px 16px;white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128302; Competitive Intel</td>
-        <td style="padding:11px 16px;color:#9FB0C6;">how rivals price the same tier</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="margin:12px 2px 0;font-size:0.9rem;color:#9FB0C6;">Three specialists you never named &#8212; each with its own Audit Block, folded into <span style="color:#FBBF24;">one recommendation</span> for you to decide.</p>
-</div>
-        </div>
-      </div>
-      <p class="caption-line">The concept from the previous slide, as one command. Type <code style="font-family:'JetBrains Mono',monospace;">/pbaw</code> yourself, or let <code style="font-family:'JetBrains Mono',monospace;">/plan</code> and the playbooks invoke it &#8212; either way the coding agent picks the specialists and runs each under the full protocol.</p>
-    </div>
-  </section>
-  <section class="slide" id="slide-18" data-slide="18" data-sid="what-is-agent">
+  <section class="slide" id="slide-15" data-slide="15" data-sid="what-is-agent">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">What is a ProductBeacon agent?</h2>
       <p class="subhead-sm">A role, not a chatbot.</p>
@@ -955,7 +760,7 @@ your recommendation.</code></pre>
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-19" data-slide="19" data-sid="anatomy-file">
+  <section class="slide" id="slide-16" data-slide="16" data-sid="anatomy-file">
     <div class="slide-inner artifact-inner">
       <h2 class="slide-h2 small">Anatomy of an agent: the file that defines it</h2>
 
@@ -1464,7 +1269,7 @@ If any check fails, my output is invalid.
 
     </div>
   </section>
-  <section class="slide" id="slide-20" data-slide="20" data-sid="skills-packs">
+  <section class="slide" id="slide-17" data-slide="17" data-sid="skills-packs">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">Skills and knowledge packs: the agent's training</h2>
 
@@ -1513,7 +1318,693 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-21" data-slide="21" data-sid="spawn-protocol">
+  <section class="slide" id="slide-18" data-slide="18" data-sid="anatomy-skill">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Anatomy of a skill: a procedure, in a file</h2>
+
+      <div class="artifact-stage">
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    .claude/skills/feature-spec/SKILL.md
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre class="codecard-pre" style="margin:0;padding:16px 18px;max-height:58vh;overflow:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.72rem;line-height:1.5;color:#E8EEF6;"><code>---
+name: feature-spec
+description: 'Create a detailed feature specification with implementation-ready requirements and edge cases. Activate when: "feature spec", "specify this feature", "detailed requirements", implementation-ready
+  specs, technical specification Do NOT activate for: full PRD covering multiple features (/prd), individual user stories (/user-story), PRD outline for scoping (/prd-outline)'
+argument-hint: '[feature name] or [update path/to/spec.md]'
+user-invocable: true
+metadata:
+  author: ProductBeacon
+  version: 3.0.0
+  category: requirements
+  skill_type: task-capability
+  owner: api-architect
+  primary_consumers:
+  - pm
+  - api-architect
+  - ui-designer
+  - visual-designer
+  - tech-lead
+  - frontend-dev
+  - backend-dev
+  - qa-engineer
+  - sales-engineer
+---
+## Document Intelligence
+
+This skill supports three modes: **Create**, **Update**, and **Find**.
+
+### Mode Detection
+
+| Signal | Mode | Confidence |
+|--------|------|------------|
+| "update", "revise", "modify" in input | UPDATE | 100% |
+| File path provided (`@path/to/spec.md`) | UPDATE | 100% |
+| Spec ID mentioned (`FS-2026-001`) | UPDATE | 100% |
+| "create", "new", "draft" in input | CREATE | 100% |
+| "find", "search", "list specs" | FIND | 100% |
+| "the spec", "the feature spec" | UPDATE | 85% |
+| Just feature name | CREATE | 60% |
+
+**Threshold**: ≥85% auto-proceed | 70-84% state assumption | &lt;70% ask user
+
+### Mode Behaviors
+
+**CREATE**: Generate complete new feature spec using template below.
+
+**UPDATE**:
+1. Read existing spec (search if path not provided)
+2. Preserve unchanged sections exactly
+3. Update only sections mentioned by user
+4. Show diff summary: "Updated: [sections]. Unchanged: [sections]."
+5. Update `last_modified` metadata
+
+**FIND**:
+1. Search paths below for feature specs
+2. Present results: title, path, date, summary
+3. Ask: "Update one of these, or create new?"
+
+### Search Locations for Feature Specs
+
+- `specs/`
+- `features/`
+- `requirements/`
+- `docs/specs/`
+
+---
+## Gotchas
+
+- Never invent implementation estimates (effort, timelines, sprint counts) — that's engineering's job
+- Acceptance criteria must be testable — 'Given/When/Then' format preferred
+- Each feature spec needs a single owner, not a committee
+
+
+
+Create a **Feature Specification** for the specified feature.
+
+## Product Phase
+
+**Phase 3: Strategic Commitments** - Feature specs detail requirements for implementation.
+
+**Prerequisites**: PRD approved or roadmap item defined
+**Outputs used by**: Engineering implementation, design work, QA testing
+
+## Output Structure
+
+```markdown
+# Feature Spec: [Feature Name]
+
+**Spec ID**: FS-[YYYY]-[NNN]
+**Owner**: [PM Name]
+**Status**: Draft / In Review / Approved / In Development
+**Target Release**: [Release/Version]
+
+## Feature Overview
+
+**Name**: [Feature name]
+**One-liner**: [What it does in one sentence]
+
+## Problem Statement
+
+**Customer Problem**: [What problem this solves]
+**Evidence**: [How we know this is a real problem]
+**Impact of Not Solving**: [What happens if we don't build this]
+
+## Target Users
+
+**Primary User**: [User type]
+- Role: [Their role]
+- Goal: [What they're trying to accomplish]
+- Current workaround: [How they do it today]
+
+**Secondary User**: [User type]
+- Role: [Their role]
+- Goal: [What they're trying to accomplish]
+
+## Success Metrics
+
+| Metric | Baseline | Target | Measurement |
+|--------|----------|--------|-------------|
+| [Metric 1] | [Current] | [Target] | [How measured] |
+| [Metric 2] | [Current] | [Target] | [How measured] |
+
+## Functional Requirements
+
+### Requirement 1: [Name]
+**Description**: [What it does]
+**Priority**: Must Have / Should Have / Nice to Have
+**Acceptance Criteria**:
+- Given [context], when [action], then [result]
+- Given [context], when [action], then [result]
+
+### Requirement 2: [Name]
+[Same structure]
+
+## User Stories
+
+### Story 1
+**As a** [user type]
+**I want to** [action]
+**So that** [benefit]
+
+**Acceptance Criteria**:
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]
+- [ ] [Criterion 3]
+
+### Story 2
+[Same structure]
+
+## Non-Functional Requirements
+
+| Requirement | Specification |
+|-------------|---------------|
+| Performance | [Spec] |
+| Security | [Spec] |
+| Accessibility | [Spec] |
+| Scalability | [Spec] |
+
+## Design Requirements
+
+**User Flow**: [Description or link]
+**Key Interactions**: [Critical interactions]
+**Edge Cases**: [Edge cases to handle]
+
+## Technical Considerations
+
+**Architecture Impact**: [Any architecture changes]
+**Dependencies**: [Technical dependencies]
+**Constraints**: [Technical constraints]
+
+## Out of Scope
+
+- [Item 1]
+- [Item 2]
+
+## Risks
+
+| Risk | Probability | Impact | Mitigation |
+|------|-------------|--------|------------|
+| [Risk] | H/M/L | H/M/L | [Plan] |
+
+## Timeline
+
+| Milestone | Target Date |
+|-----------|-------------|
+| Spec approval | [Date] |
+| Design complete | [Date] |
+| Development complete | [Date] |
+| QA complete | [Date] |
+| Release | [Date] |
+```
+
+## Instructions
+
+1. Ask clarifying questions about scope if needed
+2. Reference any research or design documents via @file syntax
+3. Include testable acceptance criteria
+4. Be explicit about what's out of scope
+5. Save in requirements/ or specs/ folder
+</code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">A skill is a procedure the workforce can run, here: writing a feature spec. Also just a readable file. Scroll the box for the whole file.</p>
+</div>
+      </div>
+
+
+    </div>
+  </section>
+  <section class="slide" id="slide-19" data-slide="19" data-sid="anatomy-pack">
+    <div class="slide-inner artifact-inner">
+      <h2 class="slide-h2 small">Anatomy of a knowledge pack: what it knows</h2>
+
+      <div class="artifact-stage">
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:10px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    reference/knowledge/discovery-methods.md
+  </div>
+  <div style="background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;">
+    <div style="display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(245,158,11,0.14);">
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+      <span style="width:10px;height:10px;border-radius:50%;background:#3a4660;display:inline-block;"></span>
+    </div>
+<pre class="codecard-pre" style="margin:0;padding:16px 18px;max-height:58vh;overflow:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.72rem;line-height:1.5;color:#E8EEF6;"><code># Discovery Methods
+
+**ProductBeacon pack on continuous discovery, JTBD, customer research, and assumption validation.**
+
+**Adapted from**:
+- Continuous Discovery (Teresa Torres, "Continuous Discovery Habits") -- public methodology
+- Jobs-To-Be-Done (Clayton Christensen, Bob Moesta, Anthony Ulwick) -- public methodology
+- Lean Startup customer development (Steve Blank, Eric Ries) -- public methodology
+- Pretotyping (Alberto Savoia, "The Right It") -- public methodology
+- April Dunford positioning research lens -- public methodology
+- 2026 PM landscape per the 2026 PM landscape survey §4
+
+**License**: Public methodology references
+**Refinements**: Discovery framed as Phase-1 Intent activity (before Decisions); explicit cross-references to assumption-map + opportunity-tree + experiment-design + interview-synthesis skills; weekly-touch + outcome-anchored cadence per Torres
+
+---
+
+## Purpose
+
+This pack is the canonical ProductBeacon reference for the discovery side of product work. I reach for it when I'm framing a new problem, scoping a strategic bet, deciding whether a feature idea is worth the engineering bill, or designing the research that goes in front of customers next week. It sits upstream of `prioritization.md` (which ranks discovered opportunities) and feeds the assumption-map / opportunity-tree / experiment-design / interview-synthesis skills.
+
+The pack is methodology-dense by design. The point isn't to memorize every framework — it's to know which lens fits the question I'm actually facing.
+
+---
+
+## 1. Discovery vs. Delivery
+
+The single biggest failure mode I see in product organizations is running delivery without discovery. The team is shipping every sprint, the burndown charts look great, the demos are slick — and the product is going sideways because nobody asked the upstream question first.
+
+The the phase model makes this explicit:
+
+| Question | Phase | Activity |
+|---|---|---|
+| What problem are we solving, and is it worth solving? | **Phase 1 -- Intent** | Discovery |
+| Have we committed to solving it, and how? | **Phase 2 -- Decisions** + **Phase 3 -- Commitments** | Strategic bet, PRD |
+| How well do we solve it? | **Phase 4 -- Execution** | Delivery |
+| Did the value land? | **Phase 5 -- Outcomes** + **Phase 6 -- Learning** | Outcome review |
+
+Discovery is the work that happens **in Phase 1, before commitments are locked**. It is not optional. It is not a "research project" that ends. It is a continuous practice the product team runs in parallel with delivery, week after week.
+
+Two principles I hold:
+- **Discovery is continuous, not a phase you exit.** Teresa Torres's whole argument is that one-time research projects bake in stale assumptions. The market moves, customers evolve, your understanding decays. Weekly touch beats quarterly research sprints.
+- **You can't out-deliver bad discovery.** No amount of engineering velocity rescues a feature solving the wrong problem. The most expensive code is code that ships and nobody uses.
+
+---
+
+## 2. Continuous Discovery (Teresa Torres)
+
+Torres's *Continuous Discovery Habits* (2021) is the single most influential 2020s-era methodology for ongoing discovery practice. Its core claim: discovery is a team habit, not a research project.
+
+### The Trio
+
+Discovery happens in a **product trio**: PM + Designer + Engineer, working together on the same problem space. The point isn't role overlap — it's shared context. When the engineer hears the customer use the same phrase three times, that phrase shows up in the interface decisions a month later in ways no Notion doc would have carried.
+
+### Weekly Touchpoints
+
+Talk to at least one customer every week. Not a formal study. Not a research sprint. A 20-minute conversation with someone who lives in the problem space, every week, forever.
+
+The argument for cadence over depth: a single deep research project gives you a snapshot. Weekly conversations give you a derivative — you see what's changing.
+
+### Outcome-Anchored
+
+At the top of every discovery effort sits a **Desired Outcome** — a measurable business or product outcome, NOT a feature. "Increase 30-day retention from 35% to 50%" is an outcome. "Build a notification system" is not. The discovery work asks: what opportunities, if addressed, would move this outcome?
+
+This pack pairs with `prioritization.md`: prioritization frameworks rank work against the outcome.
+
+### Opportunity Solution Tree (OST)
+
+The durable artifact of Torres discovery. Four levels:
+
+```
+DESIRED OUTCOME: Increase 30-day retention from 35% to 50%
+├── Opportunity: Users don't understand core value in first session
+│   ├── Solution A: Guided walkthrough
+│   │   └── Experiment: Prototype test with 5 users
+│   └── Solution B: Role-based onboarding
+│       └── Experiment: Concierge test with 10 users
+├── Opportunity: Users lose work when session times out
+│   ├── Solution C: Auto-save with visual confirmation
+│   │   └── Experiment: A/B test save frequency
+│   └── Solution D: Extend session timeout
+│       └── Experiment: Usage analytics on session length
+└── Opportunity: Users can't find features they need
+    └── Solution E: Contextual help system
+```
+
+Cross-ref: `/opportunity-tree` skill instantiates the OST as a deliverable.
+
+### Generative vs. Evaluative Research
+
+The distinction matters because it determines what questions you ask.
+
+| Type | Question | Methods |
+|---|---|---|
+| **Generative** | What problems do customers have? What opportunities exist? | Open-ended interviews, observation, diary studies |
+| **Evaluative** | Does this solution actually solve the problem? | Usability tests, A/B tests, concierge MVPs |
+
+Generative work goes upstream of solution ideas. Evaluative work tests solution ideas against discovered problems. Teams routinely confuse the two — running "usability tests" on a feature whose underlying problem was never validated.
+
+### Story-Based Interviews
+
+Ask about **specific past experience**, not hypotheticals. People are terrible at predicting their own future behavior and great at narrating recent past behavior in detail.
+
+Good: "Tell me about the last time you needed to onboard a new team member. Walk me through what happened."
+
+Bad: "Would you use a feature that helps onboard team members?"
+
+---
+
+## 3. Jobs-To-Be-Done (JTBD)
+
+JTBD reframes the customer relationship. Customers don't buy products — they "hire" products to make progress in a given circumstance. The "job" is the progress sought, and it's stable over time even as the solutions that compete for it change.
+
+### Christensen's Framing -- The Milkshake Story
+
+The canonical example: a fast-food chain wanted to sell more milkshakes. Demographic segmentation didn't help. Then Christensen's team asked "what job is the milkshake being hired to do?" and discovered that morning commuters were hiring it for a 30-minute boring drive, where it had to last, fit in a cupholder, and not crumb on the seat. Competitors were bagels (too dry) and bananas (gone too fast). Different job for the same product later in the day (parent buying for child as a reward). Same product, different jobs, different competitive set.
+
+The job format: **"When [situation], I want to [motivation], so I can [expected outcome]."**
+
+### Moesta's Forces of Progress
+
+Four forces act on a switching decision:
+
+| Force | Direction |
+|---|---|
+| **Push** -- dissatisfaction with current solution | Drives switch |
+| **Pull** -- attraction of new solution | Drives switch |
+| **Anxiety** -- fear about new solution | Resists switch |
+| **Habit** -- comfort with current solution | Resists switch |
+
+To win a switch, push + pull must overcome anxiety + habit. Most product teams over-invest in pull (features, messaging) and ignore anxiety + habit (the actual blockers). The Switch Interview surfaces all four.
+
+### Ulwick's Outcome-Driven Innovation
+
+Ulwick's variant: for any job, the customer has 50-150 **desired outcomes** ("minimize the time it takes to..." / "increase the likelihood that..."). Survey customers on importance × satisfaction for each outcome. Plot. The "underserved" quadrant (high importance, low satisfaction) is where the opportunity sits.
+
+### When to Use JTBD
+
+| Situation | Fit |
+|---|---|
+| Market re-segmentation | Strong fit |
+| Category creation / white space | Strong fit |
+| Understanding why customers switch | Strong fit |
+| Incremental feature work in a defined category | Weak fit — overkill |
+| Compliance / table-stakes work | Poor fit |
+
+---
+
+## 4. Lean Startup Customer Development (Blank, Ries)
+
+The Lean Startup tradition is the parent methodology of much modern discovery practice. Two founders matter:
+
+### Steve Blank -- "Get Out of the Building"
+
+Blank's *Four Steps to the Epiphany* (2005) argued that startups die not from execution but from failing to validate a market. His four steps:
+
+1. **Customer Discovery** -- Validate the problem exists
+2. **Customer Validation** -- Validate customers will pay
+3. **Customer Creation** -- Scale demand
+4. **Company Building** -- Transition to execution
+
+Steps 1-2 are pure discovery. The instruction "get out of the building" is the single most-quoted phrase in the methodology — meaning that no amount of internal brainstorming, deck-building, or whiteboard work substitutes for talking to actual prospective customers.
+
+### Eric Ries -- Build-Measure-Learn
+
+Ries's *The Lean Startup* (2011) operationalized Blank with the BML loop:
+
+- **Build** the smallest thing that tests the riskiest assumption
+- **Measure** what actually happens
+- **Learn** whether to persevere or pivot
+
+The MVP is an experiment, not a half-built product. The cycle time of BML is the rate at which you learn.
+
+### Pivot vs. Persevere
+
+A pivot is a change in strategy without a change in vision. You learned something that invalidates the current approach but reinforces the underlying belief. Triggers:
+- Engagement metrics flat despite iterations
+- CAC not decreasing
+- Retention not improving with product changes
+- Customer feedback consistently points to a different problem
+- The Sean Ellis "must-have" test (&lt;40% would be "very disappointed" if the product went away)
+
+### Rob Fitzpatrick -- The Mom Test
+
+Fitzpatrick's *The Mom Test* (2013) is the small book every PM should read before their first customer interview. The thesis: anyone — even your mom — will lie to you about your business if you ask leading questions. The fix is structural:
+
+- Talk about their life instead of your idea
+- Ask about specifics in the past, not generics or opinions about the future
+- Talk less and listen more
+
+The "compliments are the fool's gold of customer research" line is worth tattooing somewhere.
+
+---
+
+## 5. Pretotyping (Alberto Savoia)
+
+Savoia, ex-Google engineering director, wrote *The Right It* (2019) on the discipline of validating whether a thing should be built before you build it. Pretotyping ("pretend prototype") is upstream of prototyping. The pretotype answers "would they want it?" — the prototype answers "can we build it?"
+
+### Eight Pretotype Types
+
+| Type | What you do | What you learn |
+|---|---|---|
+| **Pinocchio** | Build a non-functional wooden version, carry it around as if it works | Personal demand signal — would I actually use this in my life? |
+| **Fake Door** | Add a button/link for the feature that goes to "coming soon" | Click-through demand from real users |
+| **Mechanical Turk** | The interface looks automated; humans do the work behind it | Whether the value prop holds when the experience is real |
+| **Wizard of Oz** | Similar to Mechanical Turk but explicitly designed as a research tool | Same as above, more rigorous |
+| **Provincial** | Test the idea in one small geography or segment before scaling | Whether the demand is general or local |
+| **Pre-Sale** | Take real money for the thing before it exists | Strongest signal — payment is behavior, not opinion |
+| **YouTube** | Make a demo video of the not-yet-built thing | Comprehension + interest at low cost |
+| **Concierge** | Manually deliver the service to a few customers | Whether the value proposition works at all |
+
+### TRI Metric
+
+Savoia's framing: most ideas live in **Thoughtland** (your head, decks, strategy docs) where they cannot fail. The Thoughtland-to-Real-world Index (TRI) is the ratio of evidence-grounded data to opinion-grounded data behind an idea. Higher TRI = more validated.
+
+The pretotyping discipline is "raise the TRI before you commit engineering capacity." A fake door + concierge + pre-sale combo can move TRI from 0.05 to 0.7 in two weeks.
+
+### Why Pretotyping Matters More in 2026
+
+The 2026 the 2026 PM landscape survey §4 notes that AI tooling has dramatically lowered the cost of building fake doors, demo videos, and concierge backends. A fake-door test that took two days in 2020 takes two hours in 2026. The methodology is suddenly cheap. The teams that still run quarterly research sprints are increasingly out of step with teams that ship a pretotype every week.
+
+---
+
+## 6. Customer Interview Techniques
+
+Discovery interviews are a learnable craft. The technique matters more than the framework. A team running JTBD with bad interview technique will get bad data. A team running no formal framework with good technique will get usable signal.
+
+### The Six Principles
+
+1. **Open-ended over close-ended.** "Tell me about the last time..." beats "Do you...?" every time.
+2. **Past behavior over future intent.** Humans are bad at predicting their own behavior and good at narrating recent past behavior. Anchor every question in something that actually happened.
+3. **5-Whys to root cause.** When the surface answer is "it's annoying," keep asking why. Five levels deep is usually the buried reason.
+4. **"What else?" as a follow-up.** This is the single highest-leverage prompt in interviewing. People list the easy answers first. The third or fourth thing they say is usually the interesting one.
+5. **Silence is a tool.** After a question, wait. The pause feels awkward. Hold it. The interviewee will fill it with the real answer.
+6. **Take notes on quotes and emotion.** Verbatim quotes are gold for synthesis. So is energy — when did the interviewee lean forward? When did they get tired?
+
+### What NOT to Ask
+
+| Bad question | Why it fails | Better alternative |
+|---|---|---|
+| "Would you use a product that...?" | Future intent, leading, no signal | "Tell me about the last time you tried to solve..." |
+| "How much would you pay for...?" | Anchors on number, no commitment | "What did you spend on the current solution? What did it get you?" |
+| "What features should we build?" | Outsources your job, not customer's expertise | "What's the most frustrating part of your current workflow?" |
+| "Do you like this design?" | Politeness bias, no behavioral signal | "Show me how you'd use this to accomplish [task]." |
+
+### Switch Interview Template (Moesta JTBD)
+
+```
+1. When did you first start looking for a solution?
+2. What was happening in your life/work that made you start looking?
+3. What other solutions did you consider? Why those?
+4. What made you choose this solution over the alternatives?
+5. What almost stopped you from switching?
+6. Now that you're using it, what's different? What's the same?
+```
+
+Cross-ref: `/interview-synthesis` skill — synthesizes interview corpus into themes, opportunities, and assumption-list outputs.
+
+---
+
+## 7. Survey + Quantitative Methods
+
+Surveys are the most overused and most mis-used research method in product organizations. The rule of thumb: surveys validate, they don't generate.
+
+### When Surveys Work
+
+- **Large-N validation of qualitative-discovered hypotheses.** Interviews surface five problems; a survey of 500 ranks them by frequency.
+- **Sizing known opportunities.** "How often does this happen?" "What percentage do X?" Specific behavioral questions with bounded answers.
+- **Tracking change over time.** NPS, CSAT, feature satisfaction — measured the same way over quarters reveal trend even if absolute numbers are squishy.
+
+### When Surveys Fail
+
+- **Novel-concept evaluation.** "Would you use a feature that...?" gets you noise. People can't evaluate hypothetical concepts in 30-second survey questions.
+- **Willingness-to-pay.** Direct "how much would you pay?" questions are worthless. Use Van Westendorp Price Sensitivity Meter or Gabor-Granger instead, and pair with behavioral data.
+- **Causal attribution.** Surveys can show correlation; they can't establish that A caused B.
+
+### Common Survey Biases
+
+| Bias | What happens | Mitigation |
+|---|---|---|
+| **Acquiescence** | Respondents tend to agree with statements | Mix positively and negatively framed items |
+| **Central tendency** | Respondents avoid extreme answers | Use even-numbered scales (4 or 6) to force a side |
+| **Social desirability** | People answer to look good | Anonymous responses; ask about behavior not attitude |
+| **Leading questions** | Wording presupposes the answer | Pilot-test wording with 5 colleagues before launch |
+| **Sample bias** | Respondents differ from population | Quota sampling; weight responses; flag in analysis |
+
+### Quantitative Methods for Pricing
+
+Worth a callout because PMs reach for it often:
+
+- **Van Westendorp Price Sensitivity Meter** -- Four questions (too cheap, cheap, expensive, too expensive) reveal acceptable price range
+- **Gabor-Granger** -- Randomized price points test buy-likelihood at each
+- **Conjoint Analysis** -- Trade-off matrix reveals feature value relative to price
+
+Cross-ref: `pricing-frameworks.md` pack covers these in depth.
+
+---
+
+## 8. Assumption Mapping
+
+Every product idea is a tower of assumptions. The leap-of-faith assumptions are the load-bearing ones — if they're wrong, the whole idea collapses regardless of execution quality.
+
+### The Discipline
+
+1. **Surface every assumption** the idea requires to succeed. "We assume customers..." / "We assume the market..." / "We assume our team..."
+2. **Score each by Impact × Uncertainty** on a 2×2 matrix.
+3. **The top-right quadrant is the test list.** High impact + high uncertainty = riskiest assumptions. Test these first.
+4. **Stop testing assumptions once they're validated or invalidated**, not after a calendar deadline.
+
+### Assumption Categories (Marty Cagan's Four Risks)
+
+| Risk | Question |
+|---|---|
+| **Value** | Will customers buy / use it? |
+| **Usability** | Can they figure out how to use it? |
+| **Feasibility** | Can we build it? |
+| **Viability** | Does it work for our business? |
+
+Most failed features fail on **value risk** — the team built something usable, feasible, and viable that no customer wanted. That's also the assumption category that's cheapest to test (interviews, fake doors, concierge MVPs) before commitment.
+
+Cross-ref: `/assumption-map` skill instantiates the 2×2 + test plan as a deliverable. `/four-risks-check` skill applies Cagan's four-risk framing to a feature.
+
+---
+
+## 9. Experiment Design
+
+Once you've mapped assumptions, the high-priority ones need experiments.
+
+### Hypothesis Format
+
+```
+We believe that [user segment] will [behavior]
+because [underlying reason / mechanism].
+
+We will know this is true when we see [observable signal]
+above [threshold] within [timeframe].
+```
+
+The "we will know" clause is the falsifiability test. If you can't name an observable signal and a threshold, you don't have an experiment — you have an opinion you'll defend regardless of data.
+
+### Falsifiability
+
+A real hypothesis can be wrong. "Customers value good design" is not a hypothesis. "30% of free-tier users will click a 'Pro' upgrade CTA when shown after creating their fifth document" is a hypothesis. The latter could be wrong; the former cannot be tested.
+
+### Stop Conditions
+
+Set them before you start. At what evidence threshold do you stop the experiment and act? Two failure modes:
+- **No stop condition** -- experiments run forever, results get re-interpreted to match preference
+- **Sunk-cost continuation** -- you've already invested two weeks, so you keep going even though early signal is clear
+
+### Multiple-Treatment Designs
+
+Single-variant tests reveal whether A works. Multi-variant tests reveal which of A/B/C works best — at the cost of needing more sample and longer runtime. Use multi-variant when you have three real options worth comparing; don't use it as a fishing expedition.
+
+Cross-ref: `/experiment-design` skill formalizes hypothesis + falsifiability + stop conditions into an experiment plan. `/pretotype` skill picks a pretotype type for the experiment.
+
+---
+
+## 10. Common Discovery Failures
+
+The five failure patterns I see most often:
+
+### "We talked to 5 customers and they all loved it."
+
+Three problems with this sentence:
+- **Small sample** — 5 is enough for thematic generative work, not enough for evaluative claims
+- **Confirmation bias** — you remember the customers who validated, forget the ones who didn't
+- **Salesman-customer dynamic** — if the PM ran the interview, the customer was being polite
+
+The "customer love" answer should always trigger a follow-up: what specific past behavior demonstrates this love? If the answer is "they said so," the love is hypothetical.
+
+### "We know our customers — we don't need discovery."
+
+Deep-domain knowledge is real, but it decays. Markets shift. New entrants change buyer expectations. The customer you onboarded three years ago is a different person now. "We know our customers" is almost always shorthand for "we don't want to invest in re-validating our assumptions."
+
+### Discovery as deliverable, not practice.
+
+A one-time research project, executive deck, then back to feature factory. The output gets cited for a quarter, then the data ages out and nobody updates it. Continuous discovery is the antidote, but it requires organizational commitment to customer access — which most orgs don't fund.
+
+### PM doing discovery solo.
+
+If discovery happens entirely in the PM's head and Notion docs, the eng team and design team get the conclusion without the raw signal. When implementation decisions come up later, the team has no shared context to draw from. The Torres trio (PM + Designer + Eng) is the structural fix.
+
+### Surveying when you should be interviewing.
+
+The most common cargo-cult mistake. The team has a feature idea, they want validation, they send a survey, they get aggregate noise, they ship the feature, it fails. Surveys validate; interviews generate. Use the right method for the question.
+
+---
+
+## 11. 2026 Discovery Tooling Landscape
+
+Per the the 2026 PM landscape survey §4, the discovery tooling space has shifted meaningfully in 2025-2026:
+
+- **AI-assisted interview synthesis.** Tools that transcribe interviews and auto-cluster themes. Dovetail, Reduct, EnjoyHQ have shipped AI-native features. The bottleneck is shifting from "synthesizing 20 hours of interview audio" to "running enough interviews to feed the synthesis." Cross-ref: `/interview-synthesis` skill.
+- **In-product behavioral platforms with AI insight layers.** Pendo, Userpilot, Amplitude — adding AI summaries of funnel drop-off, segment behavior, feature adoption. Useful for evaluative work, weak for generative.
+- **Reforge + Lenny's Newsletter playbooks.** Practitioner content has shifted from "frameworks" to "specific plays." The 2026 PM reads more case studies than methodology books.
+- **Pretotyping renaissance.** As AI tooling lowers the cost of building fake-doors and concierge backends, pretotyping is having a moment. A fake-door test that took two days in 2020 takes two hours in 2026 with a Claude/Cursor + landing-page-builder stack.
+
+A practical implication: the team that runs a pretotype every two weeks beats the team that runs a research sprint every quarter, because the pretotype generates behavioral signal (clicks, pre-orders, concierge usage) while the survey generates only attitudinal signal.
+
+---
+
+## 12. Cross-References
+
+This pack composes with the following ProductBeacon surfaces:
+
+| Skill / Pack | What it does | When I reach for it |
+|---|---|---|
+| `/assumption-map` | Surfaces and scores assumptions on Impact × Uncertainty | After discovery surfaces a strategic option |
+| `/opportunity-tree` | Structures the OST as a deliverable | When I need a durable artifact for the trio |
+| `/experiment-design` | Designs hypothesis + falsifiability + stop conditions | When an assumption needs testing |
+| `/pretotype` | Picks a pretotype type for the experiment | Cheap validation before engineering capacity is committed |
+| `/interview-synthesis` | Synthesizes interview corpus into themes + opportunities | After 5-10 interviews are run |
+| `/four-risks-check` | Cagan's value/usability/feasibility/viability lens | Before requesting engineering capacity |
+| `/customer-value-trace` | Traces feature work to measurable customer value | Validates that delivery work is anchored in real value |
+| `prioritization.md` (sibling pack) | Frameworks to rank discovered opportunities | After discovery surfaces a list of opportunities |
+| `user-research.md` (sibling pack) | Research design and rigor depth | When the question requires formal study, not weekly conversation |
+| `/strategic-bet` | Phase-2 conversion of opportunity to commitment | When discovery has validated enough to commit |
+
+---
+
+## Sources
+
+- Teresa Torres, *Continuous Discovery Habits* (2021)
+- Clayton Christensen, *Competing Against Luck* (2016) -- JTBD theory
+- Bob Moesta and Chris Spiek, *Demand-Side Sales 101* (2020) -- Switch interviews
+- Anthony Ulwick, *Jobs to Be Done: Theory to Practice* (2016) -- Outcome-Driven Innovation
+- Steve Blank, *The Four Steps to the Epiphany* (2005) -- Customer Development
+- Eric Ries, *The Lean Startup* (2011) -- Build-Measure-Learn
+- Rob Fitzpatrick, *The Mom Test* (2013) -- Interview technique
+- Alberto Savoia, *The Right It* (2019) -- Pretotyping
+- Marty Cagan, *Inspired* (2nd ed., 2017) -- Four risks framework
+- April Dunford, *Obviously Awesome* (2019) -- Positioning research lens
+- the 2026 PM landscape survey §4 (2026) -- Tooling landscape
+
+---
+
+*This pack is a ProductBeacon knowledge reference, not a sensitive skill. Discovery work produces opinions, hypotheses, and prioritized assumption lists — not regulated outputs. Apply standard PM judgment and consult `/four-risks-check` before commitment.*
+</code></pre>
+  </div>
+  <p style="margin:12px 2px 0;font-size:0.95rem;color:#9FB0C6;">A knowledge pack is what an agent reads in, here: product discovery methods. Domain reference, with sources attributed. Scroll the box for the whole file.</p>
+</div>
+      </div>
+
+
+    </div>
+  </section>
+  <section class="slide" id="slide-20" data-slide="20" data-sid="spawn-protocol">
   <div class="slide-inner split-inner">
     <h2 class="slide-h2">The spawning protocol: disciplined, not magic</h2>
     <p class="subhead-sm">You don't run the protocol. You benefit from it.</p>
@@ -1560,7 +2051,7 @@ If any check fails, my output is invalid.
     </div>
   </div>
 </section>
-<section class="slide" id="slide-22" data-slide="22" data-sid="audit-block-receipt">
+<section class="slide" id="slide-21" data-slide="21" data-sid="audit-block-receipt">
   <div class="slide-inner split-inner">
     <h2 class="slide-h2">Every run comes back with a receipt</h2>
     <p class="subhead-sm">One Audit Block per spawn. What it loaded, what it touched, what it produced.</p>
@@ -1598,102 +2089,7 @@ If any check fails, my output is invalid.
     </div>
   </div>
 </section>
-<section class="slide" id="slide-23" data-slide="23" data-sid="drill-confidence">
-    <div class="slide-inner big-inner">
-      <span class="drill-tag">Do this now</span>
-      <h2 class="slide-h2">Ask for a confidence score.</h2>
-      <p class="subhead-sm">Every time work comes back, ask for the number.</p>
-      <div class="cmd-card">
-        <p class="cmd-hint">Type this</p>
-        <code>give me confidence scores from the agents before we go further</code>
-      </div>
-      <div class="big-lines">
-        <p>If it comes back at 82, you do not ship it. You send it back.</p>
-        <p class="muted">A number gives you somewhere to push.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-24" data-slide="24" data-sid="drill-plain-words">
-    <div class="slide-inner big-inner">
-      <span class="drill-tag">Do this now</span>
-      <h2 class="slide-h2">Ask it to say it plainly.</h2>
-      <p class="subhead-sm">Sometimes the answer comes back in language you cannot argue with.</p>
-      <div class="cmd-card">
-        <p class="cmd-hint">Type this</p>
-        <code>explain that again in plain words</code>
-      </div>
-      <div class="big-lines">
-        <p>Dense language hides thin thinking. Plain language exposes it.</p>
-        <p class="muted">There is no social tax here. No judging, no politics. Ask everything, twice if you want.</p>
-      </div>
-      <blockquote class="pullquote">The operators who ask the most, win.</blockquote>
-    </div>
-  </section>
-  <section class="slide" id="slide-25" data-slide="25" data-sid="audit-result">
-    <div class="slide-inner split-inner">
-      <h2 class="slide-h2">Audit after you run: /audit</h2>
-      <p class="subhead-sm">A plan that ran is not the same as a plan that worked. Audit the result before you sign off.</p>
-      <div class="split-body">
-        <div class="split-left">
-<!-- FRAGMENT: audit-result | /audit command card — the result audit as one command -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    the command &#183; /audit
-  </div>
-  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
-    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/audit</code>
-    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">the multi-angle result audit</div>
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
-    <tbody>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Brings in <span style="color:#FBBF24;">a fresh panel</span> &#8212; as many agents as the work's angles need, at least one that did not do the work</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Checks <strong>executed</strong> / <strong>aligned</strong> / <strong>no bugs</strong> against the plan</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);"><span style="color:#FBBF24;">Verifies</span> by opening and running &#8212; never assumes</td></tr>
-      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reports findings by <strong>severity</strong>, fixes + re-verifies what's safe</td></tr>
-      <tr><td style="padding:9px 16px;">Ends on a clear <span style="color:#FBBF24;">GO / NO-GO</span></td></tr>
-    </tbody>
-  </table>
-  <p style="margin:13px 2px 0;font-size:0.86rem;color:#9FB0C6;">Mode-aware: it reads the context first. Auditing a <strong style="color:#E8EEF6;">result</strong> runs the checks above; auditing a <strong style="color:#E8EEF6;">plan or updated plan</strong> runs the same pre-execution review <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> uses &#8212; the agents return confidence + mitigations, ending on <span style="color:#FBBF24;">PROCEED / REWORK</span>.</p>
-</div>
-        </div>
-        <div class="split-right">
-<!-- FRAGMENT: audit-verdict | findings by severity -->
-<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
-  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
-    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
-    the verdict, after runtime
-  </div>
-  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
-    <thead>
-      <tr style="background:rgba(245,158,11,0.08);">
-        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Severity</th>
-        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">What happens</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;color:#F87171;border-bottom:1px solid rgba(245,158,11,0.08);">Blocker</td>
-        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">a promised deliverable is missing or broken &#8594; fix + re-verify before GO</td>
-      </tr>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.08);">Important</td>
-        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">two files disagree &#8594; reconcile, then re-check</td>
-      </tr>
-      <tr>
-        <td style="padding:12px 14px;font-weight:700;color:#4ECCA3;">Minor</td>
-        <td style="padding:12px 14px;color:#9FB0C6;background:rgba(245,158,11,0.04);">a stale link, a typo &#8594; note and move on</td>
-      </tr>
-    </tbody>
-  </table>
-  <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">Severity decides what blocks the sign-off. Not every finding does.</p>
-</div>
-        </div>
-      </div>
-      <p class="caption-line">A plan that ran is not a plan that worked. <code style="font-family:'JetBrains Mono',monospace;">/audit</code> brings fresh agents &#8212; sized to the work, one per angle &#8212; to prove it shipped, or to say honestly what didn't. Type it, or fold it into a bigger prompt as the result-audit step.</p>
-    </div>
-  </section>
-  <section class="slide" id="slide-26" data-slide="26" data-sid="record-harvest">
+<section class="slide" id="slide-22" data-slide="22" data-sid="record-harvest">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">Record: sweep the work into memory</h2>
       <p class="subhead-sm">The loop&#8217;s last step, made deliberate &#8212; one command, the whole catalog.</p>
@@ -1738,7 +2134,7 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-27" data-slide="27" data-sid="outputs">
+  <section class="slide" id="slide-23" data-slide="23" data-sid="outputs">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">Where the work lands</h2>
       <p class="subhead-sm">Your work is an asset library, not a chat history.</p>
@@ -1810,7 +2206,7 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-28" data-slide="28" data-sid="memory">
+  <section class="slide" id="slide-24" data-slide="24" data-sid="memory">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">Memory: how the workforce remembers</h2>
       <p class="subhead-sm">You never re-explain your business.</p>
@@ -1884,7 +2280,7 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-29" data-slide="29" data-sid="dr-dps">
+  <section class="slide" id="slide-25" data-slide="25" data-sid="dr-dps">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">Decision Records and the Decision Provenance Standard</h2>
       <p class="subhead-sm">The mechanism behind the human-held line.</p>
@@ -1949,7 +2345,15 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-30" data-slide="30" data-sid="cycle">
+  <section class="slide" id="slide-26" data-slide="26" data-sid="part2-divider">
+    <div class="slide-inner divider-inner">
+      <div class="ghost-numeral" aria-hidden="true">3</div>
+      <h1 class="display">Part 3 — Govern</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">More work than you can read. And the part of it that is still yours.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-27" data-slide="27" data-sid="cycle">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">The loop you'll live in</h2>
       <p class="subhead-sm">Frame → Plan → Execute → Audit → Review → Record.</p>
@@ -2046,15 +2450,354 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-31" data-slide="31" data-sid="part2-divider">
-    <div class="slide-inner divider-inner">
-      <div class="ghost-numeral" aria-hidden="true">3</div>
-      <h1 class="display">Part 3 — Govern</h1>
+  <section class="slide" id="slide-28" data-slide="28" data-sid="first-plan">
+    <div class="slide-inner big-inner">
+      <p class="eyebrow">The first-plan law</p>
+      <h1 class="display">The first plan is never good.</h1>
       <div class="amber-rule"></div>
-      <p class="subhead">More work than you can read. And the part of it that is still yours.</p>
+      <blockquote class="pullquote">Always, always, always. The first time you build the plan, it is not good. The first deck you build is not good.</blockquote>
+      <div class="big-lines">
+        <p>More agents make it better. They do not make it right.</p>
+        <p class="muted">You still steer. That part does not go away.</p>
+      </div>
     </div>
   </section>
-  <section class="slide" id="slide-32" data-slide="32" data-sid="roster">
+  <section class="slide" id="slide-29" data-slide="29" data-sid="how-to-plan">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">How to plan: /plan</h2>
+      <p class="subhead-sm">One command runs the whole planning discipline &#8212; including the pre-execution review.</p>
+      <div class="split-body">
+        <div class="split-left">
+<!-- FRAGMENT: how-to-plan | /plan command card — the planning discipline as one command -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the command &#183; /plan
+  </div>
+  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
+    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/plan</code>
+    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">one command &#8212; the whole planning discipline</div>
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <tbody>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Writes or updates a <strong>plan MD</strong> &#8212; goal, steps, files, risks</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Uses the existing <span style="color:#FBBF24;">ProductBeacon agent teams</span> &#8212; never invents agents</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Phases the work; the agents <strong>verify after every phase</strong></td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Runs the <span style="color:#FBBF24;">spawn protocol</span> + creates <span style="color:#FBBF24;">agent telemetry</span></td></tr>
+      <tr><td style="padding:9px 16px;">Then the planned agents <strong>review with confidence + mitigations</strong> before a step runs</td></tr>
+    </tbody>
+  </table>
+</div>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: plan-review | the built-in pre-execution review (confidence + mitigations), folded into /plan -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    built into /plan &#183; the pre-execution review
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Step</th>
+        <th style="text-align:center;padding:11px 10px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Conf.</th>
+        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Build slides</td>
+        <td style="padding:12px 10px;text-align:center;color:#4ECCA3;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">90%</td>
+        <td style="padding:12px 14px;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.03);">proceed</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">Slide count holds</td>
+        <td style="padding:12px 10px;text-align:center;color:#FBBF24;font-weight:700;border-bottom:1px solid rgba(245,158,11,0.08);">70%</td>
+        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">drive from a locked manifest</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;">Snapshots accurate</td>
+        <td style="padding:12px 10px;text-align:center;color:#F59E0B;font-weight:700;">60%</td>
+        <td style="padding:12px 14px;color:#E8EEF6;background:rgba(245,158,11,0.04);">use real files; human-check</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">The planned agents return this before a step runs. Low confidence is not a blocker &#8212; it is where the mitigation goes.</p>
+</div>
+        </div>
+      </div>
+      <p class="caption-line">Get a plan first: written intent before any action &#8212; goal, steps, files, what each produces, the risks. <code style="font-family:'JetBrains Mono',monospace;">/plan</code> runs that discipline end to end and finishes with the review on the right. You steer cheaply on paper, not expensively mid-execution.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-30" data-slide="30" data-sid="drill-audit">
+    <div class="slide-inner big-inner">
+      <span class="drill-tag">Do this now</span>
+      <h2 class="slide-h2">Send the plan to audit.</h2>
+      <p class="subhead-sm">You never say "yes, go" to a first plan.</p>
+      <div class="cmd-card">
+        <p class="cmd-hint">Type this</p>
+        <code>please audit the plan using several agents and provide confidence scores before execution</code>
+      </div>
+      <div class="big-lines">
+        <p>A fresh reviewer, never the one who did the work.</p>
+        <p class="muted">Run it after every big step. It always finds something.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-31" data-slide="31" data-sid="route">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Don't pick the agent. Let the Coding Agent route.</h2>
+      <p class="subhead-sm">Say what you need in business terms; let the manager staff it.</p>
+      <div class="split-body">
+        <div class="split-left">
+      <ul class="bullets">
+        <li>You don't memorize 96 agents. Describe the problem in plain language.</li>
+        <li>The coding agent routes to the right specialist(s) based on your context and the task.</li>
+        <li>Picking agents yourself is like a CEO assigning desks. Not your job.</li>
+        <li>Your job: frame the problem well, and judge the answer.</li>
+      </ul>
+
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: route | SVG router-pick — problem -> router -> ONE right specialist (alternatives greyed). -->
+<!-- DELIBERATELY DISTINCT from spawn-team.html: that one fans OUT to many; this one PICKS one. Single highlighted path. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <svg viewBox="0 0 720 360" width="100%" height="auto" role="img"
+       aria-label="A plain-language problem goes to a router, which picks the one right specialist while the alternatives stay greyed out.">
+    <defs>
+      <style>
+        .r-node{font-family:Inter,system-ui,sans-serif;fill:#E8EEF6;font-weight:700;font-size:13.5px;}
+        .r-dim{font-family:Inter,system-ui,sans-serif;fill:#5b6982;font-weight:600;font-size:13px;}
+        .r-sub{font-family:Inter,system-ui,sans-serif;fill:#9FB0C6;font-size:11px;}
+        .r-cap{font-family:Inter,system-ui,sans-serif;fill:#FBBF24;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;}
+      </style>
+      <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+        <path d="M0,0 L9,4.5 L0,9 z" fill="#F59E0B"/>
+      </marker>
+      <marker id="arrRdim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#3a4660"/>
+      </marker>
+    </defs>
+
+    <!-- problem -->
+    <rect x="18" y="146" width="148" height="68" rx="12" fill="#111c30" stroke="#F59E0B" stroke-width="1.6"/>
+    <text x="92" y="174" text-anchor="middle" class="r-node">Your problem</text>
+    <text x="92" y="193" text-anchor="middle" class="r-sub">in plain words</text>
+
+    <!-- to router -->
+    <line x1="166" y1="180" x2="252" y2="180" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrR)"/>
+
+    <!-- router (diamond) -->
+    <polygon points="320,135 390,180 320,225 250,180" fill="rgba(245,158,11,0.10)" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="320" y="178" text-anchor="middle" class="r-node">Router</text>
+    <text x="320" y="196" text-anchor="middle" class="r-sub">picks one</text>
+    <text x="320" y="118" text-anchor="middle" class="r-cap">Claude decides</text>
+
+    <!-- ONE highlighted path -->
+    <line x1="390" y1="180" x2="500" y2="180" stroke="#F59E0B" stroke-width="2.4" marker-end="url(#arrR)"/>
+    <rect x="502" y="152" width="200" height="56" rx="11" fill="rgba(245,158,11,0.12)" stroke="#F59E0B" stroke-width="2"/>
+    <text x="520" y="178" class="r-node">&#127919; the right specialist</text>
+    <text x="520" y="196" class="r-sub">handles it end to end</text>
+
+    <!-- greyed alternatives (not picked) -->
+    <line x1="382" y1="158" x2="500" y2="92" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="70" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="96" class="r-dim">another specialist</text>
+
+    <line x1="382" y1="202" x2="500" y2="272" stroke="#3a4660" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arrRdim)"/>
+    <rect x="502" y="252" width="200" height="42" rx="10" fill="#0f1828" stroke="#2a3650"/>
+    <text x="520" y="278" class="r-dim">another specialist</text>
+
+    <text x="92" y="324" class="r-sub" style="fill:#FBBF24;font-style:italic;">You don&#8217;t pick the agent. You describe the problem.</text>
+  </svg>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-32" data-slide="32" data-sid="pbaw">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">The command behind it: /pbaw</h2>
+      <p class="subhead-sm">One command has the coding agent choose the right specialist(s) and spawn them the disciplined way.</p>
+      <div class="split-body">
+        <div class="split-left">
+<!-- FRAGMENT: pbaw | /pbaw command card — routing + spawn discipline as one command -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the command &#183; /pbaw
+  </div>
+  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
+    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/pbaw</code>
+    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">describe the problem &#8212; it staffs and spawns the right team</div>
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <tbody>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reads your request and <strong>chooses the right specialist(s)</strong> from the existing teams</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Spawns them under the <span style="color:#FBBF24;">full spawn protocol</span> &#8212; identity, skills + packs, one Audit Block each</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Presents each in first person; <strong>synthesizes several voices into one answer</strong></td></tr>
+      <tr><td style="padding:9px 16px;">You never wire agents by hand &#8212; <span style="color:#FBBF24;">/plan</span> and the playbooks call it for you</td></tr>
+    </tbody>
+  </table>
+</div>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: pbaw-example | worked example — one /pbaw request choosing + spawning the right specialists -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    an example &#183; you ask, /pbaw staffs it
+  </div>
+  <div style="background:rgba(245,158,11,0.07);border:1.8px solid #F59E0B;border-radius:12px;padding:14px 18px;margin-bottom:12px;">
+<pre style="margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.9rem;line-height:1.6;color:#E8EEF6;white-space:pre-wrap;"><code>/pbaw price our new subscription tier</code></pre>
+  </div>
+  <div style="text-align:center;color:#F59E0B;font-size:1.3rem;font-weight:700;margin-bottom:8px;">&#8595;</div>
+  <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;margin-bottom:8px;">it chooses + spawns</div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
+    <tbody>
+      <tr>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128200; VP Product</td>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">pricing strategy + the tier call</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128202; BizOps</td>
+        <td style="padding:11px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">margins + the business case</td>
+      </tr>
+      <tr>
+        <td style="padding:11px 16px;white-space:nowrap;color:#E8EEF6;font-weight:600;">&#128302; Competitive Intel</td>
+        <td style="padding:11px 16px;color:#9FB0C6;">how rivals price the same tier</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:12px 2px 0;font-size:0.9rem;color:#9FB0C6;">Three specialists you never named &#8212; each with its own Audit Block, folded into <span style="color:#FBBF24;">one recommendation</span> for you to decide.</p>
+</div>
+        </div>
+      </div>
+      <p class="caption-line">The concept from the previous slide, as one command. Type <code style="font-family:'JetBrains Mono',monospace;">/pbaw</code> yourself, or let <code style="font-family:'JetBrains Mono',monospace;">/plan</code> and the playbooks invoke it &#8212; either way the coding agent picks the specialists and runs each under the full protocol.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-33" data-slide="33" data-sid="who-came">
+    <div class="slide-inner big-inner">
+      <h2 class="slide-h2">Look at who came to the meeting.</h2>
+      <p class="subhead-sm">When the work comes back, read the names.</p>
+      <div class="big-lines">
+        <p>Who was in the room? A product manager, a researcher. Fine.</p>
+        <p>Now ask who was not. The director. Product marketing. The architect.</p>
+      </div>
+      <blockquote class="pullquote">You do not pick the agents yourself. You ask it to find the right ones.</blockquote>
+    </div>
+  </section>
+  <section class="slide" id="slide-34" data-slide="34" data-sid="drill-confidence">
+    <div class="slide-inner big-inner">
+      <span class="drill-tag">Do this now</span>
+      <h2 class="slide-h2">Ask for a confidence score.</h2>
+      <p class="subhead-sm">Every time work comes back, ask for the number.</p>
+      <div class="cmd-card">
+        <p class="cmd-hint">Type this</p>
+        <code>give me confidence scores from the agents before we go further</code>
+      </div>
+      <div class="big-lines">
+        <p>If it comes back at 82, you do not ship it. You send it back.</p>
+        <p class="muted">A number gives you somewhere to push.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-35" data-slide="35" data-sid="audit-result">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Audit after you run: /audit</h2>
+      <p class="subhead-sm">A plan that ran is not the same as a plan that worked. Audit the result before you sign off.</p>
+      <div class="split-body">
+        <div class="split-left">
+<!-- FRAGMENT: audit-result | /audit command card — the result audit as one command -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:12px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the command &#183; /audit
+  </div>
+  <div style="background:rgba(245,158,11,0.12);border:2px solid #F59E0B;border-radius:14px;padding:16px 24px;text-align:center;margin-bottom:16px;">
+    <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;font-size:1.5rem;">/audit</code>
+    <div style="color:#9FB0C6;font-size:0.92rem;margin-top:5px;">the multi-angle result audit</div>
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <tbody>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Brings in <span style="color:#FBBF24;">a fresh panel</span> &#8212; as many agents as the work's angles need, at least one that did not do the work</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Checks <strong>executed</strong> / <strong>aligned</strong> / <strong>no bugs</strong> against the plan</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);"><span style="color:#FBBF24;">Verifies</span> by opening and running &#8212; never assumes</td></tr>
+      <tr><td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);">Reports findings by <strong>severity</strong>, fixes + re-verifies what's safe</td></tr>
+      <tr><td style="padding:9px 16px;">Ends on a clear <span style="color:#FBBF24;">GO / NO-GO</span></td></tr>
+    </tbody>
+  </table>
+  <p style="margin:13px 2px 0;font-size:0.86rem;color:#9FB0C6;">Mode-aware: it reads the context first. Auditing a <strong style="color:#E8EEF6;">result</strong> runs the checks above; auditing a <strong style="color:#E8EEF6;">plan or updated plan</strong> runs the same pre-execution review <code style="font-family:'JetBrains Mono',monospace;color:#FBBF24;">/plan</code> uses &#8212; the agents return confidence + mitigations, ending on <span style="color:#FBBF24;">PROCEED / REWORK</span>.</p>
+</div>
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: audit-verdict | findings by severity -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#9FB0C6;margin-bottom:9px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#F59E0B;display:inline-block;"></span>
+    the verdict, after runtime
+  </div>
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.92rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#9FB0C6;border-bottom:1px solid rgba(245,158,11,0.18);">Severity</th>
+        <th style="text-align:left;padding:11px 14px;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);background:rgba(245,158,11,0.06);">What happens</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;color:#F87171;border-bottom:1px solid rgba(245,158,11,0.08);">Blocker</td>
+        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">a promised deliverable is missing or broken &#8594; fix + re-verify before GO</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.08);">Important</td>
+        <td style="padding:12px 14px;color:#E8EEF6;border-bottom:1px solid rgba(245,158,11,0.08);background:rgba(245,158,11,0.04);">two files disagree &#8594; reconcile, then re-check</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 14px;font-weight:700;color:#4ECCA3;">Minor</td>
+        <td style="padding:12px 14px;color:#9FB0C6;background:rgba(245,158,11,0.04);">a stale link, a typo &#8594; note and move on</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:11px 2px 0;font-size:0.9rem;color:#9FB0C6;">Severity decides what blocks the sign-off. Not every finding does.</p>
+</div>
+        </div>
+      </div>
+      <p class="caption-line">A plan that ran is not a plan that worked. <code style="font-family:'JetBrains Mono',monospace;">/audit</code> brings fresh agents &#8212; sized to the work, one per angle &#8212; to prove it shipped, or to say honestly what didn't. Type it, or fold it into a bigger prompt as the result-audit step.</p>
+    </div>
+  </section>
+  <section class="slide" id="slide-36" data-slide="36" data-sid="two-threads">
+    <div class="slide-inner big-inner">
+      <span class="drill-tag">Do this now</span>
+      <h2 class="slide-h2">Open a second thread.</h2>
+      <p class="subhead-sm">Start a second window while the first one is still working.</p>
+      <div class="big-lines">
+        <p>One thread strategic. One thread tactical.</p>
+        <p>Move context across when you need it.</p>
+      </div>
+      <div class="cmd-card">
+        <p class="cmd-hint">In the first thread, then paste into the second</p>
+        <code>copy this to my clipboard</code>
+      </div>
+      <div class="big-lines">
+        <p class="muted">You do not have to wait for the slow work to finish.</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="slide-37" data-slide="37" data-sid="wf-divider">
+    <div class="slide-inner divider-inner">
+      <div class="ghost-numeral" aria-hidden="true">4</div>
+      <h1 class="display">Part 4 &#8212; The Workforce</h1>
+      <div class="amber-rule"></div>
+      <p class="subhead">Everything it can do for you, and where the call stays yours.</p>
+    </div>
+  </section>
+
+  <!-- >>> EXISTING SLIDE data-sid="roster" GOES HERE <<< -->
+
+  <section class="slide" id="slide-38" data-slide="38" data-sid="roster">
     <div class="slide-inner split-inner">
       <h2 class="slide-h2">One company on call, and you govern all of it</h2>
       <p class="subhead-sm">Governance leads; breadth proves.</p>
@@ -2118,67 +2861,237 @@ If any check fails, my output is invalid.
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-33" data-slide="33" data-sid="attention">
+  <section class="slide" id="slide-39" data-slide="39" data-sid="wf-premise">
     <div class="slide-inner big-inner">
-      <h1 class="display">You are one. They are infinite.</h1>
+      <p class="eyebrow">The premise</p>
+      <h1 class="display">The workforce produces. You govern.</h1>
       <div class="amber-rule"></div>
-      <blockquote class="pullquote">In the first period you will always be in a deficit of attention against the agents.</blockquote>
       <div class="big-lines">
-        <p>They will produce more than you can read. That is not a problem to solve.</p>
-        <p class="muted">It is the reason to stop reading everything and start reviewing on purpose.</p>
+        <p>You will come to it with four kinds of thing.</p>
+        <p><strong>Launch &amp; grow. Decide &amp; build. Money &amp; risk. Find &amp; understand.</strong></p>
+        <p class="muted">Behind each one sits a specialist on a proven method, 250 skills, 120 libraries. That is why it comes back finished.</p>
       </div>
+      <blockquote class="pullquote">Every job names where the call stays yours.</blockquote>
     </div>
   </section>
-  <section class="slide" id="slide-34" data-slide="34" data-sid="two-threads">
-    <div class="slide-inner big-inner">
-      <span class="drill-tag">Do this now</span>
-      <h2 class="slide-h2">Open a second thread.</h2>
-      <p class="subhead-sm">Start a second window while the first one is still working.</p>
-      <div class="big-lines">
-        <p>One thread strategic. One thread tactical.</p>
-        <p>Move context across when you need it.</p>
-      </div>
-      <div class="cmd-card">
-        <p class="cmd-hint">In the first thread, then paste into the second</p>
-        <code>copy this to my clipboard</code>
-      </div>
-      <div class="big-lines">
-        <p class="muted">You do not have to wait for the slow work to finish.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-35" data-slide="35" data-sid="govern-line">
-    <div class="slide-inner statement-inner">
-      <h2 class="slide-h2">Governing quality: the line that stays yours</h2>
-      <div class="statement-body">
-        <div class="statement-left">
+
+  <section class="slide" id="slide-40" data-slide="40" data-sid="wf-launch">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Launch &amp; grow</h2>
+      <p class="subhead-sm">When you need the market to hear you.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
       <ul class="bullets">
-        <li>You don't rubber-stamp. You review like a manager: spot-check, push back, send back.</li>
-        <li>Consequential decisions still need your affirmation: the Decision Record and the Standard.</li>
-        <li>Sensitive domains (Legal, Compliance, HR, Finance) keep a human in the loop by design, not as a disclaimer.</li>
-        <li>The workforce scales the work. The call stays yours.</li>
+        <li><strong>Who works it:</strong> Marketing, Content, Copy, SEO, Growth, Competitive Intelligence.</li>
+        <li><strong>Where you decide:</strong> you approve the positioning, the voice, and the go-date.</li>
       </ul>
 
         </div>
-              <blockquote class="pullquote">The workforce scales the work; the call stays yours. That is the part no one can sell you.</blockquote>
+        <div class="split-right">
+<!-- FRAGMENT: wf-launch | job matrix, Launch & grow cluster. Styles mirror the roster-slide table exactly. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="width:38%;text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">You ask for</th>
+        <th style="text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What comes back</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A go-to-market plan</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Positioning, messaging, channels, timeline, metrics</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A content calendar</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Weeks of planned, on-voice content, with the posts drafted</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">Copy that converts</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Headlines, landing pages, emails and ads, written and tested</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;font-weight:600;">To show up in search</td>
+        <td style="padding:9px 16px;color:#9FB0C6;">An SEO plan and the pages to run it</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        </div>
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-36" data-slide="36" data-sid="moat">
+
+  <section class="slide" id="slide-41" data-slide="41" data-sid="wf-decide">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Decide &amp; build</h2>
+      <p class="subhead-sm">When the next call is expensive to get wrong.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
+      <ul class="bullets">
+        <li><strong>Who works it:</strong> Product, Competitive Intelligence, Design, Architecture, Security.</li>
+        <li><strong>Where you decide:</strong> the call stays yours, and it is recorded.</li>
+      </ul>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: wf-decide | job matrix, Decide & build cluster. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="width:38%;text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">You ask for</th>
+        <th style="text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What comes back</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">Help sizing a decision</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">The options, the trade-offs, a recommendation, the reasoning</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A read on a competitor</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Their moves, your openings, a positioning response</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A feature scoped and specced</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">What it does, how it behaves, what to build</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;font-weight:600;">A technical call de-risked</td>
+        <td style="padding:9px 16px;color:#9FB0C6;">Options, trade-offs, the security read, and a plan</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-42" data-slide="42" data-sid="wf-money">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Money &amp; risk</h2>
+      <p class="subhead-sm">When the downside matters more than the upside.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
+      <ul class="bullets">
+        <li><strong>Who works it:</strong> Finance, Operations, Process, Program, Contracts Counsel.</li>
+        <li><strong>Where you decide:</strong> the numbers stay yours; legal weight goes to your lawyer.</li>
+      </ul>
+      <p class="caption-line">We never invent the numbers.</p>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: wf-money | job matrix, Money & risk cluster. Contracts row carries the supervised-terms pill -->
+<!-- ON the row's eyeline (same pattern as the roster slide's Legal & Compliance row), not as a footnote. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="width:38%;text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">You ask for</th>
+        <th style="text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What comes back</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A financial model</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Structure, assumptions, scenarios, ready to pressure-test</td>
+      </tr>
+      <tr style="background:rgba(245,158,11,0.05);">
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">
+          A contract looked at
+          <span style="display:inline-block;margin-left:8px;padding:2px 9px;background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.4);border-radius:999px;font-size:0.7rem;font-weight:600;color:#FBBF24;vertical-align:middle;">supervised</span>
+        </td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">First-pass triage: the clauses, the flags, the questions</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A process fixed</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">The bottleneck named and the fix specified</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;font-weight:600;">A program coordinated</td>
+        <td style="padding:9px 16px;color:#9FB0C6;">Owners, milestones, and the rhythm that keeps it shipping</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-43" data-slide="43" data-sid="wf-find">
+    <div class="slide-inner split-inner">
+      <h2 class="slide-h2">Find &amp; understand</h2>
+      <p class="subhead-sm">When you need to know before you move.</p>
+      <div class="split-body wide-right">
+        <div class="split-left">
+      <ul class="bullets">
+        <li><strong>Who works it:</strong> Data Science, Customer Success, Analyst, Market Research.</li>
+        <li><strong>Where you decide:</strong> what it means, and what you do about it.</li>
+      </ul>
+
+        </div>
+        <div class="split-right">
+<!-- FRAGMENT: wf-find | job matrix, Find & understand cluster. -->
+<div class="pb-frag" style="font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
+  <table style="width:100%;border-collapse:collapse;background:#111c30;border:1px solid rgba(245,158,11,0.22);border-radius:14px;overflow:hidden;font-size:0.9rem;">
+    <thead>
+      <tr style="background:rgba(245,158,11,0.08);">
+        <th style="width:38%;text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">You ask for</th>
+        <th style="text-align:left;padding:10px 16px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:#FBBF24;border-bottom:1px solid rgba(245,158,11,0.18);">What comes back</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">To know what your numbers say</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">A dashboard and an analysis you can act on</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">A test read</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">The verdict, and the confidence behind it</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);font-weight:600;">Your customers understood</td>
+        <td style="padding:9px 16px;border-bottom:1px solid rgba(245,158,11,0.08);color:#9FB0C6;">Health scores, segments, and who is about to leave</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 16px;font-weight:600;">A research question answered</td>
+        <td style="padding:9px 16px;color:#9FB0C6;">A synthesized, sourced answer, not a pile of links</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-44" data-slide="44" data-sid="wf-name-the-job">
     <div class="slide-inner big-inner">
-      <p class="eyebrow">The moat</p>
-      <h1 class="display">The moat is not the workforce. The moat is operating the workforce.</h1>
+      <p class="eyebrow">How you reach for it</p>
+      <h1 class="display">You do not pick the team. You name the job.</h1>
       <div class="amber-rule"></div>
       <div class="big-lines">
-        <p>Anyone can build this. A real team builds it in a week.</p>
+        <p>You will not remember 96 specialists. You do not need to.</p>
+        <p>Say the problem in your own words. It staffs itself.</p>
       </div>
-      <blockquote class="pullquote">You can lead them to good decisions. But they cannot lead themselves.</blockquote>
+      <div class="cmd-card">
+        <p class="cmd-hint">Type this</p>
+        <code>/pbaw we are launching next month, I need a plan</code>
+      </div>
       <div class="big-lines">
-        <p class="muted">The judgement is yours. That is the part nobody can copy.</p>
+        <p class="muted">The four groups are your map. The full menu is longer: <a href="https://productbeacon.agency/workforce.html" target="_blank" rel="noopener" style="color:#FBBF24;text-decoration:none;font-weight:600;">productbeacon.agency/workforce &#8599;</a></p>
       </div>
     </div>
   </section>
-  <section class="slide" id="slide-37" data-slide="37" data-sid="leave-with">
+  <!-- =============== END PART 4 — THE WORKFORCE =============== -->
+<section class="slide" id="slide-45" data-slide="45" data-sid="leave-with">
     <div class="slide-inner artifact-inner">
       <h2 class="slide-h2 small">What you leave with today</h2>
       <p class="subhead-sm">Not a recap of what we covered. A checklist of what you now own.</p>
@@ -2227,20 +3140,7 @@ If any check fails, my output is invalid.
 
     </div>
   </section>
-  <section class="slide" id="slide-38" data-slide="38" data-sid="pull-back">
-    <div class="slide-inner big-inner">
-      <h2 class="slide-h2">What will pull you back.</h2>
-      <p class="subhead-sm">Three moments this week. Decide now what you do in each.</p>
-      <blockquote class="pullquote">The mindset shift is the event. The habits pull you back. There is a fear of letting the team actually work. Of not being the individual contributor anymore.<footer class="quote-attr">Offri Gil, after session one</footer></blockquote>
-      <div class="big-lines">
-        <p><strong>It breaks.</strong> You tell it to fix it. You do not open the file.</p>
-        <p><strong>You are in a hurry.</strong> You brief it and audit it. You do not do it yourself.</p>
-        <p><strong>The first answer is mediocre.</strong> You send it back. You do not rewrite it.</p>
-        <p class="muted">The shift happens in a session. The habits fight it for weeks. That is why we finish with a date.</p>
-      </div>
-    </div>
-  </section>
-  <section class="slide" id="slide-39" data-slide="39" data-sid="close">
+  <section class="slide" id="slide-46" data-slide="46" data-sid="close">
     <div class="slide-inner close-inner">
 <!-- FRAGMENT: close | closing beat before the appendices — brand promise, spine line, credibility links (book + DPS), next-step bridge -->
 <div class="pb-frag" style="max-width:920px;margin:0 auto;text-align:center;font-family:Inter,system-ui,sans-serif;color:#E8EEF6;">
@@ -2267,7 +3167,7 @@ If any check fails, my output is invalid.
 
     </div>
   </section>
-  <section class="slide" id="slide-40" data-slide="40" data-sid="command-reference">
+  <section class="slide" id="slide-47" data-slide="47" data-sid="command-reference">
     <div class="slide-inner artifact-inner">
       <h2 class="slide-h2 small">Command reference: the operator commands</h2>
 
