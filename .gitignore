@@ -5,3 +5,9 @@ pdf-light/
 __pycache__/
 *.pyc
 Product/backups/
+
+# audit 2026-08-27 — local build/backup noise, never publish
+.backups/
+_wfo-*-prev-*/
+*.bak-*
+*.bak-updates-*
