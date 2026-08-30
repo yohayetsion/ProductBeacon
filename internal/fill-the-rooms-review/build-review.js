@@ -8,8 +8,8 @@ const path = require('path');
 const reviewRoot = __dirname;
 const repoRoot = path.resolve(reviewRoot, '..', '..');
 const prefix = '/internal/fill-the-rooms-review/';
-const buildStamp = '5R-PLAS-CORRECTION-20260830-DR422';
-const sourceCommit = 'a17181c844378beffbafec4e8087b93478750479';
+const buildStamp = '5R-PLAS-ROUTEMERGE-20260830-DR425';
+const reviewCommittedOntoCommit = '3c3fd33726a8cc27ff91831aa45afa855271864f';
 const robots = '<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">';
 const referrer = '<meta name="referrer" content="no-referrer">';
 
@@ -277,7 +277,8 @@ const manifest = {
   schema_version: 1,
   candidate: 'ProductBeacon Product Leadership, At Scale Phase 5R review',
   build_stamp: buildStamp,
-  source_commit: sourceCommit,
+  review_committed_onto_commit: reviewCommittedOntoCommit,
+  source_provenance: 'the production-shaped sources carry uncommitted changes on top of this commit by design (DR-2026-412); source_to_review[].source_sha256 is the binding record of what was built',
   review_prefix: prefix,
   transform_command: 'node internal/fill-the-rooms-review/build-review.js',
   commit_paths: commitPaths,

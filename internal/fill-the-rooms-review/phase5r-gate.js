@@ -64,7 +64,10 @@ const frozenInputs = [
   ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-design-2026-08-30.md', 'f64fa1061d745a1abcac527d10fdd04ecf287d87aecb4a2c39a463d36cc1e069', 'frozen Product Leadership design hash'],
   ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-copy-contract-2026-08-30.md', '86ad001d1897a7082c9c6f7c3614bff34cfe8d94f73ff60368b58e30f2925f99', 'frozen Product Leadership copy contract hash'],
   ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-design-handoff-2026-08-30.md', '67bdcd16ab16fad2a2990b4e6f0c88b7797c022e22d49cd63d7d5421baf8de7d', 'frozen Product Leadership design handoff hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-implementation-plan-2026-08-30.md', '41e1bad9c7a64baeefa9a546883dbe2226fd1440e625b4a6726d6b3b7b337ead', 'frozen Product Leadership implementation plan hash']
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-implementation-plan-2026-08-30.md', '41e1bad9c7a64baeefa9a546883dbe2226fd1440e625b4a6726d6b3b7b337ead', 'frozen Product Leadership implementation plan hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-plas-route-merge-and-ledger-copy-contract-delta-2026-08-30.md', '2768af2c2280699e2ba1ffccd55d96f8c3093b90ddd53e1ab63cd59d60a31b54', 'frozen route-merge copy contract delta hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-plas-route-merge-and-ledger-design-delta-2026-08-30.md', '34a0e56c84d19af6a7ae318409e09d43e1bbebcb3dc4aa2f0a43115cb2a3e42d', 'frozen route-merge design delta hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-plas-route-merge-reconciliation-2026-08-30.md', '34bc71dc86c350130e08f92b0fd24dde72ed67a3c98e165411dc32d3e3faeab7', 'frozen route-merge reconciliation hash']
 ];
 frozenInputs.forEach(([filePath, expected, label]) => checkHash(filePath, expected, label));
 
@@ -94,14 +97,15 @@ function strictlyIncreasing(values) {
   return values.every((value, index) => value !== -1 && (index === 0 || value > values[index - 1]));
 }
 
-const entrySections = ['leadership-hero', 'leadership-stakes', 'value-loop-blueprint', 'system-map', 'ways-to-use', 'workforce-proof', 'responsibility-routes', 'human-leadership-services'];
+const entrySections = ['leadership-hero', 'leadership-stakes', 'value-loop-blueprint', 'system-map', 'responsibility-routes', 'workforce-proof', 'workforce-ledger', 'human-leadership-services'];
 check(home.includes('<main id="main-content" class="entry-main" data-phase5r-page="entry" tabindex="-1">'), 'entry main marker exact');
 check(entrySections.every(value => count(home, `data-phase5r-section="${value}"`) === 1), 'entry section markers exact once');
 check(strictlyIncreasing(markerPositions(home, 'data-phase5r-section', entrySections)), 'entry section markers ordered');
 const entryHero = (home.match(/<[^>]+data-phase5r-section="leadership-hero"[\s\S]*?<\/section>/) || [''])[0];
 check(count(entryHero, '<h1') === 1 && count(home, '<h1') === 1, 'entry single H1 inside hero');
 check(!/(\$|\/ month|first month|compute excluded|finish it and the licence opens)/i.test(visibleText(entryHero)), 'entry hero has no price or access-condition tokens');
-check(entryHero.includes('href="#ways-to-use"') && entryHero.includes('href="/workforce.html"'), 'entry hero primary and Workforce routes');
+check(entryHero.includes('href="#choose-your-route"') && entryHero.includes('href="/workforce.html"'), 'entry hero primary and Workforce routes');
+check(visibleText(entryHero).includes('Choose your route'), 'entry hero primary CTA label exact');
 check(entryHero.includes('Product Leadership, At Scale.'), 'entry hero H1 exact');
 
 const systemLayers = ['blueprint', 'decision-infrastructure', 'workforce-editions', 'operating-foundation'];
@@ -111,14 +115,22 @@ check(count(home, 'data-human-decision-seam') === 1, 'system map human decision 
 const responsibilityRoutes = ['run-one-product-team', 'extend-across-the-enterprise', 'productbeacon-carries-the-outcome'];
 check(responsibilityRoutes.every(value => count(home, `data-route="${value}"`) === 1), 'three responsibility routes exact once');
 check(count(home, 'data-proof-kind="workforce-delivery"') === 2, 'two workforce delivery proof artifacts exact');
-const waysToUse = sectionByMarker(home, 'data-phase5r-section', 'ways-to-use');
+check(count(home, 'data-ledger-item') === 3, 'Workforce Ledger rail carries exactly three record rows');
 const responsibilitySection = sectionByMarker(home, 'data-phase5r-section', 'responsibility-routes');
-check(Boolean(waysToUse) && count(waysToUse, 'class="use-card"') === 3 && count(waysToUse, 'data-route=') === 0, 'ways-to-use contains only three usage modules');
+const proofSection = sectionByMarker(home, 'data-phase5r-section', 'workforce-proof');
+const ledgerSection = sectionByMarker(home, 'data-phase5r-section', 'workforce-ledger');
+check(count(home, 'data-phase5r-section="ways-to-use"') === 0 && count(home, 'class="use-card"') === 0 && count(home, 'use-card__') === 0 && count(home, 'id="ways-to-use"') === 0, 'merged: the duplicate ways-to-use section and its cards are gone');
+check(count(home, '#ways-to-use') === 0, 'merged: no link anywhere still targets the removed anchor');
+check(count(home, 'class="use-grid"') === 0 && count(home, '.use-grid') === 0 && count(home, '.route-heading') === 0 && count(home, 'class="route-heading"') === 0, 'merged: dead use-grid and route-heading rules removed');
 check(Boolean(responsibilitySection) && responsibilitySection.includes('id="choose-your-route"') && count(responsibilitySection, 'data-route=') === 3, 'responsibility routes are a separate anchored section');
+check(count(home, 'class="door-grid"') === 1 && count(home, 'data-route=') === 3, 'exactly one three-card grid remains on the homepage');
+check(count(proofSection, 'data-proof-class="finished-delivery"') === 1 && count(ledgerSection, 'data-proof-class="operating-record"') === 1, 'two distinct proof classes marked exactly once each');
 const exactRouteCards = [
   {
     id: 'run-one-product-team',
     href: '/only-product-person/',
+    mode: 'One Product team',
+    modeSlug: 'one-product-team',
     heading: 'I lead Product inside a company.',
     body: 'For product leaders, product department heads, and the only Product person. Begin with one Product team and grow from there.',
     cta: 'See my Product route'
@@ -126,6 +138,8 @@ const exactRouteCards = [
   {
     id: 'extend-across-the-enterprise',
     href: '/covering-everything/',
+    mode: 'The wider workforce',
+    modeSlug: 'the-wider-workforce',
     heading: 'I carry several functions or clients.',
     body: 'For founders, operators, solo executives, fractional leaders, and services owners. Begin with the wider workforce.',
     cta: 'See my operator route'
@@ -133,6 +147,8 @@ const exactRouteCards = [
   {
     id: 'productbeacon-carries-the-outcome',
     href: '/on-call.html',
+    mode: 'ProductBeacon operated',
+    modeSlug: 'productbeacon-operated',
     heading: 'I want ProductBeacon to carry the work.',
     body: 'For commissioned work or product leadership capacity without operating the workforce yourself.',
     cta: 'See On Call &amp; Fractional'
@@ -141,9 +157,38 @@ const exactRouteCards = [
 for (const route of exactRouteCards) {
   const card = (responsibilitySection.match(new RegExp(`<a\\b[^>]*data-route="${route.id}"[^>]*>[\\s\\S]*?<\\/a>`)) || [''])[0];
   check(Boolean(card) && card.includes(`href="${route.href}"`), `route ${route.id} whole-surface link and target exact`);
-  check(Boolean(card) && normalizedText(card) === `${route.heading} ${route.body} ${route.cta}`, `route ${route.id} contains only contracted copy`, normalizedText(card));
+  check(Boolean(card) && normalizedText(card) === `${route.mode} ${route.heading} ${route.body} ${route.cta}`, `route ${route.id} contains only contracted copy`, normalizedText(card));
+  check(Boolean(card) && count(card, `data-operating-mode="${route.modeSlug}"`) === 1, `route ${route.id} carries its operating-mode marker exactly once`);
+  check(Boolean(card) && new RegExp(`<span class="route-card__mode">${route.mode}</span>`).test(card), `route ${route.id} mode label is sentence-case in the DOM`);
 }
 check(/\.route-card:active\s*\{[^}]*transform:\s*none[^}]*border-color:\s*var\(--amber-dim\)/s.test(home), 'responsibility routes define contracted pressed state');
+check(count(home, 'data-operating-mode=') === 3 && count(responsibilitySection, 'data-operating-mode=') === 3, 'three operating-mode labels, all inside the route section');
+check(/\.route-card__mode\s*\{[^}]*text-transform:\s*uppercase/s.test(home), 'operating-mode labels are uppercased by CSS, not by the DOM');
+check(/\.route-card__mode\s*\{[^}]*color:\s*var\(--secondary\)/s.test(home), 'operating-mode labels use secondary, keeping amber for action');
+check(count(home, 'id="intensive"') === 1 && /id="intensive"[^>]*data-operating-mode="the-wider-workforce"|data-operating-mode="the-wider-workforce"[^>]*id="intensive"/.test(home), 'the frozen Operator Intensive nav target resolves to the wider-workforce route card');
+check(/<a[^>]*data-route="extend-across-the-enterprise"[^>]*id="intensive"|<a[^>]*id="intensive"[^>]*data-route="extend-across-the-enterprise"/.test(home), 'the Operator Intensive anchor lands on a focusable link');
+const ledgerExact = [
+  'The operating record',
+  'See how the workforce runs, not only what it delivers.',
+  "The Governed Workforce Ledger is ProductBeacon's recurring record of how the governed workforce actually ran. It is logged, reviewed, and on the record, and a named human reviews and publishes every issue.",
+  'What the workforce produced',
+  'Which decisions a named human affirmed',
+  'What was sent back',
+  'See the Ledger on the ProductBeacon LinkedIn page'
+];
+check(Boolean(ledgerSection), 'Workforce Ledger section present');
+check(ledgerExact.every(value => visibleText(ledgerSection).includes(value)), 'Workforce Ledger copy exact', ledgerExact.filter(value => !visibleText(ledgerSection).includes(value)).join(' | '));
+check(Boolean(ledgerSection) && count(ledgerSection, '<img') === 0 && count(ledgerSection, '<h3') === 0 && count(ledgerSection, 'artifact-frame') === 0, 'Workforce Ledger rail is unframed, imageless and carries no report-level heading');
+check(Boolean(ledgerSection) && count(ledgerSection, 'href="https://www.linkedin.com/company/productbeacon"') === 1 && count(ledgerSection, '<a ') === 1, 'Workforce Ledger rail has exactly one link and it is the cleared destination');
+check(Boolean(ledgerSection) && !/href="#"|href=""|aria-disabled/.test(ledgerSection), 'Workforce Ledger rail has no placeholder or disabled control');
+check(Boolean(ledgerSection) && !/target="_blank"/.test(ledgerSection), 'Workforce Ledger link matches the existing external-link pattern');
+check(Boolean(ledgerSection) && !/\d/.test(visibleText(ledgerSection)), 'Workforce Ledger rail states no figure of any kind', visibleText(ledgerSection));
+check(/\.ledger-row\s*\+\s*\.ledger-row\s*\{\s*border-top:\s*1px solid var\(--border\)/s.test(home), 'Workforce Ledger dividers sit between rows only, on the passive border token');
+check(/\.ledger-rail\s*\{[^}]*max-width:\s*var\(--content-width\)/s.test(home), 'Workforce Ledger rail is capped at reading measure, narrower than the proof block');
+check(Boolean(ledgerSection) && !/--muted/.test(ledgerSection), 'Workforce Ledger rail never uses the sub-AA muted token for required copy');
+check(/\.ledger-action \.btn\s*\{[^}]*white-space:\s*normal[^}]*\}/s.test(home) && /\.ledger-action \.btn\s*\{[^}]*max-width:\s*100%/s.test(home), 'Workforce Ledger CTA wraps rather than overflowing the 320px gutter');
+check(/<section\b[^>]*\bclass="[^"]*\bsection--ink\b[^"]*"[^>]*data-phase5r-section="workforce-ledger"|<section\b[^>]*data-phase5r-section="workforce-ledger"[^>]*\bclass="[^"]*\bsection--ink\b/.test(home), 'Workforce Ledger sits on the base ink ground, one weight below the raised report block');
+check(Boolean(ledgerSection) && !/section--compact/.test(ledgerSection), 'Workforce Ledger uses standard section padding');
 check(!home.includes('data-offer-journey=') && !home.includes('data-router-step='), 'legacy journey and questionnaire structure absent');
 check(!home.includes('class="offer-table"'), 'old offer table absent');
 check(!/(testimonial|customer-logo|review-score|performance-result)/i.test(entryHero), 'hero contains no invented proof component');
@@ -287,9 +332,10 @@ const forbiddenClaims = [
   'every request becomes a team', 'router always finds', 'never re-explain your business',
   'every session makes the system smarter', 'model retrains itself', 'automatically gets smarter',
   'full harness guarantees', 'guaranteed correct', 'replaces your lawyer',
+  'you can audit', 'anyone can audit', 'audit each one', 'audit our records',
   'replaces a human team', 'licensed professional agent'
 ];
-const visitorText = `${visibleText(home)} ${visibleText(workforce)}`.toLowerCase();
+const visitorText = `${normalizedText(home)} ${normalizedText(workforce)}`.toLowerCase();
 check(forbiddenClaims.every(fragment => !visitorText.includes(fragment)), 'forbidden public claim fragments absent');
 
 const negativeCopy = [
@@ -303,12 +349,54 @@ const negativeCopy = [
   'Every agent can access the whole company brain',
   'Every request becomes a team',
   'The Audit Block proves the answer is correct',
-  'Human review makes errors impossible'
+  'Human review makes errors impossible',
+  'Use the system at the level you want to own.',
+  'Start with one Product team, extend the workforce across the company, or ask ProductBeacon to carry the outcome with you.',
+  'See the Product team route',
+  'See the wider workforce route',
+  'Choose how to use it',
+  'before choosing a route',
+  'Issue 02',
+  'latest issue',
+  'published every month',
+  'monthly since'
 ];
 check(negativeCopy.every(fragment => !visitorText.includes(fragment.toLowerCase())), 'negative-copy manifest absent');
+
+// Homepage-scoped only. The route-merge delta section 10.1 is explicit that
+// 'Run one Product team' and 'Extend beyond Product' remain valid CTA labels in
+// the Workforce page's final action, so these must never be checked across both
+// pages the way the shared manifest above is.
+const homepageNegativeCopy = [
+  'Choose the responsibility',
+  'Run one Product team.',
+  'Extend beyond Product.',
+  'Have ProductBeacon carry the outcome.',
+  'Open Product Org OS',
+  'one human',
+  'Read the Ledger'
+];
+const homepageText = normalizedText(home).toLowerCase();
+check(homepageNegativeCopy.every(fragment => !homepageText.includes(fragment.toLowerCase())), 'homepage-scoped negative copy absent', homepageNegativeCopy.filter(fragment => homepageText.includes(fragment.toLowerCase())).join(' | '));
+check(visibleText(home).includes('You can read the work and its supporting method before you decide.'), 'report aside no longer assumes the routes come after it');
+const homeMain = (home.match(/<main\b[\s\S]*?<\/main>/) || [''])[0];
+const expectedHrefCounts = [
+  ['#choose-your-route', 2], ['#ways-to-use', 0],
+  ['/only-product-person/', 1], ['/covering-everything/', 1], ['/on-call.html', 1],
+  ['/workforce.html', 3], ['https://github.com/yohayetsion/product-org-os', 2],
+  ['/vision-to-value/', 3], ['/decision-provenance-standard.html', 2],
+  ['/research/state-of-cyber-2026/', 1], ['/research/state-of-wfo-2026/', 1],
+  ['/research/', 1], ['/contact.html', 1],
+  ['https://www.linkedin.com/company/productbeacon', 1]
+];
+expectedHrefCounts.forEach(([target, expected]) => {
+  const actual = count(homeMain, `"${target}"`);
+  check(actual === expected, `homepage main carries ${expected} link(s) to ${target}`, `found ${actual}`);
+});
+check(!/\u2014/.test(visibleText(home)), 'homepage visible copy carries no em dash');
 check(!/(\$\s*[\d,]+|\d+\s*\/\s*month|first month free)/i.test(`${visibleText(home)} ${visibleText(workforce)}`), 'homepage and Workforce narrative contain no prices');
 check(!/(--space-5\b|--space-10\b)/.test(`${home}\n${workforce}`), 'undefined spacing tokens absent from source pages');
-check(!/(href|src|action)="\/internal\//.test(`${home}\n${workforce}`), 'production source has no internal links');
+check(sourcePaths.every(file => !/(href|src|action)="\/internal\//.test(source[file])), 'production source has no internal links', sourcePaths.filter(file => /(href|src|action)="\/internal\//.test(source[file])).join(', '));
 
 const workforceMarker = '<!-- Provenance: DR-2026-422; Product Leadership, At Scale Workforce candidate approved for review by Yohay Etsion 2026-08-30. -->';
 check(count(workforce, workforceMarker) === 1, 'workforce DR-2026-422 provenance marker exact once', `found ${count(workforce, workforceMarker)}`);
@@ -334,7 +422,7 @@ const reviewHtml = Object.fromEntries(expectedReviewPages.map(file => [file, rea
 for (const [file, html] of Object.entries(reviewHtml)) {
   check(count(html, robots) === 1, `${file} exact robots meta once`, `found ${count(html, robots)}`);
   check(count(html, referrer) === 1, `${file} exact referrer meta once`, `found ${count(html, referrer)}`);
-  check(html.includes('Internal review candidate') && html.includes('Build 5R-PLAS-CORRECTION-20260830-DR422') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
+  check(html.includes('Internal review candidate') && html.includes('Build 5R-PLAS-ROUTEMERGE-20260830-DR425') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
   check(!/(googletagmanager|\bgtag\s*\(|\bpbTrack\b|\bdataLayer\b|linkedin_partner|snap\.licdn)/i.test(html), `${file} tracking stripped`);
   const attrs = [...html.matchAll(/(?:href|src|action)="([^"]+)"/g)].map(match => match[1]);
   const relative = attrs.filter(value => !value.startsWith('/') && !value.startsWith('#') && !/^[a-z][a-z0-9+.-]*:/i.test(value));
@@ -387,7 +475,7 @@ if (!fs.existsSync(manifestHashPath) || !fs.existsSync(manifestPath)) {
 const staged = childProcess.execFileSync('git', ['diff', '--cached', '--name-only'], { cwd: repoRoot, encoding: 'utf8' }).trim();
 check(staged === '', 'Git index remains empty', staged);
 
-if (process.argv.includes('--determinism') && fs.existsSync(path.join(reviewRoot, 'build-review.js'))) {
+if (!process.argv.includes('--no-determinism') && fs.existsSync(path.join(reviewRoot, 'build-review.js'))) {
   const allPaths = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')).commit_paths : [];
   const snapshot = Object.fromEntries(allPaths.filter(file => fs.existsSync(path.join(repoRoot, file))).map(file => [file, sha(fs.readFileSync(path.join(repoRoot, file)))]));
   childProcess.execFileSync(process.execPath, [path.join(reviewRoot, 'build-review.js')], { cwd: repoRoot, stdio: 'inherit' });
