@@ -71,21 +71,64 @@
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
   body.review-candidate .nav { top: 36px; }
+  body.review-candidate .phase5r-footer-heading,
+  body.review-candidate .footer__bottom > span { color: #94A3B8; }
+  body.review-candidate .metric__label,
+  body.review-candidate .org-tile__roles,
+  body.review-candidate .coming-card-label,
+  body.review-candidate .coming-card-body { color: #94A3B8 !important; }
+  body.review-candidate .split p a { text-decoration: underline; text-underline-offset: 2px; }
+  body.review-candidate .phase5r-footer-heading {
+    margin-bottom: 16px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
   body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
   body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .course-dialog[open] {
+    top: 44px;
+    bottom: auto;
+    max-height: calc(100vh - 52px);
+    margin: 0 auto 8px;
+  }
+  body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  body.review-candidate #the-work,
+  body.review-candidate #the-team,
+  body.review-candidate #the-skills,
+  body.review-candidate #role-based,
+  body.review-candidate #full-harness,
+  body.review-candidate #loop-and-learn,
+  body.review-candidate #company-brain,
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
   @media (max-width: 639px) {
     body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
     body.review-candidate .nav { top: 48px; }
     body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
     body.review-candidate .skip-link:focus { top: 64px; }
+    body.review-candidate .course-dialog[open] {
+      top: 64px;
+      max-height: calc(100vh - 72px);
+    }
+    body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
+    body.review-candidate #the-work,
+    body.review-candidate #the-team,
+    body.review-candidate #the-skills,
+    body.review-candidate #role-based,
+    body.review-candidate #full-harness,
+    body.review-candidate #loop-and-learn,
+    body.review-candidate #company-brain,
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
   }
 </style>
 </head>
 <body class="review-candidate">
-<aside class="phase5r-review-banner" role="note" aria-label="Internal review status">
+<aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
-  <span>Build 5R-20260830-c672062f</span>
+  <span>Build 5R-RELOOK-20260830-DR419</span>
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>
 
@@ -127,6 +170,7 @@
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Apply</a>
   </div>
 </nav>
+<main id="main-content" tabindex="-1">
 
 <!-- ====== HERO ====== -->
 <section class="section section--accent" style="min-height:60vh; display:flex; align-items:center; padding-top:120px;">
@@ -164,7 +208,7 @@
       </div>
       <div>
         <div class="card card--on-surface" style="padding:24px;">
-          <h4 style="margin-bottom:16px;">Engagement Details</h4>
+          <h3 style="margin-bottom:16px;">Engagement Details</h3>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">Cadence:</strong> Ongoing, on your rhythm</p>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">Structure:</strong> Monthly retainer, renewable</p>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">You get:</strong> The output, not the operations</p>
@@ -187,7 +231,7 @@
       </div>
       <div>
         <div class="card card--on-ink" style="padding:24px;">
-          <h4 style="margin-bottom:16px;">Engagement Details</h4>
+          <h3 style="margin-bottom:16px;">Engagement Details</h3>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">Cadence:</strong> Phased or continuous</p>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">Duration:</strong> 2-12 months</p>
           <p class="text-sm text-secondary" style="margin-bottom:8px;"><strong style="color:var(--text);">Structure:</strong> Retainer or project-based</p>
@@ -308,6 +352,7 @@
 
 <!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
 <!-- ====== FOOTER ====== -->
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -319,20 +364,20 @@
         <p>Run an AI workforce, or have us run it for you.</p>
       </div>
       <div class="footer__col">
-        <h4>Services</h4>
+        <p class="phase5r-footer-heading">Services</p>
         <a href="/internal/fill-the-rooms-review/on-call.html">ProductBeacon On Call</a>
         <a href="/internal/fill-the-rooms-review/on-call.html">Fractional Product Leadership</a>
         <a href="/internal/fill-the-rooms-review/on-call.html">Product Build</a>
         <a href="/internal/fill-the-rooms-review/on-call.html#org">Product Org Services</a>
       </div>
       <div class="footer__col">
-        <h4>Capabilities</h4>
+        <p class="phase5r-footer-heading">Capabilities</p>
         <a href="/internal/fill-the-rooms-review/#intensive">The Operator Intensive</a>
         <a href="/internal/fill-the-rooms-review/workforce.html">The Workforce</a>
         <a href="/internal/fill-the-rooms-review/#path">The Operator's Private Line</a>
       </div>
       <div class="footer__col">
-        <h4>Resources</h4>
+        <p class="phase5r-footer-heading">Resources</p>
         <a href="/case-studies.html">Case Studies</a>
         <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
         <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
@@ -350,5 +395,29 @@
 </footer>
 
 <script src="/js/main.js"></script>
+<script id="phase5r-review-only-behavior">
+(function(){
+  'use strict';
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    var target = href && document.querySelector(href);
+    if (!target) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (window.location.hash !== href) window.history.pushState(null, '', href);
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  }, true);
+  document.addEventListener('submit', function(event) {
+    if (!event.target || event.target.id !== 'course-form') return;
+    window.requestAnimationFrame(function() {
+      var dialog = document.getElementById('course-dialog');
+      if (dialog && dialog.open && dialog.querySelector('[aria-invalid="true"]')) dialog.scrollTop = 0;
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>

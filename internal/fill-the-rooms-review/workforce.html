@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">
 <meta name="referrer" content="no-referrer">
-<title>The Workforce | The Work It Does For You | ProductBeacon</title>
-<meta name="description" content="A workforce of 96 specialists across 15 teams, every one named. Legal and compliance under supervised terms. 250 skills, 120 libraries, governed by you.">
+<title>The Governed AI Workforce | ProductBeacon</title>
+<meta name="description" content="Meet ProductBeacon's governed AI workforce: 96 role-based specialists across 15 teams, equipped with methods, company context, audit, and human review.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
@@ -14,17 +14,17 @@
 <link rel="canonical" href="https://productbeacon.agency/workforce.html">
 <!-- ====== SEO: JSON-LD (Service: the AI workforce install) ====== -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"AI Workforce Install","serviceType":"AI workforce installation and governance","url":"https://productbeacon.agency/workforce.html","description":"ProductBeacon installs a governed AI workforce inside your business and hands you the know-how to run it: which specialist for which job, how to review the output, and where you stay in the loop.","provider":{"@id":"https://productbeacon.agency/#productbeacon"},"areaServed":"Worldwide","audience":{"@type":"Audience","audienceType":"Small professional-services firms"}}
+{"@context":"https://schema.org","@type":"Service","name":"Governed AI Workforce","serviceType":"AI workforce installation and governance","url":"https://productbeacon.agency/workforce.html","description":"ProductBeacon installs a governed AI workforce of role-based specialists, with task-matched methods, relevant company context, declared run receipts, and human review.","provider":{"@id":"https://productbeacon.agency/#productbeacon"},"areaServed":"Worldwide","audience":{"@type":"Audience","audienceType":"Small professional-services firms"}}
 </script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ProductBeacon">
-<meta property="og:title" content="The Workforce | The Work It Does For You | ProductBeacon">
-<meta property="og:description" content="15 teams, 96 specialists, every one named. Finished, professional-grade work in hours, not weeks, governed by you. Legal and compliance under supervised terms.">
+<meta property="og:title" content="The Governed AI Workforce | ProductBeacon">
+<meta property="og:description" content="96 role-based specialists across 15 teams, equipped with methods, company context, audit, and human review.">
 <meta property="og:url" content="https://productbeacon.agency/workforce.html">
 <meta property="og:image" content="https://productbeacon.agency/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Workforce | The Work It Does For You | ProductBeacon">
-<meta name="twitter:description" content="15 teams · 96 specialists, every one named, governed by you. Legal and compliance under supervised terms.">
+<meta name="twitter:title" content="The Governed AI Workforce | ProductBeacon">
+<meta name="twitter:description" content="96 role-based specialists across 15 teams, equipped with methods, company context, audit, and human review.">
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
 
 
@@ -195,7 +195,7 @@
     transition: border-color 0.2s, transform 0.15s;
   }
   .org-tile:hover { border-color: rgba(245,158,11,0.4); transform: translateY(-2px); color: var(--text); }
-  .org-tile h4 { margin-bottom: var(--space-2); display: inline-block; margin-right: var(--space-2); }
+  .org-tile h3 { margin-bottom: var(--space-2); display: inline-block; margin-right: var(--space-2); font-size: 1rem; }
   .org-tile__roles { font-size: 0.8125rem; color: var(--muted); margin-top: var(--space-2); line-height: 1.5; }
   @media (max-width: 1023px) { .org-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 639px)  { .org-grid { grid-template-columns: 1fr; } }
@@ -236,6 +236,7 @@
   /* ---- NEW: skills & libraries richness (.pack-grid / .pack-card / .cat-skill-list) ---- */
   .pack-subhead { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-12); }
   .pack-subhead h3 { margin: 0; }
+  .pack-subhead .btn { min-height: 44px; display: inline-flex; align-items: center; }
   .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-6); }
   .pack-card {
     background: var(--ink); border: 1px solid var(--border); border-radius: var(--border-radius);
@@ -264,13 +265,106 @@
   .cat-skill__desc { font-size: 0.8125rem; color: var(--secondary); line-height: 1.4; }
   .cat-skill__more { font-size: 0.8125rem; color: var(--muted); font-style: italic; margin-top: var(--space-1); }
   /* NEW (skills rework): collapsed-card teaser + open-body also-run — typography cloned from .org-tile__roles */
-  .pack-card__teaser { font-size: 0.8125rem; color: var(--muted); margin-top: var(--space-2); line-height: 1.5; }
+  .pack-card__teaser { font-size: 0.8125rem; color: var(--secondary); margin-top: var(--space-2); line-height: 1.5; }
   .cat-skill-run { font-size: 0.8125rem; color: var(--secondary); line-height: 1.5; margin: var(--space-2) 0 0; }
   @media (max-width: 1023px) { .pack-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 639px)  { .pack-grid { grid-template-columns: 1fr; } }
   @media (prefers-reduced-motion: reduce) {
     .pack-card, .pack-card > summary::after { transition: none; }
     .pack-card:hover { transform: none; }
+  }
+</style>
+<style id="phase5r-relook-workforce-style">
+  .skip-link {
+    position: fixed; left: 16px; top: 12px; z-index: 1000;
+    transform: translateY(-160%); background: var(--amber); color: var(--ink);
+    padding: 12px 18px; border-radius: var(--border-radius-sm); font-weight: 700;
+  }
+  .skip-link:focus { transform: translateY(0); }
+  #role-based, #full-harness, #loop-and-learn, #company-brain { scroll-margin-top: calc(var(--nav-height) + 52px); }
+  .story-section { overflow: clip; }
+  .story-section .section__header { max-width: 800px; }
+  .story-section .section__header p:last-child { font-size: 1.0625rem; line-height: 1.75; }
+  .story-kicker { color: var(--amber); font-family: var(--font-mono); letter-spacing: .12em; font-size: .75rem; font-weight: 600; }
+  .story-panel {
+    margin-top: var(--space-8); padding: clamp(20px, 3vw, 36px);
+    background: linear-gradient(145deg, rgba(30,41,59,.92), rgba(15,23,42,.96));
+    border: 1px solid var(--border); border-radius: var(--border-radius);
+    box-shadow: 0 24px 70px rgba(2,6,23,.18);
+  }
+  .story-panel > h3 { margin-bottom: var(--space-6); }
+  .comparison-grid, .definition-grid, .proof-grid, .memory-records {
+    display: grid; gap: var(--space-4);
+  }
+  .comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .comparison-card { border: 1px solid var(--border); border-radius: var(--border-radius-sm); padding: var(--space-6); background: rgba(15,23,42,.74); }
+  .comparison-card--pb { border-color: rgba(245,158,11,.55); box-shadow: inset 0 3px 0 var(--amber); }
+  .comparison-card h4 { color: var(--text); margin-bottom: var(--space-4); }
+  .comparison-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+  .comparison-card li { position: relative; padding-left: 22px; color: var(--secondary); }
+  .comparison-card li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+  .comparison-card--pb li::before { background: var(--amber); }
+  .diagram-title { font-size: 1rem; color: var(--text); margin: 0 0 var(--space-4); }
+  .routing-flow, .harness-pipeline, .loop-grid, .decision-flow { display: grid; align-items: stretch; gap: var(--space-3); }
+  .routing-flow { grid-template-columns: 1fr auto 1fr auto 1fr; }
+  .route-node, .system-node, .loop-node, .memory-node, .decision-node {
+    display: flex; flex-direction: column; justify-content: center; min-height: 104px;
+    padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--border-radius-sm);
+    background: rgba(15,23,42,.82); color: var(--text);
+  }
+  .route-node strong, .system-node strong, .loop-node strong, .memory-node strong, .decision-node strong { color: var(--text); }
+  .route-node span, .system-node span, .loop-node span, .memory-node span, .decision-node span { color: var(--secondary); font-size: .8125rem; margin-top: 5px; }
+  .route-branches { display: grid; gap: var(--space-3); }
+  .route-arrow { align-self: center; color: var(--amber); font-family: var(--font-mono); font-size: 1.2rem; }
+  .diagram-caption { color: var(--muted); font-size: .8125rem; margin: var(--space-4) 0 0; }
+  .proof-point { margin-top: var(--space-6); padding: var(--space-5); border-left: 3px solid var(--amber); background: rgba(245,158,11,.07); }
+  .proof-point h3, .proof-point h4 { margin-bottom: var(--space-2); }
+  .proof-point p { color: var(--secondary); margin: 0; }
+  .harness-pipeline { grid-template-columns: repeat(7, minmax(130px, 1fr)); overflow-x: auto; padding-bottom: var(--space-2); }
+  .system-node { min-width: 130px; min-height: 150px; position: relative; }
+  .system-node:not(:last-child)::after { content: "→"; position: absolute; right: -15px; top: 50%; z-index: 2; color: var(--amber); }
+  .system-node__number { font-family: var(--font-mono); color: var(--amber) !important; font-size: .7rem !important; margin: 0 0 8px !important; }
+  .definition-grid { grid-template-columns: repeat(3, 1fr); margin-top: var(--space-6); }
+  .definition-item { padding: var(--space-4); border-top: 1px solid var(--border); }
+  .definition-item dt { color: var(--amber); font-family: var(--font-mono); font-size: .75rem; margin-bottom: var(--space-2); }
+  .definition-item dd { color: var(--secondary); margin: 0; }
+  .loop-grid { grid-template-columns: repeat(6, 1fr); }
+  .loop-node { min-height: 150px; position: relative; }
+  .loop-node:not(:last-child)::after { content: "→"; position: absolute; right: -15px; top: 50%; z-index: 2; color: var(--amber); }
+  .loop-node__label { font-family: var(--font-mono); color: var(--amber) !important; letter-spacing: .08em; font-size: .72rem !important; margin: 0 0 8px !important; }
+  .human-gate { border-color: rgba(245,158,11,.65); box-shadow: inset 0 3px 0 var(--amber); }
+  .human-gate::before { content: "HUMAN GATE"; color: var(--amber); font-family: var(--font-mono); font-size: .62rem; letter-spacing: .09em; margin-bottom: 8px; }
+  .loop-return { margin: var(--space-4) 0 0; text-align: center; color: var(--amber); font-family: var(--font-mono); font-size: .76rem; }
+  .proof-grid { grid-template-columns: repeat(3, 1fr); margin-top: var(--space-6); }
+  .proof-card { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: rgba(15,23,42,.65); }
+  .proof-card code { color: var(--amber); font-size: .9rem; }
+  .proof-card p { color: var(--secondary); font-size: .875rem; margin: var(--space-3) 0 0; }
+  .brain-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--space-6); align-items: start; }
+  .memory-records { grid-template-columns: repeat(3, 1fr); }
+  .memory-node { min-height: 84px; border-color: rgba(245,158,11,.28); }
+  .memory-core { margin-top: var(--space-4); display: grid; grid-template-columns: 1fr auto 1fr auto 1.25fr; gap: var(--space-3); align-items: stretch; }
+  .memory-core .route-arrow { text-align: center; }
+  .decision-flow { grid-template-columns: repeat(4, 1fr); }
+  .decision-node { min-height: 88px; position: relative; }
+  .decision-node:not(:last-child)::after { content: "→"; position: absolute; right: -15px; top: 50%; color: var(--amber); z-index: 2; }
+  .workforce-team-map { margin-top: var(--space-8); }
+  .workforce-roster { margin-top: var(--space-10); }
+  @media (max-width: 1100px) {
+    .harness-pipeline, .loop-grid { grid-template-columns: repeat(2, 1fr); overflow: visible; }
+    .system-node:not(:last-child)::after, .loop-node:not(:last-child)::after { display: none; }
+    .brain-layout { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 767px) {
+    .comparison-grid, .definition-grid, .proof-grid, .memory-records, .harness-pipeline, .loop-grid, .decision-flow { grid-template-columns: 1fr; }
+    .routing-flow { grid-template-columns: 1fr; }
+    .route-arrow { transform: rotate(90deg); justify-self: center; }
+    .memory-core { grid-template-columns: 1fr; }
+    .memory-core .route-arrow { transform: rotate(90deg); }
+    .decision-node:not(:last-child)::after { display: none; }
+    .story-panel { padding: var(--space-5); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link, .story-panel, .comparison-card, .system-node, .loop-node, .memory-node, .decision-node { transition: none !important; transform: none !important; }
   }
 </style>
 <style id="phase5r-review-only-style">
@@ -293,23 +387,68 @@
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
   body.review-candidate .nav { top: 36px; }
+  body.review-candidate .phase5r-footer-heading,
+  body.review-candidate .footer__bottom > span { color: #94A3B8; }
+  body.review-candidate .metric__label,
+  body.review-candidate .org-tile__roles,
+  body.review-candidate .coming-card-label,
+  body.review-candidate .coming-card-body { color: #94A3B8 !important; }
+  body.review-candidate .split p a { text-decoration: underline; text-underline-offset: 2px; }
+  body.review-candidate .phase5r-footer-heading {
+    margin-bottom: 16px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
   body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
   body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .course-dialog[open] {
+    top: 44px;
+    bottom: auto;
+    max-height: calc(100vh - 52px);
+    margin: 0 auto 8px;
+  }
+  body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  body.review-candidate #the-work,
+  body.review-candidate #the-team,
+  body.review-candidate #the-skills,
+  body.review-candidate #role-based,
+  body.review-candidate #full-harness,
+  body.review-candidate #loop-and-learn,
+  body.review-candidate #company-brain,
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
   @media (max-width: 639px) {
     body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
     body.review-candidate .nav { top: 48px; }
     body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
     body.review-candidate .skip-link:focus { top: 64px; }
+    body.review-candidate .course-dialog[open] {
+      top: 64px;
+      max-height: calc(100vh - 72px);
+    }
+    body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
+    body.review-candidate #the-work,
+    body.review-candidate #the-team,
+    body.review-candidate #the-skills,
+    body.review-candidate #role-based,
+    body.review-candidate #full-harness,
+    body.review-candidate #loop-and-learn,
+    body.review-candidate #company-brain,
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
   }
 </style>
 </head>
 <body class="review-candidate">
-<aside class="phase5r-review-banner" role="note" aria-label="Internal review status">
+<aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
-  <span>Build 5R-20260830-c672062f</span>
+  <span>Build 5R-RELOOK-20260830-DR419</span>
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ====== NAV ====== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -353,13 +492,15 @@
 <!-- ====== STICKY SECTION SUB-NAV ====== -->
 <nav class="section-tabs" aria-label="Workforce sections">
   <div class="section-tabs__inner">
-    <a href="#the-work">The work</a>
-    <a href="#the-team">The team</a>
-    <a href="#the-skills">The skills &amp; libraries</a>
+    <a href="#the-work">How it works</a>
+    <a href="#the-team">The workforce</a>
+    <a href="#the-skills">Skills &amp; libraries</a>
   </div>
 </nav>
 
 <!-- ====== SECTION 1 — HERO ====== -->
+<main id="main-content" data-phase5r-page="workforce" tabindex="-1">
+
 <section class="hero section--accent" id="hero">
   <div class="hero__grid"></div>
   <div class="container">
@@ -384,244 +525,178 @@
   </div>
 </section>
 
-<!-- ====== BLOCK 2 — THE WORK (the lead: job matrix) ====== -->
-<section class="section section--surface" id="the-work">
+<!-- ====== HOW IT WORKS: ROLE-BASED SPECIALISTS ====== -->
+<section class="section section--surface story-section" id="the-work" data-workforce-story="role-based-specialists" aria-labelledby="role-based-title">
+  <div class="container" id="role-based">
+    <div class="section__header fade-in">
+      <p class="eyebrow">ROLE-BASED SPECIALISTS</p>
+      <h2 id="role-based-title">Built around roles, not one-off tasks.</h2>
+      <p>A generic task agent often starts with the immediate job and the prompt in front of it. Each ProductBeacon specialist starts with a defined professional role, then receives repeatable methods, domain references, relevant company context, and clear boundaries. Ask in business terms. The workforce routes the work to one specialist or, when the job crosses functions, a focused team. You receive one synthesis to review and decide.</p>
+    </div>
+
+    <section class="story-panel fade-in" aria-labelledby="specialist-comparison-title">
+      <h3 id="specialist-comparison-title">From task agent to role-based specialist</h3>
+      <div class="comparison-grid">
+        <article class="comparison-card">
+          <h4>Generic task agent</h4>
+          <ul>
+            <li>Usually starts with the immediate task</li>
+            <li>Depends mainly on broad instructions</li>
+            <li>Produces an isolated response</li>
+            <li>No declared run receipt by default</li>
+          </ul>
+        </article>
+        <article class="comparison-card comparison-card--pb">
+          <h4>ProductBeacon specialist</h4>
+          <ul>
+            <li>Shaped around a role</li>
+            <li>Task-matched methods and reference</li>
+            <li>Relevant company context</li>
+            <li>Declared output and run receipt</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-panel fade-in" aria-labelledby="team-routing-title">
+      <h3 id="team-routing-title">One request. The right shape of team.</h3>
+      <div class="routing-flow" role="img" aria-label="A request is scoped and routed to one specialist or several specialists, then converges with one synthesis owner before human review.">
+        <div class="route-node"><strong>You frame the outcome</strong></div>
+        <span class="route-arrow" aria-hidden="true">→</span>
+        <div class="route-branches">
+          <div class="route-node"><strong>Scope and route</strong></div>
+          <div class="route-node"><strong>One specialist</strong><span>Focused work</span></div>
+          <div class="route-node"><strong>Several specialists</strong><span>Parallel, separate contexts</span></div>
+        </div>
+        <span class="route-arrow" aria-hidden="true">→</span>
+        <div class="route-branches">
+          <div class="route-node"><strong>Synthesis owner</strong><span>One answer</span></div>
+          <div class="route-node"><strong>You review and decide</strong></div>
+        </div>
+      </div>
+      <p class="diagram-caption">Narrow work stays narrow. Cross-functional work brings in the disciplines it needs.</p>
+    </section>
+  </div>
+</section>
+
+<!-- ====== HOW IT WORKS: FULL HARNESS ====== -->
+<section class="section section--ink story-section" id="full-harness" data-workforce-story="full-harness" aria-labelledby="full-harness-title">
   <div class="container">
     <div class="section__header fade-in">
-      <h2>Here is what you ask for, and here is what comes back.</h2>
-      <p>The reason it arrives finished is not that the work is shallow. Behind every deliverable sits a specialist working from a proven method, 250 ready-made skills and 120 libraries of frameworks and hard-won patterns. So the output comes out shaped like work a professional would hand you, not a rough first draft you have to rebuild.</p>
-      <p>The premise is simple: the workforce produces, you govern. Every row below names where the call stays yours.</p>
+      <p class="eyebrow">FULL HARNESS</p>
+      <h2 id="full-harness-title">Every specialist arrives equipped for the role.</h2>
+      <p>Before work starts, the harness searches for relevant company context, assigns the canonical role, and loads the methods and reference that match the task. The specialist also receives relevant boundaries and any triggered controls. When the work ends, the run declares what it loaded and what it produced. Human review still decides whether the work is good enough to use.</p>
     </div>
 
-    <!-- Cluster: Launch & grow -->
-    <div class="job-cluster fade-in">
-      <h3>Launch &amp; grow</h3>
-      <div class="job-matrix">
-        <div class="job-matrix__head">
-          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
-        </div>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A go-to-market plan for a launch</span>
-            <span class="job-row__back">A full launch plan: positioning, messaging, channel mix, timeline, and the metrics to watch</span>
-            <span class="job-row__who">Product Marketing + Content + Competitive Intelligence</span>
-            <span class="job-row__decide"><span class="you-decide">You approve the positioning and the go-date</span></span>
-          </summary>
-          <div class="job-row__detail">The marketing lead is working from a proven launch method, not a blank page. You get a plan you can run, with the channel sequence and the success metrics already mapped.</div>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A content calendar</span>
-            <span class="job-row__back">Weeks of planned, on-voice content with the posts drafted</span>
-            <span class="job-row__who">Content Strategist + Copywriter + Social</span>
-            <span class="job-row__decide"><span class="you-decide">You set the voice and approve the calendar</span></span>
-          </summary>
-          <div class="job-row__detail">A full marketing department's output, without a full marketing department's payroll.</div>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">Copy that converts</span>
-            <span class="job-row__back">Headlines, landing pages, emails, and ads, written and tested</span>
-            <span class="job-row__who">Copywriter + Growth + Paid Media</span>
-            <span class="job-row__decide"><span class="you-decide">You pick the angle that fits your brand</span></span>
-          </summary>
-          <div class="job-row__detail">Written to a real conversion method, with variants ready to test rather than a single guess.</div>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">To show up in search</span>
-            <span class="job-row__back">An SEO plan and the optimized pages to execute it</span>
-            <span class="job-row__who">SEO Specialist + Content Strategist</span>
-            <span class="job-row__decide"><span class="you-decide">You approve the target terms</span></span>
-          </summary>
-        </details>
-      </div>
+    <div class="proof-point fade-in" aria-labelledby="spawn-proof-title">
+      <h3 id="spawn-proof-title">A fixed spawn, not an improvised prompt.</h3>
+      <p>Every run follows a fixed core sequence: search for relevant context, establish the role, load the matching methods and reference, apply relevant boundaries and controls, and declare the handoff. Work that can create or change a Decision Record also checks relevant prior decisions before execution.</p>
     </div>
 
-    <!-- Cluster: Decide & build -->
-    <div class="job-cluster fade-in">
-      <h3>Decide &amp; build</h3>
-      <div class="job-matrix">
-        <div class="job-matrix__head">
-          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
-        </div>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A read on a competitor</span>
-            <span class="job-row__back">A competitive analysis with their moves, your openings, and a positioning response</span>
-            <span class="job-row__who">Competitive Intelligence + Product Marketing</span>
-            <span class="job-row__decide"><span class="you-decide">You choose how to respond</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">Help sizing a decision</span>
-            <span class="job-row__back">A structured decision write-up: the options, the trade-offs, the recommendation, and the reasoning</span>
-            <span class="job-row__who">VP Product + Business Operations</span>
-            <span class="job-row__decide"><span class="you-decide">The call is yours, and it is recorded</span></span>
-          </summary>
-          <div class="job-row__detail">The product lead is working from a real decision framework. The decision is written down so it is traceable back to you.</div>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A landing page</span>
-            <span class="job-row__back">Copy, layout, and a build-ready page spec, on brand, written to convert</span>
-            <span class="job-row__who">UI Designer + Copywriter + Conversion Specialist</span>
-            <span class="job-row__decide"><span class="you-decide">You approve the design direction</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A feature scoped and specced</span>
-            <span class="job-row__back">A clear specification: what it does, how it behaves, what to build</span>
-            <span class="job-row__who">Product Manager + Interaction Designer + Architecture</span>
-            <span class="job-row__decide"><span class="you-decide">You approve the scope</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A technical call de-risked</span>
-            <span class="job-row__back">An architecture recommendation: the options, the trade-offs, the security read, and a plan your builders can execute</span>
-            <span class="job-row__who">Chief Architect + Security Architect</span>
-            <span class="job-row__decide"><span class="you-decide">You sign off on what gets built</span></span>
-          </summary>
-        </details>
+    <section class="story-panel fade-in" aria-labelledby="harness-diagram-title">
+      <h3 id="harness-diagram-title">What surrounds the model</h3>
+      <div class="harness-pipeline" role="img" aria-label="Seven ordered stages equip and govern a specialist from request and context discovery through a declared output and Spawn Audit Block.">
+        <div class="system-node" data-harness-node="request-context"><span class="system-node__number">01</span><strong>Your request + context discovery</strong></div>
+        <div class="system-node" data-harness-node="role-methods-knowledge-limits"><span class="system-node__number">02</span><strong>Canonical role + operating instructions</strong></div>
+        <div class="system-node"><span class="system-node__number">03</span><strong>Task-matched skills + knowledge packs</strong></div>
+        <div class="system-node"><span class="system-node__number">04</span><strong>Relevant decisions checked when applicable</strong></div>
+        <div class="system-node"><span class="system-node__number">05</span><strong>Boundaries + triggered controls</strong></div>
+        <div class="system-node" data-harness-node="specialist"><span class="system-node__number">06</span><strong>Focused specialist work</strong></div>
+        <div class="system-node" data-harness-node="structured-output-evidence"><span class="system-node__number">07</span><strong>Output + Spawn Audit Block</strong></div>
       </div>
+      <p class="diagram-caption">The Spawn Audit Block is a receipt for declared preparation and outputs. It is not a guarantee of correctness, and it does not expose private reasoning.</p>
+
+      <dl class="definition-grid">
+        <div class="definition-item"><dt>Skills</dt><dd>The procedures the specialist can run.</dd></div>
+        <div class="definition-item"><dt>Knowledge packs</dt><dd>The domain reference loaded for the job.</dd></div>
+        <div class="definition-item"><dt>Focused context</dt><dd>The material selected as relevant to this run.</dd></div>
+      </dl>
+    </section>
+  </div>
+</section>
+
+<!-- ====== HOW IT WORKS: LOOP AND LEARN ====== -->
+<section class="section section--surface story-section" id="loop-and-learn" data-workforce-story="loop-and-learn" aria-labelledby="loop-title">
+  <div class="container">
+    <div class="section__header fade-in">
+      <p class="eyebrow">LOOP AND LEARN</p>
+      <h2 id="loop-title">The work is planned, checked, reviewed, and remembered.</h2>
+      <p>You frame what good looks like. The workforce plans and executes in stages, fresh reviewers test the result, and you make the consequential calls. What is worth carrying forward is recorded so a later run can start with more of the right context.</p>
     </div>
 
-    <!-- Cluster: Money & risk (carries legal inset) -->
-    <div class="job-cluster fade-in">
-      <h3>Money &amp; risk</h3>
-      <div class="job-matrix">
-        <div class="job-matrix__head">
-          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
-        </div>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A financial model</span>
-            <span class="job-row__back">A built model: the structure, the assumptions, the scenarios, ready to pressure-test</span>
-            <span class="job-row__who">Financial Planning &amp; Analysis + Business Operations</span>
-            <span class="job-row__decide"><span class="you-decide">The numbers are yours; you set the inputs</span></span>
-          </summary>
-          <div class="job-row__detail">The workforce builds the structure and the scenarios. The figures are the founder's. We never invent the numbers.</div>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A contract looked at</span>
-            <span class="job-row__back">A first-pass triage: the clauses that matter, the flags, the questions to ask</span>
-            <span class="job-row__who">Contracts Counsel (drafting and triage)<span class="supervised-access">Supervised</span></span>
-            <span class="job-row__decide"><span class="you-decide">Your lawyer's call: real legal weight goes to your own lawyer</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A process fixed</span>
-            <span class="job-row__back">A mapped, improved process with the bottleneck named and the fix specified</span>
-            <span class="job-row__who">Process Engineer + Operations</span>
-            <span class="job-row__decide"><span class="you-decide">You approve the change</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A program coordinated</span>
-            <span class="job-row__back">A plan with owners, milestones, and the rhythm to keep it shipping</span>
-            <span class="job-row__who">Program Manager + Product Operations</span>
-            <span class="job-row__decide"><span class="you-decide">You hold the priorities</span></span>
-          </summary>
-        </details>
+    <section class="story-panel fade-in" aria-labelledby="loop-diagram-title">
+      <h3 id="loop-diagram-title">Each cycle can leave the next one better prepared.</h3>
+      <div class="loop-grid">
+        <div class="loop-node human-gate" data-loop-step="frame" data-human-gate="frame"><span class="loop-node__label">FRAME</span><strong>You set the outcome and boundaries</strong></div>
+        <div class="loop-node" data-loop-step="plan"><span class="loop-node__label">PLAN</span><strong>Open choices surface; the plan is reviewed</strong></div>
+        <div class="loop-node" data-loop-step="execute"><span class="loop-node__label">EXECUTE</span><strong>Specialists execute the approved plan in stages</strong></div>
+        <div class="loop-node" data-loop-step="audit"><span class="loop-node__label">AUDIT</span><strong>Fresh reviewers check the result against the plan</strong></div>
+        <div class="loop-node human-gate" data-loop-step="review" data-human-gate="review"><span class="loop-node__label">REVIEW</span><strong>You accept, challenge, or send back</strong></div>
+        <div class="loop-node" data-loop-step="record"><span class="loop-node__label">RECORD</span><strong>Useful context carries forward</strong></div>
       </div>
-      <div class="legal-inset legal-inset--hitl">
-        <strong>A qualified human stays in the loop.</strong> The finance and legal work is drafting and triage that gets you to a decision faster. The financial model's numbers are yours. For anything carrying real legal weight, the first-pass triage goes to your own lawyer, and the workforce is built to hand it over cleanly. This is not legal or financial advice.
-      </div>
-    </div>
+      <p class="loop-return">↩ Relevant records inform the next cycle</p>
+      <p class="diagram-caption">The model does not retrain itself. The system improves operationally when useful records are captured, corrected, and recalled.</p>
+    </section>
 
-    <!-- Cluster: Find & understand -->
-    <div class="job-cluster fade-in">
-      <h3>Find &amp; understand</h3>
-      <div class="job-matrix">
-        <div class="job-matrix__head">
-          <span>The job</span><span>What comes back</span><span>Who works it</span><span>Where you decide</span>
-        </div>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">To know what your numbers say</span>
-            <span class="job-row__back">A dashboard and an analysis that turns activity into something you can act on</span>
-            <span class="job-row__who">Data Analyst + Business Intelligence Engineer</span>
-            <span class="job-row__decide"><span class="you-decide">You decide what to do with it</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A test read</span>
-            <span class="job-row__back">An experiment result with the verdict and the confidence behind it</span>
-            <span class="job-row__who">Experimentation Analyst</span>
-            <span class="job-row__decide"><span class="you-decide">You decide whether to ship</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">Your customers understood</span>
-            <span class="job-row__back">Health scores, segments, and the signals that tell you who is about to leave or buy</span>
-            <span class="job-row__who">Customer Success Manager + Customer Success Operations</span>
-            <span class="job-row__decide"><span class="you-decide">You decide where to focus</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A research question answered</span>
-            <span class="job-row__back">A synthesized, sourced answer, not a pile of links</span>
-            <span class="job-row__who">Analyst + Market Researcher</span>
-            <span class="job-row__decide"><span class="you-decide">You decide what it means for you</span></span>
-          </summary>
-        </details>
-        <details class="job-row">
-          <summary>
-            <span class="job-row__job">A product roadmap</span>
-            <span class="job-row__back">A prioritized roadmap tied to outcomes, not a wish list</span>
-            <span class="job-row__who">Director of Product Management + Product Manager</span>
-            <span class="job-row__decide"><span class="you-decide">You set the priorities</span></span>
-          </summary>
-        </details>
-      </div>
+    <div class="proof-grid fade-in" aria-label="Operating protocol proof">
+      <article class="proof-card"><code>/plan</code><p>Writes the plan, surfaces material choices, and runs the pre-execution review.</p></article>
+      <article class="proof-card"><code>/audit</code><p>Reviews plans before execution and results before sign-off.</p></article>
+      <article class="proof-card"><code>/context-harvest</code><p>Records high-signal work; drafted decisions still require human affirmation to close.</p></article>
     </div>
   </div>
 </section>
 
-<!-- ====== WORKED EXAMPLE (flow strip) ====== -->
-<section class="section section--ink" id="worked-example">
+<!-- ====== HOW IT WORKS: DISTRIBUTED COMPANY BRAIN ====== -->
+<section class="section section--ink story-section" id="company-brain" data-workforce-story="distributed-company-brain" aria-labelledby="company-brain-title">
   <div class="container">
     <div class="section__header fade-in">
-      <h2>From request to deliverable.</h2>
-      <p>One job, end to end, so the matrix is not abstract.</p>
+      <p class="eyebrow">DISTRIBUTED COMPANY BRAIN</p>
+      <h2 id="company-brain-title">A company memory every specialist can work from.</h2>
+      <p>Company knowledge is usually scattered across documents, chats, and the people who remember why a call was made. ProductBeacon keeps decisions, assumptions, feedback, learnings, bets, and deliverables as clearly labelled, inspectable records. Before the next run, relevant records are found and loaded into the specialist's focused context. You re-explain less, and you can correct the memory when reality changes.</p>
     </div>
-    <div class="flow-strip fade-in">
-      <div class="flow-step">
-        <p class="eyebrow">You bring</p>
-        <p>"We are launching next month. I need a plan."</p>
-      </div>
-      <div class="flow-step">
-        <p class="eyebrow">The workforce produces</p>
-        <p>Positioning, messaging, a channel sequence, a timeline, and the metrics to watch.</p>
-      </div>
-      <div class="flow-step">
-        <p class="eyebrow">Specialists on it</p>
-        <p>Product Marketing, Content Strategist, Competitive Intelligence, each from a proven method.</p>
-      </div>
-      <div class="flow-step">
-        <p class="eyebrow">You decide</p>
-        <p>You approve the positioning and the go-date. The plan is yours to run.</p>
+
+    <div class="brain-layout">
+      <section class="story-panel fade-in" aria-labelledby="memory-diagram-title">
+        <h3 id="memory-diagram-title">Inspectable memory, selectively recalled</h3>
+        <div class="memory-records">
+          <div class="memory-node" data-memory-record="decisions"><strong>Decisions</strong></div>
+          <div class="memory-node" data-memory-record="bets"><strong>Strategic bets</strong></div>
+          <div class="memory-node" data-memory-record="assumptions"><strong>Assumptions</strong></div>
+          <div class="memory-node" data-memory-record="learnings"><strong>Learnings</strong></div>
+          <div class="memory-node" data-memory-record="feedback"><strong>Feedback</strong></div>
+          <div class="memory-node" data-memory-record="documents"><strong>Documents</strong></div>
+        </div>
+        <div class="memory-core">
+          <div class="memory-node"><strong>Organizational context registry</strong></div>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <div class="memory-node"><strong>Cross-session recall</strong></div>
+          <span class="route-arrow" aria-hidden="true">→</span>
+          <div class="memory-node"><strong>Relevant context selected for the next specialist</strong></div>
+        </div>
+        <p class="diagram-caption">Not every agent sees everything. Each run is given context selected for its job.</p>
+      </section>
+
+      <div class="story-panel fade-in" aria-labelledby="decision-record-title">
+        <h3 id="decision-record-title">Decision Records keep the human line visible.</h3>
+        <p class="text-secondary">An agent can draft the decision and its rationale. Only the named accountable owner can affirm it closed.</p>
+        <div class="decision-flow" aria-label="Decision Record accountability flow">
+          <div class="decision-node"><strong>Agent drafts</strong></div>
+          <div class="decision-node"><strong>Pending human affirmation</strong></div>
+          <div class="decision-node"><strong>Human affirms</strong></div>
+          <div class="decision-node"><strong>Closed</strong></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ====== BLOCK 3 — THE TEAM (roster drill-down) ====== -->
 <section class="section section--surface" id="the-team">
   <div class="container">
     <!-- Stat band -->
     <div class="section__header fade-in">
-      <h2>And here is the team behind it.</h2>
-      <p>The whole organization, on one screen, governed by you. You hire none of them. You operate all of them. The org is large because you govern it, not because you staff it. Legal and compliance specialists are conveyed only under supervised terms, with a qualified human required in the loop.</p>
+      <p class="eyebrow">THE WORKFORCE</p>
+      <h2>Meet the workforce behind the system.</h2>
+      <p>The system is inspectable because the roles are inspectable. Below is the single public roster: 15 teams and 96 specialists, with Legal &amp; Compliance under supervised terms. The map shows the organization. Each specialist appears once in the roster that follows.</p>
     </div>
 
     <div class="metrics fade-in">
@@ -644,25 +719,28 @@
     </div>
 
     <!-- Org map -->
+    <section class="workforce-team-map" data-workforce-view="team-map" aria-label="Workforce team map">
     <div class="org-grid fade-in" style="margin-top:48px;">
-      <a class="org-tile" href="#fn-product"><h4>Product &amp; Strategy</h4><p class="org-tile__roles">11 specialists &middot; Decides what to build, how to position it, and where to place your bets.</p></a>
-      <a class="org-tile" href="#fn-design"><h4>Design</h4><p class="org-tile__roles">6 specialists &middot; Makes the work come out looking like a real studio produced it.</p></a>
-      <a class="org-tile" href="#fn-arch"><h4>Architecture</h4><p class="org-tile__roles">6 specialists &middot; The technical calls that keep what you build sound, secure, and ready to scale.</p></a>
-      <a class="org-tile" href="#fn-marketing"><h4>Marketing</h4><p class="org-tile__roles">14 specialists &middot; A full marketing department, on call.</p></a>
-      <a class="org-tile" href="#fn-finance"><h4>Finance</h4><p class="org-tile__roles">7 specialists &middot; Keeps the numbers honest and the decisions paid for.</p></a>
-      <a class="org-tile" href="#fn-legal"><h4>Legal &amp; Compliance<span class="supervised-access">Supervised</span></h4><p class="org-tile__roles">6 specialists &middot; First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p></a>
-      <a class="org-tile" href="#fn-ops"><h4>Operations</h4><p class="org-tile__roles">6 specialists &middot; Makes sure the work actually ships and keeps shipping.</p></a>
-      <a class="org-tile" href="#fn-exec"><h4>Executive</h4><p class="org-tile__roles">8 specialists &middot; Sets direction and makes the trade-offs that shape everything below.</p></a>
-      <a class="org-tile" href="#fn-corpdev"><h4>Corp Dev</h4><p class="org-tile__roles">3 specialists &middot; Deals, investments, and the partnerships that change your company's shape.</p></a>
-      <a class="org-tile" href="#fn-it"><h4>IT Governance</h4><p class="org-tile__roles">4 specialists &middot; Keeps systems, data, and security policies in order as you grow.</p></a>
-      <a class="org-tile" href="#fn-hr"><h4>HR / People Ops</h4><p class="org-tile__roles">6 specialists &middot; Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p></a>
-      <a class="org-tile" href="#fn-cs"><h4>Customer Success</h4><p class="org-tile__roles">6 specialists &middot; Keeps customers after you win them.</p></a>
-      <a class="org-tile" href="#fn-sales"><h4>Sales</h4><p class="org-tile__roles">6 specialists &middot; The motion that turns interest into signed business.</p></a>
-      <a class="org-tile" href="#fn-data"><h4>Data Science</h4><p class="org-tile__roles">5 specialists &middot; Turns what is happening in your business into something you can act on.</p></a>
-      <a class="org-tile" href="#fn-staff"><h4>Personal Staff</h4><p class="org-tile__roles">2 specialists &middot; Your own office: daily support and research on call.</p></a>
+      <a class="org-tile" href="#fn-product"><h3>Product &amp; Strategy</h3><p class="org-tile__roles">11 specialists &middot; Decides what to build, how to position it, and where to place your bets.</p></a>
+      <a class="org-tile" href="#fn-design"><h3>Design</h3><p class="org-tile__roles">6 specialists &middot; Makes the work come out looking like a real studio produced it.</p></a>
+      <a class="org-tile" href="#fn-arch"><h3>Architecture</h3><p class="org-tile__roles">6 specialists &middot; The technical calls that keep what you build sound, secure, and ready to scale.</p></a>
+      <a class="org-tile" href="#fn-marketing"><h3>Marketing</h3><p class="org-tile__roles">14 specialists &middot; A full marketing department, on call.</p></a>
+      <a class="org-tile" href="#fn-finance"><h3>Finance</h3><p class="org-tile__roles">7 specialists &middot; Keeps the numbers honest and the decisions paid for.</p></a>
+      <a class="org-tile" href="#fn-legal"><h3>Legal &amp; Compliance<span class="supervised-access">Supervised</span></h3><p class="org-tile__roles">6 specialists &middot; First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p></a>
+      <a class="org-tile" href="#fn-ops"><h3>Operations</h3><p class="org-tile__roles">6 specialists &middot; Makes sure the work actually ships and keeps shipping.</p></a>
+      <a class="org-tile" href="#fn-exec"><h3>Executive</h3><p class="org-tile__roles">8 specialists &middot; Sets direction and makes the trade-offs that shape everything below.</p></a>
+      <a class="org-tile" href="#fn-corpdev"><h3>Corp Dev</h3><p class="org-tile__roles">3 specialists &middot; Deals, investments, and the partnerships that change your company's shape.</p></a>
+      <a class="org-tile" href="#fn-it"><h3>IT Governance</h3><p class="org-tile__roles">4 specialists &middot; Keeps systems, data, and security policies in order as you grow.</p></a>
+      <a class="org-tile" href="#fn-hr"><h3>HR / People Ops</h3><p class="org-tile__roles">6 specialists &middot; Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p></a>
+      <a class="org-tile" href="#fn-cs"><h3>Customer Success</h3><p class="org-tile__roles">6 specialists &middot; Keeps customers after you win them.</p></a>
+      <a class="org-tile" href="#fn-sales"><h3>Sales</h3><p class="org-tile__roles">6 specialists &middot; The motion that turns interest into signed business.</p></a>
+      <a class="org-tile" href="#fn-data"><h3>Data Science</h3><p class="org-tile__roles">5 specialists &middot; Turns what is happening in your business into something you can act on.</p></a>
+      <a class="org-tile" href="#fn-staff"><h3>Personal Staff</h3><p class="org-tile__roles">2 specialists &middot; Your own office: daily support and research on call.</p></a>
     </div>
+    </section>
 
     <!-- Function blocks + role cards (generated from workforce-copy-pack-2026-07-14.md) -->
+    <section class="workforce-roster" data-workforce-view="specialist-roster" aria-label="Specialist roster">
     <div class="function-block" id="fn-product">
       <div class="function-block__header">
         <h3>Product &amp; Strategy</h3>
@@ -902,6 +980,7 @@
         <details class="role-card"><summary><h4>Analyst</h4><p class="role-card__job">Research on anything, synthesized.</p></summary><div class="role-card__detail"><p>Ask it for: a research synthesis, a sourced answer.</p></div></details>
       </div>
     </div>
+    </section>
   </div>
 </section>
 
@@ -910,7 +989,7 @@
   <div class="container">
     <div class="section__header fade-in">
       <h2>The know-how, built in.</h2>
-      <p>You have seen what lands on your desk and who works it. Here is why it lands finished. A specialist is only as good as the method behind it. Behind the workforce sit 250 ready-made skills, each a step-by-step way of producing a specific piece of professional work, and 120 libraries of frameworks and hard-won patterns the specialists draw on while they work.</p>
+      <p>A role is only as capable as the methods and reference behind it. The workforce carries 250 ready-made skills for producing specific pieces of work and 120 knowledge libraries for the frameworks and patterns those skills rely on. The cards below show the depth without asking you to manage it.</p>
     </div>
 
     <div class="quote fade-in" style="margin-top:8px;">
@@ -1271,16 +1350,18 @@
 <!-- ====== CTA ====== -->
 <section class="section section--accent" id="cta">
   <div class="container" style="text-align:center; max-width:720px;">
-    <h2 class="fade-in" style="margin-bottom:16px;">This is the work, the team, and the know-how. Now make it yours.</h2>
-    <p class="text-lg text-secondary fade-in" style="margin-bottom:32px;">The only thing left is to put the whole thing inside your business and learn to run it. That is what the Operator Intensive does, in a single day.</p>
+    <h2 class="fade-in" style="margin-bottom:16px;">Now put the governed workforce inside your business.</h2>
+    <p class="text-lg text-secondary fade-in" style="margin-bottom:32px;">The Operator Intensive installs the working system and teaches you how to frame work, review output, and keep the decisions yours.</p>
     <div class="btn-group fade-in" style="justify-content:center;">
       <a href="/contact.html?intent=apply" class="btn btn--primary btn--lg">Apply for an Operator Intensive</a>
     </div>
-    <p class="text-sm text-secondary fade-in" style="margin-top:16px;">Limited intake, by application. Tell us what you are running, and we will tell you honestly whether it is a fit, or whether <a href="/internal/fill-the-rooms-review/on-call.html">On Call</a> is the better door.</p>
+    <p class="text-sm text-secondary fade-in" style="margin-top:16px;">Limited intake, by application. Tell us what you are running, and we will tell you honestly whether the Operator Intensive is the right fit or whether <a href="/internal/fill-the-rooms-review/on-call.html">On Call &amp; Fractional</a> is the better door.</p>
   </div>
 </section>
 
-<!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
+</main>
+
+<!-- Provenance: DR-2026-419; substantive Phase 5R Workforce relook approved by Yohay Etsion 2026-08-30. -->
 <!-- ====== FOOTER ====== -->
 <footer class="footer">
   <div class="container">
@@ -1293,20 +1374,20 @@
         <p>Run an AI workforce, or have us run it for you.</p>
       </div>
       <div class="footer__col">
-        <h4>Services</h4>
+        <p class="phase5r-footer-heading">Services</p>
         <a href="/internal/fill-the-rooms-review/on-call.html">ProductBeacon On Call</a>
         <a href="/internal/fill-the-rooms-review/on-call.html">Fractional Product Leadership</a>
         <a href="/internal/fill-the-rooms-review/on-call.html">Product Build</a>
         <a href="/internal/fill-the-rooms-review/on-call.html#org">Product Org Services</a>
       </div>
       <div class="footer__col">
-        <h4>Capabilities</h4>
+        <p class="phase5r-footer-heading">Capabilities</p>
         <a href="/internal/fill-the-rooms-review/#intensive">The Operator Intensive</a>
         <a href="/internal/fill-the-rooms-review/workforce.html">The Workforce</a>
         <a href="/internal/fill-the-rooms-review/#path">The Operator's Private Line</a>
       </div>
       <div class="footer__col">
-        <h4>Resources</h4>
+        <p class="phase5r-footer-heading">Resources</p>
         <a href="/case-studies.html">Case Studies</a>
         <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
         <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
@@ -1358,6 +1439,30 @@
       btn.textContent = expanded ? 'Expand all' : 'Collapse all';
     });
   });
+})();
+</script>
+<script id="phase5r-review-only-behavior">
+(function(){
+  'use strict';
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    var target = href && document.querySelector(href);
+    if (!target) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (window.location.hash !== href) window.history.pushState(null, '', href);
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  }, true);
+  document.addEventListener('submit', function(event) {
+    if (!event.target || event.target.id !== 'course-form') return;
+    window.requestAnimationFrame(function() {
+      var dialog = document.getElementById('course-dialog');
+      if (dialog && dialog.open && dialog.querySelector('[aria-invalid="true"]')) dialog.scrollTop = 0;
+    });
+  }, true);
 })();
 </script>
 </body>

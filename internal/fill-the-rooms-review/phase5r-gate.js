@@ -51,9 +51,12 @@ function checkHash(filePath, expected, label) {
 }
 
 const frozenInputs = [
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/plan-fill-the-rooms-2026-08-26.md', '66e5b4f3e95b9fb5db6b764d50d266c12a66e10c96fc4f8cc9783c87552d3d38', 'frozen plan hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/messaging-positioning-2026-08-26.md', '316aaff00117863c9b8c51c2fb54ef260d5c99ec5e274f628cce63babd07fff0', 'frozen copy contract hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/backups/phase0-2026-08-29/manifests/phase6-expected-matrix.md', '776e118d6915062d5b30dc93a34a479142fd8b1d1a24cb0c316caf786bf0f369', 'frozen matrix hash']
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-implementation-plan-2026-08-30.md', '997f568feb4106acd04c2d825569f5aa5a3aebdff297f2afd61761686d05676c', 'frozen relook plan hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-entry-copy-contract-2026-08-30.md', 'dc195613d3b5c93aa2155076d9fc46fbe3bbebf0753a6222f5f79638d60186d9', 'frozen entry copy contract hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-workforce-copy-contract-2026-08-30.md', 'b242517a5dddc4dd762ff5bb8ee0bc8afb048c49c05ee308b7a558300c6e6c70', 'frozen Workforce copy contract hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-cro-acceptance-spec-2026-08-30.md', '9926f5444583a6ec181e4c58848329b25339dc152a99a215a980795f9587ccdb', 'frozen CRO acceptance spec hash'],
+  ['G:/My Drive/Claude/context/decisions/2026/DR-2026-419-phase-5r-value-led-concourse-and-workforce-harness-story.md', 'd95a707eb6ba943e81494efea4b8cea49f5999f6634a679d003f5cef5ccf7192', 'frozen DR-2026-419 hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/messaging-positioning-2026-08-26.md', '316aaff00117863c9b8c51c2fb54ef260d5c99ec5e274f628cce63babd07fff0', 'frozen preserved-door copy contract hash']
 ];
 frozenInputs.forEach(([filePath, expected, label]) => checkHash(filePath, expected, label));
 
@@ -69,57 +72,59 @@ const source = Object.fromEntries(sourcePaths.map(file => [file, read(file)]));
 const home = source['index.html'];
 const doorOne = source['only-product-person/index.html'];
 const doorTwo = source['covering-everything/index.html'];
+const workforce = source['workforce.html'];
 
-check(home.includes("An organisation's worth of functions. One person can run them."), 'home H1 exact');
-check(home.includes("One product person, no product team, and the founders still carry strategy."), 'Door 1 discovery exact');
-check(home.includes("Whole disciplines nobody is going to be hired for, and they land on one person."), 'Door 2 discovery exact');
+const homeIds = new Set([...home.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+const linkedHomeHashes = sourcePaths.flatMap(file => [...source[file].matchAll(/href="\/index\.html#([^"]+)"/g)].map(match => ({ file, id: match[1] })));
+check(linkedHomeHashes.every(link => homeIds.has(link.id)), 'source home hash links resolve', linkedHomeHashes.filter(link => !homeIds.has(link.id)).map(link => `${link.file}#${link.id}`).join(', '));
 
-const teams = [
-  'Product &amp; Strategy', 'Design', 'Architecture', 'Marketing', 'Finance',
-  'Legal &amp; Compliance', 'Operations', 'Executive', 'Corp Dev', 'IT Governance',
-  'HR / People Ops', 'Customer Success', 'Sales', 'Data Science', 'Personal Staff'
-];
-check(teams.every(team => home.includes(team)), 'all 15 team labels present');
-check(count(home, 'class="team-item"') === 15, '15 team cells exact', `found ${count(home, 'class="team-item"')}`);
-
-const ladderLabels = [
-  'The book, the Standard, both market reports',
-  'Product Org OS, open source',
-  'The recorded course, how the workforce works',
-  'Monthly open Q&amp;A, live',
-  'The licence, all 15 teams',
-  'Operator Intensive, live, about 12 seats',
-  'The Room, monthly',
-  'Commissioned market report',
-  'On Call',
-  'Fractional'
-];
-check(ladderLabels.every(label => home.includes(label)), 'ten ladder row labels exact');
-const ladderBody = (home.match(/<tbody>[\s\S]*?<\/tbody>/) || [''])[0];
-check(count(ladderBody, '<tr') === 10, 'ten ladder rows exact', `found ${count(ladderBody, '<tr')}`);
-const freeValues = ['Free</td>', 'Free</td>', 'Free. Finishing it opens the licence</td>', 'Free, anyone</td>'];
-check(freeValues.every((value, index) => index < 2 ? count(home, value) >= 2 : home.includes(value)), 'four free ladder values present');
-const paidValues = [
-  '$200 / month, first month free, compute excluded',
-  '$600, founding cohort',
-  '$3,500, introductory',
-  '$10,000 to $15,000 / month',
-  '$15,000 to $25,000 / month'
-];
-check(paidValues.every(value => home.includes(value)), 'five paid price values exact');
-check(home.includes('Included, after the Intensive or with a licence'), 'The Room row exact');
-check(!sourcePaths.some(file => source[file].includes('$1,000')), '$1,000 absent from visitor copy');
-
-const attrPattern = /(?:href|src)="([^"]+)"/g;
-const relativeHome = [];
-for (const match of home.matchAll(attrPattern)) {
-  const value = match[1];
-  if (!value.startsWith('/') && !value.startsWith('#') && !/^[a-z][a-z0-9+.-]*:/i.test(value)) relativeHome.push(value);
+function markerPositions(html, attribute, values) {
+  return values.map(value => html.indexOf(`${attribute}="${value}"`));
 }
-check(relativeHome.length === 14, 'home has 14 relative same-origin links', `found ${relativeHome.length}: ${relativeHome.join(', ')}`);
-check(count(home, '<a class="card door-card"') === 2, 'home door anchors retain card and door-card classes', `found ${count(home, '<a class="card door-card"')}`);
-check(home.includes('<h2 class="door-card__label">I\'m employed here.</h2>') && home.includes('<h2 class="door-card__label">It\'s my business.</h2>'), 'home door labels are H2 headings');
-check(home.includes('<caption class="visually-hidden">The whole offer</caption>'), 'home offer table has exact accessible caption');
+
+function strictlyIncreasing(values) {
+  return values.every((value, index) => value !== -1 && (index === 0 || value > values[index - 1]));
+}
+
+const entrySections = ['entry-hero', 'entry-shift', 'offer-journeys', 'entry-proof', 'buyer-router', 'entry-final-route'];
+check(home.includes('<main id="main-content" class="entry-main" data-phase5r-page="entry" tabindex="-1">'), 'entry main marker exact');
+check(entrySections.every(value => count(home, `data-phase5r-section="${value}"`) === 1), 'entry section markers exact once');
+check(strictlyIncreasing(markerPositions(home, 'data-phase5r-section', entrySections)), 'entry section markers ordered');
+check(count(home, 'data-clarity="outcome"') === 1 && count(home, 'data-clarity="difference"') === 1 && count(home, 'data-clarity="choice"') === 1, 'hero clarity markers exact');
+const entryHero = (home.match(/<[^>]+data-phase5r-section="entry-hero"[\s\S]*?<\/section>/) || [''])[0];
+check(count(entryHero, '<h1') === 1 && count(home, '<h1') === 1, 'entry single H1 inside hero');
+check(!/(\$|\/ month|first month|compute excluded|finish it and the licence opens)/i.test(visibleText(entryHero)), 'entry hero has no price or access-condition tokens');
+check(entryHero.includes('href="#find-my-route"') && entryHero.includes('href="workforce.html"'), 'entry hero primary and Workforce routes');
+check(entryHero.includes('Carry more of the company without carrying every function alone.'), 'entry hero H1 exact');
+
+const journeys = ['inspect-method', 'learn-to-operate', 'run-workforce', 'delegate-work'];
+check(journeys.every(value => count(home, `data-offer-journey="${value}"`) === 1), 'four offer journeys exact');
+check(count(home, 'data-offer-journey="') === 4, 'four offer journeys only', `found ${count(home, 'data-offer-journey="')}`);
+check(count(home, 'data-journey-part="value"') === 4 && count(home, 'data-journey-part="offers"') === 4 && count(home, 'data-journey-part="actions"') === 4, 'journey value offer action anatomy exact');
+check(count(home, 'data-journey-visual="') === 4, 'four distinct journey visuals');
+check(!home.includes('class="offer-table"') && !home.includes('<caption class="visually-hidden">The whole offer</caption>'), 'old offer table absent');
+const offerLabels = [
+  'Vision to Value', 'Decision Provenance Standard', 'Both published market reports', 'Product Org OS',
+  'The recorded course', 'Monthly open Q&amp;A', 'The licence, all 15 teams', 'Operator Intensive', 'The Room',
+  'Commissioned market report', 'On Call', 'Fractional'
+];
+check(offerLabels.every(label => home.includes(label)), 'governed offer breadth present');
+check(count(home, 'id="intensive"') === 1, 'Operator Intensive anchor exact once');
+
+const proofKinds = ['published-method', 'published-standard', 'open-system', 'published-output'];
+check(proofKinds.every(value => count(home, `data-proof-kind="${value}"`) === 1), 'four inspectable proof kinds exact');
+check(count(home, 'data-proof-visual="') === 4 && home.includes('src="/research/og/report-digest.png"'), 'proof uses four visual previews including published report art');
+check(home.indexOf('data-phase5r-section="entry-proof"') < home.indexOf('data-phase5r-section="buyer-router"'), 'proof precedes buyer router');
+check(!/(testimonial|customer-logo|review-score|performance-result)/i.test(entryHero), 'hero contains no invented proof component');
+
+check(count(home, 'data-router-step="1"') === 1 && count(home, 'data-router-step="2"') === 1, 'router has one first step and one conditional second-step panel');
+check(count(home, 'data-route-mode="operate"') === 1 && count(home, 'data-route-direct="delegate"') === 1 && !home.includes('data-route-mode="delegate"'), 'router operate mode and direct delegate route exact');
+check(count(home, 'data-route-choice="product-inside-company"') === 1 && count(home, 'data-route-choice="several-functions-or-clients"') === 1 && count(home, 'data-route-choice="productbeacon-carries-work"') === 1, 'router destinations exact');
+check(home.includes('id="route-operate-options" data-router-step="2" data-route-panel="operate" hidden') && !home.includes('data-route-panel="delegate"'), 'router conditional panel initially hidden');
+check(count(home, '<div class="router-status" data-router-status') === 1 && home.includes('role="status"') && home.includes('aria-live="polite"'), 'router status region present');
+check(home.includes('<noscript><h3>Choose the route that sounds most like your work.</h3>'), 'router no-script heading exact');
+check(home.includes('href="only-product-person/"') && home.includes('href="covering-everything/"') && home.includes('href="on-call.html"'), 'entry final routes use existing destinations');
+check(!sourcePaths.some(file => source[file].includes('$1,000')), '$1,000 absent from visitor copy');
 
 const frozenNavLabels = [
   'The Operator Intensive', 'The Workforce', 'On Call &amp; Fractional',
@@ -209,8 +214,48 @@ for (const [file, html] of [['index.html', home], ['only-product-person/index.ht
   check(Boolean(reducedMotion && /transition:\s*none\s*!important/.test(reducedMotion[0]) && /transform:\s*none\s*!important/.test(reducedMotion[0])), `${file} reduced motion removes transitions and transforms`);
 }
 
+const workforceStory = ['role-based-specialists', 'full-harness', 'loop-and-learn', 'distributed-company-brain'];
+check(/<main\b[^>]*id="main-content"[^>]*data-phase5r-page="workforce"[^>]*>/.test(workforce), 'Workforce main marker exact');
+check(workforceStory.every(value => count(workforce, `data-workforce-story="${value}"`) === 1), 'four Workforce story markers exact once');
+check(strictlyIncreasing(markerPositions(workforce, 'data-workforce-story', workforceStory)), 'Workforce story markers ordered');
+check(workforceStory.every(value => workforce.indexOf(`data-workforce-story="${value}"`) < workforce.indexOf('data-workforce-view="team-map"')), 'Workforce story precedes team map');
+check(count(workforce, 'data-workforce-view="team-map"') === 1 && count(workforce, 'data-workforce-view="specialist-roster"') === 1, 'one Workforce team map and one specialist roster');
+check(workforce.indexOf('data-workforce-view="team-map"') < workforce.indexOf('data-workforce-view="specialist-roster"'), 'Workforce team map precedes roster');
+check(!visibleText(workforce).includes('Here is what you ask for, and here is what comes back.'), 'old request-output heading absent');
+check(!visibleText(workforce).includes('From request to deliverable.'), 'old request-to-deliverable heading absent');
+
+const harnessNodes = ['request-context', 'role-methods-knowledge-limits', 'specialist', 'structured-output-evidence'];
+check(harnessNodes.every(value => count(workforce, `data-harness-node="${value}"`) === 1), 'Full Harness nodes exact once');
+check(strictlyIncreasing(markerPositions(workforce, 'data-harness-node', harnessNodes)), 'Full Harness nodes ordered');
+const loopSteps = ['frame', 'plan', 'execute', 'audit', 'review', 'record'];
+check(loopSteps.every(value => count(workforce, `data-loop-step="${value}"`) === 1), 'Loop and Learn steps exact once');
+check(strictlyIncreasing(markerPositions(workforce, 'data-loop-step', loopSteps)), 'Loop and Learn steps ordered');
+check(count(workforce, 'data-human-gate="frame"') === 1 && count(workforce, 'data-human-gate="review"') === 1, 'Loop and Learn human gates exact');
+const memoryRecords = ['documents', 'decisions', 'bets', 'assumptions', 'learnings', 'feedback'];
+check(memoryRecords.every(value => count(workforce, `data-memory-record="${value}"`) === 1), 'Distributed Company Brain records exact once');
+
+const teamMap = (workforce.match(/<[^>]+data-workforce-view="team-map"[\s\S]*?<\/section>/) || [''])[0];
+const roster = (workforce.match(/<[^>]+data-workforce-view="specialist-roster"[\s\S]*?<\/section>/) || [''])[0];
+check(count(teamMap, 'class="org-tile"') === 15, 'Workforce team map has 15 tiles', `found ${count(teamMap, 'class="org-tile"')}`);
+check(count(teamMap, 'class="role-card"') === 0, 'Workforce team map has no role cards');
+check(count(roster, 'class="function-block"') === 15, 'Workforce roster has 15 function blocks', `found ${count(roster, 'class="function-block"')}`);
+check(count(roster, 'class="role-card"') === 96, 'Workforce roster has 96 role cards', `found ${count(roster, 'class="role-card"')}`);
+check(workforce.includes('id="the-skills"') && workforce.includes('id="skills-grid"') && workforce.includes('id="libs-grid"') && count(workforce, 'data-expand-target=') === 2, 'Workforce skills and libraries controls retained');
+check(/qualified human|qualified professional/i.test(visibleText(workforce)) && /not legal advice/i.test(visibleText(workforce)), 'Workforce supervised-domain boundary retained');
+
+const forbiddenClaims = [
+  'every request becomes a team', 'router always finds', 'never re-explain your business',
+  'every session makes the system smarter', 'model retrains itself', 'automatically gets smarter',
+  'full harness guarantees', 'guaranteed correct', 'replaces your lawyer',
+  'replaces a human team', 'licensed professional agent'
+];
+const visitorText = `${visibleText(home)} ${visibleText(workforce)}`.toLowerCase();
+check(forbiddenClaims.every(fragment => !visitorText.includes(fragment)), 'forbidden public claim fragments absent');
+
+const workforceMarker = '<!-- Provenance: DR-2026-419; substantive Phase 5R Workforce relook approved by Yohay Etsion 2026-08-30. -->';
+check(count(workforce, workforceMarker) === 1, 'workforce DR-2026-419 provenance marker exact once', `found ${count(workforce, workforceMarker)}`);
+
 const deepBaselines = {
-  'workforce.html': 'f03e8d6e982bcfe8f787e7ade9e4279c59fc53e06f1d2d8752c8852152c39f2e',
   'research/index.html': '7a6100f724b843becfb879fae5a225670df97ba31b7ed266061f9bf79bd7bd19',
   'on-call.html': 'd31057fdaf8998ca1a7a929395d4045c4dd8c009bdcc7a2d80b2ec112e33131f'
 };
@@ -232,7 +277,7 @@ const reviewHtml = Object.fromEntries(expectedReviewPages.map(file => [file, rea
 for (const [file, html] of Object.entries(reviewHtml)) {
   check(count(html, robots) === 1, `${file} exact robots meta once`, `found ${count(html, robots)}`);
   check(count(html, referrer) === 1, `${file} exact referrer meta once`, `found ${count(html, referrer)}`);
-  check(html.includes('Internal review candidate') && html.includes('Build 5R-20260830-c672062f') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
+  check(html.includes('Internal review candidate') && html.includes('Build 5R-RELOOK-20260830-DR419') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
   check(!/(googletagmanager|\bgtag\s*\(|\bpbTrack\b|\bdataLayer\b|linkedin_partner|snap\.licdn)/i.test(html), `${file} tracking stripped`);
   const attrs = [...html.matchAll(/(?:href|src|action)="([^"]+)"/g)].map(match => match[1]);
   const relative = attrs.filter(value => !value.startsWith('/') && !value.startsWith('#') && !/^[a-z][a-z0-9+.-]*:/i.test(value));

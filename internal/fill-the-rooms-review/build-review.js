@@ -8,8 +8,8 @@ const path = require('path');
 const reviewRoot = __dirname;
 const repoRoot = path.resolve(reviewRoot, '..', '..');
 const prefix = '/internal/fill-the-rooms-review/';
-const buildStamp = '5R-20260830-c672062f';
-const sourceCommit = 'c672062f9b626ef13bbdaa6a821d134d54580eda';
+const buildStamp = '5R-RELOOK-20260830-DR419';
+const sourceCommit = 'fe3b677807b97a59b26edd15b5a3499b6eeb2ffc';
 const robots = '<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">';
 const referrer = '<meta name="referrer" content="no-referrer">';
 
@@ -68,22 +68,90 @@ const reviewStyle = `<style id="phase5r-review-only-style">
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
   body.review-candidate .nav { top: 36px; }
+  body.review-candidate .phase5r-footer-heading,
+  body.review-candidate .footer__bottom > span { color: #94A3B8; }
+  body.review-candidate .metric__label,
+  body.review-candidate .org-tile__roles,
+  body.review-candidate .coming-card-label,
+  body.review-candidate .coming-card-body { color: #94A3B8 !important; }
+  body.review-candidate .split p a { text-decoration: underline; text-underline-offset: 2px; }
+  body.review-candidate .phase5r-footer-heading {
+    margin-bottom: 16px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
   body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
   body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .course-dialog[open] {
+    top: 44px;
+    bottom: auto;
+    max-height: calc(100vh - 52px);
+    margin: 0 auto 8px;
+  }
+  body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  body.review-candidate #the-work,
+  body.review-candidate #the-team,
+  body.review-candidate #the-skills,
+  body.review-candidate #role-based,
+  body.review-candidate #full-harness,
+  body.review-candidate #loop-and-learn,
+  body.review-candidate #company-brain,
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
   @media (max-width: 639px) {
     body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
     body.review-candidate .nav { top: 48px; }
     body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
     body.review-candidate .skip-link:focus { top: 64px; }
+    body.review-candidate .course-dialog[open] {
+      top: 64px;
+      max-height: calc(100vh - 72px);
+    }
+    body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
+    body.review-candidate #the-work,
+    body.review-candidate #the-team,
+    body.review-candidate #the-skills,
+    body.review-candidate #role-based,
+    body.review-candidate #full-harness,
+    body.review-candidate #loop-and-learn,
+    body.review-candidate #company-brain,
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
   }
 </style>`;
 
-const reviewBanner = `<aside class="phase5r-review-banner" role="note" aria-label="Internal review status">
+const reviewBanner = `<aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
   <span>Build ${buildStamp}</span>
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>`;
+
+const reviewBehavior = `<script id="phase5r-review-only-behavior">
+(function(){
+  'use strict';
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    var target = href && document.querySelector(href);
+    if (!target) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (window.location.hash !== href) window.history.pushState(null, '', href);
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  }, true);
+  document.addEventListener('submit', function(event) {
+    if (!event.target || event.target.id !== 'course-form') return;
+    window.requestAnimationFrame(function() {
+      var dialog = document.getElementById('course-dialog');
+      if (dialog && dialog.open && dialog.querySelector('[aria-invalid="true"]')) dialog.scrollTop = 0;
+    });
+  }, true);
+})();
+</script>`;
 
 function sha(bytes) {
   return crypto.createHash('sha256').update(bytes).digest('hex');
@@ -132,9 +200,20 @@ function rewriteLinks(html, sourceRoute) {
   });
 }
 
-function addReviewDirectives(html) {
+function addReviewDirectives(html, source) {
   const viewport = /<meta name="viewport"[^>]*>/i;
   if (!viewport.test(html)) throw new Error('review source has no viewport meta');
+  if (source === 'on-call.html') {
+    html = html.replace('</nav>', '</nav>\n<main id="main-content" tabindex="-1">');
+    html = html.replace(/<footer\b/i, '</main>\n<footer');
+    html = html
+      .replace(/<h4([^>]*)>Engagement Details<\/h4>/gi, '<h3$1>Engagement Details</h3>');
+  }
+  html = html.replace(/<footer\b[^>]*class="[^"]*\bfooter\b[^"]*"[^>]*>[\s\S]*?<\/footer>/gi, footer => {
+    return footer
+      .replace(/<h4>/gi, '<p class="phase5r-footer-heading">')
+      .replace(/<\/h4>/gi, '</p>');
+  });
   html = html.replace(viewport, match => `${match}\n${robots}\n${referrer}`);
   html = html.replace('</head>', `${reviewStyle}\n</head>`);
   html = html.replace(/<body([^>]*)>/i, (whole, attributes) => {
@@ -142,18 +221,19 @@ function addReviewDirectives(html) {
     return `<body${attributes} class="review-candidate">`;
   });
   html = html.replace(/<body[^>]*>/i, match => `${match}\n${reviewBanner}`);
+  html = html.replace('</body>', `${reviewBehavior}\n</body>`);
   return html;
 }
 
 function buildPage(page) {
   const sourcePath = path.join(repoRoot, page.source);
   let html = fs.readFileSync(sourcePath, 'utf8');
-  if (page.source === 'index.html' && countRelativeAttributes(html) !== 14) {
-    throw new Error(`home relative-link invariant failed: expected 14, got ${countRelativeAttributes(html)}`);
+  if (page.source === 'index.html' && countRelativeAttributes(html) !== 20) {
+    throw new Error(`home relative-link invariant failed: expected 20, got ${countRelativeAttributes(html)}`);
   }
   html = stripTracking(html);
   html = rewriteLinks(html, page.route);
-  html = addReviewDirectives(html);
+  html = addReviewDirectives(html, page.source);
   const outputPath = path.join(reviewRoot, page.output);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, html, 'utf8');
@@ -179,7 +259,7 @@ const hashedPaths = [
 
 const manifest = {
   schema_version: 1,
-  candidate: 'ProductBeacon Fill the Rooms Phase 5R',
+  candidate: 'ProductBeacon Fill the Rooms Phase 5R relook',
   build_stamp: buildStamp,
   source_commit: sourceCommit,
   review_prefix: prefix,
