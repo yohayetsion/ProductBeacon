@@ -55,7 +55,8 @@
   }
 </style>
 <style id="phase5r-review-only-style">
-  body.review-candidate { padding-top: 36px; }
+  :root { --phase5r-review-banner-height: 36px; }
+  body.review-candidate { padding-top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-review-banner {
     position: fixed;
     inset: 0 0 auto 0;
@@ -73,7 +74,7 @@
     text-align: center;
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
-  body.review-candidate .nav { top: 36px; }
+  body.review-candidate .nav { top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-footer-heading,
   body.review-candidate .footer__bottom > span { color: #94A3B8; }
   body.review-candidate .metric__label,
@@ -89,49 +90,54 @@
     text-transform: uppercase;
   }
   body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
-  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
-  body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + var(--phase5r-review-banner-height)); }
+  body.review-candidate .skip-link:focus { top: calc(var(--phase5r-review-banner-height) + 16px); }
+  body.review-candidate a.btn,
+  body.review-candidate button.btn { min-height: 44px; }
   body.review-candidate .course-dialog[open] {
-    top: 44px;
+    top: calc(var(--phase5r-review-banner-height) + 8px);
     bottom: auto;
-    max-height: calc(100vh - 52px);
+    max-height: calc(100vh - var(--phase5r-review-banner-height) - 16px);
     margin: 0 auto 8px;
   }
   body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  @media (prefers-reduced-motion: reduce) {
+    body.review-candidate a,
+    body.review-candidate button,
+    body.review-candidate input,
+    body.review-candidate summary { transition: none !important; transform: none !important; scroll-behavior: auto !important; }
+  }
   body.review-candidate #the-work,
   body.review-candidate #the-team,
   body.review-candidate #the-skills,
   body.review-candidate #role-based,
+  body.review-candidate #spawn-lifecycle,
   body.review-candidate #full-harness,
+  body.review-candidate #human-decision-seam,
   body.review-candidate #loop-and-learn,
   body.review-candidate #company-brain,
-  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 90px); }
   @media (max-width: 639px) {
-    body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
-    body.review-candidate .nav { top: 48px; }
-    body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
-    body.review-candidate .skip-link:focus { top: 64px; }
-    body.review-candidate .course-dialog[open] {
-      top: 64px;
-      max-height: calc(100vh - 72px);
-    }
+    body.review-candidate .door-page { padding-top: calc(var(--space-12, 48px) + var(--phase5r-review-banner-height)); }
     body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
     body.review-candidate #the-work,
     body.review-candidate #the-team,
     body.review-candidate #the-skills,
     body.review-candidate #role-based,
+    body.review-candidate #spawn-lifecycle,
     body.review-candidate #full-harness,
+    body.review-candidate #human-decision-seam,
     body.review-candidate #loop-and-learn,
     body.review-candidate #company-brain,
-    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 102px); }
   }
 </style>
 </head>
 <body class="review-candidate">
 <aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
-  <span>Build 5R-RELOOK-20260830-DR419</span>
+  <span>Build 5R-PLAS-CORRECTION-20260830-DR422</span>
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -167,11 +173,19 @@
   </div>
 </footer>
 <script src="/js/main.js"></script>
-<script id="phase5r-review-only-behavior">
+<script id="phase5r-review-only-behavior" data-phase5r-review-anchor-behavior="capture">
 (function(){
   'use strict';
+  function syncReviewChrome() {
+    var banner = document.querySelector('.phase5r-review-banner');
+    if (!banner) return;
+    document.documentElement.style.setProperty('--phase5r-review-banner-height', banner.getBoundingClientRect().height + 'px');
+  }
+  syncReviewChrome();
+  window.addEventListener('resize', syncReviewChrome, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncReviewChrome).observe(document.querySelector('.phase5r-review-banner'));
   document.addEventListener('click', function(event) {
-    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    var link = event.target.closest && event.target.closest('a[href^="#"]');
     if (!link) return;
     var href = link.getAttribute('href');
     var target = href && document.querySelector(href);
@@ -179,8 +193,12 @@
     event.preventDefault();
     event.stopImmediatePropagation();
     if (window.location.hash !== href) window.history.pushState(null, '', href);
-    target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    if (link.classList.contains('skip-link')) target.focus({ preventScroll: true });
+    var fixedChrome = Array.prototype.slice.call(document.querySelectorAll('.phase5r-review-banner, .nav, .section-tabs'))
+      .filter(function(element){ return ['fixed', 'sticky'].indexOf(getComputedStyle(element).position) !== -1; });
+    var chromeBottom = fixedChrome.length ? Math.max.apply(null, fixedChrome.map(function(element){ return element.getBoundingClientRect().bottom; })) : 0;
+    var targetPosition = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - chromeBottom);
+    window.scrollTo({ top: targetPosition, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }, true);
   document.addEventListener('submit', function(event) {
     if (!event.target || event.target.id !== 'course-form') return;

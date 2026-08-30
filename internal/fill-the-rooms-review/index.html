@@ -5,228 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">
 <meta name="referrer" content="no-referrer">
-<title>Governed AI workforce: operate or delegate | ProductBeacon</title>
-<meta name="description" content="Inspect the method, learn the system, run a governed AI workforce, or have ProductBeacon carry the work. Find the route that fits your responsibility.">
+<title>Product Leadership, At Scale | ProductBeacon</title>
+<meta name="description" content="ProductBeacon combines a product-leadership blueprint, a governed AI workforce, durable company context, and human-held decisions from vision to delivered value.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="canonical" href="https://productbeacon.agency/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ProductBeacon">
-<meta property="og:title" content="Governed AI workforce: operate or delegate | ProductBeacon">
-<meta property="og:description" content="Inspect the method, learn the system, run a governed AI workforce, or have ProductBeacon carry the work. Find the route that fits your responsibility.">
-<meta property="og:url" content="https://productbeacon.agency/">
-<meta property="og:image" content="https://productbeacon.agency/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Governed AI workforce: operate or delegate | ProductBeacon">
-<meta name="twitter:description" content="Inspect the method, learn the system, run a governed AI workforce, or have ProductBeacon carry the work. Find the route that fits your responsibility.">
-<meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
-
-
-
+<meta property="og:type" content="website"><meta property="og:site_name" content="ProductBeacon"><meta property="og:title" content="Product Leadership, At Scale | ProductBeacon"><meta property="og:description" content="A product-leadership blueprint, governed AI workforce, and human-held decision system from vision to delivered value."><meta property="og:url" content="https://productbeacon.agency/"><meta property="og:image" content="https://productbeacon.agency/og-image.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Product Leadership, At Scale | ProductBeacon"><meta name="twitter:description" content="A product-leadership blueprint, governed AI workforce, and human-held decision system from vision to delivered value."><meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
 
 <style>
-  .skip-link {
-    position: fixed;
-    left: var(--space-4);
-    top: -80px;
-    z-index: 1000;
-    padding: var(--space-3) var(--space-4);
-    border-radius: var(--border-radius-xs);
-    background: var(--amber);
-    color: var(--ink);
-    font-weight: 700;
-  }
-  .skip-link:focus { top: var(--space-4); color: var(--ink); }
-  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-  .entry-main { padding-top: var(--nav-height); }
-  .entry-hero {
-    min-height: calc(100vh - var(--nav-height));
-    display: grid;
-    align-items: center;
-    padding: var(--space-16) 0;
-    background: radial-gradient(circle at 80% 15%, var(--amber-glow), transparent 34%), var(--ink);
-  }
-  .entry-hero__inner { max-width: 980px; }
-  .entry-hero h1 { max-width: 920px; }
-  .entry-hero__sub { max-width: 820px; margin-top: var(--space-6); color: var(--secondary); font-size: 1.125rem; }
-  .door-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); margin-top: var(--space-12); }
-  .door-card { display: flex; min-width: 0; min-height: 210px; flex-direction: column; justify-content: space-between; padding: var(--space-8); border: 1px solid var(--border); border-radius: var(--border-radius); background: var(--surface); color: var(--text); transition: border-color .2s, transform .2s, background .2s; }
-  .door-card:hover { border-color: var(--amber); background: #243247; color: var(--text); transform: translateY(-2px); }
-  .door-card__label { display: block; margin: 0; color: var(--bright); font-size: 1.5rem; font-weight: 700; }
-  .door-card__description { display: block; margin-top: var(--space-4); color: var(--secondary); font-size: 1rem; }
-  .door-card__cost { display: block; margin-top: var(--space-6); color: var(--amber); font-family: var(--font-mono); font-size: .875rem; }
-  .third-path { margin-top: var(--space-8); text-align: center; }
-  .third-path a { font-weight: 600; }
-  .teams-heading a { color: inherit; }
-  .teams-heading a:hover { color: var(--amber); }
-  .team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-8); }
-  .team-item { min-width: 0; padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: var(--surface); color: var(--text); font-weight: 500; }
-  .offer-table-wrap { margin-top: var(--space-8); border: 1px solid var(--border); border-radius: var(--border-radius); overflow: hidden; }
-  .offer-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
-  .offer-table th, .offer-table td { padding: var(--space-4) var(--space-6); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
-  .offer-table th { color: var(--bright); background: var(--surface); font-size: .875rem; }
-  .offer-table th:first-child, .offer-table td:first-child { width: 60%; }
-  .offer-table tr:last-child td { border-bottom: 0; }
-  .offer-table td:last-child { color: var(--secondary); }
-  .offer-table a { color: var(--text); font-weight: 500; }
-  .offer-table a:hover { color: var(--amber); }
-  .proof-block { max-width: 720px; padding-left: var(--space-6); border-left: 3px solid var(--amber); }
-  .proof-block p { margin: var(--space-4) 0; color: var(--secondary); font-size: 1.125rem; }
-  .entry-footer__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-8); margin-bottom: var(--space-8); }
-  .entry-footer__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-4) var(--space-6); }
-  .entry-footer__links a { color: var(--secondary); font-size: .875rem; }
-  .entry-footer .footer__bottom { color: var(--secondary); }
-  .entry-footer__links a:hover { color: var(--amber); }
-  @media (max-width: 767px) {
-    .entry-hero { min-height: auto; padding: var(--space-12) 0; }
-    .door-grid { grid-template-columns: 1fr; margin-top: var(--space-8); }
-    .door-card { min-height: 0; padding: var(--space-6); }
-    .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .entry-footer__inner { flex-direction: column; }
-    .entry-footer__links { justify-content: flex-start; }
-  }
-  @media (max-width: 639px) {
-    .entry-hero h1 { font-size: clamp(1.8rem, 8vw, 2.25rem); overflow-wrap: break-word; }
-    .team-grid { grid-template-columns: 1fr; }
-    .offer-table th, .offer-table td { padding: var(--space-3); font-size: .875rem; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .entry-main *, .entry-main *::before, .entry-main *::after { animation: none !important; transition: none !important; transform: none !important; }
-  }
-</style>
-<style id="phase5r-relook-style">
-  .entry-main { overflow: clip; }
-  .entry-main section { scroll-margin-top: calc(var(--nav-height) + 24px); }
-  .entry-main h2 { max-width: 880px; }
-  .entry-eyebrow { margin-bottom: var(--space-4); color: var(--amber); font-family: var(--font-mono); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-  .entry-lede { max-width: 800px; color: var(--secondary); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.7; }
-  .entry-hero { min-height: calc(100svh - var(--nav-height)); padding: var(--space-12) 0 var(--space-16); background: radial-gradient(circle at 82% 18%, rgba(245,158,11,.16), transparent 30%), radial-gradient(circle at 18% 78%, rgba(56,189,248,.08), transparent 28%), var(--ink); }
-  .entry-hero__inner { max-width: 1080px; }
-  .entry-hero h1 { max-width: 980px; font-size: clamp(2.5rem, 6.2vw, 5.3rem); line-height: .98; letter-spacing: -.055em; }
-  .hero-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-8); }
-  .hero-evidence { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--space-3); margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--border); }
-  .hero-evidence span { display: flex; align-items: center; min-height: 52px; color: var(--secondary); font-size: .9rem; }
-  .hero-evidence span::before { width: 8px; height: 8px; margin-right: 12px; border-radius: 50%; background: var(--amber); content: ""; flex: 0 0 auto; }
-  .shift-grid { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); gap: var(--space-12); align-items: start; }
-  .shift-story p { color: var(--secondary); font-size: 1.05rem; line-height: 1.75; }
-  .shift-story p + p { margin-top: var(--space-5); }
-  .value-panel { padding: var(--space-8); border: 1px solid var(--border); border-radius: var(--border-radius); background: linear-gradient(145deg,rgba(245,158,11,.08),transparent 42%),var(--surface); }
-  .value-panel h3 { margin-bottom: var(--space-4); font-size: 1.4rem; }
-  .value-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-4); margin-top: var(--space-6); }
-  .value-card { min-width: 0; padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: rgba(15,23,42,.58); }
-  .value-card h4 { margin-bottom: var(--space-3); color: var(--bright); font-size: 1rem; }
-  .value-card p { color: var(--secondary); font-size: .9rem; line-height: 1.55; }
-  .journey-intro { display: flex; justify-content: space-between; gap: var(--space-8); align-items: end; margin-bottom: var(--space-10); }
-  .journey-intro p { max-width: 560px; color: var(--secondary); }
-  .journey-stack { display: grid; gap: var(--space-6); }
-  .journey-card { position: relative; display: grid; grid-template-columns: 180px minmax(0,1fr); gap: var(--space-8); min-width: 0; padding: var(--space-8); border: 1px solid var(--border); border-radius: var(--border-radius); background: var(--surface); overflow: hidden; }
-  .journey-card::after { position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--amber); content: ""; }
-  .journey-card__rail { min-width: 0; }
-  .journey-card__number { display: block; color: rgba(245,158,11,.3); font-family: var(--font-mono); font-size: 3.8rem; font-weight: 700; line-height: 1; }
-  .journey-card__label { display: block; margin-top: var(--space-3); color: var(--amber); font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
-  .journey-card h3 { margin-bottom: var(--space-3); color: var(--bright); font-size: clamp(1.55rem,3vw,2.25rem); }
-  .journey-card__body { max-width: 720px; color: var(--secondary); font-size: 1.02rem; }
-  .journey-visual { display: grid; min-height: 148px; margin-top: var(--space-6); padding: var(--space-5); border: 1px solid rgba(245,158,11,.28); border-radius: var(--border-radius-sm); background: linear-gradient(135deg,rgba(245,158,11,.12),rgba(15,23,42,.76) 56%); overflow: hidden; }
-  .artifact-shelf { grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--space-3); align-items: end; }
-  .artifact-preview { display: flex; min-width: 0; min-height: 104px; flex-direction: column; justify-content: space-between; padding: var(--space-3); border: 1px solid var(--border); border-radius: 6px 6px 2px 2px; background: #111c31; box-shadow: 0 12px 24px rgba(2,6,23,.24); }
-  .artifact-preview:nth-child(2) { min-height: 118px; background: #17243a; }
-  .artifact-preview:nth-child(3) { min-height: 94px; background: #202b3e; }
-  .artifact-preview:nth-child(4) { min-height: 110px; background: #0b1220; }
-  .artifact-preview small,.visual-kicker { color: var(--amber); font-family: var(--font-mono); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
-  .artifact-preview strong { color: var(--bright); font-size: .78rem; line-height: 1.25; }
-  .learning-preview { grid-template-columns: 1fr auto; gap: var(--space-4); align-items: center; }
-  .lesson-player { display: grid; grid-template-columns: auto 1fr; gap: var(--space-4); align-items: center; min-width: 0; padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: #0b1220; }
-  .lesson-play { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 50%; background: var(--amber); color: var(--ink); font-weight: 800; }
-  .lesson-player strong,.live-question strong { display: block; color: var(--bright); }
-  .lesson-player span:last-child,.live-question span { display: block; margin-top: 5px; color: var(--secondary); font-size: .78rem; }
-  .live-question { min-width: 170px; padding: var(--space-4); border: 1px solid var(--amber); border-radius: 999px; background: rgba(15,23,42,.78); text-align: center; }
-  .run-preview,.delegate-preview { grid-template-columns: repeat(7,auto); gap: var(--space-3); align-items: center; justify-content: center; }
-  .visual-node { display: grid; min-width: 92px; min-height: 72px; place-items: center; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: #0b1220; color: var(--bright); font-size: .78rem; font-weight: 650; text-align: center; }
-  .visual-node--human { border-color: var(--amber); background: rgba(245,158,11,.1); }
-  .visual-arrow { color: var(--amber); font-family: var(--font-mono); font-size: 1.1rem; }
-  .delegate-preview { grid-template-columns: auto auto minmax(180px,1fr) auto auto; }
-  .workforce-cluster { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; min-width: 0; }
-  .workforce-cluster span { padding: 8px 6px; border: 1px solid var(--border); border-radius: 6px; background: #111c31; color: var(--secondary); font-size: .7rem; text-align: center; }
-  .offer-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-3); margin: var(--space-6) 0 0; padding: 0; list-style: none; }
-  .offer-list li { min-width: 0; padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: rgba(15,23,42,.58); }
-  .offer-name { display: block; color: var(--text); font-weight: 650; }
-  .offer-meta { display: block; margin-top: 6px; color: var(--amber); font-family: var(--font-mono); font-size: .76rem; line-height: 1.45; }
-  .journey-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
-  .journey-actions a { display: inline-flex; min-height: 44px; align-items: center; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--border-radius-xs); color: var(--text); font-size: .86rem; font-weight: 600; }
-  .journey-actions a:hover { border-color: var(--amber); color: var(--amber); }
-  .proof-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: var(--space-4); margin-top: var(--space-8); }
-  .proof-card { display: flex; min-width: 0; min-height: 360px; flex-direction: column; padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--border-radius); background: var(--surface); overflow: hidden; }
-  .proof-card--image { background-position: center; background-size: cover; }
-  .proof-card__label { color: var(--amber); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
-  .proof-card__visual { display: grid; height: 132px; margin-top: var(--space-4); place-items: center; border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: #0b1220; overflow: hidden; }
-  .proof-card__visual img { width: 100%; height: 100%; object-fit: cover; }
-  .proof-card__visual--system img { padding: 14px; object-fit: contain; }
-  .standard-preview { grid-template-columns: 1fr auto 1fr; gap: 8px; padding: var(--space-4); }
-  .standard-preview span { padding: 10px 6px; border: 1px solid var(--border); border-radius: 6px; color: var(--secondary); font-size: .68rem; text-align: center; }
-  .standard-preview b { color: var(--amber); }
-  .repo-preview { align-content: center; justify-items: stretch; gap: 8px; padding: var(--space-4); font-family: var(--font-mono); font-size: .68rem; }
-  .repo-preview span { padding: 7px 9px; border-left: 2px solid var(--amber); background: #111c31; color: var(--secondary); }
-  .proof-card h3 { margin: var(--space-5) 0 var(--space-3); color: var(--bright); font-size: 1.35rem; }
-  .proof-card p { color: var(--secondary); font-size: .9rem; line-height: 1.55; }
-  .proof-card a { margin-top: var(--space-5); font-weight: 650; }
-  .router-shell { margin-top: var(--space-8); padding: var(--space-8); border: 1px solid var(--border); border-radius: var(--border-radius); background: linear-gradient(145deg,rgba(245,158,11,.09),transparent 48%),var(--surface); }
-  .router-shell fieldset { margin: 0; padding: 0; border: 0; }
-  .router-shell legend { margin-bottom: var(--space-5); color: var(--bright); font-size: 1.1rem; font-weight: 650; }
-  .router-modes,.route-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-4); }
-  .route-mode { display: block; min-width: 0; min-height: 144px; padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: var(--ink); color: var(--text); text-align: left; text-decoration: none; cursor: pointer; }
-  .route-mode[aria-expanded="true"],.route-mode:hover { border-color: var(--amber); background: #17243a; }
-  .route-mode strong { display: block; color: var(--bright); font-size: 1.12rem; }
-  .route-mode span { display: block; margin-top: var(--space-3); color: var(--secondary); line-height: 1.55; }
-  .route-mode .route-orientation { color: var(--amber); font-family: var(--font-mono); font-size: .78rem; font-weight: 650; }
-  .route-panel { margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--border); }
-  .route-panel[hidden] { display: none; }
-  .route-card { display: flex; min-height: 220px; flex-direction: column; padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: var(--ink); }
-  .route-card h3 { color: var(--bright); font-size: 1.25rem; }
-  .route-card p { margin-top: var(--space-3); color: var(--secondary); }
-  .route-card .route-orientation { color: var(--amber); font-family: var(--font-mono); font-size: .78rem; }
-  .route-card a { display: inline-flex; min-height: 44px; align-items: center; margin-top: auto; padding-top: var(--space-5); font-weight: 700; }
-  .router-status { min-height: 1.5em; margin-top: var(--space-4); color: var(--secondary); font-size: .875rem; }
-  .faq-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-4); margin-top: var(--space-8); }
-  .faq-grid details { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--border-radius-sm); background: var(--surface); }
-  .faq-grid summary { min-height: 44px; color: var(--bright); font-weight: 650; cursor: pointer; }
-  .faq-grid p { margin-top: var(--space-3); color: var(--secondary); line-height: 1.65; }
-  .entry-final { text-align: center; }
-  .entry-final h2,.entry-final p { margin-right: auto; margin-left: auto; }
-  .entry-final p { max-width: 640px; color: var(--secondary); }
-  .entry-final .hero-cta-row { justify-content: center; }
-  @media (max-width: 980px) {
-    .shift-grid,.journey-card { grid-template-columns: 1fr; }
-    .proof-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-    .journey-card__rail { display: flex; align-items: baseline; gap: var(--space-4); }
-  }
-  @media (max-width: 767px) {
-    .entry-hero h1 { font-size: clamp(2.25rem,11vw,3.6rem); }
-    .hero-evidence,.value-grid,.router-modes,.route-grid,.faq-grid { grid-template-columns: 1fr; }
-    .journey-intro { display: block; }
-    .journey-intro p { margin-top: var(--space-4); }
-    .journey-card,.router-shell { padding: var(--space-6); }
-    .offer-list { grid-template-columns: 1fr; }
-    .artifact-shelf { grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; }
-    .artifact-preview,.artifact-preview:nth-child(n) { min-height: 96px; }
-    .learning-preview { grid-template-columns: 1fr; }
-    .live-question { min-width: 0; border-radius: var(--border-radius-sm); }
-    .run-preview { grid-template-columns: 1fr; }
-    .run-preview .visual-arrow { transform: rotate(90deg); text-align: center; }
-    .delegate-preview { grid-template-columns: 1fr; }
-    .delegate-preview .visual-arrow { transform: rotate(90deg); text-align: center; }
-    .proof-grid { grid-template-columns: 1fr; }
-    .proof-card { min-height: 0; }
-    .hero-cta-row .btn { width: 100%; justify-content: center; text-align: center; }
-  }
-  @media (max-width: 420px) {
-    .entry-hero { padding-top: var(--space-8); }
-    .hero-evidence { margin-top: var(--space-6); }
-    .journey-card,.router-shell,.proof-card { padding: var(--space-5); }
-  }
-</style>
+.skip-link{position:fixed;left:var(--space-4);top:-80px;z-index:1000;padding:var(--space-3) var(--space-4);border-radius:var(--border-radius-xs);background:var(--amber);color:var(--ink);font-weight:700}.skip-link:focus{top:var(--space-4);color:var(--ink)}.entry-main{padding-top:var(--nav-height);overflow:clip}.entry-main section{scroll-margin-top:calc(var(--nav-height) + 24px)}.eyebrow{margin-bottom:var(--space-4);color:var(--amber);font-family:var(--font-mono);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}.lede{max-width:var(--content-width);color:var(--secondary);font-size:clamp(1.05rem,2vw,1.22rem);line-height:1.7}.section-head{max-width:var(--content-width);margin-bottom:var(--space-12)}.section-head h2{margin-bottom:var(--space-4)}
+.leadership-hero{display:grid;min-height:calc(100svh - var(--nav-height));align-items:center;padding:var(--space-16) 0;background:radial-gradient(circle at 84% 22%,rgba(245,158,11,.14),transparent 30%),radial-gradient(circle at 15% 80%,rgba(56,189,248,.07),transparent 28%),var(--ink)}.hero-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(300px,5fr);gap:var(--space-12);align-items:center}.leadership-hero h1{max-width:780px;font-size:clamp(2.8rem,6.4vw,5.7rem);line-height:.96;letter-spacing:-.055em}.hero-support{max-width:760px;margin-top:var(--space-6);color:var(--secondary);font-size:1.12rem;line-height:1.75}.action-row{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-8)}.system-preview{padding:var(--space-6);border:1px solid var(--muted);border-radius:var(--border-radius);background:rgba(30,41,59,.68)}.system-preview__label{color:var(--secondary);font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.system-preview__nodes{display:grid;gap:var(--space-3);margin-top:var(--space-6)}.system-preview__nodes span{padding:var(--space-3) var(--space-4);border-left:2px solid var(--border);color:var(--text)}.system-preview__nodes span:nth-child(2){border-color:var(--amber)}.system-preview__human{margin-top:var(--space-6);padding-top:var(--space-4);border-top:1px solid var(--amber);color:var(--bright);font-weight:600}.evidence-band{display:grid;grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-12);padding-top:var(--space-6);border-top:1px solid var(--border)}.evidence-band span{display:flex;min-height:44px;align-items:center;color:var(--secondary)}.evidence-band span::before{width:8px;height:8px;margin-right:var(--space-3);border-radius:50%;background:var(--amber);content:"";flex:0 0 auto}
+.stakes-layout,.loop-layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-12);align-items:center}.stakes-copy p+p{margin-top:var(--space-4);color:var(--secondary)}.function-orbit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);padding:var(--space-8);border:1px solid var(--border);border-radius:var(--border-radius);background:var(--ink)}.function-orbit span{display:flex;min-height:48px;align-items:center;justify-content:center;border-bottom:1px solid var(--border);color:var(--secondary);font-size:.86rem;text-align:center}.function-orbit strong{display:flex;grid-column:2;grid-row:2;min-height:86px;align-items:center;justify-content:center;padding:var(--space-4);border:1px solid var(--amber);border-radius:50%;color:var(--bright);text-align:center}.loop-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);counter-reset:loop}.loop-track li{min-height:112px;padding:var(--space-4);border-top:2px solid var(--border);list-style:none;color:var(--text);counter-increment:loop}.loop-track li::before{display:block;margin-bottom:var(--space-3);color:var(--amber);font-family:var(--font-mono);font-size:.78rem;content:"0" counter(loop)}.loop-return{margin-top:var(--space-6);padding-left:var(--space-4);border-left:3px solid var(--amber);color:var(--secondary)}.human-inset{margin-top:var(--space-8);padding-left:var(--space-6);border-left:3px solid var(--amber)}.human-inset h3{margin-bottom:var(--space-3);color:var(--bright)}.human-inset p{color:var(--secondary)}
+.system-band{position:relative;margin-top:var(--space-4);padding:var(--space-6);border:1px solid var(--border);background:var(--ink)}.system-band:first-child{margin-top:0}.system-band__label{display:block;margin-bottom:var(--space-3);color:var(--amber);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em}.system-band h3{margin-bottom:var(--space-2);color:var(--bright)}.system-band p{max-width:760px;color:var(--secondary)}.system-band a{display:inline-block;margin-top:var(--space-3)}.decision-band{border-color:var(--amber)}.decision-band::before{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--amber);content:""}.edition-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:var(--space-4);align-items:stretch}.edition{padding:var(--space-4);border-left:2px solid var(--border)}.edition-arrow{align-self:center;color:var(--amber);font-size:1.5rem}.foundation-list{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-4)}.foundation-list span{padding:var(--space-2) var(--space-3);border:1px solid var(--border);border-radius:999px;color:var(--secondary);font-size:.82rem}.system-figure figcaption{margin-top:var(--space-6);color:var(--secondary)}
+.use-grid,.door-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-6)}.use-card{padding:var(--space-6);border-top:2px solid var(--border)}.use-card__label{color:var(--amber);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em}.use-card h3{margin:var(--space-3) 0;color:var(--bright)}.use-card p{color:var(--secondary)}.use-card__actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}.use-card__actions a{display:inline-flex;min-height:44px;align-items:center}.route-heading{margin:var(--space-16) 0 var(--space-8);max-width:var(--content-width)}.route-heading p{margin-top:var(--space-4);color:var(--secondary)}.route-surface{display:flex;min-height:300px;flex-direction:column;padding:var(--space-8);border:1px solid var(--muted);border-radius:var(--border-radius);background:var(--surface);color:var(--text);text-decoration:none}.route-surface:hover{border-color:var(--amber);color:var(--text);transform:translateY(-2px)}.route-surface h3{margin:var(--space-4) 0;color:var(--bright)}.route-surface p{color:var(--secondary)}.route-surface p+p{margin-top:var(--space-3)}.route-surface__cta{margin-top:auto;padding-top:var(--space-6);color:var(--amber);font-weight:700}
+.proof-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-12);align-items:start}.report-proof{display:grid;grid-template-columns:minmax(180px,5fr) minmax(0,7fr);gap:var(--space-6);align-items:center}.report-proof+.report-proof{margin-top:var(--space-12)}.artifact-frame{overflow:hidden;border:1px solid var(--muted);border-radius:var(--border-radius-sm);background:var(--ink)}.artifact-frame img{display:block;width:100%;height:auto}.report-proof__copy span{color:var(--amber);font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase}.report-proof__copy h3{margin:var(--space-3) 0;color:var(--bright)}.report-proof__copy p{color:var(--secondary)}.report-proof__copy a{display:inline-block;margin-top:var(--space-4)}.proof-aside{padding-left:var(--space-6);border-left:3px solid var(--amber)}.proof-aside p{color:var(--secondary)}.proof-aside a{display:block;margin-top:var(--space-4)}.evidence-rail{display:flex;flex-wrap:wrap;gap:var(--space-4);margin-top:var(--space-12);padding-top:var(--space-6);border-top:1px solid var(--border)}.human-close{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--space-8);align-items:center}.human-close p{max-width:760px;color:var(--secondary)}.entry-footer__inner{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-8);margin-bottom:var(--space-8)}.entry-footer__links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:var(--space-4) var(--space-6)}.entry-footer__links a{color:var(--secondary);font-size:.875rem}.entry-footer .footer__bottom{color:var(--secondary)}
+@media(max-width:1023px){.hero-layout,.stakes-layout,.loop-layout,.proof-layout{grid-template-columns:1fr}.use-grid,.door-grid{grid-template-columns:1fr}.route-surface{min-height:0}.edition-grid{grid-template-columns:1fr}.edition-arrow{transform:rotate(90deg);justify-self:center}}@media(max-width:767px){.leadership-hero{min-height:auto;padding:var(--space-12) 0}.evidence-band{grid-template-columns:1fr}.loop-track{grid-template-columns:repeat(2,minmax(0,1fr))}.report-proof{grid-template-columns:1fr}.entry-footer__inner{flex-direction:column}.entry-footer__links{justify-content:flex-start}.human-close{grid-template-columns:1fr}}@media(max-width:639px){.leadership-hero h1{font-size:clamp(2.35rem,13vw,3.35rem)}.action-row .btn{width:100%;justify-content:center}.system-preview,.route-surface{padding:var(--space-6)}.function-orbit{grid-template-columns:repeat(2,minmax(0,1fr));padding:var(--space-6)}.function-orbit strong{grid-column:1/-1;grid-row:auto;border-radius:var(--border-radius-sm)}.loop-track{grid-template-columns:1fr}.use-card{padding:var(--space-6) 0}.proof-aside{padding-left:var(--space-4)}}@media(prefers-reduced-motion:reduce){.entry-main *,.entry-main *::before,.entry-main *::after{animation:none!important;transition:none!important;transform:none!important;scroll-behavior:auto!important}}
+</style><style id="phase5r-route-correction">.route-card:active{transform:none;border-color:var(--amber-dim)}</style><style id="phase5r-gate-compatibility">
+.entry-footer .footer__bottom { color: var(--secondary); }
+.btn { min-height: 44px; }
+@media (prefers-reduced-motion: reduce) {
+  .entry-main *, .entry-main *::before, .entry-main *::after { transition: none !important; transform: none !important; }
+  .btn { transition: none !important; transform: none !important; }
+}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ProductBeacon","url":"https://productbeacon.agency/","description":"ProductBeacon combines a product-leadership blueprint, a governed AI workforce, durable company context, and human-held decisions from vision to delivered value."}</script>
 <style id="phase5r-review-only-style">
-  body.review-candidate { padding-top: 36px; }
+  :root { --phase5r-review-banner-height: 36px; }
+  body.review-candidate { padding-top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-review-banner {
     position: fixed;
     inset: 0 0 auto 0;
@@ -244,7 +50,7 @@
     text-align: center;
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
-  body.review-candidate .nav { top: 36px; }
+  body.review-candidate .nav { top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-footer-heading,
   body.review-candidate .footer__bottom > span { color: #94A3B8; }
   body.review-candidate .metric__label,
@@ -260,234 +66,79 @@
     text-transform: uppercase;
   }
   body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
-  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
-  body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + var(--phase5r-review-banner-height)); }
+  body.review-candidate .skip-link:focus { top: calc(var(--phase5r-review-banner-height) + 16px); }
+  body.review-candidate a.btn,
+  body.review-candidate button.btn { min-height: 44px; }
   body.review-candidate .course-dialog[open] {
-    top: 44px;
+    top: calc(var(--phase5r-review-banner-height) + 8px);
     bottom: auto;
-    max-height: calc(100vh - 52px);
+    max-height: calc(100vh - var(--phase5r-review-banner-height) - 16px);
     margin: 0 auto 8px;
   }
   body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  @media (prefers-reduced-motion: reduce) {
+    body.review-candidate a,
+    body.review-candidate button,
+    body.review-candidate input,
+    body.review-candidate summary { transition: none !important; transform: none !important; scroll-behavior: auto !important; }
+  }
   body.review-candidate #the-work,
   body.review-candidate #the-team,
   body.review-candidate #the-skills,
   body.review-candidate #role-based,
+  body.review-candidate #spawn-lifecycle,
   body.review-candidate #full-harness,
+  body.review-candidate #human-decision-seam,
   body.review-candidate #loop-and-learn,
   body.review-candidate #company-brain,
-  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 90px); }
   @media (max-width: 639px) {
-    body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
-    body.review-candidate .nav { top: 48px; }
-    body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
-    body.review-candidate .skip-link:focus { top: 64px; }
-    body.review-candidate .course-dialog[open] {
-      top: 64px;
-      max-height: calc(100vh - 72px);
-    }
+    body.review-candidate .door-page { padding-top: calc(var(--space-12, 48px) + var(--phase5r-review-banner-height)); }
     body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
     body.review-candidate #the-work,
     body.review-candidate #the-team,
     body.review-candidate #the-skills,
     body.review-candidate #role-based,
+    body.review-candidate #spawn-lifecycle,
     body.review-candidate #full-harness,
+    body.review-candidate #human-decision-seam,
     body.review-candidate #loop-and-learn,
     body.review-candidate #company-brain,
-    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 102px); }
   }
 </style>
-</head>
-<body class="review-candidate">
+</head><body class="review-candidate">
 <aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
-  <span>Build 5R-RELOOK-20260830-DR419</span>
+  <span>Build 5R-PLAS-CORRECTION-20260830-DR422</span>
   <span>Unlisted and crawl-blocked, not private.</span>
-</aside>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav__inner">
-    <a href="/internal/fill-the-rooms-review/" class="nav__logo" aria-label="ProductBeacon home">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
-    </a>
-    <ul class="nav__links">
-      <li><a href="/internal/fill-the-rooms-review/#intensive">The Operator Intensive</a></li>
-      <li><a href="/internal/fill-the-rooms-review/workforce.html">The Workforce</a></li>
-      <li><a href="/internal/fill-the-rooms-review/on-call.html">On Call &amp; Fractional</a></li>
-      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
-      <li><a href="/internal/fill-the-rooms-review/research/">Research</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg">Apply</a></li>
-    </ul>
-    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-  <div class="nav__mobile" role="menu">
-    <a href="/internal/fill-the-rooms-review/#intensive" role="menuitem">The Operator Intensive</a>
-    <a href="/internal/fill-the-rooms-review/workforce.html" role="menuitem">The Workforce</a>
-    <a href="/internal/fill-the-rooms-review/on-call.html" role="menuitem">On Call &amp; Fractional</a>
-    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
-    <a href="/internal/fill-the-rooms-review/research/" role="menuitem">Research</a>
-    <a href="/about.html" role="menuitem">About</a>
-    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Apply</a>
-  </div>
-</nav>
+</aside><a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="nav" aria-label="Main navigation"><div class="container nav__inner"><a href="/internal/fill-the-rooms-review/" class="nav__logo" aria-label="ProductBeacon home"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__logo-text">Product<strong>Beacon</strong></span></a><ul class="nav__links"><li><a href="/internal/fill-the-rooms-review/#intensive">The Operator Intensive</a></li><li><a href="/internal/fill-the-rooms-review/workforce.html">The Workforce</a></li><li><a href="/internal/fill-the-rooms-review/on-call.html">On Call &amp; Fractional</a></li><li><a href="/decision-provenance-standard.html">The Standard</a></li><li><a href="/internal/fill-the-rooms-review/research/">Research</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg">Apply</a></li></ul><button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div><div class="nav__mobile" role="menu"><a href="/internal/fill-the-rooms-review/#intensive" role="menuitem">The Operator Intensive</a><a href="/internal/fill-the-rooms-review/workforce.html" role="menuitem">The Workforce</a><a href="/internal/fill-the-rooms-review/on-call.html" role="menuitem">On Call &amp; Fractional</a><a href="/decision-provenance-standard.html" role="menuitem">The Standard</a><a href="/internal/fill-the-rooms-review/research/" role="menuitem">Research</a><a href="/about.html" role="menuitem">About</a><a href="/contact.html?intent=apply" class="btn btn--primary" role="menuitem">Apply</a></div></nav>
 <main id="main-content" class="entry-main" data-phase5r-page="entry" tabindex="-1">
-  <section class="entry-hero" data-phase5r-section="entry-hero" aria-labelledby="home-title">
-    <div class="container entry-hero__inner">
-      <p class="entry-eyebrow">A governed AI workforce for sharp operators</p>
-      <h1 id="home-title" data-clarity="outcome">Carry more of the company without carrying every function alone.</h1>
-      <p class="entry-hero__sub"><span data-clarity="difference">ProductBeacon puts a coordinated workforce of role-based specialists behind the person accountable for the outcome.</span> <span data-clarity="choice">Operate it yourself, learn the system with support, or have ProductBeacon carry the work.</span></p>
-      <div class="hero-cta-row">
-        <a href="#find-my-route" class="btn btn--primary btn--lg" data-cta-surface="hero" data-cta-role="primary">Find my route</a>
-        <a href="/internal/fill-the-rooms-review/workforce.html" class="btn btn--outline btn--lg" data-cta-surface="hero" data-cta-role="secondary">See how the workforce works</a>
-      </div>
-      <div class="hero-evidence" aria-label="What makes the workforce different">
-        <span>Role-based specialists</span><span>Consequential decisions stay human-held</span><span>Published method and work you can inspect</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--surface" data-phase5r-section="entry-shift" aria-labelledby="shift-title">
-    <div class="container shift-grid">
-      <div class="shift-story">
-        <p class="entry-eyebrow">Why this is different</p>
-        <h2 id="shift-title">The work crossed functions. The team did not.</h2>
-        <p>The work you are accountable for rarely stays inside one function. Research changes positioning. Positioning changes product choices. Product choices reach finance, operations, risk, data, people, and delivery.</p>
-        <p>ProductBeacon gives that work defined roles, relevant context, methods, review, and memory. The workforce can research, draft, challenge, and produce. The consequential call stays with a named human.</p>
-        <p><a href="/internal/fill-the-rooms-review/workforce.html">See the roles behind the work</a></p>
-      </div>
-      <div class="value-panel" aria-labelledby="value-title">
-        <p class="entry-eyebrow">What changes</p>
-        <h3 id="value-title">One accountable operator can call on the functions the work actually needs.</h3>
-        <p class="text-secondary">Not one assistant trying to be everything. A workforce built around organisational roles, each with its own methods, knowledge, boundaries, and relevant context.</p>
-        <div class="value-grid">
-          <article class="value-card"><h4>Bring the right functions into the work.</h4><p>Call on product, design, marketing, finance, operations, legal and compliance, sales, data, and other roles when the work needs them.</p></article>
-          <article class="value-card"><h4>Keep the consequential calls human-held.</h4><p>The workforce can prepare, challenge, and produce. A named human remains accountable for the decisions that matter.</p></article>
-          <article class="value-card"><h4>Review work you can inspect.</h4><p>Defined roles use methods, knowledge, boundaries, and visible review evidence, so you can examine how the work was prepared and checked.</p></article>
-          <article class="value-card"><h4>Carry relevant context forward.</h4><p>Documents, decisions, assumptions, feedback, and learnings can be recalled for the specialist doing the next job.</p></article>
-        </div>
-        <p style="margin-top:var(--space-5);"><a href="/internal/fill-the-rooms-review/workforce.html">See the Workforce</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--ink" data-phase5r-section="offer-journeys" aria-labelledby="journeys-title">
-    <div class="container">
-      <div class="journey-intro"><div><p class="entry-eyebrow">One practice. Four ways to use it.</p><h2 id="journeys-title">Inspect it. Learn it. Run it. Or hand ProductBeacon the work.</h2></div><p>ProductBeacon is open enough to inspect before you buy and flexible enough to meet you at the operating relationship you want.</p></div>
-      <div class="journey-stack">
-        <article class="journey-card" data-offer-journey="inspect-method">
-          <div class="journey-card__rail"><span class="journey-card__number">1</span><span class="journey-card__label">Inspect</span></div>
-          <div><h3>Inspect the method</h3><p class="journey-card__body" data-journey-part="value">Read the thinking, see the open implementation, and judge published work before you choose a paid route.</p>
-            <div class="journey-visual artifact-shelf" data-journey-visual="published-library" aria-label="Preview of ProductBeacon's published foundations"><span class="artifact-preview"><small>Book</small><strong>Vision to Value</strong></span><span class="artifact-preview"><small>Standard</small><strong>Decision Provenance</strong></span><span class="artifact-preview"><small>Reports</small><strong>Two market editions</strong></span><span class="artifact-preview"><small>Open source</small><strong>Product Org OS</strong></span></div>
-            <ul class="offer-list" data-journey-part="offers"><li><span class="offer-name">Vision to Value (the book)</span><span class="offer-meta">Free</span></li><li><span class="offer-name">The Decision Provenance Standard</span><span class="offer-meta">Free</span></li><li><span class="offer-name">Both published market reports</span><span class="offer-meta">Free</span></li><li><span class="offer-name">Product Org OS, open source</span><span class="offer-meta">Free</span></li></ul>
-            <div class="journey-actions" data-journey-part="actions"><a href="/vision-to-value/" data-cta-surface="journey-inspect" data-cta-role="primary">Read the book</a><a href="/decision-provenance-standard.html" data-cta-surface="journey-inspect" data-cta-role="secondary">Read the Standard</a><a href="/internal/fill-the-rooms-review/research/" data-cta-surface="journey-inspect" data-cta-role="tertiary">Read the research</a><a href="https://github.com/yohayetsion/product-org-os" data-cta-surface="journey-inspect" data-cta-role="tertiary">Inspect Product Org OS</a></div>
-          </div>
-        </article>
-        <article class="journey-card" data-offer-journey="learn-to-operate">
-          <div class="journey-card__rail"><span class="journey-card__number">2</span><span class="journey-card__label">Learn</span></div>
-          <div><h3>Learn to operate</h3><p class="journey-card__body" data-journey-part="value">Learn how the workforce works and bring live questions before or alongside adoption.</p>
-            <div class="journey-visual learning-preview" data-journey-visual="course-and-live-room" aria-label="Recorded course followed by live questions"><div class="lesson-player"><span class="lesson-play" aria-hidden="true">&#9654;</span><span><strong>Recorded course</strong><span>See how the workforce works</span></span></div><div class="live-question"><strong>Live Q&amp;A</strong><span>Bring the question in the room</span></div></div>
-            <ul class="offer-list" data-journey-part="offers"><li><span class="offer-name">The recorded course, how the workforce works</span><span class="offer-meta">Free. Finishing it opens the licence</span></li><li><span class="offer-name">Monthly open Q&amp;A, live</span><span class="offer-meta">Free, anyone</span></li></ul>
-            <div class="journey-actions" data-journey-part="actions"><a href="/internal/fill-the-rooms-review/covering-everything/" data-cta-surface="journey-learn" data-cta-role="primary">Register for the free course</a><a href="/contact.html" data-cta-surface="journey-learn" data-cta-role="secondary">Bring a live question</a></div>
-          </div>
-        </article>
-        <article class="journey-card" data-offer-journey="run-workforce">
-          <div class="journey-card__rail"><span class="journey-card__number">3</span><span class="journey-card__label">Operate</span></div>
-          <div><h3>Run the workforce</h3><p class="journey-card__body" data-journey-part="value">Keep the operator seat while the workforce supports the work you direct.</p>
-            <div class="journey-visual run-preview" data-journey-visual="operator-loop" aria-label="Operator directs a governed workforce through brief, specialist work, review, and decision"><span class="visual-node visual-node--human">Your brief</span><span class="visual-arrow" aria-hidden="true">&#8594;</span><span class="visual-node">Specialist roles</span><span class="visual-arrow" aria-hidden="true">&#8594;</span><span class="visual-node">Review</span><span class="visual-arrow" aria-hidden="true">&#8594;</span><span class="visual-node visual-node--human">Your decision</span></div>
-            <ul class="offer-list" data-journey-part="offers"><li><span class="offer-name">The licence, all 15 teams</span><span class="offer-meta">$200 / month, first month free, compute excluded</span></li><li id="intensive"><span class="offer-name">Operator Intensive, live, about 12 seats</span><span class="offer-meta">$600, founding cohort</span></li><li><span class="offer-name">The Room, monthly</span><span class="offer-meta">Included, after the Intensive or with a licence</span></li></ul>
-            <div class="journey-actions" data-journey-part="actions"><a href="/internal/fill-the-rooms-review/covering-everything/" data-cta-surface="journey-run" data-cta-role="primary">See the licence route</a><a href="/contact.html?intent=apply" data-cta-surface="journey-run" data-cta-role="secondary">Apply for the Operator Intensive</a><a href="/contact.html?intent=apply" data-cta-surface="journey-run" data-cta-role="tertiary">Ask about The Room</a></div>
-          </div>
-        </article>
-        <article class="journey-card" data-offer-journey="delegate-work">
-          <div class="journey-card__rail"><span class="journey-card__number">4</span><span class="journey-card__label">Delegate</span></div>
-          <div><h3>Have ProductBeacon carry the work</h3><p class="journey-card__body" data-journey-part="value">Use ProductBeacon when you want the work or leadership capacity carried for you.</p>
-            <div class="journey-visual delegate-preview" data-journey-visual="managed-workforce" aria-label="Your brief moves through ProductBeacon's coordinated workforce and returns as reviewed work"><span class="visual-node visual-node--human">Your brief</span><span class="visual-arrow" aria-hidden="true">&#8594;</span><span class="workforce-cluster"><span>Product</span><span>Research</span><span>Design</span><span>Finance</span><span>Risk</span><span>Delivery</span></span><span class="visual-arrow" aria-hidden="true">&#8594;</span><span class="visual-node visual-node--human">Reviewed output</span></div>
-            <ul class="offer-list" data-journey-part="offers"><li><span class="offer-name">Commissioned market report</span><span class="offer-meta">$3,500, introductory</span></li><li><span class="offer-name">On Call</span><span class="offer-meta">$10,000 to $15,000 / month</span></li><li><span class="offer-name">Fractional</span><span class="offer-meta">$15,000 to $25,000 / month</span></li></ul>
-            <div class="journey-actions" data-journey-part="actions"><a href="/contact.html" data-cta-surface="journey-delegate" data-cta-role="primary">Commission a market report</a><a href="/internal/fill-the-rooms-review/on-call.html" data-cta-surface="journey-delegate" data-cta-role="secondary">See On Call</a><a href="/internal/fill-the-rooms-review/on-call.html" data-cta-surface="journey-delegate" data-cta-role="tertiary">See Fractional</a></div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--surface" data-phase5r-section="entry-proof" aria-labelledby="proof-title">
-    <div class="container">
-      <p class="entry-eyebrow">Proof you can inspect</p><h2 id="proof-title">Read the method. Inspect the system. Read the work.</h2><p class="entry-lede">The foundations are published. The implementation is open source. Two complete market reports are free to read in full.</p>
-      <div class="proof-grid">
-        <article class="proof-card" data-proof-kind="published-method"><span class="proof-card__label">Published method</span><div class="proof-card__visual proof-card__visual--system" data-proof-visual="vision-to-value-system"><img src="/vision-to-value/figures/01-v2v-system.svg" alt="Vision to Value system diagram"></div><h3>Vision to Value</h3><p>The book behind ProductBeacon's approach to product organisations, decisions, and value.</p><a href="/vision-to-value/">Read Vision to Value</a></article>
-        <article class="proof-card" data-proof-kind="published-standard"><span class="proof-card__label">Published standard</span><div class="proof-card__visual standard-preview" data-proof-visual="decision-provenance-chain" aria-label="Decision provenance from evidence to human attestation"><span>Evidence</span><b aria-hidden="true">&#8594;</b><span>Human attestation</span></div><h3>The Decision Provenance Standard</h3><p>The standard for keeping consequential decisions affirmable, auditable, and human-held.</p><a href="/decision-provenance-standard.html">Read the Standard</a></article>
-        <article class="proof-card" data-proof-kind="open-system"><span class="proof-card__label">Open-source implementation</span><div class="proof-card__visual repo-preview" data-proof-visual="product-org-os-repository" aria-label="Preview of the open Product Org OS structure"><span>/agents</span><span>/skills</span><span>/decision-records</span></div><h3>Product Org OS</h3><p>The open-source implementation of a product organisation as role-based agents and skills.</p><a href="https://github.com/yohayetsion/product-org-os">Inspect Product Org OS</a></article>
-        <article class="proof-card" data-proof-kind="published-output"><span class="proof-card__label">Published work</span><div class="proof-card__visual" data-proof-visual="market-report-covers"><img src="/research/og/report-digest.png" alt="Preview of ProductBeacon's published market research"></div><h3>Two complete market reports</h3><p>State of Cyber Security Markets 2026 and State of Workforce Engagement Management 2026.</p><a href="/internal/fill-the-rooms-review/research/">Read the reports</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--ink" id="find-my-route" data-phase5r-section="buyer-router" aria-labelledby="router-title">
-    <div class="container" id="path">
-      <p class="entry-eyebrow">Find the right route</p><h2 id="router-title">Start with what you want to own.</h2><p class="entry-lede">Your title does not decide the route. The responsibility you want to carry does.</p>
-      <div class="router-shell">
-        <fieldset data-router-step="1"><legend>What do you want to own?</legend><div class="router-modes">
-          <button class="route-mode" type="button" data-route-mode="operate" aria-controls="route-operate-options" aria-expanded="false"><strong>I want to operate the workforce</strong><span>I want to direct the work, review what comes back, and keep the operator seat.</span></button>
-          <a class="route-mode" href="/internal/fill-the-rooms-review/on-call.html" data-route-direct="delegate" data-route-choice="productbeacon-carries-work"><strong>I want ProductBeacon to carry the work</strong><span>I want the output or leadership capacity without operating the workforce myself.</span><span class="route-orientation">See On Call &amp; Fractional</span></a>
-        </div></fieldset>
-        <div class="route-panel" id="route-operate-options" data-router-step="2" data-route-panel="operate" hidden><h3>Where does the responsibility sit?</h3><div class="route-grid" style="margin-top:var(--space-4);">
-          <article class="route-card"><h3>I lead product inside a company</h3><p>For salaried product leaders, product department heads, and the only product person.</p><p class="route-orientation">Start with the free Product Org OS route.</p><a href="/internal/fill-the-rooms-review/only-product-person/" data-route-choice="product-inside-company">See my product route</a></article>
-          <article class="route-card"><h3>I carry several functions or clients</h3><p>For founders, operators, solo executives, fractional leaders, and services owners.</p><p class="route-orientation">Start with the free course and the wider workforce route.</p><a href="/internal/fill-the-rooms-review/covering-everything/" data-route-choice="several-functions-or-clients">See my operator route</a></article>
-        </div></div>
-        <div class="router-status" data-router-status role="status" aria-live="polite"></div>
-        <noscript><h3>Choose the route that sounds most like your work.</h3><div class="route-grid" style="margin-top:var(--space-5);"><article class="route-card"><h3>I lead product inside a company</h3><a href="/internal/fill-the-rooms-review/only-product-person/">See my product route</a></article><article class="route-card"><h3>I carry several functions or clients</h3><a href="/internal/fill-the-rooms-review/covering-everything/">See my operator route</a></article><article class="route-card"><h3>I want ProductBeacon to carry the work</h3><a href="/internal/fill-the-rooms-review/on-call.html">See On Call &amp; Fractional</a></article></div></noscript>
-      </div>
-      <div style="margin-top:var(--space-16);"><p class="entry-eyebrow">Common questions</p><h2>Choose the relationship before the offer.</h2><div class="faq-grid">
-        <details><summary>Can I inspect it before I pay for anything?</summary><p>Yes. Vision to Value, the Standard, both market reports, and Product Org OS are free. Start with the method, the open implementation, or a complete report.</p></details>
-        <details><summary>Do I have to operate the workforce myself?</summary><p>No. You can learn and operate it yourself, or use On Call and Fractional when you want ProductBeacon to carry the work.</p></details>
-        <details><summary>Which route fits a fractional leader?</summary><p>Choose by the work you want to own. If you want to operate the workforce across client work, choose “I carry several functions or clients.” If you want ProductBeacon to carry the work, choose On Call &amp; Fractional.</p></details>
-        <details><summary>Who makes the consequential decisions?</summary><p>A named human does. The workforce can research, draft, challenge, and produce. Consequential decisions remain human-held.</p></details>
-      </div></div>
-    </div>
-  </section>
-
-  <section class="section section--accent entry-final" data-phase5r-section="entry-final-route" aria-labelledby="final-route-title">
-    <div class="container"><p class="entry-eyebrow">Choose your route</p><h2 id="final-route-title">Run the capability, or have ProductBeacon carry it.</h2><p>Choose the responsibility you want to own. The next page gives you the detail for that route.</p><div class="hero-cta-row"><a class="btn btn--primary btn--lg" href="#find-my-route" data-cta-surface="final-route" data-cta-role="primary">Find my route</a><a class="btn btn--outline btn--lg" href="/internal/fill-the-rooms-review/on-call.html" data-cta-surface="final-route" data-cta-role="secondary">See On Call &amp; Fractional</a></div></div>
-  </section>
-</main>
-<footer class="footer entry-footer">
-  <div class="container">
-    <div class="entry-footer__inner">
-      <a href="/internal/fill-the-rooms-review/" class="nav__logo" aria-label="ProductBeacon home"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span class="nav__logo-text">Product<strong>Beacon</strong></span></a>
-      <div class="entry-footer__links"><a href="/internal/fill-the-rooms-review/on-call.html">On Call &amp; Fractional</a><a href="/decision-provenance-standard.html">The Standard</a><a href="/vision-to-value/">Vision to Value (the book)</a></div>
-    </div>
-    <div class="footer__bottom"><span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span><div class="footer__social"><a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div>
-  </div>
-</footer>
-<script>
+<span id="path" aria-hidden="true"></span>
+<section class="leadership-hero" data-phase5r-section="leadership-hero" aria-labelledby="home-title"><div class="container hero-layout"><div><p class="eyebrow">ProductBeacon</p><h1 id="home-title">Product Leadership, At Scale.</h1><p class="hero-support">Lead the decisions, work, and learning from strategic intent to delivered value. ProductBeacon combines a published product-leadership blueprint, a governed AI workforce, and experienced human leadership so the person accountable for the outcome can hold the whole loop.</p><div class="action-row"><a href="#ways-to-use" class="btn btn--primary btn--lg">Choose how to use it</a><a href="/internal/fill-the-rooms-review/workforce.html" class="btn btn--outline btn--lg">See the Workforce</a></div></div><aside class="system-preview" aria-label="ProductBeacon system preview"><span class="system-preview__label">One product-leadership system</span><div class="system-preview__nodes"><span>Vision to Value blueprint</span><span>Human-held decision bridge</span><span>Governed professional workforce</span><span>Durable organisational context</span></div><p class="system-preview__human">One named human remains accountable.</p></aside><div class="evidence-band" aria-label="ProductBeacon evidence"><span>One value loop, held end to end</span><span>Professional roles, not generic task agents</span><span>Consequential decisions stay human-held</span></div></div></section>
+<section class="section section--surface" data-phase5r-section="leadership-stakes" aria-labelledby="stakes-title"><div class="container stakes-layout"><div class="stakes-copy"><p class="eyebrow">The work of product leadership</p><h2 id="stakes-title">The roadmap is only one part of the job.</h2><p>The decisions that turn vision into value cross research, product, design, technology, go-to-market, finance, operations, people, risk, and delivery.</p><p>When the context fragments, decisions get remade, handoffs lose the intent, and accountability stops before the outcome. ProductBeacon keeps one named human at the centre while giving that person the methods, roles, evidence, and organisational memory to hold the whole loop.</p></div><div class="function-orbit" aria-label="Functions connected around one accountable human"><span>Research</span><span>Product</span><span>Design</span><span>Technology</span><strong>Named human<br>accountable</strong><span>Go-to-market</span><span>Finance</span><span>Operations</span><span>Risk &amp; delivery</span></div></div></section>
+<section class="section section--ink" data-phase5r-section="value-loop-blueprint" aria-labelledby="loop-title"><div class="container loop-layout"><div><p class="eyebrow">The blueprint</p><h2 id="loop-title">One value loop, from vision to realised value.</h2><p class="lede">Vision to Value is ProductBeacon's blueprint for product leadership. It treats Product as the custodian of how the company makes product decisions and the owner of carrying those decisions through execution, outcomes, and learning.</p><p style="margin-top:var(--space-6)"><a href="/vision-to-value/">Read Vision to Value</a></p><aside class="human-inset"><h3>Product holds the whole loop.</h3><p>The workforce can research, prepare, challenge, and produce. The named product leader remains accountable for the consequential decisions and for carrying them to value.</p></aside></div><figure><ol class="loop-track"><li>Strategic Foundation</li><li>Strategic Decisions</li><li>Strategic Commitments</li><li>Coordinated Execution</li><li>Business &amp; Customer Outcomes</li><li>Learning &amp; Adaptation</li></ol><figcaption class="loop-return">What the organisation learns informs the next strategic foundation.</figcaption></figure></div></section>
+<section class="section section--surface" data-phase5r-section="system-map" aria-labelledby="system-title"><div class="container"><header class="section-head"><p class="eyebrow">How the system fits together</p><h2 id="system-title">One promise. Four connected layers.</h2><p class="lede">Each part does a different job. Together they turn product leadership from a collection of handoffs into a governed operating system.</p></header><figure class="system-figure"><div class="system-band" data-system-layer="blueprint"><span class="system-band__label">BLUEPRINT</span><h3>Vision to Value</h3><p>Defines Product as custodian of the company decision system and owner of the end-to-end value loop.</p><a href="/vision-to-value/">Read the blueprint</a></div><div class="system-band decision-band" data-system-layer="decision-infrastructure" data-human-decision-seam><span class="system-band__label">HUMAN DECISION BRIDGE</span><h3>The Decision Provenance Standard</h3><p>Keeps AI-supported decisions tied to a named human through records that can be affirmed, audited, and resumed.</p><a href="/decision-provenance-standard.html">Read the Standard</a></div><div class="system-band" data-system-layer="workforce-editions"><span class="system-band__label">WORKFORCE EDITIONS</span><div class="edition-grid"><div class="edition" data-workforce-edition="one-product-team"><span class="system-band__label">ONE PRODUCT TEAM</span><h3>Product Org OS</h3><p>The free, open-source way to run one AI Product team on the same governed harness.</p><a href="https://github.com/yohayetsion/product-org-os">Run Product Org OS free</a></div><span class="edition-arrow" aria-hidden="true">&#8594;</span><div class="edition" data-workforce-edition="full-enterprise"><span class="system-band__label">THE WIDER ORGANISATION</span><h3>The ProductBeacon AI Workforce</h3><p>Extends the harness across enterprise professions. Each role brings an identity, role-specific skills, professional knowledge, relevant context, and clear boundaries.</p><a href="/internal/fill-the-rooms-review/workforce.html">See the full Workforce</a></div></div></div><div class="system-band" data-system-layer="operating-foundation"><span class="system-band__label">SHARED OPERATING FOUNDATION</span><h3>The same governed foundation beneath both editions.</h3><div class="foundation-list"><span>Full Harness</span><span>Loop and Learn</span><span>Distributed Company Brain</span></div></div><figcaption>The book is the architecture. The Standard is the bridge. Product Org OS is one Product team. The full Workforce carries work across the company.</figcaption></figure></div></section>
+<section class="section section--ink" id="ways-to-use" data-phase5r-section="ways-to-use" aria-labelledby="use-title"><div class="container"><header class="section-head"><p class="eyebrow">Choose the responsibility</p><h2 id="use-title">Use the system at the level you want to own.</h2><p class="lede">Start with one Product team, extend the workforce across the company, or ask ProductBeacon to carry the outcome with you.</p></header><div class="use-grid"><article class="use-card"><span class="use-card__label">ONE PRODUCT TEAM</span><h3>Run one Product team.</h3><p>Start with Product Org OS: a free, open-source AI Product organisation on the same governed harness. It fits product leaders who want the method and workforce in their own work.</p><div class="use-card__actions"><a href="/internal/fill-the-rooms-review/only-product-person/">See the Product team route</a><a href="https://github.com/yohayetsion/product-org-os">Open Product Org OS</a></div></article><article class="use-card" id="intensive"><span class="use-card__label">THE WIDER WORKFORCE</span><h3>Extend beyond Product.</h3><p>Bring in the professions the work needs across design, marketing, finance, operations, legal and compliance, sales, data, people, technology, and executive leadership.</p><div class="use-card__actions"><a href="/internal/fill-the-rooms-review/covering-everything/">See the wider workforce route</a><a href="/internal/fill-the-rooms-review/workforce.html">See the full Workforce</a></div></article><article class="use-card"><span class="use-card__label">PRODUCTBEACON OPERATED</span><h3>Have ProductBeacon carry the outcome.</h3><p>Use ProductBeacon when you want commissioned work or product leadership capacity carried for you, with the workforce behind it and a human leader accountable for the engagement.</p><div class="use-card__actions"><a href="/internal/fill-the-rooms-review/on-call.html">See On Call &amp; Fractional</a><a href="/contact.html">Commission a market report</a></div></article></div></div></section>
+<section class="section section--surface" data-phase5r-section="workforce-proof" aria-labelledby="proof-title"><div class="container"><header class="section-head"><p class="eyebrow">Finished workforce work</p><h2 id="proof-title">See what the workforce can deliver.</h2><p class="lede">These are completed research deliveries produced by the ProductBeacon AI Workforce, not feature demos or sample fragments. Read the full work, inspect the supporting method, then decide whether you want the workforce in your own operation or ProductBeacon to carry the next report.</p></header><div class="proof-layout"><div><article class="report-proof" data-proof-kind="workforce-delivery"><div class="artifact-frame"><img src="/research/og/landing.png" alt="Cover of the State of Cyber Security Markets 2026 report"></div><div class="report-proof__copy"><span>Produced by the workforce</span><h3>State of Cyber Security Markets 2026</h3><p>A complete ProductBeacon market report, published for you to read in full.</p><a href="/research/state-of-cyber-2026/">Read the cyber security report</a></div></article><article class="report-proof" data-proof-kind="workforce-delivery"><div class="artifact-frame"><img src="/research/state-of-wfo-2026/og/landing.png" alt="Cover of the State of Workforce Engagement Management 2026 report"></div><div class="report-proof__copy"><span>Produced by the workforce</span><h3>State of Workforce Engagement Management 2026</h3><p>A complete ProductBeacon market report, published for you to read in full.</p><a href="/research/state-of-wfo-2026/">Read the workforce report</a></div></article></div><aside class="proof-aside"><h3>Finished work, open to inspection.</h3><p>Market reports prove finished delivery. They are not a promise of a customer outcome. You can read the work and its supporting method before choosing a route.</p><a href="/internal/fill-the-rooms-review/research/">Browse ProductBeacon Research</a><a href="/contact.html">Commission a market report</a></aside></div><nav class="evidence-rail" aria-label="ProductBeacon system evidence"><a href="/vision-to-value/">Vision to Value</a><a href="/decision-provenance-standard.html">The Decision Provenance Standard</a><a href="https://github.com/yohayetsion/product-org-os">Product Org OS</a></nav></div></section>
+<section class="section section--ink" id="choose-your-route" data-phase5r-section="responsibility-routes" aria-labelledby="route-title"><div class="container"><header class="section-head"><p class="eyebrow">Where does your responsibility sit?</p><h2 id="route-title">Choose the door that sounds like your work.</h2><p class="lede">Start with the responsibility you carry now. The next page gives you the detail for that route.</p></header><div class="door-grid"><a class="route-surface route-card" data-route="run-one-product-team" href="/internal/fill-the-rooms-review/only-product-person/"><h3>I lead Product inside a company.</h3><p>For product leaders, product department heads, and the only Product person. Begin with one Product team and grow from there.</p><span class="route-surface__cta">See my Product route</span></a><a class="route-surface route-card" data-route="extend-across-the-enterprise" href="/internal/fill-the-rooms-review/covering-everything/"><h3>I carry several functions or clients.</h3><p>For founders, operators, solo executives, fractional leaders, and services owners. Begin with the wider workforce.</p><span class="route-surface__cta">See my operator route</span></a><a class="route-surface route-card" data-route="productbeacon-carries-the-outcome" href="/internal/fill-the-rooms-review/on-call.html"><h3>I want ProductBeacon to carry the work.</h3><p>For commissioned work or product leadership capacity without operating the workforce yourself.</p><span class="route-surface__cta">See On Call &amp; Fractional</span></a></div></div></section>
+<section class="section section--accent" data-phase5r-section="human-leadership-services" aria-labelledby="close-title"><div class="container human-close"><div><p class="eyebrow">Start with the responsibility</p><h2 id="close-title">Keep the seat, extend the system, or hand us the outcome.</h2><p>Choose the route that matches what you want to own. The next page gives you the detail.</p></div><div class="action-row"><a class="btn btn--primary btn--lg" href="#choose-your-route">Choose my route</a><a class="btn btn--outline btn--lg" href="/internal/fill-the-rooms-review/workforce.html">See the Workforce</a></div></div></section></main>
+<footer class="footer entry-footer"><div class="container"><div class="entry-footer__inner"><a href="/internal/fill-the-rooms-review/" class="nav__logo" aria-label="ProductBeacon home"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav__logo-text">Product<strong>Beacon</strong></span></a><div class="entry-footer__links"><a href="/internal/fill-the-rooms-review/on-call.html">On Call &amp; Fractional</a><a href="/decision-provenance-standard.html">The Standard</a><a href="/vision-to-value/">Vision to Value (the book)</a></div></div><div class="footer__bottom"><span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span><div class="footer__social"><a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div></div></footer><script src="/js/main.js"></script><script id="phase5r-review-only-behavior" data-phase5r-review-anchor-behavior="capture">
 (function(){
   'use strict';
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-route-mode]'));
-  var panels = Array.prototype.slice.call(document.querySelectorAll('[data-route-panel]'));
-  var status = document.querySelector('[data-router-status]');
-  buttons.forEach(function(button){
-    button.addEventListener('click', function(){
-      var mode = button.getAttribute('data-route-mode');
-      buttons.forEach(function(item){ item.setAttribute('aria-expanded', String(item === button)); });
-      panels.forEach(function(panel){ panel.hidden = panel.getAttribute('data-route-panel') !== mode; });
-      if (status) status.textContent = mode === 'operate' ? 'Choose where the responsibility sits.' : 'The On Call and Fractional route is ready.';
-      var active = document.querySelector('[data-route-panel="' + mode + '"]');
-      if (active) active.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
-    });
-  });
-})();
-</script>
-<script src="/js/main.js"></script>
-<script id="phase5r-review-only-behavior">
-(function(){
-  'use strict';
+  function syncReviewChrome() {
+    var banner = document.querySelector('.phase5r-review-banner');
+    if (!banner) return;
+    document.documentElement.style.setProperty('--phase5r-review-banner-height', banner.getBoundingClientRect().height + 'px');
+  }
+  syncReviewChrome();
+  window.addEventListener('resize', syncReviewChrome, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncReviewChrome).observe(document.querySelector('.phase5r-review-banner'));
   document.addEventListener('click', function(event) {
-    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    var link = event.target.closest && event.target.closest('a[href^="#"]');
     if (!link) return;
     var href = link.getAttribute('href');
     var target = href && document.querySelector(href);
@@ -495,8 +146,12 @@
     event.preventDefault();
     event.stopImmediatePropagation();
     if (window.location.hash !== href) window.history.pushState(null, '', href);
-    target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    if (link.classList.contains('skip-link')) target.focus({ preventScroll: true });
+    var fixedChrome = Array.prototype.slice.call(document.querySelectorAll('.phase5r-review-banner, .nav, .section-tabs'))
+      .filter(function(element){ return ['fixed', 'sticky'].indexOf(getComputedStyle(element).position) !== -1; });
+    var chromeBottom = fixedChrome.length ? Math.max.apply(null, fixedChrome.map(function(element){ return element.getBoundingClientRect().bottom; })) : 0;
+    var targetPosition = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - chromeBottom);
+    window.scrollTo({ top: targetPosition, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }, true);
   document.addEventListener('submit', function(event) {
     if (!event.target || event.target.id !== 'course-form') return;
@@ -507,5 +162,4 @@
   }, true);
 })();
 </script>
-</body>
-</html>
+</body></html>

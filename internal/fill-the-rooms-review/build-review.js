@@ -8,8 +8,8 @@ const path = require('path');
 const reviewRoot = __dirname;
 const repoRoot = path.resolve(reviewRoot, '..', '..');
 const prefix = '/internal/fill-the-rooms-review/';
-const buildStamp = '5R-RELOOK-20260830-DR419';
-const sourceCommit = 'fe3b677807b97a59b26edd15b5a3499b6eeb2ffc';
+const buildStamp = '5R-PLAS-CORRECTION-20260830-DR422';
+const sourceCommit = 'a17181c844378beffbafec4e8087b93478750479';
 const robots = '<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">';
 const referrer = '<meta name="referrer" content="no-referrer">';
 
@@ -49,7 +49,8 @@ const routeMap = new Map([
 ]);
 
 const reviewStyle = `<style id="phase5r-review-only-style">
-  body.review-candidate { padding-top: 36px; }
+  :root { --phase5r-review-banner-height: 36px; }
+  body.review-candidate { padding-top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-review-banner {
     position: fixed;
     inset: 0 0 auto 0;
@@ -67,7 +68,7 @@ const reviewStyle = `<style id="phase5r-review-only-style">
     text-align: center;
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
-  body.review-candidate .nav { top: 36px; }
+  body.review-candidate .nav { top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-footer-heading,
   body.review-candidate .footer__bottom > span { color: #94A3B8; }
   body.review-candidate .metric__label,
@@ -83,42 +84,47 @@ const reviewStyle = `<style id="phase5r-review-only-style">
     text-transform: uppercase;
   }
   body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
-  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
-  body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + var(--phase5r-review-banner-height)); }
+  body.review-candidate .skip-link:focus { top: calc(var(--phase5r-review-banner-height) + 16px); }
+  body.review-candidate a.btn,
+  body.review-candidate button.btn { min-height: 44px; }
   body.review-candidate .course-dialog[open] {
-    top: 44px;
+    top: calc(var(--phase5r-review-banner-height) + 8px);
     bottom: auto;
-    max-height: calc(100vh - 52px);
+    max-height: calc(100vh - var(--phase5r-review-banner-height) - 16px);
     margin: 0 auto 8px;
   }
   body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  @media (prefers-reduced-motion: reduce) {
+    body.review-candidate a,
+    body.review-candidate button,
+    body.review-candidate input,
+    body.review-candidate summary { transition: none !important; transform: none !important; scroll-behavior: auto !important; }
+  }
   body.review-candidate #the-work,
   body.review-candidate #the-team,
   body.review-candidate #the-skills,
   body.review-candidate #role-based,
+  body.review-candidate #spawn-lifecycle,
   body.review-candidate #full-harness,
+  body.review-candidate #human-decision-seam,
   body.review-candidate #loop-and-learn,
   body.review-candidate #company-brain,
-  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 90px); }
   @media (max-width: 639px) {
-    body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
-    body.review-candidate .nav { top: 48px; }
-    body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
-    body.review-candidate .skip-link:focus { top: 64px; }
-    body.review-candidate .course-dialog[open] {
-      top: 64px;
-      max-height: calc(100vh - 72px);
-    }
+    body.review-candidate .door-page { padding-top: calc(var(--space-12, 48px) + var(--phase5r-review-banner-height)); }
     body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
     body.review-candidate #the-work,
     body.review-candidate #the-team,
     body.review-candidate #the-skills,
     body.review-candidate #role-based,
+    body.review-candidate #spawn-lifecycle,
     body.review-candidate #full-harness,
+    body.review-candidate #human-decision-seam,
     body.review-candidate #loop-and-learn,
     body.review-candidate #company-brain,
-    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 102px); }
   }
 </style>`;
 
@@ -128,11 +134,19 @@ const reviewBanner = `<aside class="phase5r-review-banner" aria-label="Internal 
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>`;
 
-const reviewBehavior = `<script id="phase5r-review-only-behavior">
+const reviewBehavior = `<script id="phase5r-review-only-behavior" data-phase5r-review-anchor-behavior="capture">
 (function(){
   'use strict';
+  function syncReviewChrome() {
+    var banner = document.querySelector('.phase5r-review-banner');
+    if (!banner) return;
+    document.documentElement.style.setProperty('--phase5r-review-banner-height', banner.getBoundingClientRect().height + 'px');
+  }
+  syncReviewChrome();
+  window.addEventListener('resize', syncReviewChrome, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncReviewChrome).observe(document.querySelector('.phase5r-review-banner'));
   document.addEventListener('click', function(event) {
-    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    var link = event.target.closest && event.target.closest('a[href^="#"]');
     if (!link) return;
     var href = link.getAttribute('href');
     var target = href && document.querySelector(href);
@@ -140,8 +154,12 @@ const reviewBehavior = `<script id="phase5r-review-only-behavior">
     event.preventDefault();
     event.stopImmediatePropagation();
     if (window.location.hash !== href) window.history.pushState(null, '', href);
-    target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    if (link.classList.contains('skip-link')) target.focus({ preventScroll: true });
+    var fixedChrome = Array.prototype.slice.call(document.querySelectorAll('.phase5r-review-banner, .nav, .section-tabs'))
+      .filter(function(element){ return ['fixed', 'sticky'].indexOf(getComputedStyle(element).position) !== -1; });
+    var chromeBottom = fixedChrome.length ? Math.max.apply(null, fixedChrome.map(function(element){ return element.getBoundingClientRect().bottom; })) : 0;
+    var targetPosition = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - chromeBottom);
+    window.scrollTo({ top: targetPosition, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }, true);
   document.addEventListener('submit', function(event) {
     if (!event.target || event.target.id !== 'course-form') return;
@@ -204,8 +222,6 @@ function addReviewDirectives(html, source) {
   const viewport = /<meta name="viewport"[^>]*>/i;
   if (!viewport.test(html)) throw new Error('review source has no viewport meta');
   if (source === 'on-call.html') {
-    html = html.replace('</nav>', '</nav>\n<main id="main-content" tabindex="-1">');
-    html = html.replace(/<footer\b/i, '</main>\n<footer');
     html = html
       .replace(/<h4([^>]*)>Engagement Details<\/h4>/gi, '<h3$1>Engagement Details</h3>');
   }
@@ -228,8 +244,8 @@ function addReviewDirectives(html, source) {
 function buildPage(page) {
   const sourcePath = path.join(repoRoot, page.source);
   let html = fs.readFileSync(sourcePath, 'utf8');
-  if (page.source === 'index.html' && countRelativeAttributes(html) !== 20) {
-    throw new Error(`home relative-link invariant failed: expected 20, got ${countRelativeAttributes(html)}`);
+  if (page.source === 'index.html' && countRelativeAttributes(html) !== 2) {
+    throw new Error(`home relative-link invariant failed: expected 2, got ${countRelativeAttributes(html)}`);
   }
   html = stripTracking(html);
   html = rewriteLinks(html, page.route);
@@ -259,7 +275,7 @@ const hashedPaths = [
 
 const manifest = {
   schema_version: 1,
-  candidate: 'ProductBeacon Fill the Rooms Phase 5R relook',
+  candidate: 'ProductBeacon Product Leadership, At Scale Phase 5R review',
   build_stamp: buildStamp,
   source_commit: sourceCommit,
   review_prefix: prefix,

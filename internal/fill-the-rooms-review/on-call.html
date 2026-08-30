@@ -50,9 +50,15 @@
     background: var(--amber); flex-shrink: 0;
   }
   @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
+  .skip-link { position: fixed; left: var(--space-4); top: var(--space-3); z-index: 1000; transform: translateY(-180%); padding: var(--space-3) var(--space-4); background: var(--amber); color: var(--ink); font-weight: 700; }
+  .skip-link:focus { transform: translateY(0); }
+  .email-action { white-space: normal; overflow-wrap: anywhere; max-width: 100%; text-align: center; }
+  .btn { min-height: 44px; display: inline-flex; align-items: center; }
+  @media (prefers-reduced-motion: reduce) { .skip-link, .btn, a, button { transition: none !important; transform: none !important; scroll-behavior: auto !important; } }
 </style>
 <style id="phase5r-review-only-style">
-  body.review-candidate { padding-top: 36px; }
+  :root { --phase5r-review-banner-height: 36px; }
+  body.review-candidate { padding-top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-review-banner {
     position: fixed;
     inset: 0 0 auto 0;
@@ -70,7 +76,7 @@
     text-align: center;
   }
   body.review-candidate .phase5r-review-banner span:nth-child(2) { font-family: "JetBrains Mono", monospace; }
-  body.review-candidate .nav { top: 36px; }
+  body.review-candidate .nav { top: var(--phase5r-review-banner-height); }
   body.review-candidate .phase5r-footer-heading,
   body.review-candidate .footer__bottom > span { color: #94A3B8; }
   body.review-candidate .metric__label,
@@ -86,51 +92,57 @@
     text-transform: uppercase;
   }
   body.review-candidate .privacy-notice a { text-decoration: underline; text-underline-offset: 2px; }
-  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 36px); }
-  body.review-candidate .skip-link:focus { top: 52px; }
+  body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + var(--phase5r-review-banner-height)); }
+  body.review-candidate .skip-link:focus { top: calc(var(--phase5r-review-banner-height) + 16px); }
+  body.review-candidate a.btn,
+  body.review-candidate button.btn { min-height: 44px; }
   body.review-candidate .course-dialog[open] {
-    top: 44px;
+    top: calc(var(--phase5r-review-banner-height) + 8px);
     bottom: auto;
-    max-height: calc(100vh - 52px);
+    max-height: calc(100vh - var(--phase5r-review-banner-height) - 16px);
     margin: 0 auto 8px;
   }
   body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 60px); }
+  @media (prefers-reduced-motion: reduce) {
+    body.review-candidate a,
+    body.review-candidate button,
+    body.review-candidate input,
+    body.review-candidate summary { transition: none !important; transform: none !important; scroll-behavior: auto !important; }
+  }
   body.review-candidate #the-work,
   body.review-candidate #the-team,
   body.review-candidate #the-skills,
   body.review-candidate #role-based,
+  body.review-candidate #spawn-lifecycle,
   body.review-candidate #full-harness,
+  body.review-candidate #human-decision-seam,
   body.review-candidate #loop-and-learn,
   body.review-candidate #company-brain,
-  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 88px); }
+  body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 90px); }
   @media (max-width: 639px) {
-    body.review-candidate { padding-top: 48px; }
     body.review-candidate .phase5r-review-banner { min-height: 48px; gap: 2px 12px; padding: 6px 10px; flex-wrap: wrap; }
-    body.review-candidate .nav { top: 48px; }
-    body.review-candidate .section-tabs { top: calc(var(--nav-height, 72px) + 48px); }
-    body.review-candidate .skip-link:focus { top: 64px; }
-    body.review-candidate .course-dialog[open] {
-      top: 64px;
-      max-height: calc(100vh - 72px);
-    }
+    body.review-candidate .door-page { padding-top: calc(var(--space-12, 48px) + var(--phase5r-review-banner-height)); }
     body.review-candidate .entry-main section { scroll-margin-top: calc(var(--nav-height, 72px) + 72px); }
     body.review-candidate #the-work,
     body.review-candidate #the-team,
     body.review-candidate #the-skills,
     body.review-candidate #role-based,
+    body.review-candidate #spawn-lifecycle,
     body.review-candidate #full-harness,
+    body.review-candidate #human-decision-seam,
     body.review-candidate #loop-and-learn,
     body.review-candidate #company-brain,
-    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 100px); }
+    body.review-candidate .function-block { scroll-margin-top: calc(var(--nav-height, 72px) + 102px); }
   }
 </style>
 </head>
 <body class="review-candidate">
 <aside class="phase5r-review-banner" aria-label="Internal review status">
   <span>Internal review candidate</span>
-  <span>Build 5R-RELOOK-20260830-DR419</span>
+  <span>Build 5R-PLAS-CORRECTION-20260830-DR422</span>
   <span>Unlisted and crawl-blocked, not private.</span>
 </aside>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ====== NAV ====== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -170,6 +182,7 @@
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Apply</a>
   </div>
 </nav>
+
 <main id="main-content" tabindex="-1">
 
 <!-- ====== HERO ====== -->
@@ -346,13 +359,13 @@
       <a href="/contact.html?intent=on-call" class="btn btn--primary btn--lg">Start with On Call</a>
       <a href="/internal/fill-the-rooms-review/#intensive" class="btn btn--ghost btn--lg">See the Operator Intensive</a>
     </div>
-    <p class="fade-in" style="margin-top:16px;"><a href="mailto:yohay@productbeacon.agency" class="btn btn--ghost">Prefer email? yohay@productbeacon.agency</a></p>
+    <p class="fade-in" style="margin-top:16px;"><a href="mailto:yohay@productbeacon.agency" class="btn btn--ghost email-action">Prefer email? yohay@productbeacon.agency</a></p>
   </div>
 </section>
 
+</main>
 <!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
 <!-- ====== FOOTER ====== -->
-</main>
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -395,11 +408,19 @@
 </footer>
 
 <script src="/js/main.js"></script>
-<script id="phase5r-review-only-behavior">
+<script id="phase5r-review-only-behavior" data-phase5r-review-anchor-behavior="capture">
 (function(){
   'use strict';
+  function syncReviewChrome() {
+    var banner = document.querySelector('.phase5r-review-banner');
+    if (!banner) return;
+    document.documentElement.style.setProperty('--phase5r-review-banner-height', banner.getBoundingClientRect().height + 'px');
+  }
+  syncReviewChrome();
+  window.addEventListener('resize', syncReviewChrome, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncReviewChrome).observe(document.querySelector('.phase5r-review-banner'));
   document.addEventListener('click', function(event) {
-    var link = event.target.closest && event.target.closest('a.skip-link[href^="#"]');
+    var link = event.target.closest && event.target.closest('a[href^="#"]');
     if (!link) return;
     var href = link.getAttribute('href');
     var target = href && document.querySelector(href);
@@ -407,8 +428,12 @@
     event.preventDefault();
     event.stopImmediatePropagation();
     if (window.location.hash !== href) window.history.pushState(null, '', href);
-    target.focus({ preventScroll: true });
-    target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    if (link.classList.contains('skip-link')) target.focus({ preventScroll: true });
+    var fixedChrome = Array.prototype.slice.call(document.querySelectorAll('.phase5r-review-banner, .nav, .section-tabs'))
+      .filter(function(element){ return ['fixed', 'sticky'].indexOf(getComputedStyle(element).position) !== -1; });
+    var chromeBottom = fixedChrome.length ? Math.max.apply(null, fixedChrome.map(function(element){ return element.getBoundingClientRect().bottom; })) : 0;
+    var targetPosition = Math.max(0, target.getBoundingClientRect().top + window.pageYOffset - chromeBottom);
+    window.scrollTo({ top: targetPosition, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   }, true);
   document.addEventListener('submit', function(event) {
     if (!event.target || event.target.id !== 'course-form') return;

@@ -27,6 +27,15 @@ function visibleText(html) {
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
+function normalizedText(html) {
+  return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function sectionByMarker(html, attribute, value) {
+  const escaped = value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return (html.match(new RegExp(`<section\\b[^>]*${attribute}="${escaped}"[^>]*>[\\s\\S]*?<\\/section>`)) || [''])[0];
+}
+
 function check(condition, label, detail) {
   if (condition) passes.push(label);
   else failures.push(detail ? `${label}: ${detail}` : label);
@@ -51,12 +60,11 @@ function checkHash(filePath, expected, label) {
 }
 
 const frozenInputs = [
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-implementation-plan-2026-08-30.md', '997f568feb4106acd04c2d825569f5aa5a3aebdff297f2afd61761686d05676c', 'frozen relook plan hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-entry-copy-contract-2026-08-30.md', 'dc195613d3b5c93aa2155076d9fc46fbe3bbebf0753a6222f5f79638d60186d9', 'frozen entry copy contract hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-workforce-copy-contract-2026-08-30.md', 'b242517a5dddc4dd762ff5bb8ee0bc8afb048c49c05ee308b7a558300c6e6c70', 'frozen Workforce copy contract hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-relook-cro-acceptance-spec-2026-08-30.md', '9926f5444583a6ec181e4c58848329b25339dc152a99a215a980795f9587ccdb', 'frozen CRO acceptance spec hash'],
-  ['G:/My Drive/Claude/context/decisions/2026/DR-2026-419-phase-5r-value-led-concourse-and-workforce-harness-story.md', 'd95a707eb6ba943e81494efea4b8cea49f5999f6634a679d003f5cef5ccf7192', 'frozen DR-2026-419 hash'],
-  ['G:/My Drive/Claude/ProductBeacon/Marketing/messaging-positioning-2026-08-26.md', '316aaff00117863c9b8c51c2fb54ef260d5c99ec5e274f628cce63babd07fff0', 'frozen preserved-door copy contract hash']
+  ['G:/My Drive/Claude/context/decisions/2026/DR-2026-422-productbeacon-product-leadership-at-scale-system-hierarchy.md', '5678d7490c9a5b59a7957941cde865b7c6e4c1f5609b0d68488da269910c585e', 'frozen DR-2026-422 hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-design-2026-08-30.md', 'f64fa1061d745a1abcac527d10fdd04ecf287d87aecb4a2c39a463d36cc1e069', 'frozen Product Leadership design hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-copy-contract-2026-08-30.md', '86ad001d1897a7082c9c6f7c3614bff34cfe8d94f73ff60368b58e30f2925f99', 'frozen Product Leadership copy contract hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-design-handoff-2026-08-30.md', '67bdcd16ab16fad2a2990b4e6f0c88b7797c022e22d49cd63d7d5421baf8de7d', 'frozen Product Leadership design handoff hash'],
+  ['G:/My Drive/Claude/ProductBeacon/Marketing/phase5r/relook/phase5r-product-leadership-at-scale-implementation-plan-2026-08-30.md', '41e1bad9c7a64baeefa9a546883dbe2226fd1440e625b4a6726d6b3b7b337ead', 'frozen Product Leadership implementation plan hash']
 ];
 frozenInputs.forEach(([filePath, expected, label]) => checkHash(filePath, expected, label));
 
@@ -86,44 +94,59 @@ function strictlyIncreasing(values) {
   return values.every((value, index) => value !== -1 && (index === 0 || value > values[index - 1]));
 }
 
-const entrySections = ['entry-hero', 'entry-shift', 'offer-journeys', 'entry-proof', 'buyer-router', 'entry-final-route'];
+const entrySections = ['leadership-hero', 'leadership-stakes', 'value-loop-blueprint', 'system-map', 'ways-to-use', 'workforce-proof', 'responsibility-routes', 'human-leadership-services'];
 check(home.includes('<main id="main-content" class="entry-main" data-phase5r-page="entry" tabindex="-1">'), 'entry main marker exact');
 check(entrySections.every(value => count(home, `data-phase5r-section="${value}"`) === 1), 'entry section markers exact once');
 check(strictlyIncreasing(markerPositions(home, 'data-phase5r-section', entrySections)), 'entry section markers ordered');
-check(count(home, 'data-clarity="outcome"') === 1 && count(home, 'data-clarity="difference"') === 1 && count(home, 'data-clarity="choice"') === 1, 'hero clarity markers exact');
-const entryHero = (home.match(/<[^>]+data-phase5r-section="entry-hero"[\s\S]*?<\/section>/) || [''])[0];
+const entryHero = (home.match(/<[^>]+data-phase5r-section="leadership-hero"[\s\S]*?<\/section>/) || [''])[0];
 check(count(entryHero, '<h1') === 1 && count(home, '<h1') === 1, 'entry single H1 inside hero');
 check(!/(\$|\/ month|first month|compute excluded|finish it and the licence opens)/i.test(visibleText(entryHero)), 'entry hero has no price or access-condition tokens');
-check(entryHero.includes('href="#find-my-route"') && entryHero.includes('href="workforce.html"'), 'entry hero primary and Workforce routes');
-check(entryHero.includes('Carry more of the company without carrying every function alone.'), 'entry hero H1 exact');
+check(entryHero.includes('href="#ways-to-use"') && entryHero.includes('href="/workforce.html"'), 'entry hero primary and Workforce routes');
+check(entryHero.includes('Product Leadership, At Scale.'), 'entry hero H1 exact');
 
-const journeys = ['inspect-method', 'learn-to-operate', 'run-workforce', 'delegate-work'];
-check(journeys.every(value => count(home, `data-offer-journey="${value}"`) === 1), 'four offer journeys exact');
-check(count(home, 'data-offer-journey="') === 4, 'four offer journeys only', `found ${count(home, 'data-offer-journey="')}`);
-check(count(home, 'data-journey-part="value"') === 4 && count(home, 'data-journey-part="offers"') === 4 && count(home, 'data-journey-part="actions"') === 4, 'journey value offer action anatomy exact');
-check(count(home, 'data-journey-visual="') === 4, 'four distinct journey visuals');
-check(!home.includes('class="offer-table"') && !home.includes('<caption class="visually-hidden">The whole offer</caption>'), 'old offer table absent');
-const offerLabels = [
-  'Vision to Value', 'Decision Provenance Standard', 'Both published market reports', 'Product Org OS',
-  'The recorded course', 'Monthly open Q&amp;A', 'The licence, all 15 teams', 'Operator Intensive', 'The Room',
-  'Commissioned market report', 'On Call', 'Fractional'
+const systemLayers = ['blueprint', 'decision-infrastructure', 'workforce-editions', 'operating-foundation'];
+check(systemLayers.every(value => count(home, `data-system-layer="${value}"`) === 1), 'four system layers exact once');
+check(count(home, 'data-workforce-edition="one-product-team"') === 1 && count(home, 'data-workforce-edition="full-enterprise"') === 1, 'two workforce editions exact once');
+check(count(home, 'data-human-decision-seam') === 1, 'system map human decision seam exact once');
+const responsibilityRoutes = ['run-one-product-team', 'extend-across-the-enterprise', 'productbeacon-carries-the-outcome'];
+check(responsibilityRoutes.every(value => count(home, `data-route="${value}"`) === 1), 'three responsibility routes exact once');
+check(count(home, 'data-proof-kind="workforce-delivery"') === 2, 'two workforce delivery proof artifacts exact');
+const waysToUse = sectionByMarker(home, 'data-phase5r-section', 'ways-to-use');
+const responsibilitySection = sectionByMarker(home, 'data-phase5r-section', 'responsibility-routes');
+check(Boolean(waysToUse) && count(waysToUse, 'class="use-card"') === 3 && count(waysToUse, 'data-route=') === 0, 'ways-to-use contains only three usage modules');
+check(Boolean(responsibilitySection) && responsibilitySection.includes('id="choose-your-route"') && count(responsibilitySection, 'data-route=') === 3, 'responsibility routes are a separate anchored section');
+const exactRouteCards = [
+  {
+    id: 'run-one-product-team',
+    href: '/only-product-person/',
+    heading: 'I lead Product inside a company.',
+    body: 'For product leaders, product department heads, and the only Product person. Begin with one Product team and grow from there.',
+    cta: 'See my Product route'
+  },
+  {
+    id: 'extend-across-the-enterprise',
+    href: '/covering-everything/',
+    heading: 'I carry several functions or clients.',
+    body: 'For founders, operators, solo executives, fractional leaders, and services owners. Begin with the wider workforce.',
+    cta: 'See my operator route'
+  },
+  {
+    id: 'productbeacon-carries-the-outcome',
+    href: '/on-call.html',
+    heading: 'I want ProductBeacon to carry the work.',
+    body: 'For commissioned work or product leadership capacity without operating the workforce yourself.',
+    cta: 'See On Call &amp; Fractional'
+  }
 ];
-check(offerLabels.every(label => home.includes(label)), 'governed offer breadth present');
-check(count(home, 'id="intensive"') === 1, 'Operator Intensive anchor exact once');
-
-const proofKinds = ['published-method', 'published-standard', 'open-system', 'published-output'];
-check(proofKinds.every(value => count(home, `data-proof-kind="${value}"`) === 1), 'four inspectable proof kinds exact');
-check(count(home, 'data-proof-visual="') === 4 && home.includes('src="/research/og/report-digest.png"'), 'proof uses four visual previews including published report art');
-check(home.indexOf('data-phase5r-section="entry-proof"') < home.indexOf('data-phase5r-section="buyer-router"'), 'proof precedes buyer router');
+for (const route of exactRouteCards) {
+  const card = (responsibilitySection.match(new RegExp(`<a\\b[^>]*data-route="${route.id}"[^>]*>[\\s\\S]*?<\\/a>`)) || [''])[0];
+  check(Boolean(card) && card.includes(`href="${route.href}"`), `route ${route.id} whole-surface link and target exact`);
+  check(Boolean(card) && normalizedText(card) === `${route.heading} ${route.body} ${route.cta}`, `route ${route.id} contains only contracted copy`, normalizedText(card));
+}
+check(/\.route-card:active\s*\{[^}]*transform:\s*none[^}]*border-color:\s*var\(--amber-dim\)/s.test(home), 'responsibility routes define contracted pressed state');
+check(!home.includes('data-offer-journey=') && !home.includes('data-router-step='), 'legacy journey and questionnaire structure absent');
+check(!home.includes('class="offer-table"'), 'old offer table absent');
 check(!/(testimonial|customer-logo|review-score|performance-result)/i.test(entryHero), 'hero contains no invented proof component');
-
-check(count(home, 'data-router-step="1"') === 1 && count(home, 'data-router-step="2"') === 1, 'router has one first step and one conditional second-step panel');
-check(count(home, 'data-route-mode="operate"') === 1 && count(home, 'data-route-direct="delegate"') === 1 && !home.includes('data-route-mode="delegate"'), 'router operate mode and direct delegate route exact');
-check(count(home, 'data-route-choice="product-inside-company"') === 1 && count(home, 'data-route-choice="several-functions-or-clients"') === 1 && count(home, 'data-route-choice="productbeacon-carries-work"') === 1, 'router destinations exact');
-check(home.includes('id="route-operate-options" data-router-step="2" data-route-panel="operate" hidden') && !home.includes('data-route-panel="delegate"'), 'router conditional panel initially hidden');
-check(count(home, '<div class="router-status" data-router-status') === 1 && home.includes('role="status"') && home.includes('aria-live="polite"'), 'router status region present');
-check(home.includes('<noscript><h3>Choose the route that sounds most like your work.</h3>'), 'router no-script heading exact');
-check(home.includes('href="only-product-person/"') && home.includes('href="covering-everything/"') && home.includes('href="on-call.html"'), 'entry final routes use existing destinations');
 check(!sourcePaths.some(file => source[file].includes('$1,000')), '$1,000 absent from visitor copy');
 
 const frozenNavLabels = [
@@ -214,9 +237,9 @@ for (const [file, html] of [['index.html', home], ['only-product-person/index.ht
   check(Boolean(reducedMotion && /transition:\s*none\s*!important/.test(reducedMotion[0]) && /transform:\s*none\s*!important/.test(reducedMotion[0])), `${file} reduced motion removes transitions and transforms`);
 }
 
-const workforceStory = ['role-based-specialists', 'full-harness', 'loop-and-learn', 'distributed-company-brain'];
+const workforceStory = ['role-based-specialists', 'governed-spawn', 'full-harness', 'human-decision-seam', 'loop-and-learn', 'distributed-company-brain'];
 check(/<main\b[^>]*id="main-content"[^>]*data-phase5r-page="workforce"[^>]*>/.test(workforce), 'Workforce main marker exact');
-check(workforceStory.every(value => count(workforce, `data-workforce-story="${value}"`) === 1), 'four Workforce story markers exact once');
+check(workforceStory.every(value => count(workforce, `data-workforce-story="${value}"`) === 1), 'six Workforce story markers exact once');
 check(strictlyIncreasing(markerPositions(workforce, 'data-workforce-story', workforceStory)), 'Workforce story markers ordered');
 check(workforceStory.every(value => workforce.indexOf(`data-workforce-story="${value}"`) < workforce.indexOf('data-workforce-view="team-map"')), 'Workforce story precedes team map');
 check(count(workforce, 'data-workforce-view="team-map"') === 1 && count(workforce, 'data-workforce-view="specialist-roster"') === 1, 'one Workforce team map and one specialist roster');
@@ -224,24 +247,41 @@ check(workforce.indexOf('data-workforce-view="team-map"') < workforce.indexOf('d
 check(!visibleText(workforce).includes('Here is what you ask for, and here is what comes back.'), 'old request-output heading absent');
 check(!visibleText(workforce).includes('From request to deliverable.'), 'old request-to-deliverable heading absent');
 
-const harnessNodes = ['request-context', 'role-methods-knowledge-limits', 'specialist', 'structured-output-evidence'];
-check(harnessNodes.every(value => count(workforce, `data-harness-node="${value}"`) === 1), 'Full Harness nodes exact once');
-check(strictlyIncreasing(markerPositions(workforce, 'data-harness-node', harnessNodes)), 'Full Harness nodes ordered');
+const roleLayers = ['identity', 'remit', 'skills', 'knowledge', 'boundaries'];
+check(roleLayers.every(value => count(workforce, `data-role-layer="${value}"`) === 1), 'five role layers exact once');
+check(count(workforce, 'data-harness-step') === 7, 'seven governed spawn steps exact');
 const loopSteps = ['frame', 'plan', 'execute', 'audit', 'review', 'record'];
 check(loopSteps.every(value => count(workforce, `data-loop-step="${value}"`) === 1), 'Loop and Learn steps exact once');
 check(strictlyIncreasing(markerPositions(workforce, 'data-loop-step', loopSteps)), 'Loop and Learn steps ordered');
 check(count(workforce, 'data-human-gate="frame"') === 1 && count(workforce, 'data-human-gate="review"') === 1, 'Loop and Learn human gates exact');
-const memoryRecords = ['documents', 'decisions', 'bets', 'assumptions', 'learnings', 'feedback'];
+const memoryRecords = ['decisions', 'bets', 'assumptions', 'feedback', 'learnings', 'documents'];
 check(memoryRecords.every(value => count(workforce, `data-memory-record="${value}"`) === 1), 'Distributed Company Brain records exact once');
+check(count(workforce, 'data-human-gate') >= 3 && /Only the named accountable owner can affirm it closed/.test(workforce), 'visible human gates preserved across run, DPS and loop');
 
 const teamMap = (workforce.match(/<[^>]+data-workforce-view="team-map"[\s\S]*?<\/section>/) || [''])[0];
 const roster = (workforce.match(/<[^>]+data-workforce-view="specialist-roster"[\s\S]*?<\/section>/) || [''])[0];
 check(count(teamMap, 'class="org-tile"') === 15, 'Workforce team map has 15 tiles', `found ${count(teamMap, 'class="org-tile"')}`);
 check(count(teamMap, 'class="role-card"') === 0, 'Workforce team map has no role cards');
 check(count(roster, 'class="function-block"') === 15, 'Workforce roster has 15 function blocks', `found ${count(roster, 'class="function-block"')}`);
-check(count(roster, 'class="role-card"') === 96, 'Workforce roster has 96 role cards', `found ${count(roster, 'class="role-card"')}`);
-check(workforce.includes('id="the-skills"') && workforce.includes('id="skills-grid"') && workforce.includes('id="libs-grid"') && count(workforce, 'data-expand-target=') === 2, 'Workforce skills and libraries controls retained');
+check(count(roster, 'class="roster-row"') === 96, 'Workforce roster has 96 specialist rows', `found ${count(roster, 'class="roster-row"')}`);
+const mapIdentity = [...teamMap.matchAll(/<a class="org-tile" href="#([^"]+)"><h3>([\s\S]*?)<\/h3>/g)]
+  .map(match => ({ id: match[1], team: normalizedText(match[2]) }));
+const rosterIdentity = [...roster.matchAll(/<div class="function-block" id="([^"]+)">([\s\S]*?)(?=\s*<div class="function-block" id="|\s*<\/section>)/g)]
+  .map(match => ({
+    id: match[1],
+    team: normalizedText((match[2].match(/<h3>([\s\S]*?)<\/h3>/) || ['', ''])[1]),
+    specialists: [...match[2].matchAll(/<details class="roster-row"><summary><h4>([\s\S]*?)<\/h4>/g)].map(role => normalizedText(role[1]))
+  }));
+const rosterIdentityHash = sha(Buffer.from(JSON.stringify({ map: mapIdentity, roster: rosterIdentity }), 'utf8'));
+check(rosterIdentityHash === 'fe060d5c41c6dad33ff574e262f23adcea9fb26e5c90f44f176ecec25fc01035', 'Workforce ordered team and specialist identity hash exact', rosterIdentityHash);
+check(mapIdentity.every((team, index) => rosterIdentity[index] && team.id === rosterIdentity[index].id && team.team.replace(/\s*Supervised$/, '') === rosterIdentity[index].team.replace(/\s*Available under supervised terms$/, '')), 'Workforce team map and roster identities align in order');
+check(workforce.includes('id="the-skills"') && !workforce.includes('id="skills-grid"') && !workforce.includes('id="libs-grid"'), 'compact depth proof replaces exhaustive catalogue');
 check(/qualified human|qualified professional/i.test(visibleText(workforce)) && /not legal advice/i.test(visibleText(workforce)), 'Workforce supervised-domain boundary retained');
+check(!workforce.includes("'IntersectionObserver' in window || true") && !workforce.includes('[data-expand-target]'), 'dead catalogue controller code absent');
+check(!workforce.includes('style="margin-top:48px"') && !/\.skip-link\s*\{[^}]*padding:\s*12px 18px/s.test(workforce), 'Workforce live spacing literals replaced with tokens');
+const memoryCore = (workforce.match(/<div class="memory-core"[^>]*>([\s\S]*?)<\/div><p class="diagram-caption">/) || ['', ''])[1];
+check(count(memoryCore, 'class="memory-node"') === 4 && count(memoryCore, 'class="route-arrow"') === 3, 'Distributed Company Brain has four stages and three arrows');
+check(/\.memory-core\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s+auto\s+minmax\(0,\s*1fr\)\s+auto\s+minmax\(0,\s*1fr\)\s+auto\s+minmax\(0,\s*1fr\)/s.test(workforce), 'Distributed Company Brain desktop rail declares seven intentional tracks');
 
 const forbiddenClaims = [
   'every request becomes a team', 'router always finds', 'never re-explain your business',
@@ -252,18 +292,35 @@ const forbiddenClaims = [
 const visitorText = `${visibleText(home)} ${visibleText(workforce)}`.toLowerCase();
 check(forbiddenClaims.every(fragment => !visitorText.includes(fragment)), 'forbidden public claim fragments absent');
 
-const workforceMarker = '<!-- Provenance: DR-2026-419; substantive Phase 5R Workforce relook approved by Yohay Etsion 2026-08-30. -->';
-check(count(workforce, workforceMarker) === 1, 'workforce DR-2026-419 provenance marker exact once', `found ${count(workforce, workforceMarker)}`);
+const negativeCopy = [
+  'Inspect Product Org OS',
+  'Inspect it. Learn it. Run it. Or hand ProductBeacon the work.',
+  'Finished in hours instead of weeks',
+  'The middle runs itself',
+  'The model learns from every run',
+  'Every session makes the AI smarter',
+  'The system remembers everything',
+  'Every agent can access the whole company brain',
+  'Every request becomes a team',
+  'The Audit Block proves the answer is correct',
+  'Human review makes errors impossible'
+];
+check(negativeCopy.every(fragment => !visitorText.includes(fragment.toLowerCase())), 'negative-copy manifest absent');
+check(!/(\$\s*[\d,]+|\d+\s*\/\s*month|first month free)/i.test(`${visibleText(home)} ${visibleText(workforce)}`), 'homepage and Workforce narrative contain no prices');
+check(!/(--space-5\b|--space-10\b)/.test(`${home}\n${workforce}`), 'undefined spacing tokens absent from source pages');
+check(!/(href|src|action)="\/internal\//.test(`${home}\n${workforce}`), 'production source has no internal links');
 
-const deepBaselines = {
-  'research/index.html': '7a6100f724b843becfb879fae5a225670df97ba31b7ed266061f9bf79bd7bd19',
-  'on-call.html': 'd31057fdaf8998ca1a7a929395d4045c4dd8c009bdcc7a2d80b2ec112e33131f'
-};
-for (const [file, baseline] of Object.entries(deepBaselines)) {
+const workforceMarker = '<!-- Provenance: DR-2026-422; Product Leadership, At Scale Workforce candidate approved for review by Yohay Etsion 2026-08-30. -->';
+check(count(workforce, workforceMarker) === 1, 'workforce DR-2026-422 provenance marker exact once', `found ${count(workforce, workforceMarker)}`);
+
+for (const file of ['research/index.html', 'on-call.html']) {
   check(count(source[file], marker) === 1, `${file} D8 marker exact once`, `found ${count(source[file], marker)}`);
-  const withoutMarker = source[file].replace(`${marker}\r\n`, '').replace(`${marker}\n`, '').replace(marker, '');
-  check(sha(Buffer.from(withoutMarker, 'utf8')) === baseline, `${file} changed only by marker (plus preserved D39 where applicable)`);
+  check(count(source[file], '<a class="skip-link" href="#main-content">Skip to main content</a>') === 1, `${file} has one source skip link`);
+  check(/<main\b[^>]*id="main-content"[^>]*tabindex="-1"[^>]*>/.test(source[file]), `${file} has focusable main target`);
+  check(/@media\s*\(prefers-reduced-motion:\s*reduce\)\s*\{[\s\S]*?transition:\s*none\s*!important[\s\S]*?transform:\s*none\s*!important/.test(source[file]), `${file} source reduced-motion controls exact`);
 }
+check(/@media\s*\(max-width:\s*639px\)\s*\{[\s\S]*?\.start-here-grid[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/.test(source['research/index.html']), 'Research start-here grids explicitly reflow at 320px');
+check(/\.email-action\s*\{[^}]*white-space:\s*normal[^}]*overflow-wrap:\s*anywhere/s.test(source['on-call.html']), 'On Call email action can wrap inside 320px gutter');
 
 const expectedReviewPages = [
   'index.html',
@@ -277,13 +334,14 @@ const reviewHtml = Object.fromEntries(expectedReviewPages.map(file => [file, rea
 for (const [file, html] of Object.entries(reviewHtml)) {
   check(count(html, robots) === 1, `${file} exact robots meta once`, `found ${count(html, robots)}`);
   check(count(html, referrer) === 1, `${file} exact referrer meta once`, `found ${count(html, referrer)}`);
-  check(html.includes('Internal review candidate') && html.includes('Build 5R-RELOOK-20260830-DR419') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
+  check(html.includes('Internal review candidate') && html.includes('Build 5R-PLAS-CORRECTION-20260830-DR422') && html.includes('Unlisted and crawl-blocked, not private.'), `${file} visible immutable review stamp`);
   check(!/(googletagmanager|\bgtag\s*\(|\bpbTrack\b|\bdataLayer\b|linkedin_partner|snap\.licdn)/i.test(html), `${file} tracking stripped`);
   const attrs = [...html.matchAll(/(?:href|src|action)="([^"]+)"/g)].map(match => match[1]);
   const relative = attrs.filter(value => !value.startsWith('/') && !value.startsWith('#') && !/^[a-z][a-z0-9+.-]*:/i.test(value));
   check(relative.length === 0, `${file} contains no relative same-origin links`, relative.join(', '));
   const escapedInSet = attrs.filter(value => ['/index.html', '/only-product-person/', '/covering-everything/', '/workforce.html', '/research/', '/on-call.html'].some(route => value === route || value.startsWith(`${route}#`) || value.startsWith(`${route}?`)));
   check(escapedInSet.length === 0, `${file} in-set links remain inside review prefix`, escapedInSet.join(', '));
+  check(html.includes('data-phase5r-review-anchor-behavior="capture"'), `${file} review contains capture-phase reduced-motion anchor handling`);
 }
 
 const manifestPath = path.join(reviewRoot, 'manifest.json');
