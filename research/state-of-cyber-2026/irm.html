@@ -1878,9 +1878,14 @@ svg:not(.nav-bar svg) {
 <script>
 (function(){
   'use strict';
+  // The commenting engine needs its popover markup. Several research pages
+  // ship the script without the UI, so it threw on a null element and killed
+  // everything after it. Exit quietly instead.
+  if(!document.getElementById('commentPopover')) return;
+
   var comments=new Map(),activeSection=null,exportFormat='markdown';
   var slides=document.querySelectorAll('.slide'),totalSlides=slides.length;
-  var storageKey='feedback_'+document.title.toLowerCase().replace(/<sup class="fn-ref"><a href="#fn-a-z0-9" id="fnref-a-z0-9">57</a></sup>+/g,'_');
+  var storageKey='feedback_'+document.title.toLowerCase().replace(/[^a-z0-9]+/g,'_');
 
   // Commentable Engine - bind click handlers
   document.querySelectorAll('.commentable').forEach(function(el){el.addEventListener('click',function(e){e.stopPropagation();openPopover(el);});});
@@ -1963,7 +1968,7 @@ svg:not(.nav-bar svg) {
   function getOutput(){return exportFormat==='json'?generateJSON():generateMarkdown();}
 
   window.copyFeedback=function(){navigator.clipboard.writeText(getOutput()).then(function(){showToast('Copied to clipboard');});};
-  window.downloadFeedback=function(){var ext=exportFormat==='json'?'json':'md';var blob=new Blob([getOutput()],{type:exportFormat==='json'?'application/json':'text/markdown'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='feedback-'+document.title.toLowerCase().replace(/<sup class="fn-ref"><a href="#fn-a-z0-9" id="fnref-a-z0-9">57</a></sup>+/g,'-')+'.'+ext;a.click();URL.revokeObjectURL(url);showToast('Downloaded');};
+  window.downloadFeedback=function(){var ext=exportFormat==='json'?'json':'md';var blob=new Blob([getOutput()],{type:exportFormat==='json'?'application/json':'text/markdown'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='feedback-'+document.title.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.'+ext;a.click();URL.revokeObjectURL(url);showToast('Downloaded');};
   window.togglePreview=function(){var p=document.getElementById('outputPreview'),b=document.getElementById('previewToggle');if(p.style.display==='none'){p.style.display='block';b.textContent='Hide preview';updatePreview();}else{p.style.display='none';b.textContent='Show preview';}};
   function updatePreview(){document.getElementById('outputPreview').textContent=getOutput();}
 
