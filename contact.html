@@ -30,9 +30,9 @@
 </script>
 <!-- Page-scoped CSS for the door-intent radio pair (legible, reuses .form-group spacing; shared style.css untouched). -->
 <style>
-  .radio-row { display: flex; flex-direction: column; gap: 10px; }
-  .radio-opt { display: flex; align-items: flex-start; gap: 8px; font-weight: 400; cursor: pointer; }
-  .radio-opt input[type="radio"] { margin-top: 3px; flex-shrink: 0; }
+  .diagnostic-form .radio-row { display: flex; flex-direction: column; gap: 10px; }
+  .diagnostic-form label.radio-opt { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 0; font-weight: 400; cursor: pointer; }
+  .diagnostic-form .radio-opt input[type="radio"] { width: auto; min-height: 0; margin-top: 3px; padding: 0; flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -152,7 +152,7 @@
   <div class="container" style="max-width:640px;">
     <div style="text-align:center; margin-bottom:48px;">
       <p class="eyebrow" style="margin-bottom:16px;">FREE DIAGNOSTIC</p>
-      <h2 style="margin-bottom:16px;">Request a Product Diagnostic</h2>
+      <h2 style="margin-bottom:16px;">Request a Product Strategy Diagnostic</h2>
       <p class="text-lg text-secondary">We will analyze your product's positioning, competitive landscape, and identify strategic opportunities you may be missing. No cost, no commitment.</p>
     </div>
 
@@ -192,7 +192,7 @@
       </div>
       <input type="hidden" name="_subject" value="ProductBeacon Diagnostic Request">
       <input type="hidden" name="intent" id="intent-field" value="">
-      <button type="submit" class="btn btn--primary btn--lg">Request Diagnostic</button>
+      <button type="submit" class="btn btn--primary btn--lg">Request a Product Strategy Diagnostic</button>
     </form>
     <script>
       // Capture which door the lead came through (?intent=apply | on-call) for attribution.
