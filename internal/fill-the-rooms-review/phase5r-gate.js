@@ -371,10 +371,12 @@ const homepageNegativeCopy = [
   'Have ProductBeacon carry the outcome.',
   'Open Product Org OS',
   'one human',
+  'one named human',
   'Read the Ledger'
 ];
 const homepageText = normalizedText(home).toLowerCase();
 check(homepageNegativeCopy.every(fragment => !homepageText.includes(fragment.toLowerCase())), 'homepage-scoped negative copy absent', homepageNegativeCopy.filter(fragment => homepageText.includes(fragment.toLowerCase())).join(' | '));
+check(count(visibleText(home), 'A named human remains accountable.') === 1 && visibleText(home).includes('ProductBeacon keeps a named human at the centre'), 'the homepage says a named human, never one named human');
 check(visibleText(home).includes('You can read the work and its supporting method before you decide.'), 'report aside no longer assumes the routes come after it');
 const homeMain = (home.match(/<main\b[\s\S]*?<\/main>/) || [''])[0];
 const expectedHrefCounts = [
