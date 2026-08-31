@@ -11,3 +11,9 @@ Product/backups/
 _wfo-*-prev-*/
 *.bak-*
 *.bak-updates-*
+
+# Internal strategy documents. These were publicly served from this repo and
+# from GitHub raw until 2026-08-31. They live in the Drive workspace, never here.
+/Product/
+/Marketing/
+/chat.md
