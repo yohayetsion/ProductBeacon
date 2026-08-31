@@ -372,6 +372,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 }
 .featured-card .chapter-links {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-4);
   margin-top: var(--space-2);
   align-items: center;
@@ -465,8 +466,15 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .hero { display: block; align-items: normal; min-height: 0; overflow: visible; position: static; }
 .btn { gap: 0; }
 </style>
+<style id="phase5r-support-route-correction">
+.skip-link{position:fixed;left:var(--sp-2);top:var(--sp-2);z-index:1000;transform:translateY(-180%);padding:var(--sp-2) var(--sp-3);background:var(--amber);color:var(--ink);font-weight:700}.skip-link:focus{transform:translateY(0)}
+.start-here-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px}
+@media(max-width:639px){.start-here-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.skip-link,.btn,a,button{transition:none!important;transform:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- =====================================================================
      SLIM AMBER RIBBON (A-1 §5.1; static on umbrella surface)
@@ -520,7 +528,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <!-- =====================================================================
      HERO (Research-as-publishing-program framing)
      ===================================================================== -->
-<main style="padding-top: var(--nav-height);">
+<main id="main-content" tabindex="-1" style="padding-top: var(--nav-height);">
 <header class="hero">
   <div class="hero-lockup-row">
     <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
@@ -584,7 +592,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--slate-700);">
       <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin:0 0 var(--space-2) 0;">Start here</p>
       <p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--slate-400);margin:0 0 var(--space-4) 0;line-height:1.5;">Eight fronts across two parts, 596 citations, zero vendor sponsors. Two entry artefacts depending on how much time you have.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <div class="start-here-grid">
         <a href="/research/state-of-cyber-2026/pre-call-brief.html" style="display:block;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--slate-700);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
           <div style="font-family:'IBM Plex Serif',serif;font-size:19px;font-weight:500;color:var(--slate-100);margin-bottom:6px;">Pre-Call Briefing Pack</div>
           <div style="font-family:'Inter',sans-serif;font-size:14px;color:var(--slate-400);line-height:1.5;">60-minute pre-read. The load-bearing Pattern Claims and buyer choices across both parts, with the falsifiable tests behind each. Start if you have an analyst call.</div>
@@ -621,7 +629,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--slate-700);">
       <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin:0 0 var(--space-2) 0;">Start here</p>
       <p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--slate-400);margin:0 0 var(--space-4) 0;line-height:1.5;">Five graded markets plus a Convergence synthesis, zero vendor sponsors. Two entry artefacts depending on how much time you have.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <div class="start-here-grid">
         <a href="/research/state-of-wfo-2026/pre-call-brief.html" style="display:block;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--slate-700);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
           <div style="font-family:'IBM Plex Serif',serif;font-size:19px;font-weight:500;color:var(--slate-100);margin-bottom:6px;">Pre-Call Briefing Pack</div>
           <div style="font-family:'Inter',sans-serif;font-size:14px;color:var(--slate-400);line-height:1.5;">60-minute pre-read. The thesis on one page, the sharpest two-to-three talking points per market, the vendor moves that matter, and the questions a buyer or exec will bring. Start if you have an analyst call.</div>
@@ -661,6 +669,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   </div>
 </section>
 </main>
+<!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
 
 <!-- =====================================================================
      FOOTER (A-3 verbatim, two-block)

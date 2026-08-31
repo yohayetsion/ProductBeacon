@@ -39,9 +39,9 @@
     },
     {
       "source_path": "workforce.html",
-      "source_sha256": "283e9b79e14bb61b905fb14d36f9dc1daf8d1b5ae4932ebba1b0c6c06a1bae1d",
+      "source_sha256": "df11467fbf1863691039e922ee9095c47e420ef7ddf03ab7eac0c55f94ede1af",
       "review_path": "internal/fill-the-rooms-review/workforce.html",
-      "review_sha256": "efa7f06d91938460b266eff04c0ddd10ead78b08ed7f73985583a50b7da71f9c"
+      "review_sha256": "3eac3839ed2030bf97365056c417f5333ba7938198e5c20384d2cb45ac773f86"
     },
     {
       "source_path": "research/index.html",
@@ -79,7 +79,7 @@
     },
     {
       "path": "internal/fill-the-rooms-review/phase5r-gate.js",
-      "sha256": "18a6db77e294324a13da2aadfc35c9d642756d386349633ad8c6973a69d025e2"
+      "sha256": "5bb5623b93314a8623716a1b0d2b85bf978ff46685ccdc1088674b4bd02ec583"
     },
     {
       "path": "internal/fill-the-rooms-review/research/index.html",
@@ -87,7 +87,7 @@
     },
     {
       "path": "internal/fill-the-rooms-review/workforce.html",
-      "sha256": "efa7f06d91938460b266eff04c0ddd10ead78b08ed7f73985583a50b7da71f9c"
+      "sha256": "3eac3839ed2030bf97365056c417f5333ba7938198e5c20384d2cb45ac773f86"
     }
   ],
   "meta_files": [

@@ -410,6 +410,8 @@ if (homeGraph) {
   check(!JSON.stringify(homeGraph).includes('governed operator') && !JSON.stringify(homeGraph).includes('professional-services firms'), 'structured data carries the current positioning, not the superseded one');
 }
 check(!/\u2014/.test(visibleText(home)), 'homepage visible copy carries no em dash');
+check(!/250 ready-made skills|120 knowledge libraries/.test(visibleText(workforce)), 'the retired unreconcilable skill and library counts are gone');
+check(visibleText(workforce).includes('over 300 ready-made skills and knowledge libraries'), 'the Workforce page states one reconcilable combined figure');
 check(!/(\$\s*[\d,]+|\d+\s*\/\s*month|first month free)/i.test(`${visibleText(home)} ${visibleText(workforce)}`), 'homepage and Workforce narrative contain no prices');
 check(!/(--space-5\b|--space-10\b)/.test(`${home}\n${workforce}`), 'undefined spacing tokens absent from source pages');
 check(sourcePaths.every(file => !/(href|src|action)="\/internal\//.test(source[file])), 'production source has no internal links', sourcePaths.filter(file => /(href|src|action)="\/internal\//.test(source[file])).join(', '));

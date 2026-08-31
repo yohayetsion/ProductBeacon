@@ -62,9 +62,15 @@
     background: var(--amber); flex-shrink: 0;
   }
   @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
+  .skip-link { position: fixed; left: var(--space-4); top: var(--space-3); z-index: 1000; transform: translateY(-180%); padding: var(--space-3) var(--space-4); background: var(--amber); color: var(--ink); font-weight: 700; }
+  .skip-link:focus { transform: translateY(0); }
+  .email-action { white-space: normal; overflow-wrap: anywhere; max-width: 100%; text-align: center; }
+  .btn { min-height: 44px; display: inline-flex; align-items: center; }
+  @media (prefers-reduced-motion: reduce) { .skip-link, .btn, a, button { transition: none !important; transform: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ====== NAV ====== -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -104,6 +110,8 @@
     <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
   </div>
 </nav>
+
+<main id="main-content" tabindex="-1">
 
 <!-- ====== HERO ====== -->
 <section class="section section--accent" style="min-height:60vh; display:flex; align-items:center; padding-top:120px;">
@@ -279,10 +287,12 @@
       <a href="contact.html?intent=on-call" class="btn btn--primary btn--lg" onclick="pbTrack('door_click',{door:'on-call',location:'final-cta'})">Start with On Call</a>
       <a href="index.html#intensive" class="btn btn--ghost btn--lg" onclick="pbTrack('door_click',{door:'intensive',location:'on-call-final-cta'})">See the Operator Intensive</a>
     </div>
-    <p class="fade-in" style="margin-top:16px;"><a href="mailto:yohay@productbeacon.agency" class="btn btn--ghost">Prefer email? yohay@productbeacon.agency</a></p>
+    <p class="fade-in" style="margin-top:16px;"><a href="mailto:yohay@productbeacon.agency" class="btn btn--ghost email-action">Prefer email? yohay@productbeacon.agency</a></p>
   </div>
 </section>
 
+</main>
+<!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
 <!-- ====== FOOTER ====== -->
 <footer class="footer">
   <div class="container">
