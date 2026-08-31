@@ -21,15 +21,15 @@
   "source_to_review": [
     {
       "source_path": "index.html",
-      "source_sha256": "6da0a00a5b0c193d0bce39eaebb7a592c11067e2c94e3c900d260062e9e0199b",
+      "source_sha256": "131227adc51c353e14dd4ad8d6be21c4c7fdd2d92fbfb120e2b24ecb38d692fc",
       "review_path": "internal/fill-the-rooms-review/index.html",
-      "review_sha256": "c08354212cf57ea67a9be596e030d49e013dda5978b3af30c5311b73076eefe9"
+      "review_sha256": "b41adbf2017bae6b44947d8565b58f381e661c4a3f3c467fa0f7ff10803f2c80"
     },
     {
       "source_path": "only-product-person/index.html",
-      "source_sha256": "c7922aaa9c1bc572cc7fc14dcbc99af444f3c774def8c94a12ffbff6dfa9e318",
+      "source_sha256": "32a38308529dc8e53b960129101238a0bde19fa31e03d87800bf0e03b2f6b725",
       "review_path": "internal/fill-the-rooms-review/only-product-person/index.html",
-      "review_sha256": "d8046965cce4eebf598aa9f143855e050e1a1be83ee06abb465d874bfe1e159d"
+      "review_sha256": "1df50e7c4048ac69d9e8dbec1d00fbae2e7b995a12000779b143d6122fcf1c1c"
     },
     {
       "source_path": "covering-everything/index.html",
@@ -59,7 +59,7 @@
   "files": [
     {
       "path": "internal/fill-the-rooms-review/build-review.js",
-      "sha256": "8dd094d31dcdaf5f620ad38b5681e8f1e4c4580661c20908bc0959cf9ec8fcac"
+      "sha256": "8265b23de4ef40c983fe4505048b40a68be83e193031f5e6b3c2a91df58d9935"
     },
     {
       "path": "internal/fill-the-rooms-review/covering-everything/index.html",
@@ -67,7 +67,7 @@
     },
     {
       "path": "internal/fill-the-rooms-review/index.html",
-      "sha256": "c08354212cf57ea67a9be596e030d49e013dda5978b3af30c5311b73076eefe9"
+      "sha256": "b41adbf2017bae6b44947d8565b58f381e661c4a3f3c467fa0f7ff10803f2c80"
     },
     {
       "path": "internal/fill-the-rooms-review/on-call.html",
@@ -75,11 +75,11 @@
     },
     {
       "path": "internal/fill-the-rooms-review/only-product-person/index.html",
-      "sha256": "d8046965cce4eebf598aa9f143855e050e1a1be83ee06abb465d874bfe1e159d"
+      "sha256": "1df50e7c4048ac69d9e8dbec1d00fbae2e7b995a12000779b143d6122fcf1c1c"
     },
     {
       "path": "internal/fill-the-rooms-review/phase5r-gate.js",
-      "sha256": "2bfc2f948794b83bb4bc3f61023fe00650b6ad6b1e7a4daa870da7b23fa38d75"
+      "sha256": "95d05474803133a10e74c194fc85e62d225142a782cf8abf9a2955fad4c98c22"
     },
     {
       "path": "internal/fill-the-rooms-review/research/index.html",
@@ -98,6 +98,7 @@
     "/css/style.css",
     "/js/main.js",
     "/research/favicon-research.svg",
+    "/ledger/june-2026-cover.png",
     "https://fonts.googleapis.com",
     "https://fonts.gstatic.com"
   ],

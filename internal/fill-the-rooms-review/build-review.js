@@ -292,6 +292,7 @@ const manifest = {
     '/css/style.css',
     '/js/main.js',
     '/research/favicon-research.svg',
+    '/ledger/june-2026-cover.png',
     'https://fonts.googleapis.com',
     'https://fonts.gstatic.com'
   ],

@@ -97,16 +97,20 @@ function strictlyIncreasing(values) {
   return values.every((value, index) => value !== -1 && (index === 0 || value > values[index - 1]));
 }
 
-const entrySections = ['leadership-hero', 'leadership-stakes', 'value-loop-blueprint', 'system-map', 'responsibility-routes', 'workforce-proof', 'workforce-ledger', 'human-leadership-services'];
+const entrySections = ['leadership-hero', 'leadership-stakes', 'value-loop-blueprint', 'system-map', 'responsibility-routes', 'workforce-proof'];
 check(home.includes('<main id="main-content" class="entry-main" data-phase5r-page="entry" tabindex="-1">'), 'entry main marker exact');
-check(entrySections.every(value => count(home, `data-phase5r-section="${value}"`) === 1), 'entry section markers exact once');
+check(entrySections.every(value => count(home, `data-phase5r-section="${value}"`) === 1) && count(home, 'data-phase5r-section=') === entrySections.length, 'entry section markers exact once');
+check(count(home, 'data-phase5r-section="workforce-ledger"') === 0 && count(home, 'data-phase5r-section="human-leadership-services"') === 0, 'the standalone Ledger section and the redundant closing band are gone');
+check(count(home, 'ledger-rail') === 0 && count(home, 'ledger-row') === 0 && count(home, 'ledger-action') === 0 && count(home, 'data-ledger-item') === 0 && count(home, 'human-close') === 0, 'their markup and CSS are gone with them');
 check(strictlyIncreasing(markerPositions(home, 'data-phase5r-section', entrySections)), 'entry section markers ordered');
 const entryHero = (home.match(/<[^>]+data-phase5r-section="leadership-hero"[\s\S]*?<\/section>/) || [''])[0];
 check(count(entryHero, '<h1') === 1 && count(home, '<h1') === 1, 'entry single H1 inside hero');
 check(!/(\$|\/ month|first month|compute excluded|finish it and the licence opens)/i.test(visibleText(entryHero)), 'entry hero has no price or access-condition tokens');
 check(entryHero.includes('href="#choose-your-route"') && entryHero.includes('href="/workforce.html"'), 'entry hero primary and Workforce routes');
 check(visibleText(entryHero).includes('Choose your route'), 'entry hero primary CTA label exact');
-check(entryHero.includes('Product Leadership, At Scale.'), 'entry hero H1 exact');
+check(visibleText(entryHero).includes('Product Leadership, At Scale.'), 'entry hero H1 exact');
+check(/<h1 id="home-title"><span class="hero-lead">Product Leadership,<\/span> At Scale\.<\/h1>/.test(home), 'entry hero keeps Leadership on the first line');
+check(/\.hero-lead\s*\{[^}]*white-space:\s*nowrap/s.test(home), 'the hero lead phrase is held on one line by CSS');
 
 const systemLayers = ['blueprint', 'decision-infrastructure', 'workforce-editions', 'operating-foundation'];
 check(systemLayers.every(value => count(home, `data-system-layer="${value}"`) === 1), 'four system layers exact once');
@@ -115,16 +119,30 @@ check(count(home, 'data-human-decision-seam') === 1, 'system map human decision 
 const responsibilityRoutes = ['run-one-product-team', 'extend-across-the-enterprise', 'productbeacon-carries-the-outcome'];
 check(responsibilityRoutes.every(value => count(home, `data-route="${value}"`) === 1), 'three responsibility routes exact once');
 check(count(home, 'data-proof-kind="workforce-delivery"') === 2, 'two workforce delivery proof artifacts exact');
-check(count(home, 'data-ledger-item') === 3, 'Workforce Ledger rail carries exactly three record rows');
+check(count(home, 'data-proof-kind="workforce-operating-record"') === 1, 'the Ledger sits inside the proof section as one operating-record artifact');
 const responsibilitySection = sectionByMarker(home, 'data-phase5r-section', 'responsibility-routes');
 const proofSection = sectionByMarker(home, 'data-phase5r-section', 'workforce-proof');
-const ledgerSection = sectionByMarker(home, 'data-phase5r-section', 'workforce-ledger');
 check(count(home, 'data-phase5r-section="ways-to-use"') === 0 && count(home, 'class="use-card"') === 0 && count(home, 'use-card__') === 0 && count(home, 'id="ways-to-use"') === 0, 'merged: the duplicate ways-to-use section and its cards are gone');
 check(count(home, '#ways-to-use') === 0, 'merged: no link anywhere still targets the removed anchor');
 check(count(home, 'class="use-grid"') === 0 && count(home, '.use-grid') === 0 && count(home, '.route-heading') === 0 && count(home, 'class="route-heading"') === 0, 'merged: dead use-grid and route-heading rules removed');
 check(Boolean(responsibilitySection) && responsibilitySection.includes('id="choose-your-route"') && count(responsibilitySection, 'data-route=') === 3, 'responsibility routes are a separate anchored section');
 check(count(home, 'class="door-grid"') === 1 && count(home, 'data-route=') === 3, 'exactly one three-card grid remains on the homepage');
-check(count(proofSection, 'data-proof-class="finished-delivery"') === 1 && count(ledgerSection, 'data-proof-class="operating-record"') === 1, 'two distinct proof classes marked exactly once each');
+check(count(proofSection, 'data-proof-class="finished-delivery"') === 1, 'the proof section is marked as the finished-delivery class');
+check(count(proofSection, 'class="report-proof"') === 3, 'the proof section carries exactly three artifacts');
+const ledgerCard = (proofSection.match(/<article\b[^>]*data-proof-kind="workforce-operating-record"[\s\S]*?<\/article>/) || [''])[0];
+const ledgerCardExact = [
+  'The operating record',
+  'The Governed Workforce Ledger',
+  'The recurring record of how the governed workforce actually ran: what it produced, which decisions a named human affirmed, and what was sent back. Published on the ProductBeacon LinkedIn page.',
+  'See the Ledger on LinkedIn'
+];
+check(Boolean(ledgerCard), 'the Ledger proof card is present');
+check(Boolean(ledgerCard) && ledgerCardExact.every(value => visibleText(ledgerCard).includes(value)), 'Ledger proof card copy exact', ledgerCardExact.filter(value => !visibleText(ledgerCard).includes(value)).join(' | '));
+check(Boolean(ledgerCard) && ledgerCard.includes('src="/ledger/june-2026-cover.png"') && /alt="Cover of the Governed Workforce Ledger, Issue 01, June 2026"/.test(ledgerCard), 'the Ledger card shows the real published June cover, described');
+check(Boolean(ledgerCard) && count(ledgerCard, 'href="https://www.linkedin.com/company/productbeacon"') === 1 && count(ledgerCard, '<a ') === 1, 'the Ledger card has exactly one link and it is the cleared destination');
+check(Boolean(ledgerCard) && !/\d/.test(visibleText(ledgerCard)), 'the Ledger card copy states no figure of any kind', visibleText(ledgerCard));
+check(Boolean(ledgerCard) && !/target="_blank"|href="#"|aria-disabled/.test(ledgerCard), 'the Ledger card has no placeholder, disabled or new-window control');
+check(!/latest Ledger|Issue 02|the July Ledger|published every month|monthly since/i.test(visibleText(home)), 'the homepage makes no unposted-issue or cadence claim');
 const exactRouteCards = [
   {
     id: 'run-one-product-team',
@@ -167,28 +185,6 @@ check(/\.route-card__mode\s*\{[^}]*text-transform:\s*uppercase/s.test(home), 'op
 check(/\.route-card__mode\s*\{[^}]*color:\s*var\(--secondary\)/s.test(home), 'operating-mode labels use secondary, keeping amber for action');
 check(count(home, 'id="intensive"') === 1 && /id="intensive"[^>]*data-operating-mode="the-wider-workforce"|data-operating-mode="the-wider-workforce"[^>]*id="intensive"/.test(home), 'the frozen Operator Intensive nav target resolves to the wider-workforce route card');
 check(/<a[^>]*data-route="extend-across-the-enterprise"[^>]*id="intensive"|<a[^>]*id="intensive"[^>]*data-route="extend-across-the-enterprise"/.test(home), 'the Operator Intensive anchor lands on a focusable link');
-const ledgerExact = [
-  'The operating record',
-  'See how the workforce runs, not only what it delivers.',
-  "The Governed Workforce Ledger is ProductBeacon's recurring record of how the governed workforce actually ran. It is logged, reviewed, and on the record, and a named human reviews and publishes every issue.",
-  'What the workforce produced',
-  'Which decisions a named human affirmed',
-  'What was sent back',
-  'See the Ledger on the ProductBeacon LinkedIn page'
-];
-check(Boolean(ledgerSection), 'Workforce Ledger section present');
-check(ledgerExact.every(value => visibleText(ledgerSection).includes(value)), 'Workforce Ledger copy exact', ledgerExact.filter(value => !visibleText(ledgerSection).includes(value)).join(' | '));
-check(Boolean(ledgerSection) && count(ledgerSection, '<img') === 0 && count(ledgerSection, '<h3') === 0 && count(ledgerSection, 'artifact-frame') === 0, 'Workforce Ledger rail is unframed, imageless and carries no report-level heading');
-check(Boolean(ledgerSection) && count(ledgerSection, 'href="https://www.linkedin.com/company/productbeacon"') === 1 && count(ledgerSection, '<a ') === 1, 'Workforce Ledger rail has exactly one link and it is the cleared destination');
-check(Boolean(ledgerSection) && !/href="#"|href=""|aria-disabled/.test(ledgerSection), 'Workforce Ledger rail has no placeholder or disabled control');
-check(Boolean(ledgerSection) && !/target="_blank"/.test(ledgerSection), 'Workforce Ledger link matches the existing external-link pattern');
-check(Boolean(ledgerSection) && !/\d/.test(visibleText(ledgerSection)), 'Workforce Ledger rail states no figure of any kind', visibleText(ledgerSection));
-check(/\.ledger-row\s*\+\s*\.ledger-row\s*\{\s*border-top:\s*1px solid var\(--border\)/s.test(home), 'Workforce Ledger dividers sit between rows only, on the passive border token');
-check(/\.ledger-rail\s*\{[^}]*max-width:\s*var\(--content-width\)/s.test(home), 'Workforce Ledger rail is capped at reading measure, narrower than the proof block');
-check(Boolean(ledgerSection) && !/--muted/.test(ledgerSection), 'Workforce Ledger rail never uses the sub-AA muted token for required copy');
-check(/\.ledger-action \.btn\s*\{[^}]*white-space:\s*normal[^}]*\}/s.test(home) && /\.ledger-action \.btn\s*\{[^}]*max-width:\s*100%/s.test(home), 'Workforce Ledger CTA wraps rather than overflowing the 320px gutter');
-check(/<section\b[^>]*\bclass="[^"]*\bsection--ink\b[^"]*"[^>]*data-phase5r-section="workforce-ledger"|<section\b[^>]*data-phase5r-section="workforce-ledger"[^>]*\bclass="[^"]*\bsection--ink\b/.test(home), 'Workforce Ledger sits on the base ink ground, one weight below the raised report block');
-check(Boolean(ledgerSection) && !/section--compact/.test(ledgerSection), 'Workforce Ledger uses standard section padding');
 check(!home.includes('data-offer-journey=') && !home.includes('data-router-step='), 'legacy journey and questionnaire structure absent');
 check(!home.includes('class="offer-table"'), 'old offer table absent');
 check(!/(testimonial|customer-logo|review-score|performance-result)/i.test(entryHero), 'hero contains no invented proof component');
@@ -212,9 +208,10 @@ const doorOneExact = [
   'On your own, you get to about a third of it.',
   'Product Org OS gives you the other two thirds: a free product team you can download and run this week on one real decision.',
   'No email. No call. It is a download.',
-  'Get the free product team',
-  'Trying it on one real decision? Send LANTERN on LinkedIn.'
+  'Get the free product team'
 ];
+check(!/LANTERN/i.test(doorOne), 'Door 1 no longer carries the LANTERN prompt');
+check(count(doorOne, 'door-optional') === 0, 'the optional-prompt paragraph is gone with it');
 check(doorOneExact.every(value => visibleText(doorOne).includes(value)), 'Door 1 exact copy and CTA');
 check(!/workaround|substitut/i.test(doorOne), 'Door 1 has no workaround or substitute language');
 const doorOneSectionHeadings = [
@@ -381,9 +378,9 @@ check(homepageNegativeCopy.every(fragment => !homepageText.includes(fragment.toL
 check(visibleText(home).includes('You can read the work and its supporting method before you decide.'), 'report aside no longer assumes the routes come after it');
 const homeMain = (home.match(/<main\b[\s\S]*?<\/main>/) || [''])[0];
 const expectedHrefCounts = [
-  ['#choose-your-route', 2], ['#ways-to-use', 0],
+  ['#choose-your-route', 1], ['#ways-to-use', 0],
   ['/only-product-person/', 1], ['/covering-everything/', 1], ['/on-call.html', 1],
-  ['/workforce.html', 3], ['https://github.com/yohayetsion/product-org-os', 2],
+  ['/workforce.html', 2], ['https://github.com/yohayetsion/product-org-os', 2],
   ['/vision-to-value/', 3], ['/decision-provenance-standard.html', 2],
   ['/research/state-of-cyber-2026/', 1], ['/research/state-of-wfo-2026/', 1],
   ['/research/', 1], ['/contact.html', 1],
