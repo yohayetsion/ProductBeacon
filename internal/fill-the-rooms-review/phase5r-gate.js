@@ -412,6 +412,10 @@ if (homeGraph) {
 check(!/\u2014/.test(visibleText(home)), 'homepage visible copy carries no em dash');
 check(!/250 ready-made skills|120 knowledge libraries/.test(visibleText(workforce)), 'the retired unreconcilable skill and library counts are gone');
 check(visibleText(workforce).includes('over 300 ready-made skills and knowledge libraries'), 'the Workforce page states one reconcilable combined figure');
+check(visibleText(workforce).includes('Over 300 skills and knowledge libraries'), 'the Workforce hero states the figure above the fold');
+check(visibleText(home).includes('drawing on over 300 skills and knowledge libraries'), 'the homepage system map states the figure');
+check(!/\bcolor:\s*var\(--muted\)/.test(read('css/style.css').match(/\.footer__col h4\s*\{[^}]*\}/)[0]), 'footer column headings no longer use the sub-AA muted token');
+check(!/var\(--slate-600\)/.test((read('research/index.html').match(/\.coming-card-label\s*\{[^}]*\}/) || [''])[0] + (read('research/index.html').match(/\.coming-card-body\s*\{[^}]*\}/) || [''])[0]), 'Research coming-soon cards no longer use the sub-AA slate token');
 check(!/(\$\s*[\d,]+|\d+\s*\/\s*month|first month free)/i.test(`${visibleText(home)} ${visibleText(workforce)}`), 'homepage and Workforce narrative contain no prices');
 check(!/(--space-5\b|--space-10\b)/.test(`${home}\n${workforce}`), 'undefined spacing tokens absent from source pages');
 check(sourcePaths.every(file => !/(href|src|action)="\/internal\//.test(source[file])), 'production source has no internal links', sourcePaths.filter(file => /(href|src|action)="\/internal\//.test(source[file])).join(', '));

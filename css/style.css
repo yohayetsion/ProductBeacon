@@ -766,7 +766,7 @@ a.card:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--secondary);
   margin-bottom: 16px; /* chrome-unify: pinned to literal (was var(--space-4)=16px) so research-page :root token overrides can't leak into chrome */
 }
 
@@ -786,7 +786,7 @@ a.card:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 0.8125rem;
-  color: var(--muted);
+  color: var(--secondary);
 }
 
 .footer__social a {
