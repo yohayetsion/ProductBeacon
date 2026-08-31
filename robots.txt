@@ -6,7 +6,6 @@ Allow: /
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
-Disallow: /reports/
 Disallow: /internal/
 Disallow: /Product/
 Disallow: /Marketing/
@@ -20,7 +19,6 @@ Disallow: /internal/
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
-Disallow: /reports/
 Disallow: /Product/
 Disallow: /Marketing/
 
@@ -30,7 +28,6 @@ Disallow: /internal/
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
-Disallow: /reports/
 Disallow: /Product/
 Disallow: /Marketing/
 
@@ -40,7 +37,6 @@ Disallow: /internal/
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
-Disallow: /reports/
 Disallow: /Product/
 Disallow: /Marketing/
 
@@ -50,7 +46,6 @@ Disallow: /internal/
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
-Disallow: /reports/
 Disallow: /Product/
 Disallow: /Marketing/
 
