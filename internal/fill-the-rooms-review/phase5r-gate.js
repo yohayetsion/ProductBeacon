@@ -410,7 +410,9 @@ if (homeGraph) {
   check(!JSON.stringify(homeGraph).includes('governed operator') && !JSON.stringify(homeGraph).includes('professional-services firms'), 'structured data carries the current positioning, not the superseded one');
 }
 check(!/\u2014/.test(visibleText(home)), 'homepage visible copy carries no em dash');
-check(!/250 ready-made skills|120 knowledge libraries/.test(visibleText(workforce)), 'the retired unreconcilable skill and library counts are gone');
+check(!/250 ready-made skills|120 knowledge libraries/i.test(normalizedText(workforce)), 'the retired unreconcilable skill and library counts are gone from the prose');
+check(!/<div class="metric__value">(250|120)<\/div>/.test(workforce), 'the retired counts are gone from the metric band');
+check(/<div class="metric__value">300\+<\/div>/.test(workforce) && /Ready-made skills and knowledge libraries/.test(workforce), 'the metric band states the one reconcilable combined figure');
 check(visibleText(workforce).includes('over 300 ready-made skills and knowledge libraries'), 'the Workforce page states one reconcilable combined figure');
 check(visibleText(workforce).includes('Over 300 skills and knowledge libraries'), 'the Workforce hero states the figure above the fold');
 check(visibleText(home).includes('drawing on over 300 skills and knowledge libraries'), 'the homepage system map states the figure');

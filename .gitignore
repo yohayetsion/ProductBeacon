@@ -17,3 +17,7 @@ _wfo-*-prev-*/
 /Product/
 /Marketing/
 /chat.md
+
+# Prospect briefs in drafting form. The published HTML beside them is deliberate;
+# the raw markdown names the executive it was prepared for.
+insights/*/brief/prospect-brief.md
