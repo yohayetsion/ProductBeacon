@@ -134,15 +134,19 @@ const ledgerCardExact = [
   'The operating record',
   'The Governed Workforce Ledger',
   'The recurring record of how the governed workforce actually ran: what it produced, which decisions a named human affirmed, and what was sent back. Published on the ProductBeacon LinkedIn page.',
-  'See the Ledger on LinkedIn'
+  'Read the latest Ledger'
 ];
 check(Boolean(ledgerCard), 'the Ledger proof card is present');
 check(Boolean(ledgerCard) && ledgerCardExact.every(value => visibleText(ledgerCard).includes(value)), 'Ledger proof card copy exact', ledgerCardExact.filter(value => !visibleText(ledgerCard).includes(value)).join(' | '));
-check(Boolean(ledgerCard) && ledgerCard.includes('src="/ledger/june-2026-cover.png"') && /alt="Cover of the Governed Workforce Ledger, Issue 01, June 2026"/.test(ledgerCard), 'the Ledger card shows the real published June cover, described');
-check(Boolean(ledgerCard) && count(ledgerCard, 'href="https://www.linkedin.com/company/productbeacon"') === 1 && count(ledgerCard, '<a ') === 1, 'the Ledger card has exactly one link and it is the cleared destination');
+check(Boolean(ledgerCard) && ledgerCard.includes('src="/ledger/july-2026-cover.png"') && /alt="Cover of the Governed Workforce Ledger, Issue 02, July 2026"/.test(ledgerCard), 'the Ledger card shows the latest published cover, described');
+check(Boolean(ledgerCard) && count(ledgerCard, 'href="https://www.linkedin.com/posts/productbeacon_the-governed-workforce-ledger-activity-7493372347987701760--rBa"') === 1 && count(ledgerCard, '<a ') === 1, 'the Ledger card has exactly one link and it is the published issue');
 check(Boolean(ledgerCard) && !/\d/.test(visibleText(ledgerCard)), 'the Ledger card copy states no figure of any kind', visibleText(ledgerCard));
 check(Boolean(ledgerCard) && !/target="_blank"|href="#"|aria-disabled/.test(ledgerCard), 'the Ledger card has no placeholder, disabled or new-window control');
-check(!/latest Ledger|Issue 02|the July Ledger|published every month|monthly since/i.test(visibleText(home)), 'the homepage makes no unposted-issue or cadence claim');
+// Issue 01 (June) and Issue 02 (July) are both published, so naming the latest
+// issue is now accurate. What must still never appear is a cadence claim the
+// LinkedIn page cannot evidence on the day a reader arrives, or a reference to
+// an issue that has not gone out.
+check(!/published every month|monthly since|every month since|Issue 03/i.test(visibleText(home)), 'the homepage makes no cadence claim and names no unpublished issue');
 const exactRouteCards = [
   {
     id: 'run-one-product-team',
@@ -386,12 +390,25 @@ const expectedHrefCounts = [
   ['/vision-to-value/', 3], ['/decision-provenance-standard.html', 2],
   ['/research/state-of-cyber-2026/', 1], ['/research/state-of-wfo-2026/', 1],
   ['/research/', 1], ['/contact.html', 1],
-  ['https://www.linkedin.com/company/productbeacon', 1]
+  ['https://www.linkedin.com/posts/productbeacon_the-governed-workforce-ledger-activity-7493372347987701760--rBa', 1]
 ];
 expectedHrefCounts.forEach(([target, expected]) => {
   const actual = count(homeMain, `"${target}"`);
   check(actual === expected, `homepage main carries ${expected} link(s) to ${target}`, `found ${actual}`);
 });
+const homeLd = (home.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/) || ['',''])[1];
+check(Boolean(homeLd), 'homepage carries structured data');
+let homeGraph = null;
+try { homeGraph = JSON.parse(homeLd); } catch (error) { failures.push(`homepage structured data is not valid JSON: ${error.message}`); }
+if (homeGraph) {
+  const nodes = homeGraph['@graph'] || [];
+  const org = nodes.find(node => node['@type'] === 'Organization');
+  const person = nodes.find(node => node['@type'] === 'Person');
+  check(Boolean(org) && org['@id'] === 'https://productbeacon.agency/#productbeacon' && Boolean(org.logo), 'organisation node carries an identifier and a logo');
+  check(Boolean(org) && Array.isArray(org.sameAs) && org.sameAs.includes('https://www.linkedin.com/company/productbeacon') && org.sameAs.includes('https://www.linkedin.com/in/yohayetsion/'), 'organisation node ties both LinkedIn identities to the practice');
+  check(Boolean(person) && person['@id'] === 'https://productbeacon.agency/#yohay-etsion' && Boolean(org) && org.founder && org.founder['@id'] === person['@id'], 'the founder link resolves to the person node');
+  check(!JSON.stringify(homeGraph).includes('governed operator') && !JSON.stringify(homeGraph).includes('professional-services firms'), 'structured data carries the current positioning, not the superseded one');
+}
 check(!/\u2014/.test(visibleText(home)), 'homepage visible copy carries no em dash');
 check(!/(\$\s*[\d,]+|\d+\s*\/\s*month|first month free)/i.test(`${visibleText(home)} ${visibleText(workforce)}`), 'homepage and Workforce narrative contain no prices');
 check(!/(--space-5\b|--space-10\b)/.test(`${home}\n${workforce}`), 'undefined spacing tokens absent from source pages');
