@@ -11,6 +11,7 @@ const mapStyles = page.slice(
   page.indexOf('/* ---- Organisation map ---- */'),
   page.indexOf('/* ---- NEW: skills & libraries richness'),
 );
+const directory = teamSection.slice(teamSection.indexOf('data-workforce-view="team-directory"'));
 
 const teams = [
   ['Executive Leadership', 'Sets direction and makes the trade-offs that shape everything below.'],
@@ -55,6 +56,45 @@ test('removes the duplicate chart, specialist roster, and expandable controls', 
   assert.doesNotMatch(teamSection, /<summary\b/);
   assert.doesNotMatch(teamSection, /roster-row/);
   assert.doesNotMatch(teamSection, /Ask it for:/);
+});
+
+test('puts a complete, static team directory below the organisation map', () => {
+  assert.ok(teamSection.indexOf('data-workforce-view="organisation-map"') < teamSection.indexOf('data-workforce-view="team-directory"'));
+  assert.match(teamSection, /class="team-directory(?:\s|")/);
+  assert.doesNotMatch(teamSection, /class="team-directory fade-in"/);
+  assert.equal([...directory.matchAll(/class="team-directory__branch"/g)].length, 3);
+  assert.equal([...directory.matchAll(/class="team-directory__team"/g)].length, 16);
+  assert.equal([...directory.matchAll(/class="agent-row"/g)].length, 102);
+
+  for (const [team, description] of teams) {
+    assert.match(directory, new RegExp(`<h4>${team}<\\/h4>`));
+    assert.match(directory, new RegExp(description.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  }
+
+  for (const [agent, description] of [
+    ['Chief Product Officer', 'The senior product voice: strategy, portfolio, and the hardest calls.'],
+    ['Marketing Director', 'Runs the marketing org and its budget calls.'],
+    ['Finance Director', 'Runs the finance function day to day.'],
+    ['Legal Director', 'Runs the legal drafting-and-triage work, under supervised terms.'],
+    ['Chief Architect', 'Holds the technical big picture together.'],
+    ['Tech Lead', 'Technical direction, code quality, and cross-team delivery.'],
+    ['Sales Director', 'Pipeline, quota, and the sales operating rhythm.'],
+    ['Personal Assistant', 'Day-to-day support.'],
+  ]) {
+    assert.match(directory, new RegExp(`<h5>${agent}<\\/h5>`));
+    assert.match(directory, new RegExp(description.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  }
+
+  assert.doesNotMatch(directory, /<details\b/);
+  assert.doesNotMatch(directory, /<summary\b/);
+  assert.doesNotMatch(directory, /Ask it for:/);
+  assert.doesNotMatch(directory, /You stay in control of:/);
+});
+
+test('lays out the detailed directory as responsive team panels with quiet agent rows', () => {
+  assert.match(mapStyles, /\.team-directory__teams \{ display: grid; grid-template-columns: repeat\(2, minmax\(0, 1fr\)\); gap: var\(--space-6\); align-items: start; \}/);
+  assert.match(mapStyles, /\.agent-row \{ padding: var\(--space-4\); border-top: 1px solid var\(--border\); \}/);
+  assert.match(mapStyles, /@media \(max-width: 639px\) \{[\s\S]*?\.team-directory__teams \{ grid-template-columns: 1fr; \}/);
 });
 
 test('uses the existing spacing tokens for the organisation map and responsive group layout', () => {

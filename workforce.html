@@ -187,6 +187,34 @@
     .organisation-map__group { padding: var(--space-4); }
     .organisation-map__teams { grid-template-columns: 1fr; }
   }
+
+  /* ---- Detailed team directory ---- */
+  .team-directory { margin-top: var(--space-12); }
+  .team-directory__intro { max-width: 680px; }
+  .team-directory__intro h2 { margin-bottom: var(--space-3); }
+  .team-directory__intro > p:last-child { color: var(--secondary); }
+  .team-directory__branches { display: grid; gap: var(--space-12); margin-top: var(--space-8); }
+  .team-directory__branch { padding-top: var(--space-6); border-top: 1px solid var(--border); }
+  .team-directory__branch-header { margin-bottom: var(--space-6); }
+  .team-directory__branch-label { margin: 0 0 var(--space-2); color: var(--amber); font-family: var(--font-mono); font-size: .6875rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .team-directory__branch h3 { margin: 0; color: var(--bright); font-size: 1.25rem; line-height: 1.35; }
+  .team-directory__teams { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); align-items: start; }
+  .team-directory__team { overflow: hidden; background: rgba(15,23,42,.7); border: 1px solid var(--border); border-radius: var(--border-radius); }
+  .team-directory__team-header { padding: var(--space-4); border-top: 2px solid var(--amber); background: rgba(30,41,59,.42); }
+  .team-directory__team-header h4 { margin: 0; color: var(--bright); font-size: 1rem; line-height: 1.35; }
+  .team-directory__team-header p { margin: var(--space-2) 0 0; color: var(--secondary); font-size: .875rem; line-height: 1.55; }
+  .agent-list { margin: 0; padding: 0; list-style: none; }
+  .agent-row { padding: var(--space-4); border-top: 1px solid var(--border); }
+  .agent-row h5 { margin: 0; color: var(--bright); font-size: .875rem; line-height: 1.4; }
+  .agent-row p { margin: var(--space-1) 0 0; color: var(--secondary); font-size: .8125rem; line-height: 1.5; }
+  @media (max-width: 639px) {
+    .team-directory { margin-top: var(--space-8); }
+    .team-directory__branches { gap: var(--space-8); margin-top: var(--space-6); }
+    .team-directory__branch { padding-top: var(--space-4); }
+    .team-directory__branch-header { margin-bottom: var(--space-4); }
+    .team-directory__teams { grid-template-columns: 1fr; }
+    .team-directory__team-header { padding: var(--space-4); }
+  }
   /* ---- NEW: skills & libraries richness (.pack-grid / .pack-card / .cat-skill-list) ---- */
   .pack-subhead { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-12); }
   .pack-subhead h3 { margin: 0; }
@@ -519,6 +547,222 @@
             <li><article class="team-card"><h4>Design</h4><p>Makes the work come out looking like a real studio produced it.</p></article></li>
           </ul>
         </section>
+      </div>
+    </section>
+
+    <section class="team-directory" data-workforce-view="team-directory" aria-labelledby="team-directory-title">
+      <header class="team-directory__intro">
+        <p class="eyebrow">THE DETAILED WORKFORCE</p>
+        <h2 id="team-directory-title">Meet every team. Meet their specialists.</h2>
+        <p>Every role in the workforce, grouped by the organisation it strengthens.</p>
+      </header>
+      <div class="team-directory__branches">
+      <section class="team-directory__branch" aria-labelledby="leadership-governance-directory-title">
+        <header class="team-directory__branch-header">
+          <p class="team-directory__branch-label">Organisation branch 01</p>
+          <h3 id="leadership-governance-directory-title">Enterprise Leadership &amp; Governance</h3>
+        </header>
+        <div class="team-directory__teams">
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Executive Leadership</h4><p>Sets direction and makes the trade-offs that shape everything below.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>CEO</h5><p>Direction and the calls at the top.</p></article></li>
+            <li><article class="agent-row"><h5>Chief Financial Officer</h5><p>The financial strategy voice at the top.</p></article></li>
+            <li><article class="agent-row"><h5>Chief Operating Officer</h5><p>Makes the whole operation run as one.</p></article></li>
+            <li><article class="agent-row"><h5>Chief Marketing Officer</h5><p>The marketing strategy voice at the top.</p></article></li>
+            <li><article class="agent-row"><h5>Chief People Officer</h5><p>People strategy, org design, culture.</p></article></li>
+            <li><article class="agent-row"><h5>Chief Information Officer</h5><p>Technology governance at the top.</p></article></li>
+            <li><article class="agent-row"><h5>General Counsel</h5><p>The senior legal lens: drafting and triage only, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>Head of Corporate Development</h5><p>Deals, acquisitions, and strategic moves.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Corporate Development</h4><p>Deals, investments, and the partnerships that change your company's shape.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>M&amp;A Analyst</h5><p>Mergers and acquisitions, analyzed before you commit.</p></article></li>
+            <li><article class="agent-row"><h5>Corporate Venture</h5><p>Investments and venture moves, structured.</p></article></li>
+            <li><article class="agent-row"><h5>Strategic Partnerships</h5><p>Partnerships with company-level weight.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Finance</h4><p>Keeps the numbers honest and the decisions paid for.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Finance Director</h5><p>Runs the finance function day to day.</p></article></li>
+            <li><article class="agent-row"><h5>Controller</h5><p>Close and controls structure.</p></article></li>
+            <li><article class="agent-row"><h5>Financial Planning &amp; Analysis</h5><p>Planning and modeling structure.</p></article></li>
+            <li><article class="agent-row"><h5>Investor Relations</h5><p>How you talk to the people who fund you.</p></article></li>
+            <li><article class="agent-row"><h5>Revenue Analyst</h5><p>Revenue structure and what drives it.</p></article></li>
+            <li><article class="agent-row"><h5>Tax Planning</h5><p>Tax questions structured before your accountant decides.</p></article></li>
+            <li><article class="agent-row"><h5>Treasury Analyst</h5><p>Cash position and runway structure.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Legal &amp; Compliance</h4><p>First-pass drafting and triage on the things that usually make you wait days for an answer.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Legal Director</h5><p>Runs the legal drafting-and-triage work, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>Contracts Counsel</h5><p>First-pass contract triage, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>Privacy Counsel</h5><p>Privacy triage, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>IP Counsel</h5><p>Intellectual-property triage, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>Employment Counsel</h5><p>Employment-law triage, under supervised terms.</p></article></li>
+            <li><article class="agent-row"><h5>Compliance Officer</h5><p>Compliance readiness triage, under supervised terms.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Human Resources</h4><p>Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>HR Director</h5><p>Hiring, performance, comp: drafted for your decisions.</p></article></li>
+            <li><article class="agent-row"><h5>Recruiter</h5><p>Hiring pipelines, drafted and structured; you decide on every candidate.</p></article></li>
+            <li><article class="agent-row"><h5>Onboarding Specialist</h5><p>New hires productive fast.</p></article></li>
+            <li><article class="agent-row"><h5>Performance Specialist</h5><p>Performance cycles, structured; the judgments stay yours.</p></article></li>
+            <li><article class="agent-row"><h5>Compensation Analyst</h5><p>Pay structures, benchmarked and drafted; you set the pay.</p></article></li>
+            <li><article class="agent-row"><h5>People Analyst</h5><p>Workforce numbers that tell you something.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>IT Governance</h4><p>Keeps systems, data, and security policies in order as you grow.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>IT Director</h5><p>Runs IT governance day to day.</p></article></li>
+            <li><article class="agent-row"><h5>Data Governance</h5><p>Rules for your data before regulators write them for you.</p></article></li>
+            <li><article class="agent-row"><h5>Enterprise Systems</h5><p>The business systems that run the company.</p></article></li>
+            <li><article class="agent-row"><h5>IT Security Policy</h5><p>Security policies that hold up to scrutiny.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Personal Staff</h4><p>Your own office: daily support and research on call.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Personal Assistant</h5><p>Day-to-day support.</p></article></li>
+            <li><article class="agent-row"><h5>Analyst</h5><p>Research on anything, synthesized.</p></article></li>
+          </ul>
+        </article>
+        </div>
+      </section>
+      <section class="team-directory__branch" aria-labelledby="product-growth-customer-directory-title">
+        <header class="team-directory__branch-header">
+          <p class="team-directory__branch-label">Organisation branch 02</p>
+          <h3 id="product-growth-customer-directory-title">Product, Growth &amp; Customer</h3>
+        </header>
+        <div class="team-directory__teams">
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Product &amp; Strategy</h4><p>Decides what to build, how to position it, and where to place your bets.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Chief Product Officer</h5><p>The senior product voice: strategy, portfolio, and the hardest calls.</p></article></li>
+            <li><article class="agent-row"><h5>VP Product</h5><p>Owns vision, portfolio, and pricing strategy.</p></article></li>
+            <li><article class="agent-row"><h5>Director of Product Management</h5><p>Roadmaps, prioritization, and the delivery rhythm.</p></article></li>
+            <li><article class="agent-row"><h5>Director of Product Marketing</h5><p>Owns go-to-market strategy and competitive response.</p></article></li>
+            <li><article class="agent-row"><h5>Product Manager</h5><p>Turns direction into specs and delivery.</p></article></li>
+            <li><article class="agent-row"><h5>Product Marketing Manager</h5><p>Positions and launches the work.</p></article></li>
+            <li><article class="agent-row"><h5>Business Operations</h5><p>Business cases, KPIs, and the numbers behind a call.</p></article></li>
+            <li><article class="agent-row"><h5>Business Development</h5><p>Partnerships, market expansion, channel deals.</p></article></li>
+            <li><article class="agent-row"><h5>Competitive Intelligence</h5><p>Tracks rivals, runs win/loss, sizes the market.</p></article></li>
+            <li><article class="agent-row"><h5>Product Operations</h5><p>Launch readiness, process, and tooling for the product org.</p></article></li>
+            <li><article class="agent-row"><h5>Value Realization</h5><p>Proves customers are getting the value they paid for.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Marketing</h4><p>A full marketing department, on call.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Marketing Director</h5><p>Runs the marketing org and its budget calls.</p></article></li>
+            <li><article class="agent-row"><h5>Content Strategist</h5><p>Editorial and calendars.</p></article></li>
+            <li><article class="agent-row"><h5>Copywriter</h5><p>Headlines, pages, ads.</p></article></li>
+            <li><article class="agent-row"><h5>Conversion Specialist</h5><p>Turns more visitors into customers.</p></article></li>
+            <li><article class="agent-row"><h5>Email Marketer</h5><p>Sequences that get opened.</p></article></li>
+            <li><article class="agent-row"><h5>Growth Marketer</h5><p>Loops that compound.</p></article></li>
+            <li><article class="agent-row"><h5>Infographic Designer</h5><p>Data turned into visuals people share.</p></article></li>
+            <li><article class="agent-row"><h5>Market Researcher</h5><p>Sizes markets and reads demand.</p></article></li>
+            <li><article class="agent-row"><h5>Paid Media Manager</h5><p>Paid reach that pays back.</p></article></li>
+            <li><article class="agent-row"><h5>PR &amp; Communications</h5><p>The story the press tells about you.</p></article></li>
+            <li><article class="agent-row"><h5>Presentation Designer</h5><p>Decks that carry the room.</p></article></li>
+            <li><article class="agent-row"><h5>SEO Specialist</h5><p>Shows up in search, organic first.</p></article></li>
+            <li><article class="agent-row"><h5>Social Media Manager</h5><p>Social content and calendars.</p></article></li>
+            <li><article class="agent-row"><h5>Video Producer</h5><p>Scripts and video content plans.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Sales</h4><p>The motion that turns interest into signed business.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Sales Director</h5><p>Pipeline, quota, and the sales operating rhythm.</p></article></li>
+            <li><article class="agent-row"><h5>Account Executive</h5><p>Negotiation and closing.</p></article></li>
+            <li><article class="agent-row"><h5>Sales Engineer</h5><p>Technical demos and POCs.</p></article></li>
+            <li><article class="agent-row"><h5>Sales Development Rep</h5><p>Outbound and qualification.</p></article></li>
+            <li><article class="agent-row"><h5>Sales Operations</h5><p>The numbers and hygiene behind the pipeline.</p></article></li>
+            <li><article class="agent-row"><h5>Proposal Writer</h5><p>Proposals and SOWs.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Customer Success</h4><p>Keeps customers after you win them.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Customer Success Director</h5><p>Runs the retention motion.</p></article></li>
+            <li><article class="agent-row"><h5>Customer Success Manager</h5><p>Account health and retention.</p></article></li>
+            <li><article class="agent-row"><h5>Customer Success Operations</h5><p>The metrics and tooling behind retention.</p></article></li>
+            <li><article class="agent-row"><h5>Support Lead</h5><p>Tickets and SLAs.</p></article></li>
+            <li><article class="agent-row"><h5>Knowledge Base Specialist</h5><p>Help docs and self-service.</p></article></li>
+            <li><article class="agent-row"><h5>Customer Onboarding Manager</h5><p>Time-to-value.</p></article></li>
+          </ul>
+        </article>
+        </div>
+      </section>
+      <section class="team-directory__branch" aria-labelledby="technology-delivery-experience-directory-title">
+        <header class="team-directory__branch-header">
+          <p class="team-directory__branch-label">Organisation branch 03</p>
+          <h3 id="technology-delivery-experience-directory-title">Technology, Delivery &amp; Experience</h3>
+        </header>
+        <div class="team-directory__teams">
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Development</h4><p>Builds, tests, deploys, and improves the software behind the product.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Tech Lead</h5><p>Technical direction, code quality, and cross-team delivery.</p></article></li>
+            <li><article class="agent-row"><h5>Frontend Developer</h5><p>Interfaces and client-side product implementation.</p></article></li>
+            <li><article class="agent-row"><h5>Backend Developer</h5><p>APIs, data flows, and secure server-side implementation.</p></article></li>
+            <li><article class="agent-row"><h5>DevOps Engineer</h5><p>Deployment, infrastructure, monitoring, and operational reliability.</p></article></li>
+            <li><article class="agent-row"><h5>Quality Assurance Engineer</h5><p>Test strategy, quality coverage, and release confidence.</p></article></li>
+            <li><article class="agent-row"><h5>Automation Engineer</h5><p>Build tooling, scripted workflows, and operational automation.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Data Science</h4><p>Turns what is happening in your business into something you can act on.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Data Science Lead</h5><p>Analytics strategy and the metrics that matter.</p></article></li>
+            <li><article class="agent-row"><h5>Data Analyst</h5><p>Ad-hoc analysis and queries.</p></article></li>
+            <li><article class="agent-row"><h5>Business Intelligence Engineer</h5><p>Dashboards and reporting.</p></article></li>
+            <li><article class="agent-row"><h5>Machine Learning Engineer</h5><p>Models and evaluation.</p></article></li>
+            <li><article class="agent-row"><h5>Experimentation Analyst</h5><p>A/B test reads.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Operations</h4><p>Makes sure the work actually ships and keeps shipping.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Operations Director</h5><p>Runs the operating rhythm across functions.</p></article></li>
+            <li><article class="agent-row"><h5>Program Manager</h5><p>Cross-team programs kept on track.</p></article></li>
+            <li><article class="agent-row"><h5>Project Manager</h5><p>Single projects, planned and driven.</p></article></li>
+            <li><article class="agent-row"><h5>Process Engineer</h5><p>Maps and fixes processes.</p></article></li>
+            <li><article class="agent-row"><h5>Procurement Specialist</h5><p>Vendors, chosen and managed on your terms.</p></article></li>
+            <li><article class="agent-row"><h5>Risk Manager</h5><p>Names the risks before they name you.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Architecture</h4><p>The technical calls that keep what you build sound, secure, and ready to scale.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Chief Architect</h5><p>Holds the technical big picture together.</p></article></li>
+            <li><article class="agent-row"><h5>AI Architect</h5><p>How AI fits into your product, safely.</p></article></li>
+            <li><article class="agent-row"><h5>API Architect</h5><p>The contracts between your systems.</p></article></li>
+            <li><article class="agent-row"><h5>Cloud Architect</h5><p>Infrastructure, deployment, and scale decisions.</p></article></li>
+            <li><article class="agent-row"><h5>Data Architect</h5><p>How your data is modeled and stored.</p></article></li>
+            <li><article class="agent-row"><h5>Security Architect</h5><p>Finds the holes before someone else does.</p></article></li>
+          </ul>
+        </article>
+        <article class="team-directory__team">
+          <header class="team-directory__team-header"><h4>Design</h4><p>Makes the work come out looking like a real studio produced it.</p></header>
+          <ul class="agent-list">
+            <li><article class="agent-row"><h5>Design Director</h5><p>Holds the system together.</p></article></li>
+            <li><article class="agent-row"><h5>UI Designer</h5><p>Interface and component design.</p></article></li>
+            <li><article class="agent-row"><h5>Visual Designer</h5><p>Brand and graphic systems.</p></article></li>
+            <li><article class="agent-row"><h5>Interaction Designer</h5><p>Flows and how the product behaves.</p></article></li>
+            <li><article class="agent-row"><h5>Motion Designer</h5><p>Motion that makes the product feel alive.</p></article></li>
+            <li><article class="agent-row"><h5>User Researcher</h5><p>Studies, interviews, usability.</p></article></li>
+          </ul>
+        </article>
+        </div>
+      </section>
       </div>
     </section>
   </div>
