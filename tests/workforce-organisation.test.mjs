@@ -12,7 +12,7 @@ const chartStyles = page.slice(
   page.indexOf('/* ---- function blocks + role cards ---- */'),
 );
 
-test('maps the workforce as a grouped organisation without specialist detail', () => {
+test('maps the workforce as a grouped organisation', () => {
   assert.match(teamSection, /class="organisation-chart(?:\s|")/);
   assert.match(teamSection, /Enterprise Leadership &amp; Governance/);
   assert.match(teamSection, /Product, Growth &amp; Customer/);
@@ -40,9 +40,33 @@ test('maps the workforce as a grouped organisation without specialist detail', (
   }
 
   assert.doesNotMatch(teamSection, /Corp Dev/);
-  assert.doesNotMatch(teamSection, /data-workforce-view="specialist-roster"/);
-  assert.doesNotMatch(teamSection, /class="roster-row"/);
   assert.doesNotMatch(teamSection, /class="org-tile"/);
+});
+
+test('keeps the detailed team directory beneath the organisation map', () => {
+  assert.match(teamSection, /id="team-directory-title">Explore every team and its specialists\./);
+  assert.match(teamSection, /data-workforce-view="specialist-roster"/);
+  assert.match(teamSection, /<h3>Development<\/h3>/);
+  assert.equal([...teamSection.matchAll(/class="function-block"/g)].length, 16);
+  assert.equal([...teamSection.matchAll(/class="roster-row"/g)].length, 102);
+
+  for (const role of [
+    'Tech Lead',
+    'Frontend Developer',
+    'Backend Developer',
+    'DevOps Engineer',
+    'Quality Assurance Engineer',
+    'Automation Engineer',
+    'Chief Product Officer',
+    'Marketing Director',
+    'Legal Director',
+    'Personal Assistant',
+  ]) {
+    assert.match(teamSection, new RegExp(`<h4>${role}(?:<|/)`));
+  }
+
+  assert.match(teamSection, /Ask it for:/);
+  assert.doesNotMatch(teamSection, /<h3>Corp Dev<\/h3>/);
 });
 
 test('uses only defined spacing tokens for the organisation chart', () => {

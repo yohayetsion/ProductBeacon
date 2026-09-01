@@ -234,6 +234,10 @@
     .organisation-chart__group::before { top: calc(-1 * var(--space-4)); height: var(--space-4); }
   }
 
+  .workforce-directory__header { margin-top: var(--space-12); max-width: 720px; }
+  .workforce-directory__header h3 { margin-bottom: var(--space-3); }
+  .workforce-directory__header p:last-child { color: var(--secondary); }
+
   /* ---- function blocks + role cards ---- */
   .function-block { margin-top: var(--space-12); }
   .function-block__header { margin-bottom: var(--space-4); }
@@ -607,6 +611,268 @@
         </section>
       </div>
     </section>
+
+    <header class="workforce-directory__header">
+      <p class="eyebrow">THE TEAM DIRECTORY</p>
+      <h3 id="team-directory-title">Explore every team and its specialists.</h3>
+      <p>Each team lists the specialist roles available to work with you and the contribution each makes.</p>
+    </header>
+<section class="workforce-roster" data-workforce-view="specialist-roster" aria-label="Specialist roster">
+    <div class="function-block" id="fn-product">
+      <div class="function-block__header">
+        <h3>Product &amp; Strategy</h3>
+        <p>Decides what to build, how to position it, and where to place your bets.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Chief Product Officer</h4><p class="roster-row__job">The senior product voice: strategy, portfolio, and the hardest calls.</p></summary><div class="roster-row__detail"><p>Ask it for: a product strategy read, a portfolio view, a hard trade-off argued out.</p><p class="roster-row__control">You stay in control of: the strategy is yours.</p></div></details>
+        <details class="roster-row"><summary><h4>VP Product</h4><p class="roster-row__job">Owns vision, portfolio, and pricing strategy.</p></summary><div class="roster-row__detail"><p>Ask it for: a strategic bet, a roadmap theme, a pricing approach.</p><p class="roster-row__control">You stay in control of: where to play.</p></div></details>
+        <details class="roster-row"><summary><h4>Director of Product Management</h4><p class="roster-row__job">Roadmaps, prioritization, and the delivery rhythm.</p></summary><div class="roster-row__detail"><p>Ask it for: a prioritized roadmap, a planning cycle.</p><p class="roster-row__control">You stay in control of: the priorities.</p></div></details>
+        <details class="roster-row"><summary><h4>Director of Product Marketing</h4><p class="roster-row__job">Owns go-to-market strategy and competitive response.</p></summary><div class="roster-row__detail"><p>Ask it for: a go-to-market strategy, a market segmentation, a competitive response plan.</p></div></details>
+        <details class="roster-row"><summary><h4>Product Manager</h4><p class="roster-row__job">Turns direction into specs and delivery.</p></summary><div class="roster-row__detail"><p>Ask it for: a product requirements doc, user stories, a feature spec.</p><p class="roster-row__control">You stay in control of: scope.</p></div></details>
+        <details class="roster-row"><summary><h4>Product Marketing Manager</h4><p class="roster-row__job">Positions and launches the work.</p></summary><div class="roster-row__detail"><p>Ask it for: positioning, messaging, a launch narrative.</p></div></details>
+        <details class="roster-row"><summary><h4>Business Operations</h4><p class="roster-row__job">Business cases, KPIs, and the numbers behind a call.</p></summary><div class="roster-row__detail"><p>Ask it for: a business case, a KPI model.</p></div></details>
+        <details class="roster-row"><summary><h4>Business Development</h4><p class="roster-row__job">Partnerships, market expansion, channel deals.</p></summary><div class="roster-row__detail"><p>Ask it for: a partnership map, an expansion read.</p></div></details>
+        <details class="roster-row"><summary><h4>Competitive Intelligence</h4><p class="roster-row__job">Tracks rivals, runs win/loss, sizes the market.</p></summary><div class="roster-row__detail"><p>Ask it for: a battlecard, a competitive teardown, a win/loss readout.</p><p class="roster-row__control">You stay in control of: how to respond.</p></div></details>
+        <details class="roster-row"><summary><h4>Product Operations</h4><p class="roster-row__job">Launch readiness, process, and tooling for the product org.</p></summary><div class="roster-row__detail"><p>Ask it for: a launch-readiness checklist, a process fix.</p></div></details>
+        <details class="roster-row"><summary><h4>Value Realization</h4><p class="roster-row__job">Proves customers are getting the value they paid for.</p></summary><div class="roster-row__detail"><p>Ask it for: a value report, an adoption read, a renewal-risk view.</p><p class="roster-row__control">You stay in control of: where to focus.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-design">
+      <div class="function-block__header">
+        <h3>Design</h3>
+        <p>Makes the work come out looking like a real studio produced it.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Design Director</h4><p class="roster-row__job">Holds the system together.</p></summary><div class="roster-row__detail"><p>Ask it for: a design review, system direction.</p></div></details>
+        <details class="roster-row"><summary><h4>UI Designer</h4><p class="roster-row__job">Interface and component design.</p></summary><div class="roster-row__detail"><p>Ask it for: component specs, a UI layout.</p></div></details>
+        <details class="roster-row"><summary><h4>Visual Designer</h4><p class="roster-row__job">Brand and graphic systems.</p></summary><div class="roster-row__detail"><p>Ask it for: a visual direction, brand assets.</p></div></details>
+        <details class="roster-row"><summary><h4>Interaction Designer</h4><p class="roster-row__job">Flows and how the product behaves.</p></summary><div class="roster-row__detail"><p>Ask it for: a user flow, an interaction spec.</p></div></details>
+        <details class="roster-row"><summary><h4>Motion Designer</h4><p class="roster-row__job">Motion that makes the product feel alive.</p></summary><div class="roster-row__detail"><p>Ask it for: a motion spec, an animation direction.</p></div></details>
+        <details class="roster-row"><summary><h4>User Researcher</h4><p class="roster-row__job">Studies, interviews, usability.</p></summary><div class="roster-row__detail"><p>Ask it for: an interview guide, a synthesis.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-arch"><span id="fn-eng" style="scroll-margin-top: calc(var(--nav-height) + 52px);" aria-hidden="true"></span>
+      <div class="function-block__header">
+        <h3>Architecture</h3>
+        <p>The technical calls that keep what you build sound, secure, and ready to scale.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Chief Architect</h4><p class="roster-row__job">Holds the technical big picture together.</p></summary><div class="roster-row__detail"><p>Ask it for: an architecture review, a technical strategy read.</p><p class="roster-row__control">You stay in control of: the direction.</p></div></details>
+        <details class="roster-row"><summary><h4>AI Architect</h4><p class="roster-row__job">How AI fits into your product, safely.</p></summary><div class="roster-row__detail"><p>Ask it for: an AI feature architecture, a model-integration read.</p></div></details>
+        <details class="roster-row"><summary><h4>API Architect</h4><p class="roster-row__job">The contracts between your systems.</p></summary><div class="roster-row__detail"><p>Ask it for: an API design, a versioning approach.</p></div></details>
+        <details class="roster-row"><summary><h4>Cloud Architect</h4><p class="roster-row__job">Infrastructure, deployment, and scale decisions.</p></summary><div class="roster-row__detail"><p>Ask it for: a cloud architecture, a scaling plan.</p></div></details>
+        <details class="roster-row"><summary><h4>Data Architect</h4><p class="roster-row__job">How your data is modeled and stored.</p></summary><div class="roster-row__detail"><p>Ask it for: a data model, a schema design.</p></div></details>
+        <details class="roster-row"><summary><h4>Security Architect</h4><p class="roster-row__job">Finds the holes before someone else does.</p></summary><div class="roster-row__detail"><p>Ask it for: a threat model, a security architecture read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-development">
+      <div class="function-block__header">
+        <h3>Development</h3>
+        <p>Builds, tests, deploys, and improves the software behind the product.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Tech Lead</h4><p class="roster-row__job">Technical direction, code quality, and cross-team delivery.</p></summary><div class="roster-row__detail"><p>Ask it for: a technical plan, an architecture review, a code-review approach.</p></div></details>
+        <details class="roster-row"><summary><h4>Frontend Developer</h4><p class="roster-row__job">Interfaces and client-side product implementation.</p></summary><div class="roster-row__detail"><p>Ask it for: a component implementation, a responsive interface, a frontend review.</p></div></details>
+        <details class="roster-row"><summary><h4>Backend Developer</h4><p class="roster-row__job">APIs, data flows, and secure server-side implementation.</p></summary><div class="roster-row__detail"><p>Ask it for: an API design, a backend implementation, a security review.</p></div></details>
+        <details class="roster-row"><summary><h4>DevOps Engineer</h4><p class="roster-row__job">Deployment, infrastructure, monitoring, and operational reliability.</p></summary><div class="roster-row__detail"><p>Ask it for: a deployment plan, a CI/CD review, a monitoring setup.</p></div></details>
+        <details class="roster-row"><summary><h4>Quality Assurance Engineer</h4><p class="roster-row__job">Test strategy, quality coverage, and release confidence.</p></summary><div class="roster-row__detail"><p>Ask it for: a test plan, regression coverage, a quality review.</p></div></details>
+        <details class="roster-row"><summary><h4>Automation Engineer</h4><p class="roster-row__job">Build tooling, scripted workflows, and operational automation.</p></summary><div class="roster-row__detail"><p>Ask it for: a workflow automation, a tooling script, a reliability improvement.</p></div></details>
+      </div>
+    </div>
+    <div class="function-block" id="fn-marketing">
+      <div class="function-block__header">
+        <h3>Marketing</h3>
+        <p>A full marketing department, on call.</p>
+        <p><a href="#fn-exec">Led by the Chief Marketing Officer — on the Executive team</a></p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Marketing Director</h4><p class="roster-row__job">Runs the marketing org and its budget calls.</p></summary><div class="roster-row__detail"><p>Ask it for: a marketing plan, a channel-mix read.</p><p class="roster-row__control">You stay in control of: the budget.</p></div></details>
+        <details class="roster-row"><summary><h4>Content Strategist</h4><p class="roster-row__job">Editorial and calendars.</p></summary><div class="roster-row__detail"><p>Ask it for: a content calendar, a content strategy.</p></div></details>
+        <details class="roster-row"><summary><h4>Copywriter</h4><p class="roster-row__job">Headlines, pages, ads.</p></summary><div class="roster-row__detail"><p>Ask it for: landing copy, an email, a tagline.</p></div></details>
+        <details class="roster-row"><summary><h4>Conversion Specialist</h4><p class="roster-row__job">Turns more visitors into customers.</p></summary><div class="roster-row__detail"><p>Ask it for: a conversion audit, an A/B test plan.</p></div></details>
+        <details class="roster-row"><summary><h4>Email Marketer</h4><p class="roster-row__job">Sequences that get opened.</p></summary><div class="roster-row__detail"><p>Ask it for: an email sequence, a nurture flow.</p></div></details>
+        <details class="roster-row"><summary><h4>Growth Marketer</h4><p class="roster-row__job">Loops that compound.</p></summary><div class="roster-row__detail"><p>Ask it for: a growth model, a referral loop.</p></div></details>
+        <details class="roster-row"><summary><h4>Infographic Designer</h4><p class="roster-row__job">Data turned into visuals people share.</p></summary><div class="roster-row__detail"><p>Ask it for: an infographic, a visual data story.</p></div></details>
+        <details class="roster-row"><summary><h4>Market Researcher</h4><p class="roster-row__job">Sizes markets and reads demand.</p></summary><div class="roster-row__detail"><p>Ask it for: a market sizing, a demand read.</p></div></details>
+        <details class="roster-row"><summary><h4>Paid Media Manager</h4><p class="roster-row__job">Paid reach that pays back.</p></summary><div class="roster-row__detail"><p>Ask it for: a paid campaign, a channel budget split.</p></div></details>
+        <details class="roster-row"><summary><h4>PR &amp; Communications</h4><p class="roster-row__job">The story the press tells about you.</p></summary><div class="roster-row__detail"><p>Ask it for: a press release, a communications plan.</p></div></details>
+        <details class="roster-row"><summary><h4>Presentation Designer</h4><p class="roster-row__job">Decks that carry the room.</p></summary><div class="roster-row__detail"><p>Ask it for: a pitch deck, a board deck.</p></div></details>
+        <details class="roster-row"><summary><h4>SEO Specialist</h4><p class="roster-row__job">Shows up in search, organic first.</p></summary><div class="roster-row__detail"><p>Ask it for: an SEO plan, optimized page copy.</p></div></details>
+        <details class="roster-row"><summary><h4>Social Media Manager</h4><p class="roster-row__job">Social content and calendars.</p></summary><div class="roster-row__detail"><p>Ask it for: a social calendar, a month of posts.</p></div></details>
+        <details class="roster-row"><summary><h4>Video Producer</h4><p class="roster-row__job">Scripts and video content plans.</p></summary><div class="roster-row__detail"><p>Ask it for: a video script, a storyboard.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-finance">
+      <div class="function-block__header">
+        <h3>Finance</h3>
+        <p>Keeps the numbers honest and the decisions paid for.</p>
+        <p><a href="#fn-exec">Led by the Chief Financial Officer — on the Executive team</a></p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> First-pass drafting and triage only. The figures in any model are yours; the workforce builds the structure and the scenarios. Anything carrying real weight goes to your own finance professional. This is not financial advice.</div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Finance Director</h4><p class="roster-row__job">Runs the finance function day to day.</p></summary><div class="roster-row__detail"><p>Ask it for: a budget framework, a finance operating rhythm.</p><p class="roster-row__control">You stay in control of: the numbers.</p></div></details>
+        <details class="roster-row"><summary><h4>Controller</h4><p class="roster-row__job">Close and controls structure.</p></summary><div class="roster-row__detail"><p>Ask it for: a close checklist.</p></div></details>
+        <details class="roster-row"><summary><h4>Financial Planning &amp; Analysis</h4><p class="roster-row__job">Planning and modeling structure.</p></summary><div class="roster-row__detail"><p>Ask it for: a model structure, a budget framework.</p><p class="roster-row__control">You stay in control of: the numbers.</p></div></details>
+        <details class="roster-row"><summary><h4>Investor Relations</h4><p class="roster-row__job">How you talk to the people who fund you.</p></summary><div class="roster-row__detail"><p>Ask it for: an investor update draft, a data-room checklist.</p></div></details>
+        <details class="roster-row"><summary><h4>Revenue Analyst</h4><p class="roster-row__job">Revenue structure and what drives it.</p></summary><div class="roster-row__detail"><p>Ask it for: a revenue model framework.</p></div></details>
+        <details class="roster-row"><summary><h4>Tax Planning</h4><p class="roster-row__job">Tax questions structured before your accountant decides.</p></summary><div class="roster-row__detail"><p>Ask it for: a tax-question first pass, the questions for your accountant.</p><p class="roster-row__control">You stay in control of: your tax professional makes the tax calls. This is not tax advice.</p></div></details>
+        <details class="roster-row"><summary><h4>Treasury Analyst</h4><p class="roster-row__job">Cash position and runway structure.</p></summary><div class="roster-row__detail"><p>Ask it for: a cash-flow framework, a runway view.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-legal">
+      <div class="function-block__header">
+        <h3>Legal &amp; Compliance<span class="supervised-access">Available under supervised terms</span></h3>
+        <p>First-pass drafting and triage on the things that usually make you wait days for an answer. Available under supervised terms: drafting and triage only, conveyed with a qualified human required in the loop.</p>
+        <p><a href="#fn-exec">Led by the General Counsel — on the Executive team</a></p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> Drafting and triage only, conveyed under supervised terms. Anything with real legal weight still goes to your own lawyer, and the workforce is built to hand it over cleanly. No attorney-client relationship is created, and this is not legal advice.</div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Legal Director<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">Runs the legal drafting-and-triage work, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a legal-workload triage, the right questions for your lawyer.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>Contracts Counsel<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">First-pass contract triage, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a clause-level triage, the questions to ask.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>Privacy Counsel<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">Privacy triage, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a privacy-policy first pass, a data-flow triage.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>IP Counsel<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">Intellectual-property triage, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: an IP triage, a licensing first pass.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>Employment Counsel<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">Employment-law triage, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: an employment-question first pass, the questions to ask.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>Compliance Officer<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">Compliance readiness triage, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a compliance readiness first pass.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your qualified professional.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-ops">
+      <div class="function-block__header">
+        <h3>Operations</h3>
+        <p>Makes sure the work actually ships and keeps shipping.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Operations Director</h4><p class="roster-row__job">Runs the operating rhythm across functions.</p></summary><div class="roster-row__detail"><p>Ask it for: an operating cadence, a cross-team process read.</p></div></details>
+        <details class="roster-row"><summary><h4>Program Manager</h4><p class="roster-row__job">Cross-team programs kept on track.</p></summary><div class="roster-row__detail"><p>Ask it for: a program plan, a governance rhythm.</p></div></details>
+        <details class="roster-row"><summary><h4>Project Manager</h4><p class="roster-row__job">Single projects, planned and driven.</p></summary><div class="roster-row__detail"><p>Ask it for: a project schedule, a status rhythm.</p></div></details>
+        <details class="roster-row"><summary><h4>Process Engineer</h4><p class="roster-row__job">Maps and fixes processes.</p></summary><div class="roster-row__detail"><p>Ask it for: a process map, a bottleneck fix.</p></div></details>
+        <details class="roster-row"><summary><h4>Procurement Specialist</h4><p class="roster-row__job">Vendors, chosen and managed on your terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a procurement checklist, a vendor comparison.</p></div></details>
+        <details class="roster-row"><summary><h4>Risk Manager</h4><p class="roster-row__job">Names the risks before they name you.</p></summary><div class="roster-row__detail"><p>Ask it for: a risk register, a mitigation plan.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-exec">
+      <div class="function-block__header">
+        <h3>Executive</h3>
+        <p>Sets direction and makes the trade-offs that shape everything below.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>CEO</h4><p class="roster-row__job">Direction and the calls at the top.</p></summary><div class="roster-row__detail"><p>Ask it for: a strategic alignment read, an annual plan.</p><p class="roster-row__control">You stay in control of: the final call.</p></div></details>
+        <details class="roster-row"><summary><h4>Chief Financial Officer</h4><p class="roster-row__job">The financial strategy voice at the top.</p></summary><div class="roster-row__detail"><p>Ask it for: a financial strategy read, a fundraise framework.</p><p class="roster-row__control">You stay in control of: the figures are yours, always.</p></div></details>
+        <details class="roster-row"><summary><h4>Chief Operating Officer</h4><p class="roster-row__job">Makes the whole operation run as one.</p></summary><div class="roster-row__detail"><p>Ask it for: an operating-model read, an org-process view.</p></div></details>
+        <details class="roster-row"><summary><h4>Chief Marketing Officer</h4><p class="roster-row__job">The marketing strategy voice at the top.</p></summary><div class="roster-row__detail"><p>Ask it for: a brand strategy read, a channel portfolio view.</p></div></details>
+        <details class="roster-row"><summary><h4>Chief People Officer</h4><p class="roster-row__job">People strategy, org design, culture.</p></summary><div class="roster-row__detail"><p>Ask it for: an org design read, a people strategy view.</p><p class="roster-row__control">You stay in control of: every hiring and pay decision is made by you.</p></div></details>
+        <details class="roster-row"><summary><h4>Chief Information Officer</h4><p class="roster-row__job">Technology governance at the top.</p></summary><div class="roster-row__detail"><p>Ask it for: an IT governance read, a systems strategy view.</p></div></details>
+        <details class="roster-row"><summary><h4>General Counsel<span class="supervised-access">Supervised</span></h4><p class="roster-row__job">The senior legal lens: drafting and triage only, under supervised terms.</p></summary><div class="roster-row__detail"><p>Ask it for: a legal-risk triage, the brief for your outside counsel.</p><p class="roster-row__control">You stay in control of: anything with weight goes to your lawyer.</p></div></details>
+        <details class="roster-row"><summary><h4>Head of Corporate Development</h4><p class="roster-row__job">Deals, acquisitions, and strategic moves.</p></summary><div class="roster-row__detail"><p>Ask it for: a deal thesis, an acquisition screen.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-corpdev">
+      <div class="function-block__header">
+        <h3>Corporate Development</h3>
+        <p>Deals, investments, and the partnerships that change your company's shape.</p>
+        <p><a href="#fn-exec">Led by the Head of Corporate Development — on the Executive team</a></p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>M&amp;A Analyst</h4><p class="roster-row__job">Mergers and acquisitions, analyzed before you commit.</p></summary><div class="roster-row__detail"><p>Ask it for: a target evaluation, a diligence checklist.</p><p class="roster-row__control">You stay in control of: the deal decision.</p></div></details>
+        <details class="roster-row"><summary><h4>Corporate Venture</h4><p class="roster-row__job">Investments and venture moves, structured.</p></summary><div class="roster-row__detail"><p>Ask it for: an investment thesis, a venture screen.</p></div></details>
+        <details class="roster-row"><summary><h4>Strategic Partnerships</h4><p class="roster-row__job">Partnerships with company-level weight.</p></summary><div class="roster-row__detail"><p>Ask it for: a partnership structure, an alliance read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-it">
+      <div class="function-block__header">
+        <h3>IT Governance</h3>
+        <p>Keeps systems, data, and security policies in order as you grow.</p>
+        <p><a href="#fn-exec">Led by the Chief Information Officer — on the Executive team</a></p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>IT Director</h4><p class="roster-row__job">Runs IT governance day to day.</p></summary><div class="roster-row__detail"><p>Ask it for: an IT policy framework, a governance maturity read.</p></div></details>
+        <details class="roster-row"><summary><h4>Data Governance</h4><p class="roster-row__job">Rules for your data before regulators write them for you.</p></summary><div class="roster-row__detail"><p>Ask it for: a data governance framework, a retention policy draft.</p></div></details>
+        <details class="roster-row"><summary><h4>Enterprise Systems</h4><p class="roster-row__job">The business systems that run the company.</p></summary><div class="roster-row__detail"><p>Ask it for: a systems landscape read, a tool consolidation plan.</p></div></details>
+        <details class="roster-row"><summary><h4>IT Security Policy</h4><p class="roster-row__job">Security policies that hold up to scrutiny.</p></summary><div class="roster-row__detail"><p>Ask it for: a security policy draft, an access-control framework.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-hr">
+      <div class="function-block__header">
+        <h3>HR / People Ops</h3>
+        <p>Hiring, onboarding, performance, and pay: drafted and structured, decided by you.</p>
+        <p><a href="#fn-exec">Led by the Chief People Officer — on the Executive team</a></p>
+      </div>
+      <div class="legal-inset legal-inset--hitl"><strong>A qualified human stays in the loop.</strong> The people work here is drafting and triage: job descriptions, interview guides, pay-band structures, and structured first passes that get you to a decision faster. It never screens, scores, or ranks a person. Every hiring and pay decision is made by a human: you.</div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>HR Director</h4><p class="roster-row__job">Hiring, performance, comp: drafted for your decisions.</p></summary><div class="roster-row__detail"><p>Ask it for: a job description, an interview guide.</p><p class="roster-row__control">You stay in control of: every hiring and pay decision.</p></div></details>
+        <details class="roster-row"><summary><h4>Recruiter</h4><p class="roster-row__job">Hiring pipelines, drafted and structured; you decide on every candidate.</p></summary><div class="roster-row__detail"><p>Ask it for: a job description, an interview plan, a structured candidate summary for your decision.</p><p class="roster-row__control">You stay in control of: every hiring decision is yours. It never screens, scores, or ranks a person.</p></div></details>
+        <details class="roster-row"><summary><h4>Onboarding Specialist</h4><p class="roster-row__job">New hires productive fast.</p></summary><div class="roster-row__detail"><p>Ask it for: a 30-60-90 plan, an onboarding checklist.</p></div></details>
+        <details class="roster-row"><summary><h4>Performance Specialist</h4><p class="roster-row__job">Performance cycles, structured; the judgments stay yours.</p></summary><div class="roster-row__detail"><p>Ask it for: a goals framework, a feedback-cycle structure.</p><p class="roster-row__control">You stay in control of: every performance judgment is yours.</p></div></details>
+        <details class="roster-row"><summary><h4>Compensation Analyst</h4><p class="roster-row__job">Pay structures, benchmarked and drafted; you set the pay.</p></summary><div class="roster-row__detail"><p>Ask it for: a compensation band structure, a benchmark summary.</p><p class="roster-row__control">You stay in control of: every pay decision is yours.</p></div></details>
+        <details class="roster-row"><summary><h4>People Analyst</h4><p class="roster-row__job">Workforce numbers that tell you something.</p></summary><div class="roster-row__detail"><p>Ask it for: an attrition read, a headcount plan structure.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-cs">
+      <div class="function-block__header">
+        <h3>Customer Success</h3>
+        <p>Keeps customers after you win them.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Customer Success Director</h4><p class="roster-row__job">Runs the retention motion.</p></summary><div class="roster-row__detail"><p>Ask it for: a customer success strategy, a segmentation model.</p></div></details>
+        <details class="roster-row"><summary><h4>Customer Success Manager</h4><p class="roster-row__job">Account health and retention.</p></summary><div class="roster-row__detail"><p>Ask it for: a health scorecard, a business-review deck.</p></div></details>
+        <details class="roster-row"><summary><h4>Customer Success Operations</h4><p class="roster-row__job">The metrics and tooling behind retention.</p></summary><div class="roster-row__detail"><p>Ask it for: a churn-analysis structure, a retention metrics read.</p></div></details>
+        <details class="roster-row"><summary><h4>Support Lead</h4><p class="roster-row__job">Tickets and SLAs.</p></summary><div class="roster-row__detail"><p>Ask it for: a support workflow.</p></div></details>
+        <details class="roster-row"><summary><h4>Knowledge Base Specialist</h4><p class="roster-row__job">Help docs and self-service.</p></summary><div class="roster-row__detail"><p>Ask it for: a help-center article.</p></div></details>
+        <details class="roster-row"><summary><h4>Customer Onboarding Manager</h4><p class="roster-row__job">Time-to-value.</p></summary><div class="roster-row__detail"><p>Ask it for: an onboarding playbook.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-sales">
+      <div class="function-block__header">
+        <h3>Sales</h3>
+        <p>The motion that turns interest into signed business.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Sales Director</h4><p class="roster-row__job">Pipeline, quota, and the sales operating rhythm.</p></summary><div class="roster-row__detail"><p>Ask it for: a pipeline forecast structure, a territory plan.</p></div></details>
+        <details class="roster-row"><summary><h4>Account Executive</h4><p class="roster-row__job">Negotiation and closing.</p></summary><div class="roster-row__detail"><p>Ask it for: a deal strategy, objection handling.</p></div></details>
+        <details class="roster-row"><summary><h4>Sales Engineer</h4><p class="roster-row__job">Technical demos and POCs.</p></summary><div class="roster-row__detail"><p>Ask it for: a demo script, an RFP response.</p></div></details>
+        <details class="roster-row"><summary><h4>Sales Development Rep</h4><p class="roster-row__job">Outbound and qualification.</p></summary><div class="roster-row__detail"><p>Ask it for: an outbound sequence.</p></div></details>
+        <details class="roster-row"><summary><h4>Sales Operations</h4><p class="roster-row__job">The numbers and hygiene behind the pipeline.</p></summary><div class="roster-row__detail"><p>Ask it for: a pipeline analytics read, a sales-data hygiene checklist.</p></div></details>
+        <details class="roster-row"><summary><h4>Proposal Writer</h4><p class="roster-row__job">Proposals and SOWs.</p></summary><div class="roster-row__detail"><p>Ask it for: a proposal, a pricing presentation.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-data">
+      <div class="function-block__header">
+        <h3>Data Science</h3>
+        <p>Turns what is happening in your business into something you can act on.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Data Science Lead</h4><p class="roster-row__job">Analytics strategy and the metrics that matter.</p></summary><div class="roster-row__detail"><p>Ask it for: a metrics strategy, a north-star metric definition.</p></div></details>
+        <details class="roster-row"><summary><h4>Data Analyst</h4><p class="roster-row__job">Ad-hoc analysis and queries.</p></summary><div class="roster-row__detail"><p>Ask it for: a cohort analysis, a SQL query.</p></div></details>
+        <details class="roster-row"><summary><h4>Business Intelligence Engineer</h4><p class="roster-row__job">Dashboards and reporting.</p></summary><div class="roster-row__detail"><p>Ask it for: a dashboard, a metric tree.</p></div></details>
+        <details class="roster-row"><summary><h4>Machine Learning Engineer</h4><p class="roster-row__job">Models and evaluation.</p></summary><div class="roster-row__detail"><p>Ask it for: a model approach, an eval.</p></div></details>
+        <details class="roster-row"><summary><h4>Experimentation Analyst</h4><p class="roster-row__job">A/B test reads.</p></summary><div class="roster-row__detail"><p>Ask it for: an experiment design, a result read.</p></div></details>
+      </div>
+    </div>
+
+    <div class="function-block" id="fn-staff">
+      <div class="function-block__header">
+        <h3>Personal Staff</h3>
+        <p>Your own office: daily support and research on call.</p>
+      </div>
+      <div class="roster-list">
+        <details class="roster-row"><summary><h4>Personal Assistant</h4><p class="roster-row__job">Day-to-day support.</p></summary><div class="roster-row__detail"><p>Ask it for: a daily briefing, an organized week.</p></div></details>
+        <details class="roster-row"><summary><h4>Analyst</h4><p class="roster-row__job">Research on anything, synthesized.</p></summary><div class="roster-row__detail"><p>Ask it for: a research synthesis, a sourced answer.</p></div></details>
+      </div>
+    </div>
+    </section>
+    <div class="hitl-band" role="note"><h3>One rule holds across every sensitive field.</h3><p>Legal, HR, finance, compliance. Anything that carries legal, financial, people, or compliance weight is drafted and triaged, then handed to your own qualified professional. The workforce never replaces the qualified human who signs off. <strong>You, or your lawyer, your accountant, always make the call.</strong></p></div>
   </div>
 </section><section class="section section--accent" id="cta"><div class="container workforce-final"><div><p class="eyebrow">Choose how to use the system</p><h2>Run one Product team, extend the workforce, or have ProductBeacon carry the outcome.</h2><p>Choose the responsibility you want to keep. The next page gives you the operating and engagement detail.</p></div><div class="workforce-final__actions"><a class="btn btn--primary btn--lg" href="/only-product-person/">Run one Product team</a><a class="btn btn--outline btn--lg" href="/covering-everything/">Extend beyond Product</a><a class="btn btn--outline btn--lg" href="/on-call.html">See On Call &amp; Fractional</a></div></div></section>
 
