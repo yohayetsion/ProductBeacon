@@ -8,8 +8,8 @@ const path = require('path');
 const reviewRoot = __dirname;
 const repoRoot = path.resolve(reviewRoot, '..', '..');
 const prefix = '/internal/fill-the-rooms-review/';
-const buildStamp = '5R-PLAS-ROUTEMERGE-20260830-DR425';
-const reviewCommittedOntoCommit = '3c3fd33726a8cc27ff91831aa45afa855271864f';
+const buildStamp = 'SITE-FEEDBACK-20260907';
+const reviewCommittedOntoCommit = 'cf99214a5399e631363b47073de344440501f2cb';
 const robots = '<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">';
 const referrer = '<meta name="referrer" content="no-referrer">';
 
@@ -275,7 +275,7 @@ const hashedPaths = [
 
 const manifest = {
   schema_version: 1,
-  candidate: 'ProductBeacon Product Leadership, At Scale Phase 5R review',
+  candidate: 'ProductBeacon homepage feedback review, 7 September 2026',
   build_stamp: buildStamp,
   review_committed_onto_commit: reviewCommittedOntoCommit,
   source_provenance: 'the production-shaped sources carry uncommitted changes on top of this commit by design (DR-2026-412); source_to_review[].source_sha256 is the binding record of what was built',
@@ -292,7 +292,7 @@ const manifest = {
     '/css/style.css',
     '/js/main.js',
     '/research/favicon-research.svg',
-    '/ledger/june-2026-cover.png',
+    '/ledger/july-2026-cover.png',
     'https://fonts.googleapis.com',
     'https://fonts.gstatic.com'
   ],
