@@ -84,6 +84,7 @@ check(licenceRow && !/\bseat/i.test(licenceRow), 'the word seat never appears in
 const mainHtml = (doorTwo.match(/<main[\s\S]*<\/main>/) || [''])[0];
 check((mainHtml.match(/href="https:\/\/yohayetsion\.github\.io\/product-org-os\/"/g) || []).length === 1, 'Door 2 body links the Product Org OS site exactly once (licence row)');
 check(/aria-label="Get Product Org OS, opens the Product Org OS site">Get Product Org OS &#8599;<\/a>/.test(mainHtml), 'the Product Org OS link carries the outbound cue and aria-label');
+check(mainHtml.includes('<p class="door-note door-note--link"><a href="https://yohayetsion.github.io/product-org-os/"'), 'the Product Org OS link sits on its own line');
 check((mainHtml.match(/class="door-beat /g) || []).length === 4, 'Door 2 carries exactly four ladder rows after round 3');
 check(mainHtml.includes('<a href="/research/">Read two full reports the workforce wrote</a>') && mainHtml.includes('<a href="/workforce.html">The Workforce</a>'), 'secondary links carry the proof and the Workforce');
 check(!doorTwo.includes('It lands here, after everything else') && !doorTwo.includes('ProductBeacon built an AI workforce that covers those functions'), 'the two intro beats are removed');
@@ -95,7 +96,7 @@ const affirmedStrings = [
   'Need only the Product team? That one is free and open source.',
   'The Intensive is about how you govern the workforce effectively, leading them to do the work. You do not need the licence to join.',
   'Two seatings, two hours each. $600 per cohort of up to 5 seats. Live.',
-  'Cohorts open in order of registration. Yohay replies personally.',
+  'Cohorts open in order of registration.',
   'Every month: office hours, live.',
   'One live session a month. Bring a question about your own work or about the workforce, and ask it. No course or licence needed.',
   'Free. Open to anyone.',
@@ -115,7 +116,8 @@ const forbidden = [
   [/about 12|one day|\blicense\b|Nobody is going to be hired|after eight|founding|Runs on your own Claude plan|a seat, founding/, 'a round-2 or round-3 withdrawn string'],
   [/next cohort|keep you posted|subscribe|updates\b/i, 'a waiting-list date or list promise'],
   [/the Room|Every week|weekly|Or ProductBeacon carries it|Read the work before you believe|Who this is not for|Included, after the Intensive/, 'a round-3 removed string'],
-  [/about a seat|Seats open in order/, 'per-seat waiting-list wording under the cohort unit']
+  [/about a seat|Seats open in order/, 'per-seat waiting-list wording under the cohort unit'],
+  [/Yohay replies personally/, 'the removed reply line']
 ];
 const doorTwoTextNoPrivacy = doorTwoText.replace(/Web3Forms processes[\s\S]*?contact page\s*\./, '');
 for (const [re, label] of forbidden) check(!re.test(doorTwoTextNoPrivacy), `Door 2 body has no ${label}`);

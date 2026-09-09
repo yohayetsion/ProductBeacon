@@ -34,9 +34,9 @@
     },
     {
       "source_path": "covering-everything/index.html",
-      "source_sha256": "eaf870af28ec38462b24fcf7a7b32d79371c38f4d85463729f933ef1bf8d2a45",
+      "source_sha256": "2b8c29a59cc1fc537aabf8442e1777e29e3a5752c3f13aec17debed4d2af4235",
       "review_path": "internal/fill-the-rooms-review/covering-everything/index.html",
-      "review_sha256": "81c9c067c4fd71be314e94ade50e6580796c1442120638780272c289270da873"
+      "review_sha256": "107b1c6b81f6166510bacd5335336381daedc07fb25abc3b7bd91bdbc5f4587e"
     },
     {
       "source_path": "vision-to-value/index.html",
@@ -70,7 +70,7 @@
     },
     {
       "path": "internal/fill-the-rooms-review/covering-everything/index.html",
-      "sha256": "81c9c067c4fd71be314e94ade50e6580796c1442120638780272c289270da873"
+      "sha256": "107b1c6b81f6166510bacd5335336381daedc07fb25abc3b7bd91bdbc5f4587e"
     },
     {
       "path": "internal/fill-the-rooms-review/index.html",
@@ -90,7 +90,7 @@
     },
     {
       "path": "internal/fill-the-rooms-review/site-doors-gate.js",
-      "sha256": "b19f0b0a59d4db3a09566eeb1e7ddc5be9166399ccbb3c474a16bb6945f9d1f3"
+      "sha256": "b438f39166b38e95bc84c40457be167f1ee52aa5e7ecb97b47c3e7bd8cfff797"
     },
     {
       "path": "internal/fill-the-rooms-review/vision-to-value/index.html",

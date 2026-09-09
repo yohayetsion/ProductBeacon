@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The positioning, the pricing, the competitive read. Nobody is going to be hired for any of it. | ProductBeacon</title>
-<meta name="description" content="Whole disciplines nobody is going to be hired for, and they land on one person. Free. Recorded. Finish it and the licence opens.">
+<title>You carry the positioning, the pricing and the competitive read. There is nobody else for it. | ProductBeacon</title>
+<meta name="description" content="The whole offer, in order, for the person carrying the positioning, the pricing and the competitive read. A free recorded course first, then the licence and the Intensive.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><circle cx='16' cy='12' r='4' fill='%23F59E0B'/><path d='M10 18 L16 28 L22 18' fill='none' stroke='%23F59E0B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="canonical" href="https://productbeacon.agency/covering-everything/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ProductBeacon">
-<meta property="og:title" content="The positioning, the pricing, the competitive read. Nobody is going to be hired for any of it. | ProductBeacon">
-<meta property="og:description" content="Whole disciplines nobody is going to be hired for, and they land on one person. Free. Recorded. Finish it and the licence opens.">
+<meta property="og:title" content="You carry the positioning, the pricing and the competitive read. There is nobody else for it. | ProductBeacon">
+<meta property="og:description" content="The whole offer, in order, for the person carrying the positioning, the pricing and the competitive read. A free recorded course first, then the licence and the Intensive.">
 <meta property="og:url" content="https://productbeacon.agency/covering-everything/">
 <meta property="og:image" content="https://productbeacon.agency/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The positioning, the pricing, the competitive read. Nobody is going to be hired for any of it. | ProductBeacon">
-<meta name="twitter:description" content="Whole disciplines nobody is going to be hired for, and they land on one person. Free. Recorded. Finish it and the licence opens.">
+<meta name="twitter:title" content="You carry the positioning, the pricing and the competitive read. There is nobody else for it. | ProductBeacon">
+<meta name="twitter:description" content="The whole offer, in order, for the person carrying the positioning, the pricing and the competitive read. A free recorded course first, then the licence and the Intensive.">
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
@@ -50,8 +50,12 @@
   .door-beat h2 { margin: 0; font-weight: 400; line-height: 1.6; }
   .door-beat h2 + p { margin-top: var(--space-2); }
   .door-beat--offer h2 { color: var(--text); font-size: 1.25rem; }
+  .door-beat--step h2 { color: var(--text); font-weight: 500; }
   .door-cost { color: var(--amber) !important; font-family: var(--font-mono); font-size: .875rem !important; }
   .door-actions { margin-top: var(--space-10, 40px); }
+  .door-note { margin: var(--space-3) 0 0; color: var(--secondary); font-size: 1rem; }
+  .door-note--link { margin-top: var(--space-2); }
+  .door-beat__action { margin-top: var(--space-4); white-space: normal; height: auto; min-height: 48px; padding-top: var(--space-3); padding-bottom: var(--space-3); text-align: center; }
   .door-actions .btn { white-space: normal; height: auto; min-height: 48px; padding-top: var(--space-3); padding-bottom: var(--space-3); text-align: center; }
   .door-secondary { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--border); }
   .entry-footer__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-8); margin-bottom: var(--space-8); }
@@ -65,6 +69,7 @@
   .course-dialog__close:hover { border-color: var(--amber); color: var(--amber); }
   .course-dialog__header { padding-right: var(--space-12); }
   .course-dialog__header p { margin-top: var(--space-3); color: var(--amber); font-family: var(--font-mono); font-size: .875rem; }
+  .course-dialog__header p.dialog-plain { color: var(--secondary); font-family: inherit; font-size: 1rem; }
   .course-form { margin-top: var(--space-8); }
   .course-form .form-group { margin-bottom: var(--space-4); }
   .course-form label { display: block; margin-bottom: var(--space-2); color: var(--text); font-size: .875rem; font-weight: 600; }
@@ -78,6 +83,7 @@
   .form-status[data-state="sending"] { border-left-color: var(--secondary); }
   .form-status[data-state="success"] { border-left-color: var(--emerald); }
   .privacy-notice { margin-top: var(--space-4); color: var(--secondary); font-size: .8125rem; }
+  .dialog-plain { margin-top: var(--space-3); color: var(--secondary); font-size: 1rem; }
   .course-form .btn { width: 100%; white-space: normal; height: auto; min-height: 48px; padding-top: var(--space-3); padding-bottom: var(--space-3); text-align: center; }
   .course-form .btn:disabled { cursor: wait; opacity: .65; }
   @media (max-width: 767px) { .door-page { padding: var(--space-12) 0; } .entry-footer__inner { flex-direction: column; } .entry-footer__links { justify-content: flex-start; } }
@@ -102,13 +108,14 @@
 <main id="main-content" class="entry-main" tabindex="-1">
   <section class="door-page" aria-labelledby="door-title">
     <div class="container door-page__inner">
-      <h1 id="door-title">The positioning, the pricing, the competitive read. Nobody is going to be hired for any of it.</h1>
+      <h1 id="door-title">You carry the positioning, the pricing and the competitive read. There is nobody else for it.</h1>
       <div class="door-beats">
-        <div class="door-beat"><h2>The work is important.</h2><p>It lands here because nobody is going to be hired to do it, not this year.</p></div>
-        <div class="door-beat door-beat--offer"><h2>The workforce covers those functions: the positioning, the pricing, the competitive read.</h2><p class="door-cost">Free. Recorded. Finish it and the licence opens.</p></div>
+        <div class="door-beat door-beat--offer door-beat--step"><h2>Step one: the free course.</h2><p>Recorded. It shows how the workforce works, and you finish it holding one real piece of your own work, from a function you cover alone. It takes about an afternoon.</p><p class="door-cost">Free. Recorded. Finish it and the licence opens.</p><p class="door-note">Your registration goes to Yohay. He reads it and replies personally.</p><button class="btn btn--primary btn--lg door-beat__action" type="button" id="open-course-dialog">Register for the free course</button></div>
+        <div class="door-beat door-beat--step"><h2>Step two: the licence.</h2><p>The whole workforce, all 15 teams, yours to run. It opens when you finish the free course.</p><p class="door-cost">$200 a month, first month free.</p><p class="door-note">Need only the Product team? That one is free and open source.</p><p class="door-note door-note--link"><a href="https://yohayetsion.github.io/product-org-os/" rel="noopener" aria-label="Get Product Org OS, opens the Product Org OS site">Get Product Org OS &#8599;</a></p></div>
+        <div class="door-beat door-beat--step"><h2>Step three: the Operator Intensive.</h2><p>The Intensive is about how you govern the workforce effectively, leading them to do the work. You do not need the licence to join.</p><p class="door-cost">Two seatings, two hours each. $600 per cohort of up to 5 seats. Live.</p><p class="door-note">Cohorts open in order of registration.</p><button class="btn btn--outline btn--lg door-beat__action" type="button" id="open-intensive-dialog">Join the Intensive waiting list</button></div>
+        <div class="door-beat door-beat--step"><h2>Every month: office hours, live.</h2><p>One live session a month. Bring a question about your own work or about the workforce, and ask it. No course or licence needed.</p><p class="door-cost">Free. Open to anyone.</p></div>
       </div>
-      <div class="door-actions"><button class="btn btn--primary btn--lg" type="button" id="open-course-dialog">Register for the free course</button></div>
-      <div class="door-secondary"><a href="/research/">The published research</a><a href="/workforce.html">The Workforce</a></div>
+            <div class="door-secondary"><a href="/research/">Read two full reports the workforce wrote</a><a href="/workforce.html">The Workforce</a></div>
     </div>
   </section>
 </main>
@@ -140,32 +147,46 @@
     <div class="form-status" id="course-status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
   </div>
 </dialog>
+<dialog class="course-dialog" id="intensive-dialog" aria-labelledby="intensive-dialog-title" aria-describedby="intensive-dialog-description intensive-dialog-plain intensive-dialog-privacy">
+  <div class="course-dialog__inner">
+    <button class="course-dialog__close" type="button" id="close-intensive-dialog" aria-label="Close the waiting-list form">&times;</button>
+    <div class="course-dialog__header"><h2 id="intensive-dialog-title">Join the Intensive waiting list</h2><p id="intensive-dialog-description">Two seatings, two hours each. $600 per cohort of up to 5 seats. Live.</p>
+<p class="dialog-plain" id="intensive-dialog-plain">This puts your name on the waiting list for the Operator Intensive. Nothing is booked and nothing is charged. Yohay reads every name and writes to you personally about a cohort.</p></div>
+    <form class="course-form" id="intensive-form" action="https://api.web3forms.com/submit" method="POST" aria-busy="false" novalidate>
+      <input type="hidden" name="access_key" value="7b2a1e87-634c-495b-9aeb-1e583f4dfeef">
+      <input type="hidden" name="subject" value="ProductBeacon Intensive waiting list">
+      <input type="hidden" name="from_name" value="ProductBeacon">
+      <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="course-form-fields">
+        <div class="form-alert" id="intensive-error-summary" role="alert" tabindex="-1" hidden></div>
+        <div class="form-group"><label for="intensive-name">Name</label><input id="intensive-name" name="name" type="text" autocomplete="name" aria-describedby="intensive-name-error" required><p class="field-error" id="intensive-name-error" hidden>Please enter your name.</p></div>
+        <div class="form-group"><label for="intensive-email">Email address</label><input id="intensive-email" name="email" type="email" inputmode="email" autocomplete="email" aria-describedby="intensive-email-error" required><p class="field-error" id="intensive-email-error" hidden>Please enter a valid email address.</p></div>
+        <div class="form-group"><label for="intensive-linkedin">LinkedIn address (optional)</label><input id="intensive-linkedin" name="linkedin" type="url" inputmode="url" autocomplete="url" aria-describedby="intensive-linkedin-error"><p class="field-error" id="intensive-linkedin-error" hidden>Please enter a valid LinkedIn address or leave it blank.</p></div>
+        <div class="form-group"><label for="intensive-question">What do you run, and what would you put the workforce on first?</label><textarea id="intensive-question" name="question" aria-describedby="intensive-question-error" required></textarea><p class="field-error" id="intensive-question-error" hidden>Please tell us what you run and what you would put the workforce on first.</p></div>
+        <p class="privacy-notice" id="intensive-dialog-privacy">Web3Forms processes the details you submit so Yohay can hold your place on the Intensive waiting list and follow up personally. This is a waiting list, not a mailing list, and no automated email is sent. To ask us to delete your details, use the <a href="/contact.html">ProductBeacon contact page</a>.</p>
+        <button class="btn btn--primary btn--lg" id="intensive-submit" type="submit">Join the waiting list</button>
+      </div>
+    </form>
+    <div class="form-status" id="intensive-status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
+  </div>
+</dialog>
 <script src="/js/main.js"></script>
 <script>
 (function () {
   'use strict';
-  var dialog = document.getElementById('course-dialog');
-  var openButton = document.getElementById('open-course-dialog');
-  var closeButton = document.getElementById('close-course-dialog');
-  var form = document.getElementById('course-form');
-  var submitButton = document.getElementById('course-submit');
+  function wireDialog(prefix, messages) {
+  var dialog = document.getElementById(prefix + '-dialog');
+  var openButton = document.getElementById('open-' + prefix + '-dialog');
+  var closeButton = document.getElementById('close-' + prefix + '-dialog');
+  var form = document.getElementById(prefix + '-form');
+  var submitButton = document.getElementById(prefix + '-submit');
   var formFields = form.querySelector('.course-form-fields');
-  var status = document.getElementById('course-status');
-  var summary = document.getElementById('course-error-summary');
-  var firstField = document.getElementById('course-name');
+  var status = document.getElementById(prefix + '-status');
+  var summary = document.getElementById(prefix + '-error-summary');
+  var firstField = document.getElementById(prefix + '-name');
   var lastTrigger = openButton;
   var submitLabel = submitButton.textContent;
   var submitting = false;
-  var messages = {
-    name: 'Please enter your name.',
-    email: 'Please enter a valid email address.',
-    linkedin: 'Please enter a valid LinkedIn address or leave it blank.',
-    question: 'Please tell us what you are covering alone right now.',
-    sending: 'Sending...',
-    success: 'Thanks. Your registration has been sent to Yohay. He will follow up personally.',
-    failure: 'Something went wrong. Please try again or use the ProductBeacon contact page.',
-    unavailable: 'Registration is not available right now. Please use the ProductBeacon contact page.'
-  };
 
   function showStatus(state, message) {
     status.replaceChildren();
@@ -191,7 +212,7 @@
     }
     status.appendChild(node);
     if (state === 'success') {
-      node.id = 'course-success';
+      node.id = prefix + '-success';
       node.tabIndex = -1;
       node.focus();
     } else if (state === 'failure' || state === 'unavailable') {
@@ -318,6 +339,24 @@
         submitButton.textContent = submitLabel;
       });
   });
+  }
+  var shared = {
+    name: 'Please enter your name.',
+    email: 'Please enter a valid email address.',
+    linkedin: 'Please enter a valid LinkedIn address or leave it blank.',
+    sending: 'Sending...',
+    failure: 'Something went wrong. Please try again or use the ProductBeacon contact page.',
+    unavailable: 'Registration is not available right now. Please use the ProductBeacon contact page.'
+  };
+  wireDialog('course', Object.assign({}, shared, {
+    question: 'Please tell us what you are covering alone right now.',
+    success: 'Thanks. Your registration has been sent to Yohay. He will follow up personally.'
+  }));
+  wireDialog('intensive', Object.assign({}, shared, {
+    question: 'Please tell us what you run and what you would put the workforce on first.',
+    success: 'Thanks. Your name has gone to Yohay for the Intensive waiting list. He will write to you personally.',
+    unavailable: 'The waiting list is not available right now. Please use the ProductBeacon contact page.'
+  }));
 })();
 </script>
 </body>
