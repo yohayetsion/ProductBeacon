@@ -81,31 +81,30 @@ check((doorTwo.match(/name="access_key" value="([^"]+)"/g) || []).length === 2 &
 check(!/<input[^>]*type="date"/.test(doorTwo), 'no date field in either dialog');
 const licenceRow = (doorTwo.match(/<h2>Step two: the licence\.<\/h2>[\s\S]*?<\/div>/) || [''])[0];
 check(licenceRow && !/\bseat/i.test(licenceRow), 'the word seat never appears in the licence row');
+const mainHtml = (doorTwo.match(/<main[\s\S]*<\/main>/) || [''])[0];
+check((mainHtml.match(/href="https:\/\/yohayetsion\.github\.io\/product-org-os\/"/g) || []).length === 1, 'Door 2 body links the Product Org OS site exactly once (licence row)');
+check(/aria-label="Get Product Org OS, opens the Product Org OS site">Get Product Org OS &#8599;<\/a>/.test(mainHtml), 'the Product Org OS link carries the outbound cue and aria-label');
+check((mainHtml.match(/class="door-beat /g) || []).length === 4, 'Door 2 carries exactly four ladder rows after round 3');
+check(mainHtml.includes('<a href="/research/">Read two full reports the workforce wrote</a>') && mainHtml.includes('<a href="/workforce.html">The Workforce</a>'), 'secondary links carry the proof and the Workforce');
 check(!doorTwo.includes('It lands here, after everything else') && !doorTwo.includes('ProductBeacon built an AI workforce that covers those functions'), 'the two intro beats are removed');
 const affirmedStrings = [
-  'Free. Recorded. Finish it and the licence opens.',
-  '$200 a month, first month free. Runs on your own Claude plan (not included).',
-  'The Intensive is about how you govern the workforce effectively, leading them to do the work. You do not need the licence to join.',
-  'Two seatings, two hours each. $600 a seat, founding cohort. Live, up to 5 seats.',
-  'Seats open in order of registration. Yohay replies personally.',
-  'After step two or step three: the Room.',
-  'One live session a month, for everyone who finished the Intensive or holds a licence.',
-  'Included, after the Intensive or with a licence.',
-  'Every month: the open question-and-answer session, live.',
-  'Free. Open to anyone.',
-  'A commissioned market report: a written analysis of your own market, segment or competitive position, produced by the workforce.',
-  'Fractional: Yohay leads product inside your company, with the workforce behind him.',
-  'Report $3,500, introductory. On Call $10,000 to $15,000 a month. Fractional $15,000 to $25,000 a month.',
-  'written by this workforce. Free, in full.',
-  'from a function you cover alone. It takes about an afternoon.',
-  'You do not need the licence to join.',
   'You carry the positioning, the pricing and the competitive read. There is nobody else for it.',
-  'Who this is not for.',
-  'Your registration goes to Yohay. He reads it and replies personally.'
+  'Free. Recorded. Finish it and the licence opens.',
+  'Your registration goes to Yohay. He reads it and replies personally.',
+  '$200 a month, first month free.',
+  'Need only the Product team? That one is free and open source.',
+  'The Intensive is about how you govern the workforce effectively, leading them to do the work. You do not need the licence to join.',
+  'Two seatings, two hours each. $600 per cohort of up to 5 seats. Live.',
+  'Cohorts open in order of registration. Yohay replies personally.',
+  'Every month: office hours, live.',
+  'One live session a month. Bring a question about your own work or about the workforce, and ask it. No course or licence needed.',
+  'Free. Open to anyone.',
+  'from a function you cover alone. It takes about an afternoon.',
+  'Read two full reports the workforce wrote'
 ];
 for (const s of affirmedStrings) check(doorTwoText.includes(s), `Door 2 carries the reviewed string: ${s}`);
 const forbidden = [
-  [/\$750|\$8,000|\$2,000|\$500\b/, 'withdrawn figures'],
+  [/\$750|\$8,000|\$2,000|\$500\b|\$3,500|\$10,000|\$15,000|\$25,000/, 'withdrawn or removed figures'],
   [/\bper seat\b|\bone user\b|\bone organisation\b/i, 'licence unit or scope'],
   [/\bboth\b/i, 'the word both'],
   [/\u2014/, 'em dash'],
@@ -113,8 +112,10 @@ const forbidden = [
   [/\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/, 'a month name'],
   [/\b96\b|\b92\b|\b104\b/, 'a specialist count'],
   [/with a call to walk you through it|end to end/, 'a withdrawn claim'],
-  [/about 12|one day|\$600 per cohort|\blicense\b|Nobody is going to be hired|after eight/, 'a round-2 withdrawn string'],
-  [/next cohort|keep you posted|subscribe|updates\b/i, 'a waiting-list date or list promise']
+  [/about 12|one day|\blicense\b|Nobody is going to be hired|after eight|founding|Runs on your own Claude plan|a seat, founding/, 'a round-2 or round-3 withdrawn string'],
+  [/next cohort|keep you posted|subscribe|updates\b/i, 'a waiting-list date or list promise'],
+  [/the Room|Every week|weekly|Or ProductBeacon carries it|Read the work before you believe|Who this is not for|Included, after the Intensive/, 'a round-3 removed string'],
+  [/about a seat|Seats open in order/, 'per-seat waiting-list wording under the cohort unit']
 ];
 const doorTwoTextNoPrivacy = doorTwoText.replace(/Web3Forms processes[\s\S]*?contact page\s*\./, '');
 for (const [re, label] of forbidden) check(!re.test(doorTwoTextNoPrivacy), `Door 2 body has no ${label}`);
