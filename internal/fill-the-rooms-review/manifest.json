@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "candidate": "ProductBeacon homepage feedback review, 7 September 2026",
-  "build_stamp": "SITE-FEEDBACK-20260907",
-  "review_committed_onto_commit": "cf99214a5399e631363b47073de344440501f2cb",
+  "candidate": "ProductBeacon site doors review, 9 September 2026 (DR-2026-469)",
+  "build_stamp": "SITE-DOORS-20260909",
+  "review_committed_onto_commit": "2fb59e9b6dbe2a1f7df1e54d2dd75038d84ed0de",
   "source_provenance": "the production-shaped sources carry uncommitted changes on top of this commit by design (DR-2026-412); source_to_review[].source_sha256 is the binding record of what was built",
   "review_prefix": "/internal/fill-the-rooms-review/",
   "transform_command": "node internal/fill-the-rooms-review/build-review.js",
@@ -14,80 +14,91 @@
     "internal/fill-the-rooms-review/manifest.sha256",
     "internal/fill-the-rooms-review/on-call.html",
     "internal/fill-the-rooms-review/only-product-person/index.html",
-    "internal/fill-the-rooms-review/phase5r-gate.js",
     "internal/fill-the-rooms-review/research/index.html",
+    "internal/fill-the-rooms-review/site-doors-gate.js",
+    "internal/fill-the-rooms-review/vision-to-value/index.html",
     "internal/fill-the-rooms-review/workforce.html"
   ],
   "source_to_review": [
     {
       "source_path": "index.html",
-      "source_sha256": "7a2349fa648e6ee12959bc88c2949214ed023a7a0b7f25391ebaae5dcf3f0652",
+      "source_sha256": "2c4efefc160ff68ee085e7ad136bb3519a2e8d8d1b2b665d74783590d60eada3",
       "review_path": "internal/fill-the-rooms-review/index.html",
-      "review_sha256": "933c152542558bc5b1b6112f5dd6d51a6e80fe79dabc6035d9bf1bfa518176e5"
+      "review_sha256": "99f4ad21d50454c66c0bcfefc52d84c276e8d2804a4616d5f79554c397560fe3"
     },
     {
       "source_path": "only-product-person/index.html",
-      "source_sha256": "129fdd6a6a56f2d8892a73bd21a8674e1984512c8624f16d07d7f014ffcafcc1",
+      "source_sha256": "2ee9c4d7e9fe2a3e098fa104d728b0525d4c7711bb12f3cd0561471646f8caf8",
       "review_path": "internal/fill-the-rooms-review/only-product-person/index.html",
-      "review_sha256": "21ce265fe0d517db34944288891895ddf5b96bf988b6b31763c8cc4e6a376be6"
+      "review_sha256": "d31e73d0ed023308eb2ddb0cb5fe652d5158e9a66396f6351576c973ae937a2b"
     },
     {
       "source_path": "covering-everything/index.html",
-      "source_sha256": "47914cf870ebe21182bd00b0ec45c382f4fc370d404a5a118cd2d614cffe8129",
+      "source_sha256": "2fef5dafac29d9c7629c20e782a036b677c0fbcb30eaf6cacf70a67316d9047f",
       "review_path": "internal/fill-the-rooms-review/covering-everything/index.html",
-      "review_sha256": "d437cdf8d42e64d91a87d49bf212c7d4850543452fb0e43aca61d26763bec2b0"
+      "review_sha256": "5a513928078851d276585b7f92801befb6d9ed8261ddfe7f86a47a013fa49ba1"
+    },
+    {
+      "source_path": "vision-to-value/index.html",
+      "source_sha256": "22cf90290965ded53c0dd0c3dd3e04dfb992be8100049f40e5c6f9a685c8a58c",
+      "review_path": "internal/fill-the-rooms-review/vision-to-value/index.html",
+      "review_sha256": "b06ea9b1226f95fe825a178efad405f7818fd0757a46bd00658fa79bf204559a"
     },
     {
       "source_path": "workforce.html",
-      "source_sha256": "840fa07a82acd624e5b1d50bd056a95744155b1bfe4fc5cc2b3d39737a1ae6f7",
+      "source_sha256": "84dc46a3840bbb658fdfc2f7fa6c2c3c9bf1dbc54088c4a26811b19d857316a9",
       "review_path": "internal/fill-the-rooms-review/workforce.html",
-      "review_sha256": "eadd444b0bad252ec386072f2e0a95705001963f1156389f83d840c374ef046a"
+      "review_sha256": "ae4815ab5f3bcf27f0ab962702ec64c8236cf26e93522f1ab3d369f36ee2427e"
     },
     {
       "source_path": "research/index.html",
-      "source_sha256": "433622245e7c16d2d42677cfbed09248a640d52119d951cb91a5ace9c1ec9c3c",
+      "source_sha256": "5db43e42604b0ce7962905ac990c2dfafcc70199d97c053399447f58f2abdc59",
       "review_path": "internal/fill-the-rooms-review/research/index.html",
-      "review_sha256": "62c88404a11d9f55b8a714b64585e580bcce74e3a5b9b4cce928d70f72755bd6"
+      "review_sha256": "4e29059bb0d953c995dd3b17679b00d26454727a694c098552bc571346adc6dc"
     },
     {
       "source_path": "on-call.html",
       "source_sha256": "8e517ad34da61baf5e5bc4dbcda326576a03d0dbd51e7c3a25279101aa529699",
       "review_path": "internal/fill-the-rooms-review/on-call.html",
-      "review_sha256": "5877e00488047987a246488dd01bbba069fed6d1d2b609a7b4d228dc76a67e7f"
+      "review_sha256": "29bb68448bd3e077b4762f36b1d23f8394b07e9ef7c42fb1d8fc94658ebda576"
     }
   ],
   "files": [
     {
       "path": "internal/fill-the-rooms-review/build-review.js",
-      "sha256": "e3b8355eff058a0db78aaf4999bcdd96d92f525abd5f3efd0af3e8f49c026606"
+      "sha256": "5632f03cd1fb27251658ee2e84e2fd2441339e1374f3f9d96bde6e3f78606860"
     },
     {
       "path": "internal/fill-the-rooms-review/covering-everything/index.html",
-      "sha256": "d437cdf8d42e64d91a87d49bf212c7d4850543452fb0e43aca61d26763bec2b0"
+      "sha256": "5a513928078851d276585b7f92801befb6d9ed8261ddfe7f86a47a013fa49ba1"
     },
     {
       "path": "internal/fill-the-rooms-review/index.html",
-      "sha256": "933c152542558bc5b1b6112f5dd6d51a6e80fe79dabc6035d9bf1bfa518176e5"
+      "sha256": "99f4ad21d50454c66c0bcfefc52d84c276e8d2804a4616d5f79554c397560fe3"
     },
     {
       "path": "internal/fill-the-rooms-review/on-call.html",
-      "sha256": "5877e00488047987a246488dd01bbba069fed6d1d2b609a7b4d228dc76a67e7f"
+      "sha256": "29bb68448bd3e077b4762f36b1d23f8394b07e9ef7c42fb1d8fc94658ebda576"
     },
     {
       "path": "internal/fill-the-rooms-review/only-product-person/index.html",
-      "sha256": "21ce265fe0d517db34944288891895ddf5b96bf988b6b31763c8cc4e6a376be6"
-    },
-    {
-      "path": "internal/fill-the-rooms-review/phase5r-gate.js",
-      "sha256": "158f008be9cdc7d4fbb9f72ac53869e3212461fef389618082c11eafde45d1fc"
+      "sha256": "d31e73d0ed023308eb2ddb0cb5fe652d5158e9a66396f6351576c973ae937a2b"
     },
     {
       "path": "internal/fill-the-rooms-review/research/index.html",
-      "sha256": "62c88404a11d9f55b8a714b64585e580bcce74e3a5b9b4cce928d70f72755bd6"
+      "sha256": "4e29059bb0d953c995dd3b17679b00d26454727a694c098552bc571346adc6dc"
+    },
+    {
+      "path": "internal/fill-the-rooms-review/site-doors-gate.js",
+      "sha256": "b74af8a0432449f00bc7fbb76c248a2728dab16106d7ac3604f70b3c7ed31188"
+    },
+    {
+      "path": "internal/fill-the-rooms-review/vision-to-value/index.html",
+      "sha256": "b06ea9b1226f95fe825a178efad405f7818fd0757a46bd00658fa79bf204559a"
     },
     {
       "path": "internal/fill-the-rooms-review/workforce.html",
-      "sha256": "eadd444b0bad252ec386072f2e0a95705001963f1156389f83d840c374ef046a"
+      "sha256": "ae4815ab5f3bcf27f0ab962702ec64c8236cf26e93522f1ab3d369f36ee2427e"
     }
   ],
   "meta_files": [

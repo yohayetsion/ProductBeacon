@@ -8,8 +8,8 @@ const path = require('path');
 const reviewRoot = __dirname;
 const repoRoot = path.resolve(reviewRoot, '..', '..');
 const prefix = '/internal/fill-the-rooms-review/';
-const buildStamp = 'SITE-FEEDBACK-20260907';
-const reviewCommittedOntoCommit = 'cf99214a5399e631363b47073de344440501f2cb';
+const buildStamp = 'SITE-DOORS-20260909';
+const reviewCommittedOntoCommit = '2fb59e9b6dbe2a1f7df1e54d2dd75038d84ed0de';
 const robots = '<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">';
 const referrer = '<meta name="referrer" content="no-referrer">';
 
@@ -17,6 +17,7 @@ const pages = [
   { source: 'index.html', output: 'index.html', route: '/' },
   { source: 'only-product-person/index.html', output: 'only-product-person/index.html', route: '/only-product-person/' },
   { source: 'covering-everything/index.html', output: 'covering-everything/index.html', route: '/covering-everything/' },
+  { source: 'vision-to-value/index.html', output: 'vision-to-value/index.html', route: '/vision-to-value/' },
   { source: 'workforce.html', output: 'workforce.html', route: '/workforce.html' },
   { source: 'research/index.html', output: 'research/index.html', route: '/research/' },
   { source: 'on-call.html', output: 'on-call.html', route: '/on-call.html' }
@@ -30,8 +31,9 @@ const commitPaths = [
   'internal/fill-the-rooms-review/manifest.sha256',
   'internal/fill-the-rooms-review/on-call.html',
   'internal/fill-the-rooms-review/only-product-person/index.html',
-  'internal/fill-the-rooms-review/phase5r-gate.js',
   'internal/fill-the-rooms-review/research/index.html',
+  'internal/fill-the-rooms-review/site-doors-gate.js',
+  'internal/fill-the-rooms-review/vision-to-value/index.html',
   'internal/fill-the-rooms-review/workforce.html'
 ];
 
@@ -42,6 +44,8 @@ const routeMap = new Map([
   ['/only-product-person/index.html', `${prefix}only-product-person/`],
   ['/covering-everything/', `${prefix}covering-everything/`],
   ['/covering-everything/index.html', `${prefix}covering-everything/`],
+  ['/vision-to-value/', `${prefix}vision-to-value/`],
+  ['/vision-to-value/index.html', `${prefix}vision-to-value/`],
   ['/workforce.html', `${prefix}workforce.html`],
   ['/research/', `${prefix}research/`],
   ['/research/index.html', `${prefix}research/`],
@@ -268,14 +272,15 @@ const hashedPaths = [
   'internal/fill-the-rooms-review/index.html',
   'internal/fill-the-rooms-review/on-call.html',
   'internal/fill-the-rooms-review/only-product-person/index.html',
-  'internal/fill-the-rooms-review/phase5r-gate.js',
   'internal/fill-the-rooms-review/research/index.html',
+  'internal/fill-the-rooms-review/site-doors-gate.js',
+  'internal/fill-the-rooms-review/vision-to-value/index.html',
   'internal/fill-the-rooms-review/workforce.html'
 ];
 
 const manifest = {
   schema_version: 1,
-  candidate: 'ProductBeacon homepage feedback review, 7 September 2026',
+  candidate: 'ProductBeacon site doors review, 9 September 2026 (DR-2026-469)',
   build_stamp: buildStamp,
   review_committed_onto_commit: reviewCommittedOntoCommit,
   source_provenance: 'the production-shaped sources carry uncommitted changes on top of this commit by design (DR-2026-412); source_to_review[].source_sha256 is the binding record of what was built',
