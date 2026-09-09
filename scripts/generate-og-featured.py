@@ -3,8 +3,8 @@ OG / social cards for the three LinkedIn "Featured" links (2026-09-08).
 
 Renders 1200x630 PNGs with Playwright headless Chromium into og/ (site root):
   og/vision-to-value.png   - the book page, with the real hardcover front cover
-  og/workforce.png         - the workforce page (15 teams, 96 specialists)
-  og/research.png          - the research hub (State of Cyber 2026 + State of WEM 2026)
+  og/workforce-v2.png      - the workforce page (15 teams, 96 specialists)
+  og/research-v2.png       - the research hub (State of Cyber 2026 + State of WEM 2026)
   og/home.png              - the homepage (Product Leadership, At Scale); also copied over
                              og-image.png, the fallback card every other page reuses
 
@@ -13,7 +13,8 @@ Brand tokens: slate-900 #0F172A bg, amber #F59E0B accent, Inter + JetBrains Mono
 
 The book cover is cropped from the KDP hardcover wrap PDF (front panel, bleed
 trimmed) and embedded as a data URI so the card is reproducible from this file
-plus the wrap PDF. Run from repo root:  python scripts/generate-og-featured.py
+plus the wrap PDF. Bump the -vN suffix whenever a card changes: LinkedIn caches
+by image URL and never re-fetches a changed file at the same URL. Run from repo root:  python scripts/generate-og-featured.py
 """
 
 import base64
@@ -219,8 +220,8 @@ def home_card() -> str:
 def render_all():
     cards = {
         "vision-to-value.png": book_card(front_cover_data_uri()),
-        "workforce.png": workforce_card(),
-        "research.png": research_card(),
+        "workforce-v2.png": workforce_card(),
+        "research-v2.png": research_card(),
         "home.png": home_card(),
     }
     with sync_playwright() as p:
