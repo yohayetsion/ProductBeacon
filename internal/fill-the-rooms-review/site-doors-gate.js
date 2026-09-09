@@ -136,7 +136,11 @@ for (const p of manifest.source_to_review) check(sha(fs.readFileSync(path.join(r
 
 if (process.argv.includes('--staged')) {
   const staged = cp.execFileSync('git', ['diff', '--cached', '--name-only'], { cwd: repoRoot, encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean).sort();
-  check(JSON.stringify(staged) === JSON.stringify([...manifest.commit_paths].sort()), `staged set equals manifest commit_paths (staged ${staged.length}, expected ${manifest.commit_paths.length})`);
+  const outside = staged.filter(f => !manifest.commit_paths.includes(f));
+  check(outside.length === 0, `nothing staged outside manifest commit_paths (outside: ${outside.join(', ') || 'none'})`);
+  const unstagedDirty = manifest.commit_paths.filter(f => !staged.includes(f) && cp.spawnSync('git', ['diff', '--quiet', 'HEAD', '--', f], { cwd: repoRoot }).status !== 0);
+  check(unstagedDirty.length === 0, `every unstaged commit_path is identical to HEAD (dirty: ${unstagedDirty.join(', ') || 'none'})`);
+  check(staged.length > 0, `at least one candidate file is staged (staged ${staged.length} of ${manifest.commit_paths.length})`);
 }
 
 console.log(`PASS ${passes.length}  FAIL ${failures.length}`);
