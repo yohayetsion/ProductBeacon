@@ -155,7 +155,7 @@ def workforce_card() -> str:
   <div class="brand"><span class="brand-dot"></span>ProductBeacon</div>
   <div class="mid">
     <div class="eyebrow">The ProductBeacon AI Workforce</div>
-    <h1>A workforce you govern. <span class="amber">Every specialist named.</span></h1>
+    <h1>A <span class="amber">Workforce</span> you Govern</h1>
     <div class="stats">
       <div class="stat"><b>15</b><span>teams</span></div>
       <div class="stat"><b>96</b><span>specialists</span></div>
@@ -175,7 +175,7 @@ def research_card() -> str:
     return shell("""
   <div class="brand"><span class="brand-dot"></span>ProductBeacon Research</div>
   <div class="mid">
-    <div class="eyebrow">Independent market research · 2026</div>
+    <h1 style="margin-bottom:22px">ProductBeacon <span class="amber">Research</span></h1>
     <div class="reports">
       <div class="report">
         <div class="k">Cybersecurity</div>
