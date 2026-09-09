@@ -5,6 +5,8 @@ Renders 1200x630 PNGs with Playwright headless Chromium into og/ (site root):
   og/vision-to-value.png   - the book page, with the real hardcover front cover
   og/workforce.png         - the workforce page (15 teams, 96 specialists)
   og/research.png          - the research hub (State of Cyber 2026 + State of WEM 2026)
+  og/home.png              - the homepage (Product Leadership, At Scale); also copied over
+                             og-image.png, the fallback card every other page reuses
 
 Brand tokens: slate-900 #0F172A bg, amber #F59E0B accent, Inter + JetBrains Mono
 (same tokens as scripts/generate-og-images.py).
@@ -104,6 +106,12 @@ h1 .amber { color: #F59E0B; }
 .stat span { display: block; font-size: 15px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em;
   text-transform: uppercase; color: #94A3B8; margin-top: 8px; }
 
+/* home */
+.layers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; margin-top: 26px; max-width: 900px; }
+.layer { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 600; color: #E2E8F0; }
+.layer i { width: 12px; height: 12px; border-radius: 50%; background: #F59E0B; flex: none; }
+.layer small { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #94A3B8; display: block; font-weight: 500; }
+
 /* research */
 .reports { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 8px; }
 .report { background: rgba(15,23,42,0.6); border: 1px solid rgba(148,163,184,0.25); border-left: 4px solid #F59E0B;
@@ -188,11 +196,32 @@ def research_card() -> str:
 """)
 
 
+def home_card() -> str:
+    return shell("""
+  <div class="brand"><span class="brand-dot"></span>ProductBeacon</div>
+  <div class="mid">
+    <h1>Product Leadership, <span class="amber">At Scale.</span></h1>
+    <p class="subtitle" style="max-width:960px">A published product-leadership blueprint, a governed AI workforce, and experienced human leadership, so one accountable person can hold the whole loop from vision to delivered value.</p>
+    <div class="layers">
+      <div class="layer"><i></i><div><small>Blueprint</small>Vision to Value</div></div>
+      <div class="layer"><i></i><div><small>Human decision bridge</small>The Decision Provenance Standard</div></div>
+      <div class="layer"><i></i><div><small>Workforce</small>96 governed specialists, 15 teams</div></div>
+      <div class="layer"><i></i><div><small>Foundation</small>Durable organisational context</div></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="byline">Yohay Etsion<span class="byline-meta">productbeacon.agency</span></div>
+    <div class="tag">A NAMED HUMAN REMAINS ACCOUNTABLE</div>
+  </div>
+""")
+
+
 def render_all():
     cards = {
         "vision-to-value.png": book_card(front_cover_data_uri()),
         "workforce.png": workforce_card(),
         "research.png": research_card(),
+        "home.png": home_card(),
     }
     with sync_playwright() as p:
         browser = p.chromium.launch()
@@ -205,6 +234,10 @@ def render_all():
             print(f"wrote {out} ({out.stat().st_size} bytes)")
             page.close()
         browser.close()
+    # The homepage card doubles as the site-wide fallback every other page reuses.
+    import shutil
+    shutil.copyfile(OUT_DIR / "home.png", REPO / "og-image.png")
+    print("copied og/home.png -> og-image.png")
 
 
 if __name__ == "__main__":
