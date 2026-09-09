@@ -72,12 +72,22 @@ const doorTwo = source['/covering-everything/'];
 const doorTwoText = bodyText(doorTwo);
 const key = (doorTwo.match(/name="access_key" value="([^"]+)"/) || [])[1];
 check(Boolean(key) && sha(Buffer.from(key, 'utf8')) === expectedKeyHash, 'Door 2 Web3Forms access key hash exact (Gmail-registered key)');
-for (const id of ['course-name', 'course-email', 'course-linkedin', 'course-question']) check(doorTwo.includes(`id="${id}"`), `Door 2 dialog field ${id} present`);
+for (const id of ['course-name', 'course-email', 'course-linkedin', 'course-question', 'intensive-name', 'intensive-email', 'intensive-linkedin', 'intensive-question']) check(doorTwo.includes(`id="${id}"`), `Door 2 dialog field ${id} present`);
 check(doorTwo.includes('id="open-course-dialog">Register for the free course</button>'), 'Door 2 primary action is the registration button');
+check(doorTwo.includes('id="open-intensive-dialog">Join the Intensive waiting list</button>'), 'Door 2 Intensive row carries the waiting-list button');
+check(!doorTwo.includes('<div class="door-actions">'), 'Door 2 bottom action block removed; the button lives in the free-course row');
+check(doorTwo.includes('value="ProductBeacon Intensive waiting list"') && doorTwo.includes('value="ProductBeacon free course registration"'), 'the two forms carry distinct subjects');
+check((doorTwo.match(/name="access_key" value="([^"]+)"/g) || []).length === 2 && new Set([...doorTwo.matchAll(/name="access_key" value="([^"]+)"/g)].map(m => m[1])).size === 1, 'both forms use the one Gmail-registered key');
+check(!/<input[^>]*type="date"/.test(doorTwo), 'no date field in either dialog');
+const licenceRow = (doorTwo.match(/<h2>Step two: the licence\.<\/h2>[\s\S]*?<\/div>/) || [''])[0];
+check(licenceRow && !/\bseat/i.test(licenceRow), 'the word seat never appears in the licence row');
+check(!doorTwo.includes('It lands here, after everything else') && !doorTwo.includes('ProductBeacon built an AI workforce that covers those functions'), 'the two intro beats are removed');
 const affirmedStrings = [
   'Free. Recorded. Finish it and the licence opens.',
   '$200 a month, first month free. Runs on your own Claude plan (not included).',
-  '$600, founding cohort. Live, about 12 seats.',
+  'The Intensive is about how you govern the workforce effectively, leading them to do the work. You do not need the licence to join.',
+  'Two seatings, two hours each. $600 a seat, founding cohort. Live, up to 5 seats.',
+  'Seats open in order of registration. Yohay replies personally.',
   'After step two or step three: the Room.',
   'One live session a month, for everyone who finished the Intensive or holds a licence.',
   'Included, after the Intensive or with a licence.',
@@ -89,7 +99,7 @@ const affirmedStrings = [
   'written by this workforce. Free, in full.',
   'from a function you cover alone. It takes about an afternoon.',
   'You do not need the licence to join.',
-  'after eight at night',
+  'You carry the positioning, the pricing and the competitive read. There is nobody else for it.',
   'Who this is not for.',
   'Your registration goes to Yohay. He reads it and replies personally.'
 ];
@@ -102,7 +112,9 @@ const forbidden = [
   [/\bcoming soon\b|\bshortly\b|\bsoon\b/i, 'a date promise'],
   [/\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/, 'a month name'],
   [/\b96\b|\b92\b|\b104\b/, 'a specialist count'],
-  [/with a call to walk you through it|end to end/, 'a withdrawn claim']
+  [/with a call to walk you through it|end to end/, 'a withdrawn claim'],
+  [/about 12|one day|\$600 per cohort|\blicense\b|Nobody is going to be hired|after eight/, 'a round-2 withdrawn string'],
+  [/next cohort|keep you posted|subscribe|updates\b/i, 'a waiting-list date or list promise']
 ];
 const doorTwoTextNoPrivacy = doorTwoText.replace(/Web3Forms processes[\s\S]*?contact page\s*\./, '');
 for (const [re, label] of forbidden) check(!re.test(doorTwoTextNoPrivacy), `Door 2 body has no ${label}`);
