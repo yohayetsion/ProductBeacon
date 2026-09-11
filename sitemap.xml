@@ -386,12 +386,6 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://productbeacon.agency/research/maritime-domain-awareness-2026/</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <url>
     <loc>https://productbeacon.agency/research/state-of-wem-2026/</loc>
@@ -610,12 +604,6 @@
     <priority>0.5</priority>
   </url>
 
-  <url>
-    <loc>https://productbeacon.agency/research/cellebrite-cognyte-merger/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <url>
     <loc>https://productbeacon.agency/research/collaterals.html</loc>
