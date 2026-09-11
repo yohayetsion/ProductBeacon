@@ -63,6 +63,50 @@ DISPOSITIONS = {
 }
 
 
+def write_wem_stubs():
+    """Keep the former WFO report addresses working after the WEM URL migration.
+
+    The deployed host does not execute _redirects. Instant meta refresh is the
+    HTML fallback; JavaScript additionally preserves query strings and fragments.
+    Legacy PDFs/images remain available because HTML cannot redirect binaries.
+    """
+    canonical_dir = REPO / "research" / "state-of-wem-2026"
+    if not canonical_dir.is_dir():
+        return
+    for target in sorted(canonical_dir.rglob("*.html")):
+        relative = target.relative_to(canonical_dir)
+        destination = "/research/state-of-wem-2026/" + relative.as_posix()
+        if relative.as_posix() == "index.html":
+            destination = "/research/state-of-wem-2026/"
+        elif relative.as_posix() == "brief.html":
+            destination = "/research/state-of-wem-2026/pre-call-brief.html"
+        final_file = REPO / destination.lstrip("/")
+        if destination.endswith("/"):
+            final_file = final_file / "index.html"
+        if not final_file.is_file():
+            raise RuntimeError(f"Missing WEM redirect destination: {destination}")
+        legacy = REPO / "research" / "state-of-wfo-2026" / relative
+        legacy.parent.mkdir(parents=True, exist_ok=True)
+        html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="0; url={destination}">
+<link rel="canonical" href="{ORIGIN}{destination}">
+<meta name="robots" content="noindex, follow">
+<title>Page moved | ProductBeacon Research</title>
+<script>location.replace("{destination}" + location.search + location.hash);</script>
+</head>
+<body>
+<p>This report has moved to <a href="{destination}">its new address</a>.</p>
+</body>
+</html>
+'''
+        legacy.write_text(html, encoding="utf-8")
+        print(f"stub: {legacy.relative_to(REPO)} -> {destination}")
+
+
 def write_stub(path: Path, dest: str):
     path.write_text(STUB.format(origin=ORIGIN, dest=dest), encoding="utf-8")
     print(f"stub: {path.relative_to(REPO)} -> {dest}")
@@ -93,6 +137,8 @@ def main():
             write_stub(path, dest)
         else:
             print(f"SKIP (missing): {path.relative_to(REPO)}")
+
+    write_wem_stubs()
 
 
 if __name__ == "__main__":

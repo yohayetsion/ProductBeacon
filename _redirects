@@ -12,3 +12,9 @@
 # Append only - do NOT modify the A-8 rule above (per M14).
 /research/state-of-cyber-2026/brief.html      /research/state-of-cyber-2026/pre-call-brief.html      301
 /research/state-of-cyber-2026/brief.pdf       /research/state-of-cyber-2026/pre-call-brief.pdf       301
+
+# WEM report URL migration, 2026-09-11. HTML forwarding pages are the active
+# fallback on GitHub Pages; this file is not executed by the current host.
+/research/state-of-wfo-2026/brief.html /research/state-of-wem-2026/pre-call-brief.html 301
+/research/state-of-wfo-2026/ /research/state-of-wem-2026/ 301
+/research/state-of-wfo-2026/* /research/state-of-wem-2026/:splat 301
