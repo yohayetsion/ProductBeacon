@@ -380,22 +380,6 @@ img { max-width: 100%; display: block; }
 .methodology-block a:hover { color: var(--amber-light); }
 .methodology-note { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--slate-400); margin: 4px 0 0 0; }
 
-/* ---------- Email-capture form ---------- */
-.subscribe { max-width: var(--content-max); margin: 0 auto; padding: var(--space-7) 32px var(--space-8); }
-.subscribe-card { background: var(--surface); border: 1px solid #334155; border-radius: 12px; padding: var(--space-6); max-width: 720px; }
-.subscribe-headline { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 20px; color: var(--bright); margin: 0 0 var(--space-2) 0; line-height: 1.4; }
-.subscribe-cadence { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate-400); margin: 0 0 var(--space-4) 0; line-height: 1.5; }
-.subscribe-form { display: flex; gap: var(--space-3); flex-wrap: wrap; }
-.subscribe-form input[type="email"] {
-  flex: 1 1 280px; height: 48px; padding: 0 var(--space-3);
-  background: var(--ink); border: 1px solid var(--slate-600); border-radius: 8px;
-  color: var(--primary-text); font-family: 'Inter', sans-serif; font-size: 16px; outline: none;
-  transition: border-color var(--research-mark-hover-transition);
-}
-.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
-.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
-.subscribe-form button { min-width: 160px; }
-.subscribe-msg { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate-400); margin: var(--space-3) 0 0 0; min-height: 1.2em; }
 
 /* CTAs / buttons */
 .btn {
@@ -418,8 +402,6 @@ img { max-width: 100%; display: block; }
   .section-title { font-size: 28px; }
   .chapter-grid { grid-template-columns: 1fr; }
   .doors { padding: var(--space-4); }
-  .subscribe { padding: var(--space-6) 24px var(--space-7); }
-  .subscribe-card { padding: var(--space-5); }
   .methodology-block { padding: var(--space-5) 24px; }
 }
 @media (max-width: 480px) {
@@ -566,7 +548,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </style>
 </head>
 <body>
-<nav class="p4-topnav" aria-label="Report navigation"><a href="/research/">ProductBeacon Research</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/">Report home</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-deck.html">Overview deck</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-master.html">Full report</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/citations.html">Citations ledger</a></nav>
+<nav class="p4-topnav" aria-label="Report navigation"><a href="/internal/government-intelligence-2026/research-index-preview.html">ProductBeacon Research</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/">Report home</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-deck.html">Overview deck</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-master.html">Full report</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/citations.html">Citations ledger</a></nav>
 
 
 <!-- =====================================================================
@@ -588,9 +570,9 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
       <li><a href="/workforce.html">The Workforce</a></li>
       <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
       <li><a href="/decision-provenance-standard.html">The Standard</a></li>
-      <li><a href="/research/">Research</a></li>
+      <li><a href="/internal/government-intelligence-2026/research-index-preview.html">Research</a></li>
       <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg">Apply</a></li>
     </ul>
     <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -605,9 +587,9 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
     <a href="/workforce.html" role="menuitem">The Workforce</a>
     <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
     <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
-    <a href="/research/" role="menuitem">Research</a>
+    <a href="/internal/government-intelligence-2026/research-index-preview.html" role="menuitem">Research</a>
     <a href="/about.html" role="menuitem">About</a>
-    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem">Apply</a>
   </div>
 </nav>
 <!-- CHROME:NAV:END -->
@@ -635,12 +617,14 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   <h1 id="sec-the-state-of-government-and-law-enforcement-intelligence-mar" class="hero-headline">The State of Government and Law Enforcement Intelligence Markets 2026.</h1>
 
   <p class="hero-subhead">
-    The floor is rising under collection, and the ceiling is rising over fusion. An operator's read of the government and national-security intelligence-software markets, across five markets plus a Convergence synthesis. Grounded in 590 dated public citations. 2026.
+    The floor is rising under collection, and the ceiling is rising over fusion. An operator's read of the government and national-security intelligence-software markets, across five markets plus a Convergence synthesis. Grounded in 623 dated public citations. 2026.
   </p>
 
   <div class="hero-byline">
     <p class="hero-byline-line1">By Yohay Etsion · Managing Director, ProductBeacon. <a href="/research/author.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60); font-size: 0.85em; margin-left: 8px;">Full research-author bio &rarr;</a></p>
   </div>
+
+  <p class="hero-cutoff" style="font-family: 'Inter', sans-serif; font-size: 15px; color: var(--slate-400); margin: 0 0 var(--space-5) 0; max-width: 62ch;">Research cutoff: material dated and event-sensitive claims were re-swept to 2026-09-11; descriptive claims retain their own earlier access dates.</p>
 
   <!-- Disclosure: front-and-visible, matches the report-level impartiality line -->
   <section class="disclosure" aria-labelledby="disclosure-eyebrow">
@@ -655,7 +639,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
     <p class="doors-eyebrow" id="doors-eyebrow">How to read this report</p>
     <ul class="doors-list">
       <li><strong>Start here — the five-minute read.</strong> The overview deck walks the whole argument in 19 slides: the five markets, the three cross-market patterns, and the verdict. <a href="report-deck.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Open the overview deck (19 slides) &rarr;</a></li>
-      <li><strong>Start here — the pre-call read.</strong> The Pre-Call Briefing Pack is a single narrative companion across all five markets plus the Convergence, with per-market citation breakdowns. <a href="companion.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Read the Briefing Pack (one page) &rarr;</a></li>
+      <li><strong>Start here — the pre-call read.</strong> The Pre-Call Briefing Pack is a single narrative companion across all five markets plus the Convergence, with per-market citation breakdowns. <a href="companion.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Read the Briefing Pack (one page) &rarr;</a> <a href="companion.pdf" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Download the Briefing Pack (PDF) &rarr;</a></li>
     </ul>
     <p class="doors-then" style="margin-top: var(--space-4); font-size: 15px; color: var(--slate-400);">Then go deeper: analysts and expert-network sourcing usually start with the <a href="convergence.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Convergence synthesis (18 slides) &rarr;</a> and read the five markets for the vendor-by-vendor detail behind each cross-market claim; operators and buyers tracking the market usually read <a href="#markets" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">the five markets in order &rarr;</a> and finish on the Convergence. The complete argument is in the <a href="report-master.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">full report (one long page) &rarr;</a>.</p>
     <p class="doors-footer" style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--slate-600); font-size: 15px; color: var(--slate-400);">Before you start: <a href="/research/methodology.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">read how we source and how to verify any claim &rarr;</a></p>
@@ -674,20 +658,24 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
     <article class="chapter-card">
       <p class="chapter-label">Chapter 1 · SIGINT · Backbone Collection</p>
       <h3 class="chapter-title">National Agencies</h3>
-      <p class="chapter-teaser">Strategic, standing, mass-scale network collection at the backbone. The market that serves national SIGINT agencies rather than a single case. Grounded in 114 dated public citations.</p>
+      <p class="chapter-teaser">Strategic, standing, mass-scale network collection at the backbone. The market that serves national SIGINT agencies rather than a single case. Grounded in 115 dated public citations.</p>
       <p class="chapter-gravity"><strong>Gravity:</strong> BAE Systems · Vehere · ClearTrail</p>
       <div class="chapter-links">
         <a href="f1-national.html">Read the market — 19 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="f1-national.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
 
     <article class="chapter-card">
       <p class="chapter-label">Chapter 2 · Lawful Interception · Warrant-Scoped</p>
       <h3 class="chapter-title">Law Enforcement Monitoring Centers</h3>
-      <p class="chapter-teaser">Warrant-scoped lawful interception with standards-certified handover. Collection bounded by a legal order, built to a certification, not to open-ended mass access. Grounded in 90 dated public citations.</p>
+      <p class="chapter-teaser">Warrant-scoped lawful interception with standards-certified handover. Collection bounded by a legal order, built to a certification, not to open-ended mass access. Grounded in 93 dated public citations.</p>
       <p class="chapter-gravity"><strong>Gravity:</strong> JSI Telecom · ClearTrail · Trovicor</p>
       <div class="chapter-links">
         <a href="f2-monitoring.html">Read the market — 18 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="f2-monitoring.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
 
@@ -698,26 +686,32 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
       <p class="chapter-gravity"><strong>Gravity:</strong> Cellebrite · MSAB · Magnet Forensics</p>
       <div class="chapter-links">
         <a href="f3-tactical.html">Read the market — 19 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="f3-tactical.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
 
     <article class="chapter-card">
       <p class="chapter-label">Chapter 4 · Decision Intelligence · Analytical Layer</p>
       <h3 class="chapter-title">Fusion / Decision Intelligence</h3>
-      <p class="chapter-teaser">The analytical layer that resolves collected data into a decision. Multi-source fusion, link analysis, and the investigative workflow that sits above every collection market. Grounded in 111 dated public citations.</p>
+      <p class="chapter-teaser">The analytical layer that resolves collected data into a decision. Multi-source fusion, link analysis, and the investigative workflow that sits above every collection market. Grounded in 132 dated public citations.</p>
       <p class="chapter-gravity"><strong>Gravity:</strong> Palantir · i2 Group</p>
       <div class="chapter-links">
         <a href="f4-fusion.html">Read the market — 18 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="f4-fusion.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
 
     <article class="chapter-card">
       <p class="chapter-label">Chapter 5 · OSINT / WEBINT · Open Sources</p>
       <h3 class="chapter-title">Open-Source Intelligence</h3>
-      <p class="chapter-teaser">Collection from open, web, and public sources. The market that turns the open internet, social platforms, and public records into intelligence (OSINT / WEBINT). Grounded in 123 dated public citations.</p>
+      <p class="chapter-teaser">Collection from open, web, and public sources. The market that turns the open internet, social platforms, and public records into intelligence (OSINT / WEBINT). Grounded in 130 dated public citations.</p>
       <p class="chapter-gravity"><strong>Gravity:</strong> Recorded Future · Dataminr · Babel Street</p>
       <div class="chapter-links">
         <a href="f5-osint.html">Read the market — 17 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="f5-osint.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
 
@@ -735,9 +729,11 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
     <article class="chapter-card convergence-card">
       <p class="chapter-label">Cross-Market Synthesis</p>
       <h3 class="chapter-title">The Convergence Synthesis</h3>
-      <p class="chapter-teaser">The five markets read as one stack, and the value migrating up it. Where collection commoditizes, where fusion and portfolio breadth accrue advantage, and how AI-native entrants change the shape of who wins. Grounded in 50 dated public citations.</p>
+      <p class="chapter-teaser">The five markets read as one stack, and the value migrating up it. Where collection commoditizes, where fusion and portfolio breadth accrue advantage, and how AI-native entrants change the shape of who wins. Grounded in 51 dated public citations.</p>
       <div class="chapter-links">
         <a href="convergence.html">Read the synthesis — 18 slides &rarr;</a>
+        <span class="sep">&middot;</span>
+        <a href="convergence.pdf">Chapter PDF &rarr;</a>
       </div>
     </article>
   </div>
@@ -749,29 +745,10 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <section class="methodology-block" aria-label="Full report and methodology">
   <a href="report-master.html">Read the full report: all five markets and the Convergence in one document &rarr;</a>
   <p class="methodology-note">The complete State of Government and Law Enforcement Intelligence Markets 2026, every market and the cross-market synthesis in one read. <a href="report-master.pdf" style="color: var(--amber);">Download the full report (PDF) &rarr;</a></p>
-  <p class="methodology-note" style="margin-top: var(--space-3);">Every source, one ledger: <a href="citations.html" style="color: var(--amber);">Citations ledger &rarr;</a> 590 citations across the five markets and the Convergence.</p>
+  <p class="methodology-note" style="margin-top: var(--space-3);">Every source, one ledger: <a href="citations.html" style="color: var(--amber);">Citations ledger &rarr;</a> 623 citations across the five markets and the Convergence.</p>
   <p class="methodology-note" style="margin-top: var(--space-3);"><a href="/research/methodology.html" style="color: var(--amber);">How to verify any claim in this report &rarr;</a> Sourcing rules. Verifiable Proxy Rule. Disclosure framework. Refresh cadence.</p>
 </section>
 
-<!-- =====================================================================
-     EMAIL-CAPTURE FORM
-     ===================================================================== -->
-<section class="subscribe" id="subscribe" aria-labelledby="subscribe-headline">
-  <div class="subscribe-card">
-    <h2 class="subscribe-headline" id="subscribe-headline">Get notified when new ProductBeacon Research ships.</h2>
-    <p class="subscribe-cadence">Expect ~6-10 emails per year. Ship events only, no weekly digest.</p>
-    <form class="subscribe-form" id="subscribe-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-      <input type="hidden" name="access_key" value="98f61f12-c5f8-46a4-98cc-037b9a574af3">
-      <input type="hidden" name="subject" value="New ProductBeacon Research subscription request">
-      <input type="hidden" name="from_name" value="ProductBeacon Research">
-      <input type="checkbox" name="botcheck" class="sr-only" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label for="subscribe-email" class="sr-only">Email address</label>
-      <input type="email" id="subscribe-email" name="email" placeholder="your@email.com" required autocomplete="email">
-      <button type="submit" class="btn btn-primary">Subscribe</button>
-    </form>
-    <p class="subscribe-msg" id="subscribe-msg" aria-live="polite"></p>
-  </div>
-</section>
 </main>
 
 <!-- =====================================================================
@@ -820,46 +797,6 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </footer>
 <!-- CHROME:FOOTER:END -->
 
-<!-- =====================================================================
-     EMAIL-CAPTURE: AJAX submit to Web3Forms.
-     ===================================================================== -->
-<script>
-(function() {
-  var form = document.getElementById('subscribe-form');
-  var msg = document.getElementById('subscribe-msg');
-  if (!form || !msg) return;
-
-  form.addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    var emailEl = document.getElementById('subscribe-email');
-    var email = (emailEl && emailEl.value) || '';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      msg.style.color = '#FCA5A5';
-      msg.textContent = 'Please enter a valid email address.';
-      return;
-    }
-    msg.style.color = 'var(--slate-400)';
-    msg.textContent = 'Sending...';
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    }).then(function(r) { return r.json(); }).then(function(j) {
-      if (j && j.success) {
-        form.reset();
-        msg.style.color = '#FBBF24';
-        msg.textContent = 'Thanks. You are on the list for ship-event notifications.';
-      } else {
-        msg.style.color = '#FCA5A5';
-        msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
-      }
-    }).catch(function() {
-      msg.style.color = '#FCA5A5';
-      msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
-    });
-  });
-})();
-</script>
 
 <script src="/js/main.js"></script>
 <script data-p4="dialog">

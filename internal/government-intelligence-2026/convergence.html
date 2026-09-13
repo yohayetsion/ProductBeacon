@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="robots" content="noindex, nofollow">
 <meta name="p4-reader-postprocess" content="v1;deck">
 
 <link rel="canonical" href="https://productbeacon.agency/research/government-intelligence-2026/convergence.html">
-<meta name="robots" content="noindex, nofollow">
+
 <meta property="og:title" content="The Market as One Battlefield: The Convergence Synthesis 2026 | State of Government and Law Enforcement Intelligence Markets">
 <meta property="og:url" content="https://productbeacon.agency/research/government-intelligence-2026/convergence.html">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Market as One Battlefield: The Convergence Synthesis 2026 | State of Government and Law Enforcement Intelligence Markets","url":"https://productbeacon.agency/research/government-intelligence-2026/convergence.html"}</script>
@@ -1368,7 +1369,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <li><a href="/internal/government-intelligence-2026/f5-osint.html" class="md-link">Open-Source Intelligence (OSINT / WEBINT)</a></li>
 </ul>
 <p><em>Five-minute overview: <a href="/internal/government-intelligence-2026/report-deck.html" class="md-link">the report deck →</a> · every source: <a href="/internal/government-intelligence-2026/citations.html" class="md-link">the citations ledger →</a>.</em></p>
-<p><em>Full report, methodology, and the five front chapters: <a href="/research/" class="md-link">ProductBeacon Research →</a>.</em></p>
+<p><em>Full report, methodology, and the five front chapters: <a href="/internal/government-intelligence-2026/research-index-preview.html" class="md-link">ProductBeacon Research →</a>.</em></p>
 <p></p>
 </div>
 <div class="slide" data-slide="17" data-title="Disclosures">
@@ -1613,8 +1614,8 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 
   function updateReviewSlide(){
     var list=document.getElementById('feedbackList'),empty=document.getElementById('emptyState');
-    if(comments.size===0){list.innerHTML='';list.appendChild(empty);empty.style.display='block';return;}
-    if(empty)empty.style.display='none';list.innerHTML='';
+    if(comments.size===0){list.innerHTML='';list.appendChild(empty);empty.style.display='block';if(document.getElementById('outputPreview').style.display!=='none')updatePreview();return;}
+    if(empty)empty.style.display='none';list.querySelectorAll('.feedback-item').forEach(function(item){item.remove();});
     var sorted=Array.from(comments.entries()).sort(function(a,b){return(a[1].slideIndex||0)-(b[1].slideIndex||0);});
     sorted.forEach(function(entry){var s=entry[0],d=entry[1];var item=document.createElement('div');item.className='feedback-item';
       item.innerHTML='<div class="feedback-item-header"><span class="feedback-item-anchor">'+escapeHtml(d.label)+'</span><span class="feedback-item-slide">Slide '+((d.slideIndex||0)+1)+'</span></div><div class="feedback-item-text">'+escapeHtml(d.text)+'</div><div class="feedback-item-actions"><button class="cbtn cbtn-ghost" onclick="window.editCommentFromReview(\''+s+'\')" style="font-size:12px;padding:3px 10px;">Edit</button><button class="cbtn-danger" onclick="window.deleteCommentBySection(\''+s+'\')">Remove</button></div>';
@@ -1654,7 +1655,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   function updatePreview(){document.getElementById('outputPreview').textContent=getOutput();}
 
   function persistState(){try{var gf=document.getElementById('generalFeedback').value;if(comments.size===0&&!gf){localStorage.removeItem(storageKey);return;}localStorage.setItem(storageKey,JSON.stringify({comments:Object.fromEntries(comments),generalFeedback:gf}));}catch(e){}}
-  function loadState(){try{var saved=localStorage.getItem(storageKey);if(saved){var data=JSON.parse(saved);if(data.comments){var keys=Object.keys(data.comments);if(keys.length===0){localStorage.removeItem(storageKey);return;}keys.forEach(function(k){comments.set(k,data.comments[k]);});comments.forEach(function(v,s){var el=document.querySelector('.commentable[data-section="'+s+'"]');if(el)el.classList.add('has-comment');});updateBadge();}if(data.generalFeedback)document.getElementById('generalFeedback').value=data.generalFeedback;}}catch(e){}}
+  function loadState(){try{var saved=localStorage.getItem(storageKey);if(saved){var data=JSON.parse(saved);if(data.comments){var keys=Object.keys(data.comments);keys.forEach(function(k){comments.set(k,data.comments[k]);});comments.forEach(function(v,s){var el=document.querySelector('.commentable[data-section="'+s+'"]');if(el)el.classList.add('has-comment');});updateBadge();}if(data.generalFeedback)document.getElementById('generalFeedback').value=data.generalFeedback;}}catch(e){}}
 
   document.getElementById('generalFeedback').addEventListener('input',persistState);
   function escapeHtml(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
