@@ -565,6 +565,13 @@
   </url>
 
   <url>
+    <loc>https://productbeacon.agency/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-09-12-brief.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://productbeacon.agency/research/state-of-wem-2026/updates/wem-radar-since-publication-2026-08-05-brief.html</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -574,6 +581,13 @@
   <url>
     <loc>https://productbeacon.agency/research/state-of-wem-2026/updates/wem-radar-weekly-2026-08-12-brief.html</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://productbeacon.agency/research/state-of-wem-2026/updates/wem-radar-bets-check-2026-09-12-brief.html</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
