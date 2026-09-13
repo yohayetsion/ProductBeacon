@@ -414,9 +414,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .skip-link{position:fixed;left:var(--sp-2);top:var(--sp-2);z-index:1000;transform:translateY(-180%);padding:var(--sp-2) var(--sp-3);background:var(--amber);color:var(--ink);font-weight:700}.skip-link:focus{transform:translateY(0)}
 .start-here-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px}
 @media(max-width:639px){.start-here-grid{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){.skip-link,.btn,a,button{transition:none!important;transform:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.btn,a,button{transition:none!important;transform:none!important;scroll-behavior:auto!important}}
 </style>
-<style id="c5-review-notes-style">.c5-review-notes{max-width:960px;overflow-wrap:anywhere}.c5-review-notes h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2}.c5-review-notes h2{margin-top:2.5rem;scroll-margin-top:100px}.c5-review-notes a{color:var(--amber);text-decoration:underline}.c5-review-notes nav{margin-bottom:2rem}.c5-review-notes table{width:100%;table-layout:fixed;border-collapse:collapse}.c5-review-notes th,.c5-review-notes td{padding:.5rem;border:1px solid var(--slate-600);vertical-align:top}.c5-review-notes code{white-space:normal}</style></head>
+<style id="c5-review-notes-style">.c5-review-notes{max-width:960px;overflow-wrap:anywhere}.c5-review-notes h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2}.c5-review-notes h2{margin-top:2.5rem;scroll-margin-top:100px}.c5-review-notes a{color:var(--amber);text-decoration:underline}.c5-review-notes nav{margin-bottom:2rem}.c5-review-notes table{width:100%;table-layout:fixed;border-collapse:collapse}.c5-review-notes th,.c5-review-notes td{padding:.5rem;border:1px solid var(--slate-600);vertical-align:top}.c5-review-notes code{white-space:normal}</style><style data-c6-review-accessibility="">.skip-link{position:fixed!important;top:-200px!important;left:8px!important;transform:none!important;transition:none!important;z-index:100000!important}.skip-link:focus{top:8px!important}@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}</style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- =====================================================================
@@ -470,64 +470,76 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
      HERO (Research-as-publishing-program framing)
      ===================================================================== -->
 <main id="main-content" style="padding-top: var(--nav-height);" tabindex="-1"><section class="section c5-review-notes"><nav aria-label="Review navigation"><a href="research-index-preview.html">Research preview</a>  · <a href="./">Report home</a></nav><h1>Review notes</h1>
-<p>This is the September review pack for <em>The State of Government and Law Enforcement Intelligence Markets 2026</em>. Review the report as it would appear on ProductBeacon, with the known limitations below alongside it. Hosting this pack does not approve publication.</p>
-<p><a href="research-index-preview.html">Research-page preview</a> · <a href="index.html">Report home</a> · <a href="report-master.html">Full report</a></p>
-<p>These twelve items came forward from the completed report refresh. Listing them here does not authorise all twelve repairs. The six source chapters remain frozen. The two wording issues in the Fusion chapter require a specific owner decision before that boundary changes.</p>
-<h2 id="c5-1">C5-1: The shared legend uses the wrong tier name in two markets</h2>
-<p><strong>Reader impact:</strong> the shared legend says “Wildcard” where the Fusion and Open-Source Intelligence markets use “Challenger”. The same legend is correct in the first three markets.</p>
-<p><strong>Disposition:</strong> retained under the owner's ruling. A future change must give each market its appropriate legend; changing the shared word everywhere would create new errors.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-1; <code>assembly/legend-box-copy.md</code> and its six deck consumers.</p>
-<h2 id="c5-2">C5-2: The PDFs are not tagged for accessibility</h2>
-<p><strong>Reader impact:</strong> the eight PDFs lack document structure and alternative descriptions for diagrams needed by assistive technology. This pack does not describe them as accessible PDFs. Web versions are also linked from the report home.</p>
-<p><strong>Disposition:</strong> unresolved renderer work. Editing diagram labels alone cannot provide PDF structure or alternative descriptions.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-2; the C4 content-verification record's PDF inspection.</p>
-<h2 id="c5-3">C5-3: One Fusion sentence presents an older Palantir quarter as current</h2>
-<p><strong>Reader impact:</strong> a sentence annualises the prior quarter at roughly USD 3.4 billion and describes 76% growth in the present tense. The refreshed report also carries the newer quarterly government revenue of USD 990 million and 79% growth.</p>
-<p><strong>Disposition:</strong> unresolved. The source chapter is frozen; correcting this sentence needs a specific owner exception and verification of every affected output. The issue was present before the refresh.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-3; <code>segments/f4-fusion/chapter.md</code>, the sentence beginning “runs at roughly a USD 3.4B annualized rate”.</p>
-<h2 id="c5-4">C5-4: One Fusion sentence makes four vendors look like a formal tier</h2>
-<p><strong>Reader impact:</strong> capitalised “Challengers (Siren, DataWalk, i2, Nuix)” suggests all four share that grade. Only Siren is graded Challenger.</p>
-<p><strong>Disposition:</strong> unresolved. This wording is in the frozen source chapter and needs an explicit exception before editing. The grading table remains the basis for each vendor's actual grade.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-4; <code>segments/f4-fusion/chapter.md</code>, the capitalised “Challengers” sentence.</p>
-<h2 id="c5-5">C5-5: A landscape-editing script cannot currently run</h2>
-<p><strong>Reader impact:</strong> this is a future maintenance risk. The script's expected text anchors are absent, so it stops before applying its changes.</p>
-<p><strong>Disposition:</strong> not run for this pack. Its dead widening step must be repaired or removed before the script is reused. The already rendered report assets are the inputs to this review set.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-5; <code>gates/p4_landscapes_build.py</code> and the C4 producer investigation.</p>
-<h2 id="c5-6">C5-6: The Open-Source Intelligence reading deck has more diagrams than its chapter PDF</h2>
-<p><strong>Reader impact:</strong> that source chapter references one of its five diagrams. Several diagram repairs therefore appear in the reading deck but not in the chapter PDF or full report.</p>
-<p><strong>Disposition:</strong> retained under the owner's instruction to record the difference without changing the frozen chapter. Use the <a href="f5-osint.html">Open-Source Intelligence reading deck</a> to see the complete diagram set.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-6; C4 diagram and rendered-output comparison.</p>
-<h2 id="c5-7">C5-7: Some pages have narrow-screen layout limitations</h2>
-<p><strong>Reader impact:</strong> the earlier checks found elements wider than a 320-pixel screen in the companion, citations page and old index preview, even though ordinary page-overflow measurements reported no problem.</p>
-<p><strong>Disposition:</strong> the companion and citations limitations remain recorded. The replacement index preview uses the current Research-page layout and receives its own fresh mobile check; the old preview's result does not certify it. No report-wide layout repair is included in this hosting step.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-7; <code>gates/c4-6-verification-ui-designer-2026-09-12.md</code> and the C5 rendered review.</p>
-<h2 id="c5-8">C5-8: Automated diagram checks do not detect every overlap</h2>
-<p><strong>Reader impact:</strong> the automatic fit check cannot reliably detect all overlapping boxes. A small overlap in the Open-Source Intelligence timeline is among the recorded examples.</p>
-<p><strong>Disposition:</strong> the check is treated as a limited regression check. Rendered visual inspection remains necessary; a passing automated result does not establish that every diagram is visually correct.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-8; C4 diagram-check negative controls and <code>gates/svg_panel_fit_check.js</code> limitations.</p>
-<h2 id="c5-9">C5-9: Two internal count checks still use the old tier label</h2>
-<p><strong>Reader impact:</strong> this affects verification records rather than changing a vendor's displayed grade. Two configuration entries say “1 Wildcard” where the chapters now say “1 Challenger”.</p>
-<p><strong>Disposition:</strong> recorded for a scoped configuration correction. This pack does not treat the existing count check's exit code as proof of a clean report; its specific known failures must be distinguished from new ones.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-9; <code>gates/count-invariants.json</code>, entries <code>C-f4-07</code> and <code>C-f5-05</code>.</p>
-<h2 id="c5-10">C5-10: Small rendering defects and three citation URLs remain</h2>
-<p><strong>Reader impact:</strong> the prior review recorded a run-together figure, an overlapping card pair and three citation URLs whose dash characters were altered.</p>
-<p><strong>Disposition:</strong> retained in the issue list. The prior comparison demonstrated these existed before the refresh. They are not silently repaired by restaging the files.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-10; the C4 rendered and content-verification records, including the backup comparison.</p>
-<h2 id="c5-11">C5-11: Older verification tools have important limits</h2>
-<p><strong>Reader impact:</strong> some earlier green results checked the August hosted set or compared a source with its own summary. Such results cannot establish that this review pack contains the September work.</p>
-<p><strong>Disposition:</strong> C5 uses checks bound to the actual staged and served files, including file identities and metadata in the browser's document head. This addresses acceptance of the review pack; it does not claim that every older checker has been repaired.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-11, and §13.14; the dated C5 staging, browser and served-file receipts.</p>
-<h2 id="c5-12">C5-12: Historical working copies retain superseded figures</h2>
-<p><strong>Reader impact:</strong> none within this pack. Earlier integration working directories contain historical copies and are outside the reader package.</p>
-<p><strong>Disposition:</strong> keep them as history. They must not be treated as current sources during a future refresh or added to the hosted review set.</p>
-<p><strong>Evidence:</strong> controlling plan §13.13.11, C5-12; <code>sourcing/p1…p3-integration-working/</code>.</p>
+<p>This is the C6 internal review pack for <em>The State of Government and Law Enforcement Intelligence Markets 2026</em>. It includes the reader repairs, a dedicated Collateral map and a separate Report Digest. Hosting this pack does not approve public publication.</p>
+<p><a href="research-index-preview.html">Research-page preview</a> · <a href="index.html">Report home</a> · <a href="collaterals.html">Collateral map</a> · <a href="synthesis.html">Report Digest</a> · <a href="report-master.html">Full report</a></p>
+<p>The twelve original issue IDs remain below so the repairs can be traced. Yohay approved two exact Fusion wording changes and four existing Open-Source Intelligence diagram references. Those changes were applied; the other four chapter files remain byte-identical. All 13 registered protected passages survive. That verification does not replace the existing publication and disclosure review requirements.</p>
+<h2 id="c5-1">C5-1: Each market now has the correct tier legend</h2>
+<p><strong>Earlier issue:</strong> one shared legend used “Wildcard” in Fusion and Open-Source Intelligence, where the third tier is “Challenger”.</p>
+<p><strong>C6 disposition:</strong> the first three market decks retain Wildcard; Fusion and Open-Source Intelligence use their own Challenger explanations. Convergence explicitly explains the mixed labels. No vendor was regraded.</p>
+<p><strong>Evidence:</strong> the maintained per-market legend mapping, rebuilt decks and C6 legend regression checks.</p>
+<h2 id="c5-2">C5-2: PDF tags are added; a viewer limitation remains</h2>
+<p><strong>Earlier issue:</strong> the eight PDFs lacked tagged document structure and diagram alternatives.</p>
+<p><strong>C6 disposition:</strong> all nine current PDFs, including the new Digest, have tagged headings, lists and tables, document language, link annotations and source-bound figure alternatives. Checks compare decoded reading order, table row/cell order and header scope with the document source. Print ligatures and split footnote labels were corrected where they damaged extracted text. Deliberately damaged tags, alternatives, reading order and links are detected.</p>
+<p><strong>Remaining PDF-reader issue:</strong> Chromium's built-in PDF viewer exposes text and links in the tested Digest, Pre-Call and Open-Source Intelligence files, but flattens heading levels and does not expose the table associations or diagram alternatives present in the PDFs. Tags in a file do not establish usable support in that viewer. This limitation remains open; it is not labelled repaired or treated as a full accessibility pass.</p>
+<p><strong>Reading alternative:</strong> the <a href="report-master.html">full report on the web</a>, <a href="companion.html">Pre-Call</a> and <a href="synthesis.html">Digest</a> remain available. The actual browser accessibility interface preserves the web report's heading levels, table/header/cell relationships and all 30 diagram titles/descriptions; the Pre-Call table is also exposed. This is tested interface behavior, not a blanket accessibility certification.</p>
+<p><strong>What would close the remaining issue:</strong> verify the supplied PDFs in a viewer and screen reader that use tagged PDF semantics, exercising heading traversal, table-header relationships, diagram alternatives, links and reading sequence. No human screen-reader session or PDF/UA certification has been completed.</p>
+<p><strong>Evidence:</strong> C6 per-PDF semantic records and damaged-PDF tests; the independent QA report's actual viewer probes; <code>c6-main-html-accessibility-2026-09-13.json</code>. The plan explicitly permits this named viewer constraint and concrete remedy; it does not permit an unqualified accessible-PDF claim.</p>
+<h2 id="c5-3">C5-3: The older Palantir quarter is explicitly historical</h2>
+<p><strong>Earlier issue:</strong> a Fusion sentence presented the Q1 annualised calculation and 76% growth in the present tense alongside newer Q2 figures.</p>
+<p><strong>C6 disposition:</strong> the approved sentence now begins “In Q1 FY2026” and uses past tense. Its USD 3.4 billion calculation, USD 858 million quarter and 76% observation are preserved. The newer Q2 Government-segment figures remain distinct.</p>
+<p><strong>Evidence:</strong> the exact approved source-patch receipt and rebuilt Fusion/full-report consumers. The Digest separately preserves the Government versus U.S. Government denominator distinction and links both accepted source documents.</p>
+<h2 id="c5-4">C5-4: The vendor grouping no longer looks like a formal grade</h2>
+<p><strong>Earlier issue:</strong> “Challengers (Siren, DataWalk, i2, Nuix)” suggested that all four vendors shared a formal tier.</p>
+<p><strong>C6 disposition:</strong> the approved wording is “Competing vendors”. Siren remains Challenger; the grading table and all other vendor grades are unchanged.</p>
+<p><strong>Evidence:</strong> the exact approved source-patch receipt and current Fusion consumers.</p>
+<h2 id="c5-5">C5-5: The obsolete landscape patcher is retired</h2>
+<p><strong>Earlier issue:</strong> a historical landscape-editing script expected absent anchors and contained stale widening instructions.</p>
+<p><strong>C6 disposition:</strong> the script stops before any write and directs maintenance to the current SVG sources and build process. The current rebuild does not use its stale data.</p>
+<p><strong>Evidence:</strong> the C6 retirement guard and its failing invocation test, with no source writes.</p>
+<h2 id="c5-6">C5-6: All five Open-Source Intelligence diagrams reach the chapter and full report</h2>
+<p><strong>Earlier issue:</strong> four diagrams appeared in the reading deck but lacked source references for the chapter PDF and full report.</p>
+<p><strong>C6 disposition:</strong> the owner approved four precise references to the existing timeline and pattern diagrams. Those references now accompany the existing vendor landscape, and their consumers have been rebuilt. The earlier instruction to retain this difference was superseded only for these insertions.</p>
+<p><strong>Evidence:</strong> the four-reference allowlist, source-patch receipt and diagram-identity checks on the rebuilt outputs.</p>
+<h2 id="c5-7">C5-7: Narrow-screen text and navigation reflow</h2>
+<p><strong>Earlier issue:</strong> the companion and citations page contained elements wider than a 320-pixel screen.</p>
+<p><strong>C6 disposition:</strong> text and controls reflow within the page. Wide tables and the relationship diagram have their own scroll areas; the map also provides equivalent document cards and a relationship list. The independent review also found two deck tables collapsed to zero height. Their containers now retain the full table height, with keyboard horizontal scrolling where needed; the complete slide remains vertically scrollable. These two-dimensional elements are not hidden to produce a passing page-width measurement.</p>
+<p><strong>Evidence:</strong> current browser checks at mobile and desktop widths, element-level inspection, screenshots and keyboard/link walks.</p>
+<h2 id="c5-8">C5-8: The known timeline overlap is repaired and detected</h2>
+<p><strong>Earlier issue:</strong> two top-row cards overlapped in the Open-Source Intelligence timeline, and the general fit checker did not detect it.</p>
+<p><strong>C6 disposition:</strong> the cards are separated while retaining their dates, text and timeline relationships. A scoped peer-card collision check rejects a deliberately reintroduced overlap. This improves detection of the measured defect; it is not a claim that an automatic checker can judge every diagram.</p>
+<p><strong>Evidence:</strong> current SVG geometry, the overlap fixture and rendered diagram inspection. The bounded check covers seven event cards and all 21 peer pairs in this timeline, with explicit background/legend exclusions. Missing source or peer populations fail; this is not a universal SVG overlap detector.</p>
+<h2 id="c5-9">C5-9: Count checks match the accepted grades and current claims</h2>
+<p><strong>Earlier issue:</strong> two entries retained “1 Wildcard”; an additional Fusion SVG selector was stale and its six-vendor label was unclassified.</p>
+<p><strong>C6 disposition:</strong> all four measured failures are corrected without deleting detection. The active count check recognises the current prose and SVG claims, including six graded Fusion vendors and the correct Challenger labels.</p>
+<p><strong>Evidence:</strong> the current count register and isolated negative tests. Historical copies remain outside the current population.</p>
+<h2 id="c5-10">C5-10: The measured typography, diagram and social-image defects are repaired</h2>
+<p><strong>Earlier issue:</strong> a Fusion legend overran its panel, a Monitoring Centers figure ran into its following label, the social-image badge lacked padding, and the renderer changed double hyphens in three displayed URLs.</p>
+<p><strong>C6 disposition:</strong> the diagram labels and badge have room inside their panels. Literal URL text now preserves double hyphens while retaining the correct link targets. Adjacent footnote numbers are separated, and generated cover dates are labelled “Build date” rather than presented as a new research cutoff. The report cutoff remains 11 September 2026.</p>
+<p><strong>Evidence:</strong> maintained SVG/OG sources, rebuilt consumers, exact URL-display checks, PDF text checks and rendered samples.</p>
+<h2 id="c5-11">C5-11: Current checks use actual source and reader files</h2>
+<p><strong>Earlier issue:</strong> older tools could check an August hosted set or compare a source with its own summary.</p>
+<p><strong>C6 disposition:</strong> active checks compare the maintained ledger with actual chapter footnote identities and definitions, and compare reader URLs with that source population. Staging and served checks bind the current manifest and exact file identities. New checks reject missing or misdirected map/Digest choices rather than accepting any HTTP 200.</p>
+<p><strong>Evidence:</strong> current source, citation, staging, browser and served-file receipts. Historical receipts are retained as history, not reused as current proof.</p>
+<h2 id="c5-12">C5-12: Historical working copies remain excluded</h2>
+<p><strong>Earlier issue:</strong> integration working directories retain superseded figures.</p>
+<p><strong>C6 disposition:</strong> those historical data files are preserved and excluded from current source discovery and the reader package. The explicitly named URL-parsing helper remains an active code dependency; that does not make its neighbouring historical data current.</p>
+<p><strong>Evidence:</strong> the current dependency inventory, source checks and exact staged-file set.</p>
+<h2>C6-13: The card, map and Digest now provide distinct reading choices</h2>
+<p>The Government card has the same three action roles as the reference cards: Read the report, Jump to markets and Collateral map. Its two Start-here choices are the Pre-Call Briefing Pack and Report Digest. Both have their own HTML and PDF reading documents.</p>
+<p>The map connects the five markets, separate Convergence synthesis, full report, overview, both companions, sources, Methodology and author. Its clickable diagram and text/card navigation share one maintained source. The Digest follows each chapter's argument, evidence and limits; it is not a renamed Convergence chapter or earnings digest. A non-author source review checked its substantive passages and disclosures, including the three citation completions it requested.</p>
+<h2>C6-14: Navigation, landmarks and print behavior are repaired</h2>
+<p>Reader pages have a main destination and usable skip navigation. Stacked navigation is accounted for when jumping to content; duplicate or covered secondary controls are removed. Deck navigation retains working slide and diagram controls. Repeated citations now return to the exact marker the reader activated, including keyboard focus, even when the same source appears on several slides. Companion/Digest web printing uses a legible light presentation without the site navigation or Apply control; the supplied PDFs remain separate reading documents. The full-report PDF now keeps the author line and qualified research cutoff with the first chapter, removing the nearly empty second page without removing content or changing the other eight PDFs.</p>
+<h2>C6-15: Reduced-motion navigation respects the reader's setting</h2>
+<p>The preview and notes skip links stay hidden until focused, including with reduced motion enabled. Activating the link moves focus to the main content; the next Tab enters that content. The public Research page retains its separate upstream CSS issue because this internal repair does not change the public page.</p>
+<h2>C6-16: The Pre-Call Fusion count matches the chapter</h2>
+<p>The companion now says six graded vendors and identifies DataWalk as Attention before the Siren Challenger sentence. These are exactly two derivative corrections to the accepted chapter. All other companion source bytes are preserved. The general web wrapper now uses the existing qualified report cutoff: material dated and event-sensitive claims were re-swept to 2026-09-11; descriptive claims retain their own earlier access dates. It no longer presents the personal June holdings date as the date of the research. The original June disclosure remains unchanged.</p>
 <h3>About this review URL</h3>
 <ul>
 <li>The review area is excluded from normal crawler access and its pages carry <code>noindex</code>. Anyone with the URL can still open it; this is not an authenticated private area.</li>
-<li>Origin Google Analytics tracking is removed. Cloudflare still adds its own analytics beacon at the hosting edge. The review does not claim to be free of all analytics.</li>
-<li>Canonical links and social-sharing metadata retain the proposed public publication URLs for review. Those future URLs are not evidence that publication has happened or that a public social preview is available.</li>
-<li>The index keeps the existing ProductBeacon Research umbrella image. It does not claim that the image has been redesigned to include this report.</li>
-<li>Old HTML bookmarks forward to current pages. Old PDF bookmarks receive refreshed copies of the same PDFs, rather than HTTP redirects. Superseded raw source files are retired after backup.</li>
+<li>Origin Google Analytics tracking is removed. Cloudflare can still add its own analytics beacon at the hosting edge. This review does not claim to be free of all analytics.</li>
+<li>Canonical links and social-sharing metadata retain the proposed public publication URLs for review. Those future URLs do not establish public publication or availability of a public social preview.</li>
+<li>The Research index keeps the existing ProductBeacon Research umbrella image. The report's own social image has its badge-padding repair.</li>
+<li>Old HTML bookmarks forward to current pages. Existing old PDF bookmarks receive refreshed copies of the corresponding PDFs. Retired raw source URLs stay retired; new map/Digest assets do not create invented legacy aliases.</li>
 </ul>
 <p><a href="research-index-preview.html">Return to the Research-page preview</a></p></section></main>
 <!-- Provenance: DR-2026-375 decision 2; the positioning divergence on this deeper page is deliberate for this round. Do not silently reconcile it. -->
@@ -577,5 +589,10 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 </footer>
 <!-- CHROME:FOOTER:END -->
 <script src="/js/main.js"></script>
-</body>
+<script data-c6-review-accessibility="">document.addEventListener('click',function(event){
+ const link=event.target.closest('a.skip-link');if(!link)return;
+ const target=document.getElementById(link.hash.slice(1));if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();target.tabIndex=-1;
+ target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'instant'});
+},true);</script></body>
 </html>

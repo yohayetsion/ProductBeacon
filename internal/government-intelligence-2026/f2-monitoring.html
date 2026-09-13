@@ -693,8 +693,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Law-Enforcement Monitoring Centers (Lawful Interception)">
 <div class="brand-bar">
@@ -706,7 +725,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Law-Enforcement Monitoring Centers (Lawful Interception)</div>
+<h1 class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Law-Enforcement Monitoring Centers (Lawful Interception)</h1>
 <p><span class="deck-disclosure"><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes in fronts covered here. Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></span></p>
 </div>
 </div>
@@ -762,8 +781,8 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <p>More than any other front in this report, this one is graded from the standards themselves — the single most fortunate fact about it. They are statute-grade, not slideware, and conformance is the entry ticket, not a feature.</p>
 <ul><li><strong>ETSI handover family (HI1 / HI2 / HI3)</strong> — the certified pipe from carrier to Monitoring Center: administrative tasking, Intercept Related Information (metadata), and Content of Communication.</li>
 <li><strong>ETSI internal family (X1 / X2 / X3)</strong> — inside the carrier: administration, xIRI, and xCC. Mediation is precisely what bridges the X-interfaces to the HI-interfaces across many carrier technologies.</li>
-<li><strong>3GPP 5G LI (ADMF / POI / MDF)</strong> — warrant → LICF → POI → MDF → LEMF: a published specification of the warrant-scoping and audit machinery (TS 33.126 / 127 / 128).<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup><sup class="fn-ref" id="fnref-2"><a href="#fn-2">2</a></sup></li>
-<li><strong>US CALEA + J-STD-025</strong> — conformance "satisfies the 'safe harbor' provisions of Section 107 of CALEA."<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup> The standard <em>is</em> the presumption of legality.<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup><sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup><sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup></li>
+<li><strong>3GPP 5G LI (ADMF / POI / MDF)</strong> — warrant → LICF → POI → MDF → LEMF: a published specification of the warrant-scoping and audit machinery (TS 33.126 / 127 / 128).<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-2"><a href="#fn-2">2</a></sup></li>
+<li><strong>US CALEA + J-STD-025</strong> — conformance "satisfies the 'safe harbor' provisions of Section 107 of CALEA."<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup> The standard <em>is</em> the presumption of legality.<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup></li>
 </ul>
 <div class="p4-figwrap"><svg style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" font-family="Inter, system-ui, -apple-system, sans-serif">
   <title>The Lawful-Interception Standards Stack — the handover architecture that defines the Monitoring Centers front</title>
@@ -914,7 +933,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <ul><li><strong>The 5G standalone core LI transition</strong> — a standards-forced refresh. Every operator migrating to a standalone 5G core must re-instantiate POI / MDF / ADMF to remain interception-capable. Each generational transition obsoletes part of the installed base.</li>
 <li><strong>Encryption and OTT</strong> shifting intercept yield from content to metadata / IRI — content increasingly goes dark, and the durable value migrates to the mediation, correlation, and analytics layer on top of the warrant-scoped feed.</li>
 <li><strong>New and updated national interception laws</strong> — India's 2024 Rules under the Telecommunications Act 2023<sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup>; the Dutch Chapter-13 regime<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup>. Each is a <em>paired</em> CSP-plus-LEA procurement event.</li>
-<li><strong>Cloud and virtualized-network LI</strong> — the interception functions re-instantiated as virtualized functions, with new security-governance obligations that the €1.5M Dutch RDI fine (October 2025)<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup> proves are now enforced.</li></ul>
+<li><strong>Cloud and virtualized-network LI</strong> — the interception functions re-instantiated as virtualized functions, with new security-governance obligations that the €1.5M Dutch RDI fine (October 2025)<sup class="fn-ref" id="fnref-10-occ2"><a href="#fn-10">10</a></sup> proves are now enforced.</li></ul>
 </div>
 <div class="slide" data-slide="7" data-title="2.3 The Contenders">
 <div class="brand-bar">
@@ -1123,7 +1142,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>2.4 Their Plays</h2>
 <p>Three strategic moves are in motion in 2026, and the count is held to three by the strictest evidence floor in the report — this is its most clean-room-sensitive territory. A play without a dated public anchor is dropped, not softened.</p>
-<ul><li><strong>Play 1 — The 5G-core LI standards refresh:</strong> a conformance race on a new interception architecture. The 3GPP SA3-LI group wrote a fresh 5G LI family (TS 33.126 / 127 / 128) because 4G-era LI "will simply stop working" as the standalone core arrives.<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup> The real axis becomes breadth and currency of conformance, not a generic compliance badge.</li>
+<ul><li><strong>Play 1 — The 5G-core LI standards refresh:</strong> a conformance race on a new interception architecture. The 3GPP SA3-LI group wrote a fresh 5G LI family (TS 33.126 / 127 / 128) because 4G-era LI "will simply stop working" as the standalone core arrives.<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup> The real axis becomes breadth and currency of conformance, not a generic compliance badge.</li>
 <li><strong>Play 2 — Private-equity consolidation of the monitoring-center / mediation layer:</strong> SS8 Networks, "a leader in Lawful and Location Intelligence and Monitoring center platforms," was acquired by Mill Point Capital on 27 June 2025<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup> — the front's clearest public consolidation anchor.</li>
 <li><strong>Play 3 — The accountability and litigation overhang</strong> reshaping the front's legitimacy frame: Commission Recommendation (EU) 2024/2659 on cyber-surveillance export controls<sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup>, and the Italian implant cohort at the market's edge — carried strictly as descriptive, named-outlet-attributed context, never graded.</li></ul>
 </div>
@@ -1139,7 +1158,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <p>This is the report's <em>darkest-capital front</em>. Of the names with a defensible public anchor, exactly one is a disclosing public issuer; the rest are private and silent.</p>
 <ul><li><strong>Cy4Gate</strong> (Euronext STAR Milan: CY4), parent of RCS Lab — FY2025 value of production €101.5M (+35%), EBITDA €20.8M, a €120M backlog, with FY2026 guidance of €104M–€108M as first issued and raised on 2026-09-11 to €115M–€120M. Even here the lawful-interception sub-line is <em>not separately broken out</em>.<sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup></li>
 <li>Everyone else — JSI Telecom, Trovicor, Dígitro, ClearTrail, Vehere, Kommlabs — is private and silent, with no priced valuations or funding rounds in public sources.</li>
-<li>The single dated public dollar figure in the entire private tail: a 2014 US ICE procurement to JSI reported at over $19.7M <sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup>— a contract, not a valuation.<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup><sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup><sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup><sup class="fn-ref" id="fnref-27"><a href="#fn-27">27</a></sup><sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup></li>
+<li>The single dated public dollar figure in the entire private tail: a 2014 US ICE procurement to JSI reported at over $19.7M <sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup>— a contract, not a valuation.<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-27"><a href="#fn-27">27</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup></li>
 <li>Capital legibility comes only from the one listed parent and the one named PE deal; no private-vendor revenue is imputed, and live market caps are reported disclaimer-governed at the publication date.</li></ul>
 </div>
 <div class="slide" data-slide="13" data-title="2.6 Winning & Losing">
@@ -1152,7 +1171,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>2.6 Winning & Losing</h2>
 <p>The winners are graded on disclosed self-positioning against the axes the front is turning on — never on an asserted interception capability, and never on numbers that do not exist.</p>
-<ul><li><strong>Winners</strong> — JSI Telecom on the accountability axis, and the standards-conformant set (ClearTrail, Septier, Vehere) on the conformance axis the 5G transition is re-pricing.<sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup><sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup><sup class="fn-ref" id="fnref-31"><a href="#fn-31">31</a></sup> All private; the label is positioning-and-axis, never a numbers grade.</li>
+<ul><li><strong>Winners</strong> — JSI Telecom on the accountability axis, and the standards-conformant set (ClearTrail, Septier, Vehere) on the conformance axis the 5G transition is re-pricing.<sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-31"><a href="#fn-31">31</a></sup> All private; the label is positioning-and-axis, never a numbers grade.</li>
 <li><strong>Watch</strong> — Cy4Gate: growth on the numbers, but the one graded-adjacent name carrying, on the named-outlet record, the spyware-cohort accountability overhang on its own engine (RCS Lab, mobile-implant line distinct from the warrant-scoped product). A "which market is it read as being in" question, not a balance-sheet concern. SS8, gone dark post-take-private, is watched as the front's clearest capital signal.</li>
 <li><strong>Losers</strong> — none. No graded contender earns the label; the front's public events are growth, consolidation, and an accountability overhang carried as market-structure color, not failure. Quarterly refreshes will populate this line if a lawful-interception-specific distress signal emerges.</li></ul>
 </div>
@@ -1343,7 +1362,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <li id="fn-20" style="list-style:none"><strong>20.</strong> Commission Recommendation (EU) 2024/2659 of 11 October 2024 on guidelines for the export of cyber-surveillance items under Regulation (EU) 2021/821, Official Journal (published 16 October 2024), https://eur-lex.europa.eu/eli/reco/2024/2659/oj/eng/pdf; SIPRI, "Making the most of the EU catch-all control on cyber-surveillance exports," https://www.sipri.org/commentary/topical-backgrounder/2024/making-most-eu-catch-all-control-cyber-surveillance-exports; Global Trade Law Blog, "EU's New Export Due Diligence Guidelines," https://www.globaltradelawblog.com/2024/10/25/eus-new-export-due-diligence-guidelines-keeping-tabs-on-cyber-surveillance-technology/ (accessed 2026-06-15). Context: the guidelines elaborate Article 5 and the "catch-all control" for cyber-surveillance items, addressing "the risk of cyber-surveillance items being used in connection with internal repression and/or … serious violations of human rights and international humanitarian law." (Primary EU instrument + named-outlet/trade-law commentary; dated.) <a href="#fnref-20" class="fn-back">&#8617;</a></li>
 <li id="fn-21" style="list-style:none"><strong>21.</strong> CY4GATE S.p.A. (an Elettronica Group company), "Press release — FY2025 results" (board-approved 2025-12-31 financial statements; released 2026-03-12), https://www.cy4gate.com/assets/Uploads/260312-CY4-PR-FY25-last.pdf: value of production €101.5M (+35% YoY); EBITDA €20.8M (+79%, 20.4% margin); order backlog €120M at 2025-12-31; FY2026 value-of-production guidance €104M–€108M as first issued, raised on 2026-09-11 to €115M–€120M; growth attributed "mainly [to] forensic and decision intelligence projects." Corroborated by TipRanks, "CY4GATE boosts 2025 revenues and margins, sets higher 2026 targets," 2026-03, https://www.tipranks.com/news/company-announcements/cy4gate-boosts-2025-revenues-and-margins-sets-higher-2026-targets. Listing: Euronext STAR Milan (ticker CY4 / ISIN IT0005412504) since June 2023, Euronext Growth Milan since June 2020, https://www.euronext.com/en/about/media/euronext-press-releases/cy4gate-group-transfers-euronext-star-milan (accessed 2026-06-15). RCS Lab's lawful-interception line is NOT separately broken out within group results; live market cap deliberately not fixed (the trading-position disclaimer applies, report at publication date). (Public-issuer filing, disclosed group level only.) <a href="#fnref-21" class="fn-back">&#8617;</a></li>
 <li id="fn-22" style="list-style:none"><strong>22.</strong> Privacy International, "ICE is Paying Millions to Surveillance Company to Spy on People's Communications," https://privacyinternational.org/news-analysis/2995/ice-paying-millions-surveillance-company-spy-peoples-communications (named-outlet report of a 2014 U.S. Immigration and Customs Enforcement contract to JSI Telecom valued at over $19.7M for annual support/operation/maintenance of a Title III digital collection system — a single dated public procurement figure, not a company valuation). <a href="#fnref-22" class="fn-back">&#8617;</a></li>
-<li id="fn-23" style="list-style:none"><strong>23.</strong> JSI Telecom, "Industry-Leading Lawful Collection & Intelligence — 4Sight," https://www.jsitelecom.com/platform/4sight-lawful-collection/ and https://www.jsitelecom.com/ (accessed 2026-06-15). Verbatim: "Acquire, manage, and report on lawfully collected data with the platform that sets the standard for digital intelligence"; "streamlines every step of the lawful collection process — from standards-based collection to monitoring to reporting"; "Complies with national laws and security requirements to deliver a powerful and customizable data collection and analysis engine"; "From data collection and audit trails within the system to secure, digitally signed packages upon export"; "4Sight provides full traceability, immutable audit trails, and jurisdiction-aware controls to meet oversight, legal accountability, and sovereignty requirements"; "Adapts to the standard operating procedures of law enforcement and security organizations, rather than forcing a change in process." Self-reported scale ("trusted for over 45 years," "Deployed in over 40 countries across six continents") is directional vendor-stated, not independently verified. Privately held; the one dated public capital figure is a 2014 U.S. ICE contract reported at >$19.7M (see <sup class="fn-ref"><a href="#fn-28">28</a></sup>). (Vendor-own pages; single-front (this front); private, undisclosed financials.) <a href="#fnref-23" class="fn-back">&#8617;</a></li>
+<li id="fn-23" style="list-style:none"><strong>23.</strong> JSI Telecom, "Industry-Leading Lawful Collection & Intelligence — 4Sight," https://www.jsitelecom.com/platform/4sight-lawful-collection/ and https://www.jsitelecom.com/ (accessed 2026-06-15). Verbatim: "Acquire, manage, and report on lawfully collected data with the platform that sets the standard for digital intelligence"; "streamlines every step of the lawful collection process — from standards-based collection to monitoring to reporting"; "Complies with national laws and security requirements to deliver a powerful and customizable data collection and analysis engine"; "From data collection and audit trails within the system to secure, digitally signed packages upon export"; "4Sight provides full traceability, immutable audit trails, and jurisdiction-aware controls to meet oversight, legal accountability, and sovereignty requirements"; "Adapts to the standard operating procedures of law enforcement and security organizations, rather than forcing a change in process." Self-reported scale ("trusted for over 45 years," "Deployed in over 40 countries across six continents") is directional vendor-stated, not independently verified. Privately held; the one dated public capital figure is a 2014 U.S. ICE contract reported at >$19.7M (see <sup class="fn-ref" id="fnref-28-occ2"><a href="#fn-28">28</a></sup>). (Vendor-own pages; single-front (this front); private, undisclosed financials.) <a href="#fnref-23" class="fn-back">&#8617;</a></li>
 <li id="fn-24" style="list-style:none"><strong>24.</strong> Trovicor, "Monitoring Center," https://trovicor.com/solutions/monitoring-center/ (original vendor domain no longer live; verbatim carried from a dated archived capture of the page, https://web.archive.org/web/20241001210447/https://trovicor.com/solutions/monitoring-center/); Trovicor PR-distributed positioning, PRNewswire, https://www.prnewswire.com/news-releases/a-solution-to-expose-cyber-criminals-end-to-end-lawful-interception-and-intelligence-solutions-from-trovicor-619256234.html (release dated 12 April 2017; accessed 2026-06-15); ownership lineage via Privacy International / Access Now, https://www.accessnow.org/telco-hall-of-shame-nokia-siemens-networks-bv/ (accessed 2026-06-15). Verbatim/near-verbatim: the Monitoring Center "captures, monitors, evaluates and sorts vast amounts of communication, interaction and transaction data from VoIP, internet and satellite networks in one single platform"; "With a flexible and modular design, Monitoring Center can be customised to suit specific lawful interception requirements"; "a reliable, cost-effective interception solution compliant with lawful interception standards and regulations"; self-describes serving "more than 35 governments" (vendor self-statement, attributed). Ownership lineage (public): Siemens Intelligence Solutions → Nokia Siemens Networks (2007) → sold by NSN in 2009 to Perusa Partners Fund 1 LP, which renamed it Trovicor; no public disclosure of a more recent change of control. (Trovicor is a cross-front vendor (National Agencies + this front); this is the Monitoring-Center pillar on this front. Private, undisclosed financials.) <a href="#fnref-24" class="fn-back">&#8617;</a></li>
 <li id="fn-25" style="list-style:none"><strong>25.</strong> Dígitro, "Guardião — Plataforma de Inteligência e Investigação," https://digitro.com/plataforma-de-inteligencia-e-investigacao/ and case pages https://digitro.com/case/case-guardiao/ (Portuguese-language, presented translate-with-original; verbatim confirmed against Dígitro's live page); corroborated via Wikipedia (pt), https://pt.wikipedia.org/wiki/Guardi%C3%A3o_(software), and Bloomberg company profile, https://www.bloomberg.com/profile/company/2197808D:BZ (accessed 2026-06-15). Public positioning (Portuguese, with translation): "plataforma de inteligência e investigação" (intelligence and investigation platform), rooted in "interceptação legal de comunicações" (legal interception of communications), "exclusiva para órgãos de Segurança Pública e Justiça" (exclusive to public-security and justice agencies). The "~90% of the Brazilian public-security market" figure is the vendor's / named-outlet's PUBLIC positioning — to be attributed as such, NOT asserted on this report's authority. (Private, undisclosed financials; no internal or install-base claim made.) <a href="#fnref-25" class="fn-back">&#8617;</a></li>
 <li id="fn-26" style="list-style:none"><strong>26.</strong> Tracxn, "Clear Trail — 2026 Company Profile," as of 2026-05, https://tracxn.com/d/companies/cleartrail/__Xr-Xmm0ZtWdaSJm6heRMnD8juY8E05nOZ424q9uG3R0, and ClearTrail Technologies, "About ClearTrail," https://www.clear-trail.com/about-us/ (accessed 2026-06-15). Tracxn records no disclosed funding round and no priced valuation in public sources; ClearTrail self-describes serving "federal and state security agencies across 16 countries" for "over 2 decades" (vendor self-statement). (Aggregator profile + vendor page; private, undisclosed.) <a href="#fnref-26" class="fn-back">&#8617;</a></li>
@@ -1358,7 +1377,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -1776,5 +1795,43 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
+<script data-p4="c6-deck-citation-return">document.addEventListener('click', function(event){
+ const a=event.target.closest&&event.target.closest('sup.fn-ref > a[href^="#fn-"],a.fn-back[href^="#fnref-"]');
+ if(!a)return;
+ const target=document.getElementById(a.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();
+ if(a.parentElement.matches('sup.fn-ref')){
+  const back=target.querySelector('a.fn-back');
+  if(back)back.setAttribute('href','#'+a.parentElement.id);
+ }
+ const slide=target.closest('.slide');
+ if(slide&&typeof window.showSlide==='function'){
+  window.showSlide(Array.from(document.querySelectorAll('.slide')).indexOf(slide));
+ }
+ const focusTarget=target.matches('sup.fn-ref')?target.querySelector('a'):target;
+ if(!focusTarget.hasAttribute('tabindex')&&!focusTarget.matches('a[href]'))focusTarget.tabIndex=-1;
+ focusTarget.focus({preventScroll:true});
+ requestAnimationFrame(function(){target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+},true);</script>
 </body>
 </html>

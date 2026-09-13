@@ -676,8 +676,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="The State of Government and Law Enforcement Intelligence Markets 2026">
 <div class="brand-bar">
@@ -689,7 +708,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">The State of Government and Law Enforcement Intelligence Markets 2026</div>
+<h1 class="hero-title">The State of Government and Law Enforcement Intelligence Markets 2026</h1>
 <p class="hero-subtitle"><em>The government and national-security intelligence software market, read as five markets and one battlefield.</em></p>
 <p><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes across several fronts covered here. Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></p>
 </div>
@@ -2077,7 +2096,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -2495,5 +2514,24 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
 </body>
 </html>

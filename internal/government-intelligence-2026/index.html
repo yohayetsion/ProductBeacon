@@ -546,11 +546,38 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+
+@media print{
+ html body,body main,body .hero,body .hero *,body .front-disclosure,body .front-disclosure *,body .methodology-content,body .methodology-content *{background:#fff!important;color:#172033!important;box-shadow:none!important;text-shadow:none!important}
+ nav,.nav,footer,.site-footer,.breadcrumb{display:none!important}
+ main{padding-top:0!important}.hero{padding:12pt 0!important}.hero-headline{font-size:25pt!important}
+ .front-disclosure,.methodology-content{max-width:100%!important;padding:8pt 0!important}
+ h1,h2,h3{break-after:avoid}p,li{orphans:3;widows:3}
+ .methodology-content table{display:table;width:100%;font-size:9pt;table-layout:fixed;overflow:visible}
+ .methodology-content th,.methodology-content td{overflow-wrap:anywhere;border-color:#94a3b8!important}
+ a{color:#172033!important;text-decoration:underline}
+}
+</style>
+<style data-p4="c6-hub">.doors-list a{color:var(--amber);text-decoration:underline}.doors-list li{margin-bottom:16px}.c6-reading-intro{margin-bottom:16px}.c6-route-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px}</style>
 </head>
-<body>
-<nav class="p4-topnav" aria-label="Report navigation"><a href="/internal/government-intelligence-2026/research-index-preview.html">ProductBeacon Research</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/">Report home</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-deck.html">Overview deck</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/report-master.html">Full report</a><span class="p4-sep">&middot;</span><a href="/internal/government-intelligence-2026/citations.html">Citations ledger</a></nav>
-
-
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a>
 <!-- =====================================================================
      TOP NAV
      ===================================================================== -->
@@ -597,7 +624,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <!-- =====================================================================
      HERO
      ===================================================================== -->
-<main style="padding-top: var(--nav-height);">
+<main style="padding-top: var(--nav-height);" id="p4-main-content" tabindex="-1">
 <header class="hero">
   <div class="hero-lockup-row">
     <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
@@ -637,10 +664,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 
   <section class="doors" aria-labelledby="doors-eyebrow" id="audience-doors">
     <p class="doors-eyebrow" id="doors-eyebrow">How to read this report</p>
-    <ul class="doors-list">
-      <li><strong>Start here — the five-minute read.</strong> The overview deck walks the whole argument in 19 slides: the five markets, the three cross-market patterns, and the verdict. <a href="report-deck.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Open the overview deck (19 slides) &rarr;</a></li>
-      <li><strong>Start here — the pre-call read.</strong> The Pre-Call Briefing Pack is a single narrative companion across all five markets plus the Convergence, with per-market citation breakdowns. <a href="companion.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Read the Briefing Pack (one page) &rarr;</a> <a href="companion.pdf" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Download the Briefing Pack (PDF) &rarr;</a></li>
-    </ul>
+    <p class="c6-reading-intro">Two reading routes across five markets and Convergence. Choose preparation before a conversation or a chapter-by-chapter reading of the argument.</p><ul class="doors-list"><li><strong>Pre-Call Briefing Pack.</strong> Market outlines, vendor positions and the cross-market watchlist before a conversation. <div class="c6-route-links"><a href="companion.html" aria-label="Pre-Call Briefing Pack: Read">Read</a> <a href="companion.pdf" aria-label="Pre-Call Briefing Pack: PDF">PDF</a> </div></li><li><strong>Report Digest.</strong> Follow the argument across five markets and Convergence, with evidence and conditions for revisiting each conclusion. <div class="c6-route-links"><a href="synthesis.html" aria-label="Report Digest: Read">Read</a> <a href="synthesis.pdf" aria-label="Report Digest: PDF">PDF</a> </div></li><li><strong>Report overview deck.</strong> The report’s overview in presentation form. <div class="c6-route-links"><a href="report-deck.html" aria-label="Report overview deck: Read">Read</a> </div></li><li><a href="collaterals.html">Collateral map</a>: all report documents and how they relate.</li></ul>
     <p class="doors-then" style="margin-top: var(--space-4); font-size: 15px; color: var(--slate-400);">Then go deeper: analysts and expert-network sourcing usually start with the <a href="convergence.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">Convergence synthesis (18 slides) &rarr;</a> and read the five markets for the vendor-by-vendor detail behind each cross-market claim; operators and buyers tracking the market usually read <a href="#markets" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">the five markets in order &rarr;</a> and finish on the Convergence. The complete argument is in the <a href="report-master.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">full report (one long page) &rarr;</a>.</p>
     <p class="doors-footer" style="margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--slate-600); font-size: 15px; color: var(--slate-400);">Before you start: <a href="/research/methodology.html" style="color: var(--amber); border-bottom: 1px solid var(--amber-60);">read how we source and how to verify any claim &rarr;</a></p>
   </section>
@@ -920,6 +944,24 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
     var b = e.target.closest && e.target.closest('.p4-open-diagram');
     if (b){ e.preventDefault(); e.stopPropagation(); open(b); }
   }, true);
+})();
+</script>
+<script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
 })();
 </script>
 </body>

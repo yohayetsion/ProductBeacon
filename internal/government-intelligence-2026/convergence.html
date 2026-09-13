@@ -693,8 +693,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: The Convergence Synthesis">
 <div class="brand-bar">
@@ -706,7 +725,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: The Convergence Synthesis</div>
+<h1 class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: The Convergence Synthesis</h1>
 <p class="hero-subtitle"><strong>The Market as One Battlefield — the sixth and final part, reading the five fronts as one market.</strong></p>
 <p><span class="deck-disclosure"><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes across several fronts synthesized here (its NEXYTE and LUMINAR platforms). Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></span></p>
 <p><em>On method: every cross-front claim is built only from each vendor's own public product pages, public filings, and dated named-outlet reporting. Portfolio breadth is measured strictly as the number of the five practices a vendor's public product pages span, never as an asserted "full suite." Capability is reported as what a vendor publicly markets, not as verified architecture.</em></p>
@@ -810,7 +829,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div class="legend-box">
 <p><strong>How to read this market</strong></p>
 <p>Each chapter grades up to eight vendors (the cap of eight), grouped in three tiers:</p>
-<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Wildcard:</strong> graded at the edge of the rubric and held there with explicit caution; the read stays descriptive and hedged.</li></ul>
+<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Wildcard</strong> in National Agencies, Monitoring Centers and Tactical Intelligence; <strong>Challenger</strong> in Fusion and Open-Source Intelligence. These are the chapter-specific third-tier labels.</li></ul>
 <p><strong>My read.</strong> marks the author's judgment. Each pattern claim opens with a dated public observation, separates that observation from my read of it, and ends with a conditional a publicly observable proxy can confirm or refute before the next refresh.</p>
 <p>Every vendor is graded on a dated public pillar; capability is reported as public positioning, never as verified architecture.</p>
 </div>
@@ -842,7 +861,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <p>Across the fronts, four patterns show up with enough public evidence to name — each unpacked on the slides that follow.</p>
 <ul><li><strong>Breadth concentrates unevenly.</strong> Most vendors hold one practice; a cluster holds two; exactly one — Cognyte — spans all five on public pages. That widest span is breadth of public positioning, not a verified integrated suite.</li>
 <li><strong>The AI-native repositioning is concentrated</strong>, not universal — it clusters in the two analytical fronts (fusion and OSINT), is defensive in SIGINT, and is essentially absent as a lead message in lawful interception and tactical.</li>
-<li><strong>Consolidation runs on two engines</strong> — strategic acquirers absorbing the OSINT/analytical layer, private equity rolling up the collection and interception layer.<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup><sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup><sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup></li>
+<li><strong>Consolidation runs on two engines</strong> — strategic acquirers absorbing the OSINT/analytical layer, private equity rolling up the collection and interception layer.<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup></li>
 <li><strong>The fronts are not equally in play</strong> — OSINT and fusion are the contested, AI-native battlegrounds; lawful interception is the most defended; SIGINT faces an encryption shift; tactical is bifurcating.</li>
 </ul>
 <p><span class="deck-disclosure"><em>Author was VP Product at Cognyte; public sources only; full disclosure →</em></span></p>
@@ -990,8 +1009,8 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <h2>The Cross-Front Vendor Ledger (Public Pages Only)</h2>
 <p>Breadth falls into two shapes. Most of the market remains single-practice, which is exactly what makes the exceptions worth naming.</p>
 <ul><li><strong>The network-interception cluster</strong> — ClearTrail, Vehere, Trovicor each carry public pillars in both interception fronts (National Agencies mass collection + Monitoring Centers warrant-scoped LI), because the underlying DPI/mediation technology genuinely serves both buyers.</li>
-<li><strong>Septier</strong> spans interception and tactical with two genuinely distinct products (an LI-mediation solution + an Identities Catcher)<sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup><sup class="fn-ref" id="fnref-7"><a href="#fn-7">7</a></sup> — a real cross-front footprint, but two separate boxes, not one platform.</li>
-<li><strong>Single-practice anchors</strong> — i2 Group (fusion only), BAE Systems (SIGINT only; divested its NetReveal fusion line in 2022)<sup class="fn-ref" id="fnref-8"><a href="#fn-8">8</a></sup><sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup>, Babel Street (OSINT), Palantir (fusion graded; referenced wherever it ingests SIGINT/OSINT feeds).</li>
+<li><strong>Septier</strong> spans interception and tactical with two genuinely distinct products (an LI-mediation solution + an Identities Catcher)<sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-7"><a href="#fn-7">7</a></sup> — a real cross-front footprint, but two separate boxes, not one platform.</li>
+<li><strong>Single-practice anchors</strong> — i2 Group (fusion only), BAE Systems (SIGINT only; divested its NetReveal fusion line in 2022)<sup class="fn-ref" id="fnref-8"><a href="#fn-8">8</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup>, Babel Street (OSINT), Palantir (fusion graded; referenced wherever it ingests SIGINT/OSINT feeds).</li>
 <li><strong>Cognyte</strong> is the one vendor whose public material carries graded pillars in all five practices, each anchored to a distinct dated surface — the shape the next slide unpacks.</li>
 </ul>
 <p><span class="deck-disclosure"><em>Author was VP Product at Cognyte; public sources only; full disclosure →</em></span></p>
@@ -1040,9 +1059,9 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>C.4 The AI-Native Repositioning — Concentrated, Not Universal</h2>
 <p>"AI-native" and "agentic" are the words of 2026, but they are not distributed evenly. Capability here is reported as what a vendor publicly markets, not as verified architecture.</p>
-<ul><li><strong>In fusion and OSINT, agentic is the lead message</strong> — Palantir's AIP, Cognyte's NEXYTE "agentic AI-based decision flows," Dataminr "built with agentic and predictive AI at its core," Babel Street's "Governed AI agents," Strider's "One Platform, Powered by Agentic Intelligence."<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup><sup class="fn-ref" id="fnref-11"><a href="#fn-11">11</a></sup><sup class="fn-ref" id="fnref-12"><a href="#fn-12">12</a></sup><sup class="fn-ref" id="fnref-13"><a href="#fn-13">13</a></sup><sup class="fn-ref" id="fnref-14"><a href="#fn-14">14</a></sup> The money follows: Dataminr's $100M Fortress financing was raised to accelerate agentic AI.<sup class="fn-ref" id="fnref-15"><a href="#fn-15">15</a></sup></li>
+<ul><li><strong>In fusion and OSINT, agentic is the lead message</strong> — Palantir's AIP, Cognyte's NEXYTE "agentic AI-based decision flows," Dataminr "built with agentic and predictive AI at its core," Babel Street's "Governed AI agents," Strider's "One Platform, Powered by Agentic Intelligence."<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-11"><a href="#fn-11">11</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-12"><a href="#fn-12">12</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-13"><a href="#fn-13">13</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-14"><a href="#fn-14">14</a></sup> The money follows: Dataminr's $100M Fortress financing was raised to accelerate agentic AI.<sup class="fn-ref" id="fnref-15"><a href="#fn-15">15</a></sup></li>
 <li><strong>In SIGINT, AI is defensive, not offensive</strong> — sold as the mechanism of survival against the TLS 1.3 / ECH / QUIC erosion of passive content inspection, to <em>recover</em> visibility encryption is taking away.<sup class="fn-ref" id="fnref-16"><a href="#fn-16">16</a></sup></li>
-<li><strong>In lawful interception and tactical, the front is not AI-led at all</strong> — LI differentiates on standards conformance and immutable audit trails and adapts to 5G through 3GPP functions; tactical markets AI as <em>acceleration</em> (decoding, brute-force), not autonomous agentic systems.<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup></li>
+<li><strong>In lawful interception and tactical, the front is not AI-led at all</strong> — LI differentiates on standards conformance and immutable audit trails and adapts to 5G through 3GPP functions; tactical markets AI as <em>acceleration</em> (decoding, brute-force), not autonomous agentic systems.<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup></li>
 </ul>
 <div class="p4-figwrap"><svg style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif">
   <title>The AI-Native Map — where agentic positioning concentrates</title>
@@ -1220,10 +1239,10 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>C.6 The Consolidation Map — Two Engines, One Direction</h2>
 <p>Cross-front dealmaking is the loudest signal of 2026, and it runs on two distinct engines pulling the same way — value up, collection rolled up or absorbed — with two strands running alongside.</p>
-<ul><li><strong>Engine one: strategic acquirers absorbing the OSINT / analytical layer</strong> — Mastercard's $2.65B purchase of Recorded Future (the signature deal)<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup>, Bitsight/Cybersixgill, and Dataminr itself acquiring ThreatConnect to extend into analytics.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></li>
-<li><strong>Engine two: private equity rolling up the collection and interception layer</strong> — Thoma Bravo/Magnet-Grayshift, Haveli/ZeroFox, PenLink/Cobwebs, Mill Point/SS8 — taking surveillance-adjacent assets off the public market.<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup><sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup><sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup><sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup></li>
-<li><strong>Strand one — regulatory restructuring.</strong> The Sandvine sequence (Entity-List designation → exit from 56 countries → removal after reforms → AppLogic rebrand) is the clearest case of regulation, not the market, restructuring a collection vendor.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup><sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup><sup class="fn-ref" id="fnref-27"><a href="#fn-27">27</a></sup></li>
-<li><strong>Strand two — fusion accretion.</strong> The analytical layer buying graph capability: Nuix/Linkurious, Elastic's strategic investment in Siren.<sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup><sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup></li>
+<ul><li><strong>Engine one: strategic acquirers absorbing the OSINT / analytical layer</strong> — Mastercard's $2.65B purchase of Recorded Future (the signature deal)<sup class="fn-ref" id="fnref-3-occ2"><a href="#fn-3">3</a></sup>, Bitsight/Cybersixgill, and Dataminr itself acquiring ThreatConnect to extend into analytics.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></li>
+<li><strong>Engine two: private equity rolling up the collection and interception layer</strong> — Thoma Bravo/Magnet-Grayshift, Haveli/ZeroFox, PenLink/Cobwebs, Mill Point/SS8 — taking surveillance-adjacent assets off the public market.<sup class="fn-ref" id="fnref-4-occ2"><a href="#fn-4">4</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-5-occ2"><a href="#fn-5">5</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup></li>
+<li><strong>Strand one — regulatory restructuring.</strong> The Sandvine sequence (Entity-List designation → exit from 56 countries → removal after reforms → AppLogic rebrand) is the clearest case of regulation, not the market, restructuring a collection vendor.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-27"><a href="#fn-27">27</a></sup></li>
+<li><strong>Strand two — fusion accretion.</strong> The analytical layer buying graph capability: Nuix/Linkurious, Elastic's strategic investment in Siren.<sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup></li>
 </ul>
 <div class="p4-figwrap"><svg style="width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 680" font-family="Inter, system-ui, -apple-system, sans-serif">
   <title>Two Engines of M&amp;A Across the Fronts</title>
@@ -1432,7 +1451,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -1850,5 +1869,43 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
+<script data-p4="c6-deck-citation-return">document.addEventListener('click', function(event){
+ const a=event.target.closest&&event.target.closest('sup.fn-ref > a[href^="#fn-"],a.fn-back[href^="#fnref-"]');
+ if(!a)return;
+ const target=document.getElementById(a.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();
+ if(a.parentElement.matches('sup.fn-ref')){
+  const back=target.querySelector('a.fn-back');
+  if(back)back.setAttribute('href','#'+a.parentElement.id);
+ }
+ const slide=target.closest('.slide');
+ if(slide&&typeof window.showSlide==='function'){
+  window.showSlide(Array.from(document.querySelectorAll('.slide')).indexOf(slide));
+ }
+ const focusTarget=target.matches('sup.fn-ref')?target.querySelector('a'):target;
+ if(!focusTarget.hasAttribute('tabindex')&&!focusTarget.matches('a[href]'))focusTarget.tabIndex=-1;
+ focusTarget.focus({preventScroll:true});
+ requestAnimationFrame(function(){target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+},true);</script>
 </body>
 </html>

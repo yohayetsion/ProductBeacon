@@ -693,8 +693,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Open-Source Intelligence (OSINT / WEBINT)">
 <div class="brand-bar">
@@ -706,7 +725,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Open-Source Intelligence (OSINT / WEBINT)</div>
+<h1 class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Open-Source Intelligence (OSINT / WEBINT)</h1>
 <p><span class="deck-disclosure"><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes in fronts covered here. Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></span></p>
 </div>
 </div>
@@ -730,7 +749,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div class="legend-box">
 <p><strong>How to read this market</strong></p>
 <p>Each chapter grades up to eight vendors (the cap of eight), grouped in three tiers:</p>
-<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Wildcard:</strong> graded at the edge of the rubric and held there with explicit caution; the read stays descriptive and hedged.</li></ul>
+<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Challenger:</strong> a bet on a new use for OSINT; the read stays descriptive and hedged.</li></ul>
 <p><strong>My read.</strong> marks the author's judgment. Each pattern claim opens with a dated public observation, separates that observation from my read of it, and ends with a conditional a publicly observable proxy can confirm or refute before the next refresh.</p>
 <p>Every vendor is graded on a dated public pillar; capability is reported as public positioning, never as verified architecture.</p>
 </div>
@@ -745,7 +764,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>5.2 The Terrain</h2>
 <p><strong>There is no single number for the OSINT market. The honest presentation sets the public estimates side by side and lets the spread speak — the disagreement <em>is</em> the finding.</strong></p>
-<div class="table-container"><table>
+<div class="table-container" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead><tr><th>Publisher</th><th>Figure (as stated)</th><th>CAGR</th></tr></thead>
 <tbody>
 <tr><td><strong>Mordor Intelligence</strong></td><td>USD 18.20B (2025) → 43.49B (2031)<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup></td><td>15.62%</td></tr>
@@ -753,7 +772,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <tr><td><strong>GlobalData / Global Market Insights</strong></td><td>USD 12.7B (2025) → 133.6B (2035)<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup></td><td>26.7%</td></tr>
 </tbody></table></div>
 <ul><li>The three bracket 2025 at roughly USD 12.7B–18.2B; the growth rates split — Mordor's mid-teens (it excludes threat-hunting and hardware sensors) against the two high-twenties figures (which fold dark-web analysis in). An unsettled category boundary, not a counting error.</li>
-<li><strong>The government slice is a labeled proxy.</strong> Government intelligence agencies are 38.40% of 2025 OSINT revenue (Mordor)<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup>; national security is 32% (GMI)<sup class="fn-ref" id="fnref-3"><a href="#fn-3">3</a></sup>. Bracketing arithmetic implies roughly USD 4–7B for 2025 — a share-of-market, not a disclosed segment size.</li>
+<li><strong>The government slice is a labeled proxy.</strong> Government intelligence agencies are 38.40% of 2025 OSINT revenue (Mordor)<sup class="fn-ref" id="fnref-1-occ2"><a href="#fn-1">1</a></sup>; national security is 32% (GMI)<sup class="fn-ref" id="fnref-3-occ2"><a href="#fn-3">3</a></sup>. Bracketing arithmetic implies roughly USD 4–7B for 2025 — a share-of-market, not a disclosed segment size.</li>
 <li><strong>Named procurement is the harder currency.</strong> The FBI bought up to USD 27M of Babel Street licenses (2022)<sup class="fn-ref" id="fnref-4"><a href="#fn-4">4</a></sup>; the DoD PADELS award to Dataminr ran USD 24.9M, which Babel Street and Dataminr litigated at the GAO<sup class="fn-ref" id="fnref-5"><a href="#fn-5">5</a></sup> — a recompeted, contestable lane.</li>
 <li><strong>Demand drivers.</strong> The open-data exhaust has outrun manual analysis; government buyers are institutionalizing OSINT as a named discipline (the CIA's public OSINT strategy enlists large language models)<sup class="fn-ref" id="fnref-6"><a href="#fn-6">6</a></sup>; and a commercial base below the government buyers funds the push into government tenders.</li></ul>
 </div>
@@ -971,7 +990,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <h2>5.4 Their Plays</h2>
 <p><strong>Five dated moves: two consolidation plays, one positioning convergence, two growth bets.</strong></p>
 <ul><li><strong>Absorbed into a payments network.</strong> Mastercard bought Recorded Future for USD 2.65B from Insight Partners<sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup> — folded toward fraud, identity, and real-time decisioning.</li>
-<li><strong>PE rolls up the LEA suite.</strong> Cobwebs joined PenLink (<strong>Estimate:</strong> ~USD 200M, CTech; terms undisclosed, both under Spire Capital)<sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup>; ZeroFox went private with Haveli (~USD 350M).<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup> The Texas DPS Tangles contract (June 2025) proves the demand curve is still live.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup></li>
+<li><strong>PE rolls up the LEA suite.</strong> Cobwebs joined PenLink (<strong>Estimate:</strong> ~USD 200M, CTech; terms undisclosed, both under Spire Capital)<sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup>; ZeroFox went private with Haveli (~USD 350M).<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup> The Texas DPS Tangles contract (June 2025) proves the demand curve is still live.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup></li>
 <li><strong>Partnership stacks over M&A.</strong> Fivecast and Tranquility AI partnered (March 2026) to build the collect-to-evidence workflow by alliance, not balance sheet.<sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup></li>
 <li><strong>A nation-state wedge draws net-new budget.</strong> Strider's Series C funds a vertical the generalists don't own<sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup>; Babel Street is building toward the same wedge.<sup class="fn-ref" id="fnref-27"><a href="#fn-27">27</a></sup></li>
 </ul>
@@ -1034,12 +1053,12 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 
   
   <circle cx="700" cy="300" r="6" fill="#F59E0B" stroke="#0a0e1a" stroke-width="1.5"/>
-  <line x1="700" y1="294" x2="700" y2="244" stroke="#92400E" stroke-width="1.4"/>
-  <rect x="624" y="160" width="156" height="84" rx="6" fill="#92400E" fill-opacity="0.45" stroke="#F59E0B" stroke-width="1.6"/>
-  <text x="702" y="180" font-size="9" font-weight="800" fill="#fdba74" text-anchor="middle">21 OCT 2025</text>
-  <text x="702" y="200" font-size="11" font-weight="700" fill="#fef3c7" text-anchor="middle">Dataminr →</text>
-  <text x="702" y="215" font-size="11" font-weight="700" fill="#fef3c7" text-anchor="middle">ThreatConnect</text>
-  <text x="702" y="233" font-size="9" fill="#fed7aa" text-anchor="middle">~$290M closed · roll-up</text>
+  <line x1="700" y1="294" x2="738" y2="244" stroke="#92400E" stroke-width="1.4"/>
+  <rect x="660" y="160" width="156" height="84" rx="6" fill="#92400E" fill-opacity="0.45" stroke="#F59E0B" stroke-width="1.6"/>
+  <text x="738" y="180" font-size="9" font-weight="800" fill="#fdba74" text-anchor="middle">21 OCT 2025</text>
+  <text x="738" y="200" font-size="11" font-weight="700" fill="#fef3c7" text-anchor="middle">Dataminr →</text>
+  <text x="738" y="215" font-size="11" font-weight="700" fill="#fef3c7" text-anchor="middle">ThreatConnect</text>
+  <text x="738" y="233" font-size="9" fill="#fed7aa" text-anchor="middle">~$290M closed · roll-up</text>
 
   
 
@@ -1093,11 +1112,11 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>5.5 War Chests & Casualties</h2>
 <p><strong>The capital story across 2024–2026 is consolidation, not greenfield.</strong></p>
-<div class="table-container"><table>
+<div class="table-container" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead><tr><th>Vendor</th><th>Recent Round / Status</th><th>Owner / Note</th></tr></thead>
 <tbody>
 <tr><td><strong>Recorded Future</strong></td><td>Acquired by Mastercard, USD 2.65B, closed Dec 2024</td><td>sold by Insight Partners<sup class="fn-ref" id="fnref-28"><a href="#fn-28">28</a></sup></td></tr>
-<tr><td><strong>Dataminr</strong></td><td>USD 100M Fortress convertible (Apr 2025);<sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup> a separate USD 300M financing led by Fortress and NightDragon, completed September 2025, instrument and valuation not stated;<sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup> acquired ThreatConnect ~USD 290M (closed Nov 2025)<sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup></td><td>last <em>priced</em> at USD 4.1B, 2021 Series F; the 2025 financings are not described as priced equity rounds — no fresh primary mark disclosed<sup class="fn-ref" id="fnref-31"><a href="#fn-31">31</a></sup><sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup></td></tr>
+<tr><td><strong>Dataminr</strong></td><td>USD 100M Fortress convertible (Apr 2025);<sup class="fn-ref" id="fnref-29"><a href="#fn-29">29</a></sup> a separate USD 300M financing led by Fortress and NightDragon, completed September 2025, instrument and valuation not stated;<sup class="fn-ref" id="fnref-30"><a href="#fn-30">30</a></sup> acquired ThreatConnect ~USD 290M (closed Nov 2025)<sup class="fn-ref" id="fnref-30-occ2"><a href="#fn-30">30</a></sup></td><td>last <em>priced</em> at USD 4.1B, 2021 Series F; the 2025 financings are not described as priced equity rounds — no fresh primary mark disclosed<sup class="fn-ref" id="fnref-31"><a href="#fn-31">31</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-30-occ3"><a href="#fn-30">30</a></sup></td></tr>
 <tr><td><strong>ZeroFox</strong></td><td>Take-private by Haveli, ~USD 350M, closed May 2024<sup class="fn-ref" id="fnref-32"><a href="#fn-32">32</a></sup></td><td>Haveli Investments</td></tr>
 <tr><td><strong>Cybersixgill</strong></td><td>Acquired by Bitsight, ~USD 115M (Nov 2024)<sup class="fn-ref" id="fnref-33"><a href="#fn-33">33</a></sup></td><td>Bitsight</td></tr>
 <tr><td><strong>Strider</strong></td><td>USD 55M Series C (Sep 2024), ~USD 117M total<sup class="fn-ref" id="fnref-34"><a href="#fn-34">34</a></sup></td><td>Pelion Venture Partners</td></tr>
@@ -1118,7 +1137,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <span class="section-label">Open-Source Intelligence (OSINT / WEBINT)</span>
 </div>
 <h2>Pattern Claim 1 — The Strategic-Acquirer Absorption Thesis</h2>
-<ul><li><strong>Observation.</strong> In eighteen months the front lost three independents to acquirers and a fourth agreed to roll up a fifth: Mastercard–Recorded Future (USD 2.65B), Bitsight–Cybersixgill (~USD 115M), Haveli–ZeroFox (~USD 350M), PenLink–Cobwebs (<strong>Estimate:</strong> ~USD 200M, CTech; terms undisclosed), and Dataminr's USD 290M ThreatConnect deal.<sup class="fn-ref" id="fnref-36"><a href="#fn-36">36</a></sup><sup class="fn-ref" id="fnref-37"><a href="#fn-37">37</a></sup></li>
+<ul><li><strong>Observation.</strong> In eighteen months the front lost three independents to acquirers and a fourth agreed to roll up a fifth: Mastercard–Recorded Future (USD 2.65B), Bitsight–Cybersixgill (~USD 115M), Haveli–ZeroFox (~USD 350M), PenLink–Cobwebs (<strong>Estimate:</strong> ~USD 200M, CTech; terms undisclosed), and Dataminr's USD 290M ThreatConnect deal.<sup class="fn-ref" id="fnref-36-occ2"><a href="#fn-36">36</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-37"><a href="#fn-37">37</a></sup></li>
 <li><strong>My read.</strong> The independent-brand path is closing. The buyers are no longer intelligence specialists — they are payments networks, security-ratings platforms, and PE control vehicles. Survivors are either acquisition candidates or specialists too narrow to interest a generalist acquirer.</li>
 <li><strong>Conditional.</strong> Hardens on a second non-defense-platform acquisition of a pure-play, or a further roll-up. Weakens if a pure-play raises a fresh named-lead mega-round at an up valuation, or Recorded Future's government roster contracts post-close.</li>
 </ul>
@@ -1481,7 +1500,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <li id="fn-27" style="list-style:none"><strong>27.</strong> Babel Street, “Babel Street Appoints AI Industry Leader John W. Larson as President and Chief AI Officer to Power Next-Level Growth,” press release dated 2025-12-02, https://www.babelstreet.com/about-us/newsroom/babel-street-appoints-ai-industry-leader-john-w-larson-as-president-and-chief-ai-officer-to (accessed 2026-08-22). The company says Larson joined as President and Chief AI Officer after serving as Executive Vice President and Head of Artificial Intelligence at Booz Allen Hamilton. First-party appointment record. <a href="#fnref-27" class="fn-back">&#8617;</a></li>
 <li id="fn-28" style="list-style:none"><strong>28.</strong> Mastercard, "Mastercard Invests in Continued Defense of Global Digital Economy With Acquisition of Recorded Future," announced 2024-09-12 ($2.65B, from Insight Partners). https://www.mastercard.com/us/en/news-and-trends/press/2024/september/mastercard-invests-in-continued-defense-of-global-digital-economy-with-acquisition-of-recorded-future.html <a href="#fnref-28" class="fn-back">&#8617;</a></li>
 <li id="fn-29" style="list-style:none"><strong>29.</strong> PR Newswire, "Dataminr Announces $100M Investment from Fortress to Accelerate Gen AI and Agentic AI Product Innovation," 2025-04-24. https://www.prnewswire.com/news-releases/dataminr-announces-100m-investment-from-fortress-to-accelerate-gen-ai-and-agentic-ai-product-innovation-and-to-expand-its-reach-to-enterprises--governments-worldwide-302437613.html . Corroborated by Bloomberg, "Fortress Backs Dataminr With $100 Million Convertible-Bond Deal," 2025-04-24. https://www.bloomberg.com/news/articles/2025-04-24/fortress-backs-dataminr-with-100-million-convertible-bond-deal <a href="#fnref-29" class="fn-back">&#8617;</a></li>
-<li id="fn-30" style="list-style:none"><strong>30.</strong> Dataminr, "Dataminr Announces Intent to Acquire ThreatConnect," 2025-10-21 ($290M); transaction closed 2025-11-25. https://www.dataminr.com/press/announcement/dataminr-to-acquire-threatconnect/ (accessed 2026-09-11). The same release states: "In September, the company completed a $300 million financing led by Fortress and NightDragon…" Instrument and valuation are not stated in that release. It is separate from the April-2025 $100M convertible at <sup class="fn-ref"><a href="#fn-29">29</a></sup>; the two financings are recorded as distinct events and are never summed. <a href="#fnref-30" class="fn-back">&#8617;</a></li>
+<li id="fn-30" style="list-style:none"><strong>30.</strong> Dataminr, "Dataminr Announces Intent to Acquire ThreatConnect," 2025-10-21 ($290M); transaction closed 2025-11-25. https://www.dataminr.com/press/announcement/dataminr-to-acquire-threatconnect/ (accessed 2026-09-11). The same release states: "In September, the company completed a $300 million financing led by Fortress and NightDragon…" Instrument and valuation are not stated in that release. It is separate from the April-2025 $100M convertible at <sup class="fn-ref" id="fnref-29-occ2"><a href="#fn-29">29</a></sup>; the two financings are recorded as distinct events and are never summed. <a href="#fnref-30" class="fn-back">&#8617;</a></li>
 <li id="fn-31" style="list-style:none"><strong>31.</strong> TechCrunch, "Dataminr raises $475M on a $4.1B valuation," 2021-03-23 (last priced round = Series F, $4.1B). https://techcrunch.com/2021/03/23/dataminr-raises-475m-on-a-4-1b-valuation-for-real-time-insights-based-on-100k-sources-of-public-data/ <a href="#fnref-31" class="fn-back">&#8617;</a></li>
 <li id="fn-32" style="list-style:none"><strong>32.</strong> ZeroFox press release, "Haveli Investments Completes Acquisition of ZeroFox," 2024-05-13 (~$350M EV; $1.14/share; 45% premium). https://www.zerofox.com/press-release/haveli-completes-acquisition-of-zerofox/ . Deal terms announced 2024-02-06: https://www.zerofox.com/press-release/zerofox-acquired-by-haveli/ <a href="#fnref-32" class="fn-back">&#8617;</a></li>
 <li id="fn-33" style="list-style:none"><strong>33.</strong> PR Newswire, "Bitsight to Acquire Cyber Threat Intelligence Leader Cybersixgill," 2024-11-14 (~$115M). https://www.prnewswire.com/news-releases/bitsight-to-acquire-cyber-threat-intelligence-leader-cybersixgill-to-help-enterprises-to-preempt-cyber-attacks-302305876.html <a href="#fnref-33" class="fn-back">&#8617;</a></li>
@@ -1500,7 +1519,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -1918,5 +1937,43 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
+<script data-p4="c6-deck-citation-return">document.addEventListener('click', function(event){
+ const a=event.target.closest&&event.target.closest('sup.fn-ref > a[href^="#fn-"],a.fn-back[href^="#fnref-"]');
+ if(!a)return;
+ const target=document.getElementById(a.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();
+ if(a.parentElement.matches('sup.fn-ref')){
+  const back=target.querySelector('a.fn-back');
+  if(back)back.setAttribute('href','#'+a.parentElement.id);
+ }
+ const slide=target.closest('.slide');
+ if(slide&&typeof window.showSlide==='function'){
+  window.showSlide(Array.from(document.querySelectorAll('.slide')).indexOf(slide));
+ }
+ const focusTarget=target.matches('sup.fn-ref')?target.querySelector('a'):target;
+ if(!focusTarget.hasAttribute('tabindex')&&!focusTarget.matches('a[href]'))focusTarget.tabIndex=-1;
+ focusTarget.focus({preventScroll:true});
+ requestAnimationFrame(function(){target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+},true);</script>
 </body>
 </html>

@@ -693,8 +693,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Fusion / Decision Intelligence">
 <div class="brand-bar">
@@ -706,7 +725,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Fusion / Decision Intelligence</div>
+<h1 class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Fusion / Decision Intelligence</h1>
 <p><span class="deck-disclosure"><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes in fronts covered here. Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></span></p>
 </div>
 </div>
@@ -730,7 +749,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div class="legend-box">
 <p><strong>How to read this market</strong></p>
 <p>Each chapter grades up to eight vendors (the cap of eight), grouped in three tiers:</p>
-<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Wildcard:</strong> graded at the edge of the rubric and held there with explicit caution; the read stays descriptive and hedged.</li></ul>
+<ul><li><strong>Gravity:</strong> the structural anchors a buyer cannot map the front without naming.</li><li><strong>Attention:</strong> the specialists shaping the front's 2026 demand.</li><li><strong>Challenger:</strong> the architecture bet against the incumbents; the read stays descriptive and hedged.</li></ul>
 <p><strong>My read.</strong> marks the author's judgment. Each pattern claim opens with a dated public observation, separates that observation from my read of it, and ends with a conditional a publicly observable proxy can confirm or refute before the next refresh.</p>
 <p>Every vendor is graded on a dated public pillar; capability is reported as public positioning, never as verified architecture.</p>
 </div>
@@ -933,7 +952,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <p><strong>Two structural anchors a buyer cannot map the front without naming: the category-defining platform and the decades-old standard it is trying to displace.</strong></p>
 <ul><li><strong>Palantir — the primary.</strong> Gotham for government, Foundry for commercial, and AIP as the 2023 AI-operationalization layer. The <em>de facto</em> standard every rival is positioned against. Its most consequential public event: the <strong>Maven Smart System designated a Pentagon "program of record" across all branches</strong> (9 March 2026 Deputy Secretary of Defense letter)<sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup> — hardening from vendor into infrastructure.</li>
 <li><strong>i2 Group — the legacy standard.</strong> Analyst's Notebook, the entity-link-property workbench a NATO-wide analyst base trained on, across "more than 140 countries."<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup> <strong>Owned by N. Harris Computer / Constellation Software since 2022 — not IBM</strong><sup class="fn-ref" id="fnref-11"><a href="#fn-11">11</a></sup>, a fact frequently misstated.</li>
-<li>i2's public momentum is real and recent: "a 40% year-on-year increase in bookings" (7 October 2025) and double-digit organic growth.<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup> It grades as Gravity, not a fading incumbent, precisely because it is still growing while the AI-native platforms try to displace it.</li>
+<li>i2's public momentum is real and recent: "a 40% year-on-year increase in bookings" (7 October 2025) and double-digit organic growth.<sup class="fn-ref" id="fnref-10-occ2"><a href="#fn-10">10</a></sup> It grades as Gravity, not a fading incumbent, precisely because it is still growing while the AI-native platforms try to displace it.</li>
 <li>Pricing on both is sparse on the public record: large multi-year government programs, no clean per-seat figure.</li></ul>
 </div>
 <div class="slide" data-slide="8" data-title="Attention &amp; Challenger — Nuix, Cognyte, DataWalk, Siren">
@@ -964,7 +983,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <h2>4.4 Their Plays</h2>
 <p><strong>Five strategic moves are in motion, each anchored to a dated public event: two consolidation plays, the build-vs-buy contest, the program-of-record lock-in, and the megacaps' pick-a-lane pattern.</strong></p>
 <ul><li><strong>Play 1 — Convert pilots into permanent infrastructure.</strong> Maven's program-of-record designation (March 2026)<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup> turns renewable pilots into multi-year core infrastructure, alongside the U.S. Army's roughly USD 178M TITAN fusion award.<sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup> The category leader hardening from vendor into infrastructure.</li>
-<li><strong>Play 2 — Build-vs-buy displacement.</strong> Do AI-native platforms displace the legacy link-analysis standard, or does the incumbent modernize and hold? The scorecard is <strong>mixed</strong> — Palantir's AIP scale, i2's +40% bookings, and Nuix Neo's +179% FY26 ACV all grow double digits at once.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></li>
+<li><strong>Play 2 — Build-vs-buy displacement.</strong> Do AI-native platforms displace the legacy link-analysis standard, or does the incumbent modernize and hold? The scorecard is <strong>mixed</strong> — Palantir's AIP scale, i2's +40% bookings, and Nuix Neo's +179% FY26 ACV all grow double digits at once.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></li>
 <li><strong>Play 3 — Buy the graph layer.</strong> Nuix's Linkurious acquisition folds link-analysis into a processing engine — the M&A route to a complete stack, set against i2's organic incumbency and Palantir's built ontology.</li>
 <li><strong>Play 4 — Federated fusion versus the central lake.</strong> Elastic's strategic investment in Siren (2 December 2025) backs analyzing data where it lives rather than ingesting everything into one store — a genuine architectural counter-bet with a narrow-but-real beachhead.</li>
 <li><strong>Play 5 — Hyperscalers and primes pick a lane.</strong> Microsoft is the cloud-and-LLM layer beneath Palantir; the primes (Leidos, GDIT, RTX, Oracle) integrate fusion into programs. Both cede the platform layer to specialists — which is why the honest contender set stays smaller than the raw list.</li>
@@ -1070,7 +1089,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   <text x="56" y="518" font-size="10.5" fill="#cbd5e1">integrate lane: neither sells standalone fusion to BYO-source buyers — which is exactly why the graded set is honestly six, not eight.</text>
 
   
-  <rect x="600" y="556" width="200" height="30" rx="4" fill="#1e293b" stroke="#475569"/>
+  <rect x="600" y="556" width="220" height="30" rx="4" fill="#1e293b" stroke="#475569"/>
   <rect x="610" y="565" width="12" height="11" rx="2" fill="#92400E" fill-opacity="0.6" stroke="#F59E0B" stroke-width="1.4"/>
   <text x="627" y="574" font-size="8.5" fill="#cbd5e1">Gravity</text>
   <rect x="672" y="565" width="12" height="11" rx="2" fill="#B45309" fill-opacity="0.45" stroke="#FBBF24" stroke-width="1.4"/>
@@ -1208,7 +1227,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>Pattern Claim 2 — The Layer-Consolidation Thesis</h2>
 <p><strong>Every challenger is completing the stack by acquiring or federating the graph layer, not building it organically.</strong></p>
-<ul><li><strong>Observation.</strong> Nuix bought Linkurious (up to €20M, signed December 2025, closed 20 April 2026) — the inorganic route.<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup><sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup> Siren federates over Elasticsearch and partners with Senzing for entity resolution, backed by Elastic's December-2025 strategic investment — the architectural route.<sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup></li>
+<ul><li><strong>Observation.</strong> Nuix bought Linkurious (up to €20M, signed December 2025, closed 20 April 2026) — the inorganic route.<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup> Siren federates over Elasticsearch and partners with Senzing for entity resolution, backed by Elastic's December-2025 strategic investment — the architectural route.<sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-26"><a href="#fn-26">26</a></sup></li>
 <li><strong>My read.</strong> Two routes to the same collect-process-link-decide workflow, chosen by vendors that lead on one layer and lack another. Both compete against Palantir's built ontology and i2's organic incumbency by assembling the missing layer.</li>
 <li><strong>The capital confirms it.</strong> The 2025–2026 money went into consolidation at the analytics layer, not greenfield standalone bets, which are scarce.</li>
 <li><strong>Conditional.</strong> Confirmed by a second graph or entity-resolution acquisition, or a named agency adopting federated fusion for a mission previously run on a central lake, citing data-residency. Inverse: the acquired graph shows up only as un-referenced bolt-ons.</li>
@@ -1487,7 +1506,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -1905,5 +1924,43 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
+<script data-p4="c6-deck-citation-return">document.addEventListener('click', function(event){
+ const a=event.target.closest&&event.target.closest('sup.fn-ref > a[href^="#fn-"],a.fn-back[href^="#fnref-"]');
+ if(!a)return;
+ const target=document.getElementById(a.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();
+ if(a.parentElement.matches('sup.fn-ref')){
+  const back=target.querySelector('a.fn-back');
+  if(back)back.setAttribute('href','#'+a.parentElement.id);
+ }
+ const slide=target.closest('.slide');
+ if(slide&&typeof window.showSlide==='function'){
+  window.showSlide(Array.from(document.querySelectorAll('.slide')).indexOf(slide));
+ }
+ const focusTarget=target.matches('sup.fn-ref')?target.querySelector('a'):target;
+ if(!focusTarget.hasAttribute('tabindex')&&!focusTarget.matches('a[href]'))focusTarget.tabIndex=-1;
+ focusTarget.focus({preventScroll:true});
+ requestAnimationFrame(function(){target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+},true);</script>
 </body>
 </html>

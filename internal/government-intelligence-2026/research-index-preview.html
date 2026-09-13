@@ -414,9 +414,9 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .skip-link{position:fixed;left:var(--sp-2);top:var(--sp-2);z-index:1000;transform:translateY(-180%);padding:var(--sp-2) var(--sp-3);background:var(--amber);color:var(--ink);font-weight:700}.skip-link:focus{transform:translateY(0)}
 .start-here-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px}
 @media(max-width:639px){.start-here-grid{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:reduce){.skip-link,.btn,a,button{transition:none!important;transform:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.btn,a,button{transition:none!important;transform:none!important;scroll-behavior:auto!important}}
 </style>
-</head>
+<style data-c6-review-accessibility="">.skip-link{position:fixed!important;top:-200px!important;left:8px!important;transform:none!important;transition:none!important;z-index:100000!important}.skip-link:focus{top:8px!important}@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}</style></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- =====================================================================
@@ -582,18 +582,18 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 <span class="sep">·</span>
 <a href="/internal/government-intelligence-2026/#markets">Jump to markets</a>
 <span class="sep">·</span>
-<a href="/internal/government-intelligence-2026/companion.html">Pre-Call Briefing Pack</a>
+<a href="/internal/government-intelligence-2026/collaterals.html">Collateral map</a>
 </div>
-<!-- Start-here entry block — DI has a SINGLE Pre-Call Briefing Pack (not WEM's two artefacts) -->
 <div style="margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--slate-700);">
 <p style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin:0 0 var(--space-2) 0;">Start here</p>
-<p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--slate-400);margin:0 0 var(--space-4) 0;line-height:1.5;">Five markets plus a Convergence synthesis, zero vendor sponsors. One companion to start with for the whole-market picture.</p>
-<div class="start-here-grid">
-<a href="/internal/government-intelligence-2026/companion.html" style="display:block;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--slate-700);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
+<p style="font-family:'Inter',sans-serif;font-size:15px;color:var(--slate-400);margin:0 0 var(--space-4) 0;line-height:1.5;">Two reading routes across five markets and Convergence. Choose preparation before a conversation or a chapter-by-chapter reading of the argument.</p>
+<div class="start-here-grid"><a href="/internal/government-intelligence-2026/companion.html" style="display:block;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--slate-700);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
 <div style="font-family:'IBM Plex Serif',serif;font-size:19px;font-weight:500;color:var(--slate-100);margin-bottom:6px;">Pre-Call Briefing Pack</div>
-<div style="font-family:'Inter',sans-serif;font-size:14px;color:var(--slate-400);line-height:1.5;">A single narrative companion across all five markets plus Convergence. Read this first for the whole-market picture before a call.</div>
-</a>
-</div>
+<div style="font-family:'Inter',sans-serif;font-size:14px;color:var(--slate-400);line-height:1.5;">Market outlines, vendor positions and the cross-market watchlist before a conversation.</div>
+</a><a href="/internal/government-intelligence-2026/synthesis.html" style="display:block;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--slate-700);border-radius:10px;text-decoration:none;transition:border-color 0.2s;">
+<div style="font-family:'IBM Plex Serif',serif;font-size:19px;font-weight:500;color:var(--slate-100);margin-bottom:6px;">Report Digest</div>
+<div style="font-family:'Inter',sans-serif;font-size:14px;color:var(--slate-400);line-height:1.5;">Follow the argument across five markets and Convergence, with evidence and conditions for revisiting each conclusion.</div>
+</a></div>
 <p style="margin-top: var(--space-2); font-size: 14px; color: var(--slate-400);"><a href="/research/author.html" style="color: var(--amber);">About the author →</a></p>
 </div>
 </article>
@@ -665,5 +665,10 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 </footer>
 <!-- CHROME:FOOTER:END -->
 <script src="/js/main.js"></script>
-</body>
+<script data-c6-review-accessibility="">document.addEventListener('click',function(event){
+ const link=event.target.closest('a.skip-link');if(!link)return;
+ const target=document.getElementById(link.hash.slice(1));if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();target.tabIndex=-1;
+ target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'instant'});
+},true);</script></body>
 </html>

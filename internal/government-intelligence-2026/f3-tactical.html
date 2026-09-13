@@ -693,8 +693,27 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   dialog.p4-dialog{display:none !important;}
 }
 </style>
+<style data-p4="c6-reader">
+main.p4-document-root{display:block;max-width:none!important;width:100%;margin:0!important;padding:0!important}
+.p4-skip-link{position:fixed;left:12px;top:-150px;z-index:10001;padding:12px 18px;background:#fff;color:#111!important;border:2px solid currentColor}
+.p4-skip-link:focus{top:8px}
+html{scroll-padding-top:var(--p4-reader-offset,110px)!important}
+.di-runhead{top:var(--p4-topnav-height,37px)!important}
+.p4-topnav{box-sizing:border-box;width:100%;max-width:100%!important;flex-wrap:wrap;overflow-wrap:anywhere}
+.p4-topnav a{min-height:32px;display:inline-flex;align-items:center}
+main,.methodology-content,.front-disclosure,.hero,.breadcrumb{min-width:0;box-sizing:border-box}
+.methodology-content,.front-disclosure{width:100%;max-width:min(100%,760px)}
+.methodology-content{overflow-wrap:anywhere}
+main.p4-document-root p,main.p4-document-root li{overflow-wrap:anywhere}
+.methodology-content table{display:block;max-width:100%;overflow-x:auto}
+.p4-citation-separator{font-size:.68em;vertical-align:super;line-height:0;margin:0 .12em}
+@media(max-width:480px){.breadcrumb{padding-left:20px!important;padding-right:20px!important}.breadcrumb ol{display:flex;flex-wrap:wrap;white-space:normal!important}.hero-headline{overflow-wrap:anywhere}.p4-topnav{padding-left:8px!important;padding-right:8px!important}.nav-bar{box-sizing:border-box;width:100%}.nav-bar>div{min-width:0;gap:4px!important}.nav-bar .nav-btn{padding-left:6px!important;padding-right:6px!important}}
+@media(prefers-reduced-motion:reduce){html,body,*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
+@media print{.p4-skip-link{display:none!important}}
+</style>
+<style data-p4="c6-deck-tables">.slide .table-container{flex-shrink:0;max-width:100%;overflow-x:auto}.slide .table-container:focus-visible{outline:2px solid #f59e0b;outline-offset:2px}</style>
 </head>
-<body>
+<body><a class="p4-skip-link" href="#p4-main-content">Skip to content</a><main class="p4-document-root" id="p4-main-content" tabindex="-1">
 
 <div class="slide active" data-slide="1" data-title="ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Tactical Intelligence">
 <div class="brand-bar">
@@ -706,7 +725,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1;">
 <p>
-<div class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Tactical Intelligence</div>
+<h1 class="hero-title">ProductBeacon — The State of Government and Law Enforcement Intelligence Markets 2026: Tactical Intelligence</h1>
 <p><span class="deck-disclosure"><em>By Yohay Etsion · Managing Director, ProductBeacon · former VP Product at Cognyte, which competes in fronts covered here. Public sources only; not investment advice. Full disclosure on the closing slide · <a href="/research/methodology.html" class="md-link">Methodology →</a>.</em></span></p>
 </div>
 </div>
@@ -845,7 +864,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <span class="section-label">Tactical Intelligence</span>
 </div>
 <h2>The Stack — Four Proximity Modalities</h2>
-<p>The stack is best read as four modalities the same buyer assembles, unified by the fact that the sensor is physically near the target and portable. The workhorse is cellular-identity collection: the reliable yield is <em>identifiers and presence</em>, not content — content interception over 4G/5G requires a 2G downgrade,<sup class="fn-ref" id="fnref-2"><a href="#fn-2">2</a></sup> and that target is narrowing as legacy networks retire.</p>
+<p>The stack is best read as four modalities the same buyer assembles, unified by the fact that the sensor is physically near the target and portable. The workhorse is cellular-identity collection: the reliable yield is <em>identifiers and presence</em>, not content — content interception over 4G/5G requires a 2G downgrade,<sup class="fn-ref" id="fnref-2-occ2"><a href="#fn-2">2</a></sup> and that target is narrowing as legacy networks retire.</p>
 <ul><li><strong>Cellular-identity collection & tactical interception</strong> — the IMSI-catcher core, migrating to software-defined radio so one box can claim "2G–5G."</li>
 <li><strong>Direction finding & geolocation</strong> — turning a signal into a point via TDOA and AoA; accuracy is the least outside-verifiable axis, so <em>form factor</em> is the credible public proxy.</li>
 <li><strong>Wi-Fi / Bluetooth proximity collection</strong> — squeezed most directly by MAC-address randomization.</li>
@@ -1044,7 +1063,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <p>The Gravity tier is the device-in-hand forensics anchors a buyer cannot map the field-collection market without naming. Three names, converging on the field edge from different starting points.</p>
 <ul><li><strong>Cellebrite</strong> — the category-defining device-extraction standard (UFED), the <em>de facto</em> reference every other forensics vendor is positioned against. Wedge: the broadest device and OS access coverage, extended past locks and encryption to the full file system. The only contender with fully disclosed, audited public financials.<sup class="fn-ref" id="fnref-7"><a href="#fn-7">7</a></sup></li>
 <li><strong>MSAB</strong> — the field-first anchor, whose 2026 narrative maps most cleanly onto the proximity-and-tempo boundary: "moving extraction to the field" via XRY Frontline (Kiosk, Tablet, Express) "at police stations and borders," with GPUs turning brute-force "weeks" into "hours."<sup class="fn-ref" id="fnref-8"><a href="#fn-8">8</a></sup></li>
-<li><strong>Magnet Forensics</strong> — the analysis-led anchor (AXIOM), unifying multi-source evidence into one case. Taken private by Thoma Bravo (~C$1.8B, closed April 2023) and combined with Grayshift<sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup><sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup> — a market-structure datapoint that took its financials dark.</li></ul>
+<li><strong>Magnet Forensics</strong> — the analysis-led anchor (AXIOM), unifying multi-source evidence into one case. Taken private by Thoma Bravo (~C$1.8B, closed April 2023) and combined with Grayshift<sup class="fn-ref" id="fnref-9"><a href="#fn-9">9</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup> — a market-structure datapoint that took its financials dark.</li></ul>
 </div>
 <div class="slide" data-slide="9" data-title="Attention tier — the tactical-SIGINT specialists">
 <div class="brand-bar">
@@ -1056,7 +1075,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>Attention tier — the tactical-SIGINT specialists</h2>
 <p>The Attention tier is the RF specialists shaping 2026 field-collection demand — plus the cross-front vendor graded here on its own dated public record. The Wildcard, Cellxion, is held to descriptive treatment only on surveillance-industry-index listings, with its thinness stated as the finding.</p>
-<ul><li><strong>Rayzone Group</strong> — the clearest exemplar of the "last-mile SIGINT" specialist, marketing "tactical RF interception for 2G, 3G, 4G, and 5G networks" for "stationary, portable, and airborne deployment,"<sup class="fn-ref" id="fnref-1"><a href="#fn-1">1</a></sup> with a one-vendor catcher / counter-catcher / geolocation stack. "Covers 2G–5G" is a software-breadth positioning claim, not verified live 5G-standalone interception.</li>
+<ul><li><strong>Rayzone Group</strong> — the clearest exemplar of the "last-mile SIGINT" specialist, marketing "tactical RF interception for 2G, 3G, 4G, and 5G networks" for "stationary, portable, and airborne deployment,"<sup class="fn-ref" id="fnref-1-occ2"><a href="#fn-1">1</a></sup> with a one-vendor catcher / counter-catcher / geolocation stack. "Covers 2G–5G" is a software-breadth positioning claim, not verified live 5G-standalone interception.</li>
 <li><strong>Septier Communication</strong> — the breadth-of-capture specialist, marketing a Guardian catcher "capturing up to 11 different identifiers … including those using Bluetooth and Wi-Fi" across "GSM, UMTS, LTE, and 5G,"<sup class="fn-ref" id="fnref-11"><a href="#fn-11">11</a></sup> paired with a direction-finding line.</li>
 <li><strong>Cognyte</strong> — graded in Attention on Cognyte's own dated border-protection page, which describes fusing "existing border sensors (cameras, radar, satellites and more)" with "SIGINT, OSINT and VISINT sources" (accessed 2026-06-16). Corroborated by a dated public release: a roughly USD 5M Tier-1 military-intelligence contract described as deploying "a tactical SIGINT solution for operational missions" (BusinessWire/StockTitan, 2025-11-19).<sup class="fn-ref" id="fnref-12"><a href="#fn-12">12</a></sup></li>
 <li>The grade is <strong>built strictly from that public material, with no internal knowledge used</strong>. Cognyte's lineage artifacts are dated records of positioning and a dated deal — quoted and attributed, never asserted as a present tactical capability. It sits in Attention, not Gravity, because the Gravity tier is the device-in-hand forensics anchors.</li>
@@ -1074,7 +1093,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <h2>3.4 Their Plays</h2>
 <p>The front carries a deliberately small play count — three, not five — because its evidence floor is the strictest in the report: a play without a public datable anchor is dropped, not softened. The shape of the three is the shape of the front itself.</p>
 <ul><li><strong>Play 1 — The Lab-to-Field Shift.</strong> The device-forensics anchors are relocating extraction out of the central lab to the point of seizure (MSAB "moving extraction to the field"; Cellebrite ruggedized UFED + drone forensics). My read: the forensics cohort is <em>annexing</em> the tactical edge from a position of growth.</li>
-<li><strong>Play 2 — Consolidation Under Private Equity.</strong> Thoma Bravo took Magnet private (~C$1.8B) and folded in Grayshift<sup class="fn-ref" id="fnref-10"><a href="#fn-10">10</a></sup><sup class="fn-ref" id="fnref-13"><a href="#fn-13">13</a></sup> — the inorganic "unlock then extract then analyze" stack, against Cellebrite's organically-built breadth.</li>
+<li><strong>Play 2 — Consolidation Under Private Equity.</strong> Thoma Bravo took Magnet private (~C$1.8B) and folded in Grayshift<sup class="fn-ref" id="fnref-10-occ2"><a href="#fn-10">10</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-13"><a href="#fn-13">13</a></sup> — the inorganic "unlock then extract then analyze" stack, against Cellebrite's organically-built breadth.</li>
 <li><strong>Play 3 — Encryption Headwind + Export-Control Overhang.</strong> Encryption and 2G/3G sunset compress the classic catcher's content yield toward identity and location; sanctions and the EU Article 5 catch-all reshape the supply side.<sup class="fn-ref" id="fnref-14"><a href="#fn-14">14</a></sup> The carved-out mobile-implant cohort appears here only as named-outlet-attributed market color.</li></ul>
 </div>
 <div class="slide" data-slide="11" data-title="Pattern Claim 1 — The Edge-Forensics Ascendancy">
@@ -1087,7 +1106,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>Pattern Claim 1 — The Edge-Forensics Ascendancy</h2>
 <p><strong>The growth on this front is not in the catcher; it is in the seized device.</strong> The classic passive over-the-air interception value proposition is structurally compressing as end-to-end and device-OS encryption yield ciphertext and 2G/3G sunset removes the downgrade target. The public figures show the split directly.</p>
-<ul><li>The IMSI-catcher / cellular-interception segment runs flat-to-modest (Mordor: 8.08% and 4.61% CAGRs); mobile forensics runs materially faster (MarketsandMarkets: 11.8%; digital-forensics parent 16.5% on the edition originally cited, 12.68% for 2026–2031 on Mordor's 2026-07-23 re-issue).<sup class="fn-ref" id="fnref-15"><a href="#fn-15">15</a></sup><sup class="fn-ref" id="fnref-16"><a href="#fn-16">16</a></sup></li>
+<ul><li>The IMSI-catcher / cellular-interception segment runs flat-to-modest (Mordor: 8.08% and 4.61% CAGRs); mobile forensics runs materially faster (MarketsandMarkets: 11.8%; digital-forensics parent 16.5% on the edition originally cited, 12.68% for 2026–2031 on Mordor's 2026-07-23 re-issue).<sup class="fn-ref" id="fnref-15"><a href="#fn-15">15</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-16"><a href="#fn-16">16</a></sup></li>
 <li>The hardest datapoint anchors the same conclusion: Cellebrite ARR <strong>USD 507.8M, +21%</strong>, at 80.8% gross margin and 117% net retention (Q1 FY2026: USD 493M, +21%); MSAB FY2025 net sales <strong>SEK 462M, +14.1%</strong>.</li>
 <li><strong>My read:</strong> the catcher is not dead — its yield is narrowing from <em>content</em> to <em>presence</em> — while the dollars accrete on the forensics side. <strong>Conditional:</strong> holds if the device-extraction issuers keep posting low-to-mid-teens-or-better growth while catcher CAGRs stay mid-single-digit; weakens if Cellebrite ARR growth falls below ~12% across two quarters.</li>
 </ul>
@@ -1182,8 +1201,8 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <span class="section-label">Tactical Intelligence</span>
 </div>
 <h2>Pattern Claim 2 — The Lab-to-Field Collapse</h2>
-<p><strong>Extraction is moving out of the central lab and into the field, collapsing the tactical/forensic boundary the market used to keep.</strong> MSAB states "the trend in 2026 is moving extraction to the field" (XRY Frontline at "police stations and borders"; XRY Drone, Nov 2025)<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup>; Cellebrite markets UFED to "extract data from anywhere … in the field" and expanded into drone forensics.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></p>
-<ul><li>The demand surface is the border and the arrest: CBP ~47,000 device searches in 2024 (~5.5× over a decade), with DHS/ICE planning a USD 100M-ceiling IDIQ and an FBI/DOJ USD 5.7M Cellebrite award through NASA SEWP.<sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup></li>
+<p><strong>Extraction is moving out of the central lab and into the field, collapsing the tactical/forensic boundary the market used to keep.</strong> MSAB states "the trend in 2026 is moving extraction to the field" (XRY Frontline at "police stations and borders"; XRY Drone, Nov 2025)<sup class="fn-ref" id="fnref-17"><a href="#fn-17">17</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-18"><a href="#fn-18">18</a></sup>; Cellebrite markets UFED to "extract data from anywhere … in the field" and expanded into drone forensics.<sup class="fn-ref" id="fnref-19"><a href="#fn-19">19</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-20"><a href="#fn-20">20</a></sup></p>
+<ul><li>The demand surface is the border and the arrest: CBP ~47,000 device searches in 2024 (~5.5× over a decade), with DHS/ICE planning a USD 100M-ceiling IDIQ and an FBI/DOJ USD 5.7M Cellebrite award through NASA SEWP.<sup class="fn-ref" id="fnref-21"><a href="#fn-21">21</a></sup><span class="p4-citation-separator" aria-hidden="true">,</span><sup class="fn-ref" id="fnref-22"><a href="#fn-22">22</a></sup></li>
 <li><strong>My read:</strong> the device-forensics anchors are annexing the field-collection edge — and the winner is not whoever extracts fastest, but whoever makes field-grade extraction <em>defensible</em> (chain-of-custody, forensic soundness).</li>
 <li><strong>Conditional:</strong> hardens if the forensics vendors publish further field/edge form factors <em>and</em> name government field-deployment references; weakens if roadmaps re-center on lab throughput, or a legal constraint cuts border device-search volumes.</li>
 </ul>
@@ -1285,7 +1304,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 </div>
 <h2>Pattern Claim 3 — The Surveillance-Market Reckoning</h2>
 <p><strong>Who may buy and who may sell is being reshaped by sanctions and export-control accountability — and the cohort it presses hardest is the one this report never grades.</strong> The US Entity-List additions (NSO + Candiru, Nov 2021; Intellexa/Cytrox, Jul 2023)<sup class="fn-ref" id="fnref-23"><a href="#fn-23">23</a></sup> and the EU Article 5 cyber-surveillance catch-all import a human-rights end-use test reaching RF and radiofrequency-monitoring equipment.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup></p>
-<ul><li>The remote mobile-implant cohort is a technically distinct modality, carved out of grading and named here only as a market force, on the official and named-outlet record.<sup class="fn-ref" id="fnref-24"><a href="#fn-24">24</a></sup></li>
+<ul><li>The remote mobile-implant cohort is a technically distinct modality, carved out of grading and named here only as a market force, on the official and named-outlet record.<sup class="fn-ref" id="fnref-24-occ2"><a href="#fn-24">24</a></sup></li>
 <li>The regime is not monotonic: in December 2025 the US administration partially lifted sanctions on three Intellexa-linked executives<sup class="fn-ref" id="fnref-25"><a href="#fn-25">25</a></sup> — a contested, oscillating equilibrium, not a one-way ratchet.</li>
 <li><strong>My read:</strong> the accountability regime reshapes the <em>supply side</em>, concentrating legitimate sale toward vendors who can clear export licensing. <strong>Conditional:</strong> strengthens on further Entity-List actions or visible licensing friction; weakens if the December 2025 lift extends into broader relief.</li>
 </ul>
@@ -1490,7 +1509,7 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
 <div style="display:none" aria-hidden="true"><div id="feedbackList"><div class="empty-state" id="emptyState"></div></div><textarea id="generalFeedback"></textarea><pre id="outputPreview"></pre><button id="previewToggle"></button></div>
 
 <div class="p4-more" id="p4More"><span aria-hidden="true">&#9660;</span><span>more on this slide</span></div>
-<div class="nav-bar">
+<div class="nav-bar" role="navigation" aria-label="Presentation controls">
 <div><a class="p4-home" href="/internal/government-intelligence-2026/" aria-label="Back to the report"><span aria-hidden="true">&#9664;</span><span class="p4-home-long" aria-hidden="true">Back to the report</span><span class="p4-home-short" aria-hidden="true">Report</span></a></div>
 <div class="nav-center">
 <button class="nav-btn" id="prevBtn" aria-label="Previous">&larr;</button>
@@ -1908,5 +1927,43 @@ dialog.p4-dialog::backdrop{background:rgba(0,0,0,.92);}
   sync();
 })();
 </script>
+</main><script data-p4="c6-reader">
+(()=>{
+ const root=document.documentElement, top=document.querySelector('.p4-topnav'), run=document.querySelector('.di-runhead');
+ function measure(){
+  const h=top?top.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-topnav-height',h+'px');
+  const site=document.querySelector('body > nav,body > .nav,main > nav:not(.breadcrumb)');
+  const sh=site&&['fixed','sticky'].includes(getComputedStyle(site).position)?site.getBoundingClientRect().height:0;
+  root.style.setProperty('--p4-reader-offset',(h+(run?run.getBoundingClientRect().height:sh)+16)+'px');
+ }
+ const ro=new ResizeObserver(measure);[top,run,document.querySelector('body > nav')].filter(Boolean).forEach(n=>ro.observe(n));
+ addEventListener('resize',measure);document.fonts.ready.then(measure);measure();
+ document.querySelector('.p4-skip-link')?.addEventListener('click',()=>{
+  const target=document.querySelector('.slide.active')||document.getElementById('p4-main-content');
+  if(target){target.tabIndex=-1;target.focus({preventScroll:true});target.scrollIntoView({block:'start'});}
+ });
+})();
+</script>
+<script data-p4="c6-deck-tables">document.querySelectorAll('.table-container').forEach(function(table){table.addEventListener('keydown',function(event){if(event.key==='ArrowLeft'||event.key==='ArrowRight')event.stopPropagation();});});</script>
+<script data-p4="c6-deck-citation-return">document.addEventListener('click', function(event){
+ const a=event.target.closest&&event.target.closest('sup.fn-ref > a[href^="#fn-"],a.fn-back[href^="#fnref-"]');
+ if(!a)return;
+ const target=document.getElementById(a.getAttribute('href').slice(1));
+ if(!target)return;
+ event.preventDefault();event.stopImmediatePropagation();
+ if(a.parentElement.matches('sup.fn-ref')){
+  const back=target.querySelector('a.fn-back');
+  if(back)back.setAttribute('href','#'+a.parentElement.id);
+ }
+ const slide=target.closest('.slide');
+ if(slide&&typeof window.showSlide==='function'){
+  window.showSlide(Array.from(document.querySelectorAll('.slide')).indexOf(slide));
+ }
+ const focusTarget=target.matches('sup.fn-ref')?target.querySelector('a'):target;
+ if(!focusTarget.hasAttribute('tabindex')&&!focusTarget.matches('a[href]'))focusTarget.tabIndex=-1;
+ focusTarget.focus({preventScroll:true});
+ requestAnimationFrame(function(){target.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+},true);</script>
 </body>
 </html>
