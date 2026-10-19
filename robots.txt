@@ -1,5 +1,5 @@
 # ProductBeacon robots.txt
-# Last updated: 2026-09-11
+# Crawler policy: approved GEO plan (DR-2026-626).
 
 User-agent: *
 Allow: /
@@ -13,26 +13,22 @@ Disallow: /insights/*/brief/
 # Note: /research/state-of-cyber-2026/ is the public research sub-brand — intentionally NOT disallowed.
 # Redirect stubs carry in-page "noindex, follow"; they are left crawlable so engines can read the noindex.
 
-# Match the existing Cloudflare restrictions for training and extended-use agents.
-# Ordinary search crawlers inherit the public rules above. Google-Extended
-# is separate from Googlebot; this retains the existing extended-use restriction.
+# Block the named training and extended-use agents below. Google-Extended
+# and ordinary search crawlers inherit the public and private-path rules above.
 User-agent: GPTBot
 Disallow: /
 
 User-agent: ClaudeBot
 Disallow: /
 
-User-agent: Google-Extended
+User-agent: CCBot
 Disallow: /
 
-User-agent: PerplexityBot
-Allow: /
-Disallow: /internal/
-Disallow: /prospects/
-Disallow: /planning/
-Disallow: /analysis/
-Disallow: /Product/
-Disallow: /Marketing/
-Disallow: /insights/*/brief/
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
 
 Sitemap: https://productbeacon.agency/sitemap.xml
