@@ -73,10 +73,10 @@ const doorTwoText = bodyText(doorTwo);
 const key = (doorTwo.match(/name="access_key" value="([^"]+)"/) || [])[1];
 check(Boolean(key) && sha(Buffer.from(key, 'utf8')) === expectedKeyHash, 'Door 2 Web3Forms access key hash exact (Gmail-registered key)');
 for (const id of ['course-name', 'course-email', 'course-linkedin', 'course-question', 'intensive-name', 'intensive-email', 'intensive-linkedin', 'intensive-question']) check(doorTwo.includes(`id="${id}"`), `Door 2 dialog field ${id} present`);
-check(doorTwo.includes('id="open-course-dialog">Register for the free course</button>'), 'Door 2 primary action is the registration button');
+check(doorTwo.includes('id="open-course-dialog">Register for the Operator Briefing</button>'), 'Door 2 primary action is the registration button');
 check(doorTwo.includes('id="open-intensive-dialog">Join the Intensive waiting list</button>'), 'Door 2 Intensive row carries the waiting-list button');
 check(!doorTwo.includes('<div class="door-actions">'), 'Door 2 bottom action block removed; the button lives in the free-course row');
-check(doorTwo.includes('value="ProductBeacon Intensive waiting list"') && doorTwo.includes('value="ProductBeacon free course registration"'), 'the two forms carry distinct subjects');
+check(doorTwo.includes('value="ProductBeacon Intensive waiting list"') && doorTwo.includes('value="ProductBeacon Operator Briefing registration"'), 'the two forms carry distinct subjects');
 check((doorTwo.match(/name="access_key" value="([^"]+)"/g) || []).length === 2 && new Set([...doorTwo.matchAll(/name="access_key" value="([^"]+)"/g)].map(m => m[1])).size === 1, 'both forms use the one Gmail-registered key');
 check(!/<input[^>]*type="date"/.test(doorTwo), 'no date field in either dialog');
 const licenceRow = (doorTwo.match(/<h2>Step two: the licence\.<\/h2>[\s\S]*?<\/div>/) || [''])[0];
@@ -90,7 +90,7 @@ check(mainHtml.includes('<a href="/research/">Read two full reports the workforc
 check(!doorTwo.includes('It lands here, after everything else') && !doorTwo.includes('ProductBeacon built an AI workforce that covers those functions'), 'the two intro beats are removed');
 const affirmedStrings = [
   'You carry the positioning, the pricing and the competitive read. There is nobody else for it.',
-  'Free. Recorded. Finish it and the licence opens.',
+  'Recorded. No fee. Finish it and the licence opens.',
   'Your registration goes to Yohay. He reads it and replies personally.',
   '$200 a month, first month free.',
   'Need only the Product team? That one is free and open source.',
@@ -98,12 +98,40 @@ const affirmedStrings = [
   'Two seatings, two hours each. $600 per cohort of up to 5 seats. Live.',
   'Cohorts open in order of registration.',
   'Every month: office hours, live.',
-  'One live session a month. Bring a question about your own work or about the workforce, and ask it. No course or licence needed.',
+  'One live session a month. Bring a question about your own work or about the workforce, and ask it. You do not need the Operator Briefing or the licence.',
   'Free. Open to anyone.',
-  'from a function you cover alone. It takes about an afternoon.',
+  'The recorded part of the Operator Intensive: short videos on how the workforce runs.',
   'Read two full reports the workforce wrote'
 ];
 for (const s of affirmedStrings) check(doorTwoText.includes(s), `Door 2 carries the reviewed string: ${s}`);
+// Operator Briefing rename (DR-2026-636, closed 22 Oct 2026): each approved v3 string, word for word,
+// in every Door 2 place; the two hands-on bullets gone (Decision 5); no "course" in visible text or meta.
+const doorTwoCount = needle => doorTwo.split(needle).length - 1;
+const briefingExact = [
+  [3, "content=\"For the person carrying the positioning, the pricing and the competitive read: the Operator Briefing first, with no fee, then the licence and the Intensive.\""],
+  [1, "<meta name=\"description\" content=\"For the person carrying the positioning, the pricing and the competitive read: the Operator Briefing first, with no fee, then the licence and the Intensive.\">"],
+  [1, "<meta property=\"og:description\" content=\"For the person carrying the positioning, the pricing and the competitive read: the Operator Briefing first, with no fee, then the licence and the Intensive.\">"],
+  [1, "<meta name=\"twitter:description\" content=\"For the person carrying the positioning, the pricing and the competitive read: the Operator Briefing first, with no fee, then the licence and the Intensive.\">"],
+  [1, "<h2>Step one: the Operator Briefing.</h2>"],
+  [1, "<p>The recorded part of the Operator Intensive: short videos on how the workforce runs.</p>"],
+  [1, "<ul class=\"door-agenda\" aria-label=\"Operator Briefing agenda\"><li>What the Operator's job is, once an AI workforce does the work.</li><li>Meet the teams and understand the roles, skills and knowledge behind each specialist.</li><li>Follow a task through planning, specialist work and review.</li></ul>"],
+  [1, "<p class=\"door-cost\">Recorded. No fee. Finish it and the licence opens.</p>"],
+  [1, "<p id=\"course-dialog-description\">Recorded. No fee. Finish it and the licence opens.</p>"],
+  [1, "id=\"open-course-dialog\">Register for the Operator Briefing</button>"],
+  [1, "<h2 id=\"course-dialog-title\">Register for the Operator Briefing</h2>"],
+  [1, "id=\"course-submit\" type=\"submit\">Register for the Operator Briefing</button>"],
+  [1, "name=\"subject\" value=\"ProductBeacon Operator Briefing registration\""],
+  [1, "<p>The whole workforce, all 15 teams, yours to run. It opens when you finish the Operator Briefing.</p>"],
+  [1, "and ask it. You do not need the Operator Briefing or the licence.</p>"],
+  [1, "id=\"course-dialog-privacy\">Web3Forms processes the details you submit so Yohay can register you for the Operator Briefing and follow up personally. This is a registration, not a mailing list, and no automated email is sent. To ask us to delete your details, use the <a href=\"/contact.html\">ProductBeacon contact page</a>.</p>"],
+  [1, "aria-label=\"Close the registration form\""]
+];
+for (const [n, s] of briefingExact) check(doorTwoCount(s) === n, `Door 2 Operator Briefing string x${n} (found ${doorTwoCount(s)}): ${s}`);
+for (const s of ["Set up a practice workforce and give it the relevant company context.", "Produce one finished deliverable from a function you cover alone."]) check(!doorTwo.includes(s), `Door 2 hands-on agenda bullet removed (Decision 5): ${s}`);
+const doorTwoVisible = doorTwo.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<!--[\s\S]*?-->/g, ' ').replace(/<[^>]*>/g, ' ');
+const doorTwoAttrs = [...doorTwo.matchAll(/\b(?:content|aria-label|title|alt|placeholder)="([^"]*)"/g)].map(m => m[1]).join(' | ');
+const courseHits = [...`${doorTwoVisible} | ${doorTwoAttrs}`.matchAll(/.{0,30}\bcourse\b.{0,30}/gi)].map(m => m[0].replace(/\s+/g, ' ').trim());
+check(courseHits.length === 0, `Door 2 visible text and meta carry no "course" (found: ${courseHits.join(' / ') || 'none'})`);
 const forbidden = [
   [/\$750|\$8,000|\$2,000|\$500\b|\$3,500|\$10,000|\$15,000|\$25,000/, 'withdrawn or removed figures'],
   [/\bper seat\b|\bone user\b|\bone organisation\b/i, 'licence unit or scope'],

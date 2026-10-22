@@ -225,7 +225,7 @@ const doorOneSectionHeadings = [
 ];
 check(doorOneSectionHeadings.every(value => doorOne.includes(`<h2>${value}</h2>`)), 'Door 1 uses approved existing copy for section H2 headings');
 
-const privacy = 'Web3Forms processes the details you submit so Yohay can register you for the free course and follow up personally. This is course registration, not a mailing list, and no automated email is sent. To ask us to delete your details, use the ProductBeacon contact page.';
+const privacy = 'Web3Forms processes the details you submit so Yohay can register you for the Operator Briefing and follow up personally. This is a registration, not a mailing list, and no automated email is sent. To ask us to delete your details, use the ProductBeacon contact page.';
 check(visibleText(doorTwo).includes(privacy), 'Door 2 privacy copy exact');
 check(doorTwo.includes('<a href="/contact.html">ProductBeacon contact page</a>'), 'Door 2 deletion route exact');
 check(!doorTwo.includes('mailto:'), 'Door 2 has no mailto deletion route');
@@ -245,7 +245,7 @@ fields.forEach(([name, requirement]) => {
 const emailInput = doorTwo.match(/<input[^>]+name="email"[^>]*>/);
 check(Boolean(emailInput && /inputmode="email"/.test(emailInput[0])), 'email field declares email input mode');
 check(/name="botcheck"[^>]+style="display:\s*none"/.test(doorTwo), 'honeypot hidden');
-check(doorTwo.includes('name="subject" value="ProductBeacon free course registration"'), 'form subject exact');
+check(doorTwo.includes('name="subject" value="ProductBeacon Operator Briefing registration"'), 'form subject exact');
 check(doorTwo.includes('name="from_name" value="ProductBeacon"'), 'form from_name exact');
 check(doorTwo.includes('<dialog') && doorTwo.includes('aria-labelledby="course-dialog-title"') && doorTwo.includes('aria-describedby="course-dialog-description course-dialog-privacy"') && doorTwo.includes('id="course-dialog-privacy"'), 'dialog is described by intro and privacy');
 const privacyPosition = doorTwo.indexOf('id="course-dialog-privacy"');
