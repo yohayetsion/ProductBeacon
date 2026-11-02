@@ -189,10 +189,9 @@ No claim appears in the brief without a row here.
 - Coldi (raising, not closed); Call Coach IQ, Scala.ai (snippets only).
 - Microsoft record 576605 (real-time analytics, supervisor acts): no change to the scheduling picture.
 
-## Research-security note
+## How NiCE was researched
 
-- Lorikeet's release-notes page carries a block of instructions addressed to AI assistants (stream A). Ignored as data. fin.ai/ai-instructions surfaced in search (stream C); not opened.
-- No LinkedIn query or visit for any company; NiCE researched through public sources only (nice.com, SEC EDGAR, Business Wire via Yahoo, PR Newswire). Cognyte not touched.
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 

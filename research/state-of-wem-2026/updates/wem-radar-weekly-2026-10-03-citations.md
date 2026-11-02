@@ -181,16 +181,9 @@ Source: ProductBeacon Research, 3 Oct (our own assessments; every verdict is Inf
 - **Ada:** every free read blocked (403); unchecked this week.
 - **California AB 2575 veto (health-care AI overrides):** outside the WEM lane.
 
-## Research-security note
+## How NiCE was researched
 
-One fetched page carried text addressed to AI agents: Lorikeet's machine-readable price file (`/pricing.md`) tells AI agents they can start a free-trial sign-up over plain HTTP. Treated as data about Lorikeet's go-to-market; not acted on. LinkedIn not opened or queried; NiCE researched through public sources only; Cognyte absent.
-
-## Coverage
-
-- Search: 4 parallel foreground streams; 76 Firecrawl searches (several returned zero results) plus 1 paid scrape (Fitch), via the REST fallback (Firecrawl MCP server failed to connect). Shared meter: 4,286 at start, 4,031 after research (255 drawn; streams' own logs account for about 153; the difference is not attributable on a shared meter). About 265 free page reads (newsroom indexes, sitemaps, EDGAR, official pages, price pages, roadmap feed).
-- LinkedIn: not collected (v1 search-only).
-- SEC leads: no feeder in v1 (EDGAR filing lists read directly for Five9, Sprinklr, Zoom, Microsoft, Salesforce: no 8-K, print, preannouncement or earnings-date announcement 26 Sep-3 Oct).
-- Date traps caught: 30 (A=9, B=6, C=8, D=7).
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 

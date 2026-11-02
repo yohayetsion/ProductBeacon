@@ -211,9 +211,9 @@ Source: ProductBeacon Research, 25 Oct (our own assessments). Basis: the 3 Oct a
 - **Salesforce Listen Labs/Loops closes, Zoom partner programme, Microsoft Field Service Scheduling Operations Agent**: context only.
 - **Australian UTS "Drawing the line" report**: research report, not a rule.
 
-## Research-security note
+## How NiCE was researched
 
-No text addressed to an AI was found in any fetched page (all four streams). LinkedIn was not used. NiCE was researched through public sources only (nice.com press, pricing and investor pages, SEC EDGAR, the public protocol partner list). Cognyte was not touched.
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 

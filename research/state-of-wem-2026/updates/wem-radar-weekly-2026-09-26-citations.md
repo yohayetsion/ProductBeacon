@@ -113,16 +113,9 @@ No claim appears in the brief without a row here.
 - **Peopleware:** earlier internal record ("silent three years") was wrong; four 2026 releases, newest 20 Jul. Internal record corrected in state; no public correction needed (never a reader claim).
 - **Liberty Global restating Sierra's $15bn valuation:** buyer restatement of a May round; not new.
 
-## Research-security note
+## How NiCE was researched
 
-No fetched page carried instructions addressed to AI readers this week (streams A-D each checked). LinkedIn not opened or queried; NiCE researched through public sources only; Cognyte absent.
-
-## Coverage
-
-- Search: 4 parallel foreground streams, 76 Firecrawl searches plus 2 paid scrapes (~146 credits of 5,130 remaining at start), ~320 free page reads (newsroom indexes, sitemaps, EDGAR, official pages).
-- LinkedIn: not collected (v1 search-only).
-- SEC leads: no feeder in v1 (EDGAR filing lists read directly for Five9, Sprinklr, Zoom, Microsoft: no 8-K 20-26 Sep).
-- Date traps caught: 32 (A=8, B=9, C=10, D=5). Method fix: `batch.py` needs the query list quoted; `||` unquoted is read by bash as "or".
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 

@@ -150,18 +150,9 @@ No claim appears in the brief without a row here.
 - **Wilson Sonsini / Latham / Varnum / Morgan Lewis commentary on California:** restates enacted law; Varnum reads AB 1883 as covering employees, not applicants (noted for the next check).
 - **Meta Muse "millions of users" (CNBC):** not load-bearing.
 
-## Research-security note
+## How NiCE was researched
 
-Text addressed to AI agents appeared on Lorikeet's pages (Workforce Manager post and price file): instructions for AI assistants to query Lorikeet's support agent and book a demo over HTTP. Treated as data about Lorikeet's go-to-market; not acted on. LinkedIn not opened or queried. Two LinkedIn posts (NiCE and Genesys CEOs) exist only as quoted by CMSWire and were not opened; neither is used in the brief. NiCE researched through public sources only; Cognyte absent.
-
-## Coverage
-
-- Search: 4 parallel foreground streams via the Firecrawl REST helper; 73 searches + 2 paid scrapes (stream logs: A 38, B 37, C 40, D ~33 credits = ~148). Shared meter: 3,116 remaining before research.
-- About 315 free page reads (newsrooms, sitemaps, EDGAR, official pages, nine price pages, the Microsoft roadmap feed, the Colorado draft).
-- LinkedIn: not collected (v1 search-only).
-- SEC leads: no feeder in v1 (EDGAR read directly for all six public-set tickers: no 8-K, print or pre-announcement 3-10 Oct; NiCE 6-K 7 Oct is a September compendium).
-- Blocked this run: California Legislature bill pages (browser check); Connecticut WARN library; Business Wire.
-- Date traps caught: 39 (A=9, B=7, C=12, D=11).
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 

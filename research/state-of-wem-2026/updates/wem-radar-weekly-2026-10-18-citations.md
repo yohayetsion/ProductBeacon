@@ -177,19 +177,9 @@ Stream C's shell command lost its folder change and saved nine 18 Oct price-page
 - **Parloa study "fewer than 9% of chatbot conversations reached resolution":** vendor study, undated; not load-bearing.
 - **PolyAI ranking, Five9 and Genesys workplace awards:** positioning.
 
-## Research-security note
+## How NiCE was researched
 
-Text addressed to AI agents appeared again on Lorikeet's pages (Workforce Manager post and machine-readable price file: an endpoint for AI assistants and HTTP sign-up instructions). Treated as data about Lorikeet's go-to-market; not acted on. LinkedIn not opened or queried. NiCE researched through public sources only (press index, investors page, sitemaps, price page, the protocol partner list); Cognyte absent.
-
-## Coverage
-
-- Search: 4 parallel foreground streams via the Firecrawl REST helper (MCP server failed to connect). Credits: A 40, B 40, C 36, D 28 (13 searches + 2 paid scrapes) = 144. Meter before research: 5,625 (new billing period from 12 Oct).
-- About 310 free page reads (newsrooms, sitemaps, EDGAR for the six public-set tickers and four outsourcers, ten price pages, the Microsoft roadmap feed, the AWS What's New feed, GitHub API, GOV.UK API, Colorado AG page).
-- The custom date-range filter (`cdr:1`) was accepted but did not limit results; streams used `qdr:w` and covered 10-11 Oct by direct reads.
-- LinkedIn: not collected (v1 search-only).
-- SEC leads: no feeder in v1 (EDGAR read directly: no 8-K, 6-K, 10-Q or results-date announcement from NICE, FIVN, CRM, CXM, MSFT, ZM in window).
-- Blocked this run: Colorado comment site (script-rendered, also failed as a paid scrape); Business Wire; StockTitan; Five9 and Zoom investor sites; CU Today.
-- Date traps caught: 43 (A=9, B=12, C=10, D=12).
+- NiCE was researched through public sources only.
 
 ## Link audit (L-076)
 
