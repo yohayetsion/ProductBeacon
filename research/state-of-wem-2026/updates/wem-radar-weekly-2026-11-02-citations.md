@@ -194,12 +194,6 @@ No claim appears in the brief without a row here.
 - Lorikeet's release-notes page carries a block of instructions addressed to AI assistants (stream A). Ignored as data. fin.ai/ai-instructions surfaced in search (stream C); not opened.
 - No LinkedIn query or visit for any company; NiCE researched through public sources only (nice.com, SEC EDGAR, Business Wire via Yahoo, PR Newswire). Cognyte not touched.
 
-## Coverage
-
-- 4 parallel research streams via the Firecrawl REST helper: 76 searches, 0 paid scrapes (A 42, B 42, C 36, D 32 credits = 152 by logs); about 195 free page reads; stream D 43 free Google News RSS queries. Date traps discarded: 34 (A 10, B 8, C 7, D 9).
-- LinkedIn: not collected (v1 search-only). No lead feeder; EDGAR read directly (NICE, FIVN, CRM, CXM, MSFT, ZM, Concentrix, TaskUs, TTEC, Conduent, Genpact, IBEX).
-- Not checked: Kistler v. Eightfold (CourtListener needs a token); TP results date (no calendar on tp.com); Zoom contact-centre price page (404, no baseline).
-
 ## Link audit (L-076)
 
 Run 2 Nov 2026 (`research/2026-11-02-weekly/link-audit-2026-11-02.py`, JSON beside it): 62 unique URLs. 50 returned 200-range. 10 bot-gated (403): MyNorthwest, NYC Rules, three Talkdesk Help Center pages, three SEC EDGAR documents, two Share Talk pages. All ten were read in-run and saved under `scrapes/` (Talkdesk through the Help Center API). VERIFY-MANUALLY, not dead. Colorado Secretary of State docket returned 500 to the audit (session-based page); read in-run and saved (`scrapes/d/co-edocket.html`). One true 404, the GOV.UK monitoring consultation, was a wrong slug in this ledger and is corrected above (`make-work-pay-workplace-monitoring-technologies`, `public_updated_at` 2026-07-08, from the saved API copy). No claim demoted. Every brief URL is in the ledger except the parent-report link in the disclosure line.
