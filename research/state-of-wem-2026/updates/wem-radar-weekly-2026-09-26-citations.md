@@ -28,7 +28,7 @@ No claim appears in the brief without a row here.
 
 | # | Claim | Type | Source (publisher, date) | URL |
 |---|---|---|---|---|
-| B1 | Brookfield in exclusive talks to buy Actimize from NiCE for about $2 billion; "Sources cautioned that a deal had yet to be finalised and could yet fall apart." | Fact-that-was-SAID (unnamed sources; UNCONFIRMED rumour, never thesis evidence) | Sky News (Mark Kleinman), on-page "Wednesday 23 September 2026 12:38, UK" (Firecrawl scrape; direct download 403) | https://news.sky.com/story/brookfield-in-talks-to-buy-financial-crime-specialist-actimize-for-2bn-13590951 |
+| B1 | Brookfield in exclusive talks to buy Actimize from NiCE for about $2 billion; "Sources cautioned that a deal had yet to be finalised and could yet fall apart." | Fact-that-was-SAID (unnamed sources; UNCONFIRMED rumour, never thesis evidence) | Sky News (Mark Kleinman), on-page "Wednesday 23 September 2026 12:38, UK" (read in the run; direct download 403) | https://news.sky.com/story/brookfield-in-talks-to-buy-financial-crime-specialist-actimize-for-2bn-13590951 |
 | B2 | "Brookfield declined to comment"; no NiCE comment in Sky, Calcalist or Globes; NiCE press index has nothing on Actimize (read 26 Sep, cache bypassed; newest item 15 Sep) | Fact · Fact (absence) | Sky News; NiCE press releases | (B1) · https://www.nice.com/press-releases |
 | B3 | Actimize 2024 revenue $453.5M (~16.6% of NiCE); 2024 operating profit $158.3M, "nearly 29%" of NiCE's | Fact-that-was-SAID (Calcalist citing NiCE figures) | Calcalist / Ctech, `datePublished 2026-09-23T11:26:06Z` | https://www.calcalistech.com/ctechnews/article/iazqvedg2 |
 | B4 | May 2026: offers around $2.5 billion (range $2-3B) | Fact-that-was-SAID (Calcalist's own earlier reporting, restated) | same | (B3) |
@@ -77,7 +77,7 @@ No claim appears in the brief without a row here.
 | E3 | A bill passed before 1 Sep and presented after becomes law unless vetoed by 30 Sep (Cal. Const. art. IV §10(b)(2)) | Fact (carried from 12 Sep ledger correction) | California Constitution | — |
 | E4 | Colorado AG page edited 23 Sep (22:41 UTC): "no later than September 23, 2026" replaced by "at least five days prior to the public hearing"; no draft posted; hearing 26 Oct 10:00 | Fact (page timestamps vs 20 Sep verbatim reading) | Colorado Attorney General | https://coag.gov/ai/ |
 | E5 | FCC NPRM FCC 26-16 (adopted 26 Mar 2026): cap on share of calls handled outside the US ("[XX] percent"), right to transfer to a US-based agent; covers telecom, cable, satellite providers | Fact (proposal out of window, recorded because new to the radar) | Federal Register, published 2026-04-23 | https://www.federalregister.gov/documents/2026/04/23/2026-07960/improving-customer-service-and-protecting-consumers-through-onshoring |
-| E6 | 25 Sep: Senators Gallego and Justice urged a "right-to-transfer requirement ... to a human representative for those centers which utilize artificial intelligence" | Fact-that-was-SAID | Senator Gallego (Senate press release), "Friday, September 25, 2026" (Firecrawl scrape) | https://www.gallego.senate.gov/news/press-releases/gallego-justice-applaud-fcc-for-efforts-to-prevent-call-center-jobs-offshoring-improve-customer-service/ |
+| E6 | 25 Sep: Senators Gallego and Justice urged a "right-to-transfer requirement ... to a human representative for those centers which utilize artificial intelligence" | Fact-that-was-SAID | Senator Gallego (Senate press release), "Friday, September 25, 2026" (read in the run) | https://www.gallego.senate.gov/news/press-releases/gallego-justice-applaud-fcc-for-efforts-to-prevent-call-center-jobs-offshoring-improve-customer-service/ |
 | E7 | UK timeline updated 25 Sep to confirm October measures; guaranteed hours and reasonable notice / short-notice payments still "2027" | Fact | GOV.UK, change note 2026-09-25 08:30 UTC | https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update |
 | E8 | Guaranteed-hours and shift-notice rights "would change contact-centre scheduling" | Inference | E7 | — |
 | E9 | Connecticut PA 26-15 AI question in WARN notices starts 1 Oct; DOL WARN page (dated 18 Aug 2025) does not mention AI | Fact (absence, read 26 Sep) | Connecticut DOL | https://portal.ct.gov/dol/knowledge-base/articles/employment-and-training/rapid-response/warn |
@@ -129,7 +129,7 @@ Per L-076 a bot-gate is **VERIFY-MANUALLY**, not dead. Both gated URLs were read
 
 | URL | Status | Handling |
 |---|---|---|
-| gallego.senate.gov (senators' letter to the FCC, E6) | 403 | VERIFY-MANUALLY. Read in-run via one paid Firecrawl scrape (stream D). Claim NOT demoted. |
+| gallego.senate.gov (senators' letter to the FCC, E6) | 403 | VERIFY-MANUALLY. Read in the run. Claim NOT demoted. |
 | tipranks.com (Five9 price-target raise, F7) | 403 | VERIFY-MANUALLY. Page saved in-run (stream A, `scrapes/tipranks-five9.html`). Claim NOT demoted. |
 
 **Zero claims demoted.**

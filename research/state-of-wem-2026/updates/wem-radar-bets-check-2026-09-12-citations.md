@@ -171,7 +171,7 @@ Per L-076 a bot-gate is **VERIFY-MANUALLY**, not dead. Every gated URL was read 
 
 | URL | Status | Handling |
 |---|---|---|
-| investing.com (Five9 Goldman Sachs transcript) | 403 | Read in-run via Firecrawl. The same event and date are independently confirmed on Five9's investor events page, and the transcript also exists at Seeking Alpha (art. 4945604), Quartr and MarketScreener. Claim NOT demoted. |
+| investing.com (Five9 Goldman Sachs transcript) | 403 | Read in the run. The same event and date are independently confirmed on Five9's investor events page, and the transcript also exists at Seeking Alpha (art. 4945604), Quartr and MarketScreener. Claim NOT demoted. |
 | businesswire.com (ISG Buyers Guides release) | 403 | Read in-run; the same release is served via markets.ft.com. Claim NOT demoted. |
 | gartner.com (future-of-work release, 9 September) | 403 | Read in-run; the 30%-by-2029 prediction and the emotion-AI listing are both restated in CX Dive (200) of 11 September. Claim NOT demoted. |
 | californiaemploymentlawreport.com | 403 | Read in-run. Cited **only as the source of a recorded trap** (E10), and the correction rests on the enrolled SB 947 text at leginfo (200). Claim NOT demoted. |
