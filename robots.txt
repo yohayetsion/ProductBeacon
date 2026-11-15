@@ -1,8 +1,10 @@
 # ProductBeacon robots.txt
-# Crawler policy: approved GEO plan (DR-2026-626).
+# Crawler policy: DR-2026-626 ruling 3 as amended, and DR-2026-695.
+# This file must be served exactly as committed. If a CDN adds its own block
+# in front of it, crawlers no longer read this policy. Re-read the served file
+# after every release and every CDN setting change.
 
 User-agent: *
-Allow: /
 Disallow: /prospects/
 Disallow: /planning/
 Disallow: /analysis/
@@ -10,11 +12,14 @@ Disallow: /internal/
 Disallow: /Product/
 Disallow: /Marketing/
 Disallow: /insights/*/brief/
-# Note: /research/state-of-cyber-2026/ is the public research sub-brand — intentionally NOT disallowed.
-# Redirect stubs carry in-page "noindex, follow"; they are left crawlable so engines can read the noindex.
+# /research/state-of-cyber-2026/ is the public research sub-brand: intentionally NOT disallowed.
+# Redirect stubs carry in-page "noindex, follow"; they stay crawlable so engines can read the noindex.
+# Search and AI-answer crawlers (Googlebot, Google-Extended, Bingbot, Applebot,
+# OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot,
+# Perplexity-User) have NO named group on purpose. A named group would make that
+# crawler ignore the private-path rules above.
 
-# Block the named training and extended-use agents below. Google-Extended
-# and ordinary search crawlers inherit the public and private-path rules above.
+# AI training crawlers: blocked (DR-2026-626 ruling 3 as amended).
 User-agent: GPTBot
 Disallow: /
 
@@ -30,5 +35,41 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
+# More AI training and data-collection crawlers, kept from the Cloudflare list
+# (DR-2026-695, amending DR-2026-626 ruling 3).
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: MistralAI-Training
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Cotoyogi
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+# Shared "no AI training" signal (IETF draft-kelley-aipref-training-preference-signal).
+# Parsers that do not know it ignore it. It does not block any crawler from fetching.
+User-agent: __usage_ai-training
+Disallow: /
 
 Sitemap: https://productbeacon.agency/sitemap.xml
