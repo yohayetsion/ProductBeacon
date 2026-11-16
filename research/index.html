@@ -615,6 +615,8 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .pb-offer a:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 3px; }
 .pb-offer__sample { margin: 0; }
 .pb-offer__sample a.pb-offer__zoom { display: block; border-radius: 8px; cursor: zoom-in; }
+.pb-offer p.pb-offer__hint { display: none; font-size: 13px; line-height: 1.4; color: var(--slate-400); margin: var(--space-2) 0 0 0; }
+@media (max-width: 600px), (hover: none) and (pointer: coarse) { .pb-offer p.pb-offer__hint { display: block; } }
 .pb-offer__sample img { display: block; width: 100%; height: auto; border: 1px solid #334155; border-radius: 8px; }
 .pb-offer__sample figcaption { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.5; color: var(--slate-400); margin-top: var(--space-2); }
 .pb-offer p.pb-offer__cta { margin-bottom: var(--space-2); }
@@ -642,6 +644,7 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
     </div>
     <figure class="pb-offer__sample">
       <a class="pb-offer__zoom" href="/research/figures/sample-page-identity-claim-2026-11.png"><img src="/research/figures/sample-page-identity-claim-2026-11.png" width="1620" height="1176" loading="lazy" alt="A figure from the Identity chapter of State of Cyber Security Markets 2026. It sets out one claim about the market, four dated public facts that support it, and a test that would confirm or weaken the claim."></a>
+      <p class="pb-offer__hint">Tap to enlarge.</p>
       <figcaption>A sample from State of Cyber Security Markets 2026: one claim, the dated public facts behind it, and the test that would confirm or weaken it. <a href="/research/state-of-cyber-2026/identity.html">Read the chapter.</a></figcaption>
     </figure>
     <div class="pb-offer__order">
