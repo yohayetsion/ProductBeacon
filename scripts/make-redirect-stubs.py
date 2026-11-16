@@ -40,7 +40,6 @@ REPORTS_DIR = REPO / "reports" / "state-of-cyber-2026"
 REPORTS_HTML = [
     "irm.html", "dlp.html", "dspm.html", "convergence.html",
     "irm-podcast.html", "dlp-podcast.html", "dspm-podcast.html", "convergence-podcast.html",
-    "launch-strategy.html",
 ]
 
 # special-case: research/.../brief.html -> pre-call-brief.html

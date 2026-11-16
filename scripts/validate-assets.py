@@ -166,8 +166,7 @@ for img in ["landing.png", "pre-call-brief.png", "report-digest.png", "umbrella.
 
 # ---- Stubs ----
 STUBS = ["irm.html", "dlp.html", "dspm.html", "convergence.html",
-         "irm-podcast.html", "dlp-podcast.html", "dspm-podcast.html", "convergence-podcast.html",
-         "launch-strategy.html"]
+         "irm-podcast.html", "dlp-podcast.html", "dspm-podcast.html", "convergence-podcast.html"]
 for s in STUBS:
     code, html, _ = fetch("/reports/state-of-cyber-2026/" + s)
     ok200 = code == 200
