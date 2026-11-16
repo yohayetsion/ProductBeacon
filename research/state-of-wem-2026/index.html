@@ -712,6 +712,61 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   </div>
 </section>
 
+<!-- Paid door (DR-2026-692 decision 4). Radar runs: leave the block between the two markers below as it is. New update cards go inside .chapter-grid in #updates, never here. -->
+<!-- PB:OFFER:START -->
+<section class="section pb-offer" id="market-report" data-pb-offer="market-report" aria-labelledby="pb-offer-title">
+<style>
+.pb-offer { scroll-margin-top: 96px; }
+.pb-offer__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4) var(--space-6); border-top: 1px solid #334155; padding-top: var(--space-6); }
+.pb-offer p { font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.6; color: var(--primary-text); margin: 0 0 var(--space-3) 0; max-width: 68ch; }
+.pb-offer .pb-offer__title { margin: 0 0 var(--space-3) 0; }
+.pb-offer .pb-offer__price { font-weight: 700; font-size: 20px; color: var(--bright); }
+.pb-offer p a, .pb-offer figcaption a { color: var(--amber); text-decoration: underline; text-underline-offset: 3px; }
+.pb-offer p a:hover, .pb-offer figcaption a:hover { color: var(--amber-light); }
+.pb-offer a:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 3px; }
+.pb-offer__sample { margin: 0; }
+.pb-offer__sample img { display: block; width: 100%; height: auto; border: 1px solid #334155; border-radius: 8px; }
+.pb-offer__sample figcaption { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.5; color: var(--slate-400); margin-top: var(--space-2); }
+.pb-offer p.pb-offer__cta { margin-bottom: var(--space-2); }
+.pb-offer p a.pb-offer__btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px var(--space-4); border-radius: 8px; background: var(--amber); color: var(--ink); font-weight: 700; font-size: 16px; line-height: 1.3; text-align: center; text-decoration: none; }
+.pb-offer p a.pb-offer__btn:hover { background: var(--amber-light); color: var(--ink); }
+.pb-offer p.pb-offer__alt, .pb-offer p.pb-offer__terms { font-size: 15px; color: var(--slate-400); }
+.pb-offer p.pb-offer__alt { overflow-wrap: anywhere; }
+.pb-offer__vendors { border-top: 1px solid #334155; padding-top: var(--space-3); }
+.pb-offer .pb-offer__vendors p { font-size: 14px; line-height: 1.55; color: var(--slate-400); margin-bottom: var(--space-2); max-width: 90ch; }
+@media (min-width: 900px) {
+  .pb-offer__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); }
+  .pb-offer__main, .pb-offer__order { grid-column: 1; }
+  .pb-offer__sample { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+  .pb-offer__vendors { grid-column: 1 / -1; }
+}
+</style>
+  <div class="pb-offer__grid">
+    <div class="pb-offer__main">
+      <h2 class="section-title pb-offer__title" id="pb-offer-title">Order a private Market Report.</h2>
+      <p>The <a href="/research/methodology.html">method</a> behind our published reports, applied to one question about your market.</p>
+      <p class="pb-offer__price">$3,500. One question, one document, one call.</p>
+      <p>A written report that answers your question, then a call to walk you through it.</p>
+      <p><strong>Who it is for.</strong> A company with a decision to make about a market: an investor, an operator or a buyer.</p>
+      <p><strong>What it is not.</strong> No market sizing, no stock calls, and not investment advice. Not consulting: a new question is a new order. Public sources only, so please send nothing that is not public. We take no paid written work on insider risk, data loss prevention or data security posture: the author holds a <a href="/research/author.html#disclosure">current role</a> at a data loss prevention vendor, and the other two markets sit next to it.</p>
+    </div>
+    <figure class="pb-offer__sample">
+      <a href="/research/state-of-cyber-2026/identity.html"><img src="/research/figures/sample-page-identity-claim-2026-11.png" width="1620" height="1176" loading="lazy" alt="A page from the Identity chapter of State of Cyber Security Markets 2026. It sets out one claim about the market, four dated public facts that support it, and a test that would confirm or weaken the claim."></a>
+      <figcaption>A sample page from State of Cyber Security Markets 2026: one claim, the dated public facts behind it, and the test that would confirm or weaken it. <a href="/research/state-of-cyber-2026/identity.html">Read the chapter.</a></figcaption>
+    </figure>
+    <div class="pb-offer__order">
+      <p class="pb-offer__cta"><!--email_off--><a class="pb-offer__btn" href="mailto:yohay@productbeacon.agency?subject=Market%20Report%20inquiry%20%28state-of-wem-2026%29&amp;body=Please%20include%20no%20non-public%20information.%0D%0A%0D%0AThe%20one%20question%20I%20want%20answered%3A%0D%0A%0D%0AMy%20organisation%3A%0D%0A%0D%0AWho%20would%20sign%20this%20off%3A" onclick="if(window.gtag){gtag('event','door_click',{door:'market-report',location:'state-of-wem-2026'})}">Order a private Market Report</a><!--/email_off--></p>
+      <p class="pb-offer__alt">or write to yohay@productbeacon.agency</p>
+      <p class="pb-offer__terms">We reply, check that the question fits, and send terms that set the report's length and delivery date. No work starts until terms are signed and paid. We use your email address only to reply about your inquiry.</p>
+    </div>
+    <div class="pb-offer__vendors">
+      <p>A vendor in a market we cover can commission research at the same $3,500: it sees nothing before delivery and has no say in any finding or grade; the rules are under <a href="/research/#for-vendors" onclick="if(window.gtag){gtag('event','door_click',{door:'for-vendors',location:'state-of-wem-2026'})}">For vendors</a>.</p>
+      <p>The reports and radars we publish take no vendor sponsors; vendor-paid research is separate, private by default, and labelled "Commissioned by [vendor]" if the vendor publishes it.</p>
+    </div>
+  </div>
+</section>
+<!-- PB:OFFER:END -->
+
 <!-- ====== UPDATES · LIVING TRACKER ====== -->
 <!-- Radar follow-ups to the report. Newest first. -->
 <section class="section" id="updates" aria-labelledby="updates-title">
