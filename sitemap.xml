@@ -206,7 +206,14 @@
   </url>
 
   <url>
-    <loc>https://productbeacon.agency/research/forecast-scorecard.html</loc>
+    <loc>https://productbeacon.agency/research/state-of-cyber-2026/forecast-scorecard.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://productbeacon.agency/research/state-of-wem-2026/forecast-scorecard.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forecast Scorecard: State of WEM 2026 | ProductBeacon</title>
+<meta name="description" content="The 18 forecasts in State of WEM 2026, on contact-center software, quoted word for word and checked in public.">
+
+<!-- Canonical (Round 15 P0-4) -->
+<link rel="canonical" href="https://productbeacon.agency/research/state-of-wem-2026/forecast-scorecard.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Forecast Scorecard: State of WEM 2026 | ProductBeacon">
+<meta property="og:description" content="The 18 forecasts in State of WEM 2026, on contact-center software, quoted word for word and checked in public.">
+<meta property="og:url" content="https://productbeacon.agency/research/state-of-wem-2026/forecast-scorecard.html">
+<meta property="og:image" content="https://productbeacon.agency/research/og/umbrella.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ProductBeacon Research: Forecast Scorecard, State of WEM 2026">
+<meta property="og:site_name" content="ProductBeacon Research">
+<meta property="article:author" content="https://www.linkedin.com/in/yohayetsion/">
+<meta property="article:modified_time" content="2026-11-17">
+<meta property="article:section" content="Research">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@productbeacon">
+<meta name="twitter:creator" content="@yohayetsion">
+<meta name="twitter:title" content="Forecast Scorecard: State of WEM 2026 | ProductBeacon">
+<meta name="twitter:description" content="The 18 forecasts in State of WEM 2026, on contact-center software, quoted word for word and checked in public.">
+<meta name="twitter:image" content="https://productbeacon.agency/research/og/umbrella.png">
+<meta name="twitter:image:alt" content="ProductBeacon Research: Forecast Scorecard, State of WEM 2026">
+
+<!-- JSON-LD: Article + BreadcrumbList -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Our contact-center forecasts, checked in public.", "name": "Forecast Scorecard: State of WEM 2026", "description": "The 18 forecasts in State of WEM 2026, on contact-center software, quoted word for word and checked in public.", "url": "https://productbeacon.agency/research/state-of-wem-2026/forecast-scorecard.html", "dateModified": "2026-11-17", "inLanguage": "en", "articleSection": "Research", "author": {"@type": "Person", "name": "Yohay Etsion", "jobTitle": "Managing Director, ProductBeacon", "url": "https://productbeacon.agency/research/author.html", "sameAs": ["https://www.linkedin.com/in/yohayetsion/"], "@id": "https://productbeacon.agency/#yohay-etsion", "worksFor": {"@id": "https://productbeacon.agency/#productbeacon"}}, "publisher": {"@type": "Organization", "@id": "https://productbeacon.agency/research/#productbeacon-research", "name": "ProductBeacon Research", "parentOrganization": {"@id": "https://productbeacon.agency/#productbeacon"}, "url": "https://productbeacon.agency/research/", "logo": {"@type": "ImageObject", "url": "https://productbeacon.agency/research/favicon-research.svg"}}, "image": "https://productbeacon.agency/research/og/umbrella.png"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ProductBeacon Research", "item": "https://productbeacon.agency/research/"}, {"@type": "ListItem", "position": 2, "name": "State of WEM 2026", "item": "https://productbeacon.agency/research/state-of-wem-2026/"}, {"@type": "ListItem", "position": 3, "name": "Forecast Scorecard"}]}</script>
+
+<!-- Favicon (Research variant per A-5) -->
+<link rel="icon" type="image/svg+xml" href="/research/favicon-research.svg">
+
+<!-- Google Fonts: Inter (body/UI) + IBM Plex Serif (editorial accent) + JetBrains Mono (mono small-caps) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,500;1,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TC1LMMGQGV');
+</script>
+
+<link rel="stylesheet" href="/css/style.css">
+<style>
+/* ====================================================================
+   ProductBeacon Research. Landing Page (A-7).
+   Tokens sourced from A-1 sub-brand mark spec §9 + A-2 mockup §3
+   ==================================================================== */
+
+:root {
+  /* Color tokens */
+  --ink: #0F172A;            /* Default Research surface background */
+  --surface: #1E293B;        /* Card / elevated section bg */
+  --bright: #F8FAFC;         /* Maximum-contrast hero copy + chapter titles */
+  --primary-text: #F1F5F9;   /* Body copy, wordmark on dark */
+  --slate-400: #94A3B8;      /* Mono small-caps, eyebrow, disclosure */
+  --slate-600: #475569;      /* Dividers */
+  --amber: #F59E0B;          /* Primary accent */
+  --amber-60: #F59E0B99;     /* Lockup divider default */
+  --amber-12: #F59E0B1F;     /* Ribbon background */
+  --amber-20: #F59E0B33;     /* Ribbon border-bottom */
+  --amber-light: #FBBF24;    /* Hover / active */
+  --amber-tint-warm: #FEF3C7;
+  --slate-800: #1E293B;
+  --slate-900: #0F172A;
+
+  /* Spacing (8px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+
+  /* Research sub-brand mark tokens (A-1 §9) */
+  --research-ribbon-height: 48px;
+  --research-ribbon-bg: var(--amber-12);
+  --research-ribbon-border-bottom: 1px solid var(--amber-20);
+  --research-ribbon-padding-x: 32px;
+  --research-mark-icon-divider-gap: 16px;
+  --research-mark-divider-wordmark-gap: 16px;
+  --research-mark-divider-width: 2px;
+  --research-mark-hover-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --content-max: 1200px;
+  --reading-max: 720px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Slim amber ribbon (A-1 §5.1) ---------- */
+.ribbon {
+  height: var(--research-ribbon-height);
+  background: var(--research-ribbon-bg);
+  border-bottom: var(--research-ribbon-border-bottom);
+  padding: 0 var(--research-ribbon-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.ribbon-left { display: flex; align-items: center; gap: var(--space-3); }
+.ribbon-continuation {
+  color: var(--slate-400);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Sub-brand lockup (A-1 §2) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+.lockup-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lockup-icon svg { display: block; }
+.lockup-divider {
+  width: var(--research-mark-divider-width);
+  background: var(--amber-60);
+  margin: 0 var(--research-mark-icon-divider-gap);
+  transition: background var(--research-mark-hover-transition);
+}
+.lockup-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--primary-text);
+  letter-spacing: 0;
+  line-height: 1;
+  transition: color var(--research-mark-hover-transition);
+}
+
+/* Lockup sizes */
+.lockup-md .lockup-icon svg { width: 24px; height: 24px; }
+.lockup-md .lockup-divider { height: 24px; }
+.lockup-md .lockup-wordmark { font-size: 18px; }
+
+.lockup-lg .lockup-icon svg { width: 32px; height: 32px; }
+.lockup-lg .lockup-divider { height: 32px; }
+.lockup-lg .lockup-wordmark { font-size: 24px; }
+
+/* Lockup as link hover (only when wrapped in <a>) */
+a.lockup:hover .lockup-divider { background: var(--amber); }
+a.lockup:hover .lockup-wordmark { color: var(--amber); }
+/* ---------- Hero ---------- */
+.hero {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-5);
+}
+.hero-lockup-row { margin-bottom: var(--space-4); }
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-4) 0;
+  max-width: 16ch;
+}
+.hero-subhead {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--primary-text);
+  margin: 0 0 var(--space-5) 0;
+  max-width: 60ch;
+}
+.hero-byline {
+  margin: 0 0 var(--space-6) 0;
+  max-width: 60ch;
+}
+.hero-byline-line1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-text);
+  margin: 0 0 4px 0;
+}
+.hero-byline-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--slate-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Three-doors card */
+.doors {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 800px;
+  border: 1px solid #334155;
+}
+.doors-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.doors-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.doors-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--primary-text);
+}
+.doors-list li strong { color: var(--bright); font-weight: 500; }
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--research-mark-hover-transition), color var(--research-mark-hover-transition), border-color var(--research-mark-hover-transition);
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn-primary:hover { background: var(--amber-light); }
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-text);
+  border-color: var(--slate-600);
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---------- Section: chapters ---------- */
+.section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) 32px;
+}
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-3) 0;
+}
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--bright);
+  margin: 0 0 var(--space-6) 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: border-color var(--research-mark-hover-transition), transform var(--research-mark-hover-transition);
+}
+.chapter-card:hover { border-color: var(--amber-20); transform: translateY(-2px); }
+.chapter-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+  margin: 0;
+}
+.chapter-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.chapter-teaser {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--primary-text);
+  margin: 0;
+}
+.chapter-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  align-items: center;
+}
+.chapter-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--amber);
+  transition: color var(--research-mark-hover-transition);
+}
+.chapter-links a:hover { color: var(--amber-light); }
+.chapter-links .sep { color: var(--slate-600); font-size: 12px; }
+
+/* ---------- Methodology link ---------- */
+.methodology-block {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-6) 32px;
+  text-align: left;
+}
+.methodology-block a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--research-mark-hover-transition);
+}
+.methodology-block a:hover { color: var(--amber-light); }
+.methodology-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--slate-400);
+  margin: 4px 0 0 0;
+}
+
+/* ---------- Email-capture form (E-1) ---------- */
+.subscribe {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-7) 32px var(--space-8);
+}
+.subscribe-card {
+  background: var(--surface);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: var(--space-6);
+  max-width: 720px;
+}
+.subscribe-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bright);
+  margin: 0 0 var(--space-2) 0;
+  line-height: 1.4;
+}
+.subscribe-cadence {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+.subscribe-form {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+  flex: 1 1 280px;
+  height: 48px;
+  padding: 0 var(--space-3);
+  background: var(--ink);
+  border: 1px solid var(--slate-600);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--research-mark-hover-transition);
+}
+.subscribe-form input[type="email"]:focus { border-color: var(--amber); }
+.subscribe-form input[type="email"]::placeholder { color: var(--slate-600); }
+.subscribe-form button { min-width: 160px; }
+.subscribe-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--slate-400);
+  margin: var(--space-3) 0 0 0;
+  min-height: 1.2em;
+}
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-6) 24px; }
+  .hero-headline { font-size: 40px; }
+  .hero-subhead { font-size: 18px; }
+  .section { padding: var(--space-7) 24px; }
+  .section-title { font-size: 28px; }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .ribbon { padding: 0 16px; }
+  .ribbon-continuation { display: none; }
+  .doors { padding: var(--space-4); }
+  .subscribe { padding: var(--space-6) 24px var(--space-7); }
+  .subscribe-card { padding: var(--space-5); }
+  .methodology-block { padding: var(--space-5) 24px; }
+}
+@media (max-width: 480px) {
+  .hero-headline { font-size: 32px; }
+  .lockup-lg .lockup-icon svg { width: 24px; height: 24px; }
+  .lockup-lg .lockup-divider { height: 24px; }
+  .lockup-lg .lockup-wordmark { font-size: 18px; }
+}
+
+/* ---------- Visually-hidden helper ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* chrome-unify: reset global style.css collisions on research body */
+.hero { display: block; align-items: normal; min-height: 0; overflow: visible; position: static; }
+.btn { gap: 0; }
+</style>
+<style>
+/* Forecast Scorecard, redesign (Director of Design, 17 Nov 2026). Page-local only: no change to /css/style.css.
+   One card look for every forecast, whatever its verdict: the verdict word and a shape carry the difference, never colour or size. */
+:root {
+  --sc-ink: #0F172A;
+  --sc-surface: #1E293B;
+  --sc-border: #334155;
+  --sc-hair: #2A3A52;
+  --sc-text: #F1F5F9;
+  --sc-bright: #F8FAFC;
+  --sc-body: #CBD5E1;
+  --sc-muted: #94A3B8;
+  --sc-amber: #F59E0B;
+  --sc-amber-light: #FBBF24;
+  --sc-amber-12: rgba(245, 158, 11, 0.12);
+  --sc-amber-45: rgba(245, 158, 11, 0.45);
+  --sc-fc-bg: #1E293B;
+}
+html { scroll-padding-top: 168px; }
+main [hidden] { display: none !important; }
+main a:focus-visible, main button:focus-visible, main select:focus-visible { outline: 2px solid var(--sc-amber-light); outline-offset: 3px; border-radius: 4px; }
+
+/* ---------- layout ---------- */
+.pb-sc-wrap { max-width: 1184px; margin: 0 auto; padding: 0 32px; }
+.pb-sc-wrap h2, .pb-sc-band h2 { font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 36px; line-height: 1.2; color: var(--sc-bright); margin: 0 0 14px; letter-spacing: -0.01em; }
+.pb-sc-intro { font-size: 18px; line-height: 1.6; color: var(--sc-body); max-width: 68ch; margin: 0 0 28px; }
+.pb-sc-eyebrow, .pb-sc-caption { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sc-amber); margin: 0 0 14px; }
+.pb-sc-wrap .pb-sc-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--sc-amber); }
+.pb-sc-h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 20px; color: var(--sc-text); margin: 48px 0 16px; }
+
+/* ---------- 1. hero ---------- */
+.hero.pb-sc-hero { max-width: 1184px; padding: 40px 32px 56px; }
+.pb-sc-hero .hero-lockup-row { margin-bottom: 20px; }
+.pb-sc-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; align-items: start; }
+.pb-sc-hero .hero-eyebrow { color: var(--sc-amber); margin-bottom: 14px; }
+.pb-sc-hero .hero-headline { font-size: 58px; line-height: 1.04; max-width: 15ch; margin-bottom: 20px; }
+.pb-sc-hero .hero-subhead { font-size: 20px; line-height: 1.55; color: var(--sc-body); max-width: 50ch; margin-bottom: 14px; }
+.pb-sc-byline { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.05em; color: var(--sc-muted); margin: 0 0 28px; }
+.pb-sc-bridge { font-size: 16px; line-height: 1.6; color: var(--sc-body); max-width: 52ch; margin: 0 0 16px; }
+.pb-sc-btnrow { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin: 0; }
+.pb-sc-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 22px; border-radius: 8px; background: var(--sc-amber); color: var(--sc-ink); font-weight: 700; font-size: 16px; line-height: 1.25; text-decoration: none; text-align: center; transition: background-color 150ms ease; }
+.pb-sc-btn:hover { background: var(--sc-amber-light); color: var(--sc-ink); }
+.pb-sc-btn-lg { min-height: 56px; padding: 16px 28px; font-size: 17px; border-radius: 10px; }
+.pb-sc-textlink { color: var(--sc-amber); font-size: 15px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.pb-sc-textlink:hover { color: var(--sc-amber-light); }
+
+/* scoreboard */
+.pb-sc-board { background: linear-gradient(180deg, #1E293B 0%, #18233A 100%); border: 1px solid var(--sc-border); border-radius: 16px; padding: 26px 28px 22px; }
+.pb-sc-board .pb-sc-board-title { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sc-amber); margin: 0 0 18px; }
+.pb-sc-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 0; }
+.pb-sc-nums div { margin: 0; }
+.pb-sc-nums dt { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 46px; line-height: 1; color: var(--sc-bright); letter-spacing: -0.02em; margin: 0; }
+.pb-sc-nums dt a { color: inherit; text-decoration: underline; text-decoration-color: var(--sc-amber-45); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.pb-sc-nums dt a:hover { text-decoration-color: var(--sc-amber); }
+.pb-sc-nums dd { font-size: 14px; line-height: 1.45; color: var(--sc-body); margin: 8px 0 0; }
+.pb-sc-map { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--sc-hair); }
+.pb-sc-map > p { font-size: 13.5px; line-height: 1.5; color: var(--sc-body); margin: 0 0 8px; }
+.pb-tiles { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 16px; }
+.pb-tile { width: 20px; height: 20px; border-radius: 4px; border: 1px solid #52627A; background: var(--sc-ink); display: inline-grid; place-items: center; font-size: 12px; font-weight: 700; line-height: 1; color: var(--sc-amber-light); text-decoration: none; }
+.pb-tile:hover { border-color: var(--sc-amber); }
+.pb-sc-key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--sc-muted); margin: 0; }
+.pb-sc-key span:first-child, .pb-sc-key span:nth-child(2), .pb-sc-key span:nth-child(4) { color: var(--sc-body); }
+
+/* ---------- 2. disclosures ---------- */
+.pb-sc-disc { margin-bottom: 64px; }
+.pb-sc-disc-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px 32px; border-left: 3px solid var(--sc-amber); background: rgba(255, 255, 255, 0.025); border-radius: 0 12px 12px 0; padding: 22px 26px; }
+.pb-sc-disc-grid p { font-size: 15px; line-height: 1.65; color: var(--sc-body); margin: 0 0 10px; }
+.pb-sc-disc-grid strong { color: var(--sc-text); font-weight: 600; }
+.pb-sc-disc-grid a, .pb-sc-notes a, .pb-sc-log-sec a, .pb-sc-cta a:not(.pb-sc-btn), .pb-fc-more a, .pb-sc-chapter-h a, .pb-sc-dlink a { color: var(--sc-amber); text-decoration: underline; text-underline-offset: 3px; }
+.pb-sc-disc-grid a:hover, .pb-sc-notes a:hover, .pb-fc-more a:hover, .pb-sc-dlink a:hover { color: var(--sc-amber-light); }
+
+/* ---------- the forecast card (one look for all) ---------- */
+.pb-fc { position: relative; display: flex; flex-direction: column; background: var(--sc-fc-bg); border: 1px solid var(--sc-border); border-radius: 12px; padding: 24px 28px 20px; }
+.pb-fc > * { order: 5; }
+.pb-fc-top { order: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.pb-fc .pb-forecast-title { order: 2; }
+.pb-fc-summary { order: 3; }
+.pb-fc-label { order: 4; }
+.pb-q { order: 5; }
+.pb-fc-facts { order: 6; }
+.pb-fc-more { order: 7; }
+.pb-fc-toggle { order: 8; }
+.pb-fc-disc { order: 9; }
+.pb-fc-meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-muted); margin: 3px 0 0; line-height: 1.5; }
+.pb-stamp { display: inline-flex; align-items: center; gap: 7px; flex: none; margin: 0; padding: 5px 11px 5px 9px; border-radius: 6px; background: var(--sc-amber-12); border: 1px solid var(--sc-amber-45); color: var(--sc-amber-light); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; white-space: nowrap; }
+.pb-ico { width: 15px; height: 15px; flex: none; }
+.pb-fc .pb-forecast-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px; line-height: 1.35; color: var(--sc-bright); margin: 10px 0 14px; }
+.pb-fc .pb-forecast-title a { color: var(--sc-bright); text-decoration: none; }
+.pb-fc .pb-forecast-title a:hover { color: var(--sc-amber-light); text-decoration: underline; text-underline-offset: 4px; }
+.pb-fc-summary { font-size: 18px; line-height: 1.55; font-weight: 500; color: var(--sc-text); margin: 0 0 16px; }
+.pb-fc-summary-k { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sc-amber); margin-bottom: 4px; }
+.pb-fc .pb-fc-label { margin: 0 0 8px; }
+.pb-fc-label .pb-forecast-label { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sc-muted); }
+.pb-q { position: relative; font-size: 18px; margin: 0 0 16px; }
+.pb-forecast-quote { margin: 0; padding: 2px 0 2px 18px; border-left: 3px solid var(--sc-amber); font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 18px; line-height: 1.65; color: #E2E8F0; overflow-wrap: anywhere; }
+.pb-forecast-quote p { margin: 0 0 10px; }
+.pb-forecast-quote p:last-child { margin-bottom: 0; }
+.pb-forecast-quote ul { margin: 0; padding-left: 20px; }
+.pb-forecast-quote li { margin: 0 0 10px; }
+.pb-forecast-quote li:last-child { margin-bottom: 0; }
+.pb-fc.is-collapsed.has-long-quote .pb-q { max-height: 8.3em; overflow: hidden; }
+.pb-fc.is-collapsed.has-long-quote .pb-q::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3.2em; background: linear-gradient(180deg, rgba(30, 41, 59, 0) 0%, var(--sc-fc-bg) 92%); pointer-events: none; }
+.pb-fc-facts { display: flex; flex-wrap: wrap; gap: 6px 28px; padding: 12px 0; border-top: 1px solid var(--sc-hair); }
+.pb-fc-facts p, .pb-fc .pb-fc-facts .pb-forecast-field { font-size: 15.5px; line-height: 1.55; color: var(--sc-body); margin: 0; }
+.pb-fc-due-k { font-weight: 600; color: var(--sc-text); }
+.pb-fc-more { border-top: 1px solid var(--sc-hair); padding-top: 12px; }
+.pb-fc .pb-forecast-field { font-size: 16px; line-height: 1.6; color: var(--sc-body); margin: 0 0 10px; overflow-wrap: anywhere; }
+.pb-fc .pb-forecast-label { font-weight: 600; color: var(--sc-text); }
+.pb-fc .pb-verdict { font-weight: 700; color: var(--sc-bright); }
+.pb-fc .pb-quoted { color: #E2E8F0; }
+.pb-fc-toggle { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin: 6px 0 14px; padding: 10px 16px; border-radius: 8px; border: 1px solid #52627A; background: transparent; color: var(--sc-text); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; }
+.pb-fc-toggle::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.pb-fc-toggle[aria-expanded="true"]::after { transform: translateY(2px) rotate(-135deg); }
+.pb-fc-toggle:hover { border-color: var(--sc-amber); color: var(--sc-amber-light); }
+.pb-fc-disc:empty { display: none; }
+.pb-fc-disc { border-top: 1px solid var(--sc-hair); padding-top: 12px; }
+.pb-fc .pb-forecast-disclosure { font-size: 14px; line-height: 1.6; color: var(--sc-muted); margin: 0 0 6px; padding-left: 12px; border-left: 2px solid var(--sc-amber-45); }
+.pb-fc .pb-forecast-disclosure .pb-forecast-label { color: var(--sc-body); }
+
+/* ---------- 3. decided so far ---------- */
+.pb-sc-decided { margin-bottom: 80px; }
+.pb-sc-decided-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.pb-sc-dcard { display: flex; flex-direction: column; }
+.pb-sc-dcard .pb-fc { flex: 1; border-top: 3px solid var(--sc-amber); }
+.pb-sc-dcard .pb-fc-more { order: 4; border-top: 0; padding-top: 0; margin-bottom: 6px; }
+.pb-sc-dcard .pb-fc-label { order: 5; }
+.pb-sc-dcard .pb-q { order: 6; }
+.pb-sc-dcard .pb-fc-facts { order: 7; }
+.pb-sc-dlink { font-size: 14px; margin: 10px 0 0 4px; }
+
+/* ---------- 4. how to read ---------- */
+.pb-sc-band { background: var(--sc-surface); border-top: 1px solid var(--sc-border); border-bottom: 1px solid var(--sc-border); padding: 72px 0; margin: 0 0 80px; --sc-fc-bg: #0F172A; }
+.pb-sc-band .pb-fc.is-collapsed.has-long-quote .pb-q::after { background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, #0F172A 92%); }
+.pb-sc-how-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: start; margin-top: 8px; }
+.pb-sc-specimen { margin: 0; counter-reset: pin; }
+.pb-sc-specimen .pb-fc-label::before, .pb-sc-specimen .pb-fc-facts::before, .pb-sc-specimen .pb-fc-more > p:first-child::before, .pb-sc-specimen .pb-fc-more > p:last-child::before {
+  counter-increment: pin; content: counter(pin); display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-right: 10px; border-radius: 50%; background: var(--sc-amber); color: var(--sc-ink); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0; vertical-align: 1px; flex: none; }
+.pb-sc-specimen .pb-fc-facts { align-items: center; }
+.pb-sc-parts { list-style: none; margin: 0; padding: 0; counter-reset: part; }
+.pb-sc-parts li { counter-increment: part; position: relative; padding: 0 0 0 52px; margin: 0 0 24px; font-size: 17px; line-height: 1.6; color: var(--sc-body); }
+.pb-sc-parts li::before { content: counter(part); position: absolute; left: 0; top: -2px; width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--sc-amber); color: var(--sc-amber-light); display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+.pb-sc-parts strong { color: var(--sc-bright); }
+.pb-sc-verdicts { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.pb-sc-verdicts li { background: var(--sc-ink); border: 1px solid var(--sc-border); border-radius: 12px; padding: 18px 18px 16px; margin: 0; }
+.pb-sc-verdicts li p:not(.pb-stamp) { font-size: 15.5px; line-height: 1.55; color: var(--sc-body); margin: 12px 0 0; }
+.pb-sc-verdicts strong { color: var(--sc-text); }
+.pb-sc-rules { list-style: none; margin: 0; padding: 0; }
+.pb-sc-rules li { position: relative; padding-left: 20px; margin: 0 0 14px; font-size: 16px; line-height: 1.65; color: var(--sc-body); break-inside: avoid; }
+.pb-sc-rules li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 7px; height: 7px; border-radius: 2px; background: var(--sc-amber); }
+
+/* ---------- 5. falling due ---------- */
+.pb-sc-due-sec { margin-bottom: 72px; }
+.pb-sc-due { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.pb-due-node { margin: 0; }
+.pb-due-node a { display: grid; grid-template-columns: 64px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 14px; align-items: center; height: 100%; padding: 16px 18px; border-radius: 12px; background: var(--sc-surface); border: 1px solid var(--sc-border); text-decoration: none; color: var(--sc-text); transition: border-color 150ms ease; }
+.pb-due-node a:hover { border-color: var(--sc-amber); }
+.pb-due-nocal a { background: transparent; border-style: dashed; }
+.pb-due-node:first-child a { border-top: 3px solid var(--sc-amber); }
+.pb-due-count { grid-row: 1 / span 2; font-size: 40px; font-weight: 700; line-height: 1; color: var(--sc-bright); letter-spacing: -0.02em; }
+.pb-due-label { font-size: 16px; font-weight: 600; line-height: 1.35; color: var(--sc-text); }
+.pb-due-unit { font-size: 13px; color: var(--sc-muted); }
+
+/* ---------- 6. the list ---------- */
+.pb-sc-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 14px 0; margin: 0 0 8px; border-bottom: 1px solid var(--sc-hair); background: rgba(15, 23, 42, 0.94); }
+.pb-seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--sc-border); border-radius: 10px; overflow: hidden; }
+.pb-seg button { min-height: 44px; padding: 10px 16px; background: transparent; border: 0; border-right: 1px solid var(--sc-border); color: var(--sc-body); font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; }
+.pb-seg button:last-child { border-right: 0; }
+.pb-seg button span { opacity: 0.7; font-weight: 500; margin-left: 4px; }
+.pb-seg button[aria-pressed="true"] { background: var(--sc-amber); color: var(--sc-ink); }
+.pb-seg button[aria-pressed="true"] span { opacity: 0.85; }
+.pb-sel { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--sc-muted); }
+.pb-sel span { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.pb-sel select { min-width: 0; max-width: 100%; min-height: 44px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--sc-border); background: var(--sc-ink); color: var(--sc-text); font-family: 'Inter', sans-serif; font-size: 15px; }
+.pb-sc-showing { margin: 0 0 0 auto; font-size: 14px; color: var(--sc-muted); }
+.pb-sc-empty { padding: 28px; margin: 24px 0; border: 1px dashed var(--sc-border); border-radius: 12px; color: var(--sc-body); }
+.pb-sc-empty p { margin: 0 0 12px; font-size: 16px; }
+.pb-sc-reset { min-height: 44px; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--sc-amber); background: transparent; color: var(--sc-amber-light); font-weight: 600; font-size: 15px; cursor: pointer; }
+.pb-sc-report { margin-top: 48px; }
+.pb-sc-report > h2 { }
+.pb-sc-chapter-h { display: flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin: 40px 0 16px; color: var(--sc-amber); }
+.pb-sc-chapter-h::after { content: ""; flex: 1; height: 1px; background: var(--sc-hair); }
+.pb-sc-chapter-h a { text-decoration: none; color: var(--sc-amber); }
+.pb-sc-chapter-h a:hover { text-decoration: underline; }
+.pb-sc-chapter-n { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--sc-surface); color: var(--sc-body); font-size: 12px; letter-spacing: 0; }
+.pb-forecast { display: block; margin: 0 0 20px; }
+
+/* ---------- 7. call to action ---------- */
+.pb-sc-cta { background: radial-gradient(120% 140% at 0% 0%, rgba(245, 158, 11, 0.13) 0%, rgba(245, 158, 11, 0) 55%), var(--sc-surface); margin-top: 96px; }
+.pb-sc-cta-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: center; }
+.pb-sc-cta h2 { font-size: 40px; margin-bottom: 18px; }
+.pb-sc-cta-main p { font-size: 18px; line-height: 1.6; color: var(--sc-body); margin: 0 0 14px; max-width: 56ch; }
+.pb-sc-cta-main strong { color: var(--sc-text); }
+.pb-sc-cta-main .pb-sc-bridge { font-size: 16px; color: var(--sc-amber-light); }
+.pb-sc-cta-main .pb-sc-price { font-size: 24px; font-weight: 700; color: var(--sc-bright); letter-spacing: -0.01em; margin: 6px 0 14px; }
+.pb-sc-cta-main .pb-sc-btnrow { margin: 26px 0 16px; }
+.pb-sc-cta-main .pb-sc-closed { font-size: 15px; color: var(--sc-muted); }
+.pb-sc-cta-sample { margin: 0; }
+.pb-sc-cta-sample img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--sc-border); box-shadow: 0 24px 60px rgba(2, 6, 23, 0.55); }
+.pb-sc-cta-sample figcaption { font-size: 14px; line-height: 1.5; color: var(--sc-muted); margin-top: 12px; }
+
+/* ---------- 8, 9. notes, change log ---------- */
+.pb-sc-notes { margin-bottom: 64px; }
+.pb-sc-notes h2, .pb-sc-log-sec h2 { font-size: 28px; }
+.pb-sc-log-sec { margin-bottom: 96px; }
+.pb-sc-log { list-style: none; margin: 0; padding: 0; }
+.pb-sc-log li { font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6; color: var(--sc-body); padding: 12px 16px; border: 1px solid var(--sc-border); border-radius: 8px; margin: 0 0 8px; }
+
+/* ---------- wider screens ---------- */
+@media (min-width: 640px) {
+  .pb-sc-verdicts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .pb-sc-disc-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 1.25fr); }
+  .pb-sc-decided-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pb-sc-due { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .pb-due-node a { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; align-content: start; row-gap: 6px; padding: 18px 18px 16px; }
+  .pb-due-count { grid-row: auto; font-size: 44px; }
+  .pb-sc-filters { position: sticky; top: var(--nav-height); z-index: 40; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+  .pb-sc-rules { column-count: 2; column-gap: 48px; }
+  .pb-sc-cta-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 56px; }
+}
+@media (min-width: 1024px) {
+  .pb-sc-hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 56px; }
+  .pb-sc-how-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 56px; }
+  .pb-sc-verdicts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 600px) {
+  html { scroll-padding-top: 88px; }
+  .pb-sc-wrap { padding: 0 16px; }
+  .hero.pb-sc-hero { padding: 24px 16px 40px; }
+  .pb-sc-hero .hero-lockup-row { margin-bottom: 14px; }
+  .pb-sc-hero .hero-headline { font-size: 38px; }
+  .pb-sc-hero .hero-subhead { font-size: 17px; }
+  .pb-sc-byline { margin-bottom: 20px; }
+  .pb-sc-hero-cta .pb-sc-btn { width: 100%; }
+  .pb-sc-board { padding: 20px 18px 18px; border-radius: 14px; }
+  .pb-sc-nums { gap: 12px; }
+  .pb-sc-nums dt { font-size: 36px; }
+  .pb-sc-nums dd { font-size: 13px; }
+  .pb-sc-wrap h2, .pb-sc-band h2 { font-size: 28px; }
+  .pb-sc-intro { font-size: 17px; }
+  .pb-sc-disc-grid { padding: 18px 18px; }
+  .pb-fc { padding: 18px 16px 14px; }
+  .pb-fc-top { flex-direction: column-reverse; align-items: flex-start; gap: 8px; }
+  .pb-fc .pb-forecast-title { font-size: 19px; }
+  .pb-q, .pb-forecast-quote { font-size: 17px; }
+  .pb-sc-band { padding: 48px 0; }
+  .pb-seg { width: 100%; }
+  .pb-seg button { flex: 1 1 auto; padding: 10px 10px; font-size: 14px; }
+  .pb-sel { width: 100%; }
+  .pb-sel select { flex: 1; }
+  .pb-sc-showing { margin-left: 0; }
+  .pb-sc-cta h2 { font-size: 30px; }
+  .pb-sc-cta-main .pb-sc-btn { width: 100%; }
+  .pb-sc-cta { margin-top: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pb-sc-btn, .pb-due-node a { transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- hero layout: one board card on wide screens; on narrower screens its two halves split around the button ---------- */
+.pb-sc-hero-cta { margin: 0; }
+.pb-tile .pb-ico { width: 12px; height: 12px; }
+.pb-sc-key .pb-ico { width: 12px; height: 12px; vertical-align: -1px; }
+.pb-sc-filters .pb-sel select { max-width: 340px; }
+@media (min-width: 1024px) {
+  .pb-sc-hero-grid { grid-template-areas: "text board" "cta board"; row-gap: 0; }
+  .pb-sc-hero-text { grid-area: text; }
+  .pb-sc-hero-cta { grid-area: cta; }
+  .pb-sc-board { grid-area: board; align-self: start; margin-top: 46px; }
+}
+@media (max-width: 1023px) {
+  .pb-sc-hero-grid { gap: 20px; }
+  .pb-sc-board { display: contents; }
+  .pb-sc-hero-text { order: 1; }
+  .pb-sc-board-top { order: 2; }
+  .pb-sc-hero-cta { order: 3; }
+  .pb-sc-map { order: 4; }
+  .pb-sc-board-top, .pb-sc-map { background: linear-gradient(180deg, #1E293B 0%, #18233A 100%); border: 1px solid var(--sc-border); border-radius: 14px; padding: 20px 20px 18px; }
+  .pb-sc-map { margin-top: 4px; }
+  .pb-sc-hero .hero-subhead { margin-bottom: 10px; }
+  .pb-sc-byline { margin-bottom: 0; }
+}
+@media (max-width: 600px) {
+  .pb-sc-filters .pb-sel select { max-width: none; }
+  .pb-sc-board-top { padding: 16px 16px 14px; }
+  .pb-sc-board .pb-sc-board-title { margin-bottom: 12px; }
+  .pb-sc-nums dt { font-size: 34px; }
+}
+/* Decided cards: summary, verdict and reason, then the quote; the radar's words after the quote */
+.pb-sc-dcard .pb-fc-more { display: contents; }
+.pb-sc-dcard .pb-fc-more > p { order: 4; }
+.pb-sc-dcard .pb-fc-more > p:last-child { order: 8; margin-top: 4px; }
+.pb-sc-dcard .pb-fc-toggle { order: 9; }
+.pb-sc-dcard .pb-fc-disc { order: 10; }
+
+/* ---------- round 2: one page per report ---------- */
+.pb-sc-other { margin: 18px 0 0; font-size: 14px; }
+.pb-sc-other a { color: var(--sc-muted); text-decoration: underline; text-decoration-color: var(--sc-border); text-underline-offset: 3px; }
+.pb-sc-other a:hover { color: var(--sc-amber-light); text-decoration-color: currentColor; }
+.pb-sc-other-end { margin-top: 28px; }
+.pb-sc-map .pb-tiles { margin-bottom: 12px; }
+.pb-tile { width: 24px; height: 24px; }
+.pb-sc-disc { margin-bottom: 56px; }
+.pb-fc-meta { text-transform: uppercase; }
+/* WEM: the first-review moment */
+.pb-sc-first { margin-bottom: 72px; }
+.pb-sc-first-box { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px 28px; align-items: center; padding: 28px; border-radius: 16px; border: 1px solid var(--sc-border); border-top: 3px solid var(--sc-amber); background: radial-gradient(120% 160% at 0% 0%, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0) 60%), var(--sc-surface); }
+.pb-sc-first-n { font-size: 88px; font-weight: 700; line-height: 0.9; letter-spacing: -0.04em; color: var(--sc-bright); margin: 0; }
+.pb-sc-first-box h2 { font-size: 30px; margin: 0; }
+.pb-sc-first-when { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sc-amber); margin: 8px 0 0; }
+.pb-sc-first-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; grid-column: 1 / -1; }
+.pb-sc-first-list a { display: block; height: 100%; padding: 12px 14px; border-radius: 10px; background: var(--sc-ink); border: 1px solid var(--sc-border); color: var(--sc-text); font-size: 15px; font-weight: 600; line-height: 1.4; text-decoration: none; }
+.pb-sc-first-list a:hover { border-color: var(--sc-amber); }
+.pb-sc-first-list span { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sc-muted); margin-bottom: 4px; }
+/* the list: legend and date buttons */
+.pb-sc-list > h2 { margin-bottom: 18px; }
+.pb-sc-legend { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; }
+.pb-sc-legend li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; line-height: 1.45; color: var(--sc-body); margin: 0; max-width: 34ch; }
+.pb-sc-legend .pb-stamp { flex: none; }
+.pb-sc-filters .pb-sc-caption { width: 100%; margin: 0; }
+.pb-due-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.pb-due-btns button { display: inline-flex; align-items: baseline; gap: 8px; min-height: 44px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--sc-border); background: var(--sc-surface); color: var(--sc-body); font-family: 'Inter', sans-serif; font-size: 14.5px; font-weight: 600; cursor: pointer; text-align: left; }
+.pb-due-btns button:hover { border-color: var(--sc-amber); }
+.pb-due-btns button[aria-pressed="true"] { background: var(--sc-amber); border-color: var(--sc-amber); color: var(--sc-ink); }
+.pb-due-btns .pb-due-count { font-size: 18px; font-weight: 700; color: inherit; letter-spacing: 0; }
+.pb-due-btns button[aria-pressed="false"] .pb-due-count { color: var(--sc-bright); }
+.pb-due-btns .pb-due-label { font-size: 14.5px; font-weight: 600; color: inherit; }
+.pb-sc-h-small { font-size: 22px !important; margin-top: 40px !important; }
+.pb-sc-notes .pb-sc-rules li { font-size: 14.5px; line-height: 1.6; color: var(--sc-muted); }
+.pb-sc-notes { margin-top: 72px; }
+.pb-sc-cta-grid--solo { grid-template-columns: minmax(0, 1fr) !important; }
+.pb-sc-cta-grid--solo .pb-sc-cta-main { max-width: 760px; }
+@media (min-width: 900px) {
+  .pb-sc-disc-grid { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.35fr); }
+  .pb-sc-first-box { grid-template-columns: auto minmax(0, 1fr); padding: 32px 36px; }
+  .pb-sc-first-list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .pb-sc-first-n { font-size: 64px; }
+  .pb-sc-first-box { padding: 22px 18px; }
+  .pb-sc-first-box h2 { font-size: 26px; }
+  .pb-due-btns button { flex: 1 1 calc(50% - 8px); }
+  .pb-sc-legend { gap: 10px; }
+  .pb-sc-legend li { max-width: none; width: 100%; }
+}
+/* how to read: four short lines, numbered, then the verdict legend */
+.pb-sc-how { margin-bottom: 64px; }
+.pb-sc-four { list-style: none; margin: 8px 0 24px; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; counter-reset: four; }
+.pb-sc-four li { counter-increment: four; position: relative; margin: 0; padding: 16px 16px 16px 56px; border: 1px solid var(--sc-border); border-radius: 12px; background: var(--sc-surface); font-size: 15.5px; line-height: 1.5; color: var(--sc-body); }
+.pb-sc-four li::before { content: counter(four); position: absolute; left: 16px; top: 15px; width: 28px; height: 28px; border-radius: 50%; background: var(--sc-amber); color: var(--sc-ink); display: grid; place-items: center; font-weight: 700; font-size: 14px; }
+.pb-sc-four strong { display: block; color: var(--sc-bright); font-weight: 700; margin-bottom: 2px; }
+.pb-sc-list-h { margin-top: 48px !important; }
+.pb-due-btns button.pb-due-nocal { border-style: dashed; background: transparent; }
+.pb-due-btns button.pb-due-nocal[aria-pressed="true"] { border-style: solid; background: var(--sc-amber); }
+.pb-sc-rules-more { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--sc-hair); }
+.pb-sc-notes .pb-sc-h3 { margin-top: 24px; font-size: 17px; }
+.pb-sc-first-when { font-family: 'Inter', sans-serif; font-size: 17px; letter-spacing: 0; text-transform: none; color: var(--sc-body); }
+@media (min-width: 900px) {
+  .pb-sc-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .pb-sc-legend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 24px; }
+  .pb-sc-legend li { flex-direction: column; align-items: flex-start; gap: 8px; max-width: none; }
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- =====================================================================
+     TOP NAV
+     ===================================================================== -->
+<!-- CHROME:NAV:START -->
+<!-- ====== NAV ====== -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="ProductBeacon home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="6" fill="#0F172A"/>
+        <circle cx="16" cy="12" r="4" fill="#F59E0B"/>
+        <path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="/covering-everything/#operator-intensive">The Operator Intensive</a></li>
+      <li><a href="/workforce.html">The Workforce</a></li>
+      <li><a href="/on-call.html">On Call &amp; Fractional</a></li>
+      <li><a href="/decision-provenance-standard.html">The Standard</a></li>
+      <li><a href="/research/">Research</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html?intent=apply" class="btn btn--primary btn--lg" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav'})">Apply</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav__mobile" role="menu">
+    <a href="/covering-everything/#operator-intensive" role="menuitem">The Operator Intensive</a>
+    <a href="/workforce.html" role="menuitem">The Workforce</a>
+    <a href="/on-call.html" role="menuitem">On Call &amp; Fractional</a>
+    <a href="/decision-provenance-standard.html" role="menuitem">The Standard</a>
+    <a href="/research/" role="menuitem">Research</a>
+    <a href="/about.html" role="menuitem">About</a>
+    <a href="/contact.html?intent=apply" class="btn btn--primary" style="margin-top:12px; text-align:center;" role="menuitem" onclick="pbTrack &amp;&amp; pbTrack('apply_click',{location:'nav-mobile'})">Apply</a>
+  </div>
+</nav>
+<!-- CHROME:NAV:END -->
+
+<main style="padding-top: var(--nav-height);">
+<header class="hero pb-sc-hero">
+  <div class="hero-lockup-row">
+    <span class="lockup lockup-lg" aria-label="ProductBeacon Research">
+      <span class="lockup-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="8" r="4" fill="#F59E0B"/>
+          <path d="M6 14 L12 22 L18 14 Z" fill="#F59E0B"/>
+        </svg>
+      </span>
+      <span class="lockup-divider" aria-hidden="true"></span>
+      <span class="lockup-wordmark">Research</span>
+    </span>
+  </div>
+
+  <div class="pb-sc-hero-grid">
+<div class="pb-sc-hero-text">
+  <p class="hero-eyebrow">State of WEM 2026 · Forecast Scorecard</p>
+  <h1 class="hero-headline">Our contact-center forecasts, checked in public.</h1>
+  <p class="hero-subhead">Each workforce engagement management (WEM) forecast quoted word for word. Misses will be shown too.</p>
+  <p class="pb-sc-byline">Authored by Yohay Etsion. &middot; Last reviewed: 17 Nov 2026</p>
+</div>
+<div class="pb-sc-hero-cta"><p class="pb-sc-btnrow"><a class="pb-sc-btn" href="/research/state-of-wem-2026/index.html#market-report" onclick="if(window.gtag){gtag(&#x27;event&#x27;,&#x27;door_click&#x27;,{door:&#x27;market-report&#x27;,location:&#x27;forecast-scorecard-wem&#x27;})}">Order a private Market Report</a><a class="pb-sc-textlink" href="#first-review">See what comes up first</a></p></div>
+<aside class="pb-sc-board" aria-labelledby="where-things-stand">
+  <div class="pb-sc-board-top">
+  <h2 id="where-things-stand" class="pb-sc-board-title">Where things stand</h2>
+  <dl class="pb-sc-nums">
+    <div><dt>18</dt><dd>forecasts</dd></div>
+    <div><dt><a href="#forecasts">18</a></dt><dd>still open</dd></div>
+    <div><dt><a href="#forecasts" data-due-set="end-2026">5</a></dt><dd>up for review after 31 December 2026</dd></div>
+  </dl>
+  </div>
+  <div class="pb-sc-map">
+    <div class="pb-tiles" role="list" aria-label="State of WEM 2026"><a role="listitem" class="pb-tile" href="#wem-aa-1" aria-label="WEM-AA-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-aa-2" aria-label="WEM-AA-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-aa-3" aria-label="WEM-AA-3: Open"></a><a role="listitem" class="pb-tile" href="#wem-acx-1" aria-label="WEM-ACX-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-acx-2" aria-label="WEM-ACX-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-acx-3" aria-label="WEM-ACX-3: Open"></a><a role="listitem" class="pb-tile" href="#wem-con-1" aria-label="WEM-CON-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-con-2" aria-label="WEM-CON-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-con-3" aria-label="WEM-CON-3: Open"></a><a role="listitem" class="pb-tile" href="#wem-pe-1" aria-label="WEM-PE-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-pe-2" aria-label="WEM-PE-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-pe-3" aria-label="WEM-PE-3: Open"></a><a role="listitem" class="pb-tile" href="#wem-qa-1" aria-label="WEM-QA-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-qa-2" aria-label="WEM-QA-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-qa-3" aria-label="WEM-QA-3: Open"></a><a role="listitem" class="pb-tile" href="#wem-wfm-1" aria-label="WEM-WFM-1: Open"></a><a role="listitem" class="pb-tile" href="#wem-wfm-2" aria-label="WEM-WFM-2: Open"></a><a role="listitem" class="pb-tile" href="#wem-wfm-3" aria-label="WEM-WFM-3: Open"></a></div>
+    <p>State of WEM 2026: 18 forecasts. Held 0, Failed 0, Open 18, Void 0.</p>
+    <p class="pb-sc-key" aria-hidden="true"><span><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7" /></svg> Held</span><span><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l8 8M12 4l-8 8" /></svg> Failed</span><span><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg> Open</span><span><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5.5" /><path d="M4.2 11.8l7.6-7.6" /></svg> Void</span></p>
+  </div>
+</aside>
+</div>
+</header>
+
+<section class="pb-sc-wrap pb-sc-disc" aria-labelledby="disc-title">
+  <h2 id="disc-title" class="pb-sc-eyebrow">Disclosures</h2>
+  <div class="pb-sc-disc-grid">
+    <div><p>Independent research from public sources only, with no vendor sponsors; not investment advice.</p><p>Yohay Etsion holds no position in any security named on this page.</p><p>Full disclosures: <a href="/research/author.html#disclosure">the author page</a> and <a href="/research/methodology.html">the Methodology</a>.</p></div>
+    <div><p><strong>Former employer:</strong> Yohay Etsion was employed by NICE from April 2008 to May 2021, with senior product-leadership responsibility for the Recording / Workforce-Optimization line, the area on which State of WEM 2026 grades NICE; he remains bound by a confidentiality and trade-secret undertaking from that employment; the State of WEM rows below use only published material, contain no information derived from that employment and each carry this disclosure; he holds no NICE equity.</p></div>
+  </div>
+</section>
+
+<section class="pb-sc-wrap pb-sc-first" id="first-review" aria-labelledby="first-title">
+  <div class="pb-sc-first-box">
+  <p class="pb-sc-first-n" aria-hidden="true">5</p>
+  <div><h2 id="first-title">First up for review</h2><p class="pb-sc-first-when">5 forecasts, after 31 December 2026. The other 13 follow in 2027.</p></div>
+  <ul class="pb-sc-first-list">
+    <li><a href="#wem-aa-1"><span>Agent-Assist and Real-Time Guidance Market</span>Pattern Claim 1: The Control-Surface, Not the Engine</a></li>
+    <li><a href="#wem-acx-2"><span>Autonomous CX Market</span>Pattern Claim 2: One Engine, Gated by Who Acts</a></li>
+    <li><a href="#wem-con-1"><span>Convergence Synthesis</span>Pattern Claim 1: The One Engine Is Real at the Product Surface (P1 verdict)</a></li>
+    <li><a href="#wem-qa-1"><span>Quality and Interaction Analytics Market</span>Pattern Claim 1: The Auto-QA Reallocation Thesis</a></li>
+    <li><a href="#wem-wfm-1"><span>Workforce Management Market</span>Pattern Claim 1: The Autonomous-Intraday Frontier</a></li>
+  </ul>
+  </div>
+</section>
+
+<section class="pb-sc-wrap pb-sc-how" id="how-to-read" aria-labelledby="how-title">
+  <h2 id="how-title">How to read a forecast</h2>
+  <ol class="pb-sc-four">
+    <li><strong>Forecast, as published.</strong> Copied word for word from the report.</li>
+    <li><strong>Deadline as stated.</strong> The date the forecast gives, if any.</li>
+    <li><strong>Verdict.</strong> Held, Failed, Open or Void, as defined below.</li>
+    <li><strong>Evidence so far.</strong> Our published weekly radar's words, if any.</li>
+  </ol>
+  <ul class="pb-sc-legend">
+    <li><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7" /></svg><span class="pb-stamp-word">Held</span></p><span>what the forecast said would confirm it happened inside its window.</span></li>
+    <li><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l8 8M12 4l-8 8" /></svg><span class="pb-stamp-word">Failed</span></p><span>what it said would weaken it happened, or the window ended without the confirming outcome.</span></li>
+    <li><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p><span>neither yet.</span></li>
+    <li><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5.5" /><path d="M4.2 11.8l7.6-7.6" /></svg><span class="pb-stamp-word">Void</span></p><span>the test can no longer happen.</span></li>
+  </ul>
+</section>
+
+<section class="pb-sc-wrap pb-sc-list" id="forecasts" aria-labelledby="due-title">
+  <h2 id="due-title">What comes up next</h2>
+  <p class="pb-sc-intro">Open forecasts, grouped by the first date they name.</p>
+  <div class="pb-sc-filters" role="group" aria-labelledby="due-title">
+    <div class="pb-due-btns">
+      <button type="button" data-due-set="all" aria-pressed="true"><span class="pb-due-count">18</span><span class="pb-due-label">All</span></button>
+      <button type="button" data-due-set="end-2026" aria-pressed="false"><span class="pb-due-count">5</span><span class="pb-due-label">End of 2026</span></button>
+      <button type="button" data-due-set="h1-2027" aria-pressed="false"><span class="pb-due-count">7</span><span class="pb-due-label">First half of 2027</span></button>
+      <button type="button" data-due-set="mid-2027" aria-pressed="false"><span class="pb-due-count">6</span><span class="pb-due-label">Mid-2027</span></button>
+    </div>
+    <p class="pb-sc-showing" role="status" aria-live="polite">Showing 18 of 18</p>
+  </div>
+  <h2 id="list-title" class="pb-sc-list-h">All 18 forecasts</h2>
+  <p class="pb-sc-intro">Six chapters, three forecasts each, in report order.</p>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/agent-assist.html">Agent-Assist and Real-Time Guidance Market</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-aa-1" data-row="WEM-AA-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Agent-Assist and Real-Time Guidance Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/agent-assist.html">Pattern Claim 1: The Control-Surface, Not the Engine</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-aa-1-q"><blockquote class="pb-forecast-quote"><p>If by Q4 2026 at least 3 Gravity-tier vendors publicly position assist and autonomous as one platform with a human-in-the-loop gate (rather than two separate products), the control-surface thesis is confirmed. If instead they keep them architecturally separate, the single-engine collapse is weaker than the marketing implies.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by Q4 2026</span>&rdquo;</p><p class="pb-fc-due" data-due="end-2026"><span class="pb-fc-due-k">First date named in the forecast:</span> End of 2026</p></div>
+  <div class="pb-fc-more" id="wem-aa-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft’s assist agent both resolves alone and helps human staff.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-1-more wem-aa-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-aa-2" data-row="WEM-AA-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Agent-Assist and Real-Time Guidance Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/agent-assist.html">Pattern Claim 2: Auto-Summary Is the Beachhead</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-aa-2-q"><blockquote class="pb-forecast-quote"><p>If by H1 2027 auto-summary/ACW automation is a standard, default-on capability across all Gravity assist products (not an add-on), it has commoditized as the table-stakes beachhead and differentiation has moved up to live guidance + autonomy. If it is still sold as a premium add-on, the ROI case is not yet settled.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-aa-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">No new after-call-work figure since mid-September; summaries are treated as standard.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-2-more wem-aa-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-aa-3" data-row="WEM-AA-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Agent-Assist and Real-Time Guidance Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/agent-assist.html">Pattern Claim 3: The Seat Question Starts at This Boundary</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-aa-3-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 at least 2 Gravity-tier vendors price their assist SKU per-seat but their autonomous SKU per-resolution/outcome on the same platform, the pricing hinge is confirmed at this boundary. If autonomous stays per-seat-priced, the seat-reset thesis is delayed.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-aa-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft bills its AI by use beside the host’s seats; Zoom reportedly pools seats and AI.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-3-more wem-aa-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/autonomous-cx.html">Autonomous CX Market</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-acx-1" data-row="WEM-ACX-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Autonomous CX Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/autonomous-cx.html">Pattern Claim 1: The Seat-Reset Is Priced, Not Forecast</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-acx-1-q"><blockquote class="pb-forecast-quote"><p>If by H1 2027 at least 2 Gravity-tier vendors price a flagship customer-facing CX-agent SKU primarily off per-seat (to per-resolution / per-conversation / per-action) on a dated public page, the pricing migration is confirmed. If the flagship SKUs revert to or stay per-seat, the seat-reset is a marketing frame, not an economic one. (Watch the single most important counter-signal: any vendor publicly reverting off per-resolution back to per-seat.)</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-acx-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported where published</span>&rdquo; &ldquo;<span class="pb-quoted">Fin, Lorikeet, Zendesk and Salesforce prices held; Sierra and Decagon publish none.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-1-more wem-acx-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-acx-2" data-row="WEM-ACX-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Autonomous CX Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/autonomous-cx.html">Pattern Claim 2: One Engine, Gated by Who Acts</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-acx-2-q"><blockquote class="pb-forecast-quote"><p>If by Q4 2026 at least 3 Gravity-tier vendors publicly name one platform/engine spanning assist and autonomous (a Copilot/Autopilot-style paired SKU on one ecosystem), the single-engine collapse is confirmed at the product surface. If assist and autonomous remain separately-branded, separately-architected products, the collapse is weaker than the marketing implies.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by Q4 2026</span>&rdquo;</p><p class="pb-fc-due" data-due="end-2026"><span class="pb-fc-due-k">First date named in the forecast:</span> End of 2026</p></div>
+  <div class="pb-fc-more" id="wem-acx-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft and Salesforce charge for staff per user and for customer-facing AI by use.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-2-more wem-acx-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-acx-3" data-row="WEM-ACX-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Autonomous CX Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/autonomous-cx.html">Pattern Claim 3, Fulfillment, Not Deflection, and the Contested Displacement</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-acx-3-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 named enterprises publicly report sustained (not pilot-only) autonomous fulfillment rates above 50% on a primary channel without a Klarna-style reversal, the displacement thesis strengthens. If the public reversals/cancellations outweigh the sustained-fulfillment disclosures, the seat-reset stays a pricing phenomenon ahead of a staffing one.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-acx-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Completion replaces deflection: New York’s proposal would make resolution counts reportable. Comcast, the largest buyer in the news this week, counts contacts avoided.</span>&rdquo; &ldquo;<span class="pb-quoted">Cedar reports 71.3% of started payments completed; Comcast counts contacts avoided.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-3-more wem-acx-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/convergence.html">Convergence Synthesis</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-con-1" data-row="WEM-CON-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Convergence Synthesis</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/convergence.html">Pattern Claim 1: The One Engine Is Real at the Product Surface (P1 verdict)</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-con-1-q"><blockquote class="pb-forecast-quote"><p>If by Q4 2026 at least 3 Gravity-tier vendors publicly name one engine/platform spanning ≥3 WEM modules and a Copilot/Autopilot-style human-gated SKU pair, P1 is confirmed at the surface. If the modules stay separately-branded, separately-priced products, the single-engine story is weaker than the marketing.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by Q4 2026</span>&rdquo;</p><p class="pb-fc-due" data-due="end-2026"><span class="pb-fc-due-k">First date named in the forecast:</span> End of 2026</p></div>
+  <div class="pb-fc-more" id="wem-con-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft scores human and AI work against one standard; Zoom gives both one shared customer memory.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-1-more wem-con-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-con-2" data-row="WEM-CON-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Convergence Synthesis</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/convergence.html">Pattern Claim 2: The Repricing Is Real; the Displacement Is Not Yet (P2 confirmed / P3 contested)</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-con-2-q"><blockquote class="pb-forecast-quote"><p>If by H1 2027 at least 2 Gravity-tier vendors price a flagship customer-facing CX-agent SKU primarily off per-seat (to per-resolution/conversation/action) on a dated public page, P2 is confirmed. The displacement (P3) remains open until sustained (non-pilot) autonomous fulfillment above 50% on a primary channel is publicly reported without a Klarna-style reversal.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-con-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Outcome prices sit beside seats; Comcast cuts contacts while some outsourcers add seats.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-2-more wem-con-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-con-3" data-row="WEM-CON-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Convergence Synthesis</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/convergence.html">Pattern Claim 3: The Unified Falsification Condition (the single falsifier)</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-con-3-q"><blockquote class="pb-forecast-quote"><p>As above — H1 2027 is the dated checkpoint; the three clauses are the threshold. The single most important real-time signal to watch: any Gravity vendor publicly reverting off per-resolution back to per-seat (the cleanest single falsifier of P2, the proxy currently carrying the thesis).</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-con-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Not triggered</span>&rdquo; &ldquo;<span class="pb-quoted">No tracked price page moved back to seats; Salesforce held its $2 per conversation.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-3-more wem-con-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/performance-engagement.html">Performance and Engagement Market</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-pe-1" data-row="WEM-PE-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Performance and Engagement Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/performance-engagement.html">Pattern Claim 1: The Emotion-AI Wall</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-pe-1-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 the major suites have publicly re-scoped their agent "wellbeing/emotion" features toward consent-based, non-biometric, or supervisor-alerting framing (and away from automated emotion inference), the wall is binding. If acoustic emotion-scoring of agents is still marketed as a headline EU-available capability, enforcement is lagging the marketing.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-pe-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported</span>&rdquo; &ldquo;<span class="pb-quoted">Aspect advises customer-side emotion detection only; no vendor has withdrawn a feature.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-1-more wem-pe-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-pe-2" data-row="WEM-PE-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Performance and Engagement Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/performance-engagement.html">Pattern Claim 2: The Coaching-Outcome Contest</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-pe-2-q"><blockquote class="pb-forecast-quote"><p>If by H1 2027 at least two Gravity suites publicly ship a measured-coaching-outcome metric as a headline capability, the suites have captured the loop (closing it from score → coaching → demonstrated improvement). If measured-outcome remains the independents' wedge (AmplifAI-class), the depth defense holds.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-pe-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Centrical and Zoom link findings to coaching; results are vendor-reported.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-2-more wem-pe-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-pe-3" data-row="WEM-PE-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Performance and Engagement Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/performance-engagement.html">Pattern Claim 3: Simulation as the Independent Wedge</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-pe-3-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 a Gravity suite has acquired or shipped a native agent-simulation-training capability, the wedge is closing (and the thin-middle-gets-absorbed pattern repeats a third market); if simulation stays an independent specialty, the suites are still bolting copilots, not building simulators.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-pe-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Weakened</span>&rdquo; &ldquo;<span class="pb-quoted">Zoom now includes AI role-play in its quality product.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-3-more wem-pe-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/quality-analytics.html">Quality and Interaction Analytics Market</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-qa-1" data-row="WEM-QA-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Quality and Interaction Analytics Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/quality-analytics.html">Pattern Claim 1: The Auto-QA Reallocation Thesis</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-qa-1-q"><blockquote class="pb-forecast-quote"><p>If by Q4 2026 the leading vendors' QM hero-messaging has shifted its headline away from coverage percentages toward calibration / bias-defensibility / coaching-outcome language, the reallocation thesis holds; if "100%" is still the hero number, it has not.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by Q4 2026</span>&rdquo;</p><p class="pb-fc-due" data-due="end-2026"><span class="pb-fc-due-k">First date named in the forecast:</span> End of 2026</p></div>
+  <div class="pb-fc-more" id="wem-qa-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Verint counts about 155 analysts’ work automated; it does not say where they went.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-1-more wem-qa-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-qa-2" data-row="WEM-QA-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Quality and Interaction Analytics Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/quality-analytics.html">Pattern Claim 2: The Independent-Depth Defense</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-qa-2-q"><blockquote class="pb-forecast-quote"><p>If through H1 2027 independent best-of-breed analytics vendors still win the majority of net-new competitive displacements in regulated-vertical enterprise deals, depth-and-independence remains a durable defense; if suite-bundled QM takes the majority, the single-engine collapse is real at the market level.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">through H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-qa-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Mixed</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft sells quality scoring on rivals’ platforms; specialists announced no new depth this week.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-2-more wem-qa-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-qa-3" data-row="WEM-QA-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Quality and Interaction Analytics Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/quality-analytics.html">Pattern Claim 3: The Vanishing Wildcard</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-qa-3-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 at least two more current Attention-tier independents are acquired into a suite or PE platform, the standalone QA-AI category is consolidating toward a suite-vs-platform structure; if new independently-funded entrants reach Series B in the space, the bench is replenishing.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-qa-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p><p class="pb-forecast-field pb-forecast-note">Two vendors graded in this chapter have signed deals that have not closed: Salesforce agreed to acquire Cresta (2 November 2026) and Five9 agreed to acquire Level AI (5 November 2026).</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Early signs</span>&rdquo; &ldquo;<span class="pb-quoted">No quality specialist was bought; recent deals were in neighbouring markets.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-3-more wem-qa-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+  <div class="pb-sc-chapter">
+  <h3 class="pb-sc-chapter-h"><a href="/research/state-of-wem-2026/wfm.html">Workforce Management Market</a> <span class="pb-sc-chapter-n">3</span></h3>
+<article class="pb-forecast" id="wem-wfm-1" data-row="WEM-WFM-1">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Workforce Management Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/wfm.html">Pattern Claim 1: The Autonomous-Intraday Frontier</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-wfm-1-q"><blockquote class="pb-forecast-quote"><p>If by Q4 2026 at least two Gravity-tier WFM vendors publicly ship intraday that executes (not just recommends) schedule changes autonomously with audit/override controls, the frontier has moved to autonomy; if the headline stays on forecasting-accuracy percentages, it has not.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by Q4 2026</span>&rdquo;</p><p class="pb-fc-due" data-due="end-2026"><span class="pb-fc-due-k">First date named in the forecast:</span> End of 2026</p></div>
+  <div class="pb-fc-more" id="wem-wfm-1-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Weakened</span>&rdquo; &ldquo;<span class="pb-quoted">Closest to changing: autonomous intraday scheduling. Microsoft’s dated plan argues for an upgrade. It stays weakened because Lorikeet’s 9 October promise has not appeared and no shipped tool we track acts by itself when demand shifts.</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft plans software that acts in 2027; shipped tools we track still alert, suggest or flag when demand shifts.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-1-more wem-wfm-1-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-wfm-2" data-row="WEM-WFM-2">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Workforce Management Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/wfm.html">Pattern Claim 2: The Two-WFM-Stack Integration Test</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-wfm-2-q"><blockquote class="pb-forecast-quote"><p>If by H1 2027 the combined entity has publicly announced a single converged WFM roadmap (one forecasting/scheduling engine), the integrate-thesis holds; if Verint-WFM and Calabrio-WFM are still sold and shipped as two independent stacks, it is aggregation, not collapse — and the single-engine thesis weakens at the market level.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by H1 2027</span>&rdquo;</p><p class="pb-fc-due" data-due="h1-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> First half of 2027</p></div>
+  <div class="pb-fc-more" id="wem-wfm-2-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Unchanged</span>&rdquo; &ldquo;<span class="pb-quoted">Verint still lists Calabrio as a separate trademark; no combined product.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-2-more wem-wfm-2-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+<article class="pb-forecast" id="wem-wfm-3" data-row="WEM-WFM-3">
+<div class="pb-fc" data-collapse="all">
+  <div class="pb-fc-top"><p class="pb-fc-meta">Workforce Management Market</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5" /></svg><span class="pb-stamp-word">Open</span></p></div>
+  <h4 class="pb-forecast-title"><a href="/research/state-of-wem-2026/wfm.html">Pattern Claim 3: The Blended-Workforce Planning Unit</a></h4>
+  
+  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+  <div class="pb-q" id="wem-wfm-3-q"><blockquote class="pb-forecast-quote"><p>If by mid-2027 a Gravity-tier WFM vendor publicly prices or packages "AI-agent capacity" as a planned-and-scheduled resource alongside human seats, the blended-planning-unit shift is real; if planning stays human-seat-denominated, it remains a marketing frame.</p></blockquote></div>
+  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">by mid-2027</span>&rdquo;</p><p class="pb-fc-due" data-due="mid-2027"><span class="pb-fc-due-k">First date named in the forecast:</span> Mid-2027</p></div>
+  <div class="pb-fc-more" id="wem-wfm-3-more">
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Open</span>. No stated deadline has passed, and neither outcome is fully met on a public source we can name.</p>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">New York would require a wait estimate for the human queue; vendors expect personal agents to add contacts.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
+  </div>
+  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-3-more wem-wfm-3-q" hidden>Read the full forecast</button>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+</div>
+</article>
+  </div>
+</section>
+
+<section class="pb-sc-band pb-sc-cta" id="order" aria-labelledby="cta-title">
+<div class="pb-sc-wrap pb-sc-cta-grid pb-sc-cta-grid--solo">
+  <div class="pb-sc-cta-main">
+    <h2 id="cta-title">Same method. Your contact-center question.</h2>
+    <p class="pb-sc-price">$3,500. One question, one document, one call.</p>
+    <p class="pb-sc-btnrow"><a class="pb-sc-btn pb-sc-btn-lg" href="/research/state-of-wem-2026/index.html#market-report" onclick="if(window.gtag){gtag(&#x27;event&#x27;,&#x27;door_click&#x27;,{door:&#x27;market-report&#x27;,location:&#x27;forecast-scorecard-wem&#x27;})}">Order a private Market Report</a></p>
+  </div>
+</div>
+</section>
+
+<section class="pb-sc-wrap pb-sc-notes" aria-labelledby="how-we-score">
+  <h2 id="how-we-score">Notes on method</h2>
+  <p class="pb-sc-intro">For anyone who wants to check our work.</p>
+  <h3 class="pb-sc-h3">Our rules for verdicts</h3>
+  <ul class="pb-sc-rules">
+    <li>A missed deadline counts as Failed. A forecast with no date stays Open until one of its outcomes is met on a dated public source.</li>
+    <li>We read "by Q4 2026", "H2 2026" and "through 2026" as by 31 December 2026; where a forecast names earnings calls, it waits for the calls about the quarters it names.</li>
+    <li>A deal announced before a report was published does not count toward that report's forecasts, even if it completes later.</li>
+    <li>A forecast that says a company is acquired or absorbed counts only when the deal completes; a forecast about how a deal is framed counts when the deal is announced.</li>
+    <li>Every verdict other than Open names its public source and date.</li>
+    <li>Each verdict is our reading of the public sources it names.</li>
+  </ul>
+  <ul class="pb-sc-rules pb-sc-rules-more">
+    <li>Evidence so far is the radar's own words, quoted from a published radar brief.</li>
+    <li>The full State of WEM 2026 report prints eight of these forecasts with small editing changes, mostly punctuation and quote marks, and in one case "headline QM marketing copy" for "QM hero-messaging". We quote the chapter page, which each row links to. No edit changes a date, a number or a named company.</li>
+    <li>To report an error of fact, write to <!--email_off-->yohay@productbeacon.agency<!--/email_off--> with the public source.</li>
+  </ul>
+  <h2 id="change-log" class="pb-sc-h-small">Change log</h2>
+  <p class="pb-sc-intro">Every verdict change, dated and explained. Nothing is deleted.</p>
+  <ul class="pb-sc-log">
+    <li>Draft of 17 Nov 2026, not yet published: 18 forecasts: Held 0, Failed 0, Open 18, Void 0.</li>
+  </ul>
+  <p class="pb-sc-other pb-sc-other-end"><a href="/research/state-of-cyber-2026/forecast-scorecard.html">Our other scorecard: State of Cyber 2026 &rarr;</a></p>
+</section>
+<script>
+(function () {
+  /* Progressive: with no script, every card shows in full and every forecast is listed. */
+  var all = Array.prototype.slice;
+
+  /* 1. Collapse: long quotes show their first lines; list cards keep the verdict label in view. */
+  all.call(document.querySelectorAll('.pb-fc[data-collapse]')).forEach(function (fc) {
+    var mode = fc.getAttribute('data-collapse');
+    if (mode === 'none') return;
+    var q = fc.querySelector('.pb-q');
+    var more = fc.querySelector('.pb-fc-more');
+    var btn = fc.querySelector('.pb-fc-toggle');
+    var bq = q.querySelector('blockquote');
+    var lh = parseFloat(window.getComputedStyle(bq).lineHeight) || 30;
+    var longQ = bq.scrollHeight > lh * 6.5;
+    if (mode === 'quote' && !longQ) return;
+    if (longQ) fc.classList.add('has-long-quote');
+    function set(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      fc.classList.toggle('is-collapsed', !open);
+      if (mode === 'all') more.hidden = !open;
+      btn.textContent = open ? 'Show less' : 'Read the full forecast';
+    }
+    btn.hidden = false;
+    set(false);
+    btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+    fc.pbSet = set;
+  });
+
+  /* Arriving on a forecast's own link opens it. */
+  function openFromHash() {
+    var id = window.location.hash.slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.classList.contains('pb-forecast')) {
+      var fc = el.querySelector('.pb-fc');
+      if (fc && fc.pbSet) fc.pbSet(true);
+      /* folding the cards above moved the target: scroll to it again once layout settles */
+      var go = function () { el.scrollIntoView({ block: 'start', behavior: 'instant' }); };
+      window.requestAnimationFrame(go);
+      if (document.readyState !== 'complete') window.addEventListener('load', go, { once: true });
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+
+  /* 2. Show by first date named. Never by verdict. */
+  var arts = all.call(document.querySelectorAll('article.pb-forecast'));
+  var total = arts.length;
+  var status = document.querySelector('.pb-sc-showing');
+  var btns = all.call(document.querySelectorAll('.pb-due-btns [data-due-set]'));
+  function apply(due) {
+    var shown = 0;
+    arts.forEach(function (a) {
+      var el = a.querySelector('.pb-fc-due');
+      var ok = due === 'all' || (el && el.getAttribute('data-due') === due);
+      a.hidden = !ok;
+      if (ok) shown += 1;
+    });
+    all.call(document.querySelectorAll('.pb-sc-chapter')).forEach(function (g) {
+      g.hidden = !g.querySelector('article.pb-forecast:not([hidden])');
+    });
+    status.textContent = 'Showing ' + shown + ' of ' + total;
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-due-set') === due ? 'true' : 'false'); });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-due-set')); });
+  });
+  all.call(document.querySelectorAll('a[data-due-set]')).forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      apply(link.getAttribute('data-due-set'));
+      document.getElementById('forecasts').scrollIntoView();
+    });
+  });
+})();
+
+</script>
+</main>
+
+<!-- =====================================================================
+     FOOTER (A-3 verbatim, two-block)
+     ===================================================================== -->
+<!-- CHROME:FOOTER:START -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo" style="margin-bottom:8px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#0F172A"/><circle cx="16" cy="12" r="4" fill="#F59E0B"/><path d="M10 18 L16 28 L22 18" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="nav__logo-text">Product<strong>Beacon</strong></span>
+        </a>
+        <p>Run an AI workforce, or have us run it for you.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="/on-call.html">ProductBeacon On Call</a>
+        <a href="/on-call.html">Fractional Product Leadership</a>
+        <a href="/on-call.html">Product Build</a>
+        <a href="/on-call.html#org">Product Org Services</a>
+      </div>
+      <div class="footer__col">
+        <h4>Capabilities</h4>
+        <a href="/covering-everything/#operator-intensive">The Operator Intensive</a>
+        <a href="/workforce.html">The Workforce</a>
+        <a href="/index.html#path">The Operator's Private Line</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/vision-to-value/" target="_blank" rel="noopener">Vision to Value (the book)</a>
+        <a href="https://decisionprovenancestandard.org" target="_blank" rel="noopener">The Decision Provenance Standard</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>ProductBeacon is a brand of Etsion Brands Ltd, Israel. productbeacon.agency</span>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/yohayetsion/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- CHROME:FOOTER:END -->
+
+
+<script src="/js/main.js"></script>
+</body>
+</html>
