@@ -508,6 +508,10 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
 .pb-sc { max-width: 760px; margin: 0 auto; padding: var(--space-4) var(--space-5) var(--space-7); }
 .pb-sc h2 { font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 32px; line-height: 1.2; color: var(--bright); margin: var(--space-7) 0 var(--space-3); }
 .pb-sc p, .pb-sc li { font-size: 17px; line-height: 1.6; color: var(--primary-text); }
+/* the shared stylesheet sets every margin and padding to 0: give the section's own paragraphs and lists their spacing back */
+.pb-sc > p { margin: 0 0 var(--space-3) 0; }
+.pb-sc > ul { margin: 0 0 var(--space-3) 0; padding-left: 1.4em; }
+.pb-sc > ul > li { margin: 0 0 6px 0; }
 .pb-sc a { color: var(--amber); text-decoration: underline; text-underline-offset: 3px; }
 .pb-sc a:hover { color: var(--amber-light); }
 .pb-sc a:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 3px; }
