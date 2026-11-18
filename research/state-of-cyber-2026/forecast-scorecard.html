@@ -872,6 +872,13 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   .pb-sc-legend li { flex-direction: column; align-items: flex-start; gap: 8px; max-width: none; }
 }
 
+/* Decided cards, short form (FB-2026-506): plain flow, the fold under a hair line (builder's lines, no new colour) */
+.pb-sc-dcard .pb-fc.pb-dc { display: block; }
+.pb-dc .pb-fc-top { margin-bottom: 14px; }
+.pb-dc .pb-fc-toggle { display: inline-flex; margin: 10px 0 4px; }
+.pb-dc-fold { border-top: 1px solid var(--sc-hair); margin-top: 12px; padding-top: 4px; }
+.pb-dc-fold .pb-forecast-title { margin-top: 14px; }
+
 </style>
 </head>
 <body>
@@ -975,38 +982,40 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   <p class="pb-sc-intro">One failed. One held. We show both.</p>
   <div class="pb-sc-decided-grid">
   <div class="pb-sc-dcard">
-<div class="pb-fc" data-collapse="quote">
+<div class="pb-fc pb-dc">
   <div class="pb-fc-top"><p class="pb-fc-meta">Emerging AI Theater</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l8 8M12 4l-8 8" /></svg><span class="pb-stamp-word">Failed</span></p></div>
-  <h4 class="pb-forecast-title"><a href="/research/state-of-cyber-2026/ai-security.html">Pattern Claim 1: The Pre-Gravity Window Thesis</a></h4>
-  <p class="pb-fc-summary"><span class="pb-fc-summary-k">In plain words:</span> AI-security start-ups would keep being bought by large platforms rather than growing on their own through a stock-market listing or a funding round of $100 million or more.</p>
-  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
-  <div class="pb-q" id="d-cy-ais-1-q"><blockquote class="pb-forecast-quote"><ul><li>Watch the next two-to-four quarters for a fourth named AI-application-security or AI-SecOps independent absorbed into a platform incumbent in named-outlet M&amp;A coverage. If the next notable AI-security exits are again acquisitions of that kind, the pre-Gravity window stays open only as a way station, and absorption is confirmed as the category's default exit.</li><li>The window's close would be marked instead by the inverse signal: the first pure-play AI-security acquisition above ~$200M as a standalone valuation, or the first AI-security pure-play to cross to a public listing or a disclosed $100M-plus standalone private round. Either of those, in named-outlet M&amp;A coverage, SEC filings, or a dated funding announcement, would mark a pure-play graduating to Gravity rather than being absorbed below it.</li><li>I am grounding this on the public M&amp;A and funding record, not on any regulatory date.</li></ul></blockquote></div>
-  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">the next two-to-four quarters</span>&rdquo;</p></div>
-  <div class="pb-fc-more" id="d-cy-ais-1-more">
-    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Failed</span>. The forecast named a disclosed $100M-plus standalone private round by an AI-security pure-play as the sign that the window had closed, and HiddenLayer, the independent the chapter singles out, announced a $100 million Series B on 2 September 2026. This reads "$100M-plus" as $100 million or more and "the first" as the first after publication, because Noma Security's $100 million Series B was announced on 31 July 2025, before the report.</p><p class="pb-forecast-field pb-forecast-sources"><span class="pb-forecast-label">Sources:</span> <a href="https://hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security" rel="noopener">HiddenLayer, 2026-09-02</a>; <a href="https://siliconangle.com/2025/07/31/ai-security-startup-noma-security-closes-100m-funding-round/" rel="noopener">SiliconANGLE, 2025-07-31</a>; <a href="https://www.securityweek.com/neo-emerges-from-stealth-with-100m-to-control-and-secure-enterprise-ai-software/" rel="noopener">SecurityWeek, 2026-07-20</a></p>
+  <p class="pb-fc-summary"><span class="pb-fc-summary-k">In plain words:</span> AI-security start-ups would keep being bought by platforms, not going public or raising $100 million or more in one round.</p>
+  <p class="pb-forecast-field pb-dc-why"><span class="pb-forecast-label">Why it failed:</span> HiddenLayer, an independent AI-security company, announced a $100 million round on 2 September 2026: the forecast's own sign of failure.</p>
+  <p class="pb-forecast-field pb-forecast-sources pb-dc-src"><span class="pb-forecast-label">Sources:</span> <a href="https://hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security" rel="noopener">HiddenLayer, 2 September 2026</a></p>
+  <button type="button" class="pb-fc-toggle pb-dc-toggle" aria-expanded="true" aria-controls="d-cy-ais-1-fold" hidden>Forecast and evidence</button>
+  <div class="pb-dc-fold" id="d-cy-ais-1-fold">
+    <h4 class="pb-forecast-title"><a href="/research/state-of-cyber-2026/ai-security.html">Pattern Claim 1: The Pre-Gravity Window Thesis</a></h4>
+    <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+    <div class="pb-q" id="d-cy-ais-1-q"><blockquote class="pb-forecast-quote"><ul><li>Watch the next two-to-four quarters for a fourth named AI-application-security or AI-SecOps independent absorbed into a platform incumbent in named-outlet M&amp;A coverage. If the next notable AI-security exits are again acquisitions of that kind, the pre-Gravity window stays open only as a way station, and absorption is confirmed as the category's default exit.</li><li>The window's close would be marked instead by the inverse signal: the first pure-play AI-security acquisition above ~$200M as a standalone valuation, or the first AI-security pure-play to cross to a public listing or a disclosed $100M-plus standalone private round. Either of those, in named-outlet M&amp;A coverage, SEC filings, or a dated funding announcement, would mark a pure-play graduating to Gravity rather than being absorbed below it.</li><li>I am grounding this on the public M&amp;A and funding record, not on any regulatory date.</li></ul></blockquote></div>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> &ldquo;<span class="pb-quoted">the next two-to-four quarters</span>&rdquo;</p>
+    <p class="pb-forecast-field pb-dc-reason"><span class="pb-forecast-label">The full reason:</span> The forecast named a disclosed $100M-plus standalone private round by an AI-security pure-play as the sign that the window had closed, and HiddenLayer, the independent the chapter singles out, announced a $100 million Series B on 2 September 2026. This reads "$100M-plus" as $100 million or more and "the first" as the first after publication, because Noma Security's $100 million Series B was announced on 31 July 2025, before the report.</p>
+    <p class="pb-forecast-field pb-dc-other"><span class="pb-forecast-label">Other sources:</span> <a href="https://siliconangle.com/2025/07/31/ai-security-startup-noma-security-closes-100m-funding-round/" rel="noopener">SiliconANGLE, 2025-07-31</a>; <a href="https://www.securityweek.com/neo-emerges-from-stealth-with-100m-to-control-and-secure-enterprise-ai-software/" rel="noopener">SecurityWeek, 2026-07-20</a></p>
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
-  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="d-cy-ais-1-more d-cy-ais-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"></div>
 </div>
-  <p class="pb-sc-dlink"><a href="#cy-ais-1">See it in the full list</a></p>
   </div>
   <div class="pb-sc-dcard">
-<div class="pb-fc" data-collapse="quote">
+<div class="pb-fc pb-dc">
   <div class="pb-fc-top"><p class="pb-fc-meta">Platform Wars Synthesis</p><p class="pb-stamp"><svg class="pb-ico" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7" /></svg><span class="pb-stamp-word">Held</span></p></div>
-  <h4 class="pb-forecast-title"><a href="/research/state-of-cyber-2026/convergence-p2.html">Cross-Front Pattern Claims, claim 1</a></h4>
-  <p class="pb-fc-summary"><span class="pb-fc-summary-k">In plain words:</span> Big security platforms would explain their next identity or AI purchases in terms of AI agents and other non-human identities.</p>
-  <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
-  <div class="pb-q" id="d-cy-pws-1-q"><blockquote class="pb-forecast-quote"><ul><li>The single-contest thesis validates as the default resolution — and the four fronts are confirmed as one platform war — if the next one or two notable platform identity or AI acquisitions are again framed around agent / machine / non-human identity in the acquirers' own dated press and named-outlet M&amp;A coverage. The clearest such signal would be a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft buying identity on an agent rationale.</li><li>The vector weakens, and the fronts read as adjacent-but-separate consolidations, if instead the M&amp;A rationale reverts to classic SSO, undifferentiated gap-filling, or pricing — or if a workforce-IAM pure-play reaches genuine disclosed scale and scales independently with no platform absorption.</li><li>I am grounding every threshold on the dated M&amp;A record and earnings disclosure — observable public signals an outsider can watch — not on any regulation's timing.</li></ul></blockquote></div>
-  <div class="pb-fc-facts"><p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> No date stated</p></div>
-  <div class="pb-fc-more" id="d-cy-pws-1-more">
-    <p class="pb-forecast-field"><span class="pb-forecast-label">Verdict on 17 Nov 2026:</span> <span class="pb-verdict">Held</span>. The next notable platform identity deal after the forecast's publication on 21 June 2026, Okta's purchase of Permiso (announced 30 July, completed 26 August 2026), was framed around threats across "human, non-human, and agentic identities". IBM, a platform company beyond the four the forecast names, announced on 12 November 2026 an acquisition of AuthMind framed around AI agents, the forecast's clearest signal; the test is about how deals are framed, so the verdict does not depend on whether IBM's deal has closed.</p><p class="pb-forecast-field pb-forecast-sources"><span class="pb-forecast-label">Sources:</span> <a href="https://www.okta.com/newsroom/press-releases/okta-signs-definitive-agreement-to-acquire-permiso-security/" rel="noopener">Okta newsroom, 2026-07-30 (update 2026-08-26)</a>; <a href="https://newsroom.ibm.com/blog-ibm-advances-agent-identity-security-with-new-vault-capabilities" rel="noopener">IBM Newsroom, 2026-11-12</a>; <a href="https://idtechwire.com/ibm-acquires-authmind-to-watch-how-ai-agents-use-their-credentials/" rel="noopener">idtechwire, 2026-11-12</a></p>
+  <p class="pb-fc-summary"><span class="pb-fc-summary-k">In plain words:</span> Big security platforms would frame their next identity or AI purchases around AI agents and other non-human identities.</p>
+  <p class="pb-forecast-field pb-dc-why"><span class="pb-forecast-label">Why it held:</span> Okta framed its Permiso deal around "human, non-human, and agentic identities"; IBM framed its AuthMind deal around AI agents.</p>
+  <p class="pb-forecast-field pb-forecast-sources pb-dc-src"><span class="pb-forecast-label">Sources:</span> <a href="https://www.okta.com/newsroom/press-releases/okta-signs-definitive-agreement-to-acquire-permiso-security/" rel="noopener">Okta, 30 July 2026</a>; <a href="https://newsroom.ibm.com/blog-ibm-advances-agent-identity-security-with-new-vault-capabilities" rel="noopener">IBM, 12 November 2026</a></p>
+  <button type="button" class="pb-fc-toggle pb-dc-toggle" aria-expanded="true" aria-controls="d-cy-pws-1-fold" hidden>Forecast and evidence</button>
+  <div class="pb-dc-fold" id="d-cy-pws-1-fold">
+    <h4 class="pb-forecast-title"><a href="/research/state-of-cyber-2026/convergence-p2.html">Cross-Front Pattern Claims, claim 1</a></h4>
+    <p class="pb-forecast-field pb-fc-label"><span class="pb-forecast-label">Forecast, as published:</span></p>
+    <div class="pb-q" id="d-cy-pws-1-q"><blockquote class="pb-forecast-quote"><ul><li>The single-contest thesis validates as the default resolution — and the four fronts are confirmed as one platform war — if the next one or two notable platform identity or AI acquisitions are again framed around agent / machine / non-human identity in the acquirers' own dated press and named-outlet M&amp;A coverage. The clearest such signal would be a fourth platform giant beyond Palo Alto, CrowdStrike, Cisco, and Microsoft buying identity on an agent rationale.</li><li>The vector weakens, and the fronts read as adjacent-but-separate consolidations, if instead the M&amp;A rationale reverts to classic SSO, undifferentiated gap-filling, or pricing — or if a workforce-IAM pure-play reaches genuine disclosed scale and scales independently with no platform absorption.</li><li>I am grounding every threshold on the dated M&amp;A record and earnings disclosure — observable public signals an outsider can watch — not on any regulation's timing.</li></ul></blockquote></div>
+    <p class="pb-forecast-field"><span class="pb-forecast-label">Deadline as stated:</span> No date stated</p>
+    <p class="pb-forecast-field pb-dc-reason"><span class="pb-forecast-label">The full reason:</span> The next notable platform identity deal after the forecast's publication on 21 June 2026, Okta's purchase of Permiso (announced 30 July, completed 26 August 2026), was framed around threats across "human, non-human, and agentic identities". IBM, a platform company beyond the four the forecast names, announced on 12 November 2026 an acquisition of AuthMind framed around AI agents, the forecast's clearest signal; the test is about how deals are framed, so the verdict does not depend on whether IBM's deal has closed.</p>
+    <p class="pb-forecast-field pb-dc-other"><span class="pb-forecast-label">Other sources:</span> <a href="https://idtechwire.com/ibm-acquires-authmind-to-watch-how-ai-agents-use-their-credentials/" rel="noopener">idtechwire, 2026-11-12</a></p>
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported (unchanged; strongest evidence so far)</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment remains supported, with the strongest evidence since the report.</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft announced identity and access controls for agents, and says Project Perception shares one agent registry with Microsoft Agent 365. SentinelOne lists each agent’s permissions and the employees behind it.</span>&rdquo; &ldquo;<span class="pb-quoted">Workday agreed to buy C1.ai to govern access for people and agents. IonQ agreed to buy Elisity, which IonQ says limits which users, devices and AI agents can communicate on a network.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
-  <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="d-cy-pws-1-more d-cy-pws-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"></div>
 </div>
-  <p class="pb-sc-dlink"><a href="#cy-pws-1">See it in the full list</a></p>
   </div>
   </div>
 </section>
@@ -1143,7 +1152,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-con-1-more cy-con-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-con-2" data-row="CY-CON-2">
@@ -1159,7 +1168,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-con-2-more cy-con-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
   </div>
@@ -1229,7 +1238,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Buying trend supported; replacement not established (unchanged)</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment is unchanged. We found no disclosed replacement win and no analyst reclassifying data loss prevention as a module.</span>&rdquo; &ldquo;<span class="pb-quoted">The month’s largest deal ran the other way: Proofpoint, strong in data loss prevention and insider risk, is buying Varonis, strong in data posture.</span>&rdquo; &ldquo;<span class="pb-quoted">Reco and Bloom Security use Cyera’s data labels to rank or control what agents can reach, but those partners, not Cyera, act on them.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-dlp-1-more cy-dlp-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-dlp-2" data-row="CY-DLP-2">
@@ -1245,7 +1254,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Weakened further (was weakened)</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment moves from weakened to weakened further. The prediction runs to the first half of 2027.</span>&rdquo; &ldquo;<span class="pb-quoted">Okta made its agent gateway generally available on 8 October. ManageEngine says its tool-call gateway is live; SentinelOne, Microsoft and NVIDIA’s 11 partners treat the control as part of larger products.</span>&rdquo; &ldquo;<span class="pb-quoted">Dedicated vendors still raise seed money, such as Ultra Security and Asymptote Labs. We found no analyst naming the category.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-dlp-2-more cy-dlp-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-dlp-3" data-row="CY-DLP-3">
@@ -1261,7 +1270,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-dlp-3-more cy-dlp-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
   </div>
@@ -1280,7 +1289,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Buying trend supported; replacement not established (unchanged)</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment is unchanged. We found no disclosed replacement win and no analyst reclassifying data loss prevention as a module.</span>&rdquo; &ldquo;<span class="pb-quoted">The month’s largest deal ran the other way: Proofpoint, strong in data loss prevention and insider risk, is buying Varonis, strong in data posture.</span>&rdquo; &ldquo;<span class="pb-quoted">Reco and Bloom Security use Cyera’s data labels to rank or control what agents can reach, but those partners, not Cyera, act on them.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-dspm-1-more cy-dspm-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-dspm-2" data-row="CY-DSPM-2">
@@ -1296,7 +1305,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-dspm-2-more cy-dspm-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
   </div>
@@ -1315,7 +1324,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported (unchanged)</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment remains supported. The platforms keep broadening, but they did not lead this month’s deals.</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft, Palo Alto Networks, CrowdStrike and Cisco are all on NVIDIA’s partner list. Palo Alto Networks and CrowdStrike now sell through OpenAI’s marketplace.</span>&rdquo; &ldquo;<span class="pb-quoted">But this month’s largest disclosed deals were by Proofpoint and IonQ; Workday signed one at an undisclosed price. CrowdStrike’s reported talks with Orion Security remain unconfirmed.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-gu-1-more cy-gu-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-gu-2" data-row="CY-GU-2">
@@ -1331,7 +1340,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-gu-2-more cy-gu-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
   </div>
@@ -1401,7 +1410,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Unchanged</span>&rdquo; &ldquo;<span class="pb-quoted">Our assessment is unchanged. Insider-risk controls for AI agents are arriving inside platforms, but no dedicated insider-risk brand has been absorbed.</span>&rdquo; &ldquo;<span class="pb-quoted">We found no purchase of a dedicated insider-risk vendor this month. Forrester describes Varonis as strong in data posture and access governance; the insider-risk strength it names is Proofpoint’s.</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft now treats risky AI agents as insiders inside its identity and security-operations products, not in a separate insider-risk product.</span>&rdquo; &ldquo;<span class="pb-quoted">Everfox, which also sells insider-risk products, won a $90 million Army contract vehicle for its cross-domain products.</span>&rdquo; (<a href="/research/state-of-cyber-2026/updates/cyber-radar-weekly-2026-10-24-brief.html">Cyber Radar brief, 24 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-irm-1-more cy-irm-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-irm-2" data-row="CY-IRM-2">
@@ -1417,7 +1426,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-irm-2-more cy-irm-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-irm-3" data-row="CY-IRM-3">
@@ -1433,7 +1442,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-irm-3-more cy-irm-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
   </div>
@@ -1452,7 +1461,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> No published radar brief assesses this forecast yet.</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="cy-sse-1-more cy-sse-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; this forecast covers data security, so it is inside his conflict, and AXIA is not named in it.</p></div>
+  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor.</p></div>
 </div>
 </article>
 <article class="pb-forecast" id="cy-sse-2" data-row="CY-SSE-2">
@@ -1607,6 +1616,23 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   });
 })();
 
+</script>
+<script>
+(function () {
+  /* Decided cards: fold the forecast and evidence behind one button; with no script everything shows. */
+  Array.prototype.forEach.call(document.querySelectorAll('.pb-dc'), function (fc) {
+    var btn = fc.querySelector('.pb-dc-toggle'), fold = fc.querySelector('.pb-dc-fold');
+    if (!btn || !fold) return;
+    function set(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      fold.hidden = !open;
+      btn.textContent = open ? 'Show less' : 'Forecast and evidence';
+    }
+    btn.hidden = false;
+    set(false);
+    btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+  });
+})();
 </script>
 </main>
 

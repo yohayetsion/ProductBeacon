@@ -872,6 +872,13 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   .pb-sc-legend li { flex-direction: column; align-items: flex-start; gap: 8px; max-width: none; }
 }
 
+/* Decided cards, short form (FB-2026-506): plain flow, the fold under a hair line (builder's lines, no new colour) */
+.pb-sc-dcard .pb-fc.pb-dc { display: block; }
+.pb-dc .pb-fc-top { margin-bottom: 14px; }
+.pb-dc .pb-fc-toggle { display: inline-flex; margin: 10px 0 4px; }
+.pb-dc-fold { border-top: 1px solid var(--sc-hair); margin-top: 12px; padding-top: 4px; }
+.pb-dc-fold .pb-forecast-title { margin-top: 14px; }
+
 </style>
 </head>
 <body>
@@ -966,7 +973,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   <h2 id="disc-title" class="pb-sc-eyebrow">Disclosures</h2>
   <div class="pb-sc-disc-grid">
     <div><p>Independent research from public sources only, with no vendor sponsors; not investment advice.</p><p>Yohay Etsion holds no position in any security named on this page.</p><p>Full disclosures: <a href="/research/author.html#disclosure">the author page</a> and <a href="/research/methodology.html">the Methodology</a>.</p></div>
-    <div><p><strong>Former employer:</strong> Yohay Etsion was employed by NICE from April 2008 to May 2021, with senior product-leadership responsibility for the Recording / Workforce-Optimization line, the area on which State of WEM 2026 grades NICE; he remains bound by a confidentiality and trade-secret undertaking from that employment; the State of WEM rows below use only published material, contain no information derived from that employment and each carry this disclosure; he holds no NICE equity.</p></div>
+    <div><p><strong>Former employer:</strong> Yohay Etsion was employed by NICE from April 2008 to May 2021, with senior product-leadership responsibility for the Recording / Workforce-Optimization line, the area on which State of WEM 2026 grades NICE; he remains bound by a confidentiality and trade-secret undertaking from that employment; the State of WEM rows below use only published material and contain no information derived from that employment; he holds no NICE equity.</p></div>
   </div>
 </section>
 
@@ -1029,7 +1036,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft’s assist agent both resolves alone and helps human staff.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-1-more wem-aa-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-aa-2" data-row="WEM-AA-2">
@@ -1045,7 +1052,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">No new after-call-work figure since mid-September; summaries are treated as standard.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-2-more wem-aa-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-aa-3" data-row="WEM-AA-3">
@@ -1061,7 +1068,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft bills its AI by use beside the host’s seats; Zoom reportedly pools seats and AI.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-aa-3-more wem-aa-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
@@ -1080,7 +1087,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported where published</span>&rdquo; &ldquo;<span class="pb-quoted">Fin, Lorikeet, Zendesk and Salesforce prices held; Sierra and Decagon publish none.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-1-more wem-acx-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-acx-2" data-row="WEM-ACX-2">
@@ -1096,7 +1103,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft and Salesforce charge for staff per user and for customer-facing AI by use.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-2-more wem-acx-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-acx-3" data-row="WEM-ACX-3">
@@ -1112,7 +1119,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Completion replaces deflection: New York’s proposal would make resolution counts reportable. Comcast, the largest buyer in the news this week, counts contacts avoided.</span>&rdquo; &ldquo;<span class="pb-quoted">Cedar reports 71.3% of started payments completed; Comcast counts contacts avoided.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-acx-3-more wem-acx-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
@@ -1131,7 +1138,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft scores human and AI work against one standard; Zoom gives both one shared customer memory.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-1-more wem-con-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-con-2" data-row="WEM-CON-2">
@@ -1147,7 +1154,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Outcome prices sit beside seats; Comcast cuts contacts while some outsourcers add seats.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-2-more wem-con-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-con-3" data-row="WEM-CON-3">
@@ -1163,7 +1170,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Not triggered</span>&rdquo; &ldquo;<span class="pb-quoted">No tracked price page moved back to seats; Salesforce held its $2 per conversation.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-con-3-more wem-con-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
@@ -1182,7 +1189,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported</span>&rdquo; &ldquo;<span class="pb-quoted">Aspect advises customer-side emotion detection only; no vendor has withdrawn a feature.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-1-more wem-pe-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-pe-2" data-row="WEM-PE-2">
@@ -1198,7 +1205,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Supported, qualified</span>&rdquo; &ldquo;<span class="pb-quoted">Centrical and Zoom link findings to coaching; results are vendor-reported.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-2-more wem-pe-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-pe-3" data-row="WEM-PE-3">
@@ -1214,7 +1221,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Weakened</span>&rdquo; &ldquo;<span class="pb-quoted">Zoom now includes AI role-play in its quality product.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-pe-3-more wem-pe-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
@@ -1233,7 +1240,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">Verint counts about 155 analysts’ work automated; it does not say where they went.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-1-more wem-qa-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-qa-2" data-row="WEM-QA-2">
@@ -1249,7 +1256,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Mixed</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft sells quality scoring on rivals’ platforms; specialists announced no new depth this week.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-2-more wem-qa-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-qa-3" data-row="WEM-QA-3">
@@ -1265,7 +1272,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Early signs</span>&rdquo; &ldquo;<span class="pb-quoted">No quality specialist was bought; recent deals were in neighbouring markets.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-qa-3-more wem-qa-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
@@ -1284,7 +1291,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Weakened</span>&rdquo; &ldquo;<span class="pb-quoted">Closest to changing: autonomous intraday scheduling. Microsoft’s dated plan argues for an upgrade. It stays weakened because Lorikeet’s 9 October promise has not appeared and no shipped tool we track acts by itself when demand shifts.</span>&rdquo; &ldquo;<span class="pb-quoted">Microsoft plans software that acts in 2027; shipped tools we track still alert, suggest or flag when demand shifts.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-1-more wem-wfm-1-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-wfm-2" data-row="WEM-WFM-2">
@@ -1300,7 +1307,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Unchanged</span>&rdquo; &ldquo;<span class="pb-quoted">Verint still lists Calabrio as a separate trademark; no combined product.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-2-more wem-wfm-2-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
 <article class="pb-forecast" id="wem-wfm-3" data-row="WEM-WFM-3">
@@ -1316,7 +1323,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <p class="pb-forecast-field"><span class="pb-forecast-label">Evidence so far, in the radar's own words:</span> &ldquo;<span class="pb-quoted">Strong support</span>&rdquo; &ldquo;<span class="pb-quoted">New York would require a wait estimate for the human queue; vendors expect personal agents to add contacts.</span>&rdquo; (<a href="/research/state-of-wem-2026/updates/wem-radar-weekly-2026-10-25-brief.html">WEM Radar brief, 25 Oct 2026</a>)</p>
   </div>
   <button type="button" class="pb-fc-toggle" aria-expanded="true" aria-controls="wem-wfm-3-more wem-wfm-3-q" hidden>Read the full forecast</button>
-  <div class="pb-fc-disc"><p class="pb-forecast-field pb-forecast-disclosure"><span class="pb-forecast-label">Disclosure:</span> Author formerly at NICE (Recording / Workforce Optimization, 2008 to 2021); public sources only; full disclosure at the top of the State of WEM scorecard.</p></div>
+  <div class="pb-fc-disc"></div>
 </div>
 </article>
   </div>
