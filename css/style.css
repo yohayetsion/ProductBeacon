@@ -796,6 +796,10 @@ a.card:hover {
 
 .footer__social a:hover { color: var(--amber); }
 
+/* Privacy link in the bottom bar (18 Nov 2026) */
+.footer__privacy { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer__privacy:hover { color: var(--amber); }
+
 /* ============================================
    17. SCROLL ANIMATIONS
    ============================================ */
