@@ -51,6 +51,13 @@
   </url>
 
   <url>
+    <loc>https://productbeacon.agency/privacy/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
     <loc>https://productbeacon.agency/vision-to-value/</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
