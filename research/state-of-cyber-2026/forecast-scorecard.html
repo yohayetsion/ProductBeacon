@@ -880,6 +880,10 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
 .pb-dc-fold .pb-forecast-title { margin-top: 14px; }
 .pb-dc-src a, .pb-dc-fold .pb-forecast-field a { color: var(--sc-amber); text-decoration: underline; text-underline-offset: 3px; }
 .pb-dc-src a:hover, .pb-dc-fold .pb-forecast-field a:hover { color: var(--sc-amber-light); }
+/* The short disclosure line under the hero (owner, 18 Nov 2026): the notes' small size and muted colour */
+.pb-sc-topdisc { font-size: 14.5px; line-height: 1.6; color: var(--sc-muted); max-width: 60ch; margin: 0 0 14px; }
+.pb-sc-topdisc a { color: var(--sc-amber); text-decoration: underline; text-underline-offset: 3px; }
+.pb-sc-topdisc a:hover { color: var(--sc-amber-light); }
 
 </style>
 </head>
@@ -950,6 +954,7 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
   <p class="hero-eyebrow">State of Cyber 2026 · Forecast Scorecard</p>
   <h1 class="hero-headline">Our cyber forecasts, checked in public.</h1>
   <p class="hero-subhead">Each one quoted word for word. Misses shown as plainly as hits.</p>
+  <p class="pb-sc-topdisc">Author conflict: Yohay Etsion is Head of Product (Fractional) at AXIA, a data security vendor; <a href="#disc-title">full disclosure below</a>.</p>
   <p class="pb-sc-byline">Authored by Yohay Etsion. &middot; Last reviewed: 17 Nov 2026</p>
 </div>
 <div class="pb-sc-hero-cta"><p class="pb-sc-btnrow"><a class="pb-sc-btn" href="/research/state-of-cyber-2026/index.html#market-report" onclick="if(window.gtag){gtag(&#x27;event&#x27;,&#x27;door_click&#x27;,{door:&#x27;market-report&#x27;,location:&#x27;forecast-scorecard-cyber&#x27;})}">Order a private Market Report</a><a class="pb-sc-textlink" href="#decided">See the hit and the miss</a></p></div>
@@ -970,14 +975,6 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
 </aside>
 </div>
 </header>
-
-<section class="pb-sc-wrap pb-sc-disc" aria-labelledby="disc-title">
-  <h2 id="disc-title" class="pb-sc-eyebrow">Disclosures</h2>
-  <div class="pb-sc-disc-grid">
-    <div><p>Independent research from public sources only, with no vendor sponsors; not investment advice.</p><p>Yohay Etsion holds no position in any security named on this page.</p><p>Full disclosures: <a href="/research/author.html#disclosure">the author page</a> and <a href="/research/methodology.html">the Methodology</a>.</p></div>
-    <div><p><strong>Author conflict:</strong> Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; the forecasts below that cover data security are inside his conflict, each carries this disclosure, and AXIA is not named in any of them.</p></div>
-  </div>
-</section>
 
 <section class="pb-sc-wrap pb-sc-decided" id="decided" aria-labelledby="decided-title">
   <h2 id="decided-title">Decided so far</h2>
@@ -1514,6 +1511,14 @@ main a:focus-visible, main button:focus-visible, main select:focus-visible { out
     <figcaption>A sample from State of Cyber Security Markets 2026: one claim, the dated public facts behind it, and the test that would confirm or weaken it. <a href="/research/state-of-cyber-2026/identity.html">Read the chapter.</a></figcaption>
   </figure>
 </div>
+</section>
+
+<section class="pb-sc-wrap pb-sc-disc" aria-labelledby="disc-title">
+  <h2 id="disc-title" class="pb-sc-eyebrow">Disclosures</h2>
+  <div class="pb-sc-disc-grid">
+    <div><p>Independent research from public sources only, with no vendor sponsors; not investment advice.</p><p>Yohay Etsion holds no position in any security named on this page.</p><p>Full disclosures: <a href="/research/author.html#disclosure">the author page</a> and <a href="/research/methodology.html">the Methodology</a>.</p></div>
+    <div><p><strong>Author conflict:</strong> Yohay Etsion, the author, is Head of Product (Fractional) at AXIA, a data security vendor; the forecasts below that cover data security are inside his conflict, each carries this disclosure, and AXIA is not named in any of them.</p></div>
+  </div>
 </section>
 
 <section class="pb-sc-wrap pb-sc-notes" aria-labelledby="how-we-score">
