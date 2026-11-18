@@ -1019,27 +1019,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   <p class="methodology-note" style="margin-top: var(--space-3);"><a href="/research/methodology.html" style="color: var(--amber);">How to verify any claim in this report →</a> Sourcing rules. Verifiable Proxy Rule. Disclosure framework. Refresh cadence.</p>
   <p class="methodology-note" style="margin-top: var(--space-3);">Master citations file: 596 unique citations, 68 cross-chapter. <a href="/research/state-of-cyber-2026/citations.md" style="color: var(--amber);">View citations.md →</a></p>
 </section>
-
-<!-- =====================================================================
-     EMAIL-CAPTURE FORM (E-1)
-     Inline only. No popup. No modal. Per A-2 §7 anti-pattern guard.
-     ===================================================================== -->
-<section class="subscribe" id="subscribe" aria-labelledby="subscribe-headline">
-  <div class="subscribe-card">
-    <h2 class="subscribe-headline" id="subscribe-headline">Get notified when new ProductBeacon Research ships.</h2>
-    <p class="subscribe-cadence">Expect ~6-10 emails per year. Ship events only, no weekly digest.</p>
-    <form class="subscribe-form" id="subscribe-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-      <input type="hidden" name="access_key" value="98f61f12-c5f8-46a4-98cc-037b9a574af3">
-      <input type="hidden" name="subject" value="New ProductBeacon Research subscription request">
-      <input type="hidden" name="from_name" value="ProductBeacon Research">
-      <input type="checkbox" name="botcheck" class="sr-only" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label for="subscribe-email" class="sr-only">Email address</label>
-      <input type="email" id="subscribe-email" name="email" placeholder="your@email.com" required autocomplete="email">
-      <button type="submit" class="btn btn-primary">Subscribe</button>
-    </form>
-    <p class="subscribe-msg" id="subscribe-msg" aria-live="polite"></p>
-  </div>
-</section>
 </main>
 
 <!-- =====================================================================
@@ -1137,55 +1116,6 @@ a.lockup:hover .lockup-wordmark { color: var(--amber); }
   } else {
     applyAudience();
   }
-})();
-</script>
-
-<!-- =====================================================================
-     EMAIL-CAPTURE: AJAX submit to Web3Forms -> emails admin@etsionbrands.com.
-     Stays on page; shows status in #subscribe-msg. Guards the unconfigured
-     placeholder key so it degrades gracefully until the key is installed.
-     ===================================================================== -->
-<script>
-(function() {
-  var form = document.getElementById('subscribe-form');
-  var msg = document.getElementById('subscribe-msg');
-  if (!form || !msg) return;
-
-  form.addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    var emailEl = document.getElementById('subscribe-email');
-    var email = (emailEl && emailEl.value) || '';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      msg.style.color = '#FCA5A5';
-      msg.textContent = 'Please enter a valid email address.';
-      return;
-    }
-    var keyEl = form.querySelector('input[name="access_key"]');
-    if (keyEl && keyEl.value.indexOf('WEB3FORMS_ACCESS_KEY') !== -1) {
-      msg.style.color = '#FCA5A5';
-      msg.textContent = 'Subscription endpoint not yet configured. Email research@productbeacon.agency to subscribe.';
-      return;
-    }
-    msg.style.color = 'var(--slate-400)';
-    msg.textContent = 'Sending...';
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    }).then(function(r) { return r.json(); }).then(function(j) {
-      if (j && j.success) {
-        form.reset();
-        msg.style.color = '#FBBF24';
-        msg.textContent = 'Thanks. You are on the list for ship-event notifications.';
-      } else {
-        msg.style.color = '#FCA5A5';
-        msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
-      }
-    }).catch(function() {
-      msg.style.color = '#FCA5A5';
-      msg.textContent = 'Something went wrong. Email research@productbeacon.agency to subscribe.';
-    });
-  });
 })();
 </script>
 
