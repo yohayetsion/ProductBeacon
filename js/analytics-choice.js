@@ -8,7 +8,7 @@
   var GA_ID = 'G-TC1LMMGQGV';
   var KEY = 'pb-analytics-choice';
   var MONTHS = 12;
-  var TEXT = 'We use Google Analytics to count page visits. It sets cookies on your device. Nothing from Google loads unless you press Accept.';
+  var TEXT = 'We use Google Analytics to count page visits. It sets cookies on your device. Nothing from Google Analytics loads unless you press Accept.';
   var LINK_TEXT = 'Privacy notice';
   var ACCEPT = 'Accept';
   var DECLINE = 'Decline';
