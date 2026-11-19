@@ -20,14 +20,8 @@
 <meta name="twitter:title" content="Contact — ProductBeacon">
 <meta name="twitter:description" content="Tell ProductBeacon what you are running. Intake is limited and by application.">
 <meta name="twitter:image" content="https://productbeacon.agency/og-image.png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TC1LMMGQGV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TC1LMMGQGV');
-</script>
+<!-- Google Analytics loads only after the reader presses Accept (js/analytics-choice.js) -->
+<script src="/js/analytics-choice.js" defer></script>
 <!-- Page-scoped CSS for the door-intent radio pair (legible, reuses .form-group spacing; shared style.css untouched). -->
 <style>
   .diagnostic-form .radio-row { display: flex; flex-direction: column; gap: 10px; }
