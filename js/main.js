@@ -4,6 +4,12 @@
 (function () {
   'use strict';
 
+  // ---- pbTrack for the nav's Apply buttons ----
+  // The nav calls pbTrack('apply_click', ...). A page that defines its own pbTrack keeps it; every
+  // other page gets this one. It makes the same call as the order buttons: a Google Analytics event,
+  // only once js/analytics-choice.js has defined gtag (after the reader presses Accept).
+  window.pbTrack = window.pbTrack || function (name, payload) { if (window.gtag) window.gtag('event', name, payload || {}); };
+
   // ---- Mobile Nav Toggle ----
   const hamburger = document.querySelector('.nav__hamburger');
   const mobileNav = document.querySelector('.nav__mobile');
