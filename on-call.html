@@ -56,8 +56,8 @@
     background: var(--amber); flex-shrink: 0;
   }
   @media (max-width: 639px) { .govern-band { flex-direction: column; gap: var(--space-3); } }
-  .skip-link { position: fixed; left: var(--space-4); top: var(--space-3); z-index: 1000; transform: translateY(-180%); padding: var(--space-3) var(--space-4); background: var(--amber); color: var(--ink); font-weight: 700; }
-  .skip-link:focus { transform: translateY(0); }
+  .skip-link { position: fixed; left: var(--space-4); top: -80px; z-index: 1000; padding: var(--space-3) var(--space-4); background: var(--amber); color: var(--ink); font-weight: 700; }
+  .skip-link:focus { top: var(--space-3); }
   .email-action { white-space: normal; overflow-wrap: anywhere; max-width: 100%; text-align: center; }
   .btn { min-height: 44px; display: inline-flex; align-items: center; }
   @media (prefers-reduced-motion: reduce) { .skip-link, .btn, a, button { transition: none !important; transform: none !important; scroll-behavior: auto !important; } }
