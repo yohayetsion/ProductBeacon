@@ -2,7 +2,7 @@
    Nothing from Google Analytics is requested until the reader presses Accept.
    The choice is kept in this browser's localStorage under "pb-analytics-choice", with its date,
    and the bar asks again 12 months after the choice. Nothing is sent to us or anyone else.
-   Texts: email-list-2026-11-15/phase-1/05-texts.md, section 9 (word for word). */
+   Texts: email-list-2026-11-15/phase-1/05-texts.md, section 9, word for word, except one change in the bar sentence: "Google" became "Google Analytics" (owner ruling, 19 Nov 2026). */
 (function () {
   'use strict';
   var GA_ID = 'G-TC1LMMGQGV';
