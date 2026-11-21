@@ -30,9 +30,9 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function pbTrack(eventName, payload){
-    payload = payload || {};
-    payload.event = eventName;            // e.g. 'door_click' / 'apply_click'
-    window.dataLayer.push(payload);       // GA4
+    // Same call as the order buttons on the report pages: a Google Analytics event, sent only once
+    // js/analytics-choice.js has defined gtag, which it does after the reader presses Accept.
+    if (window.gtag) window.gtag('event', eventName, payload || {});
     // TODO (go-live): if (typeof window.lintrk === 'function') { window.lintrk('track', { conversion_id: /* LI id */ }); }
   }
   window.pbTrack = pbTrack;
